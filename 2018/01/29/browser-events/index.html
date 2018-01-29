@@ -68,7 +68,7 @@
 
 
 
-  <meta name="keywords" content="jQuery," />
+  <meta name="keywords" content="Hexo, NexT" />
 
 
 
@@ -79,18 +79,17 @@
 
 
 
-<meta name="description" content="1 情景再现以前用nodejs写后端程序时，遇到Promise这个概念，这个东西好呀！不用谢一层一层回调，直接用类似于jQuery的连缀方式。后来遇到bluebird这个库，它就是Promise库中很有名的。我希望可以把Promise用在前端的ajax请求上，但是我不想又引入bluebird。后来发现，jquery本身就具有类似于Promise的东西。于是我就jquery的Promise写一些异步">
-<meta name="keywords" content="jQuery">
+<meta name="description" content="visibilitychange事件触发条件：浏览器标签页被隐藏或显示的时候会触发visibilitychange事件. 使用场景：当标签页显示或者隐藏时，触发一些业务逻辑 123document.addEventListener(&quot;visibilitychange&quot;, function() &amp;#123;  console.log( document.visibilityState );&amp;#125">
 <meta property="og:type" content="article">
-<meta property="og:title" content="熟练使用使用jQuery Promise (Deferred)">
-<meta property="og:url" content="http://yoursite.com/2018/01/29/jquery-deferred/index.html">
+<meta property="og:title" content="不常用却很有妙用的事件及方法">
+<meta property="og:url" content="http://yoursite.com/2018/01/29/browser-events/index.html">
 <meta property="og:site_name" content="洞香春">
-<meta property="og:description" content="1 情景再现以前用nodejs写后端程序时，遇到Promise这个概念，这个东西好呀！不用谢一层一层回调，直接用类似于jQuery的连缀方式。后来遇到bluebird这个库，它就是Promise库中很有名的。我希望可以把Promise用在前端的ajax请求上，但是我不想又引入bluebird。后来发现，jquery本身就具有类似于Promise的东西。于是我就jquery的Promise写一些异步">
+<meta property="og:description" content="visibilitychange事件触发条件：浏览器标签页被隐藏或显示的时候会触发visibilitychange事件. 使用场景：当标签页显示或者隐藏时，触发一些业务逻辑 123document.addEventListener(&quot;visibilitychange&quot;, function() &amp;#123;  console.log( document.visibilityState );&amp;#125">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-01-29T05:47:34.000Z">
+<meta property="og:updated_time" content="2018-01-29T06:15:59.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="熟练使用使用jQuery Promise (Deferred)">
-<meta name="twitter:description" content="1 情景再现以前用nodejs写后端程序时，遇到Promise这个概念，这个东西好呀！不用谢一层一层回调，直接用类似于jQuery的连缀方式。后来遇到bluebird这个库，它就是Promise库中很有名的。我希望可以把Promise用在前端的ajax请求上，但是我不想又引入bluebird。后来发现，jquery本身就具有类似于Promise的东西。于是我就jquery的Promise写一些异步">
+<meta name="twitter:title" content="不常用却很有妙用的事件及方法">
+<meta name="twitter:description" content="visibilitychange事件触发条件：浏览器标签页被隐藏或显示的时候会触发visibilitychange事件. 使用场景：当标签页显示或者隐藏时，触发一些业务逻辑 123document.addEventListener(&quot;visibilitychange&quot;, function() &amp;#123;  console.log( document.visibilityState );&amp;#125">
 
 
 
@@ -120,13 +119,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2018/01/29/jquery-deferred/"/>
+  <link rel="canonical" href="http://yoursite.com/2018/01/29/browser-events/"/>
 
 
 
 
 
-  <title>熟练使用使用jQuery Promise (Deferred) | 洞香春</title>
+  <title>不常用却很有妙用的事件及方法 | 洞香春</title>
   
 
 
@@ -287,7 +286,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/01/29/jquery-deferred/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/01/29/browser-events/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="王端端">
@@ -304,7 +303,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">熟练使用使用jQuery Promise (Deferred)</h1>
+          <h1 class="post-title" itemprop="name headline">不常用却很有妙用的事件及方法</h1>
         
 
         <div class="post-meta">
@@ -316,7 +315,7 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-01-29T13:43:23+08:00">
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-01-29T14:15:25+08:00">
                 2018-01-29
               </time>
             
@@ -354,23 +353,20 @@
       
 
       
-        <h1 id="1-情景再现"><a href="#1-情景再现" class="headerlink" title="1 情景再现"></a>1 情景再现</h1><p>以前用nodejs写后端程序时，遇到<code>Promise</code>这个概念，这个东西好呀！不用谢一层一层回调，直接用类似于jQuery的连缀方式。后来遇到<code>bluebird</code>这个库，它就是Promise库中很有名的。我希望可以把Promise用在前端的<code>ajax</code>请求上，但是我不想又引入bluebird。后来发现，jquery本身就具有类似于Promise的东西。于是我就jquery的Promise写一些异步请求。</p>
-<h1 id="2-不堪回首"><a href="#2-不堪回首" class="headerlink" title="2 不堪回首"></a>2 不堪回首</h1><p>看看一看我以前写异步请求的方式<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 函数定义</span></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">sendRequest</span>(<span class="params">req,successCallback,errorCallback</span>)</span>&#123;</span><br><span class="line">    $.ajax(&#123;</span><br><span class="line">        ...</span><br><span class="line">        ...</span><br><span class="line">        success:<span class="function"><span class="keyword">function</span>(<span class="params">res</span>)</span>&#123;</span><br><span class="line">            successCallback(res);</span><br><span class="line">        &#125;,</span><br><span class="line">        error:<span class="function"><span class="keyword">function</span>(<span class="params">res</span>)</span>&#123;</span><br><span class="line">            errorCallback(res);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 函数调用,这个函数的匿名函数写的时候很容易出错，而且有时候难以理解</span></span><br><span class="line">sendRequest(req,<span class="function"><span class="keyword">function</span>(<span class="params">res</span>)</span>&#123;</span><br><span class="line">    <span class="comment">//请求成功</span></span><br><span class="line">    ...</span><br><span class="line">&#125;,<span class="function"><span class="keyword">function</span>(<span class="params">res</span>)</span>&#123;</span><br><span class="line">    <span class="comment">//请求失败</span></span><br><span class="line">    ...</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure></p>
-<h1 id="3-面朝大海"><a href="#3-面朝大海" class="headerlink" title="3 面朝大海"></a>3 面朝大海</h1><p>下面是我希望的异步调用方式<br><figure class="highlight actionscript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">sendRequest(req)</span><br><span class="line">.done(<span class="function"><span class="keyword">function</span><span class="params">(res)</span></span>&#123;</span><br><span class="line">    <span class="comment">//请求成功</span></span><br><span class="line">    ...</span><br><span class="line">&#125;)</span><br><span class="line">.fail(<span class="function"><span class="keyword">function</span><span class="params">(req)</span></span>&#123;</span><br><span class="line">    <span class="comment">//请求失败</span></span><br><span class="line">    ...</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure></p>
-<h1 id="4-废话少说，放‘码’过来"><a href="#4-废话少说，放‘码’过来" class="headerlink" title="4 废话少说，放‘码’过来"></a>4 废话少说，放‘码’过来</h1><blockquote>
-<p>talk is cheap, show me the code</p>
-</blockquote>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 最底层的发送异步请求，做成Promise的形式</span></span><br><span class="line"></span><br><span class="line">App.addMethod(<span class="string">'_sendRequest'</span>,<span class="function"><span class="keyword">function</span>(<span class="params">path,method,payload</span>)</span>&#123;</span><br><span class="line">    <span class="keyword">var</span> dfd = $.Deferred();</span><br><span class="line">    $.ajax(&#123;</span><br><span class="line">        url:path,</span><br><span class="line">        type:method || <span class="string">"get"</span>,</span><br><span class="line">        headers:&#123;</span><br><span class="line">            sessionId:session.id || <span class="string">''</span></span><br><span class="line">        &#125;,</span><br><span class="line">        data:<span class="built_in">JSON</span>.stringify(payload),</span><br><span class="line">        dataType:<span class="string">"json"</span>,</span><br><span class="line">        contentType : <span class="string">'application/json; charset=UTF-8'</span>,</span><br><span class="line">        success:<span class="function"><span class="keyword">function</span>(<span class="params">data</span>)</span>&#123;</span><br><span class="line">            dfd.resolve(data);</span><br><span class="line">        &#125;,</span><br><span class="line">        error:<span class="function"><span class="keyword">function</span>(<span class="params">data</span>)</span>&#123;</span><br><span class="line">            dfd.reject(data);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;);</span><br><span class="line">    <span class="keyword">return</span> dfd.promise();</span><br><span class="line">&#125;);</span><br><span class="line"></span><br><span class="line"><span class="comment">//根据callId查询录音文件，不仅仅是异步请求可以做成Promise形式，任何函数都可以做成Promise形式</span></span><br><span class="line">App.addMethod(<span class="string">'_getRecordingsByCallId'</span>,<span class="function"><span class="keyword">function</span>(<span class="params">callId</span>)</span>&#123;</span><br><span class="line">    <span class="keyword">var</span> dfd = $.Deferred(),</span><br><span class="line">        path = <span class="string">'/api/tenantcalls/'</span>+callId+<span class="string">'/recordings'</span>;</span><br><span class="line"></span><br><span class="line">    App._sendRequest(path)</span><br><span class="line">    .done(<span class="function"><span class="keyword">function</span>(<span class="params">res</span>)</span>&#123;dfd.resolve(res);&#125;)</span><br><span class="line">    .fail(<span class="function"><span class="keyword">function</span>(<span class="params">res</span>)</span>&#123;dfd.reject(res);&#125;);</span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> dfd.promise();</span><br><span class="line">&#125;);</span><br><span class="line"></span><br><span class="line"><span class="comment">// 获取录音</span></span><br><span class="line">App.addMethod(<span class="string">'getCallDetailRecordings'</span>,<span class="function"><span class="keyword">function</span>(<span class="params">callId</span>)</span>&#123;</span><br><span class="line">    App._getRecordingsByCallId(callId)</span><br><span class="line">    .done(<span class="function"><span class="keyword">function</span>(<span class="params">res</span>)</span>&#123;</span><br><span class="line">        <span class="comment">// 获取结果后渲染数据</span></span><br><span class="line">        App.renderRecording(res);</span><br><span class="line">    &#125;)</span><br><span class="line">    .fail(<span class="function"><span class="keyword">function</span>(<span class="params">res</span>)</span>&#123;</span><br><span class="line">        App.error(res);</span><br><span class="line">    &#125;);</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
-<h1 id="5-注意事项"><a href="#5-注意事项" class="headerlink" title="5 注意事项"></a>5 注意事项</h1><ul>
-<li>jQuery的Promise主要是用了jQquery的$.Derferred()方法，一些老版本的jquery并不支持此方法。</li>
-<li>jQuery版本必须大于等于1.5，推荐使用1.11.3</li>
-</ul>
-<h1 id="6-参考文献"><a href="#6-参考文献" class="headerlink" title="6 参考文献"></a>6 参考文献</h1><ul>
-<li><a href="http://api.jquery.com/" target="_blank" rel="noopener">jquery官方api文档</a></li>
-<li><a href="https://en.wikipedia.org/wiki/JQuery" target="_blank" rel="noopener">jquery维基百科文档</a></li>
-</ul>
-<h1 id="7-最后"><a href="#7-最后" class="headerlink" title="7 最后"></a>7 最后</h1><p>以上文章仅供参考，不包完全正确。欢迎评论，3q。</p>
-
+        <h1 id="visibilitychange事件"><a href="#visibilitychange事件" class="headerlink" title="visibilitychange事件"></a><a href="https://developer.mozilla.org/zh-CN/docs/Web/Events/visibilitychange" target="_blank" rel="noopener">visibilitychange事件</a></h1><p>触发条件：<code>浏览器标签页被隐藏或显示的时候会触发visibilitychange事件.</code></p>
+<p>使用场景：<code>当标签页显示或者隐藏时，触发一些业务逻辑</code></p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">document</span>.addEventListener(<span class="string">"visibilitychange"</span>, <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">  <span class="built_in">console</span>.log( <span class="built_in">document</span>.visibilityState );</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+<h1 id="storage事件"><a href="#storage事件" class="headerlink" title="storage事件"></a><a href="https://developer.mozilla.org/en-US/docs/Web/Events/storage" target="_blank" rel="noopener">storage事件</a></h1><p>触发条件：<code>使用localStorage or sessionStorage存储或者修改某个本地存储时</code></p>
+<p>使用场景：<code>标签页间通信</code></p>
+<figure class="highlight 1c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// AB页面同源</span></span><br><span class="line"><span class="comment">// 在A 页面</span></span><br><span class="line">window.addEventListener('storage', (e) =&gt; &#123;console.<span class="built_in">log</span>(e)&#125;)</span><br><span class="line"></span><br><span class="line"><span class="comment">// 在B 页面，向120打个电话</span></span><br><span class="line">localStorage.setItem('makeCall','120')</span><br><span class="line"></span><br><span class="line"><span class="comment">// 然后可以在A页面间有输出, 可以看出A页面 收到了B页面的通知</span></span><br><span class="line">...key: <span class="string">"makeCall"</span>, oldValue: <span class="string">"119"</span>, newValue: <span class="string">"120"</span>, ...</span><br></pre></td></tr></table></figure>
+<h1 id="beforeunload事件"><a href="#beforeunload事件" class="headerlink" title="beforeunload事件"></a><a href="https://developer.mozilla.org/en-US/docs/Web/Events/beforeunload" target="_blank" rel="noopener">beforeunload事件</a></h1><p>触发条件：<code>当页面的资源将要卸载(及刷新或者关闭标签页前). 当页面依然可见，并且该事件可以被取消只时</code></p>
+<p>使用场景：<code>关闭或者刷新页面时弹窗确认</code>，<code>关闭页面时向后端发送报告等</code></p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">window</span>.addEventListener(<span class="string">"beforeunload"</span>, <span class="function"><span class="keyword">function</span> (<span class="params">e</span>) </span>&#123;</span><br><span class="line">  <span class="keyword">var</span> confirmationMessage = <span class="string">"\o/"</span>;</span><br><span class="line"></span><br><span class="line">  e.returnValue = confirmationMessage;     <span class="comment">// Gecko, Trident, Chrome 34+</span></span><br><span class="line">  <span class="keyword">return</span> confirmationMessage;              <span class="comment">// Gecko, WebKit, Chrome &lt;34</span></span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+<h1 id="navigator-sendBeacon"><a href="#navigator-sendBeacon" class="headerlink" title="navigator.sendBeacon"></a><a href="https://developer.mozilla.org/zh-CN/docs/Web/API/Navigator/sendBeacon" target="_blank" rel="noopener">navigator.sendBeacon</a></h1><p>这个方法主要用于满足 统计和诊断代码 的需要，这些代码通常尝试在卸载（unload）文档之前向web服务器发送数据。过早的发送数据可能导致错过收集数据的机会。然而， 对于开发者来说保证在文档卸载期间发送数据一直是一个困难。因为用户代理通常会忽略在卸载事件处理器中产生的异步 XMLHttpRequest 。</p>
+<p>使用 sendBeacon() 方法，将会使用户代理在有机会时异步地向服务器发送数据，同时不会延迟页面的卸载或影响下一导航的载入性能。这就解决了提交分析数据时的所有的问题：使它可靠，异步并且不会影响下一页面的加载。此外，代码实际上还要比其他技术简单！</p>
+<p><code>注意：该方法在IE和safari没有实现</code></p>
+<p>使用场景：<code>发送崩溃报告</code></p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">window</span>.addEventListener(<span class="string">'unload'</span>, logData, <span class="literal">false</span>);</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">logData</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">    navigator.sendBeacon(<span class="string">"/log"</span>, analyticsData);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
       
     </div>
     
@@ -385,12 +381,6 @@
 
     <footer class="post-footer">
       
-        <div class="post-tags">
-          
-            <a href="/tags/jQuery/" rel="tag"># jQuery</a>
-          
-        </div>
-      
 
       
       
@@ -400,8 +390,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2018/01/29/hello-world/" rel="next" title="我的JavaScript最佳实践">
-                <i class="fa fa-chevron-left"></i> 我的JavaScript最佳实践
+              <a href="/2018/01/29/nodejs-server-frameworks/" rel="next" title="Nodejs 服务端框架合集(78个)">
+                <i class="fa fa-chevron-left"></i> Nodejs 服务端框架合集(78个)
               </a>
             
           </div>
@@ -409,10 +399,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2018/01/29/substr-and-substring-history/" rel="prev" title="追本溯源：substr与substring历史漫话">
-                追本溯源：substr与substring历史漫话 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -561,7 +547,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#1-情景再现"><span class="nav-number">1.</span> <span class="nav-text">1 情景再现</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#2-不堪回首"><span class="nav-number">2.</span> <span class="nav-text">2 不堪回首</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#3-面朝大海"><span class="nav-number">3.</span> <span class="nav-text">3 面朝大海</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#4-废话少说，放‘码’过来"><span class="nav-number">4.</span> <span class="nav-text">4 废话少说，放‘码’过来</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#5-注意事项"><span class="nav-number">5.</span> <span class="nav-text">5 注意事项</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#6-参考文献"><span class="nav-number">6.</span> <span class="nav-text">6 参考文献</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#7-最后"><span class="nav-number">7.</span> <span class="nav-text">7 最后</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#visibilitychange事件"><span class="nav-number">1.</span> <span class="nav-text">visibilitychange事件</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#storage事件"><span class="nav-number">2.</span> <span class="nav-text">storage事件</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#beforeunload事件"><span class="nav-number">3.</span> <span class="nav-text">beforeunload事件</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#navigator-sendBeacon"><span class="nav-number">4.</span> <span class="nav-text">navigator.sendBeacon</span></a></li></ol></div>
             
 
           </div>
