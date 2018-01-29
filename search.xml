@@ -1,6 +1,63 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[ztree-note]]></title>
+    <url>%2F2018%2F01%2F29%2Fztree-note%2F</url>
+    <content type="text"><![CDATA[ztree获得顶层节点1treeObj.getNodesByParam('level',0,null);]]></content>
+      <tags>
+        <tag>ztree</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[thinkpad 系列恢复F1-F12原始功能，切换ctrl和fn的位置]]></title>
+    <url>%2F2018%2F01%2F29%2Fthinkpad-f1-f12%2F</url>
+    <content type="text"><![CDATA[1 实验准备 T450笔记本 2 进入BIOS 重启电脑 一直不停按enter 按F1 选择Keyboard/mouse 3 恢复F1-F2恢复原始功能:fn and ctrl key swap [enabled] 4 切换ctrl和ctrl的位置:F1-F12 as primary function [enabled] 5 保存，退出]]></content>
+      <tags>
+        <tag>thinkpad</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[蚌埠出入境管理局电话以及相关注意事项]]></title>
+    <url>%2F2018%2F01%2F29%2Fgoverment-info%2F</url>
+    <content type="text"><![CDATA[1 相关地址信息1.1 蚌埠市公安局出入境接待大厅办公地址：蚌埠市南湖路600号咨询电话：0552-2089266投诉电话：0552-2089269节假日值班电话：0552-2089266工作时间：周一至周五：上午8:00-12:00，下午14:30-17:30； 1.2 蚌埠市五河县公安局出入境接待大厅办公地址：五河县城关镇淮河路40号咨询电话：0552-5057155投诉电话：0552-5057155节假日值班电话：0552-5057155工作时间：周一至周五：上午8：00-12：00，下午：14：30-17：30 1.3 蚌埠市怀远县公安局出入境接待大厅办公地址：怀远县禹王路中段咨询电话：0552-8027123投诉电话：0552-8027123节假日值班电话：0552-8027123工作时间：周一至周五：上午8：00-12：00，下午：14：30-17：30； 1.4 蚌埠市固镇县公安局出入境接待大厅办公地址：固镇县谷阳路中段咨询电话：0552-6075830投诉电话：0552-6075830节假日值班电话：0552-6075830工作时间：周一至周五：上午8:00-12:00，下午14:30-17:30； 2 注意事项2.1 准备材料 身份证 银行卡(有些费用只能用银行卡支付) 零钱 2.2 其他事项 一般来说签证10天后才能办好，可以申请寄送服务 不要在将近中午的时候去办证，他们中午休息时间蛮长的 办证前，可以打电话问问本地是支持团签还是个签 3 注意以上信息不能保证时效性，如果电话或者地址不存在，请自行查询。]]></content>
+      <tags>
+        <tag>蚌埠</tag>
+        <tag>出入境管理局</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[win7 ie11 开发者工具打开后一片空白]]></title>
+    <url>%2F2018%2F01%2F29%2Fie11-without-devtool%2F</url>
+    <content type="text"><![CDATA[解决方法安装Windows7补丁：KB3008923；下载地址：http://www.microsoft.com/en-us/download/details.aspx?id=45134 （32位）http://www.microsoft.com/zh-CN/download/details.aspx?id=45154 （64位）]]></content>
+      <tags>
+        <tag>ie11</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[centos7 服务管理指令]]></title>
+    <url>%2F2018%2F01%2F29%2Fcentos7-service-manager%2F</url>
+    <content type="text"><![CDATA[功能 命令 使服务开启启动 systemctl enable httpd.service 关闭服务开机启动 systemctl disabled httpd.service 检查服务状态 systemctl status httpd.service 查看所有已启动的服务 systemctl list-units –type=service 启动服务 systemctl start httpd.service 停止服务 systemctl stop httpd.service 重启服务 systemctl restart httpd.service]]></content>
+      <tags>
+        <tag>centos7</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[CSTA 呼叫模型简介]]></title>
+    <url>%2F2018%2F01%2F29%2Fcsta-call-model-overview%2F</url>
+    <content type="text"><![CDATA[内容概要 CSTA协议与标准概述 CSTA OpenScape 语音架构概述 CSTA协议标准什么是CSTA ? CSTA：电脑支持通讯程序(Computer Supported TelecommunicationsApplications) 基本的呼叫模型在1992建立，后来随着行业发展，呼叫模型也被加强和扩展，例如新的协议等等 CSTA是一个应用层接口，用来监控呼叫，设备和网络 CSTA创建了一个通讯程序的抽象层: CSTA并不依赖任何底层的信令协议 E.g.H.323,SIP,Analog,T1,ISDN,etc. CSTA并不要求用户必须使用某些设备 E.g.intelligentendpoints,low-function/stimulusdevices,SIPSignalingmodels-3PCC vs. Peer/Peer 适用不同的操作模式 第三方呼叫控制 一方呼叫控制 CSTA的设计目标是为了提高各种CSTA实现之间的移植性 规范化呼叫模型和行为 完成服务、事件定义 规范化标准 CSTA 标准的进化史 阶段1 (发布于 June ’92) 40 特性, 66 页 (服务定义) 专注于呼叫控制 阶段2 (发布于 Dec. ’94) 77 特性, 145 页 (服务定义) I/O &amp; 语音单元服务, 更多呼叫控制服务 阶段3 - CSTA Phase II Features &amp; versit CTI Technology 发布于 Dec. ‘98 136 特性, 650 页 (服务定义) 作为ISO 标准发布于 July 2000 发布 CSTA XML (ECMA-323) June 2004 发布 “Using CSTA with Voice Browsers” (TR/85) Dec. 02 发布 CSTA WSDL (ECMA-348) June 2004 June 2004: 发布对象模型 TR/88 June 2004: 发布 “Using CSTA for SIP Phone User Agents (uaCSTA)” TR/87 June 2004: 发布 “Application Session Services” (ECMA-354) June 2005: 发布 “WS-Session: WSDL for ECMA-354”(ECMA-366) December 2005 : 发布 “Management Notification and Computing FunctionServices” December 2005 : Session Management, Event Notification, Amendements for ECMA-348” (TR/90) December 2006 : Published new editions of ECMA-269, ECMA-323, ECMA-348 CSTA 标准文档 CSTA 标准扩展 新的特性可以被加入标准通过发布新版本的标准 新的参数，新的值可以被加入通过发布新版本的标准 未来的新版本必须下向后兼容 具体的实施可以增加属性通过CSTA自带的扩展机制(e.g. ONS – One Number Service) CSTA 操作模型 CSTA操作模型由计算域和转换域组成，是CSTA定义在两个域之间的接口 CSTA标准规定了消息（服务以及事件上报）,还有与之相关的行为 计算域是CSTA程序的宿主环境，用来与转换域交互与控制 转换域 - CSTA模型提供抽象层，程序可以观测并控制的。转换渔包括一些对象例如CSTA呼叫，设备，链接。 CSTA 操作模型：呼叫，设备，链接 相关说明是的的的的 参考 CSTAoverview CSTA_introduction_and_overview]]></content>
+      <tags>
+        <tag>csta</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[ssh 无密码登录远程服务器]]></title>
+    <url>%2F2018%2F01%2F29%2Fssh-login-without-password%2F</url>
+    <content type="text"><![CDATA[1 前提说明A(本机 mac item2)B(远程机器 ip:a.b.c.d centos) 2 过程12.1 生成public_key与private_key在本机上输入，可以一路回车，不用说明1ssh-keygen -t rsa 最终会在~/.ssh/下生成两个文件12id_rsaid_rsa.pub 2.2 将public_key上传到远程服务器注意：在本机上输入12// 回车之后，需要输入远程主机B的登录密码scp ~/.ssh/id_rsa.pub root@a.b.c.d:/root/.ssh 2.3 登录远程主机在本机上输入1234567891011// 需要输入远程主机的密码ssh root@a.b.c.d// 进到远程主机~/.ssh/目录下, 此目录下应该已经有了之前上传的id_rsa.pub文件// 如果目录下没有authorized_keys文件，那么将id_rsa.pub改名成authorized_keysmv id_rsa.pub authorized_keys// 如果远程目录下已经存在authorized_keys文件，可以将id_rsa.pub追加进去cat id_rsa.pub &gt;&gt; authorized_keys 2.4 本机配置注意，此时需要退出ssh, 在本机上执行以下命令123456789vi ~/.ssh/config在config文件中追加以下内容，并保存退出Host serverNameHostname a.b.c.dPort 22User rootIdentityFile ~/.ssh/id_rsa 然后试一下，只需要ssh serverName, 就可以直接登录远程服务器，是不是很爽 3 参考文献 scp 命令教程 mac用iterm2实现ssh，怎么像SecureCRT一样保存IP和账号密码？ 4 精华推荐最后推荐一本非常好的linux常用命令手册，非常不错哦。 Linux下有很多命令行工具供我们使用，每个工具总是提供了大量参数供我们选择； 实际工作中，我们用到的工具，最常用的总是那么几个参数组合； 为此，我写了这本书相对实用的书； 这本书专注于Linux工具的最常用用法，以便读者能以最快时间掌握，并在工作中应用； 《Linux工具快速教程》]]></content>
+      <tags>
+        <tag>ssh</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[组织在召唤：如何免费获取一个js.org的二级域名]]></title>
     <url>%2F2018%2F01%2F29%2Fhow-to-get-jsorg-sub-domain%2F</url>
     <content type="text"><![CDATA[之前我是使用wangduanduan.github.io作为我的博客地址，后来觉得麻烦，有把博客关了。最近有想去折腾折腾。先看效果：wdd.js.org 如果你不了解js.org可以看看我的这篇文章:一个值得所有前端开发者关注的网站js.org 前提 已经有了github pages的一个博客，并且博客中有内容，没有内容会审核不通过的。我第一次申请域名，就是因为内容太少而审核不通过。 想好自己要什么域名？比如你想要一个：wdd.js.org的域名，你先在浏览器里访问这个地址，看看有没有人用过，如果已经有人用过，那么你就只能想点其他的域名了。 fork js.org的项目，添加自己的域名1 fork https://github.com/js-org/dns.js.org2 修改你fork后的仓库中的cnames_active.js文件，加上自己的一条域名，最好要按照字母顺序 如下图所示，我在第1100行加入。注意，不要在该行后加任何注释。1"wdd": "wangduanduan.github.io", 3 commit 加入CNAME文件我是用hexo和next主题作为博客的模板。其中我在gh-pages分支写博客，然后部署到master分支。 我在我的gh-pages分支的source目录下加入CNAME文件, 内容只有一行 1wdd.js.org 将博客再次部署好，如果CNAME生效的话，你已经无法从原来的地址访问：wangduanduan.github.io， 这个博客了。 向js.org项目发起pull-request找到你fork后的项目，点击 new pull request, 向原来的项目发起请求。 然后你可以在js-org/dns.js.org项目的pull requests看到你的请求，当这个请求被合并时，你就拥有了js.org的二级域名。]]></content>
