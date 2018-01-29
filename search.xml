@@ -1,6 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[免费服务的盈利模式]]></title>
+    <url>%2F2018%2F01%2F29%2Fhow-free-server-make-money%2F</url>
+    <content type="text"><![CDATA[免费产品的盈利模式有四种 投放广告 增值服务：先把羊养肥，再慢慢割羊毛，现在大部分都是互联网服务都是这种 交叉补贴: A服务免费，再用户使用A服务时，通过提供B服务来盈利 零边际成本：免费提供A服务，但是用户需要用物品去交换A服务，服务提供者通过加工物品来盈利]]></content>
+      <tags>
+        <tag>经济学</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[ztree-note]]></title>
     <url>%2F2018%2F01%2F29%2Fztree-note%2F</url>
     <content type="text"><![CDATA[ztree获得顶层节点1treeObj.getNodesByParam('level',0,null);]]></content>
