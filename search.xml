@@ -1,6 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[git常用命令与oh-my-zsh常用缩写]]></title>
+    <url>%2Fgit-commom-cmds.html</url>
+    <content type="text"><![CDATA[oh-my-zsh中常用的git缩写12345678910111213141516171819202122alias ga='git add'alias gb='git branch'alias gba='git branch -a'alias gbd='git branch -d'alias gcam='git commit -a -m'alias gcb='git checkout -b'alias gco='git checkout'alias gcm='git checkout master'alias gcp='git cherry-pick'alias gd='git diff'alias gfo='git fetch origin'alias ggpush='git push origin $(git_current_branch)'alias ggsup='git branch --set-upstream-to=origin/$(git_current_branch)'alias glgp='git log --stat -p'alias gm='git merge'alias gp='git push'alias gst='git status'alias gsta='git stash save'alias gstp='git stash pop'alias gl='git pull'alias glg='git log --stat'alias glgp='git log --stat -p' oh-my-zsh git命令缩写完整版 常用的git命令假设你在master分支上 123Alice-&gt;Bob: Hello Bob, how are you?Note right of Bob: Bob thinksBob--&gt;Alice: I am good thanks! 12345// 将本地修改后的文件推送到本地仓库git commit -am '修改了一个问题'// 将本地仓库推送到远程仓库git push 状态管理状态查看查看当前仓库状态1git status 分支管理分支新建基于当前分支，创建test分支12345678// 创建dev分支git checkout dev// 创建dev分支后，切换到dev分支git checkout -b dev // 以某个commitId为起点创建分支git checkout -b new-branch-name commit-id 分支查看查看远程分支： git branch -r 12345678// 查看本地分支git branch// 查看远程分支git branch -r// 查看所有分支git branch -a 分支切换切换到某个分支: git checkout 0.10.7123&gt; git checkout 0.10.7Branch 0.10.7 set up to track remote branch 0.10.7 from origin.Switched to a new branch '0.10.7' 分支合并将master分支合并到0.10.7分支: git merge12345678&gt; git merge masterMerge made by the 'recursive' strategy. public/javascripts/app-qc.js | 83 +++++++++++++++++++++++++-- views/menu.html | 1 + views/qc-template-show-modal.html | 114 ++++++++++++++++++++++++++++++++++++++ views/qc-template.html | 7 ++- 4 files changed, 198 insertions(+), 7 deletions(-) create mode 100644 views/qc-template-show-modal.html 分支删除12345// 删除远程dev分支git push --delete origin dev// 删除本地dev分支git branch -D dev 版本对比12345678// 查看尚未暂存的文件更新了哪些部分git diff// 查看某两个版本之间的差异git diff commitID1 commitID2 // 查看某两个版本的某个文件之间的差异git diff commitID1:filename1 commitID2:filename2 日志查看12git log git short-log 参考文献 git 命令参考 《Pro Git 中文版》 廖雪峰 git教程 猴子都能懂的GIT入门]]></content>
+      <tags>
+        <tag>git</tag>
+        <tag>oh-my-zsh</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[linux常用命令使用场景总结]]></title>
     <url>%2Flinux-common-cmds.html</url>
     <content type="text"><![CDATA[根据端口号查监听的进程号参考 使用模型：lsof -i :port 已知某服务占用8088端口，请查出使用该端口的进程号 1lsof -i :8088 lsof（list open files）是一个查看当前系统文件的工具。在linux环境下，任何事物都以文件的形式存在，通过文件不仅仅可以访问常规数据，还可以访问网络连接和硬件。如传输控制协议 (TCP) 和用户数据报协议 (UDP) 套接字等，系统在后台都为该应用程序分配了一个文件描述符，该文件描述符提供了大量关于这个应用程序本身的信息。lsof命令详情 参考文献 Linux工具快速教程]]></content>
