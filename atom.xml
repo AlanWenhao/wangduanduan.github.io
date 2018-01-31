@@ -1,0 +1,529 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>洞香春</title>
+  
+  <subtitle>洞香春以名士荟萃、谈论国事、交流思想而著称于当时列国 --《大秦帝国》</subtitle>
+  <link href="/atom.xml" rel="self"/>
+  
+  <link href="https://wdd.js.org/"/>
+  <updated>2018-01-31T02:08:23.000Z</updated>
+  <id>https://wdd.js.org/</id>
+  
+  <author>
+    <name>王端端</name>
+    
+  </author>
+  
+  <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>linux常用命令使用场景总结</title>
+    <link href="https://wdd.js.org/linux-common-cmds.html"/>
+    <id>https://wdd.js.org/linux-common-cmds.html</id>
+    <published>2018-01-31T01:58:33.000Z</published>
+    <updated>2018-01-31T02:08:23.000Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="根据端口号查监听的进程号"><a href="#根据端口号查监听的进程号" class="headerlink" title="根据端口号查监听的进程号"></a>根据端口号查监听的进程号</h1><p><a href="http://linuxtools-rst.readthedocs.io/zh_CN/latest/tool/lsof.html" target="_blank" rel="noopener">参考</a></p><p>使用模型：<code>lsof -i :port</code></p><p>已知某服务占用8088端口，请查出使用该端口的进程号</p><figure class="highlight stylus"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">lsof -<span class="selector-tag">i</span> :<span class="number">8088</span></span><br></pre></td></tr></table></figure><blockquote><p>lsof（list open files）是一个查看当前系统文件的工具。在linux环境下，任何事物都以文件的形式存在，通过文件不仅仅可以访问常规数据，还可以访问网络连接和硬件。如传输控制协议 (TCP) 和用户数据报协议 (UDP) 套接字等，系统在后台都为该应用程序分配了一个文件描述符，该文件描述符提供了大量关于这个应用程序本身的信息。<a href="http://linuxtools-rst.readthedocs.io/zh_CN/latest/tool/lsof.html" target="_blank" rel="noopener">lsof命令详情</a></p></blockquote><h1 id="参考文献"><a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h1><ul><li><a href="http://linuxtools-rst.readthedocs.io/zh_CN/latest/index.html" target="_blank" rel="noopener">Linux工具快速教程</a></li></ul>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h1 id=&quot;根据端口号查监听的进程号&quot;&gt;&lt;a href=&quot;#根据端口号查监听的进程号&quot; class=&quot;headerlink&quot; title=&quot;根据端口号查监听的进程号&quot;&gt;&lt;/a&gt;根据端口号查监听的进程号&lt;/h1&gt;&lt;p&gt;&lt;a href=&quot;http://linuxtools-rst
+      
+    
+    </summary>
+    
+    
+      <category term="linux" scheme="https://wdd.js.org/tags/linux/"/>
+    
+      <category term="shell" scheme="https://wdd.js.org/tags/shell/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>猴子都能懂的教程：向kindle推送电子书</title>
+    <link href="https://wdd.js.org/send-book-to-kindle.html"/>
+    <id>https://wdd.js.org/send-book-to-kindle.html</id>
+    <published>2018-01-30T11:55:43.000Z</published>
+    <updated>2018-01-30T12:59:20.000Z</updated>
+    
+    <content type="html"><![CDATA[<p><a href="https://wdd.js.org/2018/01/30/send-book-to-kindle/" target="_blank" rel="noopener">原文链接</a></p><p>读书，嗯，读书</p><p><img src="http://p3alsaatj.bkt.clouddn.com/20180130205840_hPSDa6_Jietu20180130-205818.jpeg" alt=""></p><h1 id="教程目的"><a href="#教程目的" class="headerlink" title="教程目的"></a>教程目的</h1><ul><li>通过邮件向kindle推送一本电子书</li></ul><h1 id="前期准备"><a href="#前期准备" class="headerlink" title="前期准备"></a>前期准备</h1><ul><li>一台可以上网的电脑</li><li>一个电子书</li><li>一个kindle</li></ul><h1 id="你的kindle邮箱是什么？"><a href="#你的kindle邮箱是什么？" class="headerlink" title="你的kindle邮箱是什么？"></a>你的kindle邮箱是什么？</h1><ul><li>登录亚马逊，地址：<a href="https://www.amazon.cn/ref=nav_logo" target="_blank" rel="noopener">https://www.amazon.cn/ref=nav_logo</a></li><li>鼠标移动到导航栏上的<code>我的账户</code></li><li>点击下拉框中的：<code>管理我的内容和设备</code></li><li>会出现下面tab页面 =&gt; 设置 =&gt; 个人文档设置 =&gt; 里面会有电子邮件地址</li><li>里面的邮箱即为你邮件发送的收件方地址。例如：<code>abcd@kindle.cc</code></li></ul><p><img src="http://p3alsaatj.bkt.clouddn.com/20180130201119_fDv8Lt_Jietu20180130-200631.jpeg" alt=""></p><h1 id="如何设置邮箱白名单？"><a href="#如何设置邮箱白名单？" class="headerlink" title="如何设置邮箱白名单？"></a>如何设置邮箱白名单？</h1><p>并不是所有邮件都能发送到<code>abcd@kindle.cc</code>, 需要在上一步的同一个页面设置<code>已认可的发件人电子邮箱</code>, 只有来自认可的邮箱的电子书，亚马逊才会接受。你需要<code>添加认可的电子邮箱</code>。例如发件的邮箱写为：<code>abcd@qq.com</code></p><p><img src="http://p3alsaatj.bkt.clouddn.com/20180130202003_gH5BoP_Screenshot.jpeg" alt=""></p><h1 id="邮件该怎么写？"><a href="#邮件该怎么写？" class="headerlink" title="邮件该怎么写？"></a>邮件该怎么写？</h1><p><code>必须使用上一步白名单里面的邮箱来发送</code></p><ul><li>收件人写你的kindle邮箱</li><li>主题写：<code>Convert</code></li><li>在邮件的附件中添加准备好的电子书</li><li>点击发送</li></ul><h1 id="在哪里查找已经发送的电子书？"><a href="#在哪里查找已经发送的电子书？" class="headerlink" title="在哪里查找已经发送的电子书？"></a>在哪里查找已经发送的电子书？</h1><ul><li>还是在管理我的内容和设备页面</li><li>点击我的内容</li><li>在显示中选择：<code>个人文档</code></li><li>例如你可以在截图中看到，我刚刚上传的一本：you dont konw js</li></ul><blockquote><p>如果没有找到你已经发送的书籍，请再次检查一下，你的kindle邮箱和白名单中的邮箱是否正确</p></blockquote><p><img src="http://p3alsaatj.bkt.clouddn.com/20180130202558_bYkctZ_Jietu20180130-202546.jpeg" alt=""></p><h1 id="如何向kindle推送电子书"><a href="#如何向kindle推送电子书" class="headerlink" title="如何向kindle推送电子书"></a>如何向kindle推送电子书</h1><p>紧接着上一步.</p><ol><li>选择要发送的书籍</li><li>点击发送</li><li>在出现的弹出框中，在下拉框中选择你的kindle设备</li><li>点击发送</li><li>kindle链接WiFi，进入我的图书馆，点击设备，同步</li></ol><p><img src="http://p3alsaatj.bkt.clouddn.com/20180130203158_8z8IlQ_Jietu20180130-203143.jpeg" alt=""></p><h1 id="使用体验的思考？"><a href="#使用体验的思考？" class="headerlink" title="使用体验的思考？"></a>使用体验的思考？</h1><p>之前用多看阅读，<code>WIFI传书</code>非常方便。kindle的上传图书其实蛮复杂的，过程中可能直接过滤掉一些用户。</p><p>我在想为什么亚马逊不在：<code>管理我的内容和设备页面</code>添加一个上传图书的按钮呢？</p><h1 id="重点划线"><a href="#重点划线" class="headerlink" title="重点划线"></a>重点划线</h1><ul><li>一封电子邮件<code>最多只能包含25个附件</code>，并且最多只能发送至15个不同的〖发送至Kindle〗电子邮箱。文档的总大小不得超过50MB。</li><li>在电子邮件主题中输入<code>“Convert”</code>以将您的文档转换为Kindle格式，然后再将其发送至您的设备以及【管理我的内容和设备】页面中的【我的内容】</li><li>如果您的设备或阅读软件暂时无法连接无线网络，我们<code>最多可以为您保存个人文档60天</code></li><li>Kindle个人文档服务支持以下文件类型：<ul><li>Kindle格式（.MOBI、.AZW）</li><li>Microsoft Word（.DOC、.DOCX）</li><li>HTML（.HTML、.HTM）</li><li>RTF (.RTF)</li><li>Text (.TXT) (Kindle X 咪咕电子书阅读器不支持)</li><li>JPEG（.JPEG、.JPG）</li><li>GIF (.GIF)</li><li>PNG (.PNG)</li><li>BMP (.BMP)</li><li>PDF (.PDF)</li></ul></li><li><code>建议您在发送文件之前将文件名改成英文</code></li></ul><h1 id="参考文档"><a href="#参考文档" class="headerlink" title="参考文档"></a>参考文档</h1><ul><li><a href="https://www.amazon.cn/gp/help/customer/display.html?nodeId=201974220" target="_blank" rel="noopener">使用您的〖发送至Kindle〗电子邮箱</a></li><li><a href="https://www.amazon.cn/gp/help/customer/display.html?nodeId=201974240" target="_blank" rel="noopener">添加用于接收文档的电子邮箱</a></li><li><a href="https://www.amazon.cn/gp/help/customer/display.html?nodeId=200767340" target="_blank" rel="noopener">Kindle个人文档服务</a></li><li><a href="https://www.amazon.cn/gp/help/customer/display.html?nodeId=201124320" target="_blank" rel="noopener">Kindle个人文档服务使用条件</a></li></ul>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;&lt;a href=&quot;https://wdd.js.org/2018/01/30/send-book-to-kindle/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;原文链接&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;读书，嗯，读书&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;http
+      
+    
+    </summary>
+    
+    
+      <category term="kindle" scheme="https://wdd.js.org/tags/kindle/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>查询字符串的最小数据集</title>
+    <link href="https://wdd.js.org/query-string-mds.html"/>
+    <id>https://wdd.js.org/query-string-mds.html</id>
+    <published>2018-01-30T02:45:37.000Z</published>
+    <updated>2018-01-31T01:56:29.000Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="什么是查询字符串？"><a href="#什么是查询字符串？" class="headerlink" title="什么是查询字符串？"></a>什么是查询字符串？</h1><p>给个例子：</p><figure class="highlight vim"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">http<span class="variable">s:</span>//<span class="keyword">en</span>.wikipedia.org/<span class="keyword">w</span>/load.php?<span class="keyword">debug</span>=false&amp;lang=<span class="keyword">en</span>&amp;modules=startup&amp;<span class="keyword">only</span>=scripts&amp;skin=vector</span><br></pre></td></tr></table></figure><p>查询字符串是url中问号后边的部分，形式如：key1=value1&amp;key2=value2&amp;key3=value3。这部分称为<code>查询(query)组件</code>。</p><h1 id="查询组件的最小数据集"><a href="#查询组件的最小数据集" class="headerlink" title="查询组件的最小数据集"></a>查询组件的最小数据集</h1><ul><li><code>参数名</code>：</li><li><code>是否必须</code>：</li><li><code>是否是精确查询</code>：</li><li><code>描述</code>：</li><li><code>示例</code>：必须要有，比如说如果查询的是一个时间。那么时间的格式有很多种，务必给出示例</li><li><code>约束</code>：<ul><li>字符串：最小长度，最大长度。[3,10]</li><li>数值型：取值区间。[4, 10]</li><li>枚举型：枚举字符串。1代表男，0代表女</li></ul></li></ul><h1 id="举例说明：一个用户查询的接口"><a href="#举例说明：一个用户查询的接口" class="headerlink" title="举例说明：一个用户查询的接口"></a>举例说明：一个用户查询的接口</h1><table><thead><tr><th>参数名</th><th>是否必须</th><th>是否是精确查询</th><th>描述</th><th>示例</th><th>约束</th></tr></thead><tbody><tr><td>email</td><td>否</td><td>是</td><td>邮箱</td><td>test@tt.cc</td><td>长度：[6, 10] </td></tr><tr><td>age</td><td>否</td><td>是</td><td>年龄</td><td>18</td><td>取值：[0, 110]</td></tr><tr><td>gender</td><td>否</td><td>是</td><td>性别</td><td>1</td><td>1代表男，0代表女</td></tr><tr><td>userName</td><td>否</td><td>否</td><td>用户名</td><td>alex</td><td>长度：[4, 40]</td></tr><tr><td>token</td><td>是</td><td>是</td><td>认证令牌</td><td>90sdflkajf0asdflkja</td><td>长度：60</td></tr><tr><td>registerBeginTime</td><td>否</td><td>是</td><td>开始注册时间，返回的结果都是该时间以后的数据</td><td>2018-09-20 17:23:00</td><td>长度：19</td></tr></tbody></table><p>很多资源</p><h1 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h1><ul><li><a href="https://en.wikipedia.org/wiki/Query_string" target="_blank" rel="noopener">wikipedia:Query_string</a></li></ul>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h1 id=&quot;什么是查询字符串？&quot;&gt;&lt;a href=&quot;#什么是查询字符串？&quot; class=&quot;headerlink&quot; title=&quot;什么是查询字符串？&quot;&gt;&lt;/a&gt;什么是查询字符串？&lt;/h1&gt;&lt;p&gt;给个例子：&lt;/p&gt;
+&lt;figure class=&quot;highlight vim&quot;&gt;&lt;t
+      
+    
+    </summary>
+    
+    
+      <category term="docs" scheme="https://wdd.js.org/tags/docs/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>如何写好接口文档？</title>
+    <link href="https://wdd.js.org/how-to-write-better-api-docs.html"/>
+    <id>https://wdd.js.org/how-to-write-better-api-docs.html</id>
+    <published>2018-01-29T14:01:55.000Z</published>
+    <updated>2018-01-29T14:06:20.000Z</updated>
+    
+    <content type="html"><![CDATA[<p><img src="http://p394yuy0c.bkt.clouddn.com/20180128223141_GeUnII_Jietu20180128-223059.jpeg" alt=""></p><h1 id="HTTP携带信息的方式"><a href="#HTTP携带信息的方式" class="headerlink" title="HTTP携带信息的方式"></a>HTTP携带信息的方式</h1><ul><li>url</li><li>headers</li><li>body: 包括请求体，响应体</li></ul><h1 id="分离通用信息"><a href="#分离通用信息" class="headerlink" title="分离通用信息"></a>分离通用信息</h1><p>一般来说，headers里的信息都是通用的，可以提前说明，作为默认参数</p><h1 id="路径中的参数表达式"><a href="#路径中的参数表达式" class="headerlink" title="路径中的参数表达式"></a>路径中的参数表达式</h1><p>URL中参数表达式使用<code>{}</code>的形式，参数包裹在大括号之中<code>{paramName}</code></p><p>例如：</p><ul><li><code>/api/user/{userId}</code></li><li><code>/api/user/{userType}?age={age}&amp;gender={gender}</code></li></ul><h1 id="数据模型定义"><a href="#数据模型定义" class="headerlink" title="数据模型定义"></a>数据模型定义</h1><p>数据模型定义包括：</p><ul><li>路径与查询字符串参数模型</li><li>请求体参数模型</li><li>响应体参数模型</li></ul><p>数据模型的最小数据集：</p><ul><li>名称</li><li>是否必须</li><li>说明</li></ul><blockquote><p>“最小数据集”（MDS）是指通过收集最少的数据，较好地掌握一个研究对象所具有的特点或一件事情、一份工作所处的状态，其核心是针对被观察的对象建立起一套精简实用的数据指标。最小数据集的概念起源于美国的医疗领域。最小数据集的产生源于信息交换的需要，就好比上下级质量技术监督部门之间、企业与质量技术监督部门之间、质量技术监督部门与社会公众之间都存在着信息交换的需求。</p></blockquote><p>一些文档里可能会加入字段的类型，但是我认为这是没必要的。以为HTTP传输的数据往往都需要序列化，大部分数据类型都是字符串。一些特殊的类型，例如枚举类型的字符串，可以在说明里描述。</p><p>另外：<code>数据模型非常建议使用表格来表现</code>。</p><p>举个栗子🌰：</p><table><thead><tr><th>名称</th><th>是否必须</th><th>说明</th></tr></thead><tbody><tr><td>userType</td><td>是</td><td>用户类型。<code>commom</code>表示普通用户，<code>vip</code>表示vip用户</td></tr><tr><td>age</td><td>否</td><td>用户年龄</td></tr><tr><td>gender</td><td>否</td><td>用户性别。<code>1</code>表示男，<code>0</code>表示女</td></tr></tbody></table><h1 id="请求示例"><a href="#请求示例" class="headerlink" title="请求示例"></a>请求示例</h1><figure class="highlight awk"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="regexp">//</span> general </span><br><span class="line">POST http:<span class="regexp">//</span>www.testapi.com<span class="regexp">/api/u</span>ser</span><br><span class="line"></span><br><span class="line"><span class="regexp">//</span> request payload</span><br><span class="line">&#123;</span><br><span class="line"><span class="string">"name"</span>: <span class="string">"qianxun"</span>,</span><br><span class="line"><span class="string">"age"</span>: <span class="number">14</span>,</span><br><span class="line"><span class="string">"like"</span>: [<span class="string">"music"</span>, <span class="string">"reading"</span>],</span><br><span class="line"><span class="string">"userType"</span>: <span class="string">"vip"</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="regexp">//</span> response</span><br><span class="line">&#123;</span><br><span class="line"><span class="string">"id"</span>: <span class="string">"asdkfjalsdkf"</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><h1 id="异常处理"><a href="#异常处理" class="headerlink" title="异常处理"></a>异常处理</h1><p>异常处理最小数据集</p><ul><li>状态码</li><li>说明</li><li>解决方案</li></ul><p>举个栗子🌰：</p><table><thead><tr><th>状态码</th><th>说明</th><th>解决方案</th></tr></thead><tbody><tr><td>401</td><td>用户名密码错误</td><td>检查用户名密码是否正确</td></tr><tr><td>424</td><td>超过最大在线数量</td><td>请在控制台修改最大在线数量</td></tr></tbody></table><p>之前我一直不想把解决方案加入异常处理的最小数据集，但是对于很多开发者来说，即使它知道<code>424</code>代表<code>超过最大在线数量</code>。如果你不告诉如果解决这个问题，那么他们可能就会直接来问你。所以最好能够一步到位，直接告诉他应该如何解决，这样省时省力。</p><h1 id="如何组织？"><a href="#如何组织？" class="headerlink" title="如何组织？"></a>如何组织？</h1><h2 id="一个创建用户的例子：创建用户"><a href="#一个创建用户的例子：创建用户" class="headerlink" title="一个创建用户的例子：创建用户"></a>一个创建用户的例子：创建用户</h2><p><strong>1 请求示例</strong><br><figure class="highlight awk"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="regexp">//</span> general </span><br><span class="line">POST http:<span class="regexp">//</span>www.testapi.com<span class="regexp">/api/u</span>ser<span class="regexp">/vip/</span>?token=abcdefg</span><br><span class="line"></span><br><span class="line"><span class="regexp">//</span> request payload</span><br><span class="line">&#123;</span><br><span class="line"><span class="string">"name"</span>: <span class="string">"qianxun"</span>,</span><br><span class="line"><span class="string">"age"</span>: <span class="number">14</span>,</span><br><span class="line"><span class="string">"like"</span>: [<span class="string">"music"</span>, <span class="string">"reading"</span>]</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="regexp">//</span> response</span><br><span class="line">&#123;</span><br><span class="line"><span class="string">"id"</span>: <span class="string">"asdkfjalsdkf"</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p><p><strong>2 路径与查询字符串参数模型</strong></p><p><code>POST http://www.testapi.com/api/user/{userType}/?token={token}</code></p><table><thead><tr><th>名称</th><th>是否必须</th><th>说明</th></tr></thead><tbody><tr><td>userType</td><td>是</td><td>用户类型。<code>commom</code>表示普通用户，<code>vip</code>表示vip用户</td></tr><tr><td>token</td><td>是</td><td>认证令牌</td></tr></tbody></table><p><strong>3 请求体参数模型</strong></p><table><thead><tr><th>名称</th><th>是否必须</th><th>说明</th></tr></thead><tbody><tr><td>name</td><td>是</td><td>用户名。4-50个字符</td></tr><tr><td>age</td><td>否</td><td>年龄</td></tr><tr><td>like</td><td>否</td><td>爱好。最多20个</td></tr></tbody></table><p><strong>4 响应体参数模型</strong></p><table><thead><tr><th>名称</th><th>说明</th></tr></thead><tbody><tr><td>id</td><td>用户id</td></tr></tbody></table><p><strong>5 异常处理</strong></p><table><thead><tr><th>状态码</th><th>说明</th><th>解决方案</th></tr></thead><tbody><tr><td>401</td><td>token过期</td><td>请重新申请token</td></tr><tr><td>424</td><td>超过最大在创建人数</td><td>请在控制台修改最大创建人数</td></tr></tbody></table><h2 id="这样组织的原因"><a href="#这样组织的原因" class="headerlink" title="这样组织的原因"></a>这样组织的原因</h2><ol><li><code>请求示例</code>:  请求示例放在第一位的原因是，要用<code>最快的方式</code>告诉开发者，这个接口应该如何请求</li><li><code>路径与查询字符串参数模型</code>： 使用<code>mustache</code>包裹参数</li><li><code>请求体参数模型</code>：如果没有请求体，可以不写</li><li><code>响应体参数模型</code>：</li><li><code>异常处理</code></li></ol><h1 id="文档提供的形式"><a href="#文档提供的形式" class="headerlink" title="文档提供的形式"></a>文档提供的形式</h1><p>文档建议由一下两种形式，<code>在线文档</code>，<code>pdf文档</code>。</p><ul><li><code>在线文档</code><ul><li>更新方便</li><li>易于随时阅读</li><li>易于查找</li></ul></li><li><code>pdf文档</code><ul><li>内容表现始终如一，不依赖文档阅读器</li><li>文档只读，不会被轻易修改</li></ul></li></ul><p>其中由于是面对第三方开发者，<code>公开的在线文档必须提供</code>；由于某些特殊的原因，可能需要提供文件形式的文档，建议提供pdf文档。当然，以下的文档形式是<code>非常不建议</code>提供的：</p><ul><li>word文档</li><li>markdown文档</li></ul><p>word文档和markdown文档有以下缺点：</p><ul><li><code>文档的表现形式非常依赖文档查看器</code>：各个版本的word文档对word的表现形式差异很大，可能在你的电脑上内容表现很好的文档，到别人的电脑上就会一团乱麻；另外markdown文件也是如此。而且markdown中引入文件只能依靠图片链接，如果文档中含有图片，很可能会出现图片丢失的情况。</li><li><code>文档无法只读</code>：文档无法只读，就有可能会被第三方开发者在不经意间修改，那么文档就无法保证其准确性了。</li></ul><p>总结一下，文档形式的要点：</p><ul><li><code>只读性</code>：保证文档不会被开发者轻易修改</li><li><code>一致性</code>：保证文档在不同设备，不同文档查看器上内容表现始终如一</li><li><code>易于版本管理</code>：文档即软件（DAAS:  Document as a Software），一般意义上说<code>软件 = 数据 + 算法</code>,  但是我认为<code>文档也是一种组成软件的重要形式</code>。既然软件需要版本管理，文档的版本管理也是比不可少的。</li></ul>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;&lt;img src=&quot;http://p394yuy0c.bkt.clouddn.com/20180128223141_GeUnII_Jietu20180128-223059.jpeg&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
+&lt;h1 id=&quot;HTTP携带信息的方式&quot;&gt;&lt;a href=&quot;#HT
+      
+    
+    </summary>
+    
+    
+      <category term="接口文档" scheme="https://wdd.js.org/tags/%E6%8E%A5%E5%8F%A3%E6%96%87%E6%A1%A3/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>免费服务的盈利模式</title>
+    <link href="https://wdd.js.org/how-free-server-make-money.html"/>
+    <id>https://wdd.js.org/how-free-server-make-money.html</id>
+    <published>2018-01-29T13:58:58.000Z</published>
+    <updated>2018-01-29T13:59:36.000Z</updated>
+    
+    <content type="html"><![CDATA[<p>免费产品的盈利模式有四种</p><ol><li><p>投放广告</p></li><li><p>增值服务：先把羊养肥，再慢慢割羊毛，现在大部分都是互联网服务都是这种</p></li><li><p>交叉补贴:  A服务免费，再用户使用A服务时，通过提供B服务来盈利</p></li><li><p>零边际成本：免费提供A服务，但是用户需要用物品去交换A服务，服务提供者通过加工物品来盈利</p></li></ol>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;免费产品的盈利模式有四种&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;p&gt;投放广告&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;增值服务：先把羊养肥，再慢慢割羊毛，现在大部分都是互联网服务都是这种&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;交叉补贴:  A服务免费，再用户使用A服务时，通过提供B服务来盈利&lt;
+      
+    
+    </summary>
+    
+    
+      <category term="经济学" scheme="https://wdd.js.org/tags/%E7%BB%8F%E6%B5%8E%E5%AD%A6/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>ztree-note</title>
+    <link href="https://wdd.js.org/ztree-note.html"/>
+    <id>https://wdd.js.org/ztree-note.html</id>
+    <published>2018-01-29T13:47:32.000Z</published>
+    <updated>2018-01-29T13:48:17.000Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="ztree获得顶层节点"><a href="#ztree获得顶层节点" class="headerlink" title="ztree获得顶层节点"></a>ztree获得顶层节点</h1><figure class="highlight 1c"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">treeObj.getNodesByParam('level',<span class="number">0</span>,<span class="literal">null</span>);</span><br></pre></td></tr></table></figure>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h1 id=&quot;ztree获得顶层节点&quot;&gt;&lt;a href=&quot;#ztree获得顶层节点&quot; class=&quot;headerlink&quot; title=&quot;ztree获得顶层节点&quot;&gt;&lt;/a&gt;ztree获得顶层节点&lt;/h1&gt;&lt;figure class=&quot;highlight 1c&quot;&gt;&lt;table&gt;&lt;
+      
+    
+    </summary>
+    
+    
+      <category term="ztree" scheme="https://wdd.js.org/tags/ztree/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>thinkpad 系列恢复F1-F12原始功能，切换ctrl和fn的位置</title>
+    <link href="https://wdd.js.org/thinkpad-f1-f12.html"/>
+    <id>https://wdd.js.org/thinkpad-f1-f12.html</id>
+    <published>2018-01-29T13:46:43.000Z</published>
+    <updated>2018-01-29T13:47:17.000Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="1-实验准备"><a href="#1-实验准备" class="headerlink" title="1 实验准备"></a>1 实验准备</h1><ul><li>T450笔记本</li></ul><h1 id="2-进入BIOS"><a href="#2-进入BIOS" class="headerlink" title="2 进入BIOS"></a>2 进入BIOS</h1><ol><li>重启电脑</li><li>一直不停按enter</li><li>按F1</li><li>选择Keyboard/mouse</li></ol><h1 id="3-恢复F1-F2恢复原始功能"><a href="#3-恢复F1-F2恢复原始功能" class="headerlink" title="3 恢复F1-F2恢复原始功能:"></a>3 恢复F1-F2恢复原始功能:</h1><p>fn and ctrl key swap <strong>[enabled]</strong></p><h1 id="4-切换ctrl和ctrl的位置"><a href="#4-切换ctrl和ctrl的位置" class="headerlink" title="4 切换ctrl和ctrl的位置:"></a>4 切换ctrl和ctrl的位置:</h1><p>F1-F12 as primary function <strong>[enabled]</strong></p><h1 id="5-保存，退出"><a href="#5-保存，退出" class="headerlink" title="5 保存，退出"></a>5 保存，退出</h1>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h1 id=&quot;1-实验准备&quot;&gt;&lt;a href=&quot;#1-实验准备&quot; class=&quot;headerlink&quot; title=&quot;1 实验准备&quot;&gt;&lt;/a&gt;1 实验准备&lt;/h1&gt;&lt;ul&gt;
+&lt;li&gt;T450笔记本&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h1 id=&quot;2-进入BIOS&quot;&gt;&lt;a href=&quot;#2
+      
+    
+    </summary>
+    
+    
+      <category term="thinkpad" scheme="https://wdd.js.org/tags/thinkpad/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>蚌埠出入境管理局电话以及相关注意事项</title>
+    <link href="https://wdd.js.org/goverment-info.html"/>
+    <id>https://wdd.js.org/goverment-info.html</id>
+    <published>2018-01-29T13:44:07.000Z</published>
+    <updated>2018-01-29T13:44:40.000Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="1-相关地址信息"><a href="#1-相关地址信息" class="headerlink" title="1 相关地址信息"></a>1 相关地址信息</h1><h2 id="1-1-蚌埠市公安局出入境接待大厅"><a href="#1-1-蚌埠市公安局出入境接待大厅" class="headerlink" title="1.1 蚌埠市公安局出入境接待大厅"></a>1.1 蚌埠市公安局出入境接待大厅</h2><p>办公地址：蚌埠市南湖路600号<br>咨询电话：0552-2089266<br>投诉电话：0552-2089269<br>节假日值班电话：0552-2089266<br>工作时间：周一至周五：上午8:00-12:00，下午14:30-17:30；</p><h2 id="1-2-蚌埠市五河县公安局出入境接待大厅"><a href="#1-2-蚌埠市五河县公安局出入境接待大厅" class="headerlink" title="1.2 蚌埠市五河县公安局出入境接待大厅"></a>1.2 蚌埠市五河县公安局出入境接待大厅</h2><p>办公地址：五河县城关镇淮河路40号<br>咨询电话：0552-5057155<br>投诉电话：0552-5057155<br>节假日值班电话：0552-5057155<br>工作时间：周一至周五：上午8：00-12：00，下午：14：30-17：30</p><h2 id="1-3-蚌埠市怀远县公安局出入境接待大厅"><a href="#1-3-蚌埠市怀远县公安局出入境接待大厅" class="headerlink" title="1.3 蚌埠市怀远县公安局出入境接待大厅"></a>1.3 蚌埠市怀远县公安局出入境接待大厅</h2><p>办公地址：怀远县禹王路中段<br>咨询电话：0552-8027123<br>投诉电话：0552-8027123<br>节假日值班电话：0552-8027123<br>工作时间：周一至周五：上午8：00-12：00，下午：14：30-17：30；</p><h2 id="1-4-蚌埠市固镇县公安局出入境接待大厅"><a href="#1-4-蚌埠市固镇县公安局出入境接待大厅" class="headerlink" title="1.4 蚌埠市固镇县公安局出入境接待大厅"></a>1.4 蚌埠市固镇县公安局出入境接待大厅</h2><p>办公地址：固镇县谷阳路中段<br>咨询电话：0552-6075830<br>投诉电话：0552-6075830<br>节假日值班电话：0552-6075830<br>工作时间：周一至周五：上午8:00-12:00，下午14:30-17:30；</p><h1 id="2-注意事项"><a href="#2-注意事项" class="headerlink" title="2 注意事项"></a>2 注意事项</h1><h2 id="2-1-准备材料"><a href="#2-1-准备材料" class="headerlink" title="2.1 准备材料"></a>2.1 准备材料</h2><ul><li>身份证</li><li>银行卡(有些费用只能用银行卡支付)</li><li>零钱</li></ul><h2 id="2-2-其他事项"><a href="#2-2-其他事项" class="headerlink" title="2.2 其他事项"></a>2.2 其他事项</h2><ul><li>一般来说签证10天后才能办好，可以申请寄送服务</li><li>不要在将近中午的时候去办证，他们中午休息时间蛮长的</li><li>办证前，可以打电话问问本地是支持团签还是个签</li></ul><h1 id="3-注意"><a href="#3-注意" class="headerlink" title="3 注意"></a>3 注意</h1><p><code>以上信息不能保证时效性，如果电话或者地址不存在，请自行查询。</code></p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h1 id=&quot;1-相关地址信息&quot;&gt;&lt;a href=&quot;#1-相关地址信息&quot; class=&quot;headerlink&quot; title=&quot;1 相关地址信息&quot;&gt;&lt;/a&gt;1 相关地址信息&lt;/h1&gt;&lt;h2 id=&quot;1-1-蚌埠市公安局出入境接待大厅&quot;&gt;&lt;a href=&quot;#1-1-蚌埠市公安局出入
+      
+    
+    </summary>
+    
+    
+      <category term="蚌埠" scheme="https://wdd.js.org/tags/%E8%9A%8C%E5%9F%A0/"/>
+    
+      <category term="出入境管理局" scheme="https://wdd.js.org/tags/%E5%87%BA%E5%85%A5%E5%A2%83%E7%AE%A1%E7%90%86%E5%B1%80/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>win7 ie11 开发者工具打开后一片空白</title>
+    <link href="https://wdd.js.org/ie11-without-devtool.html"/>
+    <id>https://wdd.js.org/ie11-without-devtool.html</id>
+    <published>2018-01-29T13:43:12.000Z</published>
+    <updated>2018-01-29T13:43:38.000Z</updated>
+    
+    <content type="html"><![CDATA[<p>解决方法安装Windows7补丁：KB3008923；<br>下载地址：<br><a href="http://www.microsoft.com/en-us/download/details.aspx?id=45134" target="_blank" rel="noopener">http://www.microsoft.com/en-us/download/details.aspx?id=45134</a> （32位）<br><a href="http://www.microsoft.com/zh-CN/download/details.aspx?id=45154" target="_blank" rel="noopener">http://www.microsoft.com/zh-CN/download/details.aspx?id=45154</a> （64位）</p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;解决方法安装Windows7补丁：KB3008923；&lt;br&gt;下载地址：&lt;br&gt;&lt;a href=&quot;http://www.microsoft.com/en-us/download/details.aspx?id=45134&quot; target=&quot;_blank&quot; rel=&quot;noop
+      
+    
+    </summary>
+    
+    
+      <category term="ie11" scheme="https://wdd.js.org/tags/ie11/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>centos7 服务管理指令</title>
+    <link href="https://wdd.js.org/centos7-service-manager.html"/>
+    <id>https://wdd.js.org/centos7-service-manager.html</id>
+    <published>2018-01-29T13:40:36.000Z</published>
+    <updated>2018-01-29T13:41:06.000Z</updated>
+    
+    <content type="html"><![CDATA[<table><thead><tr><th>功能</th><th>命令</th></tr></thead><tbody><tr><td>使服务开启启动</td><td>systemctl enable httpd.service</td></tr><tr><td>关闭服务开机启动</td><td>systemctl disabled httpd.service</td></tr><tr><td>检查服务状态</td><td>systemctl status httpd.service</td></tr><tr><td>查看所有已启动的服务</td><td>systemctl list-units –type=service</td></tr><tr><td>启动服务</td><td>systemctl start httpd.service</td></tr><tr><td>停止服务</td><td>systemctl stop httpd.service</td></tr><tr><td>重启服务</td><td>systemctl restart httpd.service</td></tr></tbody></table>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;功能&lt;/th&gt;
+&lt;th&gt;命令&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;使服务开启启动&lt;/td&gt;
+&lt;td&gt;systemctl enable httpd.service&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+      
+    
+    </summary>
+    
+    
+      <category term="centos7" scheme="https://wdd.js.org/tags/centos7/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>CSTA 呼叫模型简介</title>
+    <link href="https://wdd.js.org/csta-call-model-overview.html"/>
+    <id>https://wdd.js.org/csta-call-model-overview.html</id>
+    <published>2018-01-29T13:35:24.000Z</published>
+    <updated>2018-01-29T13:39:39.000Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="内容概要"><a href="#内容概要" class="headerlink" title="内容概要"></a>内容概要</h1><ul><li>CSTA协议与标准概述</li><li>CSTA OpenScape 语音架构概述</li></ul><h1 id="CSTA协议标准"><a href="#CSTA协议标准" class="headerlink" title="CSTA协议标准"></a>CSTA协议标准</h1><h2 id="什么是CSTA"><a href="#什么是CSTA" class="headerlink" title="什么是CSTA ?"></a>什么是CSTA ?</h2><ul><li>CSTA：电脑支持通讯程序(Computer Supported TelecommunicationsApplications)</li><li>基本的呼叫模型在1992建立，后来随着行业发展，呼叫模型也被加强和扩展，例如新的协议等等</li><li>CSTA是一个应用层接口，用来监控呼叫，设备和网络 </li><li><p>CSTA创建了一个通讯程序的抽象层:</p><ul><li>CSTA并不依赖任何底层的信令协议<ul><li>E.g.H.323,SIP,Analog,T1,ISDN,etc.</li></ul></li><li>CSTA并不要求用户必须使用某些设备<ul><li>E.g.intelligentendpoints,low-function/stimulusdevices,SIPSignalingmodels-3PCC vs. Peer/Peer</li></ul></li></ul></li><li><p>适用不同的操作模式</p><ul><li>第三方呼叫控制</li><li>一方呼叫控制</li></ul></li><li>CSTA的设计目标是为了提高各种CSTA实现之间的移植性<ul><li>规范化呼叫模型和行为</li><li>完成服务、事件定义</li><li>规范化标准</li></ul></li></ul><h1 id="CSTA-标准的进化史"><a href="#CSTA-标准的进化史" class="headerlink" title="CSTA 标准的进化史"></a>CSTA 标准的进化史</h1><ul><li>阶段1 (发布于 June ’92)<ul><li>40 特性, 66 页 (服务定义)</li><li>专注于呼叫控制</li></ul></li><li>阶段2 (发布于 Dec. ’94)<ul><li>77 特性, 145 页 (服务定义)</li><li>I/O &amp; 语音单元服务, 更多呼叫控制服务</li></ul></li><li><p>阶段3 - CSTA Phase II Features &amp; versit CTI Technology</p><ul><li>发布于 Dec. ‘98</li><li>136 特性, 650 页 (服务定义)</li><li>作为ISO 标准发布于 July 2000</li><li>发布 CSTA XML (ECMA-323) June 2004</li><li>发布 “Using CSTA with Voice Browsers” (TR/85) Dec. 02</li><li>发布 CSTA WSDL (ECMA-348) June 2004</li></ul></li><li><p>June 2004: 发布对象模型 TR/88</p></li><li>June 2004: 发布 “Using CSTA for SIP Phone User Agents (uaCSTA)” TR/87</li><li>June 2004: 发布 “Application Session Services” (ECMA-354)</li><li>June 2005: 发布 “WS-Session: WSDL for ECMA-354”(ECMA-366)</li><li>December 2005 : 发布 “Management Notification and Computing Function<br>Services”</li><li>December 2005 : Session Management, Event Notification, Amendements for ECMA-<br>348” (TR/90)</li><li>December 2006 : Published new editions of ECMA-269, ECMA-323, ECMA-348</li></ul><h1 id="CSTA-标准文档"><a href="#CSTA-标准文档" class="headerlink" title="CSTA 标准文档"></a>CSTA 标准文档</h1><p><img src="http://p3alsaatj.bkt.clouddn.com/20180129213747_HP5lYR_Jietu20180129-213719.jpeg" alt=""></p><h1 id="CSTA-标准扩展"><a href="#CSTA-标准扩展" class="headerlink" title="CSTA 标准扩展"></a>CSTA 标准扩展</h1><ul><li>新的特性可以被加入标准通过发布新版本的标准</li><li>新的参数，新的值可以被加入通过发布新版本的标准</li><li>未来的新版本必须下向后兼容</li><li>具体的实施可以增加属性通过CSTA自带的扩展机制(e.g. ONS – One Number Service)</li></ul><h1 id="CSTA-操作模型"><a href="#CSTA-操作模型" class="headerlink" title="CSTA 操作模型"></a>CSTA 操作模型</h1><ul><li>CSTA操作模型由<code>计算域</code>和<code>转换域</code>组成，是CSTA定义在两个域之间的接口</li><li>CSTA标准规定了消息（服务以及事件上报）,还有与之相关的行为</li><li><code>计算域</code>是CSTA程序的宿主环境，用来与<code>转换域</code>交互与控制</li><li><code>转换域</code> - CSTA模型提供抽象层，程序可以观测并控制的。<code>转换渔</code>包括一些对象例如CSTA呼叫，设备，链接。</li></ul><p><img src="http://p3alsaatj.bkt.clouddn.com/20180129213839_Tor6cE_Screenshot.jpeg" alt=""></p><h1 id="CSTA-操作模型：呼叫，设备，链接"><a href="#CSTA-操作模型：呼叫，设备，链接" class="headerlink" title="CSTA 操作模型：呼叫，设备，链接"></a>CSTA 操作模型：呼叫，设备，链接</h1><p><img src="http://p3alsaatj.bkt.clouddn.com/20180129213917_6hEPjl_Screenshot.jpeg" alt=""></p><p>相关说明是的的的的</p><h1 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h1><ul><li><a href="http://ecma-international.org/activities/Communications/TG11/CSTAoverview.pdf" target="_blank" rel="noopener">CSTAoverview</a></li><li><a href="http://wiki.unify.com/images/3/3e/CSTA_introduction_and_overview.pdf" target="_blank" rel="noopener">CSTA_introduction_and_overview</a></li></ul>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h1 id=&quot;内容概要&quot;&gt;&lt;a href=&quot;#内容概要&quot; class=&quot;headerlink&quot; title=&quot;内容概要&quot;&gt;&lt;/a&gt;内容概要&lt;/h1&gt;&lt;ul&gt;
+&lt;li&gt;CSTA协议与标准概述&lt;/li&gt;
+&lt;li&gt;CSTA OpenScape 语音架构概述&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h
+      
+    
+    </summary>
+    
+    
+      <category term="csta" scheme="https://wdd.js.org/tags/csta/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>ssh 无密码登录远程服务器</title>
+    <link href="https://wdd.js.org/ssh-login-without-password.html"/>
+    <id>https://wdd.js.org/ssh-login-without-password.html</id>
+    <published>2018-01-29T13:27:38.000Z</published>
+    <updated>2018-01-29T13:28:17.000Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="1-前提说明"><a href="#1-前提说明" class="headerlink" title="1 前提说明"></a>1 前提说明</h1><p>A(本机 mac item2)<br>B(远程机器 ip:a.b.c.d centos)</p><h1 id="2-过程1"><a href="#2-过程1" class="headerlink" title="2 过程1"></a>2 过程1</h1><h1 id="2-1-生成public-key与private-key"><a href="#2-1-生成public-key与private-key" class="headerlink" title="2.1 生成public_key与private_key"></a>2.1 生成public_key与private_key</h1><p>在本机上输入，可以一路回车，不用说明<br><figure class="highlight ebnf"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="attribute">ssh-keygen -t rsa</span></span><br></pre></td></tr></table></figure></p><p>最终会在<code>~/.ssh/</code>下生成两个文件<br><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">id_rsa</span></span><br><span class="line"><span class="selector-tag">id_rsa</span><span class="selector-class">.pub</span></span><br></pre></td></tr></table></figure></p><h1 id="2-2-将public-key上传到远程服务器"><a href="#2-2-将public-key上传到远程服务器" class="headerlink" title="2.2 将public_key上传到远程服务器"></a>2.2 将public_key上传到远程服务器</h1><p>注意：在本机上输入<br><figure class="highlight stylus"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 回车之后，需要输入远程主机B的登录密码</span></span><br><span class="line">scp ~/.ssh/id_rsa<span class="selector-class">.pub</span> root@<span class="selector-tag">a</span><span class="selector-class">.b</span><span class="selector-class">.c</span><span class="selector-class">.d</span>:/root/.ssh</span><br></pre></td></tr></table></figure></p><h1 id="2-3-登录远程主机"><a href="#2-3-登录远程主机" class="headerlink" title="2.3 登录远程主机"></a>2.3 登录远程主机</h1><p>在本机上输入<br><figure class="highlight stylus"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 需要输入远程主机的密码</span></span><br><span class="line">ssh root@<span class="selector-tag">a</span><span class="selector-class">.b</span><span class="selector-class">.c</span><span class="selector-class">.d</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// 进到远程主机~/.ssh/目录下, 此目录下应该已经有了之前上传的id_rsa.pub文件</span></span><br><span class="line"><span class="comment">// 如果目录下没有authorized_keys文件，那么将id_rsa.pub改名成authorized_keys</span></span><br><span class="line"></span><br><span class="line">mv id_rsa<span class="selector-class">.pub</span> authorized_keys</span><br><span class="line"></span><br><span class="line"><span class="comment">// 如果远程目录下已经存在authorized_keys文件，可以将id_rsa.pub追加进去</span></span><br><span class="line"></span><br><span class="line">cat id_rsa<span class="selector-class">.pub</span> &gt;&gt; authorized_keys</span><br></pre></td></tr></table></figure></p><h1 id="2-4-本机配置"><a href="#2-4-本机配置" class="headerlink" title="2.4 本机配置"></a>2.4 本机配置</h1><p>注意，此时需要退出ssh, 在本机上执行以下命令<br><figure class="highlight routeros"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">vi ~/.ssh/config</span><br><span class="line"></span><br><span class="line">在config文件中追加以下内容，并保存退出</span><br><span class="line"></span><br><span class="line">Host serverName</span><br><span class="line">Hostname a.b.c.d</span><br><span class="line">Port 22</span><br><span class="line">User root</span><br><span class="line">IdentityFile ~/.ssh/id_rsa</span><br></pre></td></tr></table></figure></p><p>然后试一下，只需要<code>ssh serverName</code>, 就可以直接登录远程服务器，是不是很爽</p><h1 id="3-参考文献"><a href="#3-参考文献" class="headerlink" title="3 参考文献"></a>3 参考文献</h1><ul><li><a href="http://linuxtools-rst.readthedocs.io/zh_CN/latest/tool/scp.html" target="_blank" rel="noopener">scp 命令教程</a></li><li><a href="https://www.zhihu.com/question/30640159" target="_blank" rel="noopener">mac用iterm2实现ssh，怎么像SecureCRT一样保存IP和账号密码？</a></li></ul><h1 id="4-精华推荐"><a href="#4-精华推荐" class="headerlink" title="4 精华推荐"></a>4 精华推荐</h1><p>最后推荐一本非常好的linux常用命令手册，非常不错哦。</p><blockquote><p>Linux下有很多命令行工具供我们使用，每个工具总是提供了大量参数供我们选择； 实际工作中，我们用到的工具，最常用的总是那么几个参数组合； 为此，我写了这本书相对实用的书；</p><p>这本书专注于Linux工具的最常用用法，以便读者能以最快时间掌握，并在工作中应用；</p></blockquote><ul><li><a href="http://linuxtools-rst.readthedocs.io/zh_CN/latest/index.html" target="_blank" rel="noopener">《Linux工具快速教程》</a></li></ul>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h1 id=&quot;1-前提说明&quot;&gt;&lt;a href=&quot;#1-前提说明&quot; class=&quot;headerlink&quot; title=&quot;1 前提说明&quot;&gt;&lt;/a&gt;1 前提说明&lt;/h1&gt;&lt;p&gt;A(本机 mac item2)&lt;br&gt;B(远程机器 ip:a.b.c.d centos)&lt;/p&gt;
+&lt;h1 i
+      
+    
+    </summary>
+    
+    
+      <category term="ssh" scheme="https://wdd.js.org/tags/ssh/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>组织在召唤：如何免费获取一个js.org的二级域名</title>
+    <link href="https://wdd.js.org/how-to-get-jsorg-sub-domain.html"/>
+    <id>https://wdd.js.org/how-to-get-jsorg-sub-domain.html</id>
+    <published>2018-01-29T10:08:03.000Z</published>
+    <updated>2018-01-29T11:19:17.000Z</updated>
+    
+    <content type="html"><![CDATA[<blockquote><p>之前我是使用wangduanduan.github.io作为我的博客地址，后来觉得麻烦，有把博客关了。最近有想去折腾折腾。<br>先看效果：<a href="https://wdd.js.org" target="_blank" rel="noopener">wdd.js.org</a></p></blockquote><p>如果你不了解js.org可以看看我的这篇文章:<a href="https://segmentfault.com/a/1190000008342301" target="_blank" rel="noopener">一个值得所有前端开发者关注的网站js.org</a></p><p><img src="http://p3alsaatj.bkt.clouddn.com/20180129182103_Avcxhn_Jietu20180129-182047.jpeg" alt=""></p><h1 id="前提"><a href="#前提" class="headerlink" title="前提"></a>前提</h1><ul><li>已经有了github pages的一个博客，并且博客中有内容，没有内容会审核不通过的。我第一次申请域名，就是因为内容太少而审核不通过。</li></ul><h1 id="想好自己要什么域名？"><a href="#想好自己要什么域名？" class="headerlink" title="想好自己要什么域名？"></a>想好自己要什么域名？</h1><p>比如你想要一个：wdd.js.org的域名，你先在浏览器里访问这个地址，看看有没有人用过，如果已经有人用过，那么你就只能想点其他的域名了。</p><h1 id="fork-js-org的项目，添加自己的域名"><a href="#fork-js-org的项目，添加自己的域名" class="headerlink" title="fork js.org的项目，添加自己的域名"></a>fork js.org的项目，添加自己的域名</h1><p>1 fork <a href="https://github.com/js-org/dns.js.org" target="_blank" rel="noopener">https://github.com/js-org/dns.js.org</a><br>2 修改你fork后的仓库中的<code>cnames_active.js</code>文件，加上自己的一条域名，最好要按照字母顺序</p><p>如下图所示，我在第1100行加入。注意，不要在该行后加任何注释。<br><figure class="highlight 1c"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">"wdd"</span>: <span class="string">"wangduanduan.github.io"</span>,</span><br></pre></td></tr></table></figure></p><p><img src="http://p3alsaatj.bkt.clouddn.com/20180129182555_tx71OV_Jietu20180129-182542.jpeg" alt=""></p><p>3 commit</p><h1 id="加入CNAME文件"><a href="#加入CNAME文件" class="headerlink" title="加入CNAME文件"></a>加入CNAME文件</h1><p>我是用hexo和next主题作为博客的模板。其中我在<code>gh-pages</code>分支写博客，然后部署到<code>master</code>分支。</p><p>我在我的<code>gh-pages</code>分支的<code>source</code>目录下加入CNAME文件, 内容只有一行</p><figure class="highlight stylus"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">wdd<span class="selector-class">.js</span><span class="selector-class">.org</span></span><br></pre></td></tr></table></figure><p><img src="http://p3alsaatj.bkt.clouddn.com/20180129183216_aPl2ld_Jietu20180129-183209.jpeg" alt=""></p><p>将博客再次部署好，<code>如果CNAME生效的话，你已经无法从原来的地址访问：wangduanduan.github.io， 这个博客了。</code></p><h1 id="向js-org项目发起pull-request"><a href="#向js-org项目发起pull-request" class="headerlink" title="向js.org项目发起pull-request"></a>向js.org项目发起pull-request</h1><p>找到你fork后的项目，点击 <code>new pull request</code>, 向原来的项目发起请求。</p><p><img src="http://p3alsaatj.bkt.clouddn.com/20180129190011_xvkHec_Jietu20180129-185938.jpeg" alt=""></p><p>然后你可以在<code>js-org/dns.js.org</code>项目的pull requests看到你的请求，当这个请求被合并时，你就拥有了js.org的二级域名。</p><p><img src="http://p3alsaatj.bkt.clouddn.com/20180129190308_0cZZwM_Jietu20180129-190255.jpeg" alt=""></p><p><img src="http://p3alsaatj.bkt.clouddn.com/20180129190454_9BnL7F_Jietu20180129-190449.jpeg" alt=""></p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;blockquote&gt;
+&lt;p&gt;之前我是使用wangduanduan.github.io作为我的博客地址，后来觉得麻烦，有把博客关了。最近有想去折腾折腾。&lt;br&gt;先看效果：&lt;a href=&quot;https://wdd.js.org&quot; target=&quot;_blank&quot; rel=&quot;noop
+      
+    
+    </summary>
+    
+    
+      <category term="jsorg" scheme="https://wdd.js.org/tags/jsorg/"/>
+    
+      <category term="hexo" scheme="https://wdd.js.org/tags/hexo/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>不常用却很有妙用的事件及方法</title>
+    <link href="https://wdd.js.org/browser-events.html"/>
+    <id>https://wdd.js.org/browser-events.html</id>
+    <published>2018-01-29T06:15:25.000Z</published>
+    <updated>2018-01-29T06:15:59.000Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="visibilitychange事件"><a href="#visibilitychange事件" class="headerlink" title="visibilitychange事件"></a><a href="https://developer.mozilla.org/zh-CN/docs/Web/Events/visibilitychange" target="_blank" rel="noopener">visibilitychange事件</a></h1><p>触发条件：<code>浏览器标签页被隐藏或显示的时候会触发visibilitychange事件.</code></p><p>使用场景：<code>当标签页显示或者隐藏时，触发一些业务逻辑</code></p><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">document</span>.addEventListener(<span class="string">"visibilitychange"</span>, <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">  <span class="built_in">console</span>.log( <span class="built_in">document</span>.visibilityState );</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure><h1 id="storage事件"><a href="#storage事件" class="headerlink" title="storage事件"></a><a href="https://developer.mozilla.org/en-US/docs/Web/Events/storage" target="_blank" rel="noopener">storage事件</a></h1><p>触发条件：<code>使用localStorage or sessionStorage存储或者修改某个本地存储时</code></p><p>使用场景：<code>标签页间通信</code></p><figure class="highlight 1c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// AB页面同源</span></span><br><span class="line"><span class="comment">// 在A 页面</span></span><br><span class="line">window.addEventListener('storage', (e) =&gt; &#123;console.<span class="built_in">log</span>(e)&#125;)</span><br><span class="line"></span><br><span class="line"><span class="comment">// 在B 页面，向120打个电话</span></span><br><span class="line">localStorage.setItem('makeCall','120')</span><br><span class="line"></span><br><span class="line"><span class="comment">// 然后可以在A页面间有输出, 可以看出A页面 收到了B页面的通知</span></span><br><span class="line">...key: <span class="string">"makeCall"</span>, oldValue: <span class="string">"119"</span>, newValue: <span class="string">"120"</span>, ...</span><br></pre></td></tr></table></figure><h1 id="beforeunload事件"><a href="#beforeunload事件" class="headerlink" title="beforeunload事件"></a><a href="https://developer.mozilla.org/en-US/docs/Web/Events/beforeunload" target="_blank" rel="noopener">beforeunload事件</a></h1><p>触发条件：<code>当页面的资源将要卸载(及刷新或者关闭标签页前). 当页面依然可见，并且该事件可以被取消只时</code></p><p>使用场景：<code>关闭或者刷新页面时弹窗确认</code>，<code>关闭页面时向后端发送报告等</code></p><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">window</span>.addEventListener(<span class="string">"beforeunload"</span>, <span class="function"><span class="keyword">function</span> (<span class="params">e</span>) </span>&#123;</span><br><span class="line">  <span class="keyword">var</span> confirmationMessage = <span class="string">"\o/"</span>;</span><br><span class="line"></span><br><span class="line">  e.returnValue = confirmationMessage;     <span class="comment">// Gecko, Trident, Chrome 34+</span></span><br><span class="line">  <span class="keyword">return</span> confirmationMessage;              <span class="comment">// Gecko, WebKit, Chrome &lt;34</span></span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure><h1 id="navigator-sendBeacon"><a href="#navigator-sendBeacon" class="headerlink" title="navigator.sendBeacon"></a><a href="https://developer.mozilla.org/zh-CN/docs/Web/API/Navigator/sendBeacon" target="_blank" rel="noopener">navigator.sendBeacon</a></h1><p>这个方法主要用于满足 统计和诊断代码 的需要，这些代码通常尝试在卸载（unload）文档之前向web服务器发送数据。过早的发送数据可能导致错过收集数据的机会。然而， 对于开发者来说保证在文档卸载期间发送数据一直是一个困难。因为用户代理通常会忽略在卸载事件处理器中产生的异步 XMLHttpRequest 。</p><p>使用 sendBeacon() 方法，将会使用户代理在有机会时异步地向服务器发送数据，同时不会延迟页面的卸载或影响下一导航的载入性能。这就解决了提交分析数据时的所有的问题：使它可靠，异步并且不会影响下一页面的加载。此外，代码实际上还要比其他技术简单！</p><p><code>注意：该方法在IE和safari没有实现</code></p><p>使用场景：<code>发送崩溃报告</code></p><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">window</span>.addEventListener(<span class="string">'unload'</span>, logData, <span class="literal">false</span>);</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">logData</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">    navigator.sendBeacon(<span class="string">"/log"</span>, analyticsData);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h1 id=&quot;visibilitychange事件&quot;&gt;&lt;a href=&quot;#visibilitychange事件&quot; class=&quot;headerlink&quot; title=&quot;visibilitychange事件&quot;&gt;&lt;/a&gt;&lt;a href=&quot;https://developer.mozil
+      
+    
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>Nodejs 服务端框架合集(78个)</title>
+    <link href="https://wdd.js.org/nodejs-server-frameworks.html"/>
+    <id>https://wdd.js.org/nodejs-server-frameworks.html</id>
+    <published>2018-01-29T06:13:44.000Z</published>
+    <updated>2018-01-29T06:14:43.000Z</updated>
+    
+    <content type="html"><![CDATA[<blockquote><p>没有什么事情是一个框架解决不了的，如果有，就再找一个。</p></blockquote><p><img src="http://p3alsaatj.bkt.clouddn.com/20180129141430_C2s0Wc_Screenshot.jpeg" alt=""></p><p>Photo by 贝莉儿 NG on Unsplash</p><h1 id="1-MVC-frameworks"><a href="#1-MVC-frameworks" class="headerlink" title="1 MVC frameworks"></a>1 MVC frameworks</h1><h1 id="1-1-Sinatra-like"><a href="#1-1-Sinatra-like" class="headerlink" title="1.1 Sinatra-like"></a>1.1 Sinatra-like</h1><p><code>这些框架提供了丰富的配置，比Rails-like或full-stack少。</code></p><ul><li><a href="http://expressjs.com/" target="_blank" rel="noopener">Express</a></li><li><a href="http://hapijs.com/" target="_blank" rel="noopener">hapi</a></li><li><a href="http://flatironjs.org/" target="_blank" rel="noopener">flatiron</a></li><li><a href="http://locomotivejs.org/" target="_blank" rel="noopener">locomotive</a></li><li><a href="http://www.totaljs.com" target="_blank" rel="noopener">total.js</a></li><li><a href="http://koajs.com/" target="_blank" rel="noopener">koa.js</a></li><li><a href="http://twee.io/" target="_blank" rel="noopener">TWEE.IO</a></li><li><a href="http://dietjs.com/" target="_blank" rel="noopener"> diet.js </a></li><li><a href="https://flickerstudio.github.io/flickerjs" target="_blank" rel="noopener">Flicker.js</a></li><li><a href="https://github.com/zinkyJS/zinky" target="_blank" rel="noopener">ZinkyJS</a></li></ul><h2 id="1-2-Rails-like"><a href="#1-2-Rails-like" class="headerlink" title="1.2 Rails-like"></a>1.2 Rails-like</h2><p><code>正确呈现您的项目。从包含的模板创建自己的艺术</code></p><ul><li><a href="http://nodaljs.com/" target="_blank" rel="noopener">Nodal</a></li><li><a href="http://strapi.io/" target="_blank" rel="noopener">Strapi</a></li><li><a href="http://compoundjs.com/" target="_blank" rel="noopener">CompoundJS</a></li><li><a href="http://geddyjs.org/" target="_blank" rel="noopener">geddy</a></li><li><a href="http://sailsjs.org/" target="_blank" rel="noopener">Sails.js</a></li><li><a href="http://adonisjs.com" target="_blank" rel="noopener">Adonis</a></li><li><a href="http://rhapsodyjs.github.io/" target="_blank" rel="noopener">RhapsodyJS</a></li><li><a href="https://thinkjs.org/" target="_blank" rel="noopener">ThinkJS</a></li><li><a href="http://www.trailsjs.io/" target="_blank" rel="noopener">Trails</a></li><li><a href="http://kambojajs.com/" target="_blank" rel="noopener">KambojaJS</a></li><li><a href="http://js-web-framework.com/" target="_blank" rel="noopener">JS-Web</a></li></ul><h1 id="2-Full-stack-frameworks"><a href="#2-Full-stack-frameworks" class="headerlink" title="2 Full-stack frameworks"></a>2 Full-stack frameworks</h1><p><code>这就是Node.js真正闪耀的地方。全栈MVC框架与脚手架，模板引擎，websocket和持久性库捆绑在一起，允许您构建实时可伸缩的Web应用程序。</code></p><ul><li><a href="http://catberry.org/" target="_blank" rel="noopener">Catberry.js</a></li><li><a href="http://allcountjs.com" target="_blank" rel="noopener">AllcountJS</a></li><li><a href="http://derbyjs.com" target="_blank" rel="noopener">Derby</a></li><li><a href="http://feathersjs.com/" target="_blank" rel="noopener">Feathers</a></li><li><a href="http://socketcluster.io/" target="_blank" rel="noopener">SocketCluster</a></li><li><a href="http://socketstream.org" target="_blank" rel="noopener">SocketStream</a></li><li><a href="http://meanjs.org/" target="_blank" rel="noopener">MEAN.js</a></li><li><a href="http://mean.io/" target="_blank" rel="noopener">MEAN.io</a></li><li><a href="http://meteor.com/" target="_blank" rel="noopener">Meteor</a></li><li><a href="https://github.com/mattkrick/meatier" target="_blank" rel="noopener">Meatier</a></li><li><a href="http://twee.io/" target="_blank" rel="noopener">TWEE.IO</a></li><li><a href="http://developer.yahoo.com/cocktails/mojito/" target="_blank" rel="noopener">Mojito</a></li><li><a href="http://seedsjs.com/" target="_blank" rel="noopener">Seeds.js</a></li><li><a href="http://sanestack.com/" target="_blank" rel="noopener">SANE</a></li><li><a href="http://coke-js.org" target="_blank" rel="noopener">COKE</a></li><li><a href="http://sleekjs.com/" target="_blank" rel="noopener">Sleekjs</a></li><li><a href="https://github.com/gnodi/danf" target="_blank" rel="noopener">Danf</a></li><li><a href="http://catberry.org" target="_blank" rel="noopener">Catberry</a></li><li><a href="http://nukejs.com/" target="_blank" rel="noopener">Nuke.js</a></li><li><a href="http://wejs.org" target="_blank" rel="noopener">We.js</a></li><li><a href="http://senecajs.org" target="_blank" rel="noopener">seneca.js</a></li><li><a href="http://keystonejs.com/" target="_blank" rel="noopener">Keystone.js</a></li><li><a href="http://horizon.io" target="_blank" rel="noopener">Horizon</a></li><li><a href="https://apogeu.github.io/" target="_blank" rel="noopener">Apogeu</a></li></ul><h1 id="3-REST-API-frameworks"><a href="#3-REST-API-frameworks" class="headerlink" title="3 REST API frameworks"></a>3 REST API frameworks</h1><p><code>对于那些使用富客户端/前端MVC框架（或不）的客户，只需要启动一个快速的Node.js REST API服务器即可。</code></p><ul><li><a href="http://ivyframework.com" target="_blank" rel="noopener">Ivy</a></li><li><a href="https://github.com/restocat/restocat" target="_blank" rel="noopener">Restocat</a></li><li><a href="http://actionherojs.com/" target="_blank" rel="noopener">actionHero.js</a></li><li><a href="http://frisbyjs.com/" target="_blank" rel="noopener">Frisby</a></li><li><a href="https://github.com/lucasfeliciano/restling" target="_blank" rel="noopener">restling</a></li><li><a href="http://mcavage.github.io/node-restify/" target="_blank" rel="noopener">restify</a></li><li><a href="https://github.com/keithnlarsen/restmvc.js" target="_blank" rel="noopener">restmvc</a></li><li><a href="http://percolatorjs.com" target="_blank" rel="noopener">percolator</a></li><li><a href="http://loopback.io/" target="_blank" rel="noopener">LoopBack</a></li><li><a href="http://fortunejs.com" target="_blank" rel="noopener">Fortune.js</a></li><li><a href="http://facet.github.io" target="_blank" rel="noopener">facet</a></li><li><a href="http://getraddish.com" target="_blank" rel="noopener">Raddish</a></li><li><a href="http://restberry.com" target="_blank" rel="noopener">Restberry</a></li><li><a href="http://pliik.github.io/gugamarket/" target="_blank" rel="noopener">Gugamarket</a></li><li><a href="https://kamilmysliwiec.gitbooks.io/nest/" target="_blank" rel="noopener">Nest</a></li><li><a href="https://borislemke.gitbooks.io/microlet/" target="_blank" rel="noopener">microlet</a></li><li><a href="https://moleculer.services/" target="_blank" rel="noopener">Moleculer</a></li></ul><h1 id="4-Other-libraries"><a href="#4-Other-libraries" class="headerlink" title="4 Other libraries"></a>4 Other libraries</h1><p><code>中间件，库和静态站点生成器。</code></p><ul><li><a href="http://www.senchalabs.org/connect/" target="_blank" rel="noopener">Connect</a></li><li><a href="http://krakenjs.com/" target="_blank" rel="noopener">Kraken</a></li><li><a href="https://github.com/robtweed/ewdGateway2" target="_blank" rel="noopener">ewdGateway2</a></li><li><a href="https://github.com/jnordberg/wintersmith" target="_blank" rel="noopener">Wintersmith</a></li><li><a href="http://docpad.org" target="_blank" rel="noopener">docpad</a></li><li><a href="http://blacksmith.jit.su/" target="_blank" rel="noopener">Blacksmith</a></li><li><a href="https://github.com/felixge/node-romulus" target="_blank" rel="noopener">romulus</a></li><li><a href="https://github.com/caolan/petrify" target="_blank" rel="noopener">Petrify</a></li><li><a href="http://tower.github.io" target="_blank" rel="noopener">Tower.js</a></li><li><a href="https://github.com/tshemsedinov/impress" target="_blank" rel="noopener">Impress</a></li><li><a href="https://github.com/rendrjs/rendr" target="_blank" rel="noopener">Rendr</a></li><li><a href="https://github.com/mklabs/backnode" target="_blank" rel="noopener">Backnode</a></li><li><a href="http://sequelizejs.com/" target="_blank" rel="noopener">Sequelize</a></li><li><a href="http://cylonjs.com/" target="_blank" rel="noopener">Cylon.js</a></li><li><a href="http://icemobilelab.github.io/virgilio/" target="_blank" rel="noopener">Virgilio.js</a></li><li><a href="https://shps.io" target="_blank" rel="noopener">SHPS</a></li></ul>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;blockquote&gt;
+&lt;p&gt;没有什么事情是一个框架解决不了的，如果有，就再找一个。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;&lt;img src=&quot;http://p3alsaatj.bkt.clouddn.com/20180129141430_C2s0Wc_Screenshot
+      
+    
+    </summary>
+    
+    
+      <category term="nodejs" scheme="https://wdd.js.org/tags/nodejs/"/>
+    
+      <category term="server" scheme="https://wdd.js.org/tags/server/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>You-Dont-Need 你不需要系列</title>
+    <link href="https://wdd.js.org/you-dont-need.html"/>
+    <id>https://wdd.js.org/you-dont-need.html</id>
+    <published>2018-01-29T06:11:36.000Z</published>
+    <updated>2018-01-29T06:12:26.000Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="You-Dont-Need-JavaScript"><a href="#You-Dont-Need-JavaScript" class="headerlink" title="You-Dont-Need-JavaScript"></a><a href="https://github.com/you-dont-need/You-Dont-Need-JavaScript" target="_blank" rel="noopener">You-Dont-Need-JavaScript</a></h1><blockquote><p><code>CSS是强大的，你可以做很多事情没有JS。</code> 本文教你使用原生CSS做下面的事情。</p></blockquote><p><code>内容目录</code></p><ul><li>手风琴/切换</li><li>圆盘传送带</li><li>检查复选框的计数器</li><li>翻转点击</li><li>Textfield上的浮动标签</li><li>字体（拉丁）</li><li>游戏</li><li>悬停/弹出信息</li><li>图片廊</li><li>菜单</li><li>移动菜单关闭画布</li><li>汉堡菜单</li><li>花式菜单</li><li>莫代尔/弹出</li><li>鼠标跟踪</li><li>视差滚动</li><li>标签</li><li>待办事项列表</li><li>提示</li><li>树视图</li><li>Twitter心动画</li><li>动态图像着色</li><li>连锁反应</li><li>响应式计数器显示不适合屏幕的项目数量</li></ul><p>可以看一下纯CSS的例子</p><p><img src="https://github.com/you-dont-need/You-Dont-Need-JavaScript/raw/master/images/accordion.gif" alt=""></p><h1 id="You-Dont-Need-Lodash-Underscore"><a href="#You-Dont-Need-Lodash-Underscore" class="headerlink" title="You-Dont-Need-Lodash-Underscore"></a><a href="https://github.com/you-dont-need/You-Dont-Need-Lodash-Underscore" target="_blank" rel="noopener">You-Dont-Need-Lodash-Underscore</a></h1><blockquote><p>Lodash和Underscore是伟大的现代JavaScript实用程序库，它们被前端开发人员广泛使用。但是，如果您将目标锁定为现代浏览器，则可能会发现，许多方法已经得到ES5和ES6的原生支持。如果你想要你的项目需要更少的依赖，并且你清楚的知道你的目标浏览器，那么你可能不需要Lodash / Underscore。</p></blockquote><p><code>来自开发者的声音</code></p><ul><li><p>在代码变臃肿之前，请使用原生JS对象和数组工具函数. —Cody Lindley, Author of jQuery Cookbook and JavaScript Enlightenment</p></li><li><p>你可能不需要lodash. 有许多好用的原生方法了. —Daniel Lamb, Computer Scientist, Technical Reviewer of Secrets of the JavaScript Ninja and Functional Programming in JavaScript</p></li><li><p>我想不是，但我想要它. —Tero Parviainen, Author of build-your-own-angular</p></li><li><p>我承认，我曾经过度使用lodash.  —@therebelrobot, Maker of web things, Facilitator for Node.js/io.js</p></li></ul><p><code>内容目录</code></p><ul><li>Array<ul><li>_.compact</li><li>_.concat</li><li>_.fill</li><li>_.find</li><li>_.findIndex</li><li>_.first</li><li>_.flatten</li><li>_.flattenDeep</li><li><em>.head and </em>.tail</li><li>_.indexOf</li><li>_.join</li><li>_.last</li><li>_.lastIndexOf</li><li>_.reverse</li><li>_.without</li><li>_.slice</li><li>_.isArray</li></ul></li><li>Collection<ul><li>_.each</li><li>_.every</li><li>_.filter</li><li>_.groupBy</li><li>_.includes</li><li>_.map</li><li><em>.minBy and </em>.maxBy</li><li>_.pluck</li><li>_.range</li><li>_.reduce</li><li>_.reduceRight</li><li>_.size</li><li>_.some</li></ul></li><li>Function<ul><li>_.after</li></ul></li><li>Lang<ul><li>_.isNaN</li></ul></li><li>Object<ul><li>_.assign</li><li>_.keys</li><li>_.toPairs</li><li>_.values</li></ul></li><li>String<ul><li>_.repeat</li><li>_.template</li><li>_.toLower</li><li>_.toUpper</li><li>_.trim</li><li>_.replace</li></ul></li></ul><h1 id="You-Dont-Need-jQuery"><a href="#You-Dont-Need-jQuery" class="headerlink" title="You-Dont-Need-jQuery"></a><a href="https://github.com/nefe/You-Dont-Need-jQuery" target="_blank" rel="noopener">You-Dont-Need-jQuery</a></h1><p><code>纯JavaScript的例子, 实现做jQuery与查询，样式，dom，ajax，事件等</code></p><p>前端发展很快，现代浏览器原生 API 已经足够好用。我们并不需要为了操作 DOM、Event 等再学习一下 jQuery 的 API。同时由于 React、Angular、Vue 等框架的流行，直接操作 DOM 不再是好的模式，jQuery 使用场景大大减少。本项目总结了大部分 jQuery API 替代的方法，暂时只支持 IE10 以上浏览器。 </p><p><code>内容目录</code></p><ul><li>Translations</li><li>Query Selector</li><li>CSS &amp; Style</li><li>DOM Manipulation</li><li>Ajax</li><li>Events</li><li>Utilities</li><li>Promises</li><li>Animation</li><li>Alternatives</li><li>Browser Support</li></ul><h1 id="You-Dont-Need-GUI"><a href="#You-Dont-Need-GUI" class="headerlink" title="You-Dont-Need-GUI"></a><a href="https://github.com/you-dont-need/You-Dont-Need-GUI" target="_blank" rel="noopener">You-Dont-Need-GUI</a></h1><p>图形用户界面对计算机用户非常友好。它们被引入以响应命令行界面（CLI）感知的陡峭学习曲线。</p><p><img src="https://github.com/you-dont-need/You-Dont-Need-GUI/raw/master/Xerox_Star_8010_workstations.jpg" alt=""></p><p>但是，他们往往需要更多的资源，功能不强，难以通过脚本自动化。</p><p><code>作为计算机专家，我们希望更高效，更好地完成工作。</code>我们知道命令字可能不容易被发现或助记符，所以我们尝试列出一些您可能试图在GUI中执行的常见任务。</p><p><code>内容目录</code></p><ul><li>复制一个文件</li><li>复制一个文件</li><li>复制一个文件夹</li><li>复制一个文件夹</li><li>移动一个文件</li><li>重命名一个文件</li><li>移动一个文件夹</li><li>重命名文件夹</li><li>合并文件夹</li><li>创建一个新的文件</li><li>新建一个文件夹</li><li>显示文件/文件夹大小</li><li>用默认程序打开一个文件</li><li>压缩一个文件夹</li><li>解压缩文件夹</li><li>删除一个文件</li><li>删除一个文件夹</li><li>列出文件夹内容</li><li>树查看文件夹及其子文件夹</li><li>找到一个陈旧的文件</li><li>显示一个日历</li><li>找到未来的日期</li><li>使用计算器</li><li>强制退出程序</li></ul><p><img src="https://leanote.com/api/file/getImage?fileId=5a45b26aab64411cab000cf5" alt=""></p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h1 id=&quot;You-Dont-Need-JavaScript&quot;&gt;&lt;a href=&quot;#You-Dont-Need-JavaScript&quot; class=&quot;headerlink&quot; title=&quot;You-Dont-Need-JavaScript&quot;&gt;&lt;/a&gt;&lt;a href=&quot;https
+      
+    
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>Nodejs alpine 基础docker镜像构建</title>
+    <link href="https://wdd.js.org/nodejs-alpine-docker.html"/>
+    <id>https://wdd.js.org/nodejs-alpine-docker.html</id>
+    <published>2018-01-29T06:10:15.000Z</published>
+    <updated>2018-01-29T06:10:55.000Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="系统环境"><a href="#系统环境" class="headerlink" title="系统环境"></a>系统环境</h1><ul><li>centos7 内核：3.10.0-514.26.2.el7.x86_64</li><li>安装docker要求内核版本不低于3.10</li></ul><h1 id="安装docker"><a href="#安装docker" class="headerlink" title="安装docker"></a>安装docker</h1><figure class="highlight stylus"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">yum install docker <span class="comment">// 安装docker</span></span><br><span class="line">systemctl start docker<span class="selector-class">.service</span> <span class="comment">// 启动docker</span></span><br><span class="line">systemctl enable docker<span class="selector-class">.service</span> <span class="comment">// 设置开机启动</span></span><br></pre></td></tr></table></figure><h1 id="Nodejs-镜像选择"><a href="#Nodejs-镜像选择" class="headerlink" title="Nodejs 镜像选择"></a>Nodejs 镜像选择</h1><table><thead><tr><th>REPOSITORY</th><th>TAG</th><th>IMAGE ID</th><th>CREATED</th><th>SIZE</th></tr></thead><tbody><tr><td>docker.io/node</td><td>9.2.1-slim</td><td>69c9f9292fa4</td><td>3 days ago</td><td>230 MB</td></tr><tr><td>docker.io/node</td><td>9.2.1-alpine</td><td>afdc3aaaf748</td><td>3 days ago</td><td>67.46 MB</td></tr><tr><td>docker.io/node</td><td>latest</td><td>727b047a1f4e</td><td>3 days ago</td><td>675.6 MB</td></tr><tr><td>docker.io/iron/node</td><td>latest</td><td>9ca501065d18</td><td>20 months ago</td><td>18.56 MB</td></tr></tbody></table><p><code>选择镜像的标准</code></p><ul><li>官方的</li><li>经常维护的</li><li>体积小的</li><li>要有yarn 和 npm </li><li>node版本要高</li></ul><p>最终选择 <code>node:9.2.1-alpine</code>, 该镜像体积很小，已经内置npm(5.5.1), yarn(1.3.2)</p><h1 id="时区配置"><a href="#时区配置" class="headerlink" title="时区配置"></a>时区配置</h1><p><code>node:9.2.1-alpine</code>的时区默认不是国内的，需要在build时，配置时区。</p><figure class="highlight routeros"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">FROM</span> node:9.2.1-alpine</span><br><span class="line"></span><br><span class="line"><span class="comment"># Install base packages and set timezone ShangHai</span></span><br><span class="line"><span class="builtin-name">RUN</span> apk update &amp;&amp; apk <span class="builtin-name">add</span> bash tzdata \</span><br><span class="line">    &amp;&amp; cp -r -f /usr/share/zoneinfo/Asia/Shanghai /etc/localtime</span><br><span class="line"></span><br><span class="line"><span class="built_in">..</span>.</span><br><span class="line"><span class="built_in">..</span>.</span><br><span class="line"><span class="built_in">..</span>.</span><br><span class="line"></span><br><span class="line">CMD [ <span class="string">"node"</span> ]</span><br></pre></td></tr></table></figure><p>验证：<br><figure class="highlight crmsh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">➜  <span class="keyword">node</span><span class="title">-dockerfile</span> git:(<span class="literal">master</span>) docker run -it  e595 sh </span><br><span class="line">/ <span class="comment"># yarn -v</span></span><br><span class="line"><span class="number">1.3</span>.<span class="number">2</span></span><br><span class="line">/ <span class="comment"># npm  -v</span></span><br><span class="line"><span class="number">5.5</span>.<span class="number">1</span></span><br><span class="line">/ <span class="comment"># node -v</span></span><br><span class="line">v9.<span class="number">2.1</span></span><br><span class="line">/ <span class="comment"># date</span></span><br><span class="line">Tue Dec <span class="number">12</span> <span class="number">17</span>:<span class="number">33</span>:<span class="number">26</span> CST <span class="number">2017</span></span><br></pre></td></tr></table></figure></p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h1 id=&quot;系统环境&quot;&gt;&lt;a href=&quot;#系统环境&quot; class=&quot;headerlink&quot; title=&quot;系统环境&quot;&gt;&lt;/a&gt;系统环境&lt;/h1&gt;&lt;ul&gt;
+&lt;li&gt;centos7 内核：3.10.0-514.26.2.el7.x86_64&lt;/li&gt;
+&lt;li&gt;安装docker要
+      
+    
+    </summary>
+    
+    
+      <category term="nodejs" scheme="https://wdd.js.org/tags/nodejs/"/>
+    
+      <category term="docker" scheme="https://wdd.js.org/tags/docker/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>如何在vscode中用standard style 风格去验证 vue文件</title>
+    <link href="https://wdd.js.org/vscode-vue-standardjs.html"/>
+    <id>https://wdd.js.org/vscode-vue-standardjs.html</id>
+    <published>2018-01-29T06:02:53.000Z</published>
+    <updated>2018-01-29T06:05:49.000Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="JavaScript-Standard-Style简介"><a href="#JavaScript-Standard-Style简介" class="headerlink" title="JavaScript Standard Style简介"></a>JavaScript Standard Style简介</h1><p>本工具通过以下三种方式为你（及你的团队）节省大量时间：</p><ul><li>无须配置。 史上最便捷的统一代码风格的方式，轻松拥有。</li><li>自动代码格式化。 只需运行 standard –fix 从此和脏乱差的代码说再见。</li><li>提前发现风格及程序问题。 减少代码审查过程中反反复复的修改过程，节约时间。</li><li>无须犹豫。再也不用维护 .eslintrc, .jshintrc, or .jscsrc 。开箱即用。</li></ul><p>安装：<br><figure class="highlight stylus"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm <span class="selector-tag">i</span> standard -g</span><br></pre></td></tr></table></figure></p><p>关于<a href="https://standardjs.com/readme-zhcn.html" target="_blank" rel="noopener">JavaScript 代码规范</a>, 你可以点击链接看一下。</p><h1 id="如何在vscode中用JavaScript-Standard-Style风格去验证-vue文件"><a href="#如何在vscode中用JavaScript-Standard-Style风格去验证-vue文件" class="headerlink" title="如何在vscode中用JavaScript Standard Style风格去验证 vue文件"></a>如何在vscode中用JavaScript Standard Style风格去验证 vue文件</h1><p>实际上<a href="https://marketplace.visualstudio.com/items?itemName=chenxsan.vscode-standardjs" target="_blank" rel="noopener">JavaScript Standard Style</a>有一个FAQ, 说明了如何使用。</p><p>但是有一点非常重要的作者没有提到，就是<code>eslint-plugin-html这个插件必须要安装3.x.x版本的</code>, 现在<code>eslint-plugin-html</code>, 已经升级到4.x版本，默认不写版本号安装的就是4.x版本的，所以会出现问题。<a href="https://github.com/BenoitZugmeyer/eslint-plugin-html/issues/60" target="_blank" rel="noopener">参考</a></p><blockquote><p>ESLint v4 is only supported by eslint-plugin-html v3, so you can’t use eslint-plugin-html v1.5.2 with it (I should add a warning about this when trying to use the plugin with an incompatible version on ESLint).</p><p>If you do not use ESLint v4, please provide more information (package.json, a gist to reproduce, …)</p></blockquote><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line">// FAQ</span><br><span class="line">How to lint script tag in vue or html files?</span><br><span class="line"></span><br><span class="line">You can lint them with eslint-plugin-html, just <span class="keyword">install</span> it <span class="keyword">first</span>, <span class="keyword">then</span> <span class="keyword">enable</span> linting <span class="keyword">for</span> those <span class="keyword">file</span> types <span class="keyword">in</span> settings.json <span class="keyword">with</span>:</span><br><span class="line"></span><br><span class="line"> <span class="string">"standard.validate"</span>: [</span><br><span class="line">     <span class="string">"javascript"</span>,</span><br><span class="line">     <span class="string">"javascriptreact"</span>,</span><br><span class="line">     <span class="string">"html"</span></span><br><span class="line"> ],</span><br><span class="line"> <span class="string">"standard.options"</span>: &#123;</span><br><span class="line">     <span class="string">"plugins"</span>: [<span class="string">"html"</span>]</span><br><span class="line"> &#125;,</span><br><span class="line"> <span class="string">"files.associations"</span>: &#123;</span><br><span class="line">     <span class="string">"*.vue"</span>: <span class="string">"html"</span></span><br><span class="line"> &#125;,</span><br><span class="line"><span class="keyword">If</span> you want <span class="keyword">to</span> <span class="keyword">enable</span> autoFix <span class="keyword">for</span> the <span class="keyword">new</span> languages, you should <span class="keyword">enable</span> it yourself:</span><br><span class="line"></span><br><span class="line"> <span class="string">"standard.validate"</span>: [</span><br><span class="line">     <span class="string">"javascript"</span>,</span><br><span class="line">     <span class="string">"javascriptreact"</span>,</span><br><span class="line">     &#123; <span class="string">"language"</span>: <span class="string">"html"</span>, <span class="string">"autoFix"</span>: <span class="literal">true</span> &#125;</span><br><span class="line"> ],</span><br><span class="line"> <span class="string">"standard.options"</span>: &#123;</span><br><span class="line">     <span class="string">"plugins"</span>: [<span class="string">"html"</span>]</span><br><span class="line"> &#125;</span><br></pre></td></tr></table></figure><h1 id="综上，-整理一下安装思路"><a href="#综上，-整理一下安装思路" class="headerlink" title="综上， 整理一下安装思路"></a>综上， 整理一下安装思路</h1><h2 id="需要安装哪些包？"><a href="#需要安装哪些包？" class="headerlink" title="需要安装哪些包？"></a>需要安装哪些包？</h2><ul><li><code>npm i -g standard</code></li><li><code>npm i -g eslint-plugin-html@3.2.2</code> 必须是3x版本</li><li><code>npm i -g eslint</code><br>以上三个包都是全局安装的，如果你想看看全局安装了哪些包可以用<code>npm list -g --depth=0</code>查看</li></ul><h2 id="vscode-config-如何写？"><a href="#vscode-config-如何写？" class="headerlink" title="vscode config 如何写？"></a>vscode config 如何写？</h2><figure class="highlight xquery"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">"standard.validate"</span>: [</span><br><span class="line">  <span class="string">"javascript"</span>,</span><br><span class="line">  <span class="string">"javascriptreact"</span>,</span><br><span class="line">  &#123;</span><br><span class="line">    <span class="string">"language"</span>: <span class="string">"html"</span>,</span><br><span class="line">    <span class="string">"autoFix"</span>: true</span><br><span class="line">  &#125;</span><br><span class="line">],</span><br><span class="line"><span class="string">"standard.options"</span>: &#123;</span><br><span class="line">  <span class="string">"plugin"</span>: [<span class="string">"html"</span>]</span><br><span class="line">&#125;,</span><br><span class="line"><span class="string">"files.associations"</span>: &#123;</span><br><span class="line">  <span class="string">"*.vue"</span>: <span class="string">"html"</span></span><br><span class="line">&#125;,</span><br></pre></td></tr></table></figure><h2 id="如何在保存文件时，自动使用standard格式化vue文件"><a href="#如何在保存文件时，自动使用standard格式化vue文件" class="headerlink" title="如何在保存文件时，自动使用standard格式化vue文件"></a>如何在保存文件时，自动使用standard格式化vue文件</h2><figure class="highlight actionscript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">"standard.autoFixOnSave"</span>: <span class="literal">true</span></span><br></pre></td></tr></table></figure><h2 id="如果还不行怎么办？"><a href="#如果还不行怎么办？" class="headerlink" title="如果还不行怎么办？"></a>如果还不行怎么办？</h2><ol><li>重启一下vscode</li><li>重启一下电脑</li><li>在此文后追加评论</li></ol>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h1 id=&quot;JavaScript-Standard-Style简介&quot;&gt;&lt;a href=&quot;#JavaScript-Standard-Style简介&quot; class=&quot;headerlink&quot; title=&quot;JavaScript Standard Style简介&quot;&gt;&lt;/a&gt;JavaS
+      
+    
+    </summary>
+    
+    
+      <category term="vue" scheme="https://wdd.js.org/tags/vue/"/>
+    
+      <category term="standardjs" scheme="https://wdd.js.org/tags/standardjs/"/>
+    
+      <category term="vscode" scheme="https://wdd.js.org/tags/vscode/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>油猴子脚本 - 我的地盘我做主</title>
+    <link href="https://wdd.js.org/tampermonkey.html"/>
+    <id>https://wdd.js.org/tampermonkey.html</id>
+    <published>2018-01-29T05:58:37.000Z</published>
+    <updated>2018-01-29T06:00:55.000Z</updated>
+    
+    <content type="html"><![CDATA[<blockquote><p><code>当你用浏览器访问某个网页时，你可曾想过，你看到的这个网页，实际上是属于你自己的。</code></p></blockquote><p>打个比喻：<code>访问某个网站就好像是网购了一筐鸡蛋，鸡蛋虽然是养鸡场生产的，但是这个蛋我怎么吃，你养鸡场管不着</code>。</p><p>当然了，对于很多人来说，鸡蛋没有别的吃法，鸡蛋只能煮着吃。</p><p>你可以看如下的页面：当你在某搜索引擎上搜索<code>前端开发</code>时</p><p>大多数人看到的页面是这样的, <code>满屏的广告，满屏的推广，满屏的排名，满屏的中间地址跳转，满屏的流量劫持, 还有莆田系</code></p><p><img src="http://p3alsaatj.bkt.clouddn.com/20180129135930_Btkbuq_Screenshot.jpeg" alt=""></p><p>但是有些人的页面却是这样的：<code>清晰，自然，链接直达，清水出芙蓉，天然去雕饰</code><br><img src="http://p3alsaatj.bkt.clouddn.com/20180129135945_rkPKMY_Screenshot.jpeg" alt=""></p><p>这就是<code>油猴子脚本干的事情</code>， 当然，它能干的事情，远不止如此。<code>它是齐天大圣孙悟空，有七十二变。</code></p><h1 id="什么是油猴子脚本？"><a href="#什么是油猴子脚本？" class="headerlink" title="什么是油猴子脚本？"></a>什么是油猴子脚本？</h1><blockquote><p>Greasemonkey，简称GM，中文俗称为“油猴”，是Firefox的一个附加组件。它让用户安装一些脚本使大部分HTML为主的网页于用户端直接改变得更方便易用。随着Greasemonkey脚本常驻于浏览器，每次随着目的网页打开而自动做修改，使得运行脚本的用户印象深刻地享受其固定便利性。</p><p>Greasemonkey可替网页加入些新功能（例如在亚马逊书店嵌入商品比价功能）、修正网页错误、组合来自不同网页的数据、或者数繁不及备载的其他功能。写的好的Greasemonkey脚本甚至可让其输出与被修改的页面集成得天衣无缝，像是原本网页里的一部分。 来自<a href="https://zh.wikipedia.org/wiki/Greasemonkey" target="_blank" rel="noopener">维基百科</a></p></blockquote><h1 id="如何安装油猴子插件？"><a href="#如何安装油猴子插件？" class="headerlink" title="如何安装油猴子插件？"></a>如何安装油猴子插件？</h1><p>在google商店搜索<code>Tampermonkey</code>, 安装量最高的就是它。</p><h1 id="如何写油猴子脚本？"><a href="#如何写油猴子脚本？" class="headerlink" title="如何写油猴子脚本？"></a>如何写油猴子脚本？</h1><p>油猴子脚本有个新建脚本页面，在此页面可以创建脚本。具体教程可以参考。</p><ul><li><a href="https://jixunmoe.github.io/gmDevBook/#/doc/intro/about" target="_blank" rel="noopener">中文 GreaseMonkey 用户脚本开发手册</a></li><li><a href="http://blog.leanote.com/post/mynote/%E6%B2%B9%E7%8C%B4%E5%AD%90" target="_blank" rel="noopener">GreaseMonkey（油猴子）脚本开发</a></li><li><a href="http://e.sebug.net/paper/books/greasemonkey/" target="_blank" rel="noopener">深入浅出 Greasemonkey</a></li><li><a href="http://commons.oreilly.com/wiki/index.php/Greasemonkey_Hacks/Getting_Started" target="_blank" rel="noopener">Greasemonkey Hacks/Getting Started</a></li></ul><p><img src="http://p3alsaatj.bkt.clouddn.com/20180129140004_amXldp_Screenshot.jpeg" alt=""></p><h1 id="如何使用他人的脚本？"><a href="#如何使用他人的脚本？" class="headerlink" title="如何使用他人的脚本？"></a>如何使用他人的脚本？</h1><p><a href="https://greasyfork.org/zh-CN" target="_blank" rel="noopener">greasyfork网站</a>提供很多脚本，它仿佛是代码界的github, 可以在该网站搜到很多有意思的脚本。</p><p><img src="http://p3alsaatj.bkt.clouddn.com/20180129140017_AapqKj_Screenshot.jpeg" alt=""></p><h1 id="有哪些好用的脚本？"><a href="#有哪些好用的脚本？" class="headerlink" title="有哪些好用的脚本？"></a>有哪些好用的脚本？</h1><ul><li><a href="https://www.zhihu.com/question/22210090" target="_blank" rel="noopener">有哪些超神的油猴脚本?</a></li><li>或者你可以在greasyfork网站查看一些下载量排行</li></ul>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;blockquote&gt;
+&lt;p&gt;&lt;code&gt;当你用浏览器访问某个网页时，你可曾想过，你看到的这个网页，实际上是属于你自己的。&lt;/code&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;打个比喻：&lt;code&gt;访问某个网站就好像是网购了一筐鸡蛋，鸡蛋虽然是养鸡场生产的，但是这个蛋我怎么
+      
+    
+    </summary>
+    
+    
+      <category term="js" scheme="https://wdd.js.org/tags/js/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>【译】一个值得所有前端开发者关注的网站 js.org</title>
+    <link href="https://wdd.js.org/js-org.html"/>
+    <id>https://wdd.js.org/js-org.html</id>
+    <published>2018-01-29T05:52:42.000Z</published>
+    <updated>2018-01-29T05:56:36.000Z</updated>
+    
+    <content type="html"><![CDATA[<p>二十年后，域<code>js.org</code>第一次注册，它终于服务于其明显的目的 -  <code>JavaScript社区</code>。</p><p><img src="http://p3alsaatj.bkt.clouddn.com/20180129135455_TxBdIi_Screenshot.jpeg" alt=""><br>从一开始，对JavaScript的看法各不相同 - 有些人喜欢的语言，有人讨厌它。但是，对于使JavaScript成为最受欢迎的编程语言之一的社区的威力，应该毫无疑问。<br>为了与社区的自由开放的心态保持一致，JS.ORG为开发人员及其项目免费提供了子域名。自第一步以来，我们还专注于跟踪JavaScript趋势并传播有关它的新闻。</p><p>贡献是欢迎：如果你有热情开始一个合作项目，或者如果你想成为JS.ORG的成员，并贡献JS.ORG，随时与我联系。</p><h1 id="DNS"><a href="#DNS" class="headerlink" title="DNS"></a><a href="https://dns.js.org/" target="_blank" rel="noopener">DNS</a></h1><p><img src="http://p3alsaatj.bkt.clouddn.com/20180129135515_h5QsOj_Screenshot.jpeg" alt=""></p><p>如果您是JavaScript开发人员，您可能已经听说过 - 或者甚至已经使用GitHub页面来托管您的内容。 DNS.JS.ORG补充GitHub提供的免费网络空间，并提供了一个适合您项目的自由和时尚的网址。</p><h1 id="STARTS"><a href="#STARTS" class="headerlink" title="STARTS"></a><a href="https://stats.js.org/" target="_blank" rel="noopener">STARTS</a></h1><p><img src="http://p3alsaatj.bkt.clouddn.com/20180129135544_ORLeC8_Screenshot.jpeg" alt=""></p><p>STATS.JS.ORG获取GitHub上最重要的JavaScript项目的统计参数，并将它们填充到10k行的巨型表中。这个项目旨在使JavaScript的趋势可见。</p><h1 id="NEWS"><a href="#NEWS" class="headerlink" title="NEWS"></a><a href="https://news.js.org/" target="_blank" rel="noopener">NEWS</a></h1><p><img src="http://p3alsaatj.bkt.clouddn.com/20180129135603_cDBmou_Screenshot.jpeg" alt=""><br>你有什么东西要与社区分享或想阅读其他JavaScript爱好者的东西吗？ NEWS.JS.ORG提供了一种方便的传播，消费和讨论JavaScript项目。</p><h1 id="WASM"><a href="#WASM" class="headerlink" title="WASM"></a><a href="https://wasm.news/" target="_blank" rel="noopener">WASM</a></h1><p><img src="http://p3alsaatj.bkt.clouddn.com/20180129135624_uxXdKW_Screenshot.jpeg" alt=""><br>WebAssembly（或简称wasm）是一种用于Web平台上的低级代码的新的二进制语法。 WASM.NEWS是JS.ORG计划的一个分支，并作为这个即将到来的主题的新闻聚合。</p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;二十年后，域&lt;code&gt;js.org&lt;/code&gt;第一次注册，它终于服务于其明显的目的 -  &lt;code&gt;JavaScript社区&lt;/code&gt;。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;http://p3alsaatj.bkt.clouddn.com/2018012913545
+      
+    
+    </summary>
+    
+    
+      <category term="js.org" scheme="https://wdd.js.org/tags/js-org/"/>
+    
+  </entry>
+  
+</feed>
