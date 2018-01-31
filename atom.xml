@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://wdd.js.org/"/>
-  <updated>2018-01-31T08:27:53.000Z</updated>
+  <updated>2018-01-31T09:35:04.000Z</updated>
   <id>https://wdd.js.org/</id>
   
   <author>
@@ -15,6 +15,34 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>git合并上游仓库即同步fork后的仓库</title>
+    <link href="https://wdd.js.org/fork-sync-learn.html"/>
+    <id>https://wdd.js.org/fork-sync-learn.html</id>
+    <published>2018-01-31T09:16:44.000Z</published>
+    <updated>2018-01-31T09:35:04.000Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="前提说明"><a href="#前提说明" class="headerlink" title="前提说明"></a>前提说明</h1><ul><li>仓库A: <a href="http://gitlab.tt.cc:30000/fe/omp.git" target="_blank" rel="noopener">http://gitlab.tt.cc:30000/fe/omp.git</a></li><li>仓库B: 仓库Bfork自仓库A, 仓库A的地址是：<a href="http://gitlab.tt.cc:30000/wangdd/omp.git" target="_blank" rel="noopener">http://gitlab.tt.cc:30000/wangdd/omp.git</a></li></ul><p>某一时刻，仓库A更新了。仓库B需要同步上游分支的更新。</p><h1 id="本地操作"><a href="#本地操作" class="headerlink" title="本地操作"></a>本地操作</h1><figure class="highlight groovy"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 1 查看远程分支</span></span><br><span class="line">➜  omp <span class="string">git:</span>(master) git remote -v</span><br><span class="line">origin<span class="string">http:</span><span class="comment">//gitlab.tt.cc:30000/wangdd/omp.git (fetch)</span></span><br><span class="line">origin<span class="string">http:</span><span class="comment">//gitlab.tt.cc:30000/wangdd/omp.git (push)</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// 2 添加一个远程同步的上游仓库</span></span><br><span class="line">➜  omp <span class="string">git:</span>(master) git remote add upstream <span class="string">http:</span><span class="comment">//gitlab.tt.cc:30000/fe/omp.git</span></span><br><span class="line">➜  omp <span class="string">git:</span>(master) git remote -v</span><br><span class="line">origin<span class="string">http:</span><span class="comment">//gitlab.tt.cc:30000/wangdd/omp.git (fetch)</span></span><br><span class="line">origin<span class="string">http:</span><span class="comment">//gitlab.tt.cc:30000/wangdd/omp.git (push)</span></span><br><span class="line">upstream<span class="string">http:</span><span class="comment">//gitlab.tt.cc:30000/fe/omp.git (fetch)</span></span><br><span class="line">upstream<span class="string">http:</span><span class="comment">//gitlab.tt.cc:30000/fe/omp.git (push)</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// 3 拉去上游分支到本地，并且会被存储在一个新分支upstream/master</span></span><br><span class="line">➜  omp <span class="string">git:</span>(master) git fetch upstream</span><br><span class="line"><span class="string">remote:</span> Counting <span class="string">objects:</span> <span class="number">4</span>, done.</span><br><span class="line"><span class="string">remote:</span> Compressing <span class="string">objects:</span> <span class="number">100</span>% (<span class="number">4</span>/<span class="number">4</span>), done.</span><br><span class="line"><span class="string">remote:</span> Total <span class="number">4</span> (delta <span class="number">2</span>), reused <span class="number">0</span> (delta <span class="number">0</span>)</span><br><span class="line">Unpacking <span class="string">objects:</span> <span class="number">100</span>% (<span class="number">4</span>/<span class="number">4</span>), done.</span><br><span class="line">From <span class="string">http:</span><span class="comment">//gitlab.tt.cc:30000/fe/omp</span></span><br><span class="line"> * [<span class="keyword">new</span> branch]      master     -&gt; upstream/master</span><br><span class="line"></span><br><span class="line"><span class="comment">// 4 将upstream/master分支合并到master分支，由于我已经在master分支，此处就不在切换到master分支</span></span><br><span class="line">➜  omp <span class="string">git:</span>(master) git merge upstream/master</span><br><span class="line">Updating <span class="number">29</span>c098c.<span class="number">.6413803</span></span><br><span class="line">Fast-forward</span><br><span class="line"> README.md | <span class="number">1</span> +</span><br><span class="line"> <span class="number">1</span> file changed, <span class="number">1</span> insertion(+)</span><br><span class="line"></span><br><span class="line"><span class="comment">// 5 查看一下，此次合并，本地有哪些更新</span></span><br><span class="line">➜  omp <span class="string">git:</span>(master) git log -p</span><br><span class="line"></span><br><span class="line"><span class="comment">// 6 然后将更新推送到仓库B</span></span><br><span class="line">➜  omp <span class="string">git:</span>(master) git push</span><br></pre></td></tr></table></figure><h1 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h1><p>通过上述操作，仓库B就同步了仓库A的代码。整体的逻辑就是将<code>上游分支拉去到本地，然后合并到本地分支上</code>。就这么简单。</p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h1 id=&quot;前提说明&quot;&gt;&lt;a href=&quot;#前提说明&quot; class=&quot;headerlink&quot; title=&quot;前提说明&quot;&gt;&lt;/a&gt;前提说明&lt;/h1&gt;&lt;ul&gt;
+&lt;li&gt;仓库A: &lt;a href=&quot;http://gitlab.tt.cc:30000/fe/omp.git&quot; targ
+      
+    
+    </summary>
+    
+    
+      <category term="fork" scheme="https://wdd.js.org/tags/fork/"/>
+    
+      <category term="git" scheme="https://wdd.js.org/tags/git/"/>
+    
+      <category term="合并上游分支" scheme="https://wdd.js.org/tags/%E5%90%88%E5%B9%B6%E4%B8%8A%E6%B8%B8%E5%88%86%E6%94%AF/"/>
+    
+  </entry>
   
   <entry>
     <title>git常用命令与oh-my-zsh常用缩写</title>
@@ -499,32 +527,6 @@
       <category term="standardjs" scheme="https://wdd.js.org/tags/standardjs/"/>
     
       <category term="vscode" scheme="https://wdd.js.org/tags/vscode/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>油猴子脚本 - 我的地盘我做主</title>
-    <link href="https://wdd.js.org/tampermonkey.html"/>
-    <id>https://wdd.js.org/tampermonkey.html</id>
-    <published>2018-01-29T05:58:37.000Z</published>
-    <updated>2018-01-29T06:00:55.000Z</updated>
-    
-    <content type="html"><![CDATA[<blockquote><p><code>当你用浏览器访问某个网页时，你可曾想过，你看到的这个网页，实际上是属于你自己的。</code></p></blockquote><p>打个比喻：<code>访问某个网站就好像是网购了一筐鸡蛋，鸡蛋虽然是养鸡场生产的，但是这个蛋我怎么吃，你养鸡场管不着</code>。</p><p>当然了，对于很多人来说，鸡蛋没有别的吃法，鸡蛋只能煮着吃。</p><p>你可以看如下的页面：当你在某搜索引擎上搜索<code>前端开发</code>时</p><p>大多数人看到的页面是这样的, <code>满屏的广告，满屏的推广，满屏的排名，满屏的中间地址跳转，满屏的流量劫持, 还有莆田系</code></p><p><img src="http://p3alsaatj.bkt.clouddn.com/20180129135930_Btkbuq_Screenshot.jpeg" alt=""></p><p>但是有些人的页面却是这样的：<code>清晰，自然，链接直达，清水出芙蓉，天然去雕饰</code><br><img src="http://p3alsaatj.bkt.clouddn.com/20180129135945_rkPKMY_Screenshot.jpeg" alt=""></p><p>这就是<code>油猴子脚本干的事情</code>， 当然，它能干的事情，远不止如此。<code>它是齐天大圣孙悟空，有七十二变。</code></p><h1 id="什么是油猴子脚本？"><a href="#什么是油猴子脚本？" class="headerlink" title="什么是油猴子脚本？"></a>什么是油猴子脚本？</h1><blockquote><p>Greasemonkey，简称GM，中文俗称为“油猴”，是Firefox的一个附加组件。它让用户安装一些脚本使大部分HTML为主的网页于用户端直接改变得更方便易用。随着Greasemonkey脚本常驻于浏览器，每次随着目的网页打开而自动做修改，使得运行脚本的用户印象深刻地享受其固定便利性。</p><p>Greasemonkey可替网页加入些新功能（例如在亚马逊书店嵌入商品比价功能）、修正网页错误、组合来自不同网页的数据、或者数繁不及备载的其他功能。写的好的Greasemonkey脚本甚至可让其输出与被修改的页面集成得天衣无缝，像是原本网页里的一部分。 来自<a href="https://zh.wikipedia.org/wiki/Greasemonkey" target="_blank" rel="noopener">维基百科</a></p></blockquote><h1 id="如何安装油猴子插件？"><a href="#如何安装油猴子插件？" class="headerlink" title="如何安装油猴子插件？"></a>如何安装油猴子插件？</h1><p>在google商店搜索<code>Tampermonkey</code>, 安装量最高的就是它。</p><h1 id="如何写油猴子脚本？"><a href="#如何写油猴子脚本？" class="headerlink" title="如何写油猴子脚本？"></a>如何写油猴子脚本？</h1><p>油猴子脚本有个新建脚本页面，在此页面可以创建脚本。具体教程可以参考。</p><ul><li><a href="https://jixunmoe.github.io/gmDevBook/#/doc/intro/about" target="_blank" rel="noopener">中文 GreaseMonkey 用户脚本开发手册</a></li><li><a href="http://blog.leanote.com/post/mynote/%E6%B2%B9%E7%8C%B4%E5%AD%90" target="_blank" rel="noopener">GreaseMonkey（油猴子）脚本开发</a></li><li><a href="http://e.sebug.net/paper/books/greasemonkey/" target="_blank" rel="noopener">深入浅出 Greasemonkey</a></li><li><a href="http://commons.oreilly.com/wiki/index.php/Greasemonkey_Hacks/Getting_Started" target="_blank" rel="noopener">Greasemonkey Hacks/Getting Started</a></li></ul><p><img src="http://p3alsaatj.bkt.clouddn.com/20180129140004_amXldp_Screenshot.jpeg" alt=""></p><h1 id="如何使用他人的脚本？"><a href="#如何使用他人的脚本？" class="headerlink" title="如何使用他人的脚本？"></a>如何使用他人的脚本？</h1><p><a href="https://greasyfork.org/zh-CN" target="_blank" rel="noopener">greasyfork网站</a>提供很多脚本，它仿佛是代码界的github, 可以在该网站搜到很多有意思的脚本。</p><p><img src="http://p3alsaatj.bkt.clouddn.com/20180129140017_AapqKj_Screenshot.jpeg" alt=""></p><h1 id="有哪些好用的脚本？"><a href="#有哪些好用的脚本？" class="headerlink" title="有哪些好用的脚本？"></a>有哪些好用的脚本？</h1><ul><li><a href="https://www.zhihu.com/question/22210090" target="_blank" rel="noopener">有哪些超神的油猴脚本?</a></li><li>或者你可以在greasyfork网站查看一些下载量排行</li></ul>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;blockquote&gt;
-&lt;p&gt;&lt;code&gt;当你用浏览器访问某个网页时，你可曾想过，你看到的这个网页，实际上是属于你自己的。&lt;/code&gt;&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;打个比喻：&lt;code&gt;访问某个网站就好像是网购了一筐鸡蛋，鸡蛋虽然是养鸡场生产的，但是这个蛋我怎么
-      
-    
-    </summary>
-    
-    
-      <category term="js" scheme="https://wdd.js.org/tags/js/"/>
     
   </entry>
   
