@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://wdd.js.org/"/>
-  <updated>2018-01-31T09:35:04.000Z</updated>
+  <updated>2018-02-01T01:27:06.000Z</updated>
   <id>https://wdd.js.org/</id>
   
   <author>
@@ -15,6 +15,36 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>markdwon、笔记、编辑器与缓存</title>
+    <link href="https://wdd.js.org/think-about-markdown-and-editor.html"/>
+    <id>https://wdd.js.org/think-about-markdown-and-editor.html</id>
+    <published>2018-01-31T12:16:27.000Z</published>
+    <updated>2018-02-01T01:27:06.000Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="笔记有哪些种类？"><a href="#笔记有哪些种类？" class="headerlink" title="笔记有哪些种类？"></a>笔记有哪些种类？</h1><ul><li><code>所有人可读</code>：所有人都可以看的，这种类型的笔记适合作为博客</li><li><code>部分可读</code>：这种不适合作为博客，需要一些约束条件，被授权的人才有资格去读</li><li><code>仅自己可读</code>：这种类型的往往都是个人隐私，不需要和别人分享</li></ul><h1 id="为什么要记笔记？"><a href="#为什么要记笔记？" class="headerlink" title="为什么要记笔记？"></a>为什么要记笔记？</h1><p><code>你需要的东西网上都有，搜索引擎都能找到，那么你为什么还要记笔记？</code></p><ul><li><code>节约效率与缓存</code>：搜索引擎并不一定能够找到你需要的数据，一旦找到，最好可以缓存起来，作为笔记，下次查找的效率往往会提高非常多；另外，这次可以找到的内容，下次同样的位置，也可能文档已经被删除。</li><li><code>知识经验积累</code>: 原创的内容在互联网上是搜不到的，所以需要记录，积累知识，内化吸收</li><li><code>生活感情记录</code>: 作为一种情绪的记录</li></ul><h1 id="markdown-笔记，-编辑器之间有什么关系"><a href="#markdown-笔记，-编辑器之间有什么关系" class="headerlink" title="markdown, 笔记， 编辑器之间有什么关系"></a>markdown, 笔记， 编辑器之间有什么关系</h1><p>markdown是笔记的一种形式，编辑器来制作笔记。</p><h1 id="对于编辑器的要求"><a href="#对于编辑器的要求" class="headerlink" title="对于编辑器的要求"></a>对于编辑器的要求</h1><ul><li>可以编辑markdown</li><li>可以导出pdf</li><li>可以云端备份</li></ul>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h1 id=&quot;笔记有哪些种类？&quot;&gt;&lt;a href=&quot;#笔记有哪些种类？&quot; class=&quot;headerlink&quot; title=&quot;笔记有哪些种类？&quot;&gt;&lt;/a&gt;笔记有哪些种类？&lt;/h1&gt;&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;所有人可读&lt;/code&gt;：所有人都可以看的，这种类型的笔记适合作为博
+      
+    
+    </summary>
+    
+    
+      <category term="markdown" scheme="https://wdd.js.org/tags/markdown/"/>
+    
+      <category term="editor" scheme="https://wdd.js.org/tags/editor/"/>
+    
+      <category term="note" scheme="https://wdd.js.org/tags/note/"/>
+    
+      <category term="未完成" scheme="https://wdd.js.org/tags/%E6%9C%AA%E5%AE%8C%E6%88%90/"/>
+    
+  </entry>
   
   <entry>
     <title>git合并上游仓库即同步fork后的仓库</title>
@@ -500,33 +530,6 @@
       <category term="nodejs" scheme="https://wdd.js.org/tags/nodejs/"/>
     
       <category term="docker" scheme="https://wdd.js.org/tags/docker/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>如何在vscode中用standard style 风格去验证 vue文件</title>
-    <link href="https://wdd.js.org/vscode-vue-standardjs.html"/>
-    <id>https://wdd.js.org/vscode-vue-standardjs.html</id>
-    <published>2018-01-29T06:02:53.000Z</published>
-    <updated>2018-01-29T06:05:49.000Z</updated>
-    
-    <content type="html"><![CDATA[<h1 id="JavaScript-Standard-Style简介"><a href="#JavaScript-Standard-Style简介" class="headerlink" title="JavaScript Standard Style简介"></a>JavaScript Standard Style简介</h1><p>本工具通过以下三种方式为你（及你的团队）节省大量时间：</p><ul><li>无须配置。 史上最便捷的统一代码风格的方式，轻松拥有。</li><li>自动代码格式化。 只需运行 standard –fix 从此和脏乱差的代码说再见。</li><li>提前发现风格及程序问题。 减少代码审查过程中反反复复的修改过程，节约时间。</li><li>无须犹豫。再也不用维护 .eslintrc, .jshintrc, or .jscsrc 。开箱即用。</li></ul><p>安装：<br><figure class="highlight stylus"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm <span class="selector-tag">i</span> standard -g</span><br></pre></td></tr></table></figure></p><p>关于<a href="https://standardjs.com/readme-zhcn.html" target="_blank" rel="noopener">JavaScript 代码规范</a>, 你可以点击链接看一下。</p><h1 id="如何在vscode中用JavaScript-Standard-Style风格去验证-vue文件"><a href="#如何在vscode中用JavaScript-Standard-Style风格去验证-vue文件" class="headerlink" title="如何在vscode中用JavaScript Standard Style风格去验证 vue文件"></a>如何在vscode中用JavaScript Standard Style风格去验证 vue文件</h1><p>实际上<a href="https://marketplace.visualstudio.com/items?itemName=chenxsan.vscode-standardjs" target="_blank" rel="noopener">JavaScript Standard Style</a>有一个FAQ, 说明了如何使用。</p><p>但是有一点非常重要的作者没有提到，就是<code>eslint-plugin-html这个插件必须要安装3.x.x版本的</code>, 现在<code>eslint-plugin-html</code>, 已经升级到4.x版本，默认不写版本号安装的就是4.x版本的，所以会出现问题。<a href="https://github.com/BenoitZugmeyer/eslint-plugin-html/issues/60" target="_blank" rel="noopener">参考</a></p><blockquote><p>ESLint v4 is only supported by eslint-plugin-html v3, so you can’t use eslint-plugin-html v1.5.2 with it (I should add a warning about this when trying to use the plugin with an incompatible version on ESLint).</p><p>If you do not use ESLint v4, please provide more information (package.json, a gist to reproduce, …)</p></blockquote><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line">// FAQ</span><br><span class="line">How to lint script tag in vue or html files?</span><br><span class="line"></span><br><span class="line">You can lint them with eslint-plugin-html, just <span class="keyword">install</span> it <span class="keyword">first</span>, <span class="keyword">then</span> <span class="keyword">enable</span> linting <span class="keyword">for</span> those <span class="keyword">file</span> types <span class="keyword">in</span> settings.json <span class="keyword">with</span>:</span><br><span class="line"></span><br><span class="line"> <span class="string">"standard.validate"</span>: [</span><br><span class="line">     <span class="string">"javascript"</span>,</span><br><span class="line">     <span class="string">"javascriptreact"</span>,</span><br><span class="line">     <span class="string">"html"</span></span><br><span class="line"> ],</span><br><span class="line"> <span class="string">"standard.options"</span>: &#123;</span><br><span class="line">     <span class="string">"plugins"</span>: [<span class="string">"html"</span>]</span><br><span class="line"> &#125;,</span><br><span class="line"> <span class="string">"files.associations"</span>: &#123;</span><br><span class="line">     <span class="string">"*.vue"</span>: <span class="string">"html"</span></span><br><span class="line"> &#125;,</span><br><span class="line"><span class="keyword">If</span> you want <span class="keyword">to</span> <span class="keyword">enable</span> autoFix <span class="keyword">for</span> the <span class="keyword">new</span> languages, you should <span class="keyword">enable</span> it yourself:</span><br><span class="line"></span><br><span class="line"> <span class="string">"standard.validate"</span>: [</span><br><span class="line">     <span class="string">"javascript"</span>,</span><br><span class="line">     <span class="string">"javascriptreact"</span>,</span><br><span class="line">     &#123; <span class="string">"language"</span>: <span class="string">"html"</span>, <span class="string">"autoFix"</span>: <span class="literal">true</span> &#125;</span><br><span class="line"> ],</span><br><span class="line"> <span class="string">"standard.options"</span>: &#123;</span><br><span class="line">     <span class="string">"plugins"</span>: [<span class="string">"html"</span>]</span><br><span class="line"> &#125;</span><br></pre></td></tr></table></figure><h1 id="综上，-整理一下安装思路"><a href="#综上，-整理一下安装思路" class="headerlink" title="综上， 整理一下安装思路"></a>综上， 整理一下安装思路</h1><h2 id="需要安装哪些包？"><a href="#需要安装哪些包？" class="headerlink" title="需要安装哪些包？"></a>需要安装哪些包？</h2><ul><li><code>npm i -g standard</code></li><li><code>npm i -g eslint-plugin-html@3.2.2</code> 必须是3x版本</li><li><code>npm i -g eslint</code><br>以上三个包都是全局安装的，如果你想看看全局安装了哪些包可以用<code>npm list -g --depth=0</code>查看</li></ul><h2 id="vscode-config-如何写？"><a href="#vscode-config-如何写？" class="headerlink" title="vscode config 如何写？"></a>vscode config 如何写？</h2><figure class="highlight xquery"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">"standard.validate"</span>: [</span><br><span class="line">  <span class="string">"javascript"</span>,</span><br><span class="line">  <span class="string">"javascriptreact"</span>,</span><br><span class="line">  &#123;</span><br><span class="line">    <span class="string">"language"</span>: <span class="string">"html"</span>,</span><br><span class="line">    <span class="string">"autoFix"</span>: true</span><br><span class="line">  &#125;</span><br><span class="line">],</span><br><span class="line"><span class="string">"standard.options"</span>: &#123;</span><br><span class="line">  <span class="string">"plugin"</span>: [<span class="string">"html"</span>]</span><br><span class="line">&#125;,</span><br><span class="line"><span class="string">"files.associations"</span>: &#123;</span><br><span class="line">  <span class="string">"*.vue"</span>: <span class="string">"html"</span></span><br><span class="line">&#125;,</span><br></pre></td></tr></table></figure><h2 id="如何在保存文件时，自动使用standard格式化vue文件"><a href="#如何在保存文件时，自动使用standard格式化vue文件" class="headerlink" title="如何在保存文件时，自动使用standard格式化vue文件"></a>如何在保存文件时，自动使用standard格式化vue文件</h2><figure class="highlight actionscript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">"standard.autoFixOnSave"</span>: <span class="literal">true</span></span><br></pre></td></tr></table></figure><h2 id="如果还不行怎么办？"><a href="#如果还不行怎么办？" class="headerlink" title="如果还不行怎么办？"></a>如果还不行怎么办？</h2><ol><li>重启一下vscode</li><li>重启一下电脑</li><li>在此文后追加评论</li></ol>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;h1 id=&quot;JavaScript-Standard-Style简介&quot;&gt;&lt;a href=&quot;#JavaScript-Standard-Style简介&quot; class=&quot;headerlink&quot; title=&quot;JavaScript Standard Style简介&quot;&gt;&lt;/a&gt;JavaS
-      
-    
-    </summary>
-    
-    
-      <category term="vue" scheme="https://wdd.js.org/tags/vue/"/>
-    
-      <category term="standardjs" scheme="https://wdd.js.org/tags/standardjs/"/>
-    
-      <category term="vscode" scheme="https://wdd.js.org/tags/vscode/"/>
     
   </entry>
   
