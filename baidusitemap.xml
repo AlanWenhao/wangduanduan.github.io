@@ -4,6 +4,50 @@
 
     
   <url>
+    <loc>https://wdd.js.org/read-notes-on-top-of-tides.html</loc>
+    <lastmod>2018-02-02T08:29:07.000Z</lastmod>
+    <data>
+        <display>
+        <title>读书笔记：浪潮之巅</title>
+        <pubTime>2018-02-02T05:02:23.000Z</pubTime>
+        
+        <tag>读书笔记</tag>
+         
+        <tag>浪潮之巅</tag>
+         
+        <tag>未完成</tag>
+         
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>https://wdd.js.org/tool-improve-work-efficiency.html</loc>
+    <lastmod>2018-02-02T08:28:52.000Z</lastmod>
+    <data>
+        <display>
+        <title>无坚不摧：打造极大提高工作效率的装备库</title>
+        <pubTime>2018-02-02T01:24:43.000Z</pubTime>
+        
+        <tag>git</tag>
+         
+        <tag>未完成</tag>
+         
+        <tag>conemu</tag>
+         
+        <tag>gow</tag>
+         
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>https://wdd.js.org/http-status-code-work-method.html</loc>
     <lastmod>2018-02-01T07:49:01.000Z</lastmod>
     <data>
@@ -30,13 +74,13 @@
         <title>markdwon、笔记、编辑器与缓存</title>
         <pubTime>2018-01-31T12:16:27.000Z</pubTime>
         
+        <tag>未完成</tag>
+         
         <tag>markdown</tag>
          
         <tag>editor</tag>
          
         <tag>note</tag>
-         
-        <tag>未完成</tag>
          
          
            
