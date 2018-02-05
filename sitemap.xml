@@ -2,6 +2,27 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://wdd.js.org/2018-reading-plan.html</loc>
+    
+    <lastmod>2018-02-05T06:06:26.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://wdd.js.org/do-not-be-big-fans.html</loc>
+    
+    <lastmod>2018-02-05T04:05:08.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://wdd.js.org/think-with-stream.html</loc>
+    
+    <lastmod>2018-02-05T03:35:21.000Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://wdd.js.org/vscode-commom-shortcuts.html</loc>
     
     <lastmod>2018-02-05T03:25:17.000Z</lastmod>

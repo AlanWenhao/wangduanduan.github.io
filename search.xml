@@ -1,6 +1,32 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[2018年我的阅读计划]]></title>
+    <url>%2F2018-reading-plan.html</url>
+    <content type="text"><![CDATA[阅读速度： 每天54000字 页码控制基于多看阅读和kindle paper white 序号 书名 状态 读完时间 1 浪潮之巅 在读 2 新生 七年就是一辈子 已读完 0205 3 大数据 在读 4 怪诞经济学 在读 5 专业主义 6 失控 7 怪诞心理学 在读 8 设计心理学 9 魔鬼经济学 10 乌合之众 11 把时间当做朋友 12 三体 13 人性的弱点 14 物种起源 15 沉默的大多数 在读 16 生命不息，折腾不止 在读 17 动物农场 第5周 0129-0204 ed 页数基于多看阅读 第4周 0122-0128 ed 备注：明朝那些事儿，看到抗日援朝那部分，实在是看不下去啦，索性不看了 页数基于多看阅读]]></content>
+      <tags>
+        <tag>reading</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[不要成为某个技术的死忠粉]]></title>
+    <url>%2Fdo-not-be-big-fans.html</url>
+    <content type="text"><![CDATA[我对Vue与React的态度成年人权衡利弊，小孩子才说好坏你只不过在找借口罢了不要成为某个技术的死忠粉]]></content>
+      <tags>
+        <tag>idea</tag>
+        <tag>未完成</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[Think With Stream]]></title>
+    <url>%2Fthink-with-stream.html</url>
+    <content type="text"><![CDATA[流的存在 流的规则终极的流]]></content>
+      <tags>
+        <tag>idea</tag>
+        <tag>未完成</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[vscode常用快捷键集锦]]></title>
     <url>%2Fvscode-commom-shortcuts.html</url>
     <content type="text"><![CDATA[功能 键 多行选中 alt+shift+鼠标拖动 打开terminal ctrl + ` 行上下移动 atlt + 上或下箭头 向下复制当前行 shift alt + 下箭头 向上复制当前行 shift alt + 上箭头 f1 打开命令面板 开关书签 com + option + k 书签跳转 com + option + j or l]]></content>
@@ -22,9 +48,9 @@
     <url>%2Fread-notes-on-top-of-tides.html</url>
     <content type="text"><![CDATA[互联网的金门大桥： 思科关于情书的八卦思科的创始人刚开始是男女朋友关系，他们是斯坦福大学不同计算机中心的主管。两人经常用计算机写情书，但是呢，不同的网络之间的设备协议不同，互不兼容，导致了情书传递非常不方便。于是他们就发明了一种能够支持各种网络设备，各种协议的路由器，即多协议路由器。 对立与兼容大公司都是想打败对手，而不是做出兼容。所以思科的多协议路由器能够有生存的机会。]]></content>
       <tags>
+        <tag>未完成</tag>
         <tag>读书笔记</tag>
         <tag>浪潮之巅</tag>
-        <tag>未完成</tag>
       </tags>
   </entry>
   <entry>
@@ -32,8 +58,8 @@
     <url>%2Ftool-improve-work-efficiency.html</url>
     <content type="text"><![CDATA[Git Bash Gow 1 2 3 4 5 6 7 8 9 10 awk basename bash bc bison bunzip2 bzip2 bzip2 bzip2recover cat chgrp chmod chown chroot cksum clear cp csplit curl cut dc dd df diff diff3 dirname dos2unix du egrep env expand expr factor fgrep flex fmt fold gawk gdbm3 gfind gow grep gsar gsort gzip head history5 hostid hostname id indent install join jwhois less lesskey libcurl libeay32 libiconv-2 libidn-11 libintl-2 libintl3 libssl32 ln ls m4 make md5sum mkdir mkfifo mknod msys-1 msys-regex-1 msys-termcap-0 mv nano ncftp nl od pageant paste patch pathchk pcre3 plink pr printenv printf pscp psftp putty puttygen pwd readline5 regex2 rm rmdir scp sdiff sed seq sftp sha1sum shar sleep split ssh ssleay32 su sum sync tac tail tar tee test touch tr uname unexpand uniq unix2dos unlink unrar unrar3 unshar uudecode uuencode vim wc wget whereis which whoami xargs yes zip zip32z64 ConEmugerpChrome ExtensionsvimiumMulti-highlightRestlet Client - REST API TestingTampermonkeyWeb Toolsjsonviewernewhttps://www.bejson.com/jsonviewernew/ regex101Linux 工具快速教程]]></content>
       <tags>
-        <tag>git</tag>
         <tag>未完成</tag>
+        <tag>git</tag>
         <tag>conemu</tag>
         <tag>gow</tag>
       </tags>

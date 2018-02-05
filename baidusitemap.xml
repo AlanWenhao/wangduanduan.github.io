@@ -4,6 +4,61 @@
 
     
   <url>
+    <loc>https://wdd.js.org/2018-reading-plan.html</loc>
+    <lastmod>2018-02-05T06:06:26.000Z</lastmod>
+    <data>
+        <display>
+        <title>2018年我的阅读计划</title>
+        <pubTime>2018-02-05T05:42:20.000Z</pubTime>
+        
+        <tag>reading</tag>
+         
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>https://wdd.js.org/do-not-be-big-fans.html</loc>
+    <lastmod>2018-02-05T04:05:08.000Z</lastmod>
+    <data>
+        <display>
+        <title>不要成为某个技术的死忠粉</title>
+        <pubTime>2018-02-05T03:58:25.000Z</pubTime>
+        
+        <tag>idea</tag>
+         
+        <tag>未完成</tag>
+         
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>https://wdd.js.org/think-with-stream.html</loc>
+    <lastmod>2018-02-05T03:35:21.000Z</lastmod>
+    <data>
+        <display>
+        <title>Think With Stream</title>
+        <pubTime>2018-02-05T03:28:59.000Z</pubTime>
+        
+        <tag>idea</tag>
+         
+        <tag>未完成</tag>
+         
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>https://wdd.js.org/vscode-commom-shortcuts.html</loc>
     <lastmod>2018-02-05T03:25:17.000Z</lastmod>
     <data>
@@ -47,11 +102,11 @@
         <title>读书笔记：浪潮之巅</title>
         <pubTime>2018-02-02T05:02:23.000Z</pubTime>
         
+        <tag>未完成</tag>
+         
         <tag>读书笔记</tag>
          
         <tag>浪潮之巅</tag>
-         
-        <tag>未完成</tag>
          
          
            
@@ -68,9 +123,9 @@
         <title>无坚不摧：打造极大提高工作效率的装备库</title>
         <pubTime>2018-02-02T01:24:43.000Z</pubTime>
         
-        <tag>git</tag>
-         
         <tag>未完成</tag>
+         
+        <tag>git</tag>
          
         <tag>conemu</tag>
          
