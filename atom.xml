@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://wdd.js.org/"/>
-  <updated>2018-02-05T03:22:46.000Z</updated>
+  <updated>2018-02-05T03:25:17.000Z</updated>
   <id>https://wdd.js.org/</id>
   
   <author>
@@ -21,16 +21,28 @@
     <link href="https://wdd.js.org/vscode-commom-shortcuts.html"/>
     <id>https://wdd.js.org/vscode-commom-shortcuts.html</id>
     <published>2018-02-05T03:20:18.000Z</published>
-    <updated>2018-02-05T03:22:46.000Z</updated>
+    <updated>2018-02-05T03:25:17.000Z</updated>
     
-    <content type="html"><![CDATA[<pre><code>功能      |          键</code></pre><p>————– | ———————<br>多行选中       | alt+shift+鼠标拖动<br>打开terminal   | ctrl + `<br>行上下移动     | atlt + 上或下箭头<br>向下复制当前行 | shift alt + 下箭头<br>向上复制当前行 | shift alt + 上箭头<br>f1             | 打开命令面板<br>开关书签       | com + option + k<br>书签跳转       | com + option + j or l</p>]]></content>
+    <content type="html"><![CDATA[<table><thead><tr><th>功能</th><th>键</th></tr></thead><tbody><tr><td>多行选中</td><td>alt+shift+鼠标拖动</td></tr><tr><td>打开terminal</td><td>ctrl + `</td></tr><tr><td>行上下移动</td><td>atlt + 上或下箭头</td></tr><tr><td>向下复制当前行</td><td>shift alt + 下箭头</td></tr><tr><td>向上复制当前行</td><td>shift alt + 上箭头</td></tr><tr><td>f1</td><td>打开命令面板</td></tr><tr><td>开关书签</td><td>com + option + k</td></tr><tr><td>书签跳转</td><td>com + option + j or l</td></tr></tbody></table>]]></content>
     
     <summary type="html">
     
       
       
-        &lt;pre&gt;&lt;code&gt;功能      |          键
-&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;————– | ———————&lt;br&gt;多行选中       | alt+shift+鼠标拖动&lt;br&gt;打开terminal   | ctrl + `&lt;br&gt;行上下移动     | atl
+        &lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;功能&lt;/th&gt;
+&lt;th&gt;键&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;多行选中&lt;/td&gt;
+&lt;td&gt;alt+shift+鼠标拖动&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;打开terminal&lt;/td&gt;
       
     
     </summary>

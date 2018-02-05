@@ -3,7 +3,7 @@
   <entry>
     <title><![CDATA[vscode常用快捷键集锦]]></title>
     <url>%2Fvscode-commom-shortcuts.html</url>
-    <content type="text"><![CDATA[功能 | 键 ————– | ———————多行选中 | alt+shift+鼠标拖动打开terminal | ctrl + `行上下移动 | atlt + 上或下箭头向下复制当前行 | shift alt + 下箭头向上复制当前行 | shift alt + 上箭头f1 | 打开命令面板开关书签 | com + option + k书签跳转 | com + option + j or l]]></content>
+    <content type="text"><![CDATA[功能 键 多行选中 alt+shift+鼠标拖动 打开terminal ctrl + ` 行上下移动 atlt + 上或下箭头 向下复制当前行 shift alt + 下箭头 向上复制当前行 shift alt + 上箭头 f1 打开命令面板 开关书签 com + option + k 书签跳转 com + option + j or l]]></content>
       <tags>
         <tag>vscode</tag>
       </tags>
