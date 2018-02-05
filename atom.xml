@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://wdd.js.org/"/>
-  <updated>2018-02-02T08:29:07.000Z</updated>
+  <updated>2018-02-05T03:22:46.000Z</updated>
   <id>https://wdd.js.org/</id>
   
   <author>
@@ -15,6 +15,61 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>vscode常用快捷键集锦</title>
+    <link href="https://wdd.js.org/vscode-commom-shortcuts.html"/>
+    <id>https://wdd.js.org/vscode-commom-shortcuts.html</id>
+    <published>2018-02-05T03:20:18.000Z</published>
+    <updated>2018-02-05T03:22:46.000Z</updated>
+    
+    <content type="html"><![CDATA[<pre><code>功能      |          键</code></pre><p>————– | ———————<br>多行选中       | alt+shift+鼠标拖动<br>打开terminal   | ctrl + `<br>行上下移动     | atlt + 上或下箭头<br>向下复制当前行 | shift alt + 下箭头<br>向上复制当前行 | shift alt + 上箭头<br>f1             | 打开命令面板<br>开关书签       | com + option + k<br>书签跳转       | com + option + j or l</p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;pre&gt;&lt;code&gt;功能      |          键
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;————– | ———————&lt;br&gt;多行选中       | alt+shift+鼠标拖动&lt;br&gt;打开terminal   | ctrl + `&lt;br&gt;行上下移动     | atl
+      
+    
+    </summary>
+    
+    
+      <category term="vscode" scheme="https://wdd.js.org/tags/vscode/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Git Commit Message 格式与类型分类</title>
+    <link href="https://wdd.js.org/commit-type-summary.html"/>
+    <id>https://wdd.js.org/commit-type-summary.html</id>
+    <published>2018-02-02T08:33:17.000Z</published>
+    <updated>2018-02-05T03:12:41.000Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="缩写含义说明"><a href="#缩写含义说明" class="headerlink" title="缩写含义说明"></a>缩写含义说明</h1><table><thead><tr><th>类型</th><th>描述</th></tr></thead><tbody><tr><td>feat</td><td>新增feature</td></tr><tr><td>fix</td><td>修复bug</td></tr><tr><td>docs</td><td>仅仅修改了文档，比如README, CHANGELOG, CONTRIBUTE等等</td></tr><tr><td>style</td><td>仅仅修改了空格、格式缩进、都好等等，不改变代码逻辑</td></tr><tr><td>refactor</td><td>代码重构，没有加新功能或者修复bug</td></tr><tr><td>perf</td><td>优化相关，比如提升性能、体验</td></tr><tr><td>test</td><td>测试用例，包括单元测试、集成测试等</td></tr><tr><td>chore</td><td>改变构建流程、或者增加依赖库、工具等</td></tr><tr><td>revert</td><td>回滚到上一个版本</td></tr><tr><td>tips</td><td>增加一些提示信息，例如错误提示</td></tr></tbody></table><h1 id="格式示例"><a href="#格式示例" class="headerlink" title="格式示例"></a>格式示例</h1><p>格式： type [id] message</p><figure class="highlight nginx"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="attribute">git</span> commit -am <span class="string">"fix 2038 解决点击无反应的问题"</span></span><br></pre></td></tr></table></figure><h1 id="小技巧"><a href="#小技巧" class="headerlink" title="小技巧"></a>小技巧</h1><h2 id="使用单引号多行commit"><a href="#使用单引号多行commit" class="headerlink" title="使用单引号多行commit"></a>使用单引号多行commit</h2><p>注意： window下务必使用git bash。</p><figure class="highlight 1c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">git commit -am '</span><br><span class="line">fix <span class="number">2093</span> alsdfj laksd</span><br><span class="line">asdflka sdflkasdf '</span><br></pre></td></tr></table></figure><h1 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h1><ul><li><a href="https://github.com/wearehive/project-guidelines/blob/master/README-zh.md" target="_blank" rel="noopener">project-guidelines</a></li><li><a href="http://www.ruanyifeng.com/blog/2016/01/commit_message_change_log.html" target="_blank" rel="noopener">Commit message 和 Change log 编写指南</a></li><li><a href="https://github.com/commitizen/cz-cli" target="_blank" rel="noopener">cz-cli</a></li><li><a href="https://ivweb.io/topic/58ba702bdb35a9135d42f83d" target="_blank" rel="noopener">Git commit message和工作流规范</a></li></ul>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h1 id=&quot;缩写含义说明&quot;&gt;&lt;a href=&quot;#缩写含义说明&quot; class=&quot;headerlink&quot; title=&quot;缩写含义说明&quot;&gt;&lt;/a&gt;缩写含义说明&lt;/h1&gt;&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;类型&lt;/th&gt;
+&lt;th&gt;描述&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thea
+      
+    
+    </summary>
+    
+    
+      <category term="git" scheme="https://wdd.js.org/tags/git/"/>
+    
+      <category term="git-commit" scheme="https://wdd.js.org/tags/git-commit/"/>
+    
+  </entry>
   
   <entry>
     <title>读书笔记：浪潮之巅</title>
@@ -148,9 +203,9 @@
     </summary>
     
     
-      <category term="fork" scheme="https://wdd.js.org/tags/fork/"/>
-    
       <category term="git" scheme="https://wdd.js.org/tags/git/"/>
+    
+      <category term="fork" scheme="https://wdd.js.org/tags/fork/"/>
     
       <category term="合并上游分支" scheme="https://wdd.js.org/tags/%E5%90%88%E5%B9%B6%E4%B8%8A%E6%B8%B8%E5%88%86%E6%94%AF/"/>
     
@@ -488,54 +543,6 @@
     
     
       <category term="ssh" scheme="https://wdd.js.org/tags/ssh/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>组织在召唤：如何免费获取一个js.org的二级域名</title>
-    <link href="https://wdd.js.org/how-to-get-jsorg-sub-domain.html"/>
-    <id>https://wdd.js.org/how-to-get-jsorg-sub-domain.html</id>
-    <published>2018-01-29T10:08:03.000Z</published>
-    <updated>2018-01-29T11:19:17.000Z</updated>
-    
-    <content type="html"><![CDATA[<blockquote><p>之前我是使用wangduanduan.github.io作为我的博客地址，后来觉得麻烦，有把博客关了。最近有想去折腾折腾。<br>先看效果：<a href="https://wdd.js.org">wdd.js.org</a></p></blockquote><p>如果你不了解js.org可以看看我的这篇文章:<a href="https://segmentfault.com/a/1190000008342301" target="_blank" rel="noopener">一个值得所有前端开发者关注的网站js.org</a></p><p><img src="http://p3alsaatj.bkt.clouddn.com/20180129182103_Avcxhn_Jietu20180129-182047.jpeg" alt=""></p><h1 id="前提"><a href="#前提" class="headerlink" title="前提"></a>前提</h1><ul><li>已经有了github pages的一个博客，并且博客中有内容，没有内容会审核不通过的。我第一次申请域名，就是因为内容太少而审核不通过。</li></ul><h1 id="想好自己要什么域名？"><a href="#想好自己要什么域名？" class="headerlink" title="想好自己要什么域名？"></a>想好自己要什么域名？</h1><p>比如你想要一个：wdd.js.org的域名，你先在浏览器里访问这个地址，看看有没有人用过，如果已经有人用过，那么你就只能想点其他的域名了。</p><h1 id="fork-js-org的项目，添加自己的域名"><a href="#fork-js-org的项目，添加自己的域名" class="headerlink" title="fork js.org的项目，添加自己的域名"></a>fork js.org的项目，添加自己的域名</h1><p>1 fork <a href="https://github.com/js-org/dns.js.org" target="_blank" rel="noopener">https://github.com/js-org/dns.js.org</a><br>2 修改你fork后的仓库中的<code>cnames_active.js</code>文件，加上自己的一条域名，最好要按照字母顺序</p><p>如下图所示，我在第1100行加入。注意，不要在该行后加任何注释。<br><figure class="highlight 1c"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">"wdd"</span>: <span class="string">"wangduanduan.github.io"</span>,</span><br></pre></td></tr></table></figure></p><p><img src="http://p3alsaatj.bkt.clouddn.com/20180129182555_tx71OV_Jietu20180129-182542.jpeg" alt=""></p><p>3 commit</p><h1 id="加入CNAME文件"><a href="#加入CNAME文件" class="headerlink" title="加入CNAME文件"></a>加入CNAME文件</h1><p>我是用hexo和next主题作为博客的模板。其中我在<code>gh-pages</code>分支写博客，然后部署到<code>master</code>分支。</p><p>我在我的<code>gh-pages</code>分支的<code>source</code>目录下加入CNAME文件, 内容只有一行</p><figure class="highlight stylus"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">wdd<span class="selector-class">.js</span><span class="selector-class">.org</span></span><br></pre></td></tr></table></figure><p><img src="http://p3alsaatj.bkt.clouddn.com/20180129183216_aPl2ld_Jietu20180129-183209.jpeg" alt=""></p><p>将博客再次部署好，<code>如果CNAME生效的话，你已经无法从原来的地址访问：wangduanduan.github.io， 这个博客了。</code></p><h1 id="向js-org项目发起pull-request"><a href="#向js-org项目发起pull-request" class="headerlink" title="向js.org项目发起pull-request"></a>向js.org项目发起pull-request</h1><p>找到你fork后的项目，点击 <code>new pull request</code>, 向原来的项目发起请求。</p><p><img src="http://p3alsaatj.bkt.clouddn.com/20180129190011_xvkHec_Jietu20180129-185938.jpeg" alt=""></p><p>然后你可以在<code>js-org/dns.js.org</code>项目的pull requests看到你的请求，当这个请求被合并时，你就拥有了js.org的二级域名。</p><p><img src="http://p3alsaatj.bkt.clouddn.com/20180129190308_0cZZwM_Jietu20180129-190255.jpeg" alt=""></p><p><img src="http://p3alsaatj.bkt.clouddn.com/20180129190454_9BnL7F_Jietu20180129-190449.jpeg" alt=""></p>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;blockquote&gt;
-&lt;p&gt;之前我是使用wangduanduan.github.io作为我的博客地址，后来觉得麻烦，有把博客关了。最近有想去折腾折腾。&lt;br&gt;先看效果：&lt;a href=&quot;https://wdd.js.org&quot;&gt;wdd.js.org&lt;/a&gt;&lt;/p&gt;
-&lt;/bloc
-      
-    
-    </summary>
-    
-    
-      <category term="jsorg" scheme="https://wdd.js.org/tags/jsorg/"/>
-    
-      <category term="hexo" scheme="https://wdd.js.org/tags/hexo/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>不常用却很有妙用的事件及方法</title>
-    <link href="https://wdd.js.org/browser-events.html"/>
-    <id>https://wdd.js.org/browser-events.html</id>
-    <published>2018-01-29T06:15:25.000Z</published>
-    <updated>2018-01-29T06:15:59.000Z</updated>
-    
-    <content type="html"><![CDATA[<h1 id="visibilitychange事件"><a href="#visibilitychange事件" class="headerlink" title="visibilitychange事件"></a><a href="https://developer.mozilla.org/zh-CN/docs/Web/Events/visibilitychange" target="_blank" rel="noopener">visibilitychange事件</a></h1><p>触发条件：<code>浏览器标签页被隐藏或显示的时候会触发visibilitychange事件.</code></p><p>使用场景：<code>当标签页显示或者隐藏时，触发一些业务逻辑</code></p><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">document</span>.addEventListener(<span class="string">"visibilitychange"</span>, <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">  <span class="built_in">console</span>.log( <span class="built_in">document</span>.visibilityState );</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure><h1 id="storage事件"><a href="#storage事件" class="headerlink" title="storage事件"></a><a href="https://developer.mozilla.org/en-US/docs/Web/Events/storage" target="_blank" rel="noopener">storage事件</a></h1><p>触发条件：<code>使用localStorage or sessionStorage存储或者修改某个本地存储时</code></p><p>使用场景：<code>标签页间通信</code></p><figure class="highlight 1c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// AB页面同源</span></span><br><span class="line"><span class="comment">// 在A 页面</span></span><br><span class="line">window.addEventListener('storage', (e) =&gt; &#123;console.<span class="built_in">log</span>(e)&#125;)</span><br><span class="line"></span><br><span class="line"><span class="comment">// 在B 页面，向120打个电话</span></span><br><span class="line">localStorage.setItem('makeCall','120')</span><br><span class="line"></span><br><span class="line"><span class="comment">// 然后可以在A页面间有输出, 可以看出A页面 收到了B页面的通知</span></span><br><span class="line">...key: <span class="string">"makeCall"</span>, oldValue: <span class="string">"119"</span>, newValue: <span class="string">"120"</span>, ...</span><br></pre></td></tr></table></figure><h1 id="beforeunload事件"><a href="#beforeunload事件" class="headerlink" title="beforeunload事件"></a><a href="https://developer.mozilla.org/en-US/docs/Web/Events/beforeunload" target="_blank" rel="noopener">beforeunload事件</a></h1><p>触发条件：<code>当页面的资源将要卸载(及刷新或者关闭标签页前). 当页面依然可见，并且该事件可以被取消只时</code></p><p>使用场景：<code>关闭或者刷新页面时弹窗确认</code>，<code>关闭页面时向后端发送报告等</code></p><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">window</span>.addEventListener(<span class="string">"beforeunload"</span>, <span class="function"><span class="keyword">function</span> (<span class="params">e</span>) </span>&#123;</span><br><span class="line">  <span class="keyword">var</span> confirmationMessage = <span class="string">"\o/"</span>;</span><br><span class="line"></span><br><span class="line">  e.returnValue = confirmationMessage;     <span class="comment">// Gecko, Trident, Chrome 34+</span></span><br><span class="line">  <span class="keyword">return</span> confirmationMessage;              <span class="comment">// Gecko, WebKit, Chrome &lt;34</span></span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure><h1 id="navigator-sendBeacon"><a href="#navigator-sendBeacon" class="headerlink" title="navigator.sendBeacon"></a><a href="https://developer.mozilla.org/zh-CN/docs/Web/API/Navigator/sendBeacon" target="_blank" rel="noopener">navigator.sendBeacon</a></h1><p>这个方法主要用于满足 统计和诊断代码 的需要，这些代码通常尝试在卸载（unload）文档之前向web服务器发送数据。过早的发送数据可能导致错过收集数据的机会。然而， 对于开发者来说保证在文档卸载期间发送数据一直是一个困难。因为用户代理通常会忽略在卸载事件处理器中产生的异步 XMLHttpRequest 。</p><p>使用 sendBeacon() 方法，将会使用户代理在有机会时异步地向服务器发送数据，同时不会延迟页面的卸载或影响下一导航的载入性能。这就解决了提交分析数据时的所有的问题：使它可靠，异步并且不会影响下一页面的加载。此外，代码实际上还要比其他技术简单！</p><p><code>注意：该方法在IE和safari没有实现</code></p><p>使用场景：<code>发送崩溃报告</code></p><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">window</span>.addEventListener(<span class="string">'unload'</span>, logData, <span class="literal">false</span>);</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">logData</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">    navigator.sendBeacon(<span class="string">"/log"</span>, analyticsData);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;h1 id=&quot;visibilitychange事件&quot;&gt;&lt;a href=&quot;#visibilitychange事件&quot; class=&quot;headerlink&quot; title=&quot;visibilitychange事件&quot;&gt;&lt;/a&gt;&lt;a href=&quot;https://developer.mozil
-      
-    
-    </summary>
-    
     
   </entry>
   

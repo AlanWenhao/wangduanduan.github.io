@@ -4,6 +4,42 @@
 
     
   <url>
+    <loc>https://wdd.js.org/vscode-commom-shortcuts.html</loc>
+    <lastmod>2018-02-05T03:22:46.000Z</lastmod>
+    <data>
+        <display>
+        <title>vscode常用快捷键集锦</title>
+        <pubTime>2018-02-05T03:20:18.000Z</pubTime>
+        
+        <tag>vscode</tag>
+         
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>https://wdd.js.org/commit-type-summary.html</loc>
+    <lastmod>2018-02-05T03:12:41.000Z</lastmod>
+    <data>
+        <display>
+        <title>Git Commit Message 格式与类型分类</title>
+        <pubTime>2018-02-02T08:33:17.000Z</pubTime>
+        
+        <tag>git</tag>
+         
+        <tag>git-commit</tag>
+         
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>https://wdd.js.org/read-notes-on-top-of-tides.html</loc>
     <lastmod>2018-02-02T08:29:07.000Z</lastmod>
     <data>
@@ -97,9 +133,9 @@
         <title>git合并上游仓库即同步fork后的仓库</title>
         <pubTime>2018-01-31T09:16:44.000Z</pubTime>
         
-        <tag>fork</tag>
-         
         <tag>git</tag>
+         
+        <tag>fork</tag>
          
         <tag>合并上游分支</tag>
          
@@ -451,11 +487,11 @@
         <title>如何在vscode中用standard style 风格去验证 vue文件</title>
         <pubTime>2018-01-29T06:02:53.000Z</pubTime>
         
+        <tag>vscode</tag>
+         
         <tag>vue</tag>
          
         <tag>standardjs</tag>
-         
-        <tag>vscode</tag>
          
          
            

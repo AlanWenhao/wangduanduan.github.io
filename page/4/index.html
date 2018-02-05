@@ -69,7 +69,7 @@
 
 
 
-  <meta name="keywords" content="js," />
+  <meta name="keywords" content="Hexo, NexT" />
 
 
 
@@ -82,18 +82,17 @@
 
 
 
-<meta name="description" content="可维护性 很多时候，我们不是从零开始，开发新代码。而是去维护别人的代码，以他人的工作成果为基础。确保自己的代码可维护，是赠人玫瑰，手留余香的好事。一方面让别人看的舒服，另一方面也防止自己长时间没看过自己的代码，自己都难以理解。  什么是可维护代码可维护的代码的一些特征  可理解易于理解代码的用途 可适应数据的变化，不需要完全重写代码 可扩展要考虑未来对核心功能的扩展 可调试给出足够的信息，让调试的">
-<meta name="keywords" content="js">
-<meta property="og:type" content="article">
-<meta property="og:title" content="我的JavaScript最佳实践">
-<meta property="og:url" content="https://wdd.js.org/hello-world.html">
+<meta name="description" content="前端，后端，炒菜，摄影，读书，收集工具">
+<meta name="keywords" content="王端端, 洞香春, wellClient">
+<meta property="og:type" content="website">
+<meta property="og:title" content="洞香春">
+<meta property="og:url" content="https://wdd.js.org/page/4/index.html">
 <meta property="og:site_name" content="洞香春">
-<meta property="og:description" content="可维护性 很多时候，我们不是从零开始，开发新代码。而是去维护别人的代码，以他人的工作成果为基础。确保自己的代码可维护，是赠人玫瑰，手留余香的好事。一方面让别人看的舒服，另一方面也防止自己长时间没看过自己的代码，自己都难以理解。  什么是可维护代码可维护的代码的一些特征  可理解易于理解代码的用途 可适应数据的变化，不需要完全重写代码 可扩展要考虑未来对核心功能的扩展 可调试给出足够的信息，让调试的">
+<meta property="og:description" content="前端，后端，炒菜，摄影，读书，收集工具">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-01-29T06:09:26.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="我的JavaScript最佳实践">
-<meta name="twitter:description" content="可维护性 很多时候，我们不是从零开始，开发新代码。而是去维护别人的代码，以他人的工作成果为基础。确保自己的代码可维护，是赠人玫瑰，手留余香的好事。一方面让别人看的舒服，另一方面也防止自己长时间没看过自己的代码，自己都难以理解。  什么是可维护代码可维护的代码的一些特征  可理解易于理解代码的用途 可适应数据的变化，不需要完全重写代码 可扩展要考虑未来对核心功能的扩展 可调试给出足够的信息，让调试的">
+<meta name="twitter:title" content="洞香春">
+<meta name="twitter:description" content="前端，后端，炒菜，摄影，读书，收集工具">
 
 
 
@@ -123,13 +122,13 @@
 
 
 
-  <link rel="canonical" href="https://wdd.js.org/hello-world.html"/>
+  <link rel="canonical" href="https://wdd.js.org/page/4/"/>
 
 
 
 
 
-  <title>我的JavaScript最佳实践 | 洞香春</title>
+  <title>洞香春</title>
   
 
 
@@ -158,7 +157,8 @@
     
   
 
-  <div class="container sidebar-position-left page-post-detail">
+  <div class="container sidebar-position-left 
+  page-home">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -285,9 +285,9 @@
         <div class="content-wrap">
           <div id="content" class="content">
             
-
-  <div id="posts" class="posts-expand">
+  <section id="posts" class="posts-expand">
     
+      
 
   
 
@@ -317,7 +317,9 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">我的JavaScript最佳实践</h1>
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/hello-world.html" itemprop="url">我的JavaScript最佳实践</a></h1>
         
 
         <div class="post-meta">
@@ -348,11 +350,6 @@
           
           
 
-          
-            <span class="post-meta-divider">|</span>
-            <span class="page-pv"><i class="fa fa-file-o"></i>
-            <span class="busuanzi-value" id="busuanzi_value_page_pv" ></span>
-            </span>
           
 
           
@@ -403,7 +400,9 @@
       
 
       
-        <h1 id="可维护性"><a href="#可维护性" class="headerlink" title="可维护性"></a>可维护性</h1><blockquote>
+        
+          
+            <h1 id="可维护性"><a href="#可维护性" class="headerlink" title="可维护性"></a>可维护性</h1><blockquote>
 <p>很多时候，我们不是从零开始，开发新代码。而是去维护别人的代码，以他人的工作成果为基础。确保自己的代码可维护，是赠人玫瑰，手留余香的好事。一方面让别人看的舒服，另一方面也防止自己长时间没看过自己的代码，自己都难以理解。</p>
 </blockquote>
 <h2 id="什么是可维护代码"><a href="#什么是可维护代码" class="headerlink" title="什么是可维护代码"></a>什么是可维护代码</h2><p>可维护的代码的一些特征</p>
@@ -846,6 +845,8 @@
 <li><a href="https://github.com/fex-team/styleguide" target="_blank" rel="noopener">百度前端研发部 文档与源码编写风格</a></li>
 </ul>
 
+          
+        
       
     </div>
     
@@ -857,64 +858,17 @@
     
 
     
-      <div>
-        <ul class="post-copyright">
-  <li class="post-copyright-author">
-    <strong>本文作者：</strong>
-    王端端
-  </li>
-  <li class="post-copyright-link">
-    <strong>本文标题：</strong>
-    <a href="https://wdd.js.org/hello-world.html" title="我的JavaScript最佳实践">我的JavaScript最佳实践</a>
-  </li>
-  <li class="post-copyright-link">
-    <strong>本文链接：</strong>
-    <a href="https://wdd.js.org/hello-world.html" title="我的JavaScript最佳实践">https://wdd.js.org/hello-world.html</a>
-  </li>
-  <li class="post-copyright-date">
-      <strong>发布时间：</strong>2018年1月29日 - 09时01分
-  </li>  
-  <li class="post-copyright-license">
-    <strong>版权声明： </strong>
-    本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/3.0/" rel="external nofollow" target="_blank">CC BY-NC-SA 3.0</a> 许可协议。转载请注明出处！
-  </li>
-</ul>
-
-      </div>
-    
 
     <footer class="post-footer">
       
-        <div class="post-tags">
-          
-            <a href="/tags/js/" rel="tag"># js</a>
-          
-        </div>
+
+      
+
       
 
       
       
-      
-
-      
-        <div class="post-nav">
-          <div class="post-nav-next post-nav-item">
-            
-          </div>
-
-          <span class="post-nav-divider"></span>
-
-          <div class="post-nav-prev post-nav-item">
-            
-              <a href="/jquery-deferred.html" rel="prev" title="熟练使用使用jQuery Promise (Deferred)">
-                熟练使用使用jQuery Promise (Deferred) <i class="fa fa-chevron-right"></i>
-              </a>
-            
-          </div>
-        </div>
-      
-
-      
+        <div class="post-eof"></div>
       
     </footer>
   </div>
@@ -924,11 +878,14 @@
   </article>
 
 
+    
+  </section>
 
-    <div class="post-spread">
-      
-    </div>
-  </div>
+  
+  <nav class="pagination">
+    <a class="extend prev" rel="prev" href="/page/3/"><i class="fa fa-angle-left"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/3/">3</a><span class="page-number current">4</span>
+  </nav>
+
 
 
           </div>
@@ -936,15 +893,6 @@
 
 
           
-
-  
-    <div class="comments" id="comments">
-      <div id="lv-container" data-id="city" data-uid="MTAyMC8zMzY3OC8xMDIzMw=="></div>
-    </div>
-
-  
-
-
 
         </div>
         
@@ -965,17 +913,8 @@
       
 
       
-        <ul class="sidebar-nav motion-element">
-          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
-            文章目录
-          </li>
-          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
-            站点概览
-          </li>
-        </ul>
-      
 
-      <section class="site-overview-wrap sidebar-panel">
+      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -1059,22 +998,6 @@
         </div>
       </section>
 
-      
-      <!--noindex-->
-        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
-          <div class="post-toc">
-
-            
-              
-            
-
-            
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#可维护性"><span class="nav-number">1.</span> <span class="nav-text">可维护性</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#什么是可维护代码"><span class="nav-number">1.1.</span> <span class="nav-text">什么是可维护代码</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#代码约定"><span class="nav-number">1.2.</span> <span class="nav-text">代码约定</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#可读性"><span class="nav-number">1.2.1.</span> <span class="nav-text">可读性</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#缩进："><span class="nav-number">1.2.1.1.</span> <span class="nav-text">缩进：</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#注释：哪些地方需要注释？"><span class="nav-number">1.2.1.2.</span> <span class="nav-text">注释：哪些地方需要注释？</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#空白行：哪些地方需要空白行？"><span class="nav-number">1.2.1.3.</span> <span class="nav-text">空白行：哪些地方需要空白行？</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#变量名和函数名"><span class="nav-number">1.2.2.</span> <span class="nav-text">变量名和函数名</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#变量名"><span class="nav-number">1.2.2.1.</span> <span class="nav-text">变量名</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#函数名"><span class="nav-number">1.2.2.2.</span> <span class="nav-text">函数名</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#一些与函数名搭配的常用动词"><span class="nav-number">1.2.2.3.</span> <span class="nav-text">一些与函数名搭配的常用动词</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#接口常用的动词"><span class="nav-number">1.2.2.4.</span> <span class="nav-text">接口常用的动词</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#学会使用单复数命名函数"><span class="nav-number">1.2.2.5.</span> <span class="nav-text">学会使用单复数命名函数</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#常量"><span class="nav-number">1.2.2.6.</span> <span class="nav-text">常量</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#构造函数"><span class="nav-number">1.2.2.7.</span> <span class="nav-text">构造函数</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#底层http请求接口函数"><span class="nav-number">1.2.2.8.</span> <span class="nav-text">底层http请求接口函数</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#文件名"><span class="nav-number">1.2.3.</span> <span class="nav-text">文件名</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#文件归类"><span class="nav-number">1.2.4.</span> <span class="nav-text">文件归类</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#千万别用alert"><span class="nav-number">1.2.5.</span> <span class="nav-text">千万别用alert</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#松散耦合"><span class="nav-number">1.3.</span> <span class="nav-text">松散耦合</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#将应用逻辑和事件处理程序的解耦"><span class="nav-number">1.3.1.</span> <span class="nav-text">将应用逻辑和事件处理程序的解耦</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#松散解耦规则"><span class="nav-number">1.3.2.</span> <span class="nav-text">松散解耦规则</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#将异步请求和数据处理解耦"><span class="nav-number">1.3.3.</span> <span class="nav-text">将异步请求和数据处理解耦</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#不要将某个变量写死在函数中，尽量使用参数传递进来"><span class="nav-number">1.3.4.</span> <span class="nav-text">不要将某个变量写死在函数中，尽量使用参数传递进来</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#编程实践"><span class="nav-number">1.4.</span> <span class="nav-text">编程实践</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#尊总对象所有权"><span class="nav-number">1.4.1.</span> <span class="nav-text">尊总对象所有权</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#避免全局变量"><span class="nav-number">1.4.2.</span> <span class="nav-text">避免全局变量</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#避免与null进行比较"><span class="nav-number">1.4.3.</span> <span class="nav-text">避免与null进行比较</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#与null进行比较的代码，可以用以下技术进行替换"><span class="nav-number">1.4.3.1.</span> <span class="nav-text">与null进行比较的代码，可以用以下技术进行替换</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#从代码中分离配置文件"><span class="nav-number">1.4.4.</span> <span class="nav-text">从代码中分离配置文件</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#所以第一步是要区分，哪些代码应该写成配置文件的形式？"><span class="nav-number">1.4.4.1.</span> <span class="nav-text">所以第一步是要区分，哪些代码应该写成配置文件的形式？</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#一些例子"><span class="nav-number">1.4.4.2.</span> <span class="nav-text">一些例子</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#调试信息开关"><span class="nav-number">1.4.5.</span> <span class="nav-text">调试信息开关</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#使用jQuery-Promise"><span class="nav-number">1.4.6.</span> <span class="nav-text">使用jQuery Promise</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#显示错误提醒，不要给后端接口背锅"><span class="nav-number">1.4.7.</span> <span class="nav-text">显示错误提醒，不要给后端接口背锅</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#REST化接口请求"><span class="nav-number">1.4.8.</span> <span class="nav-text">REST化接口请求</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#性能"><span class="nav-number">2.</span> <span class="nav-text">性能</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#注意作用域"><span class="nav-number">2.1.</span> <span class="nav-text">注意作用域</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#选择正确的方法"><span class="nav-number">2.2.</span> <span class="nav-text">选择正确的方法</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#最小化语句数"><span class="nav-number">2.3.</span> <span class="nav-text">最小化语句数</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#多个变量声明-废弃"><span class="nav-number">2.3.1.</span> <span class="nav-text">多个变量声明(废弃)</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#插入迭代值"><span class="nav-number">2.3.2.</span> <span class="nav-text">插入迭代值</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#使用数组和对象字面量"><span class="nav-number">2.3.3.</span> <span class="nav-text">使用数组和对象字面量</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#优化DOM交互"><span class="nav-number">2.4.</span> <span class="nav-text">优化DOM交互</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Dom缓存技术"><span class="nav-number">2.4.1.</span> <span class="nav-text">Dom缓存技术</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#避免过长的属性查找，设置一个快捷方式"><span class="nav-number">2.5.</span> <span class="nav-text">避免过长的属性查找，设置一个快捷方式</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#快捷方式"><span class="nav-number">3.</span> <span class="nav-text">快捷方式</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#字符串转数字"><span class="nav-number">3.1.</span> <span class="nav-text">字符串转数字</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#数字转字符"><span class="nav-number">3.2.</span> <span class="nav-text">数字转字符</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#字符串取整"><span class="nav-number">3.3.</span> <span class="nav-text">字符串取整</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#推荐深度阅读"><span class="nav-number">4.</span> <span class="nav-text">推荐深度阅读</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#关于技术"><span class="nav-number">4.1.</span> <span class="nav-text">关于技术</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#技术之外"><span class="nav-number">4.2.</span> <span class="nav-text">技术之外</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#参考文献"><span class="nav-number">5.</span> <span class="nav-text">参考文献</span></a></li></ol></div>
-            
-
-          </div>
-        </section>
-      <!--/noindex-->
       
 
       
@@ -1228,10 +1151,6 @@
   
 
   
-  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
-<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
-
-
 
   
 
@@ -1260,17 +1179,6 @@
 
 
 
-  
-    <script type="text/javascript">
-      (function(d, s) {
-        var j, e = d.getElementsByTagName(s)[0];
-        if (typeof LivereTower === 'function') { return; }
-        j = d.createElement(s);
-        j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
-        j.async = true;
-        e.parentNode.insertBefore(j, e);
-      })(document, 'script');
-    </script>
   
 
 
