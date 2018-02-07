@@ -69,7 +69,7 @@
 
 
 
-  <meta name="keywords" content="Hexo, NexT" />
+  <meta name="keywords" content="nodejs," />
 
 
 
@@ -82,17 +82,22 @@
 
 
 
-<meta name="description" content="前端，后端，炒菜，摄影，读书，收集工具">
-<meta name="keywords" content="王端端, 洞香春, wellClient">
-<meta property="og:type" content="website">
-<meta property="og:title" content="洞香春">
-<meta property="og:url" content="https://wdd.js.org/tags/经济学/index.html">
+<meta name="description" content="英文好的，直接看原文  https://blog.hospodarets.com/nodejs-debugging-in-chrome-devtools  1 要求 Node.js 6.3+ Chrome 55+  2 操作步骤 1 打开连接 chrome://flags/#enable-devtools-experiments 2 开启开发者工具实验性功能  3 重启浏览器 4 打开 DevTo">
+<meta name="keywords" content="nodejs">
+<meta property="og:type" content="article">
+<meta property="og:title" content="直接在Chrome DevTools调试Node.js">
+<meta property="og:url" content="https://wdd.js.org/debug-nodejs-in-chrome-devtool.html">
 <meta property="og:site_name" content="洞香春">
-<meta property="og:description" content="前端，后端，炒菜，摄影，读书，收集工具">
+<meta property="og:description" content="英文好的，直接看原文  https://blog.hospodarets.com/nodejs-debugging-in-chrome-devtools  1 要求 Node.js 6.3+ Chrome 55+  2 操作步骤 1 打开连接 chrome://flags/#enable-devtools-experiments 2 开启开发者工具实验性功能  3 重启浏览器 4 打开 DevTo">
 <meta property="og:locale" content="zh-Hans">
+<meta property="og:image" content="http://p3alsaatj.bkt.clouddn.com/20180207141627_9HT0nS_Screenshot.jpeg">
+<meta property="og:image" content="http://p3alsaatj.bkt.clouddn.com/20180207141636_hIfIyG_Screenshot.jpeg">
+<meta property="og:image" content="http://p3alsaatj.bkt.clouddn.com/20180207141649_ArMyV7_Screenshot.jpeg">
+<meta property="og:updated_time" content="2018-02-07T06:18:13.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="洞香春">
-<meta name="twitter:description" content="前端，后端，炒菜，摄影，读书，收集工具">
+<meta name="twitter:title" content="直接在Chrome DevTools调试Node.js">
+<meta name="twitter:description" content="英文好的，直接看原文  https://blog.hospodarets.com/nodejs-debugging-in-chrome-devtools  1 要求 Node.js 6.3+ Chrome 55+  2 操作步骤 1 打开连接 chrome://flags/#enable-devtools-experiments 2 开启开发者工具实验性功能  3 重启浏览器 4 打开 DevTo">
+<meta name="twitter:image" content="http://p3alsaatj.bkt.clouddn.com/20180207141627_9HT0nS_Screenshot.jpeg">
 
 
 
@@ -122,13 +127,13 @@
 
 
 
-  <link rel="canonical" href="https://wdd.js.org/tags/经济学/"/>
+  <link rel="canonical" href="https://wdd.js.org/debug-nodejs-in-chrome-devtool.html"/>
 
 
 
 
 
-  <title>标签: 经济学 | 洞香春</title>
+  <title>直接在Chrome DevTools调试Node.js | 洞香春</title>
   
 
 
@@ -157,7 +162,7 @@
     
   
 
-  <div class="container sidebar-position-left ">
+  <div class="container sidebar-position-left page-post-detail">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -285,54 +290,227 @@
           <div id="content" class="content">
             
 
-  
-  
-  
-  <div class="post-block tag">
+  <div id="posts" class="posts-expand">
+    
 
-    <div id="posts" class="posts-collapse">
-      <div class="collection-title">
-        <h1>经济学<small>标签</small>
-        </h1>
-      </div>
+  
 
-      
-        
+  
+  
+  
 
   <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://wdd.js.org/debug-nodejs-in-chrome-devtool.html">
 
-      <h2 class="post-title">
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="王端端">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="http://p3alsaatj.bkt.clouddn.com/20180129093544_I5Jscb_IMG_1402.jpeg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="洞香春">
+    </span>
+
+    
+      <header class="post-header">
+
         
-            <a class="post-title-link" href="/how-free-server-make-money.html" itemprop="url">
-              
-                <span itemprop="name">免费服务的盈利模式</span>
-              
-            </a>
         
-      </h2>
+          <h1 class="post-title" itemprop="name headline">直接在Chrome DevTools调试Node.js</h1>
+        
 
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2018-01-29T21:58:58+08:00"
-              content="2018-01-29" >
-          01-29
-        </time>
-      </div>
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-02-07T14:15:43+08:00">
+                2018-02-07
+              </time>
+            
 
-    </header>
-  </article>
+            
 
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+            <span class="post-meta-divider">|</span>
+            <span class="page-pv"><i class="fa fa-file-o"></i>
+            <span class="busuanzi-value" id="busuanzi_value_page_pv" ></span>
+            </span>
+          
+
+          
+            <div class="post-wordcount">
+              
+                
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">字数统计&#58;</span>
+                
+                <span title="字数统计">
+                  220 字
+                </span>
+              
+
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">阅读时长 &asymp;</span>
+                
+                <span title="阅读时长">
+                  1 分钟
+                </span>
+              
+            </div>
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <p>英文好的，直接看原文</p>
+<blockquote>
+<p><a href="https://blog.hospodarets.com/nodejs-debugging-in-chrome-devtools" target="_blank" rel="noopener">https://blog.hospodarets.com/nodejs-debugging-in-chrome-devtools</a></p>
+</blockquote>
+<h1 id="1-要求"><a href="#1-要求" class="headerlink" title="1 要求"></a>1 要求</h1><ul>
+<li>Node.js 6.3+</li>
+<li>Chrome 55+</li>
+</ul>
+<h1 id="2-操作步骤"><a href="#2-操作步骤" class="headerlink" title="2 操作步骤"></a>2 操作步骤</h1><ul>
+<li>1 打开连接 <code>chrome://flags/#enable-devtools-experiments</code></li>
+<li>2 开启<code>开发者工具实验性功能</code> </li>
+<li>3 重启浏览器</li>
+<li>4 打开 DevTools Setting -&gt; Experiments tab</li>
+<li>5 按6次shift后，隐藏的功能会出现，勾选”Node debugging”</li>
+</ul>
+<p><img src="http://p3alsaatj.bkt.clouddn.com/20180207141627_9HT0nS_Screenshot.jpeg" alt=""></p>
+<p><img src="http://p3alsaatj.bkt.clouddn.com/20180207141636_hIfIyG_Screenshot.jpeg" alt=""></p>
+<h1 id="3-运行程序"><a href="#3-运行程序" class="headerlink" title="3 运行程序"></a>3 运行程序</h1><p>必须要有 <code>--inspect</code><br><figure class="highlight vhdl"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">&gt; node <span class="comment">--inspect www</span></span><br><span class="line">Debugger listening <span class="keyword">on</span> <span class="keyword">port</span> <span class="number">9229</span>.</span><br><span class="line"><span class="literal">Warning</span>: This <span class="keyword">is</span> an experimental feature <span class="keyword">and</span> could change at any <span class="built_in">time</span>.</span><br><span class="line"><span class="keyword">To</span> start debugging, <span class="keyword">open</span> the following URL <span class="keyword">in</span> Chrome:</span><br><span class="line">    chrome-devtools://devtools/remote/serve_file/@<span class="number">60</span>cd6e859b9f557d2312f5bf532f6aec5f284980/inspector.html?experiments=<span class="literal">true</span>&amp;v8only=<span class="literal">true</span>&amp;ws=localhost:<span class="number">9229</span>/<span class="number">78</span>a884f4-<span class="number">8</span>c2e-<span class="number">459e-93</span>f7-e1cbe87cf5cf</span><br></pre></td></tr></table></figure></p>
+<p>将这个地址粘贴到谷歌浏览器：<code>chrome-devtools://devtools/remote/serve_file/@60cd6e859b9f557d2312f5bf532f6aec5f284980/inspector.html?experiments=true&amp;v8only=true&amp;ws=localhost:9229/78a884f4-8c2e-459e-93f7-e1cbe87cf5cf</code></p>
+<p>程序后端输出的日志也回输出到谷歌浏览器的console里面，同时也可以在Sources里进行断点调试了。<br><img src="http://p3alsaatj.bkt.clouddn.com/20180207141649_ArMyV7_Screenshot.jpeg" alt=""></p>
 
       
     </div>
+    
+    
+    
 
+    
+
+    
+
+    
+      <div>
+        <ul class="post-copyright">
+  <li class="post-copyright-author">
+    <strong>本文作者：</strong>
+    王端端
+  </li>
+  <li class="post-copyright-link">
+    <strong>本文标题：</strong>
+    <a href="https://wdd.js.org/debug-nodejs-in-chrome-devtool.html" title="直接在Chrome DevTools调试Node.js">直接在Chrome DevTools调试Node.js</a>
+  </li>
+  <li class="post-copyright-link">
+    <strong>本文链接：</strong>
+    <a href="https://wdd.js.org/debug-nodejs-in-chrome-devtool.html" title="直接在Chrome DevTools调试Node.js">https://wdd.js.org/debug-nodejs-in-chrome-devtool.html</a>
+  </li>
+  <li class="post-copyright-date">
+      <strong>发布时间：</strong>2018年2月7日 - 14时02分
+  </li>  
+  <li class="post-copyright-license">
+    <strong>版权声明： </strong>
+    本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/3.0/" rel="external nofollow" target="_blank">CC BY-NC-SA 3.0</a> 许可协议。转载请注明出处！
+  </li>
+</ul>
+
+      </div>
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/nodejs/" rel="tag"># nodejs</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/top-11-javascript-libraries-are-worth-your-attention.html" rel="next" title="12个值得关注的顶级JS库">
+                <i class="fa fa-chevron-left"></i> 12个值得关注的顶级JS库
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
   </div>
   
   
   
+  </article>
 
-  
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
 
 
           </div>
@@ -340,6 +518,15 @@
 
 
           
+
+  
+    <div class="comments" id="comments">
+      <div id="lv-container" data-id="city" data-uid="MTAyMC8zMzY3OC8xMDIzMw=="></div>
+    </div>
+
+  
+
+
 
         </div>
         
@@ -360,8 +547,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -445,6 +641,22 @@
         </div>
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#1-要求"><span class="nav-number">1.</span> <span class="nav-text">1 要求</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#2-操作步骤"><span class="nav-number">2.</span> <span class="nav-text">2 操作步骤</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#3-运行程序"><span class="nav-number">3.</span> <span class="nav-text">3 运行程序</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
@@ -598,6 +810,10 @@
   
 
   
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
 
   
 
@@ -626,6 +842,17 @@
 
 
 
+  
+    <script type="text/javascript">
+      (function(d, s) {
+        var j, e = d.getElementsByTagName(s)[0];
+        if (typeof LivereTower === 'function') { return; }
+        j = d.createElement(s);
+        j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
+        j.async = true;
+        e.parentNode.insertBefore(j, e);
+      })(document, 'script');
+    </script>
   
 
 

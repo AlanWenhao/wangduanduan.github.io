@@ -300,6 +300,176 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://wdd.js.org/debug-nodejs-in-chrome-devtool.html">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="王端端">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="http://p3alsaatj.bkt.clouddn.com/20180129093544_I5Jscb_IMG_1402.jpeg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="洞香春">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/debug-nodejs-in-chrome-devtool.html" itemprop="url">直接在Chrome DevTools调试Node.js</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-02-07T14:15:43+08:00">
+                2018-02-07
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+            <div class="post-wordcount">
+              
+                
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">字数统计&#58;</span>
+                
+                <span title="字数统计">
+                  220 字
+                </span>
+              
+
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">阅读时长 &asymp;</span>
+                
+                <span title="阅读时长">
+                  1 分钟
+                </span>
+              
+            </div>
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p>英文好的，直接看原文</p>
+<blockquote>
+<p><a href="https://blog.hospodarets.com/nodejs-debugging-in-chrome-devtools" target="_blank" rel="noopener">https://blog.hospodarets.com/nodejs-debugging-in-chrome-devtools</a></p>
+</blockquote>
+<h1 id="1-要求"><a href="#1-要求" class="headerlink" title="1 要求"></a>1 要求</h1><ul>
+<li>Node.js 6.3+</li>
+<li>Chrome 55+</li>
+</ul>
+<h1 id="2-操作步骤"><a href="#2-操作步骤" class="headerlink" title="2 操作步骤"></a>2 操作步骤</h1><ul>
+<li>1 打开连接 <code>chrome://flags/#enable-devtools-experiments</code></li>
+<li>2 开启<code>开发者工具实验性功能</code> </li>
+<li>3 重启浏览器</li>
+<li>4 打开 DevTools Setting -&gt; Experiments tab</li>
+<li>5 按6次shift后，隐藏的功能会出现，勾选”Node debugging”</li>
+</ul>
+<p><img src="http://p3alsaatj.bkt.clouddn.com/20180207141627_9HT0nS_Screenshot.jpeg" alt=""></p>
+<p><img src="http://p3alsaatj.bkt.clouddn.com/20180207141636_hIfIyG_Screenshot.jpeg" alt=""></p>
+<h1 id="3-运行程序"><a href="#3-运行程序" class="headerlink" title="3 运行程序"></a>3 运行程序</h1><p>必须要有 <code>--inspect</code><br><figure class="highlight vhdl"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">&gt; node <span class="comment">--inspect www</span></span><br><span class="line">Debugger listening <span class="keyword">on</span> <span class="keyword">port</span> <span class="number">9229</span>.</span><br><span class="line"><span class="literal">Warning</span>: This <span class="keyword">is</span> an experimental feature <span class="keyword">and</span> could change at any <span class="built_in">time</span>.</span><br><span class="line"><span class="keyword">To</span> start debugging, <span class="keyword">open</span> the following URL <span class="keyword">in</span> Chrome:</span><br><span class="line">    chrome-devtools://devtools/remote/serve_file/@<span class="number">60</span>cd6e859b9f557d2312f5bf532f6aec5f284980/inspector.html?experiments=<span class="literal">true</span>&amp;v8only=<span class="literal">true</span>&amp;ws=localhost:<span class="number">9229</span>/<span class="number">78</span>a884f4-<span class="number">8</span>c2e-<span class="number">459e-93</span>f7-e1cbe87cf5cf</span><br></pre></td></tr></table></figure></p>
+<p>将这个地址粘贴到谷歌浏览器：<code>chrome-devtools://devtools/remote/serve_file/@60cd6e859b9f557d2312f5bf532f6aec5f284980/inspector.html?experiments=true&amp;v8only=true&amp;ws=localhost:9229/78a884f4-8c2e-459e-93f7-e1cbe87cf5cf</code></p>
+<p>程序后端输出的日志也回输出到谷歌浏览器的console里面，同时也可以在Sources里进行断点调试了。<br><img src="http://p3alsaatj.bkt.clouddn.com/20180207141649_ArMyV7_Screenshot.jpeg" alt=""></p>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="https://wdd.js.org/top-11-javascript-libraries-are-worth-your-attention.html">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -1877,179 +2047,6 @@
 
 
     
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://wdd.js.org/js-high-skills.html">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="王端端">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="http://p3alsaatj.bkt.clouddn.com/20180129093544_I5Jscb_IMG_1402.jpeg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="洞香春">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/js-high-skills.html" itemprop="url">JavaScript 高级技巧</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-02-07T10:14:56+08:00">
-                2018-02-07
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-            <div class="post-wordcount">
-              
-                
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-file-word-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">字数统计&#58;</span>
-                
-                <span title="字数统计">
-                  1,006 字
-                </span>
-              
-
-              
-                <span class="post-meta-divider">|</span>
-              
-
-              
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-clock-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">阅读时长 &asymp;</span>
-                
-                <span title="阅读时长">
-                  5 分钟
-                </span>
-              
-            </div>
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <h2 id="安全类型检测"><a href="#安全类型检测" class="headerlink" title="安全类型检测"></a>安全类型检测</h2><ul>
-<li>javascript内置类型检测并不可靠</li>
-<li>safari某些版本（&lt;4）typeof正则表达式返回为function</li>
-</ul>
-<p>建议使用Object.prototype.toString.call()方法检测数据类型<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">isArray</span>(<span class="params">value</span>)</span>&#123;</span><br><span class="line">    <span class="keyword">return</span> <span class="built_in">Object</span>.prototype.toString.call(value) === <span class="string">"[object Array]"</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">isFunction</span>(<span class="params">value</span>)</span>&#123;</span><br><span class="line">    <span class="keyword">return</span> <span class="built_in">Object</span>.prototype.toString.call(value) === <span class="string">"[object Function]"</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">isRegExp</span>(<span class="params">value</span>)</span>&#123;</span><br><span class="line">    <span class="keyword">return</span> <span class="built_in">Object</span>.prototype.toString.call(value) === <span class="string">"[object RegExp]"</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">isNativeJSON</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">    <span class="keyword">return</span> <span class="built_in">window</span>.JSON &amp;&amp; <span class="built_in">Object</span>.prototype.toString.call(<span class="built_in">JSON</span>) === <span class="string">"[object JSON]"</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
-<p><code>对于ie中一COM对象形式实现的任何函数，isFunction都返回false，因为他们并非原生的javascript函数。</code></p>
-<p><strong>在web开发中，能够区分原生与非原生的对象非常重要。只有这样才能确切知道某个对象是否有哪些功能</strong></p>
-<p>以上所有的正确性的前提是：Object.prototype.toString没有被修改过</p>
-<h2 id="作用域安全的构造函数"><a href="#作用域安全的构造函数" class="headerlink" title="作用域安全的构造函数"></a>作用域安全的构造函数</h2><figure class="highlight actionscript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">Person</span><span class="params">(name)</span></span>&#123;</span><br><span class="line">    <span class="keyword">this</span>.name = name;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">//使用new来创建一个对象</span></span><br><span class="line"><span class="keyword">var</span> one = <span class="keyword">new</span> Person(<span class="string">'wdd'</span>);</span><br><span class="line"></span><br><span class="line"><span class="comment">//直接调用构造函数</span></span><br><span class="line">Person();</span><br></pre></td></tr></table></figure>
-<p>由于this是运行时分配的，如果你使用new来操作，this指向的就是one。如果直接调用构造函数，那么this会指向全局对象window,然后你的代码就会覆盖window的原生name。如果有其他地方使用过window.name, 那么你的函数将会埋下一个深藏的bug。</p>
-<p>==那么，如何才能创建一个作用域安全的构造函数？==<br>方法1<br><figure class="highlight actionscript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">Person</span><span class="params">(name)</span></span>&#123;</span><br><span class="line">    <span class="keyword">if</span>(<span class="keyword">this</span> <span class="keyword">instanceof</span> Person)&#123;</span><br><span class="line">        <span class="keyword">this</span>.name = name;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">else</span>&#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="keyword">new</span> Person(name);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
-<h1 id="惰性载入函数"><a href="#惰性载入函数" class="headerlink" title="惰性载入函数"></a>惰性载入函数</h1><p>假设有一个方法X，在A类浏览器里叫A,在b类浏览器里叫B,有些浏览器并没有这个方法,你想实现一个跨浏览器的方法。</p>
-<p>惰性载入函数的思想是：<code>在函数内部改变函数自身的执行逻辑</code></p>
-<figure class="highlight haxe"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">X</span></span>()&#123;</span><br><span class="line">    <span class="keyword">if</span>(A)&#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="keyword">new</span> <span class="type">A</span>();</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">else</span>&#123;</span><br><span class="line">        <span class="keyword">if</span>(B)&#123;</span><br><span class="line">            <span class="keyword">return</span> <span class="keyword">new</span> <span class="type">B</span>();</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">else</span>&#123;</span><br><span class="line">            <span class="keyword">throw</span> <span class="keyword">new</span> <span class="type">Error</span>(<span class="string">'no A or B'</span>);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>换一种写法<br><figure class="highlight haxe"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">X</span></span>()&#123;</span><br><span class="line">    <span class="keyword">if</span>(A)&#123;</span><br><span class="line">        X = <span class="function"><span class="keyword">function</span></span>()&#123;</span><br><span class="line">            <span class="keyword">return</span> <span class="keyword">new</span> <span class="type">A</span>();</span><br><span class="line">        &#125;;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">else</span>&#123;</span><br><span class="line">        <span class="keyword">if</span>(B)&#123;</span><br><span class="line">            X = <span class="function"><span class="keyword">function</span></span>()&#123;</span><br><span class="line">                <span class="keyword">return</span> <span class="keyword">new</span> <span class="type">B</span>();</span><br><span class="line">            &#125;;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">else</span>&#123;</span><br><span class="line">            <span class="keyword">throw</span> <span class="keyword">new</span> <span class="type">Error</span>(<span class="string">'no A or B'</span>);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    <span class="keyword">return</span> <span class="keyword">new</span> <span class="type">X</span>();</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
-<h1 id="防篡改对象"><a href="#防篡改对象" class="headerlink" title="防篡改对象"></a>防篡改对象</h1><h2 id="不可扩展对象-Object-preventExtensions"><a href="#不可扩展对象-Object-preventExtensions" class="headerlink" title="不可扩展对象 Object.preventExtensions"></a>不可扩展对象 Object.preventExtensions</h2><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 下面代码在谷歌浏览器中执行</span></span><br><span class="line">&gt; <span class="keyword">var</span> person = &#123;<span class="attr">name</span>: <span class="string">'wdd'</span>&#125;;</span><br><span class="line"><span class="literal">undefined</span></span><br><span class="line">&gt; <span class="built_in">Object</span>.preventExtensions(person);</span><br><span class="line"><span class="built_in">Object</span> &#123;<span class="attr">name</span>: <span class="string">"wdd"</span>&#125;</span><br><span class="line">&gt; person.age = <span class="number">10</span></span><br><span class="line"><span class="number">10</span></span><br><span class="line">&gt; person</span><br><span class="line"><span class="built_in">Object</span> &#123;<span class="attr">name</span>: <span class="string">"wdd"</span>&#125;</span><br><span class="line">&gt; <span class="built_in">Object</span>.isExtensible(person)</span><br><span class="line"><span class="literal">false</span></span><br></pre></td></tr></table></figure>
-<h2 id="密封对象Object-seal"><a href="#密封对象Object-seal" class="headerlink" title="密封对象Object.seal"></a>密封对象Object.seal</h2><p>密封对象不可扩展，并且不能删除对象的属性或者方法。但是属性值可以修改。<br><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&gt;</span><span class="bash"> var one = &#123;name: <span class="string">'hihi'</span>&#125;</span></span><br><span class="line">undefined</span><br><span class="line"><span class="meta">&gt;</span><span class="bash"> Object.seal(one)</span></span><br><span class="line">Object &#123;name: "hihi"&#125;</span><br><span class="line"><span class="meta">&gt;</span><span class="bash"> one.age = 12</span></span><br><span class="line">12</span><br><span class="line"><span class="meta">&gt;</span><span class="bash"> one</span></span><br><span class="line">Object &#123;name: "hihi"&#125;</span><br><span class="line"><span class="meta">&gt;</span><span class="bash"> delete one.name</span></span><br><span class="line">false</span><br><span class="line"><span class="meta">&gt;</span><span class="bash"> one</span></span><br><span class="line">Object &#123;name: "hihi"&#125;</span><br></pre></td></tr></table></figure></p>
-<h2 id="冻结对象-Object-freeze"><a href="#冻结对象-Object-freeze" class="headerlink" title="冻结对象 Object.freeze"></a>冻结对象 Object.freeze</h2><p>最严格的防篡改就是冻结对象。对象不可扩展，而且密封，不能修改。只能访问。</p>
-<h1 id="高级定时器"><a href="#高级定时器" class="headerlink" title="高级定时器"></a>高级定时器</h1><h2 id="函数节流"><a href="#函数节流" class="headerlink" title="函数节流"></a>函数节流</h2><p>函数节流的思想是：<code>某些代码不可以没有间断的连续重复执行</code><br><figure class="highlight actionscript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> processor = &#123;</span><br><span class="line">	timeoutId: <span class="literal">null</span>,</span><br><span class="line"></span><br><span class="line">	<span class="comment">// 实际进行处理的方法</span></span><br><span class="line">	performProcessing: <span class="function"><span class="keyword">function</span><span class="params">()</span></span>&#123;</span><br><span class="line">		...</span><br><span class="line">	&#125;,</span><br><span class="line"></span><br><span class="line">	<span class="comment">// 初始化调用方法</span></span><br><span class="line">	process: <span class="function"><span class="keyword">function</span><span class="params">()</span></span>&#123;</span><br><span class="line">		clearTimeout(<span class="keyword">this</span>.timeoutId);</span><br><span class="line"></span><br><span class="line">		<span class="keyword">var</span> that = <span class="keyword">this</span>;</span><br><span class="line"></span><br><span class="line">		<span class="keyword">this</span>.timeoutId = setTimeout(<span class="function"><span class="keyword">function</span><span class="params">()</span></span>&#123;</span><br><span class="line">			that.performProcessing();</span><br><span class="line">		&#125;, <span class="number">100</span>);</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 尝试开始执行</span></span><br><span class="line">processor.process();</span><br></pre></td></tr></table></figure></p>
-<h2 id="中央定时器"><a href="#中央定时器" class="headerlink" title="中央定时器"></a>中央定时器</h2><p>页面如果有十个区域要动态显示当前时间，一般来说，可以用10个定时来实现。其实一个中央定时器就可以搞定。</p>
-<p>中央定时器动画 demo地址：<a href="http://wangduanduan.coding.me/my-all-demos/ninja/center-time-control.html" target="_blank" rel="noopener">http://wangduanduan.coding.me/my-all-demos/ninja/center-time-control.html</a></p>
-<figure class="highlight actionscript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> timers = &#123;</span><br><span class="line">		timerId: <span class="number">0</span>,</span><br><span class="line">		timers: [],</span><br><span class="line">		add: <span class="function"><span class="keyword">function</span><span class="params">(fn)</span></span>&#123;</span><br><span class="line">			<span class="keyword">this</span>.timers.push(fn);</span><br><span class="line">		&#125;,</span><br><span class="line">		start: <span class="function"><span class="keyword">function</span><span class="params">()</span></span>&#123;</span><br><span class="line">			<span class="keyword">if</span>(<span class="keyword">this</span>.timerId)&#123;</span><br><span class="line">				<span class="keyword">return</span>;</span><br><span class="line">			&#125;</span><br><span class="line"></span><br><span class="line">			(<span class="function"><span class="keyword">function</span> <span class="title">runNext</span><span class="params">()</span></span>&#123;</span><br><span class="line">				<span class="keyword">if</span>(timers.timers.length &gt; <span class="number">0</span>)&#123;</span><br><span class="line">					<span class="keyword">for</span>(<span class="keyword">var</span> i=<span class="number">0</span>; i &lt; timers.timers.length ; i++)&#123;</span><br><span class="line">						<span class="keyword">if</span>(timers.timers[i]() === <span class="literal">false</span>)&#123;</span><br><span class="line">							timers.timers.splice(i, <span class="number">1</span>);</span><br><span class="line">							i--;</span><br><span class="line">						&#125;</span><br><span class="line">					&#125;</span><br><span class="line"></span><br><span class="line">					timers.timerId = setTimeout(runNext, <span class="number">16</span>);</span><br><span class="line">				&#125;</span><br><span class="line">			&#125;)();</span><br><span class="line">		&#125;,</span><br><span class="line">		stop: <span class="function"><span class="keyword">function</span><span class="params">()</span></span>&#123;</span><br><span class="line">			clearTimeout(timers.timerId);</span><br><span class="line">			<span class="keyword">this</span>.timerId = <span class="number">0</span>;</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;;</span><br></pre></td></tr></table></figure>
-<p>参考书籍：<br>《javascript高级程序设计》<br>《javascript忍者秘籍》</p>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
   </section>
 
   
@@ -2104,7 +2101,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">53</span>
+                  <span class="site-state-item-count">54</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>

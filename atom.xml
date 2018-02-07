@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://wdd.js.org/"/>
-  <updated>2018-02-07T06:12:58.000Z</updated>
+  <updated>2018-02-07T06:18:13.000Z</updated>
   <id>https://wdd.js.org/</id>
   
   <author>
@@ -15,6 +15,31 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>直接在Chrome DevTools调试Node.js</title>
+    <link href="https://wdd.js.org/debug-nodejs-in-chrome-devtool.html"/>
+    <id>https://wdd.js.org/debug-nodejs-in-chrome-devtool.html</id>
+    <published>2018-02-07T06:15:43.000Z</published>
+    <updated>2018-02-07T06:18:13.000Z</updated>
+    
+    <content type="html"><![CDATA[<p>英文好的，直接看原文</p><blockquote><p><a href="https://blog.hospodarets.com/nodejs-debugging-in-chrome-devtools" target="_blank" rel="noopener">https://blog.hospodarets.com/nodejs-debugging-in-chrome-devtools</a></p></blockquote><h1 id="1-要求"><a href="#1-要求" class="headerlink" title="1 要求"></a>1 要求</h1><ul><li>Node.js 6.3+</li><li>Chrome 55+</li></ul><h1 id="2-操作步骤"><a href="#2-操作步骤" class="headerlink" title="2 操作步骤"></a>2 操作步骤</h1><ul><li>1 打开连接 <code>chrome://flags/#enable-devtools-experiments</code></li><li>2 开启<code>开发者工具实验性功能</code> </li><li>3 重启浏览器</li><li>4 打开 DevTools Setting -&gt; Experiments tab</li><li>5 按6次shift后，隐藏的功能会出现，勾选”Node debugging”</li></ul><p><img src="http://p3alsaatj.bkt.clouddn.com/20180207141627_9HT0nS_Screenshot.jpeg" alt=""></p><p><img src="http://p3alsaatj.bkt.clouddn.com/20180207141636_hIfIyG_Screenshot.jpeg" alt=""></p><h1 id="3-运行程序"><a href="#3-运行程序" class="headerlink" title="3 运行程序"></a>3 运行程序</h1><p>必须要有 <code>--inspect</code><br><figure class="highlight vhdl"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">&gt; node <span class="comment">--inspect www</span></span><br><span class="line">Debugger listening <span class="keyword">on</span> <span class="keyword">port</span> <span class="number">9229</span>.</span><br><span class="line"><span class="literal">Warning</span>: This <span class="keyword">is</span> an experimental feature <span class="keyword">and</span> could change at any <span class="built_in">time</span>.</span><br><span class="line"><span class="keyword">To</span> start debugging, <span class="keyword">open</span> the following URL <span class="keyword">in</span> Chrome:</span><br><span class="line">    chrome-devtools://devtools/remote/serve_file/@<span class="number">60</span>cd6e859b9f557d2312f5bf532f6aec5f284980/inspector.html?experiments=<span class="literal">true</span>&amp;v8only=<span class="literal">true</span>&amp;ws=localhost:<span class="number">9229</span>/<span class="number">78</span>a884f4-<span class="number">8</span>c2e-<span class="number">459e-93</span>f7-e1cbe87cf5cf</span><br></pre></td></tr></table></figure></p><p>将这个地址粘贴到谷歌浏览器：<code>chrome-devtools://devtools/remote/serve_file/@60cd6e859b9f557d2312f5bf532f6aec5f284980/inspector.html?experiments=true&amp;v8only=true&amp;ws=localhost:9229/78a884f4-8c2e-459e-93f7-e1cbe87cf5cf</code></p><p>程序后端输出的日志也回输出到谷歌浏览器的console里面，同时也可以在Sources里进行断点调试了。<br><img src="http://p3alsaatj.bkt.clouddn.com/20180207141649_ArMyV7_Screenshot.jpeg" alt=""></p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;英文好的，直接看原文&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;a href=&quot;https://blog.hospodarets.com/nodejs-debugging-in-chrome-devtools&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;
+      
+    
+    </summary>
+    
+    
+      <category term="nodejs" scheme="https://wdd.js.org/tags/nodejs/"/>
+    
+  </entry>
   
   <entry>
     <title>12个值得关注的顶级JS库</title>
@@ -467,31 +492,6 @@
       <category term="gow" scheme="https://wdd.js.org/tags/gow/"/>
     
       <category term="ConEmu" scheme="https://wdd.js.org/tags/ConEmu/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>2018年我的阅读计划</title>
-    <link href="https://wdd.js.org/2018-reading-plan.html"/>
-    <id>https://wdd.js.org/2018-reading-plan.html</id>
-    <published>2018-02-05T05:42:20.000Z</published>
-    <updated>2018-02-06T02:01:28.000Z</updated>
-    
-    <content type="html"><![CDATA[<p><img src="http://p3alsaatj.bkt.clouddn.com/20180205175335_cuPtzB_Girl-Reading-Book.jpeg" alt=""></p><ul><li>阅读速度： 每天54000字, 无法量化，就无法改进</li><li>页码控制基于多看阅读和kindle paper white</li></ul><h1 id="我的2018年总书单"><a href="#我的2018年总书单" class="headerlink" title="我的2018年总书单"></a>我的2018年总书单</h1><table><thead><tr><th>序号</th><th>书名</th><th>来源</th><th>状态</th><th>开始阅读时间</th><th>读完时间</th></tr></thead><tbody><tr><td>1</td><td>浪潮之巅</td><td>纸质</td><td>在读</td><td></td><td></td></tr><tr><td>2</td><td>新生 七年就是一辈子</td><td>多看</td><td>已读完</td><td></td><td>0205</td></tr><tr><td>3</td><td>大数据</td><td>多看</td><td>在读</td><td></td><td></td></tr><tr><td>4</td><td>怪诞经济学</td><td>多看</td><td>在读</td><td></td><td></td></tr><tr><td>5</td><td>专业主义</td><td>多看</td><td></td><td></td><td></td></tr><tr><td>6</td><td>失控</td><td>多看</td><td>在读</td><td>0205</td><td></td></tr><tr><td>7</td><td>怪诞心理学</td><td>多看</td><td>在读</td><td></td><td></td></tr><tr><td>8</td><td>设计心理学</td><td>多看</td><td></td><td></td><td></td></tr><tr><td>9</td><td>魔鬼经济学</td><td>多看</td><td></td><td></td><td></td></tr><tr><td>10</td><td>乌合之众</td><td>多看</td><td></td><td></td><td></td></tr><tr><td>11</td><td>把时间当做朋友</td><td>多看</td><td></td><td></td><td></td></tr><tr><td>12</td><td>三体</td><td>多看</td><td></td><td></td><td></td></tr><tr><td>13</td><td>人性的弱点</td><td>多看</td><td></td><td></td><td></td></tr><tr><td>14</td><td>物种起源</td><td>kindle</td><td></td><td></td></tr><tr><td>15</td><td>沉默的大多数</td><td>kindle</td><td>在读</td><td></td><td></td></tr><tr><td>16</td><td>生命不息，折腾不止</td><td>kindle</td><td>在读</td><td></td><td></td></tr><tr><td>17</td><td>动物农场</td><td>kindle</td><td></td><td></td><td></td></tr><tr><td>18</td><td>世说新语</td><td>kindle</td><td></td><td></td><td></td></tr><tr><td>19</td><td>厚黑学</td><td>kindle</td><td></td><td></td><td></td></tr></tbody></table><h1 id="第6周-0205-0211-ing"><a href="#第6周-0205-0211-ing" class="headerlink" title="第6周 0205-0211 ing"></a>第6周 0205-0211 ing</h1><table><thead><tr><th>书名</th><th>周一</th><th>周二</th><th>周三</th><th>周四</th><th>周五</th><th>周六</th><th>周日</th></tr></thead><tbody><tr><td>新生 七年就是一辈子917-19</td><td>900ok</td><td>917ok</td><td>null</td><td>null</td><td>null</td><td>null</td><td>null</td></tr><tr><td>怪诞经济学539-11</td><td>450ok</td><td>500</td><td>539</td><td>null</td><td>null</td><td>null</td><td>null</td></tr><tr><td>大数据851-17</td><td>750ok</td><td>800</td><td>851</td><td>null</td><td>null</td><td>null</td><td>null</td></tr><tr><td>人性的弱点490-10</td><td>null</td><td>50</td><td>100</td><td>150</td><td>200</td><td>250</td><td>300</td></tr><tr><td>怪诞心理学546</td><td>null</td><td>null</td><td>50</td><td>100</td><td>150</td><td>200</td><td>250</td></tr><tr><td>专业主义378</td><td>null</td><td>null</td><td>null</td><td>50</td><td>100</td><td>150</td><td>200</td></tr><tr><td>失控1573</td><td>50</td><td>150</td><td>200</td><td>250</td><td>300</td><td>350</td><td>400</td></tr></tbody></table><h1 id="第5周-0129-0204-ed"><a href="#第5周-0129-0204-ed" class="headerlink" title="第5周 0129-0204 ed"></a>第5周 0129-0204 ed</h1><ul><li>页数基于多看阅读</li></ul><table><thead><tr><th>书名</th><th>周一</th><th>周二</th><th>周三</th><th>周四</th><th>周五</th><th>周六</th><th>周日</th></tr></thead><tbody><tr><td>新生 七年就是一辈子917-19</td><td>550 ok</td><td>600 ok</td><td>650 ok</td><td>700ok</td><td>750ok</td><td>800ok</td><td>850ok</td></tr><tr><td>怪诞经济学539-11</td><td>null</td><td>null</td><td>null</td><td>250ok</td><td>300ok</td><td>350ok</td><td>400ok</td></tr><tr><td>大数据851-17</td><td>400 ok</td><td>450 ok</td><td>500 ok</td><td>550ok</td><td>600ok</td><td>650ok</td><td>700ok</td></tr></tbody></table><h1 id="第4周-0122-0128-ed"><a href="#第4周-0122-0128-ed" class="headerlink" title="第4周 0122-0128 ed"></a>第4周 0122-0128 ed</h1><ul><li>备注：明朝那些事儿，看到抗日援朝那部分，实在是看不下去啦，索性不看了</li><li>页数基于多看阅读</li></ul><table><thead><tr><th>书名</th><th>周一</th><th>周二</th><th>周三</th><th>周四</th><th>周五</th><th>周六</th><th>周日</th></tr></thead><tbody><tr><td>新生 七年就是一辈子</td><td>200 ok</td><td>250 ok</td><td>300 ok</td><td>350 ok</td><td>400 ok</td><td>450 ok</td><td>500 ok</td></tr><tr><td>明朝哪些事儿</td><td>4050 ok</td><td>4100 ok</td><td>4150 ok</td><td>4200 ok</td><td>4250</td><td>4300</td><td>4350</td></tr><tr><td>大数据</td><td>50 ok</td><td>100 ok</td><td>150 ok</td><td>200 ok</td><td>250 ok</td><td>300 ok</td><td>350 ok</td></tr></tbody></table>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;p&gt;&lt;img src=&quot;http://p3alsaatj.bkt.clouddn.com/20180205175335_cuPtzB_Girl-Reading-Book.jpeg&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;阅读速度： 每天54000字, 无法量化，就无法改进&lt;
-      
-    
-    </summary>
-    
-    
-      <category term="reading" scheme="https://wdd.js.org/tags/reading/"/>
     
   </entry>
   
