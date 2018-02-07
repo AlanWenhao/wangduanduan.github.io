@@ -1,0 +1,1371 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+<html class="theme-next mist use-motion" lang="zh-Hans">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="google-site-verification" content="We4cS1h0IumMJjPPUa-q5_PDG5BHKCm8e5htMVa6m0w" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.1.4" rel="stylesheet" type="text/css" />
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=5.1.4">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=5.1.4" color="#222">
+
+
+
+
+
+  <meta name="keywords" content="ui,frame," />
+
+
+
+
+
+  <link rel="alternate" href="/atom.xml" title="洞香春" type="application/atom+xml" />
+
+
+
+
+
+
+<meta name="description" content="更新UI选择务必慎重，货比三家。 弱水三千只取一瓢：弱水三千只取一瓢，源起佛经中的一则故事，警醒人们在一生中可能会遇到很多美好的东西，但只要用心好好把握住其中的一样就足够了 😊😊😊😊欢迎贡献😊😊😊😊  2017-1209 ZanUI (Vue) 2017-1218 Onsen UI(Vue, React, Angular) 2017-1215 增加 Vuetify, Weex UI">
+<meta name="keywords" content="ui,frame">
+<meta property="og:type" content="article">
+<meta property="og:title" content="UI大全：前端UI框架集合（持续更新）">
+<meta property="og:url" content="https://wdd.js.org/all-best-ui-frame.html">
+<meta property="og:site_name" content="洞香春">
+<meta property="og:description" content="更新UI选择务必慎重，货比三家。 弱水三千只取一瓢：弱水三千只取一瓢，源起佛经中的一则故事，警醒人们在一生中可能会遇到很多美好的东西，但只要用心好好把握住其中的一样就足够了 😊😊😊😊欢迎贡献😊😊😊😊  2017-1209 ZanUI (Vue) 2017-1218 Onsen UI(Vue, React, Angular) 2017-1215 增加 Vuetify, Weex UI">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:image" content="http://p3alsaatj.bkt.clouddn.com/20180207094906_feQoNF_Screenshot.jpeg">
+<meta property="og:image" content="http://p3alsaatj.bkt.clouddn.com/20180207094938_FjBqKD_Screenshot.jpeg">
+<meta property="og:image" content="http://p3alsaatj.bkt.clouddn.com/20180207094922_0rwozv_Screenshot.jpeg">
+<meta property="og:image" content="http://p3alsaatj.bkt.clouddn.com/20180207095020_QB3Wp3_Screenshot.jpeg">
+<meta property="og:image" content="http://p3alsaatj.bkt.clouddn.com/20180207095038_xJKBFh_Screenshot.jpeg">
+<meta property="og:image" content="http://p3alsaatj.bkt.clouddn.com/20180207095110_mdSrCw_Screenshot.jpeg">
+<meta property="og:image" content="http://p3alsaatj.bkt.clouddn.com/20180207095129_EYQPfv_Screenshot.jpeg">
+<meta property="og:image" content="http://p3alsaatj.bkt.clouddn.com/20180207095149_shP7k0_Screenshot.jpeg">
+<meta property="og:image" content="http://p3alsaatj.bkt.clouddn.com/20180207095205_GZN6wf_Screenshot.jpeg">
+<meta property="og:image" content="http://p3alsaatj.bkt.clouddn.com/20180207095223_FfYrPd_Screenshot.jpeg">
+<meta property="og:image" content="http://p3alsaatj.bkt.clouddn.com/20180207095243_zIIavI_Screenshot.jpeg">
+<meta property="og:image" content="http://p3alsaatj.bkt.clouddn.com/20180207095304_snl6Va_Screenshot.jpeg">
+<meta property="og:image" content="http://p3alsaatj.bkt.clouddn.com/20180207095319_n66Uay_Screenshot.jpeg">
+<meta property="og:image" content="http://p3alsaatj.bkt.clouddn.com/20180207095334_yEhDb0_Screenshot.jpeg">
+<meta property="og:image" content="http://p3alsaatj.bkt.clouddn.com/20180207095351_BLEw5e_Screenshot.jpeg">
+<meta property="og:image" content="http://p3alsaatj.bkt.clouddn.com/20180207095604_L0tf0x_Screenshot.jpeg">
+<meta property="og:image" content="http://p3alsaatj.bkt.clouddn.com/20180207095620_R0B6If_Screenshot.jpeg">
+<meta property="og:image" content="http://p3alsaatj.bkt.clouddn.com/20180207095630_COJfPb_Screenshot.jpeg">
+<meta property="og:image" content="http://p3alsaatj.bkt.clouddn.com/20180207095643_iqtE1s_Screenshot.jpeg">
+<meta property="og:image" content="http://p3alsaatj.bkt.clouddn.com/20180207095655_71FOMw_Screenshot.jpeg">
+<meta property="og:image" content="http://p3alsaatj.bkt.clouddn.com/20180207095708_TkWO4d_Screenshot.jpeg">
+<meta property="og:image" content="http://p3alsaatj.bkt.clouddn.com/20180207095724_pTKd1y_Screenshot.jpeg">
+<meta property="og:image" content="http://p3alsaatj.bkt.clouddn.com/20180207095734_B7WvWB_Screenshot.jpeg">
+<meta property="og:image" content="http://p3alsaatj.bkt.clouddn.com/20180207095745_pOm9JI_Screenshot.jpeg">
+<meta property="og:image" content="http://p3alsaatj.bkt.clouddn.com/20180207095757_muC5KG_Screenshot.jpeg">
+<meta property="og:image" content="http://p3alsaatj.bkt.clouddn.com/20180207095808_9FR3VY_Screenshot.jpeg">
+<meta property="og:image" content="http://p3alsaatj.bkt.clouddn.com/20180207095822_3kxbmi_Screenshot.jpeg">
+<meta property="og:image" content="http://p3alsaatj.bkt.clouddn.com/20180207095833_MwiVC2_Screenshot.jpeg">
+<meta property="og:image" content="http://p3alsaatj.bkt.clouddn.com/20180207095843_HEcA0p_Screenshot.jpeg">
+<meta property="og:image" content="http://p3alsaatj.bkt.clouddn.com/20180207095855_58jPPd_Screenshot.jpeg">
+<meta property="og:image" content="http://p3alsaatj.bkt.clouddn.com/20180207100013_ZEC0Op_Screenshot.jpeg">
+<meta property="og:image" content="http://p3alsaatj.bkt.clouddn.com/20180207100025_pmdTYa_Screenshot.jpeg">
+<meta property="og:updated_time" content="2018-02-07T02:00:45.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="UI大全：前端UI框架集合（持续更新）">
+<meta name="twitter:description" content="更新UI选择务必慎重，货比三家。 弱水三千只取一瓢：弱水三千只取一瓢，源起佛经中的一则故事，警醒人们在一生中可能会遇到很多美好的东西，但只要用心好好把握住其中的一样就足够了 😊😊😊😊欢迎贡献😊😊😊😊  2017-1209 ZanUI (Vue) 2017-1218 Onsen UI(Vue, React, Angular) 2017-1215 增加 Vuetify, Weex UI">
+<meta name="twitter:image" content="http://p3alsaatj.bkt.clouddn.com/20180207094906_feQoNF_Screenshot.jpeg">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Mist',
+    version: '5.1.4',
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="https://wdd.js.org/all-best-ui-frame.html"/>
+
+
+
+
+
+  <title>UI大全：前端UI框架集合（持续更新） | 洞香春</title>
+  
+
+
+
+
+
+  <script type="text/javascript">
+    var _hmt = _hmt || [];
+    (function() {
+      var hm = document.createElement("script");
+      hm.src = "https://hm.baidu.com/hm.js?32b66b12a233c7f47949966dc2e2cd97";
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(hm, s);
+    })();
+  </script>
+
+
+
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/"  class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">洞香春</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle">洞香春以名士荟萃、谈论国事、交流思想而著称于当时列国 --《大秦帝国》</p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br />
+            
+            关于
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            标签
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            归档
+          </a>
+        </li>
+      
+
+      
+        <li class="menu-item menu-item-search">
+          
+            <a href="javascript:;" class="popup-trigger">
+          
+            
+              <i class="menu-item-icon fa fa-search fa-fw"></i> <br />
+            
+            搜索
+          </a>
+        </li>
+      
+    </ul>
+  
+
+  
+    <div class="site-search">
+      
+  <div class="popup search-popup local-search-popup">
+  <div class="local-search-header clearfix">
+    <span class="search-icon">
+      <i class="fa fa-search"></i>
+    </span>
+    <span class="popup-btn-close">
+      <i class="fa fa-times-circle"></i>
+    </span>
+    <div class="local-search-input-wrapper">
+      <input autocomplete="off"
+             placeholder="搜索..." spellcheck="false"
+             type="text" id="local-search-input">
+    </div>
+  </div>
+  <div id="local-search-result"></div>
+</div>
+
+
+
+    </div>
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://wdd.js.org/all-best-ui-frame.html">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="王端端">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="http://p3alsaatj.bkt.clouddn.com/20180129093544_I5Jscb_IMG_1402.jpeg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="洞香春">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">UI大全：前端UI框架集合（持续更新）</h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-02-07T09:47:34+08:00">
+                2018-02-07
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+            <span class="post-meta-divider">|</span>
+            <span class="page-pv"><i class="fa fa-file-o"></i>
+            <span class="busuanzi-value" id="busuanzi_value_page_pv" ></span>
+            </span>
+          
+
+          
+            <div class="post-wordcount">
+              
+                
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">字数统计&#58;</span>
+                
+                <span title="字数统计">
+                  2,107 字
+                </span>
+              
+
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">阅读时长 &asymp;</span>
+                
+                <span title="阅读时长">
+                  8 分钟
+                </span>
+              
+            </div>
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h1 id="更新"><a href="#更新" class="headerlink" title="更新"></a>更新</h1><p><code>UI选择务必慎重，货比三家。</code></p>
+<p>弱水三千只取一瓢：弱水三千只取一瓢，源起佛经中的一则故事，警醒人们<code>在一生中可能会遇到很多美好的东西，但只要用心好好把握住其中的一样就足够了</code></p>
+<p>😊😊😊😊欢迎贡献😊😊😊😊</p>
+<ul>
+<li>2017-1209 ZanUI (Vue)</li>
+<li>2017-1218 Onsen UI(Vue, React, Angular)</li>
+<li>2017-1215 增加 Vuetify, Weex UI, Semantic UI React,element-react, element-angular,NG-ZORRO</li>
+<li>2017-1214 增加 Mint UI</li>
+<li>2017-1211 增加 Layui, UIkit</li>
+<li>2017-1206 增加 cube-ui, Amaze ui React</li>
+</ul>
+<p>除了老牌构建于jQuery框架之上的UI外, 新锐UI派系：</p>
+<ul>
+<li>基于Vue: ELementUI, iViewui</li>
+<li>基于React: AntDesign, Amaze UI React</li>
+</ul>
+<h1 id="移动端"><a href="#移动端" class="headerlink" title="移动端"></a>移动端</h1><h2 id="WeUI"><a href="#WeUI" class="headerlink" title="WeUI"></a>WeUI</h2><p><img src="http://p3alsaatj.bkt.clouddn.com/20180207094906_feQoNF_Screenshot.jpeg" alt=""></p>
+<p>来自：腾讯</p>
+<blockquote>
+<p>WeUI 是一套同微信原生视觉体验一致的基础样式库，由微信官方设计团队为微信内网页和微信小程序量身设计，令用户的使用感知更加统一。<br><a href="https://weui.io/" target="_blank" rel="noopener">详情</a></p>
+</blockquote>
+<h2 id="SUI-Mobile"><a href="#SUI-Mobile" class="headerlink" title="SUI Mobile"></a>SUI Mobile</h2><p><img src="http://p3alsaatj.bkt.clouddn.com/20180207094938_FjBqKD_Screenshot.jpeg" alt=""></p>
+<p>来自：阿里</p>
+<blockquote>
+<p>SUI Mobile 是一套基于 Framework7 开发的UI库。它非常轻量、精美，只需要引入我们的CDN文件就可以使用，并且能兼容到 iOS 6.0+ 和 Android 4.0+，非常适合开发跨平台Web App。轻量的UI库<br>SUI Mobile 非常轻量，核心库压缩Gzip后的JS、CSS网络传输体积总共只有52K，却提供了20+个常用的组件。<a href="http://m.sui.taobao.org/" target="_blank" rel="noopener">详情</a></p>
+</blockquote>
+<h2 id="Amaze-妹子-UI"><a href="#Amaze-妹子-UI" class="headerlink" title="Amaze ~ 妹子 UI"></a>Amaze ~ 妹子 UI</h2><p><img src="http://p3alsaatj.bkt.clouddn.com/20180207094922_0rwozv_Screenshot.jpeg" alt=""></p>
+<blockquote>
+<p>中国首个开源 HTML5 跨屏前端框架 <a href="http://amazeui.org/" target="_blank" rel="noopener">详情</a></p>
+</blockquote>
+<ul>
+<li>Amaze UI 以移动优先（Mobile first）为理念，从小屏逐步扩展到大屏，最终实现所有屏幕适配，适应移动互联潮流。</li>
+<li>Amaze UI 含近 20 个 CSS 组件、20 余 JS 组件，更有多个包含不同主题的 Web 组件，可快速构建界面出色、体验优秀的跨屏页面，大幅提升开发效率。</li>
+<li>相比国外框架，Amaze UI 关注中文排版，根据用户代理调整字体，实现更好的中文排版效果；兼顾国内主流浏览器及 App 内置浏览器兼容支持。</li>
+<li>Amaze UI 面向 HTML5 开发，使用 CSS3 来做动画交互，平滑、高效，更适合移动设备，让 Web 应用更快速载入。</li>
+</ul>
+<h2 id="jQuery-mobile"><a href="#jQuery-mobile" class="headerlink" title="jQuery mobile"></a>jQuery mobile</h2><p><img src="http://p3alsaatj.bkt.clouddn.com/20180207095020_QB3Wp3_Screenshot.jpeg" alt=""></p>
+<blockquote>
+<p>jQuery移动是一个基于html5的用户界面系统,为响应web站点和应用程序都可以访问所有的智能手机,平板电脑和桌面设备而设计。<a href="https://jquerymobile.com/" target="_blank" rel="noopener">详情</a></p>
+</blockquote>
+<h2 id="Framework7"><a href="#Framework7" class="headerlink" title="Framework7"></a>Framework7</h2><p><img src="http://p3alsaatj.bkt.clouddn.com/20180207095038_xJKBFh_Screenshot.jpeg" alt=""></p>
+<blockquote>
+<p>Framework7 是一个开源免费的框架可以用来开发混合移动应用（原生和HTML混合）或者开发 iOS &amp; Android 风格的WEB APP。也可以用来作为原型开发工具，可以迅速创建一个应用的原型。<a href="http://framework7.taobao.org/" target="_blank" rel="noopener">详情</a></p>
+</blockquote>
+<ul>
+<li><p>Framework7 最主要的功能是可以使用HTML、CSS和JS来开发iOS7应用。Framework7 是完全免费开源的。</p>
+</li>
+<li><p>Framework7 并不能兼容所有的设备。她只专注于为 iOS 和 Google Material 设计提供最好的体验。</p>
+</li>
+<li><p>如果你想开发 iOS 或者 Android 混合应用（Phonegap）或者你想开发 iOS 和 Google Material 风格的WEB APP，那么Framework7将会是你的首选。</p>
+</li>
+</ul>
+<h2 id="cube-ui（Vue）"><a href="#cube-ui（Vue）" class="headerlink" title="cube-ui（Vue）"></a>cube-ui（Vue）</h2><p><code>cube-ui 是由滴滴开源的基于 Vue.js 实现的移动端组件库。</code> <a href="https://didi.github.io/cube-ui/#/zh-CN" target="_blank" rel="noopener">详情</a></p>
+<p>● 质量可靠：由滴滴内部组件库精简提炼而来，历经考验，并且每个组件都有充分单元测试，为后续集成提供保障。<br>● 体验极致：以迅速响应、动画流畅、接近原生为目标，在交互体验方面追求极致。<br>● 标准规范：遵循统一的设计交互标准，高度还原设计效果；接口标准化，统一规范使用方式，开发更加简单高效。<br>● 扩展性强：支持按需引入和后编译，轻量灵活；扩展性强，可以方便地基于现有组件实现二次开发。</p>
+<p><img src="http://p3alsaatj.bkt.clouddn.com/20180207095110_mdSrCw_Screenshot.jpeg" alt=""></p>
+<h2 id="Mint-UI-Vue"><a href="#Mint-UI-Vue" class="headerlink" title="Mint UI (Vue)"></a>Mint UI (Vue)</h2><p>基于 Vue.js 的移动端组件库 <a href="https://mint-ui.github.io/#!/zh-cn" target="_blank" rel="noopener">详情</a></p>
+<p><img src="http://p3alsaatj.bkt.clouddn.com/20180207095129_EYQPfv_Screenshot.jpeg" alt=""><br><img src="http://p3alsaatj.bkt.clouddn.com/20180207095149_shP7k0_Screenshot.jpeg" alt=""></p>
+<h2 id="Weex-UI-Vue"><a href="#Weex-UI-Vue" class="headerlink" title="Weex UI (Vue)"></a>Weex UI (Vue)</h2><p><code>一个基于 Weex 的富交互、轻量级、高性能的 UI 组件库</code> <a href="https://alibaba.github.io/weex-ui/#/cn/" target="_blank" rel="noopener">详情</a></p>
+<p><img src="http://p3alsaatj.bkt.clouddn.com/20180207095205_GZN6wf_Screenshot.jpeg" alt=""></p>
+<h2 id="Onsen-UI-Vue-React-Angular"><a href="#Onsen-UI-Vue-React-Angular" class="headerlink" title="Onsen UI(Vue, React, Angular)"></a>Onsen UI(Vue, React, Angular)</h2><p><code>最偏亮高效的开发HTML5应用和WEB apps, 支持angular, vue ,react</code>, <a href="https://onsen.io/" target="_blank" rel="noopener">详情</a></p>
+<p><img src="http://p3alsaatj.bkt.clouddn.com/20180207095223_FfYrPd_Screenshot.jpeg" alt=""></p>
+<h1 id="PC端"><a href="#PC端" class="headerlink" title="PC端"></a>PC端</h1><h2 id="EasyUI"><a href="#EasyUI" class="headerlink" title="EasyUI"></a>EasyUI</h2><p><img src="http://p3alsaatj.bkt.clouddn.com/20180207095243_zIIavI_Screenshot.jpeg" alt=""></p>
+<blockquote>
+<p>easyui是一种基于jQuery的用户界面插件集合。easyui为创建现代化，互动，JavaScript应用程序，提供必要的功能。<a href="http://www.jeasyui.net/" target="_blank" rel="noopener">详情</a></p>
+</blockquote>
+<ul>
+<li>使用easyui你不需要写很多代码，你只需要通过编写一些简单HTML标记，就可以定义用户界面。</li>
+<li>easyui是个完美支持HTML5网页的完整框架。</li>
+<li>easyui节省您网页开发的时间和规模。</li>
+<li>easyui很简单但功能强大的。 </li>
+</ul>
+<h2 id="Bootstrap"><a href="#Bootstrap" class="headerlink" title="Bootstrap"></a>Bootstrap</h2><p><img src="http://p3alsaatj.bkt.clouddn.com/20180207095304_snl6Va_Screenshot.jpeg" alt=""></p>
+<blockquote>
+<p>简洁、直观、强悍的前端开发框架，让web开发更迅速、简单。<a href="http://www.bootcss.com/" target="_blank" rel="noopener">详情</a></p>
+</blockquote>
+<h2 id="jQuery-UI"><a href="#jQuery-UI" class="headerlink" title="jQuery UI"></a>jQuery UI</h2><p><img src="http://p3alsaatj.bkt.clouddn.com/20180207095319_n66Uay_Screenshot.jpeg" alt=""></p>
+<blockquote>
+<p>jQuery UI 是建立在 jQuery JavaScript 库上的一组用户界面交互、特效、小部件及主题。无论您是创建高度交互的 Web 应用程序还是仅仅向窗体控件添加一个日期选择器，jQuery UI 都是一个完美的选择。<br>jQuery UI 包含了许多维持状态的小部件（Widget），因此，它与典型的 jQuery 插件使用模式略有不同。所有的 jQuery UI 小部件（Widget）使用相同的模式，所以，只要您学会使用其中一个，您就知道如何使用其他的小部件（Widget）。<a href="https://jqueryui.com/" target="_blank" rel="noopener">详情</a></p>
+</blockquote>
+<h2 id="SUI"><a href="#SUI" class="headerlink" title="SUI"></a>SUI</h2><p><img src="http://p3alsaatj.bkt.clouddn.com/20180207095334_yEhDb0_Screenshot.jpeg" alt=""></p>
+<blockquote>
+<p>SUI 是一套基于bootstrap开发的前端组件库，同时她也是一套设计规范。<br>通过SUI，可以非常方便的设计和实现精美的页面。<a href="http://sui.taobao.org/sui/docs/index.html" target="_blank" rel="noopener">详情</a></p>
+</blockquote>
+<h2 id="ZUI"><a href="#ZUI" class="headerlink" title="ZUI"></a>ZUI</h2><p><img src="http://p3alsaatj.bkt.clouddn.com/20180207095351_BLEw5e_Screenshot.jpeg" alt=""></p>
+<blockquote>
+<p>一个基于 Bootstrap 深度定制开源前端实践方案，帮助你快速构建现代跨屏应用。<a href="http://zui.sexy/#/" target="_blank" rel="noopener">详情</a></p>
+</blockquote>
+<h2 id="Plane-UI"><a href="#Plane-UI" class="headerlink" title="Plane UI"></a>Plane UI</h2><p><img src="http://p3alsaatj.bkt.clouddn.com/20180207095604_L0tf0x_Screenshot.jpeg" alt=""></p>
+<blockquote>
+<p>HTML5 跨终端响应式前端界面框架<a href="https://pandao.github.io/planeui/" target="_blank" rel="noopener">详情</a></p>
+</blockquote>
+<h2 id="Semantic-UI"><a href="#Semantic-UI" class="headerlink" title="Semantic UI"></a>Semantic UI</h2><p><img src="http://p3alsaatj.bkt.clouddn.com/20180207095620_R0B6If_Screenshot.jpeg" alt=""></p>
+<blockquote>
+<p>Semantic UI 是一款语义化设计的前端开源框架，其功能强大，使用简单，为设计师和开发师提供可复用的完美设计方案。<a href="https://semantic-ui.com/" target="_blank" rel="noopener">详情</a></p>
+</blockquote>
+<h2 id="materialize"><a href="#materialize" class="headerlink" title="materialize"></a>materialize</h2><p><img src="http://p3alsaatj.bkt.clouddn.com/20180207095630_COJfPb_Screenshot.jpeg" alt=""></p>
+<blockquote>
+<p>基于谷歌material design设计的框架<a href="http://materializecss.com/" target="_blank" rel="noopener">详情</a></p>
+</blockquote>
+<h2 id="ElementUI-（Vue）"><a href="#ElementUI-（Vue）" class="headerlink" title="ElementUI （Vue）"></a>ElementUI （Vue）</h2><p>Element由<code>饿了吗</code>团队开源，一套为开发者、设计师和产品经理准备的基于 Vue 2.0 的组件库，提供了配套设计资源，帮助你的网站快速成型。<a href="http://element.eleme.io/#/zh-CN" target="_blank" rel="noopener">详情</a></p>
+<p><img src="http://p3alsaatj.bkt.clouddn.com/20180207095643_iqtE1s_Screenshot.jpeg" alt=""></p>
+<h2 id="iviewui-（Vue）"><a href="#iviewui-（Vue）" class="headerlink" title="iviewui （Vue）"></a>iviewui （Vue）</h2><p>一套基于 Vue.js 的高质量 UI 组件库 <a href="https://www.iviewui.com/" target="_blank" rel="noopener">详情</a></p>
+<p><img src="http://p3alsaatj.bkt.clouddn.com/20180207095655_71FOMw_Screenshot.jpeg" alt=""></p>
+<h2 id="ANT-DESIGN-React"><a href="#ANT-DESIGN-React" class="headerlink" title="ANT DESIGN (React)"></a>ANT DESIGN (React)</h2><p>一套企业级的 UI 设计语言和 React 实现。<br><a href="https://ant.design/index-cn" target="_blank" rel="noopener">https://ant.design/index-cn</a></p>
+<ul>
+<li>提炼自企业级中后台产品的交互语言和视觉风格。</li>
+<li>开箱即用的高质量 React 组件。</li>
+<li>使用 TypeScript 构建，提供完整的类型定义文件。</li>
+<li>基于 npm + webpack + dva 的企业级开发框架。</li>
+</ul>
+<p><img src="http://p3alsaatj.bkt.clouddn.com/20180207095708_TkWO4d_Screenshot.jpeg" alt=""></p>
+<h2 id="MDUI"><a href="#MDUI" class="headerlink" title="MDUI"></a>MDUI</h2><p>MDUI 是一套基于 Material Design 的前端框架。轻量级、多主题切换、响应式、无依赖。<br><a href="http://www.mdui.org/" target="_blank" rel="noopener">http://www.mdui.org/</a></p>
+<p><img src="http://p3alsaatj.bkt.clouddn.com/20180207095724_pTKd1y_Screenshot.jpeg" alt=""></p>
+<h2 id="Amaze-UI-React-React"><a href="#Amaze-UI-React-React" class="headerlink" title="Amaze UI React (React)"></a>Amaze UI React (React)</h2><p><code>基于 React.js 开发的 Web 组件库</code> <a href="http://amazeui.org/react/" target="_blank" rel="noopener">详情</a></p>
+<p><img src="http://p3alsaatj.bkt.clouddn.com/20180207095734_B7WvWB_Screenshot.jpeg" alt=""></p>
+<h2 id="Layui"><a href="#Layui" class="headerlink" title="Layui"></a>Layui</h2><blockquote>
+<p>layui（谐音：类UI) 是一款采用自身模块规范编写的前端 UI 框架，<code>遵循原生 HTML/CSS/JS 的书写与组织形式</code>，<code>门槛极低</code>，拿来即用。其外在极简，却又不失饱满的内在，<code>体积轻盈，组件丰盈</code>，从核心代码到 API 的每一处细节都经过精心雕琢，非常适合界面的快速开发。layui 首个版本发布于2016年金秋，她区别于那些基于 MVVM 底层的 UI 框架，却并非逆道而行，而是信奉返璞归真之道。准确地说，她更多是为服务端程序员量身定做，你无需涉足各种前端工具的复杂配置，只需面对浏览器本身，让一切你所需要的元素与交互，从这里信手拈来。 <a href="http://www.layui.com/doc/" target="_blank" rel="noopener">详情</a></p>
+</blockquote>
+<p><img src="http://p3alsaatj.bkt.clouddn.com/20180207095745_pOm9JI_Screenshot.jpeg" alt=""></p>
+<h2 id="UIkit"><a href="#UIkit" class="headerlink" title="UIkit"></a>UIkit</h2><blockquote>
+<p>轻量级模块化前端框架 <a href="https://getuikit.com/" target="_blank" rel="noopener">详情</a></p>
+</blockquote>
+<p><img src="http://p3alsaatj.bkt.clouddn.com/20180207095757_muC5KG_Screenshot.jpeg" alt=""></p>
+<h2 id="Vuetify-Vue"><a href="#Vuetify-Vue" class="headerlink" title="Vuetify (Vue)"></a>Vuetify (Vue)</h2><p>基于vue2的material风格组件化框架 <a href="https://vuetifyjs.com/" target="_blank" rel="noopener">详情</a></p>
+<p><img src="http://p3alsaatj.bkt.clouddn.com/20180207095808_9FR3VY_Screenshot.jpeg" alt=""></p>
+<h2 id="Semantic-UI-React-React"><a href="#Semantic-UI-React-React" class="headerlink" title="Semantic UI React(React)"></a>Semantic UI React(React)</h2><p>The official Semantic-UI-React integration. <a href="https://react.semantic-ui.com/introduction" target="_blank" rel="noopener">detail</a></p>
+<ul>
+<li>jQuery Free</li>
+<li>Declarative API</li>
+<li>Augmentation</li>
+<li>Shorthand Props</li>
+<li>Sub Components</li>
+<li>Auto Controlled State</li>
+</ul>
+<p><img src="http://p3alsaatj.bkt.clouddn.com/20180207095822_3kxbmi_Screenshot.jpeg" alt=""></p>
+<h2 id="element-react-React"><a href="#element-react-React" class="headerlink" title="element-react (React)"></a>element-react (React)</h2><p>element ui的react版本 <a href="https://eleme.github.io/element-react/#/zh-CN/quick-start" target="_blank" rel="noopener">详情</a></p>
+<p><img src="http://p3alsaatj.bkt.clouddn.com/20180207095833_MwiVC2_Screenshot.jpeg" alt=""></p>
+<h2 id="element-angular-angular"><a href="#element-angular-angular" class="headerlink" title="element-angular (angular)"></a>element-angular (angular)</h2><p>element ui的react版本 <a href="https://element-angular.faas.ele.me/guide/install" target="_blank" rel="noopener">详情</a><br><img src="http://p3alsaatj.bkt.clouddn.com/20180207095843_HEcA0p_Screenshot.jpeg" alt=""></p>
+<h2 id="NG-ZORRO-angular"><a href="#NG-ZORRO-angular" class="headerlink" title="NG-ZORRO (angular)"></a>NG-ZORRO (angular)</h2><p>这里是 Ant Design 的 Angular^5.0.0 实现，开发和服务于企业级后台产品。 <a href="https://ng.ant.design/#/docs/angular/introduce" target="_blank" rel="noopener">详情</a></p>
+<p><img src="http://p3alsaatj.bkt.clouddn.com/20180207095855_58jPPd_Screenshot.jpeg" alt=""></p>
+<h1 id="3-PC-amp-移动端"><a href="#3-PC-amp-移动端" class="headerlink" title="3 PC &amp; 移动端"></a>3 PC &amp; 移动端</h1><h2 id="3-1-ZanUI-Vue"><a href="#3-1-ZanUI-Vue" class="headerlink" title="3.1 ZanUI (Vue)"></a>3.1 ZanUI (Vue)</h2><blockquote>
+<p>Vant ( \ˈvænt\ ) 是有赞前端团队基于有赞统一的规范实现的 Vue 组件库，提供了一整套 UI 基础组件和业务组件。 <a href="https://www.youzanyun.com/zanui" target="_blank" rel="noopener">详情</a></p>
+</blockquote>
+<ul>
+<li>48+ 个经过有赞线上业务检验的组件</li>
+<li>单测覆盖率超过 90%</li>
+<li>完善详实的 中英文文档</li>
+<li>专门的设计师团队维护视觉规范，统一而优雅</li>
+<li>支持 babel-plugin-import</li>
+<li>支持 TypeScript</li>
+</ul>
+<p><img src="http://p3alsaatj.bkt.clouddn.com/20180207100013_ZEC0Op_Screenshot.jpeg" alt=""><br><img src="http://p3alsaatj.bkt.clouddn.com/20180207100025_pmdTYa_Screenshot.jpeg" alt=""></p>
+
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+      <div>
+        <ul class="post-copyright">
+  <li class="post-copyright-author">
+    <strong>本文作者：</strong>
+    王端端
+  </li>
+  <li class="post-copyright-link">
+    <strong>本文标题：</strong>
+    <a href="https://wdd.js.org/all-best-ui-frame.html" title="UI大全：前端UI框架集合（持续更新）">UI大全：前端UI框架集合（持续更新）</a>
+  </li>
+  <li class="post-copyright-link">
+    <strong>本文链接：</strong>
+    <a href="https://wdd.js.org/all-best-ui-frame.html" title="UI大全：前端UI框架集合（持续更新）">https://wdd.js.org/all-best-ui-frame.html</a>
+  </li>
+  <li class="post-copyright-date">
+      <strong>发布时间：</strong>2018年2月7日 - 09时02分
+  </li>  
+  <li class="post-copyright-license">
+    <strong>版权声明： </strong>
+    本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/3.0/" rel="external nofollow" target="_blank">CC BY-NC-SA 3.0</a> 许可协议。转载请注明出处！
+  </li>
+</ul>
+
+      </div>
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/ui/" rel="tag"># ui</a>
+          
+            <a href="/tags/frame/" rel="tag"># frame</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/front-end-common-websit.html" rel="next" title="前端开发常用工具网站">
+                <i class="fa fa-chevron-left"></i> 前端开发常用工具网站
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+
+  
+    <div class="comments" id="comments">
+      <div id="lv-container" data-id="city" data-uid="MTAyMC8zMzY3OC8xMDIzMw=="></div>
+    </div>
+
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <img class="site-author-image" itemprop="image"
+                src="http://p3alsaatj.bkt.clouddn.com/20180129093544_I5Jscb_IMG_1402.jpeg"
+                alt="王端端" />
+            
+              <p class="site-author-name" itemprop="name">王端端</p>
+              <p class="site-description motion-element" itemprop="description">前端，后端，炒菜，摄影，读书，收集工具</p>
+          </div>
+
+          <nav class="site-state motion-element">
+
+            
+              <div class="site-state-item site-state-posts">
+              
+                <a href="/archives/">
+              
+                  <span class="site-state-item-count">41</span>
+                  <span class="site-state-item-name">日志</span>
+                </a>
+              </div>
+            
+
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-tags">
+                <a href="/tags/index.html">
+                  <span class="site-state-item-count">56</span>
+                  <span class="site-state-item-name">标签</span>
+                </a>
+              </div>
+            
+
+          </nav>
+
+          
+            <div class="feed-link motion-element">
+              <a href="/atom.xml" rel="alternate">
+                <i class="fa fa-rss"></i>
+                RSS
+              </a>
+            </div>
+          
+
+          
+            <div class="links-of-author motion-element">
+                
+                  <span class="links-of-author-item">
+                    <a href="https://github.com/wangduanduan" rel="external nofollow" target="_blank" title="GitHub">
+                      
+                        <i class="fa fa-fw fa-github"></i>GitHub</a>
+                  </span>
+                
+                  <span class="links-of-author-item">
+                    <a href="mailto:1779706607@qq.com" rel="external nofollow" target="_blank" title="E-Mail">
+                      
+                        <i class="fa fa-fw fa-envelope"></i>E-Mail</a>
+                  </span>
+                
+                  <span class="links-of-author-item">
+                    <a href="https://segmentfault.com/u/177970" rel="external nofollow" target="_blank" title="segmentfault">
+                      
+                        <i class="fa fa-fw fa-globe"></i>segmentfault</a>
+                  </span>
+                
+            </div>
+          
+
+          
+          
+
+          
+          
+
+          
+
+        </div>
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#更新"><span class="nav-number">1.</span> <span class="nav-text">更新</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#移动端"><span class="nav-number">2.</span> <span class="nav-text">移动端</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#WeUI"><span class="nav-number">2.1.</span> <span class="nav-text">WeUI</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#SUI-Mobile"><span class="nav-number">2.2.</span> <span class="nav-text">SUI Mobile</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Amaze-妹子-UI"><span class="nav-number">2.3.</span> <span class="nav-text">Amaze ~ 妹子 UI</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#jQuery-mobile"><span class="nav-number">2.4.</span> <span class="nav-text">jQuery mobile</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Framework7"><span class="nav-number">2.5.</span> <span class="nav-text">Framework7</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#cube-ui（Vue）"><span class="nav-number">2.6.</span> <span class="nav-text">cube-ui（Vue）</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Mint-UI-Vue"><span class="nav-number">2.7.</span> <span class="nav-text">Mint UI (Vue)</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Weex-UI-Vue"><span class="nav-number">2.8.</span> <span class="nav-text">Weex UI (Vue)</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Onsen-UI-Vue-React-Angular"><span class="nav-number">2.9.</span> <span class="nav-text">Onsen UI(Vue, React, Angular)</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#PC端"><span class="nav-number">3.</span> <span class="nav-text">PC端</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#EasyUI"><span class="nav-number">3.1.</span> <span class="nav-text">EasyUI</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Bootstrap"><span class="nav-number">3.2.</span> <span class="nav-text">Bootstrap</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#jQuery-UI"><span class="nav-number">3.3.</span> <span class="nav-text">jQuery UI</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#SUI"><span class="nav-number">3.4.</span> <span class="nav-text">SUI</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#ZUI"><span class="nav-number">3.5.</span> <span class="nav-text">ZUI</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Plane-UI"><span class="nav-number">3.6.</span> <span class="nav-text">Plane UI</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Semantic-UI"><span class="nav-number">3.7.</span> <span class="nav-text">Semantic UI</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#materialize"><span class="nav-number">3.8.</span> <span class="nav-text">materialize</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#ElementUI-（Vue）"><span class="nav-number">3.9.</span> <span class="nav-text">ElementUI （Vue）</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#iviewui-（Vue）"><span class="nav-number">3.10.</span> <span class="nav-text">iviewui （Vue）</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#ANT-DESIGN-React"><span class="nav-number">3.11.</span> <span class="nav-text">ANT DESIGN (React)</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#MDUI"><span class="nav-number">3.12.</span> <span class="nav-text">MDUI</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Amaze-UI-React-React"><span class="nav-number">3.13.</span> <span class="nav-text">Amaze UI React (React)</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Layui"><span class="nav-number">3.14.</span> <span class="nav-text">Layui</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#UIkit"><span class="nav-number">3.15.</span> <span class="nav-text">UIkit</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Vuetify-Vue"><span class="nav-number">3.16.</span> <span class="nav-text">Vuetify (Vue)</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Semantic-UI-React-React"><span class="nav-number">3.17.</span> <span class="nav-text">Semantic UI React(React)</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#element-react-React"><span class="nav-number">3.18.</span> <span class="nav-text">element-react (React)</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#element-angular-angular"><span class="nav-number">3.19.</span> <span class="nav-text">element-angular (angular)</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#NG-ZORRO-angular"><span class="nav-number">3.20.</span> <span class="nav-text">NG-ZORRO (angular)</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#3-PC-amp-移动端"><span class="nav-number">4.</span> <span class="nav-text">3 PC &amp; 移动端</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#3-1-ZanUI-Vue"><span class="nav-number">4.1.</span> <span class="nav-text">3.1 ZanUI (Vue)</span></a></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2018</span>
+  <span class="with-love">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">王端端</span>
+
+  
+</div>
+
+
+  <div class="powered-by">由 <a class="theme-link" target="_blank" rel="external nofollow" href="https://hexo.io">Hexo</a> 强力驱动</div>
+
+
+
+  <span class="post-meta-divider">|</span>
+
+
+
+  <div class="theme-info">主题 &mdash; <a class="theme-link" target="_blank" rel="external nofollow" href="https://github.com/iissnan/hexo-theme-next">NexT.Mist</a> v5.1.4</div>
+
+
+
+
+        
+<div class="busuanzi-count">
+  <script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+  
+    <span class="site-uv">
+      <i class="fa fa-user"></i>
+      <span class="busuanzi-value" id="busuanzi_value_site_uv"></span>
+      
+    </span>
+  
+
+  
+    <span class="site-pv">
+      <i class="fa fa-eye"></i>
+      <span class="busuanzi-value" id="busuanzi_value_site_pv"></span>
+      
+    </span>
+  
+</div>
+
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.4"></script>
+
+
+
+  
+  
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+    <script type="text/javascript">
+      (function(d, s) {
+        var j, e = d.getElementsByTagName(s)[0];
+        if (typeof LivereTower === 'function') { return; }
+        j = d.createElement(s);
+        j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
+        j.async = true;
+        e.parentNode.insertBefore(j, e);
+      })(document, 'script');
+    </script>
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  <script type="text/javascript">
+    // Popup Window;
+    var isfetched = false;
+    var isXml = true;
+    // Search DB path;
+    var search_path = "search.xml";
+    if (search_path.length === 0) {
+      search_path = "search.xml";
+    } else if (/json$/i.test(search_path)) {
+      isXml = false;
+    }
+    var path = "/" + search_path;
+    // monitor main search box;
+
+    var onPopupClose = function (e) {
+      $('.popup').hide();
+      $('#local-search-input').val('');
+      $('.search-result-list').remove();
+      $('#no-result').remove();
+      $(".local-search-pop-overlay").remove();
+      $('body').css('overflow', '');
+    }
+
+    function proceedsearch() {
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay"></div>')
+        .css('overflow', 'hidden');
+      $('.search-popup-overlay').click(onPopupClose);
+      $('.popup').toggle();
+      var $localSearchInput = $('#local-search-input');
+      $localSearchInput.attr("autocapitalize", "none");
+      $localSearchInput.attr("autocorrect", "off");
+      $localSearchInput.focus();
+    }
+
+    // search function;
+    var searchFunc = function(path, search_id, content_id) {
+      'use strict';
+
+      // start loading animation
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay">' +
+          '<div id="search-loading-icon">' +
+          '<i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>' +
+          '</div>' +
+          '</div>')
+        .css('overflow', 'hidden');
+      $("#search-loading-icon").css('margin', '20% auto 0 auto').css('text-align', 'center');
+
+      $.ajax({
+        url: path,
+        dataType: isXml ? "xml" : "json",
+        async: true,
+        success: function(res) {
+          // get the contents from search data
+          isfetched = true;
+          $('.popup').detach().appendTo('.header-inner');
+          var datas = isXml ? $("entry", res).map(function() {
+            return {
+              title: $("title", this).text(),
+              content: $("content",this).text(),
+              url: $("url" , this).text()
+            };
+          }).get() : res;
+          var input = document.getElementById(search_id);
+          var resultContent = document.getElementById(content_id);
+          var inputEventFunction = function() {
+            var searchText = input.value.trim().toLowerCase();
+            var keywords = searchText.split(/[\s\-]+/);
+            if (keywords.length > 1) {
+              keywords.push(searchText);
+            }
+            var resultItems = [];
+            if (searchText.length > 0) {
+              // perform local searching
+              datas.forEach(function(data) {
+                var isMatch = false;
+                var hitCount = 0;
+                var searchTextCount = 0;
+                var title = data.title.trim();
+                var titleInLowerCase = title.toLowerCase();
+                var content = data.content.trim().replace(/<[^>]+>/g,"");
+                var contentInLowerCase = content.toLowerCase();
+                var articleUrl = decodeURIComponent(data.url);
+                var indexOfTitle = [];
+                var indexOfContent = [];
+                // only match articles with not empty titles
+                if(title != '') {
+                  keywords.forEach(function(keyword) {
+                    function getIndexByWord(word, text, caseSensitive) {
+                      var wordLen = word.length;
+                      if (wordLen === 0) {
+                        return [];
+                      }
+                      var startPosition = 0, position = [], index = [];
+                      if (!caseSensitive) {
+                        text = text.toLowerCase();
+                        word = word.toLowerCase();
+                      }
+                      while ((position = text.indexOf(word, startPosition)) > -1) {
+                        index.push({position: position, word: word});
+                        startPosition = position + wordLen;
+                      }
+                      return index;
+                    }
+
+                    indexOfTitle = indexOfTitle.concat(getIndexByWord(keyword, titleInLowerCase, false));
+                    indexOfContent = indexOfContent.concat(getIndexByWord(keyword, contentInLowerCase, false));
+                  });
+                  if (indexOfTitle.length > 0 || indexOfContent.length > 0) {
+                    isMatch = true;
+                    hitCount = indexOfTitle.length + indexOfContent.length;
+                  }
+                }
+
+                // show search results
+
+                if (isMatch) {
+                  // sort index by position of keyword
+
+                  [indexOfTitle, indexOfContent].forEach(function (index) {
+                    index.sort(function (itemLeft, itemRight) {
+                      if (itemRight.position !== itemLeft.position) {
+                        return itemRight.position - itemLeft.position;
+                      } else {
+                        return itemLeft.word.length - itemRight.word.length;
+                      }
+                    });
+                  });
+
+                  // merge hits into slices
+
+                  function mergeIntoSlice(text, start, end, index) {
+                    var item = index[index.length - 1];
+                    var position = item.position;
+                    var word = item.word;
+                    var hits = [];
+                    var searchTextCountInSlice = 0;
+                    while (position + word.length <= end && index.length != 0) {
+                      if (word === searchText) {
+                        searchTextCountInSlice++;
+                      }
+                      hits.push({position: position, length: word.length});
+                      var wordEnd = position + word.length;
+
+                      // move to next position of hit
+
+                      index.pop();
+                      while (index.length != 0) {
+                        item = index[index.length - 1];
+                        position = item.position;
+                        word = item.word;
+                        if (wordEnd > position) {
+                          index.pop();
+                        } else {
+                          break;
+                        }
+                      }
+                    }
+                    searchTextCount += searchTextCountInSlice;
+                    return {
+                      hits: hits,
+                      start: start,
+                      end: end,
+                      searchTextCount: searchTextCountInSlice
+                    };
+                  }
+
+                  var slicesOfTitle = [];
+                  if (indexOfTitle.length != 0) {
+                    slicesOfTitle.push(mergeIntoSlice(title, 0, title.length, indexOfTitle));
+                  }
+
+                  var slicesOfContent = [];
+                  while (indexOfContent.length != 0) {
+                    var item = indexOfContent[indexOfContent.length - 1];
+                    var position = item.position;
+                    var word = item.word;
+                    // cut out 100 characters
+                    var start = position - 20;
+                    var end = position + 80;
+                    if(start < 0){
+                      start = 0;
+                    }
+                    if (end < position + word.length) {
+                      end = position + word.length;
+                    }
+                    if(end > content.length){
+                      end = content.length;
+                    }
+                    slicesOfContent.push(mergeIntoSlice(content, start, end, indexOfContent));
+                  }
+
+                  // sort slices in content by search text's count and hits' count
+
+                  slicesOfContent.sort(function (sliceLeft, sliceRight) {
+                    if (sliceLeft.searchTextCount !== sliceRight.searchTextCount) {
+                      return sliceRight.searchTextCount - sliceLeft.searchTextCount;
+                    } else if (sliceLeft.hits.length !== sliceRight.hits.length) {
+                      return sliceRight.hits.length - sliceLeft.hits.length;
+                    } else {
+                      return sliceLeft.start - sliceRight.start;
+                    }
+                  });
+
+                  // select top N slices in content
+
+                  var upperBound = parseInt('1');
+                  if (upperBound >= 0) {
+                    slicesOfContent = slicesOfContent.slice(0, upperBound);
+                  }
+
+                  // highlight title and content
+
+                  function highlightKeyword(text, slice) {
+                    var result = '';
+                    var prevEnd = slice.start;
+                    slice.hits.forEach(function (hit) {
+                      result += text.substring(prevEnd, hit.position);
+                      var end = hit.position + hit.length;
+                      result += '<b class="search-keyword">' + text.substring(hit.position, end) + '</b>';
+                      prevEnd = end;
+                    });
+                    result += text.substring(prevEnd, slice.end);
+                    return result;
+                  }
+
+                  var resultItem = '';
+
+                  if (slicesOfTitle.length != 0) {
+                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + highlightKeyword(title, slicesOfTitle[0]) + "</a>";
+                  } else {
+                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + title + "</a>";
+                  }
+
+                  slicesOfContent.forEach(function (slice) {
+                    resultItem += "<a href='" + articleUrl + "'>" +
+                      "<p class=\"search-result\">" + highlightKeyword(content, slice) +
+                      "...</p>" + "</a>";
+                  });
+
+                  resultItem += "</li>";
+                  resultItems.push({
+                    item: resultItem,
+                    searchTextCount: searchTextCount,
+                    hitCount: hitCount,
+                    id: resultItems.length
+                  });
+                }
+              })
+            };
+            if (keywords.length === 1 && keywords[0] === "") {
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-search fa-5x" /></div>'
+            } else if (resultItems.length === 0) {
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-frown-o fa-5x" /></div>'
+            } else {
+              resultItems.sort(function (resultLeft, resultRight) {
+                if (resultLeft.searchTextCount !== resultRight.searchTextCount) {
+                  return resultRight.searchTextCount - resultLeft.searchTextCount;
+                } else if (resultLeft.hitCount !== resultRight.hitCount) {
+                  return resultRight.hitCount - resultLeft.hitCount;
+                } else {
+                  return resultRight.id - resultLeft.id;
+                }
+              });
+              var searchResultList = '<ul class=\"search-result-list\">';
+              resultItems.forEach(function (result) {
+                searchResultList += result.item;
+              })
+              searchResultList += "</ul>";
+              resultContent.innerHTML = searchResultList;
+            }
+          }
+
+          if ('auto' === 'auto') {
+            input.addEventListener('input', inputEventFunction);
+          } else {
+            $('.search-icon').click(inputEventFunction);
+            input.addEventListener('keypress', function (event) {
+              if (event.keyCode === 13) {
+                inputEventFunction();
+              }
+            });
+          }
+
+          // remove loading animation
+          $(".local-search-pop-overlay").remove();
+          $('body').css('overflow', '');
+
+          proceedsearch();
+        }
+      });
+    }
+
+    // handle and trigger popup window;
+    $('.popup-trigger').click(function(e) {
+      e.stopPropagation();
+      if (isfetched === false) {
+        searchFunc(path, 'local-search-input', 'local-search-result');
+      } else {
+        proceedsearch();
+      };
+    });
+
+    $('.popup-btn-close').click(onPopupClose);
+    $('.popup').click(function(e){
+      e.stopPropagation();
+    });
+    $(document).on('keyup', function (event) {
+      var shouldDismissSearchPopup = event.which === 27 &&
+        $('.search-popup').is(':visible');
+      if (shouldDismissSearchPopup) {
+        onPopupClose();
+      }
+    });
+  </script>
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+  
+
+  
+
+  
+
+  
+
+</body>
+</html>
