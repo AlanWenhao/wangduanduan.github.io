@@ -4,6 +4,51 @@
 
     
   <url>
+    <loc>https://wdd.js.org/few-simple-rules-for-good-coding-my-15-years-experience.html</loc>
+    <lastmod>2018-02-07T06:04:29.000Z</lastmod>
+    <data>
+        <display>
+        <title>【译】13简单的优秀编码规则（从我15年的经验）</title>
+        <pubTime>2018-02-07T06:03:12.000Z</pubTime>
+        
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>https://wdd.js.org/sort-for-sf.html</loc>
+    <lastmod>2018-02-07T06:01:49.000Z</lastmod>
+    <data>
+        <display>
+        <title>15行代码为segmentfault增加头条文章排序功能</title>
+        <pubTime>2018-02-07T06:00:46.000Z</pubTime>
+        
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>https://wdd.js.org/visual-reading-js-code.html</loc>
+    <lastmod>2018-02-07T05:58:28.000Z</lastmod>
+    <data>
+        <display>
+        <title>可视化交互阅读JS源代码</title>
+        <pubTime>2018-02-07T05:57:25.000Z</pubTime>
+        
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>https://wdd.js.org/chrome-snippets-collect.html</loc>
     <lastmod>2018-02-07T05:55:18.000Z</lastmod>
     <data>
@@ -269,9 +314,9 @@
         <title>Git化文档管理</title>
         <pubTime>2018-02-06T02:52:08.000Z</pubTime>
         
-        <tag>git</tag>
-         
         <tag>未完成</tag>
+         
+        <tag>git</tag>
          
         <tag>gitlab</tag>
          
@@ -425,9 +470,9 @@
         <title>无坚不摧：打造极大提高工作效率的装备库</title>
         <pubTime>2018-02-02T01:24:43.000Z</pubTime>
         
-        <tag>git</tag>
-         
         <tag>未完成</tag>
+         
+        <tag>git</tag>
          
         <tag>gow</tag>
          
@@ -490,9 +535,9 @@
         <title>git合并上游仓库即同步fork后的仓库</title>
         <pubTime>2018-01-31T09:16:44.000Z</pubTime>
         
-        <tag>git</tag>
-         
         <tag>fork</tag>
+         
+        <tag>git</tag>
          
         <tag>合并上游分支</tag>
          
