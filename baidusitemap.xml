@@ -4,6 +4,67 @@
 
     
   <url>
+    <loc>https://wdd.js.org/js-best-practices.html</loc>
+    <lastmod>2018-02-07T01:05:05.000Z</lastmod>
+    <data>
+        <display>
+        <title>我的JavaScript最佳实践</title>
+        <pubTime>2018-01-29T01:16:38.000Z</pubTime>
+        
+        <tag>js</tag>
+         
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>https://wdd.js.org/git-manager-docs.html</loc>
+    <lastmod>2018-02-07T01:04:49.000Z</lastmod>
+    <data>
+        <display>
+        <title>Git化文档管理</title>
+        <pubTime>2018-02-06T02:52:08.000Z</pubTime>
+        
+        <tag>git</tag>
+         
+        <tag>gitlab</tag>
+         
+        <tag>gow</tag>
+         
+        <tag>ConEmu</tag>
+         
+        <tag>未完成</tag>
+         
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>https://wdd.js.org/linux-common-cmds.html</loc>
+    <lastmod>2018-02-06T10:07:22.000Z</lastmod>
+    <data>
+        <display>
+        <title>linux常用命令使用场景总结</title>
+        <pubTime>2018-01-31T01:58:33.000Z</pubTime>
+        
+        <tag>linux</tag>
+         
+        <tag>shell</tag>
+         
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>https://wdd.js.org/2018-reading-plan.html</loc>
     <lastmod>2018-02-06T02:01:28.000Z</lastmod>
     <data>
@@ -28,9 +89,9 @@
         <title>不要成为某个技术的死忠粉</title>
         <pubTime>2018-02-05T03:58:25.000Z</pubTime>
         
-        <tag>idea</tag>
-         
         <tag>未完成</tag>
+         
+        <tag>idea</tag>
          
          
            
@@ -47,9 +108,9 @@
         <title>Think With Stream</title>
         <pubTime>2018-02-05T03:28:59.000Z</pubTime>
         
-        <tag>idea</tag>
-         
         <tag>未完成</tag>
+         
+        <tag>idea</tag>
          
          
            
@@ -123,13 +184,13 @@
         <title>无坚不摧：打造极大提高工作效率的装备库</title>
         <pubTime>2018-02-02T01:24:43.000Z</pubTime>
         
-        <tag>未完成</tag>
-         
         <tag>git</tag>
          
-        <tag>conemu</tag>
-         
         <tag>gow</tag>
+         
+        <tag>未完成</tag>
+         
+        <tag>conemu</tag>
          
          
            
@@ -221,25 +282,6 @@
 
     
     
-    
-  <url>
-    <loc>https://wdd.js.org/linux-common-cmds.html</loc>
-    <lastmod>2018-01-31T02:08:23.000Z</lastmod>
-    <data>
-        <display>
-        <title>linux常用命令使用场景总结</title>
-        <pubTime>2018-01-31T01:58:33.000Z</pubTime>
-        
-        <tag>linux</tag>
-         
-        <tag>shell</tag>
-         
-         
-           
-        </display>
-    </data>
-    </url>
-
     
   <url>
     <loc>https://wdd.js.org/query-string-mds.html</loc>
@@ -509,23 +551,6 @@
         <tag>nodejs</tag>
          
         <tag>docker</tag>
-         
-         
-           
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>https://wdd.js.org/hello-world.html</loc>
-    <lastmod>2018-01-29T06:09:26.000Z</lastmod>
-    <data>
-        <display>
-        <title>我的JavaScript最佳实践</title>
-        <pubTime>2018-01-29T01:16:38.000Z</pubTime>
-        
-        <tag>js</tag>
          
          
            

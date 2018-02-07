@@ -2,6 +2,27 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://wdd.js.org/js-best-practices.html</loc>
+    
+    <lastmod>2018-02-07T01:05:05.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://wdd.js.org/git-manager-docs.html</loc>
+    
+    <lastmod>2018-02-07T01:04:49.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://wdd.js.org/linux-common-cmds.html</loc>
+    
+    <lastmod>2018-02-06T10:07:22.000Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://wdd.js.org/2018-reading-plan.html</loc>
     
     <lastmod>2018-02-06T02:01:28.000Z</lastmod>
@@ -89,13 +110,6 @@
     <loc>https://wdd.js.org//404.html</loc>
     
     <lastmod>2018-01-31T03:48:44.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://wdd.js.org/linux-common-cmds.html</loc>
-    
-    <lastmod>2018-01-31T02:08:23.000Z</lastmod>
     
   </url>
   
@@ -208,13 +222,6 @@
     <loc>https://wdd.js.org/nodejs-alpine-docker.html</loc>
     
     <lastmod>2018-01-29T06:10:55.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://wdd.js.org/hello-world.html</loc>
-    
-    <lastmod>2018-01-29T06:09:26.000Z</lastmod>
     
   </url>
   
