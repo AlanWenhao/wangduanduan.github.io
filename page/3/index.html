@@ -300,6 +300,529 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://wdd.js.org/how-to-write-better-api-docs.html">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="王端端">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="http://p3alsaatj.bkt.clouddn.com/20180129093544_I5Jscb_IMG_1402.jpeg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="洞香春">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/how-to-write-better-api-docs.html" itemprop="url">如何写好接口文档？</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-01-29T22:01:55+08:00">
+                2018-01-29
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+            <div class="post-wordcount">
+              
+                
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">字数统计&#58;</span>
+                
+                <span title="字数统计">
+                  1,431 字
+                </span>
+              
+
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">阅读时长 &asymp;</span>
+                
+                <span title="阅读时长">
+                  5 分钟
+                </span>
+              
+            </div>
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p><img src="http://p394yuy0c.bkt.clouddn.com/20180128223141_GeUnII_Jietu20180128-223059.jpeg" alt=""></p>
+<h1 id="HTTP携带信息的方式"><a href="#HTTP携带信息的方式" class="headerlink" title="HTTP携带信息的方式"></a>HTTP携带信息的方式</h1><ul>
+<li>url</li>
+<li>headers</li>
+<li>body: 包括请求体，响应体</li>
+</ul>
+<h1 id="分离通用信息"><a href="#分离通用信息" class="headerlink" title="分离通用信息"></a>分离通用信息</h1><p>一般来说，headers里的信息都是通用的，可以提前说明，作为默认参数</p>
+<h1 id="路径中的参数表达式"><a href="#路径中的参数表达式" class="headerlink" title="路径中的参数表达式"></a>路径中的参数表达式</h1><p>URL中参数表达式使用<code>{}</code>的形式，参数包裹在大括号之中<code>{paramName}</code></p>
+<p>例如：</p>
+<ul>
+<li><code>/api/user/{userId}</code></li>
+<li><code>/api/user/{userType}?age={age}&amp;gender={gender}</code></li>
+</ul>
+<h1 id="数据模型定义"><a href="#数据模型定义" class="headerlink" title="数据模型定义"></a>数据模型定义</h1><p>数据模型定义包括：</p>
+<ul>
+<li>路径与查询字符串参数模型</li>
+<li>请求体参数模型</li>
+<li>响应体参数模型</li>
+</ul>
+<p>数据模型的最小数据集：</p>
+<ul>
+<li>名称</li>
+<li>是否必须</li>
+<li>说明</li>
+</ul>
+<blockquote>
+<p>“最小数据集”（MDS）是指通过收集最少的数据，较好地掌握一个研究对象所具有的特点或一件事情、一份工作所处的状态，其核心是针对被观察的对象建立起一套精简实用的数据指标。最小数据集的概念起源于美国的医疗领域。最小数据集的产生源于信息交换的需要，就好比上下级质量技术监督部门之间、企业与质量技术监督部门之间、质量技术监督部门与社会公众之间都存在着信息交换的需求。</p>
+</blockquote>
+<p>一些文档里可能会加入字段的类型，但是我认为这是没必要的。以为HTTP传输的数据往往都需要序列化，大部分数据类型都是字符串。一些特殊的类型，例如枚举类型的字符串，可以在说明里描述。</p>
+<p>另外：<code>数据模型非常建议使用表格来表现</code>。</p>
+<p>举个栗子🌰：</p>
+<table>
+<thead>
+<tr>
+<th>名称</th>
+<th>是否必须</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>userType</td>
+<td>是</td>
+<td>用户类型。<code>commom</code>表示普通用户，<code>vip</code>表示vip用户</td>
+</tr>
+<tr>
+<td>age</td>
+<td>否</td>
+<td>用户年龄</td>
+</tr>
+<tr>
+<td>gender</td>
+<td>否</td>
+<td>用户性别。<code>1</code>表示男，<code>0</code>表示女</td>
+</tr>
+</tbody>
+</table>
+<h1 id="请求示例"><a href="#请求示例" class="headerlink" title="请求示例"></a>请求示例</h1><figure class="highlight awk"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="regexp">//</span> general </span><br><span class="line">POST http:<span class="regexp">//</span>www.testapi.com<span class="regexp">/api/u</span>ser</span><br><span class="line"></span><br><span class="line"><span class="regexp">//</span> request payload</span><br><span class="line">&#123;</span><br><span class="line">	<span class="string">"name"</span>: <span class="string">"qianxun"</span>,</span><br><span class="line">	<span class="string">"age"</span>: <span class="number">14</span>,</span><br><span class="line">	<span class="string">"like"</span>: [<span class="string">"music"</span>, <span class="string">"reading"</span>],</span><br><span class="line">	<span class="string">"userType"</span>: <span class="string">"vip"</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="regexp">//</span> response</span><br><span class="line">&#123;</span><br><span class="line">	<span class="string">"id"</span>: <span class="string">"asdkfjalsdkf"</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h1 id="异常处理"><a href="#异常处理" class="headerlink" title="异常处理"></a>异常处理</h1><p>异常处理最小数据集</p>
+<ul>
+<li>状态码</li>
+<li>说明</li>
+<li>解决方案</li>
+</ul>
+<p>举个栗子🌰：</p>
+<table>
+<thead>
+<tr>
+<th>状态码</th>
+<th>说明</th>
+<th>解决方案</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>401</td>
+<td>用户名密码错误</td>
+<td>检查用户名密码是否正确</td>
+</tr>
+<tr>
+<td>424</td>
+<td>超过最大在线数量</td>
+<td>请在控制台修改最大在线数量</td>
+</tr>
+</tbody>
+</table>
+<p>之前我一直不想把解决方案加入异常处理的最小数据集，但是对于很多开发者来说，即使它知道<code>424</code>代表<code>超过最大在线数量</code>。如果你不告诉如果解决这个问题，那么他们可能就会直接来问你。所以最好能够一步到位，直接告诉他应该如何解决，这样省时省力。</p>
+<h1 id="如何组织？"><a href="#如何组织？" class="headerlink" title="如何组织？"></a>如何组织？</h1><h2 id="一个创建用户的例子：创建用户"><a href="#一个创建用户的例子：创建用户" class="headerlink" title="一个创建用户的例子：创建用户"></a>一个创建用户的例子：创建用户</h2><p><strong>1 请求示例</strong><br><figure class="highlight awk"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="regexp">//</span> general </span><br><span class="line">POST http:<span class="regexp">//</span>www.testapi.com<span class="regexp">/api/u</span>ser<span class="regexp">/vip/</span>?token=abcdefg</span><br><span class="line"></span><br><span class="line"><span class="regexp">//</span> request payload</span><br><span class="line">&#123;</span><br><span class="line">	<span class="string">"name"</span>: <span class="string">"qianxun"</span>,</span><br><span class="line">	<span class="string">"age"</span>: <span class="number">14</span>,</span><br><span class="line">	<span class="string">"like"</span>: [<span class="string">"music"</span>, <span class="string">"reading"</span>]</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="regexp">//</span> response</span><br><span class="line">&#123;</span><br><span class="line">	<span class="string">"id"</span>: <span class="string">"asdkfjalsdkf"</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p><strong>2 路径与查询字符串参数模型</strong></p>
+<p><code>POST http://www.testapi.com/api/user/{userType}/?token={token}</code></p>
+<table>
+<thead>
+<tr>
+<th>名称</th>
+<th>是否必须</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>userType</td>
+<td>是</td>
+<td>用户类型。<code>commom</code>表示普通用户，<code>vip</code>表示vip用户</td>
+</tr>
+<tr>
+<td>token</td>
+<td>是</td>
+<td>认证令牌</td>
+</tr>
+</tbody>
+</table>
+<p><strong>3 请求体参数模型</strong></p>
+<table>
+<thead>
+<tr>
+<th>名称</th>
+<th>是否必须</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>name</td>
+<td>是</td>
+<td>用户名。4-50个字符</td>
+</tr>
+<tr>
+<td>age</td>
+<td>否</td>
+<td>年龄</td>
+</tr>
+<tr>
+<td>like</td>
+<td>否</td>
+<td>爱好。最多20个</td>
+</tr>
+</tbody>
+</table>
+<p><strong>4 响应体参数模型</strong></p>
+<table>
+<thead>
+<tr>
+<th>名称</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>id</td>
+<td>用户id</td>
+</tr>
+</tbody>
+</table>
+<p><strong>5 异常处理</strong></p>
+<table>
+<thead>
+<tr>
+<th>状态码</th>
+<th>说明</th>
+<th>解决方案</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>401</td>
+<td>token过期</td>
+<td>请重新申请token</td>
+</tr>
+<tr>
+<td>424</td>
+<td>超过最大在创建人数</td>
+<td>请在控制台修改最大创建人数</td>
+</tr>
+</tbody>
+</table>
+<h2 id="这样组织的原因"><a href="#这样组织的原因" class="headerlink" title="这样组织的原因"></a>这样组织的原因</h2><ol>
+<li><code>请求示例</code>:  请求示例放在第一位的原因是，要用<code>最快的方式</code>告诉开发者，这个接口应该如何请求</li>
+<li><code>路径与查询字符串参数模型</code>： 使用<code>mustache</code>包裹参数</li>
+<li><code>请求体参数模型</code>：如果没有请求体，可以不写</li>
+<li><code>响应体参数模型</code>：</li>
+<li><code>异常处理</code></li>
+</ol>
+<h1 id="文档提供的形式"><a href="#文档提供的形式" class="headerlink" title="文档提供的形式"></a>文档提供的形式</h1><p>文档建议由一下两种形式，<code>在线文档</code>，<code>pdf文档</code>。</p>
+<ul>
+<li><code>在线文档</code><ul>
+<li>更新方便</li>
+<li>易于随时阅读</li>
+<li>易于查找</li>
+</ul>
+</li>
+<li><code>pdf文档</code><ul>
+<li>内容表现始终如一，不依赖文档阅读器</li>
+<li>文档只读，不会被轻易修改</li>
+</ul>
+</li>
+</ul>
+<p>其中由于是面对第三方开发者，<code>公开的在线文档必须提供</code>；由于某些特殊的原因，可能需要提供文件形式的文档，建议提供pdf文档。当然，以下的文档形式是<code>非常不建议</code>提供的：</p>
+<ul>
+<li>word文档</li>
+<li>markdown文档</li>
+</ul>
+<p>word文档和markdown文档有以下缺点：</p>
+<ul>
+<li><code>文档的表现形式非常依赖文档查看器</code>：各个版本的word文档对word的表现形式差异很大，可能在你的电脑上内容表现很好的文档，到别人的电脑上就会一团乱麻；另外markdown文件也是如此。而且markdown中引入文件只能依靠图片链接，如果文档中含有图片，很可能会出现图片丢失的情况。</li>
+<li><code>文档无法只读</code>：文档无法只读，就有可能会被第三方开发者在不经意间修改，那么文档就无法保证其准确性了。</li>
+</ul>
+<p>总结一下，文档形式的要点：</p>
+<ul>
+<li><code>只读性</code>：保证文档不会被开发者轻易修改</li>
+<li><code>一致性</code>：保证文档在不同设备，不同文档查看器上内容表现始终如一</li>
+<li><code>易于版本管理</code>：文档即软件（DAAS:  Document as a Software），一般意义上说<code>软件 = 数据 + 算法</code>,  但是我认为<code>文档也是一种组成软件的重要形式</code>。既然软件需要版本管理，文档的版本管理也是比不可少的。</li>
+</ul>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://wdd.js.org/how-free-server-make-money.html">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="王端端">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="http://p3alsaatj.bkt.clouddn.com/20180129093544_I5Jscb_IMG_1402.jpeg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="洞香春">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/how-free-server-make-money.html" itemprop="url">免费服务的盈利模式</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-01-29T21:58:58+08:00">
+                2018-01-29
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+            <div class="post-wordcount">
+              
+                
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">字数统计&#58;</span>
+                
+                <span title="字数统计">
+                  120 字
+                </span>
+              
+
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">阅读时长 &asymp;</span>
+                
+                <span title="阅读时长">
+                  1 分钟
+                </span>
+              
+            </div>
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p>免费产品的盈利模式有四种</p>
+<ol>
+<li><p>投放广告</p>
+</li>
+<li><p>增值服务：先把羊养肥，再慢慢割羊毛，现在大部分都是互联网服务都是这种</p>
+</li>
+<li><p>交叉补贴:  A服务免费，再用户使用A服务时，通过提供B服务来盈利</p>
+</li>
+<li><p>零边际成本：免费提供A服务，但是用户需要用物品去交换A服务，服务提供者通过加工物品来盈利</p>
+</li>
+</ol>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="https://wdd.js.org/ztree-note.html">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -1677,417 +2200,6 @@
 
 
     
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://wdd.js.org/browser-events.html">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="王端端">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="http://p3alsaatj.bkt.clouddn.com/20180129093544_I5Jscb_IMG_1402.jpeg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="洞香春">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/browser-events.html" itemprop="url">不常用却很有妙用的事件及方法</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-01-29T14:15:25+08:00">
-                2018-01-29
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-            <div class="post-wordcount">
-              
-                
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-file-word-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">字数统计&#58;</span>
-                
-                <span title="字数统计">
-                  538 字
-                </span>
-              
-
-              
-                <span class="post-meta-divider">|</span>
-              
-
-              
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-clock-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">阅读时长 &asymp;</span>
-                
-                <span title="阅读时长">
-                  2 分钟
-                </span>
-              
-            </div>
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <h1 id="visibilitychange事件"><a href="#visibilitychange事件" class="headerlink" title="visibilitychange事件"></a><a href="https://developer.mozilla.org/zh-CN/docs/Web/Events/visibilitychange" target="_blank" rel="noopener">visibilitychange事件</a></h1><p>触发条件：<code>浏览器标签页被隐藏或显示的时候会触发visibilitychange事件.</code></p>
-<p>使用场景：<code>当标签页显示或者隐藏时，触发一些业务逻辑</code></p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">document</span>.addEventListener(<span class="string">"visibilitychange"</span>, <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">  <span class="built_in">console</span>.log( <span class="built_in">document</span>.visibilityState );</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
-<h1 id="storage事件"><a href="#storage事件" class="headerlink" title="storage事件"></a><a href="https://developer.mozilla.org/en-US/docs/Web/Events/storage" target="_blank" rel="noopener">storage事件</a></h1><p>触发条件：<code>使用localStorage or sessionStorage存储或者修改某个本地存储时</code></p>
-<p>使用场景：<code>标签页间通信</code></p>
-<figure class="highlight 1c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// AB页面同源</span></span><br><span class="line"><span class="comment">// 在A 页面</span></span><br><span class="line">window.addEventListener('storage', (e) =&gt; &#123;console.<span class="built_in">log</span>(e)&#125;)</span><br><span class="line"></span><br><span class="line"><span class="comment">// 在B 页面，向120打个电话</span></span><br><span class="line">localStorage.setItem('makeCall','120')</span><br><span class="line"></span><br><span class="line"><span class="comment">// 然后可以在A页面间有输出, 可以看出A页面 收到了B页面的通知</span></span><br><span class="line">...key: <span class="string">"makeCall"</span>, oldValue: <span class="string">"119"</span>, newValue: <span class="string">"120"</span>, ...</span><br></pre></td></tr></table></figure>
-<h1 id="beforeunload事件"><a href="#beforeunload事件" class="headerlink" title="beforeunload事件"></a><a href="https://developer.mozilla.org/en-US/docs/Web/Events/beforeunload" target="_blank" rel="noopener">beforeunload事件</a></h1><p>触发条件：<code>当页面的资源将要卸载(及刷新或者关闭标签页前). 当页面依然可见，并且该事件可以被取消只时</code></p>
-<p>使用场景：<code>关闭或者刷新页面时弹窗确认</code>，<code>关闭页面时向后端发送报告等</code></p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">window</span>.addEventListener(<span class="string">"beforeunload"</span>, <span class="function"><span class="keyword">function</span> (<span class="params">e</span>) </span>&#123;</span><br><span class="line">  <span class="keyword">var</span> confirmationMessage = <span class="string">"\o/"</span>;</span><br><span class="line"></span><br><span class="line">  e.returnValue = confirmationMessage;     <span class="comment">// Gecko, Trident, Chrome 34+</span></span><br><span class="line">  <span class="keyword">return</span> confirmationMessage;              <span class="comment">// Gecko, WebKit, Chrome &lt;34</span></span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
-<h1 id="navigator-sendBeacon"><a href="#navigator-sendBeacon" class="headerlink" title="navigator.sendBeacon"></a><a href="https://developer.mozilla.org/zh-CN/docs/Web/API/Navigator/sendBeacon" target="_blank" rel="noopener">navigator.sendBeacon</a></h1><p>这个方法主要用于满足 统计和诊断代码 的需要，这些代码通常尝试在卸载（unload）文档之前向web服务器发送数据。过早的发送数据可能导致错过收集数据的机会。然而， 对于开发者来说保证在文档卸载期间发送数据一直是一个困难。因为用户代理通常会忽略在卸载事件处理器中产生的异步 XMLHttpRequest 。</p>
-<p>使用 sendBeacon() 方法，将会使用户代理在有机会时异步地向服务器发送数据，同时不会延迟页面的卸载或影响下一导航的载入性能。这就解决了提交分析数据时的所有的问题：使它可靠，异步并且不会影响下一页面的加载。此外，代码实际上还要比其他技术简单！</p>
-<p><code>注意：该方法在IE和safari没有实现</code></p>
-<p>使用场景：<code>发送崩溃报告</code></p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">window</span>.addEventListener(<span class="string">'unload'</span>, logData, <span class="literal">false</span>);</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">logData</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">    navigator.sendBeacon(<span class="string">"/log"</span>, analyticsData);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://wdd.js.org/nodejs-server-frameworks.html">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="王端端">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="http://p3alsaatj.bkt.clouddn.com/20180129093544_I5Jscb_IMG_1402.jpeg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="洞香春">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/nodejs-server-frameworks.html" itemprop="url">Nodejs 服务端框架合集(78个)</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-01-29T14:13:44+08:00">
-                2018-01-29
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-            <div class="post-wordcount">
-              
-                
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-file-word-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">字数统计&#58;</span>
-                
-                <span title="字数统计">
-                  295 字
-                </span>
-              
-
-              
-                <span class="post-meta-divider">|</span>
-              
-
-              
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-clock-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">阅读时长 &asymp;</span>
-                
-                <span title="阅读时长">
-                  1 分钟
-                </span>
-              
-            </div>
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <blockquote>
-<p>没有什么事情是一个框架解决不了的，如果有，就再找一个。</p>
-</blockquote>
-<p><img src="http://p3alsaatj.bkt.clouddn.com/20180129141430_C2s0Wc_Screenshot.jpeg" alt=""></p>
-<p>Photo by 贝莉儿 NG on Unsplash</p>
-<h1 id="1-MVC-frameworks"><a href="#1-MVC-frameworks" class="headerlink" title="1 MVC frameworks"></a>1 MVC frameworks</h1><h1 id="1-1-Sinatra-like"><a href="#1-1-Sinatra-like" class="headerlink" title="1.1 Sinatra-like"></a>1.1 Sinatra-like</h1><p><code>这些框架提供了丰富的配置，比Rails-like或full-stack少。</code></p>
-<ul>
-<li><a href="http://expressjs.com/" target="_blank" rel="noopener">Express</a></li>
-<li><a href="http://hapijs.com/" target="_blank" rel="noopener">hapi</a></li>
-<li><a href="http://flatironjs.org/" target="_blank" rel="noopener">flatiron</a></li>
-<li><a href="http://locomotivejs.org/" target="_blank" rel="noopener">locomotive</a></li>
-<li><a href="http://www.totaljs.com" target="_blank" rel="noopener">total.js</a></li>
-<li><a href="http://koajs.com/" target="_blank" rel="noopener">koa.js</a></li>
-<li><a href="http://twee.io/" target="_blank" rel="noopener">TWEE.IO</a></li>
-<li><a href="http://dietjs.com/" target="_blank" rel="noopener"> diet.js </a></li>
-<li><a href="https://flickerstudio.github.io/flickerjs" target="_blank" rel="noopener">Flicker.js</a></li>
-<li><a href="https://github.com/zinkyJS/zinky" target="_blank" rel="noopener">ZinkyJS</a></li>
-</ul>
-<h2 id="1-2-Rails-like"><a href="#1-2-Rails-like" class="headerlink" title="1.2 Rails-like"></a>1.2 Rails-like</h2><p><code>正确呈现您的项目。从包含的模板创建自己的艺术</code></p>
-<ul>
-<li><a href="http://nodaljs.com/" target="_blank" rel="noopener">Nodal</a></li>
-<li><a href="http://strapi.io/" target="_blank" rel="noopener">Strapi</a></li>
-<li><a href="http://compoundjs.com/" target="_blank" rel="noopener">CompoundJS</a></li>
-<li><a href="http://geddyjs.org/" target="_blank" rel="noopener">geddy</a></li>
-<li><a href="http://sailsjs.org/" target="_blank" rel="noopener">Sails.js</a></li>
-<li><a href="http://adonisjs.com" target="_blank" rel="noopener">Adonis</a></li>
-<li><a href="http://rhapsodyjs.github.io/" target="_blank" rel="noopener">RhapsodyJS</a></li>
-<li><a href="https://thinkjs.org/" target="_blank" rel="noopener">ThinkJS</a></li>
-<li><a href="http://www.trailsjs.io/" target="_blank" rel="noopener">Trails</a></li>
-<li><a href="http://kambojajs.com/" target="_blank" rel="noopener">KambojaJS</a></li>
-<li><a href="http://js-web-framework.com/" target="_blank" rel="noopener">JS-Web</a></li>
-</ul>
-<h1 id="2-Full-stack-frameworks"><a href="#2-Full-stack-frameworks" class="headerlink" title="2 Full-stack frameworks"></a>2 Full-stack frameworks</h1><p><code>这就是Node.js真正闪耀的地方。全栈MVC框架与脚手架，模板引擎，websocket和持久性库捆绑在一起，允许您构建实时可伸缩的Web应用程序。</code></p>
-<ul>
-<li><a href="http://catberry.org/" target="_blank" rel="noopener">Catberry.js</a></li>
-<li><a href="http://allcountjs.com" target="_blank" rel="noopener">AllcountJS</a></li>
-<li><a href="http://derbyjs.com" target="_blank" rel="noopener">Derby</a></li>
-<li><a href="http://feathersjs.com/" target="_blank" rel="noopener">Feathers</a></li>
-<li><a href="http://socketcluster.io/" target="_blank" rel="noopener">SocketCluster</a></li>
-<li><a href="http://socketstream.org" target="_blank" rel="noopener">SocketStream</a></li>
-<li><a href="http://meanjs.org/" target="_blank" rel="noopener">MEAN.js</a></li>
-<li><a href="http://mean.io/" target="_blank" rel="noopener">MEAN.io</a></li>
-<li><a href="http://meteor.com/" target="_blank" rel="noopener">Meteor</a></li>
-<li><a href="https://github.com/mattkrick/meatier" target="_blank" rel="noopener">Meatier</a></li>
-<li><a href="http://twee.io/" target="_blank" rel="noopener">TWEE.IO</a></li>
-<li><a href="http://developer.yahoo.com/cocktails/mojito/" target="_blank" rel="noopener">Mojito</a></li>
-<li><a href="http://seedsjs.com/" target="_blank" rel="noopener">Seeds.js</a></li>
-<li><a href="http://sanestack.com/" target="_blank" rel="noopener">SANE</a></li>
-<li><a href="http://coke-js.org" target="_blank" rel="noopener">COKE</a></li>
-<li><a href="http://sleekjs.com/" target="_blank" rel="noopener">Sleekjs</a></li>
-<li><a href="https://github.com/gnodi/danf" target="_blank" rel="noopener">Danf</a></li>
-<li><a href="http://catberry.org" target="_blank" rel="noopener">Catberry</a></li>
-<li><a href="http://nukejs.com/" target="_blank" rel="noopener">Nuke.js</a></li>
-<li><a href="http://wejs.org" target="_blank" rel="noopener">We.js</a></li>
-<li><a href="http://senecajs.org" target="_blank" rel="noopener">seneca.js</a></li>
-<li><a href="http://keystonejs.com/" target="_blank" rel="noopener">Keystone.js</a></li>
-<li><a href="http://horizon.io" target="_blank" rel="noopener">Horizon</a></li>
-<li><a href="https://apogeu.github.io/" target="_blank" rel="noopener">Apogeu</a></li>
-</ul>
-<h1 id="3-REST-API-frameworks"><a href="#3-REST-API-frameworks" class="headerlink" title="3 REST API frameworks"></a>3 REST API frameworks</h1><p><code>对于那些使用富客户端/前端MVC框架（或不）的客户，只需要启动一个快速的Node.js REST API服务器即可。</code></p>
-<ul>
-<li><a href="http://ivyframework.com" target="_blank" rel="noopener">Ivy</a></li>
-<li><a href="https://github.com/restocat/restocat" target="_blank" rel="noopener">Restocat</a></li>
-<li><a href="http://actionherojs.com/" target="_blank" rel="noopener">actionHero.js</a></li>
-<li><a href="http://frisbyjs.com/" target="_blank" rel="noopener">Frisby</a></li>
-<li><a href="https://github.com/lucasfeliciano/restling" target="_blank" rel="noopener">restling</a></li>
-<li><a href="http://mcavage.github.io/node-restify/" target="_blank" rel="noopener">restify</a></li>
-<li><a href="https://github.com/keithnlarsen/restmvc.js" target="_blank" rel="noopener">restmvc</a></li>
-<li><a href="http://percolatorjs.com" target="_blank" rel="noopener">percolator</a></li>
-<li><a href="http://loopback.io/" target="_blank" rel="noopener">LoopBack</a></li>
-<li><a href="http://fortunejs.com" target="_blank" rel="noopener">Fortune.js</a></li>
-<li><a href="http://facet.github.io" target="_blank" rel="noopener">facet</a></li>
-<li><a href="http://getraddish.com" target="_blank" rel="noopener">Raddish</a></li>
-<li><a href="http://restberry.com" target="_blank" rel="noopener">Restberry</a></li>
-<li><a href="http://pliik.github.io/gugamarket/" target="_blank" rel="noopener">Gugamarket</a></li>
-<li><a href="https://kamilmysliwiec.gitbooks.io/nest/" target="_blank" rel="noopener">Nest</a></li>
-<li><a href="https://borislemke.gitbooks.io/microlet/" target="_blank" rel="noopener">microlet</a></li>
-<li><a href="https://moleculer.services/" target="_blank" rel="noopener">Moleculer</a></li>
-</ul>
-<h1 id="4-Other-libraries"><a href="#4-Other-libraries" class="headerlink" title="4 Other libraries"></a>4 Other libraries</h1><p><code>中间件，库和静态站点生成器。</code></p>
-<ul>
-<li><a href="http://www.senchalabs.org/connect/" target="_blank" rel="noopener">Connect</a></li>
-<li><a href="http://krakenjs.com/" target="_blank" rel="noopener">Kraken</a></li>
-<li><a href="https://github.com/robtweed/ewdGateway2" target="_blank" rel="noopener">ewdGateway2</a></li>
-<li><a href="https://github.com/jnordberg/wintersmith" target="_blank" rel="noopener">Wintersmith</a></li>
-<li><a href="http://docpad.org" target="_blank" rel="noopener">docpad</a></li>
-<li><a href="http://blacksmith.jit.su/" target="_blank" rel="noopener">Blacksmith</a></li>
-<li><a href="https://github.com/felixge/node-romulus" target="_blank" rel="noopener">romulus</a></li>
-<li><a href="https://github.com/caolan/petrify" target="_blank" rel="noopener">Petrify</a></li>
-<li><a href="http://tower.github.io" target="_blank" rel="noopener">Tower.js</a></li>
-<li><a href="https://github.com/tshemsedinov/impress" target="_blank" rel="noopener">Impress</a></li>
-<li><a href="https://github.com/rendrjs/rendr" target="_blank" rel="noopener">Rendr</a></li>
-<li><a href="https://github.com/mklabs/backnode" target="_blank" rel="noopener">Backnode</a></li>
-<li><a href="http://sequelizejs.com/" target="_blank" rel="noopener">Sequelize</a></li>
-<li><a href="http://cylonjs.com/" target="_blank" rel="noopener">Cylon.js</a></li>
-<li><a href="http://icemobilelab.github.io/virgilio/" target="_blank" rel="noopener">Virgilio.js</a></li>
-<li><a href="https://shps.io" target="_blank" rel="noopener">SHPS</a></li>
-</ul>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
   </section>
 
   
@@ -2142,7 +2254,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">38</span>
+                  <span class="site-state-item-count">40</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -2155,7 +2267,7 @@
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">51</span>
+                  <span class="site-state-item-count">54</span>
                   <span class="site-state-item-name">标签</span>
                 </a>
               </div>
