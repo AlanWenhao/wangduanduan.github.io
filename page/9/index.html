@@ -86,7 +86,7 @@
 <meta name="keywords" content="王端端, 洞香春, wellClient">
 <meta property="og:type" content="website">
 <meta property="og:title" content="洞香春">
-<meta property="og:url" content="https://wdd.js.org/index.html">
+<meta property="og:url" content="https://wdd.js.org/page/9/index.html">
 <meta property="og:site_name" content="洞香春">
 <meta property="og:description" content="前端，后端，炒菜，摄影，读书，收集工具">
 <meta property="og:locale" content="zh-Hans">
@@ -122,7 +122,7 @@
 
 
 
-  <link rel="canonical" href="https://wdd.js.org/"/>
+  <link rel="canonical" href="https://wdd.js.org/page/9/"/>
 
 
 
@@ -300,7 +300,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://wdd.js.org/debug-nodejs-in-chrome-devtool.html">
+    <link itemprop="mainEntityOfPage" href="https://wdd.js.org/centos7-service-manager.html">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="王端端">
@@ -319,7 +319,7 @@
         
           <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/debug-nodejs-in-chrome-devtool.html" itemprop="url">直接在Chrome DevTools调试Node.js</a></h1>
+                <a class="post-title-link" href="/centos7-service-manager.html" itemprop="url">centos7 服务管理指令</a></h1>
         
 
         <div class="post-meta">
@@ -331,8 +331,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-02-07T14:15:43+08:00">
-                2018-02-07
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-01-29T21:40:36+08:00">
+                2018-01-29
               </time>
             
 
@@ -363,7 +363,7 @@
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  217 字
+                  70 字
                 </span>
               
 
@@ -402,26 +402,44 @@
       
         
           
-            <p>英文好的，直接看原文</p>
-<blockquote>
-<p><a href="https://blog.hospodarets.com/nodejs-debugging-in-chrome-devtools" target="_blank" rel="noopener">https://blog.hospodarets.com/nodejs-debugging-in-chrome-devtools</a></p>
-</blockquote>
-<h1 id="要求"><a href="#要求" class="headerlink" title="要求"></a>要求</h1><ul>
-<li>Node.js 6.3+</li>
-<li>Chrome 55+</li>
-</ul>
-<h1 id="操作步骤"><a href="#操作步骤" class="headerlink" title="操作步骤"></a>操作步骤</h1><ul>
-<li>1 打开连接 <code>chrome://flags/#enable-devtools-experiments</code></li>
-<li>2 开启<code>开发者工具实验性功能</code> </li>
-<li>3 重启浏览器</li>
-<li>4 打开 DevTools Setting -&gt; Experiments tab</li>
-<li>5 按6次shift后，隐藏的功能会出现，勾选”Node debugging”</li>
-</ul>
-<p><img src="http://p3alsaatj.bkt.clouddn.com/20180207141627_9HT0nS_Screenshot.jpeg" alt=""></p>
-<p><img src="http://p3alsaatj.bkt.clouddn.com/20180207141636_hIfIyG_Screenshot.jpeg" alt=""></p>
-<h1 id="运行程序"><a href="#运行程序" class="headerlink" title="运行程序"></a>运行程序</h1><p>必须要有 <code>--inspect</code><br><figure class="highlight vhdl"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">&gt; node <span class="comment">--inspect www</span></span><br><span class="line">Debugger listening <span class="keyword">on</span> <span class="keyword">port</span> <span class="number">9229</span>.</span><br><span class="line"><span class="literal">Warning</span>: This <span class="keyword">is</span> an experimental feature <span class="keyword">and</span> could change at any <span class="built_in">time</span>.</span><br><span class="line"><span class="keyword">To</span> start debugging, <span class="keyword">open</span> the following URL <span class="keyword">in</span> Chrome:</span><br><span class="line">    chrome-devtools://devtools/remote/serve_file/@<span class="number">60</span>cd6e859b9f557d2312f5bf532f6aec5f284980/inspector.html?experiments=<span class="literal">true</span>&amp;v8only=<span class="literal">true</span>&amp;ws=localhost:<span class="number">9229</span>/<span class="number">78</span>a884f4-<span class="number">8</span>c2e-<span class="number">459e-93</span>f7-e1cbe87cf5cf</span><br></pre></td></tr></table></figure></p>
-<p>将这个地址粘贴到谷歌浏览器：<code>chrome-devtools://devtools/remote/serve_file/@60cd6e859b9f557d2312f5bf532f6aec5f284980/inspector.html?experiments=true&amp;v8only=true&amp;ws=localhost:9229/78a884f4-8c2e-459e-93f7-e1cbe87cf5cf</code></p>
-<p>程序后端输出的日志也回输出到谷歌浏览器的console里面，同时也可以在Sources里进行断点调试了。<br><img src="http://p3alsaatj.bkt.clouddn.com/20180207141649_ArMyV7_Screenshot.jpeg" alt=""></p>
+            <table>
+<thead>
+<tr>
+<th>功能</th>
+<th>命令</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>使服务开启启动</td>
+<td>systemctl enable httpd.service</td>
+</tr>
+<tr>
+<td>关闭服务开机启动</td>
+<td>systemctl disabled httpd.service</td>
+</tr>
+<tr>
+<td>检查服务状态</td>
+<td>systemctl status httpd.service</td>
+</tr>
+<tr>
+<td>查看所有已启动的服务</td>
+<td>systemctl list-units –type=service</td>
+</tr>
+<tr>
+<td>启动服务</td>
+<td>systemctl start httpd.service</td>
+</tr>
+<tr>
+<td>停止服务</td>
+<td>systemctl stop httpd.service</td>
+</tr>
+<tr>
+<td>重启服务</td>
+<td>systemctl restart httpd.service</td>
+</tr>
+</tbody>
+</table>
 
           
         
@@ -470,7 +488,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://wdd.js.org/top-11-javascript-libraries-are-worth-your-attention.html">
+    <link itemprop="mainEntityOfPage" href="https://wdd.js.org/csta-call-model-overview.html">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="王端端">
@@ -489,7 +507,7 @@
         
           <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/top-11-javascript-libraries-are-worth-your-attention.html" itemprop="url">12个值得关注的顶级JS库</a></h1>
+                <a class="post-title-link" href="/csta-call-model-overview.html" itemprop="url">CSTA 呼叫模型简介</a></h1>
         
 
         <div class="post-meta">
@@ -501,8 +519,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-02-07T14:08:10+08:00">
-                2018-02-07
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-01-29T21:35:24+08:00">
+                2018-01-29
               </time>
             
 
@@ -533,7 +551,7 @@
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  1,779 字
+                  669 字
                 </span>
               
 
@@ -549,7 +567,409 @@
                   <span class="post-meta-item-text">阅读时长 &asymp;</span>
                 
                 <span title="阅读时长">
-                  6 分钟
+                  3 分钟
+                </span>
+              
+            </div>
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h1 id="内容概要"><a href="#内容概要" class="headerlink" title="内容概要"></a>内容概要</h1><ul>
+<li>CSTA协议与标准概述</li>
+<li>CSTA OpenScape 语音架构概述</li>
+</ul>
+<h1 id="CSTA协议标准"><a href="#CSTA协议标准" class="headerlink" title="CSTA协议标准"></a>CSTA协议标准</h1><h2 id="什么是CSTA"><a href="#什么是CSTA" class="headerlink" title="什么是CSTA ?"></a>什么是CSTA ?</h2><ul>
+<li>CSTA：电脑支持通讯程序(Computer Supported TelecommunicationsApplications)</li>
+<li>基本的呼叫模型在1992建立，后来随着行业发展，呼叫模型也被加强和扩展，例如新的协议等等</li>
+<li>CSTA是一个应用层接口，用来监控呼叫，设备和网络 </li>
+<li><p>CSTA创建了一个通讯程序的抽象层:</p>
+<ul>
+<li>CSTA并不依赖任何底层的信令协议<ul>
+<li>E.g.H.323,SIP,Analog,T1,ISDN,etc.</li>
+</ul>
+</li>
+<li>CSTA并不要求用户必须使用某些设备<ul>
+<li>E.g.intelligentendpoints,low-function/stimulusdevices,SIPSignalingmodels-3PCC vs. Peer/Peer</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>适用不同的操作模式</p>
+<ul>
+<li>第三方呼叫控制</li>
+<li>一方呼叫控制</li>
+</ul>
+</li>
+<li>CSTA的设计目标是为了提高各种CSTA实现之间的移植性<ul>
+<li>规范化呼叫模型和行为</li>
+<li>完成服务、事件定义</li>
+<li>规范化标准</li>
+</ul>
+</li>
+</ul>
+<h1 id="CSTA-标准的进化史"><a href="#CSTA-标准的进化史" class="headerlink" title="CSTA 标准的进化史"></a>CSTA 标准的进化史</h1><ul>
+<li>阶段1 (发布于 June ’92)<ul>
+<li>40 特性, 66 页 (服务定义)</li>
+<li>专注于呼叫控制</li>
+</ul>
+</li>
+<li>阶段2 (发布于 Dec. ’94)<ul>
+<li>77 特性, 145 页 (服务定义)</li>
+<li>I/O &amp; 语音单元服务, 更多呼叫控制服务</li>
+</ul>
+</li>
+<li><p>阶段3 - CSTA Phase II Features &amp; versit CTI Technology</p>
+<ul>
+<li>发布于 Dec. ‘98</li>
+<li>136 特性, 650 页 (服务定义)</li>
+<li>作为ISO 标准发布于 July 2000</li>
+<li>发布 CSTA XML (ECMA-323) June 2004</li>
+<li>发布 “Using CSTA with Voice Browsers” (TR/85) Dec. 02</li>
+<li>发布 CSTA WSDL (ECMA-348) June 2004</li>
+</ul>
+</li>
+<li><p>June 2004: 发布对象模型 TR/88</p>
+</li>
+<li>June 2004: 发布 “Using CSTA for SIP Phone User Agents (uaCSTA)” TR/87</li>
+<li>June 2004: 发布 “Application Session Services” (ECMA-354)</li>
+<li>June 2005: 发布 “WS-Session: WSDL for ECMA-354”(ECMA-366)</li>
+<li>December 2005 : 发布 “Management Notification and Computing Function<br>Services”</li>
+<li>December 2005 : Session Management, Event Notification, Amendements for ECMA-<br>348” (TR/90)</li>
+<li>December 2006 : Published new editions of ECMA-269, ECMA-323, ECMA-348</li>
+</ul>
+<h1 id="CSTA-标准文档"><a href="#CSTA-标准文档" class="headerlink" title="CSTA 标准文档"></a>CSTA 标准文档</h1><p><img src="http://p3alsaatj.bkt.clouddn.com/20180129213747_HP5lYR_Jietu20180129-213719.jpeg" alt=""></p>
+<h1 id="CSTA-标准扩展"><a href="#CSTA-标准扩展" class="headerlink" title="CSTA 标准扩展"></a>CSTA 标准扩展</h1><ul>
+<li>新的特性可以被加入标准通过发布新版本的标准</li>
+<li>新的参数，新的值可以被加入通过发布新版本的标准</li>
+<li>未来的新版本必须下向后兼容</li>
+<li>具体的实施可以增加属性通过CSTA自带的扩展机制(e.g. ONS – One Number Service)</li>
+</ul>
+<h1 id="CSTA-操作模型"><a href="#CSTA-操作模型" class="headerlink" title="CSTA 操作模型"></a>CSTA 操作模型</h1><ul>
+<li>CSTA操作模型由<code>计算域</code>和<code>转换域</code>组成，是CSTA定义在两个域之间的接口</li>
+<li>CSTA标准规定了消息（服务以及事件上报）,还有与之相关的行为</li>
+<li><code>计算域</code>是CSTA程序的宿主环境，用来与<code>转换域</code>交互与控制</li>
+<li><code>转换域</code> - CSTA模型提供抽象层，程序可以观测并控制的。<code>转换渔</code>包括一些对象例如CSTA呼叫，设备，链接。</li>
+</ul>
+<p><img src="http://p3alsaatj.bkt.clouddn.com/20180129213839_Tor6cE_Screenshot.jpeg" alt=""></p>
+<h1 id="CSTA-操作模型：呼叫，设备，链接"><a href="#CSTA-操作模型：呼叫，设备，链接" class="headerlink" title="CSTA 操作模型：呼叫，设备，链接"></a>CSTA 操作模型：呼叫，设备，链接</h1><p><img src="http://p3alsaatj.bkt.clouddn.com/20180129213917_6hEPjl_Screenshot.jpeg" alt=""></p>
+<p>相关说明是的的的的</p>
+<h1 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h1><ul>
+<li><a href="http://ecma-international.org/activities/Communications/TG11/CSTAoverview.pdf" target="_blank" rel="noopener">CSTAoverview</a></li>
+<li><a href="http://wiki.unify.com/images/3/3e/CSTA_introduction_and_overview.pdf" target="_blank" rel="noopener">CSTA_introduction_and_overview</a></li>
+</ul>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://wdd.js.org/ssh-login-without-password.html">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="王端端">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="http://p3alsaatj.bkt.clouddn.com/20180129093544_I5Jscb_IMG_1402.jpeg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="洞香春">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/ssh-login-without-password.html" itemprop="url">ssh 无密码登录远程服务器</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-01-29T21:27:38+08:00">
+                2018-01-29
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+            <div class="post-wordcount">
+              
+                
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">字数统计&#58;</span>
+                
+                <span title="字数统计">
+                  502 字
+                </span>
+              
+
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">阅读时长 &asymp;</span>
+                
+                <span title="阅读时长">
+                  2 分钟
+                </span>
+              
+            </div>
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h1 id="1-前提说明"><a href="#1-前提说明" class="headerlink" title="1 前提说明"></a>1 前提说明</h1><p>A(本机 mac item2)<br>B(远程机器 ip:a.b.c.d centos)</p>
+<h1 id="2-过程1"><a href="#2-过程1" class="headerlink" title="2 过程1"></a>2 过程1</h1><h1 id="2-1-生成public-key与private-key"><a href="#2-1-生成public-key与private-key" class="headerlink" title="2.1 生成public_key与private_key"></a>2.1 生成public_key与private_key</h1><p>在本机上输入，可以一路回车，不用说明<br><figure class="highlight ebnf"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="attribute">ssh-keygen -t rsa</span></span><br></pre></td></tr></table></figure></p>
+<p>最终会在<code>~/.ssh/</code>下生成两个文件<br><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">id_rsa</span></span><br><span class="line"><span class="selector-tag">id_rsa</span><span class="selector-class">.pub</span></span><br></pre></td></tr></table></figure></p>
+<h1 id="2-2-将public-key上传到远程服务器"><a href="#2-2-将public-key上传到远程服务器" class="headerlink" title="2.2 将public_key上传到远程服务器"></a>2.2 将public_key上传到远程服务器</h1><p>注意：在本机上输入<br><figure class="highlight stylus"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 回车之后，需要输入远程主机B的登录密码</span></span><br><span class="line">scp ~/.ssh/id_rsa<span class="selector-class">.pub</span> root@<span class="selector-tag">a</span><span class="selector-class">.b</span><span class="selector-class">.c</span><span class="selector-class">.d</span>:/root/.ssh</span><br></pre></td></tr></table></figure></p>
+<h1 id="2-3-登录远程主机"><a href="#2-3-登录远程主机" class="headerlink" title="2.3 登录远程主机"></a>2.3 登录远程主机</h1><p>在本机上输入<br><figure class="highlight stylus"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 需要输入远程主机的密码</span></span><br><span class="line">ssh root@<span class="selector-tag">a</span><span class="selector-class">.b</span><span class="selector-class">.c</span><span class="selector-class">.d</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// 进到远程主机~/.ssh/目录下, 此目录下应该已经有了之前上传的id_rsa.pub文件</span></span><br><span class="line"><span class="comment">// 如果目录下没有authorized_keys文件，那么将id_rsa.pub改名成authorized_keys</span></span><br><span class="line"></span><br><span class="line">mv id_rsa<span class="selector-class">.pub</span> authorized_keys</span><br><span class="line"></span><br><span class="line"><span class="comment">// 如果远程目录下已经存在authorized_keys文件，可以将id_rsa.pub追加进去</span></span><br><span class="line"></span><br><span class="line">cat id_rsa<span class="selector-class">.pub</span> &gt;&gt; authorized_keys</span><br></pre></td></tr></table></figure></p>
+<h1 id="2-4-本机配置"><a href="#2-4-本机配置" class="headerlink" title="2.4 本机配置"></a>2.4 本机配置</h1><p>注意，此时需要退出ssh, 在本机上执行以下命令<br><figure class="highlight routeros"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">vi ~/.ssh/config</span><br><span class="line"></span><br><span class="line">在config文件中追加以下内容，并保存退出</span><br><span class="line"></span><br><span class="line">Host serverName</span><br><span class="line">Hostname a.b.c.d</span><br><span class="line">Port 22</span><br><span class="line">User root</span><br><span class="line">IdentityFile ~/.ssh/id_rsa</span><br></pre></td></tr></table></figure></p>
+<p>然后试一下，只需要<code>ssh serverName</code>, 就可以直接登录远程服务器，是不是很爽</p>
+<h1 id="3-参考文献"><a href="#3-参考文献" class="headerlink" title="3 参考文献"></a>3 参考文献</h1><ul>
+<li><a href="http://linuxtools-rst.readthedocs.io/zh_CN/latest/tool/scp.html" target="_blank" rel="noopener">scp 命令教程</a></li>
+<li><a href="https://www.zhihu.com/question/30640159" target="_blank" rel="noopener">mac用iterm2实现ssh，怎么像SecureCRT一样保存IP和账号密码？</a></li>
+</ul>
+<h1 id="4-精华推荐"><a href="#4-精华推荐" class="headerlink" title="4 精华推荐"></a>4 精华推荐</h1><p>最后推荐一本非常好的linux常用命令手册，非常不错哦。</p>
+<blockquote>
+<p>Linux下有很多命令行工具供我们使用，每个工具总是提供了大量参数供我们选择； 实际工作中，我们用到的工具，最常用的总是那么几个参数组合； 为此，我写了这本书相对实用的书；</p>
+<p>这本书专注于Linux工具的最常用用法，以便读者能以最快时间掌握，并在工作中应用；</p>
+</blockquote>
+<ul>
+<li><a href="http://linuxtools-rst.readthedocs.io/zh_CN/latest/index.html" target="_blank" rel="noopener">《Linux工具快速教程》</a></li>
+</ul>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://wdd.js.org/how-to-get-jsorg-sub-domain.html">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="王端端">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="http://p3alsaatj.bkt.clouddn.com/20180129093544_I5Jscb_IMG_1402.jpeg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="洞香春">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/how-to-get-jsorg-sub-domain.html" itemprop="url">组织在召唤：如何免费获取一个js.org的二级域名</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-01-29T18:08:03+08:00">
+                2018-01-29
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+            <div class="post-wordcount">
+              
+                
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">字数统计&#58;</span>
+                
+                <span title="字数统计">
+                  460 字
+                </span>
+              
+
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">阅读时长 &asymp;</span>
+                
+                <span title="阅读时长">
+                  2 分钟
                 </span>
               
             </div>
@@ -573,59 +993,28 @@
         
           
             <blockquote>
-<p>本文是译文，原文是<a href="https://da-14.com/blog/top-11-javascript-libraries-are-worth-your-attention" target="_blank" rel="noopener">https://da-14.com/blog/top-11-javascript-libraries-are-worth-your-attention</a><br>我在原文的基础上加了百度的Echats图表库，这个也是毫不逊色其他图表库的。另外<code>Handsontable</code>电子表格库也是蛮好玩的。</p>
+<p>之前我是使用wangduanduan.github.io作为我的博客地址，后来觉得麻烦，有把博客关了。最近有想去折腾折腾。<br>先看效果：<a href="https://wdd.js.org">wdd.js.org</a></p>
 </blockquote>
-<p>前端开发工具在过去几年中取得了进步和成功。这些日子，JS库和框架可以简化工作流程，提高开发过程，并在响应式设计方面提供更好的功能。</p>
-<p>考虑到一个长的JavaScript库列表，它可能是挑战选择，那是值得的时间和精力。我们已经讨论了最好的JavaScript框架，今天我们想研究JS库中的新星。你可能听说过像jQuery或React这样的大名字，这是最有用的JavaScript库之一，虽然有很多其他解决方案。</p>
-<p>一些库是几乎必须在每个其他项目应用，而其他的更集中和用于执行应用程序中的特定功能。为了清楚起见，我们按类型分组了最好的JavaScript库，所以让我们开始。</p>
-<h1 id="图表类"><a href="#图表类" class="headerlink" title="图表类"></a>图表类</h1><h2 id="D3"><a href="#D3" class="headerlink" title="D3"></a>D3</h2><p><img src="http://p3alsaatj.bkt.clouddn.com/20180207140915_vcI4lr_Screenshot.jpeg" alt=""></p>
-<p><code>D3.js</code>（数据驱动文档）通常被称为最强大的开源JavaScript可视化库。它的生态系统包括几十个插件和其他库建立在D3js的顶部。同时，支持社区和大量的文档可以帮助您立即开始。</p>
-<p>D3符合W3C网络标准，几乎支持所有现代浏览器。尽管事实上它不包括任何预先构建的图表，它提供了许多例子和“输入和退出”选择，容易的调试过程和强大的转换等有用的功能。</p>
-<h2 id="Chart-js"><a href="#Chart-js" class="headerlink" title="Chart.js"></a>Chart.js</h2><p><img src="http://p3alsaatj.bkt.clouddn.com/20180207140930_ZnxYmL_Screenshot.jpeg" alt=""></p>
-<p><code>Chart.js</code>是一个简单的开源解决方案，用于小项目和这些情况下，当你需要快速创建图表。它有八种图表类型和混合它们的能力，外加令人惊叹的动画选项开箱。强烈建议使用此JavaScript图形库，以便简单的设置过程，工作灵活性和全面的文档，尽管其功能相当有限。 Chartist.js具有类似的功能，而它是基于SVG，而不是HTML5画布在Chartjs。</p>
-<h2 id="FusionCharts"><a href="#FusionCharts" class="headerlink" title="FusionCharts"></a>FusionCharts</h2><p><img src="http://p3alsaatj.bkt.clouddn.com/20180207140946_mjOHvG_Screenshot.jpeg" alt=""></p>
-<p>FusionCharts是迄今为止最好的JavaScript图表库。作为设计师和开发者最全面的解决方案，它包括90多种图表类型和1000个地图，将Google图表和MetricsGraphics保留在后面。</p>
-<p>今天FusionCharts可以拥有超过24,000个客户，其中包括白宫，Oracle，IBM，微软，谷歌等等。作为最流行的JavaScript库之一，它是高度可扩展的，并与各种设备和浏览器，包括IE 6,7和8兼容。但是，水印版本可以免费使用商业和个人项目，但删除水印你需要购买许可证。</p>
-<h2 id="Google-Charts"><a href="#Google-Charts" class="headerlink" title="Google Charts"></a>Google Charts</h2><p><img src="http://p3alsaatj.bkt.clouddn.com/20180207141002_vvosw1_Screenshot.jpeg" alt=""><br><code>Google图表</code>允许您构建从纯色图表到复杂树形图的所有内容。它配备了广泛的预构建的图表库，各种数据工具和多个自定义选项。 HTML5和SVG上的基础图表​​此库确保跨浏览器和跨平台兼容性，而对于较旧的IE版本，它包括VML。</p>
-<p>由于详细的文档，代码注释和分步说明，Google Charts工具可以成为任何人谁想要使用JavaScript构建图表的一个很好的起点。但是，由于文件是从Google的服务器上传的，因此您的Web JavaScript应用程序应该在线以查看图表。</p>
-<h2 id="Echarts（百度出品）"><a href="#Echarts（百度出品）" class="headerlink" title="Echarts（百度出品）"></a>Echarts（百度出品）</h2><p><img src="http://p3alsaatj.bkt.clouddn.com/20180207141017_bXZ0zq_Screenshot.jpeg" alt=""></p>
-<ul>
-<li><p>更小文件 更大作为</p>
-<ul>
-<li>更小体积的文件，满足更轻便的使用需求</li>
-<li>更灵活的打包方式，可自由选择你需要的图表和组件</li>
+<p>如果你不了解js.org可以看看我的这篇文章:<a href="https://segmentfault.com/a/1190000008342301" target="_blank" rel="noopener">一个值得所有前端开发者关注的网站js.org</a></p>
+<p><img src="http://p3alsaatj.bkt.clouddn.com/20180129182103_Avcxhn_Jietu20180129-182047.jpeg" alt=""></p>
+<h1 id="前提"><a href="#前提" class="headerlink" title="前提"></a>前提</h1><ul>
+<li>已经有了github pages的一个博客，并且博客中有内容，没有内容会审核不通过的。我第一次申请域名，就是因为内容太少而审核不通过。</li>
 </ul>
-</li>
-<li><p>移动端强势来袭</p>
-<ul>
-<li>良好的自适应效果</li>
-<li>专属的移动端交互体验</li>
-</ul>
-</li>
-<li><p>更丰富的可视化效果</p>
-<ul>
-<li>新增更多图表类型，更好的满足不同数据的处理需求 更多的搭配方案让你的数据呈现方式更个性和完美</li>
-</ul>
-</li>
-</ul>
-<h1 id="动画"><a href="#动画" class="headerlink" title="动画"></a>动画</h1><h2 id="GSAP"><a href="#GSAP" class="headerlink" title="GSAP"></a>GSAP</h2><p><img src="http://p3alsaatj.bkt.clouddn.com/20180207141045_LW91oF_Screenshot.jpeg" alt=""></p>
-<p><code>GSAP</code>（GreenSock动画平台）是一个先进的动画解决方案，由全球最大的企业使用创建惊人的互动动画，没有麻烦。它被超过200万网站雇用，在他们的客户中，你可以找到像福特，耐克，Adobe，微软，三星和许多其他的伟大的名字。</p>
-<p>GSAP与新旧浏览器以及移动设备高度兼容。在顶级功能SVG支持，使任何DOM元素可拖动，可旋转或可滑动滚动和快速性能的能力。它还带有定向旋转，3D变换，模块化架构，快速加载，零依赖性等等。</p>
-<h2 id="Bounce-js"><a href="#Bounce-js" class="headerlink" title="Bounce.js"></a>Bounce.js</h2><p><img src="http://p3alsaatj.bkt.clouddn.com/20180207141103_qmxThj_Screenshot.jpeg" alt=""></p>
-<p><code>Bounce.js</code>是一个整洁的JavaScript动画库，使您能够创建有吸引力的CSS3动力的动画，像饼图一样简单。它有10个预设，如旋转，旋风，果冻，公路跑步者和其他人，以生成平滑的动画，任何网页设计或自定义项目。</p>
-<p>这个库是绝对免费的和MIT许可的，它是一个不错的选择，在那些情况下，当你不需要一个长列表的动画类型，寻找实验或只是尝试你的手在动画。</p>
-<h1 id="Animate-css"><a href="#Animate-css" class="headerlink" title="Animate.css"></a>Animate.css</h1><p><img src="/img/bVI7Av" alt="clipboard.png"></p>
-<p><code>Animate.css</code>是一个平滑的CSS库，允许您添加整洁的动画到所选对象。它具有超过50种不同的预设，可以应用于文本，形式，对象和CSS3的图片。由于小文件大小，跨浏览器支持和易于使用它可以是一个非常适合移动项目，滑块，主页等。</p>
-<h1 id="时间日期"><a href="#时间日期" class="headerlink" title="时间日期"></a>时间日期</h1><h2 id="Moment-js"><a href="#Moment-js" class="headerlink" title="Moment.js"></a>Moment.js</h2><p><img src="http://p3alsaatj.bkt.clouddn.com/20180207141151_MuJJGe_Screenshot.jpeg" alt=""></p>
-<p><code>Moment.js</code>是一个简单和轻量级的日期库，使解析，操作和格式化日期和时间容易和准确。它具有多语言支持，持续时间，日历时间和各种插件，以获得诸如时区支持，Twitter集成等功能。但重要的是，它消除了使用本机JavaScript日期对象的需要，随后促进复杂解析过程和减少代码量。</p>
-<h2 id="Date-fns"><a href="#Date-fns" class="headerlink" title="Date-fns"></a>Date-fns</h2><p><img src="http://p3alsaatj.bkt.clouddn.com/20180207141209_nLE7jE_Screenshot.jpeg" alt=""></p>
-<p><code>Date-fns</code>是一个高级工具集，用于在浏览器和Node.js中操作时间和日期。它提供了140多个有用的功能，可以通过简单的API轻松访问。由于模块化结构，它允许您只选择您当前需要的项目的那些功能。</p>
-<h1 id="其他"><a href="#其他" class="headerlink" title="其他"></a>其他</h1><h2 id="Math-js"><a href="#Math-js" class="headerlink" title="Math.js"></a>Math.js</h2><p><img src="http://p3alsaatj.bkt.clouddn.com/20180207141231_eEfaRZ_Screenshot.jpeg" alt=""></p>
-<p>Math.js是JavaScript引擎的开源数学库。它有许多函数和常量，灵活的表达式解析器，以及支持复杂和大数字，单位，字符串，分数，矩阵，数组和符号计算。</p>
-<h2 id="Handsontable"><a href="#Handsontable" class="headerlink" title="Handsontable"></a>Handsontable</h2><p><img src="http://p3alsaatj.bkt.clouddn.com/20180207141247_GqNwF8_Screenshot.jpeg" alt=""></p>
-<p><code>Handsontable</code>是一个无障碍的JavaScript<code>电子表格库</code>用于构建一流的Web应用程序。它可以轻松地扩展和修改与自定义插件。由开发人员为开发人员建造，它确保快速和容易的开始，方便的模块化结构和活跃的社区支持。这个表库包括超过30个功能的免费版本和额外的10+功能的专业版。目前Handsontable用于销售报告，人力规划，数据合并，数据库编辑等领域。</p>
-<blockquote>
-</blockquote>
+<h1 id="想好自己要什么域名？"><a href="#想好自己要什么域名？" class="headerlink" title="想好自己要什么域名？"></a>想好自己要什么域名？</h1><p>比如你想要一个：wdd.js.org的域名，你先在浏览器里访问这个地址，看看有没有人用过，如果已经有人用过，那么你就只能想点其他的域名了。</p>
+<h1 id="fork-js-org的项目，添加自己的域名"><a href="#fork-js-org的项目，添加自己的域名" class="headerlink" title="fork js.org的项目，添加自己的域名"></a>fork js.org的项目，添加自己的域名</h1><p>1 fork <a href="https://github.com/js-org/dns.js.org" target="_blank" rel="noopener">https://github.com/js-org/dns.js.org</a><br>2 修改你fork后的仓库中的<code>cnames_active.js</code>文件，加上自己的一条域名，最好要按照字母顺序</p>
+<p>如下图所示，我在第1100行加入。注意，不要在该行后加任何注释。<br><figure class="highlight 1c"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">"wdd"</span>: <span class="string">"wangduanduan.github.io"</span>,</span><br></pre></td></tr></table></figure></p>
+<p><img src="http://p3alsaatj.bkt.clouddn.com/20180129182555_tx71OV_Jietu20180129-182542.jpeg" alt=""></p>
+<p>3 commit</p>
+<h1 id="加入CNAME文件"><a href="#加入CNAME文件" class="headerlink" title="加入CNAME文件"></a>加入CNAME文件</h1><p>我是用hexo和next主题作为博客的模板。其中我在<code>gh-pages</code>分支写博客，然后部署到<code>master</code>分支。</p>
+<p>我在我的<code>gh-pages</code>分支的<code>source</code>目录下加入CNAME文件, 内容只有一行</p>
+<figure class="highlight stylus"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">wdd<span class="selector-class">.js</span><span class="selector-class">.org</span></span><br></pre></td></tr></table></figure>
+<p><img src="http://p3alsaatj.bkt.clouddn.com/20180129183216_aPl2ld_Jietu20180129-183209.jpeg" alt=""></p>
+<p>将博客再次部署好，<code>如果CNAME生效的话，你已经无法从原来的地址访问：wangduanduan.github.io， 这个博客了。</code></p>
+<h1 id="向js-org项目发起pull-request"><a href="#向js-org项目发起pull-request" class="headerlink" title="向js.org项目发起pull-request"></a>向js.org项目发起pull-request</h1><p>找到你fork后的项目，点击 <code>new pull request</code>, 向原来的项目发起请求。</p>
+<p><img src="http://p3alsaatj.bkt.clouddn.com/20180129190011_xvkHec_Jietu20180129-185938.jpeg" alt=""></p>
+<p>然后你可以在<code>js-org/dns.js.org</code>项目的pull requests看到你的请求，当这个请求被合并时，你就拥有了js.org的二级域名。</p>
+<p><img src="http://p3alsaatj.bkt.clouddn.com/20180129190308_0cZZwM_Jietu20180129-190255.jpeg" alt=""></p>
+<p><img src="http://p3alsaatj.bkt.clouddn.com/20180129190454_9BnL7F_Jietu20180129-190449.jpeg" alt=""></p>
 
           
         
@@ -674,7 +1063,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://wdd.js.org/few-simple-rules-for-good-coding-my-15-years-experience.html">
+    <link itemprop="mainEntityOfPage" href="https://wdd.js.org/browser-events.html">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="王端端">
@@ -693,7 +1082,7 @@
         
           <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/few-simple-rules-for-good-coding-my-15-years-experience.html" itemprop="url">【译】13简单的优秀编码规则（从我15年的经验）</a></h1>
+                <a class="post-title-link" href="/browser-events.html" itemprop="url">不常用却很有妙用的事件及方法</a></h1>
         
 
         <div class="post-meta">
@@ -705,8 +1094,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-02-07T14:03:12+08:00">
-                2018-02-07
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-01-29T14:15:25+08:00">
+                2018-01-29
               </time>
             
 
@@ -737,7 +1126,7 @@
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  1,626 字
+                  538 字
                 </span>
               
 
@@ -753,7 +1142,7 @@
                   <span class="post-meta-item-text">阅读时长 &asymp;</span>
                 
                 <span title="阅读时长">
-                  6 分钟
+                  2 分钟
                 </span>
               
             </div>
@@ -776,349 +1165,20 @@
       
         
           
-            <p>原文地址：<a href="https://hackernoon.com/few-simple-rules-for-good-coding-my-15-years-experience-96cb29d4acd9#.ddzpjb80c" target="_blank" rel="noopener">https://hackernoon.com/few-simple-rules-for-good-coding-my-15-years-experience-96cb29d4acd9#.ddzpjb80c</a></p>
-<p><img src="http://p3alsaatj.bkt.clouddn.com/20180207140343_0UaL3X_Screenshot.jpeg" alt=""></p>
-<p>嗨，我的工作作为一个程序员超过15年，并使用许多不同的语言，范例，框架和其他狗屎。我想和大家分享我写好代码的规则。</p>
-<h1 id="优化VS可读性-去他妈的优化"><a href="#优化VS可读性-去他妈的优化" class="headerlink" title="优化VS可读性 去他妈的优化"></a>优化VS可读性 去他妈的优化</h1><p>始终编​​写易于阅读且对开发人员可理解的代码。因为在硬可读代码上花费的时间和资源将远远高于从优化中获得的。<br>如果你需要进行优化，那么使它像DI的独立模块，具有100％的测试覆盖率，并且不会被触及至少一年。</p>
-<h1 id="架构第一"><a href="#架构第一" class="headerlink" title="架构第一"></a>架构第一</h1><p>我看到很多人说“我们需要快速做事，我们没有时间做架构”。其中约99％的人因为这样的想法而遇到了大问题。<br>编写代码而不考虑其架构是没有用的，就像没有实现它们的计划一样，梦想你的愿望。<br>在编写代码的第一行之前，你应该明白它将要做什么，它将如何使用，模块，服务如何相互工作，它将有什么结构，如何进行测试和调试，以及如何更新。</p>
-<h1 id="测试覆盖率"><a href="#测试覆盖率" class="headerlink" title="测试覆盖率"></a>测试覆盖率</h1><p>测试是好事，但他们并不总是负担得起，对项目有意义。</p>
-<p>当你需要测试：</p>
-<ul>
-<li>当你编写模块时，微服务将不会被触及至少一个月。</li>
-<li>当你编写开源代码。</li>
-<li>当你编写涉及金融渠道的核心代码或代码。</li>
-<li>当您有代码更新的同时更新测试的资源。</li>
-</ul>
-<p>当你不需要测试时：</p>
-<ul>
-<li>当你是一个创业。</li>
-<li>当你有小团队和代码更改是快速。</li>
-<li>当你编写的脚本，可以简单地通过他们的输出手动测试。</li>
-</ul>
-<p>记住，<code>带有严格测试的代码可能比没有测试的代码更有害</code>。</p>
-<h1 id="保持简单，极度简单"><a href="#保持简单，极度简单" class="headerlink" title="保持简单，极度简单"></a>保持简单，极度简单</h1><p>不要编写复杂的代码。更多更简单，那么更少的错误它可能有和更少的时间来调试它们。代码应该做的只是它需要没有非常多的抽象和其他OOP shit（尤其是涉及java开发人员）+ 20％的东西可能需要在将来以简单的方式更新它。</p>
-<h1 id="注释"><a href="#注释" class="headerlink" title="注释"></a>注释</h1><p>出现注释说明你的代码不够好。好的代码应该是可以理解的，没有一行注释。但是如何为新开发人员节省时间？ - 编写简单的内联文档描述什么和如何方法工作。这将节省很多时间来理解，甚至更多 - 它将给人们更多的机会来提出更好的实施这种方法。并且它将是全球代码文档的良好开端。</p>
-<h1 id="硬耦合VS较小耦合"><a href="#硬耦合VS较小耦合" class="headerlink" title="硬耦合VS较小耦合"></a>硬耦合VS较小耦合</h1><p>始终尝试使用微服务架构。单片软件可以比微服务软件运行得更快，但只能在一个服务器的上下文中运行。<br>微服务使您可以不仅在许多服务器上，而且有时甚至在一台机器上（我的意思是过程分发）高效地分发您的软件。</p>
-<h1 id="代码审查"><a href="#代码审查" class="headerlink" title="代码审查"></a>代码审查</h1><p>代码审查可以是好的，也以是坏的。<br>您可以组织代码审查，只有当您有开发人员了解95％的代码，谁可以监控所有更新，而不浪费很多时间。在其他情况下，这将是只是耗时，每个人都会讨厌这个。</p>
-<p>在这部分有很多问题，所以更深入地描述这一点。</p>
-<p>许多人认为代码审查是一个很好的方式教新手，或者工作在不同部分的代码的队友。但是代码审查的主要目标是保持代码质量，而不是教学。让我们想象你的团队制作代码用于控制核反应堆或太空火箭发动机的冷却系统。你在非常硬的逻辑中犯了巨大的错误，然后你给这个代码审查新的家伙。你怎么认为会发生意外的风险？ - 我的练习率超过70％。</p>
-<p>良好的团队是每个人都有自己的角色，负责确切的工作。如果有人想要理解另一段代码，那么他去一个负责任去问他。你不可能知道一切，更好的优秀的理解小块代码而不是理解所有。</p>
-<h1 id="重构没啥用"><a href="#重构没啥用" class="headerlink" title="重构没啥用"></a>重构没啥用</h1><p>在我的职业生涯中，我听到很多次“不要担心，我们以后会重构它”。在未来，这会导致大的技术债务或从头开始删除所有的代码和写作。</p>
-<p>所以，不要得到一个债务，除非你有钱从头开发你的软件几次。</p>
-<h1 id="当你累了或在一个坏的心情不要写代码。"><a href="#当你累了或在一个坏的心情不要写代码。" class="headerlink" title="当你累了或在一个坏的心情不要写代码。"></a>当你累了或在一个坏的心情不要写代码。</h1><p>当开发人员厌倦时，他们正在制造2到5倍或者更多的bug。所以工作更多是非常糟糕的做法。这就是为什么越来越多的国家思考6小时工作日，其中一些已经有了。精神工作不同于使用你的二头肌。</p>
-<h1 id="不要一次写全部-使开发迭代"><a href="#不要一次写全部-使开发迭代" class="headerlink" title="不要一次写全部 - 使开发迭代"></a>不要一次写全部 - 使开发迭代</h1><p>在编写代码分析和预测之前，您的客户/客户真正需要什么，然后选择您可以在短期内以高质量开发的MVF（最有价值的功能）。使用这样的迭代来部署质量更新，而不是腰部时间和资源对不合理的愿望和牺牲与质量。</p>
-<h1 id="自动化VS手动"><a href="#自动化VS手动" class="headerlink" title="自动化VS手动"></a>自动化VS手动</h1><p>自动化是长期的100％成功。所以如果你有资源自动化的东西，现在应该做。你可能认为“只需要5分钟，为什么我应该自动化？但让我计算这个。例如，它是5个开发人员的日常任务。 5分钟<em> 5天</em> 21天* 12个月= 6 300分钟= 105小时= 13.125天〜5250 $。<br>如果你有40 000名员工，这将需要多少费用？</p>
-<h1 id="出去浪，学习新爱好"><a href="#出去浪，学习新爱好" class="headerlink" title="出去浪，学习新爱好"></a>出去浪，学习新爱好</h1><p>差异化工作可以增加心智能力，并提供新想法。所以，暂停现在的工作，出去呼吸一下新鲜空气，与朋友交谈，弹吉他等。<br><code>ps: 莫春者，春服既成，冠者五六人，童子六七人，浴乎沂，风乎舞雩，咏而归。------《论语.先进》。</code></p>
-<p><img src="http://p3alsaatj.bkt.clouddn.com/20180207140423_Iku4es_Screenshot.jpeg" alt=""></p>
-<h1 id="在空闲时间学习新事物"><a href="#在空闲时间学习新事物" class="headerlink" title="在空闲时间学习新事物"></a>在空闲时间学习新事物</h1><p><code>当人们停止学习时，他们开始退化。</code></p>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://wdd.js.org/sort-for-sf.html">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="王端端">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="http://p3alsaatj.bkt.clouddn.com/20180129093544_I5Jscb_IMG_1402.jpeg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="洞香春">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/sort-for-sf.html" itemprop="url">15行代码为segmentfault增加头条文章排序功能</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-02-07T14:00:46+08:00">
-                2018-02-07
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-            <div class="post-wordcount">
-              
-                
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-file-word-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">字数统计&#58;</span>
-                
-                <span title="字数统计">
-                  102 字
-                </span>
-              
-
-              
-                <span class="post-meta-divider">|</span>
-              
-
-              
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-clock-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">阅读时长 &asymp;</span>
-                
-                <span title="阅读时长">
-                  1 分钟
-                </span>
-              
-            </div>
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <p>有个需求，想看点赞最多的头条，但是页面没有这种按钮。怎么办？自己写吧。</p>
-<p>先看效果<br><img src="http://p3alsaatj.bkt.clouddn.com/20180207140139_xwjt2M_Screenshot.jpeg" alt=""></p>
-<p>再看代码<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> rows = $(<span class="string">'.news__item'</span>).each(<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">    <span class="keyword">var</span> key = +$(<span class="keyword">this</span>).find(<span class="string">'.news__item-zan-number'</span>).text();</span><br><span class="line">    $(<span class="keyword">this</span>).data(<span class="string">'key'</span>, key);</span><br><span class="line">&#125;).get();</span><br><span class="line"></span><br><span class="line">rows.sort(<span class="function"><span class="keyword">function</span>(<span class="params">a,b</span>)</span>&#123;</span><br><span class="line">    <span class="keyword">var</span> keyA = $(a).data(<span class="string">'key'</span>);</span><br><span class="line">    <span class="keyword">var</span> keyB = $(b).data(<span class="string">'key'</span>);</span><br><span class="line">    <span class="keyword">if</span>(keyA&lt;keyB)&#123;<span class="keyword">return</span> <span class="number">-1</span>;&#125;</span><br><span class="line">    <span class="keyword">else</span>&#123;<span class="keyword">return</span> <span class="number">1</span>;&#125;</span><br><span class="line">&#125;);</span><br><span class="line"></span><br><span class="line">$.each(rows, <span class="function"><span class="keyword">function</span>(<span class="params">index, row</span>)</span>&#123;</span><br><span class="line">    $(<span class="string">'.news__list'</span>).prepend(row);</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure></p>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://wdd.js.org/visual-reading-js-code.html">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="王端端">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="http://p3alsaatj.bkt.clouddn.com/20180129093544_I5Jscb_IMG_1402.jpeg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="洞香春">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/visual-reading-js-code.html" itemprop="url">可视化交互阅读JS源代码</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-02-07T13:57:25+08:00">
-                2018-02-07
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-            <div class="post-wordcount">
-              
-                
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-file-word-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">字数统计&#58;</span>
-                
-                <span title="字数统计">
-                  107 字
-                </span>
-              
-
-              
-                <span class="post-meta-divider">|</span>
-              
-
-              
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-clock-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">阅读时长 &asymp;</span>
-                
-                <span title="阅读时长">
-                  1 分钟
-                </span>
-              
-            </div>
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <h1 id="曾经，你可以能习惯这样阅读javascript"><a href="#曾经，你可以能习惯这样阅读javascript" class="headerlink" title="曾经，你可以能习惯这样阅读javascript"></a>曾经，你可以能习惯这样阅读javascript</h1><p><img src="http://p3alsaatj.bkt.clouddn.com/20180207135809_HSz6fD_Screenshot.jpeg" alt=""></p>
-<h1 id="现在，你可以用这个姿势阅读"><a href="#现在，你可以用这个姿势阅读" class="headerlink" title="现在，你可以用这个姿势阅读"></a>现在，你可以用这个姿势阅读</h1><p><img src="http://p3alsaatj.bkt.clouddn.com/20180207135821_3b9l9c_Screenshot.jpeg" alt=""></p>
-<h1 id="怎么做呢"><a href="#怎么做呢" class="headerlink" title="怎么做呢?"></a>怎么做呢?</h1><h2 id="step1"><a href="#step1" class="headerlink" title="step1:"></a>step1:</h2><figure class="highlight maxima"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install -g <span class="built_in">lambda</span>-<span class="built_in">view</span></span><br></pre></td></tr></table></figure>
-<h2 id="step2"><a href="#step2" class="headerlink" title="step2:"></a>step2:</h2><figure class="highlight stylus"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 阅读本地代码</span></span><br><span class="line">lv targer.js</span><br><span class="line"></span><br><span class="line"><span class="comment">// 阅读远程代码</span></span><br><span class="line">lv https:<span class="comment">//code.jquery.com/jquery-3.1.1.js</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// 阅读多个代码</span></span><br><span class="line">lv file1<span class="selector-class">.js</span> file2<span class="selector-class">.js</span> file3.js</span><br><span class="line"></span><br><span class="line"><span class="comment">// 阅读所有</span></span><br><span class="line">lv *.js</span><br></pre></td></tr></table></figure>
-<h1 id="项目地址：https-github-com-Jianru-Lin-lambda-view"><a href="#项目地址：https-github-com-Jianru-Lin-lambda-view" class="headerlink" title="项目地址：https://github.com/Jianru-Lin/lambda-view"></a>项目地址：<a href="https://github.com/Jianru-Lin/lambda-view" target="_blank" rel="noopener">https://github.com/Jianru-Lin/lambda-view</a></h1><h1 id="欢迎试玩！"><a href="#欢迎试玩！" class="headerlink" title="欢迎试玩！"></a>欢迎试玩！</h1>
+            <h1 id="visibilitychange事件"><a href="#visibilitychange事件" class="headerlink" title="visibilitychange事件"></a><a href="https://developer.mozilla.org/zh-CN/docs/Web/Events/visibilitychange" target="_blank" rel="noopener">visibilitychange事件</a></h1><p>触发条件：<code>浏览器标签页被隐藏或显示的时候会触发visibilitychange事件.</code></p>
+<p>使用场景：<code>当标签页显示或者隐藏时，触发一些业务逻辑</code></p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">document</span>.addEventListener(<span class="string">"visibilitychange"</span>, <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">  <span class="built_in">console</span>.log( <span class="built_in">document</span>.visibilityState );</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+<h1 id="storage事件"><a href="#storage事件" class="headerlink" title="storage事件"></a><a href="https://developer.mozilla.org/en-US/docs/Web/Events/storage" target="_blank" rel="noopener">storage事件</a></h1><p>触发条件：<code>使用localStorage or sessionStorage存储或者修改某个本地存储时</code></p>
+<p>使用场景：<code>标签页间通信</code></p>
+<figure class="highlight 1c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// AB页面同源</span></span><br><span class="line"><span class="comment">// 在A 页面</span></span><br><span class="line">window.addEventListener('storage', (e) =&gt; &#123;console.<span class="built_in">log</span>(e)&#125;)</span><br><span class="line"></span><br><span class="line"><span class="comment">// 在B 页面，向120打个电话</span></span><br><span class="line">localStorage.setItem('makeCall','120')</span><br><span class="line"></span><br><span class="line"><span class="comment">// 然后可以在A页面间有输出, 可以看出A页面 收到了B页面的通知</span></span><br><span class="line">...key: <span class="string">"makeCall"</span>, oldValue: <span class="string">"119"</span>, newValue: <span class="string">"120"</span>, ...</span><br></pre></td></tr></table></figure>
+<h1 id="beforeunload事件"><a href="#beforeunload事件" class="headerlink" title="beforeunload事件"></a><a href="https://developer.mozilla.org/en-US/docs/Web/Events/beforeunload" target="_blank" rel="noopener">beforeunload事件</a></h1><p>触发条件：<code>当页面的资源将要卸载(及刷新或者关闭标签页前). 当页面依然可见，并且该事件可以被取消只时</code></p>
+<p>使用场景：<code>关闭或者刷新页面时弹窗确认</code>，<code>关闭页面时向后端发送报告等</code></p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">window</span>.addEventListener(<span class="string">"beforeunload"</span>, <span class="function"><span class="keyword">function</span> (<span class="params">e</span>) </span>&#123;</span><br><span class="line">  <span class="keyword">var</span> confirmationMessage = <span class="string">"\o/"</span>;</span><br><span class="line"></span><br><span class="line">  e.returnValue = confirmationMessage;     <span class="comment">// Gecko, Trident, Chrome 34+</span></span><br><span class="line">  <span class="keyword">return</span> confirmationMessage;              <span class="comment">// Gecko, WebKit, Chrome &lt;34</span></span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+<h1 id="navigator-sendBeacon"><a href="#navigator-sendBeacon" class="headerlink" title="navigator.sendBeacon"></a><a href="https://developer.mozilla.org/zh-CN/docs/Web/API/Navigator/sendBeacon" target="_blank" rel="noopener">navigator.sendBeacon</a></h1><p>这个方法主要用于满足 统计和诊断代码 的需要，这些代码通常尝试在卸载（unload）文档之前向web服务器发送数据。过早的发送数据可能导致错过收集数据的机会。然而， 对于开发者来说保证在文档卸载期间发送数据一直是一个困难。因为用户代理通常会忽略在卸载事件处理器中产生的异步 XMLHttpRequest 。</p>
+<p>使用 sendBeacon() 方法，将会使用户代理在有机会时异步地向服务器发送数据，同时不会延迟页面的卸载或影响下一导航的载入性能。这就解决了提交分析数据时的所有的问题：使它可靠，异步并且不会影响下一页面的加载。此外，代码实际上还要比其他技术简单！</p>
+<p><code>注意：该方法在IE和safari没有实现</code></p>
+<p>使用场景：<code>发送崩溃报告</code></p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">window</span>.addEventListener(<span class="string">'unload'</span>, logData, <span class="literal">false</span>);</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">logData</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">    navigator.sendBeacon(<span class="string">"/log"</span>, analyticsData);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
           
         
       
@@ -1157,7 +1217,7 @@
 
   
   <nav class="pagination">
-    <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><span class="space">&hellip;</span><a class="page-number" href="/page/11/">11</a><a class="extend next" rel="next" href="/page/2/"><i class="fa fa-angle-right"></i></a>
+    <a class="extend prev" rel="prev" href="/page/8/"><i class="fa fa-angle-left"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/8/">8</a><span class="page-number current">9</span><a class="page-number" href="/page/10/">10</a><a class="page-number" href="/page/11/">11</a><a class="extend next" rel="next" href="/page/10/"><i class="fa fa-angle-right"></i></a>
   </nav>
 
 

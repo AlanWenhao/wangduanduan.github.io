@@ -86,7 +86,7 @@
 <meta name="keywords" content="王端端, 洞香春, wellClient">
 <meta property="og:type" content="website">
 <meta property="og:title" content="洞香春">
-<meta property="og:url" content="https://wdd.js.org/index.html">
+<meta property="og:url" content="https://wdd.js.org/page/10/index.html">
 <meta property="og:site_name" content="洞香春">
 <meta property="og:description" content="前端，后端，炒菜，摄影，读书，收集工具">
 <meta property="og:locale" content="zh-Hans">
@@ -122,7 +122,7 @@
 
 
 
-  <link rel="canonical" href="https://wdd.js.org/"/>
+  <link rel="canonical" href="https://wdd.js.org/page/10/"/>
 
 
 
@@ -300,7 +300,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://wdd.js.org/debug-nodejs-in-chrome-devtool.html">
+    <link itemprop="mainEntityOfPage" href="https://wdd.js.org/nodejs-server-frameworks.html">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="王端端">
@@ -319,7 +319,7 @@
         
           <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/debug-nodejs-in-chrome-devtool.html" itemprop="url">直接在Chrome DevTools调试Node.js</a></h1>
+                <a class="post-title-link" href="/nodejs-server-frameworks.html" itemprop="url">Nodejs 服务端框架合集(78个)</a></h1>
         
 
         <div class="post-meta">
@@ -331,8 +331,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-02-07T14:15:43+08:00">
-                2018-02-07
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-01-29T14:13:44+08:00">
+                2018-01-29
               </time>
             
 
@@ -363,7 +363,7 @@
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  217 字
+                  295 字
                 </span>
               
 
@@ -380,176 +380,6 @@
                 
                 <span title="阅读时长">
                   1 分钟
-                </span>
-              
-            </div>
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <p>英文好的，直接看原文</p>
-<blockquote>
-<p><a href="https://blog.hospodarets.com/nodejs-debugging-in-chrome-devtools" target="_blank" rel="noopener">https://blog.hospodarets.com/nodejs-debugging-in-chrome-devtools</a></p>
-</blockquote>
-<h1 id="要求"><a href="#要求" class="headerlink" title="要求"></a>要求</h1><ul>
-<li>Node.js 6.3+</li>
-<li>Chrome 55+</li>
-</ul>
-<h1 id="操作步骤"><a href="#操作步骤" class="headerlink" title="操作步骤"></a>操作步骤</h1><ul>
-<li>1 打开连接 <code>chrome://flags/#enable-devtools-experiments</code></li>
-<li>2 开启<code>开发者工具实验性功能</code> </li>
-<li>3 重启浏览器</li>
-<li>4 打开 DevTools Setting -&gt; Experiments tab</li>
-<li>5 按6次shift后，隐藏的功能会出现，勾选”Node debugging”</li>
-</ul>
-<p><img src="http://p3alsaatj.bkt.clouddn.com/20180207141627_9HT0nS_Screenshot.jpeg" alt=""></p>
-<p><img src="http://p3alsaatj.bkt.clouddn.com/20180207141636_hIfIyG_Screenshot.jpeg" alt=""></p>
-<h1 id="运行程序"><a href="#运行程序" class="headerlink" title="运行程序"></a>运行程序</h1><p>必须要有 <code>--inspect</code><br><figure class="highlight vhdl"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">&gt; node <span class="comment">--inspect www</span></span><br><span class="line">Debugger listening <span class="keyword">on</span> <span class="keyword">port</span> <span class="number">9229</span>.</span><br><span class="line"><span class="literal">Warning</span>: This <span class="keyword">is</span> an experimental feature <span class="keyword">and</span> could change at any <span class="built_in">time</span>.</span><br><span class="line"><span class="keyword">To</span> start debugging, <span class="keyword">open</span> the following URL <span class="keyword">in</span> Chrome:</span><br><span class="line">    chrome-devtools://devtools/remote/serve_file/@<span class="number">60</span>cd6e859b9f557d2312f5bf532f6aec5f284980/inspector.html?experiments=<span class="literal">true</span>&amp;v8only=<span class="literal">true</span>&amp;ws=localhost:<span class="number">9229</span>/<span class="number">78</span>a884f4-<span class="number">8</span>c2e-<span class="number">459e-93</span>f7-e1cbe87cf5cf</span><br></pre></td></tr></table></figure></p>
-<p>将这个地址粘贴到谷歌浏览器：<code>chrome-devtools://devtools/remote/serve_file/@60cd6e859b9f557d2312f5bf532f6aec5f284980/inspector.html?experiments=true&amp;v8only=true&amp;ws=localhost:9229/78a884f4-8c2e-459e-93f7-e1cbe87cf5cf</code></p>
-<p>程序后端输出的日志也回输出到谷歌浏览器的console里面，同时也可以在Sources里进行断点调试了。<br><img src="http://p3alsaatj.bkt.clouddn.com/20180207141649_ArMyV7_Screenshot.jpeg" alt=""></p>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://wdd.js.org/top-11-javascript-libraries-are-worth-your-attention.html">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="王端端">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="http://p3alsaatj.bkt.clouddn.com/20180129093544_I5Jscb_IMG_1402.jpeg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="洞香春">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/top-11-javascript-libraries-are-worth-your-attention.html" itemprop="url">12个值得关注的顶级JS库</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-02-07T14:08:10+08:00">
-                2018-02-07
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-            <div class="post-wordcount">
-              
-                
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-file-word-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">字数统计&#58;</span>
-                
-                <span title="字数统计">
-                  1,779 字
-                </span>
-              
-
-              
-                <span class="post-meta-divider">|</span>
-              
-
-              
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-clock-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">阅读时长 &asymp;</span>
-                
-                <span title="阅读时长">
-                  6 分钟
                 </span>
               
             </div>
@@ -573,552 +403,976 @@
         
           
             <blockquote>
-<p>本文是译文，原文是<a href="https://da-14.com/blog/top-11-javascript-libraries-are-worth-your-attention" target="_blank" rel="noopener">https://da-14.com/blog/top-11-javascript-libraries-are-worth-your-attention</a><br>我在原文的基础上加了百度的Echats图表库，这个也是毫不逊色其他图表库的。另外<code>Handsontable</code>电子表格库也是蛮好玩的。</p>
+<p>没有什么事情是一个框架解决不了的，如果有，就再找一个。</p>
 </blockquote>
-<p>前端开发工具在过去几年中取得了进步和成功。这些日子，JS库和框架可以简化工作流程，提高开发过程，并在响应式设计方面提供更好的功能。</p>
-<p>考虑到一个长的JavaScript库列表，它可能是挑战选择，那是值得的时间和精力。我们已经讨论了最好的JavaScript框架，今天我们想研究JS库中的新星。你可能听说过像jQuery或React这样的大名字，这是最有用的JavaScript库之一，虽然有很多其他解决方案。</p>
-<p>一些库是几乎必须在每个其他项目应用，而其他的更集中和用于执行应用程序中的特定功能。为了清楚起见，我们按类型分组了最好的JavaScript库，所以让我们开始。</p>
-<h1 id="图表类"><a href="#图表类" class="headerlink" title="图表类"></a>图表类</h1><h2 id="D3"><a href="#D3" class="headerlink" title="D3"></a>D3</h2><p><img src="http://p3alsaatj.bkt.clouddn.com/20180207140915_vcI4lr_Screenshot.jpeg" alt=""></p>
-<p><code>D3.js</code>（数据驱动文档）通常被称为最强大的开源JavaScript可视化库。它的生态系统包括几十个插件和其他库建立在D3js的顶部。同时，支持社区和大量的文档可以帮助您立即开始。</p>
-<p>D3符合W3C网络标准，几乎支持所有现代浏览器。尽管事实上它不包括任何预先构建的图表，它提供了许多例子和“输入和退出”选择，容易的调试过程和强大的转换等有用的功能。</p>
-<h2 id="Chart-js"><a href="#Chart-js" class="headerlink" title="Chart.js"></a>Chart.js</h2><p><img src="http://p3alsaatj.bkt.clouddn.com/20180207140930_ZnxYmL_Screenshot.jpeg" alt=""></p>
-<p><code>Chart.js</code>是一个简单的开源解决方案，用于小项目和这些情况下，当你需要快速创建图表。它有八种图表类型和混合它们的能力，外加令人惊叹的动画选项开箱。强烈建议使用此JavaScript图形库，以便简单的设置过程，工作灵活性和全面的文档，尽管其功能相当有限。 Chartist.js具有类似的功能，而它是基于SVG，而不是HTML5画布在Chartjs。</p>
-<h2 id="FusionCharts"><a href="#FusionCharts" class="headerlink" title="FusionCharts"></a>FusionCharts</h2><p><img src="http://p3alsaatj.bkt.clouddn.com/20180207140946_mjOHvG_Screenshot.jpeg" alt=""></p>
-<p>FusionCharts是迄今为止最好的JavaScript图表库。作为设计师和开发者最全面的解决方案，它包括90多种图表类型和1000个地图，将Google图表和MetricsGraphics保留在后面。</p>
-<p>今天FusionCharts可以拥有超过24,000个客户，其中包括白宫，Oracle，IBM，微软，谷歌等等。作为最流行的JavaScript库之一，它是高度可扩展的，并与各种设备和浏览器，包括IE 6,7和8兼容。但是，水印版本可以免费使用商业和个人项目，但删除水印你需要购买许可证。</p>
-<h2 id="Google-Charts"><a href="#Google-Charts" class="headerlink" title="Google Charts"></a>Google Charts</h2><p><img src="http://p3alsaatj.bkt.clouddn.com/20180207141002_vvosw1_Screenshot.jpeg" alt=""><br><code>Google图表</code>允许您构建从纯色图表到复杂树形图的所有内容。它配备了广泛的预构建的图表库，各种数据工具和多个自定义选项。 HTML5和SVG上的基础图表​​此库确保跨浏览器和跨平台兼容性，而对于较旧的IE版本，它包括VML。</p>
-<p>由于详细的文档，代码注释和分步说明，Google Charts工具可以成为任何人谁想要使用JavaScript构建图表的一个很好的起点。但是，由于文件是从Google的服务器上传的，因此您的Web JavaScript应用程序应该在线以查看图表。</p>
-<h2 id="Echarts（百度出品）"><a href="#Echarts（百度出品）" class="headerlink" title="Echarts（百度出品）"></a>Echarts（百度出品）</h2><p><img src="http://p3alsaatj.bkt.clouddn.com/20180207141017_bXZ0zq_Screenshot.jpeg" alt=""></p>
+<p><img src="http://p3alsaatj.bkt.clouddn.com/20180129141430_C2s0Wc_Screenshot.jpeg" alt=""></p>
+<p>Photo by 贝莉儿 NG on Unsplash</p>
+<h1 id="1-MVC-frameworks"><a href="#1-MVC-frameworks" class="headerlink" title="1 MVC frameworks"></a>1 MVC frameworks</h1><h1 id="1-1-Sinatra-like"><a href="#1-1-Sinatra-like" class="headerlink" title="1.1 Sinatra-like"></a>1.1 Sinatra-like</h1><p><code>这些框架提供了丰富的配置，比Rails-like或full-stack少。</code></p>
 <ul>
-<li><p>更小文件 更大作为</p>
+<li><a href="http://expressjs.com/" target="_blank" rel="noopener">Express</a></li>
+<li><a href="http://hapijs.com/" target="_blank" rel="noopener">hapi</a></li>
+<li><a href="http://flatironjs.org/" target="_blank" rel="noopener">flatiron</a></li>
+<li><a href="http://locomotivejs.org/" target="_blank" rel="noopener">locomotive</a></li>
+<li><a href="http://www.totaljs.com" target="_blank" rel="noopener">total.js</a></li>
+<li><a href="http://koajs.com/" target="_blank" rel="noopener">koa.js</a></li>
+<li><a href="http://twee.io/" target="_blank" rel="noopener">TWEE.IO</a></li>
+<li><a href="http://dietjs.com/" target="_blank" rel="noopener"> diet.js </a></li>
+<li><a href="https://flickerstudio.github.io/flickerjs" target="_blank" rel="noopener">Flicker.js</a></li>
+<li><a href="https://github.com/zinkyJS/zinky" target="_blank" rel="noopener">ZinkyJS</a></li>
+</ul>
+<h2 id="1-2-Rails-like"><a href="#1-2-Rails-like" class="headerlink" title="1.2 Rails-like"></a>1.2 Rails-like</h2><p><code>正确呈现您的项目。从包含的模板创建自己的艺术</code></p>
 <ul>
-<li>更小体积的文件，满足更轻便的使用需求</li>
-<li>更灵活的打包方式，可自由选择你需要的图表和组件</li>
+<li><a href="http://nodaljs.com/" target="_blank" rel="noopener">Nodal</a></li>
+<li><a href="http://strapi.io/" target="_blank" rel="noopener">Strapi</a></li>
+<li><a href="http://compoundjs.com/" target="_blank" rel="noopener">CompoundJS</a></li>
+<li><a href="http://geddyjs.org/" target="_blank" rel="noopener">geddy</a></li>
+<li><a href="http://sailsjs.org/" target="_blank" rel="noopener">Sails.js</a></li>
+<li><a href="http://adonisjs.com" target="_blank" rel="noopener">Adonis</a></li>
+<li><a href="http://rhapsodyjs.github.io/" target="_blank" rel="noopener">RhapsodyJS</a></li>
+<li><a href="https://thinkjs.org/" target="_blank" rel="noopener">ThinkJS</a></li>
+<li><a href="http://www.trailsjs.io/" target="_blank" rel="noopener">Trails</a></li>
+<li><a href="http://kambojajs.com/" target="_blank" rel="noopener">KambojaJS</a></li>
+<li><a href="http://js-web-framework.com/" target="_blank" rel="noopener">JS-Web</a></li>
+</ul>
+<h1 id="2-Full-stack-frameworks"><a href="#2-Full-stack-frameworks" class="headerlink" title="2 Full-stack frameworks"></a>2 Full-stack frameworks</h1><p><code>这就是Node.js真正闪耀的地方。全栈MVC框架与脚手架，模板引擎，websocket和持久性库捆绑在一起，允许您构建实时可伸缩的Web应用程序。</code></p>
+<ul>
+<li><a href="http://catberry.org/" target="_blank" rel="noopener">Catberry.js</a></li>
+<li><a href="http://allcountjs.com" target="_blank" rel="noopener">AllcountJS</a></li>
+<li><a href="http://derbyjs.com" target="_blank" rel="noopener">Derby</a></li>
+<li><a href="http://feathersjs.com/" target="_blank" rel="noopener">Feathers</a></li>
+<li><a href="http://socketcluster.io/" target="_blank" rel="noopener">SocketCluster</a></li>
+<li><a href="http://socketstream.org" target="_blank" rel="noopener">SocketStream</a></li>
+<li><a href="http://meanjs.org/" target="_blank" rel="noopener">MEAN.js</a></li>
+<li><a href="http://mean.io/" target="_blank" rel="noopener">MEAN.io</a></li>
+<li><a href="http://meteor.com/" target="_blank" rel="noopener">Meteor</a></li>
+<li><a href="https://github.com/mattkrick/meatier" target="_blank" rel="noopener">Meatier</a></li>
+<li><a href="http://twee.io/" target="_blank" rel="noopener">TWEE.IO</a></li>
+<li><a href="http://developer.yahoo.com/cocktails/mojito/" target="_blank" rel="noopener">Mojito</a></li>
+<li><a href="http://seedsjs.com/" target="_blank" rel="noopener">Seeds.js</a></li>
+<li><a href="http://sanestack.com/" target="_blank" rel="noopener">SANE</a></li>
+<li><a href="http://coke-js.org" target="_blank" rel="noopener">COKE</a></li>
+<li><a href="http://sleekjs.com/" target="_blank" rel="noopener">Sleekjs</a></li>
+<li><a href="https://github.com/gnodi/danf" target="_blank" rel="noopener">Danf</a></li>
+<li><a href="http://catberry.org" target="_blank" rel="noopener">Catberry</a></li>
+<li><a href="http://nukejs.com/" target="_blank" rel="noopener">Nuke.js</a></li>
+<li><a href="http://wejs.org" target="_blank" rel="noopener">We.js</a></li>
+<li><a href="http://senecajs.org" target="_blank" rel="noopener">seneca.js</a></li>
+<li><a href="http://keystonejs.com/" target="_blank" rel="noopener">Keystone.js</a></li>
+<li><a href="http://horizon.io" target="_blank" rel="noopener">Horizon</a></li>
+<li><a href="https://apogeu.github.io/" target="_blank" rel="noopener">Apogeu</a></li>
+</ul>
+<h1 id="3-REST-API-frameworks"><a href="#3-REST-API-frameworks" class="headerlink" title="3 REST API frameworks"></a>3 REST API frameworks</h1><p><code>对于那些使用富客户端/前端MVC框架（或不）的客户，只需要启动一个快速的Node.js REST API服务器即可。</code></p>
+<ul>
+<li><a href="http://ivyframework.com" target="_blank" rel="noopener">Ivy</a></li>
+<li><a href="https://github.com/restocat/restocat" target="_blank" rel="noopener">Restocat</a></li>
+<li><a href="http://actionherojs.com/" target="_blank" rel="noopener">actionHero.js</a></li>
+<li><a href="http://frisbyjs.com/" target="_blank" rel="noopener">Frisby</a></li>
+<li><a href="https://github.com/lucasfeliciano/restling" target="_blank" rel="noopener">restling</a></li>
+<li><a href="http://mcavage.github.io/node-restify/" target="_blank" rel="noopener">restify</a></li>
+<li><a href="https://github.com/keithnlarsen/restmvc.js" target="_blank" rel="noopener">restmvc</a></li>
+<li><a href="http://percolatorjs.com" target="_blank" rel="noopener">percolator</a></li>
+<li><a href="http://loopback.io/" target="_blank" rel="noopener">LoopBack</a></li>
+<li><a href="http://fortunejs.com" target="_blank" rel="noopener">Fortune.js</a></li>
+<li><a href="http://facet.github.io" target="_blank" rel="noopener">facet</a></li>
+<li><a href="http://getraddish.com" target="_blank" rel="noopener">Raddish</a></li>
+<li><a href="http://restberry.com" target="_blank" rel="noopener">Restberry</a></li>
+<li><a href="http://pliik.github.io/gugamarket/" target="_blank" rel="noopener">Gugamarket</a></li>
+<li><a href="https://kamilmysliwiec.gitbooks.io/nest/" target="_blank" rel="noopener">Nest</a></li>
+<li><a href="https://borislemke.gitbooks.io/microlet/" target="_blank" rel="noopener">microlet</a></li>
+<li><a href="https://moleculer.services/" target="_blank" rel="noopener">Moleculer</a></li>
+</ul>
+<h1 id="4-Other-libraries"><a href="#4-Other-libraries" class="headerlink" title="4 Other libraries"></a>4 Other libraries</h1><p><code>中间件，库和静态站点生成器。</code></p>
+<ul>
+<li><a href="http://www.senchalabs.org/connect/" target="_blank" rel="noopener">Connect</a></li>
+<li><a href="http://krakenjs.com/" target="_blank" rel="noopener">Kraken</a></li>
+<li><a href="https://github.com/robtweed/ewdGateway2" target="_blank" rel="noopener">ewdGateway2</a></li>
+<li><a href="https://github.com/jnordberg/wintersmith" target="_blank" rel="noopener">Wintersmith</a></li>
+<li><a href="http://docpad.org" target="_blank" rel="noopener">docpad</a></li>
+<li><a href="http://blacksmith.jit.su/" target="_blank" rel="noopener">Blacksmith</a></li>
+<li><a href="https://github.com/felixge/node-romulus" target="_blank" rel="noopener">romulus</a></li>
+<li><a href="https://github.com/caolan/petrify" target="_blank" rel="noopener">Petrify</a></li>
+<li><a href="http://tower.github.io" target="_blank" rel="noopener">Tower.js</a></li>
+<li><a href="https://github.com/tshemsedinov/impress" target="_blank" rel="noopener">Impress</a></li>
+<li><a href="https://github.com/rendrjs/rendr" target="_blank" rel="noopener">Rendr</a></li>
+<li><a href="https://github.com/mklabs/backnode" target="_blank" rel="noopener">Backnode</a></li>
+<li><a href="http://sequelizejs.com/" target="_blank" rel="noopener">Sequelize</a></li>
+<li><a href="http://cylonjs.com/" target="_blank" rel="noopener">Cylon.js</a></li>
+<li><a href="http://icemobilelab.github.io/virgilio/" target="_blank" rel="noopener">Virgilio.js</a></li>
+<li><a href="https://shps.io" target="_blank" rel="noopener">SHPS</a></li>
+</ul>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://wdd.js.org/you-dont-need.html">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="王端端">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="http://p3alsaatj.bkt.clouddn.com/20180129093544_I5Jscb_IMG_1402.jpeg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="洞香春">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/you-dont-need.html" itemprop="url">You-Dont-Need 你不需要系列</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-01-29T14:11:36+08:00">
+                2018-01-29
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+            <div class="post-wordcount">
+              
+                
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">字数统计&#58;</span>
+                
+                <span title="字数统计">
+                  941 字
+                </span>
+              
+
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">阅读时长 &asymp;</span>
+                
+                <span title="阅读时长">
+                  4 分钟
+                </span>
+              
+            </div>
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h1 id="You-Dont-Need-JavaScript"><a href="#You-Dont-Need-JavaScript" class="headerlink" title="You-Dont-Need-JavaScript"></a><a href="https://github.com/you-dont-need/You-Dont-Need-JavaScript" target="_blank" rel="noopener">You-Dont-Need-JavaScript</a></h1><blockquote>
+<p><code>CSS是强大的，你可以做很多事情没有JS。</code> 本文教你使用原生CSS做下面的事情。</p>
+</blockquote>
+<p><code>内容目录</code></p>
+<ul>
+<li>手风琴/切换</li>
+<li>圆盘传送带</li>
+<li>检查复选框的计数器</li>
+<li>翻转点击</li>
+<li>Textfield上的浮动标签</li>
+<li>字体（拉丁）</li>
+<li>游戏</li>
+<li>悬停/弹出信息</li>
+<li>图片廊</li>
+<li>菜单</li>
+<li>移动菜单关闭画布</li>
+<li>汉堡菜单</li>
+<li>花式菜单</li>
+<li>莫代尔/弹出</li>
+<li>鼠标跟踪</li>
+<li>视差滚动</li>
+<li>标签</li>
+<li>待办事项列表</li>
+<li>提示</li>
+<li>树视图</li>
+<li>Twitter心动画</li>
+<li>动态图像着色</li>
+<li>连锁反应</li>
+<li>响应式计数器显示不适合屏幕的项目数量</li>
+</ul>
+<p>可以看一下纯CSS的例子</p>
+<p><img src="https://github.com/you-dont-need/You-Dont-Need-JavaScript/raw/master/images/accordion.gif" alt=""></p>
+<h1 id="You-Dont-Need-Lodash-Underscore"><a href="#You-Dont-Need-Lodash-Underscore" class="headerlink" title="You-Dont-Need-Lodash-Underscore"></a><a href="https://github.com/you-dont-need/You-Dont-Need-Lodash-Underscore" target="_blank" rel="noopener">You-Dont-Need-Lodash-Underscore</a></h1><blockquote>
+<p>Lodash和Underscore是伟大的现代JavaScript实用程序库，它们被前端开发人员广泛使用。但是，如果您将目标锁定为现代浏览器，则可能会发现，许多方法已经得到ES5和ES6的原生支持。如果你想要你的项目需要更少的依赖，并且你清楚的知道你的目标浏览器，那么你可能不需要Lodash / Underscore。</p>
+</blockquote>
+<p><code>来自开发者的声音</code></p>
+<ul>
+<li><p>在代码变臃肿之前，请使用原生JS对象和数组工具函数. —Cody Lindley, Author of jQuery Cookbook and JavaScript Enlightenment</p>
+</li>
+<li><p>你可能不需要lodash. 有许多好用的原生方法了. —Daniel Lamb, Computer Scientist, Technical Reviewer of Secrets of the JavaScript Ninja and Functional Programming in JavaScript</p>
+</li>
+<li><p>我想不是，但我想要它. —Tero Parviainen, Author of build-your-own-angular</p>
+</li>
+<li><p>我承认，我曾经过度使用lodash.  —@therebelrobot, Maker of web things, Facilitator for Node.js/io.js</p>
+</li>
+</ul>
+<p><code>内容目录</code></p>
+<ul>
+<li>Array<ul>
+<li>_.compact</li>
+<li>_.concat</li>
+<li>_.fill</li>
+<li>_.find</li>
+<li>_.findIndex</li>
+<li>_.first</li>
+<li>_.flatten</li>
+<li>_.flattenDeep</li>
+<li><em>.head and </em>.tail</li>
+<li>_.indexOf</li>
+<li>_.join</li>
+<li>_.last</li>
+<li>_.lastIndexOf</li>
+<li>_.reverse</li>
+<li>_.without</li>
+<li>_.slice</li>
+<li>_.isArray</li>
 </ul>
 </li>
-<li><p>移动端强势来袭</p>
-<ul>
-<li>良好的自适应效果</li>
-<li>专属的移动端交互体验</li>
+<li>Collection<ul>
+<li>_.each</li>
+<li>_.every</li>
+<li>_.filter</li>
+<li>_.groupBy</li>
+<li>_.includes</li>
+<li>_.map</li>
+<li><em>.minBy and </em>.maxBy</li>
+<li>_.pluck</li>
+<li>_.range</li>
+<li>_.reduce</li>
+<li>_.reduceRight</li>
+<li>_.size</li>
+<li>_.some</li>
 </ul>
 </li>
-<li><p>更丰富的可视化效果</p>
-<ul>
-<li>新增更多图表类型，更好的满足不同数据的处理需求 更多的搭配方案让你的数据呈现方式更个性和完美</li>
+<li>Function<ul>
+<li>_.after</li>
+</ul>
+</li>
+<li>Lang<ul>
+<li>_.isNaN</li>
+</ul>
+</li>
+<li>Object<ul>
+<li>_.assign</li>
+<li>_.keys</li>
+<li>_.toPairs</li>
+<li>_.values</li>
+</ul>
+</li>
+<li>String<ul>
+<li>_.repeat</li>
+<li>_.template</li>
+<li>_.toLower</li>
+<li>_.toUpper</li>
+<li>_.trim</li>
+<li>_.replace</li>
 </ul>
 </li>
 </ul>
-<h1 id="动画"><a href="#动画" class="headerlink" title="动画"></a>动画</h1><h2 id="GSAP"><a href="#GSAP" class="headerlink" title="GSAP"></a>GSAP</h2><p><img src="http://p3alsaatj.bkt.clouddn.com/20180207141045_LW91oF_Screenshot.jpeg" alt=""></p>
-<p><code>GSAP</code>（GreenSock动画平台）是一个先进的动画解决方案，由全球最大的企业使用创建惊人的互动动画，没有麻烦。它被超过200万网站雇用，在他们的客户中，你可以找到像福特，耐克，Adobe，微软，三星和许多其他的伟大的名字。</p>
-<p>GSAP与新旧浏览器以及移动设备高度兼容。在顶级功能SVG支持，使任何DOM元素可拖动，可旋转或可滑动滚动和快速性能的能力。它还带有定向旋转，3D变换，模块化架构，快速加载，零依赖性等等。</p>
-<h2 id="Bounce-js"><a href="#Bounce-js" class="headerlink" title="Bounce.js"></a>Bounce.js</h2><p><img src="http://p3alsaatj.bkt.clouddn.com/20180207141103_qmxThj_Screenshot.jpeg" alt=""></p>
-<p><code>Bounce.js</code>是一个整洁的JavaScript动画库，使您能够创建有吸引力的CSS3动力的动画，像饼图一样简单。它有10个预设，如旋转，旋风，果冻，公路跑步者和其他人，以生成平滑的动画，任何网页设计或自定义项目。</p>
-<p>这个库是绝对免费的和MIT许可的，它是一个不错的选择，在那些情况下，当你不需要一个长列表的动画类型，寻找实验或只是尝试你的手在动画。</p>
-<h1 id="Animate-css"><a href="#Animate-css" class="headerlink" title="Animate.css"></a>Animate.css</h1><p><img src="/img/bVI7Av" alt="clipboard.png"></p>
-<p><code>Animate.css</code>是一个平滑的CSS库，允许您添加整洁的动画到所选对象。它具有超过50种不同的预设，可以应用于文本，形式，对象和CSS3的图片。由于小文件大小，跨浏览器支持和易于使用它可以是一个非常适合移动项目，滑块，主页等。</p>
-<h1 id="时间日期"><a href="#时间日期" class="headerlink" title="时间日期"></a>时间日期</h1><h2 id="Moment-js"><a href="#Moment-js" class="headerlink" title="Moment.js"></a>Moment.js</h2><p><img src="http://p3alsaatj.bkt.clouddn.com/20180207141151_MuJJGe_Screenshot.jpeg" alt=""></p>
-<p><code>Moment.js</code>是一个简单和轻量级的日期库，使解析，操作和格式化日期和时间容易和准确。它具有多语言支持，持续时间，日历时间和各种插件，以获得诸如时区支持，Twitter集成等功能。但重要的是，它消除了使用本机JavaScript日期对象的需要，随后促进复杂解析过程和减少代码量。</p>
-<h2 id="Date-fns"><a href="#Date-fns" class="headerlink" title="Date-fns"></a>Date-fns</h2><p><img src="http://p3alsaatj.bkt.clouddn.com/20180207141209_nLE7jE_Screenshot.jpeg" alt=""></p>
-<p><code>Date-fns</code>是一个高级工具集，用于在浏览器和Node.js中操作时间和日期。它提供了140多个有用的功能，可以通过简单的API轻松访问。由于模块化结构，它允许您只选择您当前需要的项目的那些功能。</p>
-<h1 id="其他"><a href="#其他" class="headerlink" title="其他"></a>其他</h1><h2 id="Math-js"><a href="#Math-js" class="headerlink" title="Math.js"></a>Math.js</h2><p><img src="http://p3alsaatj.bkt.clouddn.com/20180207141231_eEfaRZ_Screenshot.jpeg" alt=""></p>
-<p>Math.js是JavaScript引擎的开源数学库。它有许多函数和常量，灵活的表达式解析器，以及支持复杂和大数字，单位，字符串，分数，矩阵，数组和符号计算。</p>
-<h2 id="Handsontable"><a href="#Handsontable" class="headerlink" title="Handsontable"></a>Handsontable</h2><p><img src="http://p3alsaatj.bkt.clouddn.com/20180207141247_GqNwF8_Screenshot.jpeg" alt=""></p>
-<p><code>Handsontable</code>是一个无障碍的JavaScript<code>电子表格库</code>用于构建一流的Web应用程序。它可以轻松地扩展和修改与自定义插件。由开发人员为开发人员建造，它确保快速和容易的开始，方便的模块化结构和活跃的社区支持。这个表库包括超过30个功能的免费版本和额外的10+功能的专业版。目前Handsontable用于销售报告，人力规划，数据合并，数据库编辑等领域。</p>
+<h1 id="You-Dont-Need-jQuery"><a href="#You-Dont-Need-jQuery" class="headerlink" title="You-Dont-Need-jQuery"></a><a href="https://github.com/nefe/You-Dont-Need-jQuery" target="_blank" rel="noopener">You-Dont-Need-jQuery</a></h1><p><code>纯JavaScript的例子, 实现做jQuery与查询，样式，dom，ajax，事件等</code></p>
+<p>前端发展很快，现代浏览器原生 API 已经足够好用。我们并不需要为了操作 DOM、Event 等再学习一下 jQuery 的 API。同时由于 React、Angular、Vue 等框架的流行，直接操作 DOM 不再是好的模式，jQuery 使用场景大大减少。本项目总结了大部分 jQuery API 替代的方法，暂时只支持 IE10 以上浏览器。 </p>
+<p><code>内容目录</code></p>
+<ul>
+<li>Translations</li>
+<li>Query Selector</li>
+<li>CSS &amp; Style</li>
+<li>DOM Manipulation</li>
+<li>Ajax</li>
+<li>Events</li>
+<li>Utilities</li>
+<li>Promises</li>
+<li>Animation</li>
+<li>Alternatives</li>
+<li>Browser Support</li>
+</ul>
+<h1 id="You-Dont-Need-GUI"><a href="#You-Dont-Need-GUI" class="headerlink" title="You-Dont-Need-GUI"></a><a href="https://github.com/you-dont-need/You-Dont-Need-GUI" target="_blank" rel="noopener">You-Dont-Need-GUI</a></h1><p>图形用户界面对计算机用户非常友好。它们被引入以响应命令行界面（CLI）感知的陡峭学习曲线。</p>
+<p><img src="https://github.com/you-dont-need/You-Dont-Need-GUI/raw/master/Xerox_Star_8010_workstations.jpg" alt=""></p>
+<p>但是，他们往往需要更多的资源，功能不强，难以通过脚本自动化。</p>
+<p><code>作为计算机专家，我们希望更高效，更好地完成工作。</code>我们知道命令字可能不容易被发现或助记符，所以我们尝试列出一些您可能试图在GUI中执行的常见任务。</p>
+<p><code>内容目录</code></p>
+<ul>
+<li>复制一个文件</li>
+<li>复制一个文件</li>
+<li>复制一个文件夹</li>
+<li>复制一个文件夹</li>
+<li>移动一个文件</li>
+<li>重命名一个文件</li>
+<li>移动一个文件夹</li>
+<li>重命名文件夹</li>
+<li>合并文件夹</li>
+<li>创建一个新的文件</li>
+<li>新建一个文件夹</li>
+<li>显示文件/文件夹大小</li>
+<li>用默认程序打开一个文件</li>
+<li>压缩一个文件夹</li>
+<li>解压缩文件夹</li>
+<li>删除一个文件</li>
+<li>删除一个文件夹</li>
+<li>列出文件夹内容</li>
+<li>树查看文件夹及其子文件夹</li>
+<li>找到一个陈旧的文件</li>
+<li>显示一个日历</li>
+<li>找到未来的日期</li>
+<li>使用计算器</li>
+<li>强制退出程序</li>
+</ul>
+<p><img src="https://leanote.com/api/file/getImage?fileId=5a45b26aab64411cab000cf5" alt=""></p>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://wdd.js.org/nodejs-alpine-docker.html">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="王端端">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="http://p3alsaatj.bkt.clouddn.com/20180129093544_I5Jscb_IMG_1402.jpeg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="洞香春">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/nodejs-alpine-docker.html" itemprop="url">Nodejs alpine 基础docker镜像构建</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-01-29T14:10:15+08:00">
+                2018-01-29
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+            <div class="post-wordcount">
+              
+                
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">字数统计&#58;</span>
+                
+                <span title="字数统计">
+                  266 字
+                </span>
+              
+
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">阅读时长 &asymp;</span>
+                
+                <span title="阅读时长">
+                  1 分钟
+                </span>
+              
+            </div>
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h1 id="系统环境"><a href="#系统环境" class="headerlink" title="系统环境"></a>系统环境</h1><ul>
+<li>centos7 内核：3.10.0-514.26.2.el7.x86_64</li>
+<li>安装docker要求内核版本不低于3.10</li>
+</ul>
+<h1 id="安装docker"><a href="#安装docker" class="headerlink" title="安装docker"></a>安装docker</h1><figure class="highlight stylus"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">yum install docker <span class="comment">// 安装docker</span></span><br><span class="line">systemctl start docker<span class="selector-class">.service</span> <span class="comment">// 启动docker</span></span><br><span class="line">systemctl enable docker<span class="selector-class">.service</span> <span class="comment">// 设置开机启动</span></span><br></pre></td></tr></table></figure>
+<h1 id="Nodejs-镜像选择"><a href="#Nodejs-镜像选择" class="headerlink" title="Nodejs 镜像选择"></a>Nodejs 镜像选择</h1><table>
+<thead>
+<tr>
+<th>REPOSITORY</th>
+<th>TAG</th>
+<th>IMAGE ID</th>
+<th>CREATED</th>
+<th>SIZE</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>docker.io/node</td>
+<td>9.2.1-slim</td>
+<td>69c9f9292fa4</td>
+<td>3 days ago</td>
+<td>230 MB</td>
+</tr>
+<tr>
+<td>docker.io/node</td>
+<td>9.2.1-alpine</td>
+<td>afdc3aaaf748</td>
+<td>3 days ago</td>
+<td>67.46 MB</td>
+</tr>
+<tr>
+<td>docker.io/node</td>
+<td>latest</td>
+<td>727b047a1f4e</td>
+<td>3 days ago</td>
+<td>675.6 MB</td>
+</tr>
+<tr>
+<td>docker.io/iron/node</td>
+<td>latest</td>
+<td>9ca501065d18</td>
+<td>20 months ago</td>
+<td>18.56 MB</td>
+</tr>
+</tbody>
+</table>
+<p><code>选择镜像的标准</code></p>
+<ul>
+<li>官方的</li>
+<li>经常维护的</li>
+<li>体积小的</li>
+<li>要有yarn 和 npm </li>
+<li>node版本要高</li>
+</ul>
+<p>最终选择 <code>node:9.2.1-alpine</code>, 该镜像体积很小，已经内置npm(5.5.1), yarn(1.3.2)</p>
+<h1 id="时区配置"><a href="#时区配置" class="headerlink" title="时区配置"></a>时区配置</h1><p><code>node:9.2.1-alpine</code>的时区默认不是国内的，需要在build时，配置时区。</p>
+<figure class="highlight routeros"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">FROM</span> node:9.2.1-alpine</span><br><span class="line"></span><br><span class="line"><span class="comment"># Install base packages and set timezone ShangHai</span></span><br><span class="line"><span class="builtin-name">RUN</span> apk update &amp;&amp; apk <span class="builtin-name">add</span> bash tzdata \</span><br><span class="line">    &amp;&amp; cp -r -f /usr/share/zoneinfo/Asia/Shanghai /etc/localtime</span><br><span class="line"></span><br><span class="line"><span class="built_in">..</span>.</span><br><span class="line"><span class="built_in">..</span>.</span><br><span class="line"><span class="built_in">..</span>.</span><br><span class="line"></span><br><span class="line">CMD [ <span class="string">"node"</span> ]</span><br></pre></td></tr></table></figure>
+<p>验证：<br><figure class="highlight crmsh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">➜  <span class="keyword">node</span><span class="title">-dockerfile</span> git:(<span class="literal">master</span>) docker run -it  e595 sh </span><br><span class="line">/ <span class="comment"># yarn -v</span></span><br><span class="line"><span class="number">1.3</span>.<span class="number">2</span></span><br><span class="line">/ <span class="comment"># npm  -v</span></span><br><span class="line"><span class="number">5.5</span>.<span class="number">1</span></span><br><span class="line">/ <span class="comment"># node -v</span></span><br><span class="line">v9.<span class="number">2.1</span></span><br><span class="line">/ <span class="comment"># date</span></span><br><span class="line">Tue Dec <span class="number">12</span> <span class="number">17</span>:<span class="number">33</span>:<span class="number">26</span> CST <span class="number">2017</span></span><br></pre></td></tr></table></figure></p>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://wdd.js.org/vscode-vue-standardjs.html">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="王端端">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="http://p3alsaatj.bkt.clouddn.com/20180129093544_I5Jscb_IMG_1402.jpeg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="洞香春">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/vscode-vue-standardjs.html" itemprop="url">如何在vscode中用standard style 风格去验证 vue文件</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-01-29T14:02:53+08:00">
+                2018-01-29
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+            <div class="post-wordcount">
+              
+                
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">字数统计&#58;</span>
+                
+                <span title="字数统计">
+                  581 字
+                </span>
+              
+
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">阅读时长 &asymp;</span>
+                
+                <span title="阅读时长">
+                  3 分钟
+                </span>
+              
+            </div>
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h1 id="JavaScript-Standard-Style简介"><a href="#JavaScript-Standard-Style简介" class="headerlink" title="JavaScript Standard Style简介"></a>JavaScript Standard Style简介</h1><p>本工具通过以下三种方式为你（及你的团队）节省大量时间：</p>
+<ul>
+<li>无须配置。 史上最便捷的统一代码风格的方式，轻松拥有。</li>
+<li>自动代码格式化。 只需运行 standard –fix 从此和脏乱差的代码说再见。</li>
+<li>提前发现风格及程序问题。 减少代码审查过程中反反复复的修改过程，节约时间。</li>
+<li>无须犹豫。再也不用维护 .eslintrc, .jshintrc, or .jscsrc 。开箱即用。</li>
+</ul>
+<p>安装：<br><figure class="highlight stylus"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm <span class="selector-tag">i</span> standard -g</span><br></pre></td></tr></table></figure></p>
+<p>关于<a href="https://standardjs.com/readme-zhcn.html" target="_blank" rel="noopener">JavaScript 代码规范</a>, 你可以点击链接看一下。</p>
+<h1 id="如何在vscode中用JavaScript-Standard-Style风格去验证-vue文件"><a href="#如何在vscode中用JavaScript-Standard-Style风格去验证-vue文件" class="headerlink" title="如何在vscode中用JavaScript Standard Style风格去验证 vue文件"></a>如何在vscode中用JavaScript Standard Style风格去验证 vue文件</h1><p>实际上<a href="https://marketplace.visualstudio.com/items?itemName=chenxsan.vscode-standardjs" target="_blank" rel="noopener">JavaScript Standard Style</a>有一个FAQ, 说明了如何使用。</p>
+<p>但是有一点非常重要的作者没有提到，就是<code>eslint-plugin-html这个插件必须要安装3.x.x版本的</code>, 现在<code>eslint-plugin-html</code>, 已经升级到4.x版本，默认不写版本号安装的就是4.x版本的，所以会出现问题。<a href="https://github.com/BenoitZugmeyer/eslint-plugin-html/issues/60" target="_blank" rel="noopener">参考</a></p>
 <blockquote>
+<p>ESLint v4 is only supported by eslint-plugin-html v3, so you can’t use eslint-plugin-html v1.5.2 with it (I should add a warning about this when trying to use the plugin with an incompatible version on ESLint).</p>
+<p>If you do not use ESLint v4, please provide more information (package.json, a gist to reproduce, …)</p>
 </blockquote>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://wdd.js.org/few-simple-rules-for-good-coding-my-15-years-experience.html">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="王端端">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="http://p3alsaatj.bkt.clouddn.com/20180129093544_I5Jscb_IMG_1402.jpeg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="洞香春">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/few-simple-rules-for-good-coding-my-15-years-experience.html" itemprop="url">【译】13简单的优秀编码规则（从我15年的经验）</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-02-07T14:03:12+08:00">
-                2018-02-07
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-            <div class="post-wordcount">
-              
-                
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-file-word-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">字数统计&#58;</span>
-                
-                <span title="字数统计">
-                  1,626 字
-                </span>
-              
-
-              
-                <span class="post-meta-divider">|</span>
-              
-
-              
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-clock-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">阅读时长 &asymp;</span>
-                
-                <span title="阅读时长">
-                  6 分钟
-                </span>
-              
-            </div>
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <p>原文地址：<a href="https://hackernoon.com/few-simple-rules-for-good-coding-my-15-years-experience-96cb29d4acd9#.ddzpjb80c" target="_blank" rel="noopener">https://hackernoon.com/few-simple-rules-for-good-coding-my-15-years-experience-96cb29d4acd9#.ddzpjb80c</a></p>
-<p><img src="http://p3alsaatj.bkt.clouddn.com/20180207140343_0UaL3X_Screenshot.jpeg" alt=""></p>
-<p>嗨，我的工作作为一个程序员超过15年，并使用许多不同的语言，范例，框架和其他狗屎。我想和大家分享我写好代码的规则。</p>
-<h1 id="优化VS可读性-去他妈的优化"><a href="#优化VS可读性-去他妈的优化" class="headerlink" title="优化VS可读性 去他妈的优化"></a>优化VS可读性 去他妈的优化</h1><p>始终编​​写易于阅读且对开发人员可理解的代码。因为在硬可读代码上花费的时间和资源将远远高于从优化中获得的。<br>如果你需要进行优化，那么使它像DI的独立模块，具有100％的测试覆盖率，并且不会被触及至少一年。</p>
-<h1 id="架构第一"><a href="#架构第一" class="headerlink" title="架构第一"></a>架构第一</h1><p>我看到很多人说“我们需要快速做事，我们没有时间做架构”。其中约99％的人因为这样的想法而遇到了大问题。<br>编写代码而不考虑其架构是没有用的，就像没有实现它们的计划一样，梦想你的愿望。<br>在编写代码的第一行之前，你应该明白它将要做什么，它将如何使用，模块，服务如何相互工作，它将有什么结构，如何进行测试和调试，以及如何更新。</p>
-<h1 id="测试覆盖率"><a href="#测试覆盖率" class="headerlink" title="测试覆盖率"></a>测试覆盖率</h1><p>测试是好事，但他们并不总是负担得起，对项目有意义。</p>
-<p>当你需要测试：</p>
-<ul>
-<li>当你编写模块时，微服务将不会被触及至少一个月。</li>
-<li>当你编写开源代码。</li>
-<li>当你编写涉及金融渠道的核心代码或代码。</li>
-<li>当您有代码更新的同时更新测试的资源。</li>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line">// FAQ</span><br><span class="line">How to lint script tag in vue or html files?</span><br><span class="line"></span><br><span class="line">You can lint them with eslint-plugin-html, just <span class="keyword">install</span> it <span class="keyword">first</span>, <span class="keyword">then</span> <span class="keyword">enable</span> linting <span class="keyword">for</span> those <span class="keyword">file</span> types <span class="keyword">in</span> settings.json <span class="keyword">with</span>:</span><br><span class="line"></span><br><span class="line"> <span class="string">"standard.validate"</span>: [</span><br><span class="line">     <span class="string">"javascript"</span>,</span><br><span class="line">     <span class="string">"javascriptreact"</span>,</span><br><span class="line">     <span class="string">"html"</span></span><br><span class="line"> ],</span><br><span class="line"> <span class="string">"standard.options"</span>: &#123;</span><br><span class="line">     <span class="string">"plugins"</span>: [<span class="string">"html"</span>]</span><br><span class="line"> &#125;,</span><br><span class="line"> <span class="string">"files.associations"</span>: &#123;</span><br><span class="line">     <span class="string">"*.vue"</span>: <span class="string">"html"</span></span><br><span class="line"> &#125;,</span><br><span class="line"><span class="keyword">If</span> you want <span class="keyword">to</span> <span class="keyword">enable</span> autoFix <span class="keyword">for</span> the <span class="keyword">new</span> languages, you should <span class="keyword">enable</span> it yourself:</span><br><span class="line"></span><br><span class="line"> <span class="string">"standard.validate"</span>: [</span><br><span class="line">     <span class="string">"javascript"</span>,</span><br><span class="line">     <span class="string">"javascriptreact"</span>,</span><br><span class="line">     &#123; <span class="string">"language"</span>: <span class="string">"html"</span>, <span class="string">"autoFix"</span>: <span class="literal">true</span> &#125;</span><br><span class="line"> ],</span><br><span class="line"> <span class="string">"standard.options"</span>: &#123;</span><br><span class="line">     <span class="string">"plugins"</span>: [<span class="string">"html"</span>]</span><br><span class="line"> &#125;</span><br></pre></td></tr></table></figure>
+<h1 id="综上，-整理一下安装思路"><a href="#综上，-整理一下安装思路" class="headerlink" title="综上， 整理一下安装思路"></a>综上， 整理一下安装思路</h1><h2 id="需要安装哪些包？"><a href="#需要安装哪些包？" class="headerlink" title="需要安装哪些包？"></a>需要安装哪些包？</h2><ul>
+<li><code>npm i -g standard</code></li>
+<li><code>npm i -g eslint-plugin-html@3.2.2</code> 必须是3x版本</li>
+<li><code>npm i -g eslint</code><br>以上三个包都是全局安装的，如果你想看看全局安装了哪些包可以用<code>npm list -g --depth=0</code>查看</li>
 </ul>
-<p>当你不需要测试时：</p>
+<h2 id="vscode-config-如何写？"><a href="#vscode-config-如何写？" class="headerlink" title="vscode config 如何写？"></a>vscode config 如何写？</h2><figure class="highlight xquery"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">"standard.validate"</span>: [</span><br><span class="line">  <span class="string">"javascript"</span>,</span><br><span class="line">  <span class="string">"javascriptreact"</span>,</span><br><span class="line">  &#123;</span><br><span class="line">    <span class="string">"language"</span>: <span class="string">"html"</span>,</span><br><span class="line">    <span class="string">"autoFix"</span>: true</span><br><span class="line">  &#125;</span><br><span class="line">],</span><br><span class="line"><span class="string">"standard.options"</span>: &#123;</span><br><span class="line">  <span class="string">"plugin"</span>: [<span class="string">"html"</span>]</span><br><span class="line">&#125;,</span><br><span class="line"><span class="string">"files.associations"</span>: &#123;</span><br><span class="line">  <span class="string">"*.vue"</span>: <span class="string">"html"</span></span><br><span class="line">&#125;,</span><br></pre></td></tr></table></figure>
+<h2 id="如何在保存文件时，自动使用standard格式化vue文件"><a href="#如何在保存文件时，自动使用standard格式化vue文件" class="headerlink" title="如何在保存文件时，自动使用standard格式化vue文件"></a>如何在保存文件时，自动使用standard格式化vue文件</h2><figure class="highlight actionscript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">"standard.autoFixOnSave"</span>: <span class="literal">true</span></span><br></pre></td></tr></table></figure>
+<h2 id="如果还不行怎么办？"><a href="#如果还不行怎么办？" class="headerlink" title="如果还不行怎么办？"></a>如果还不行怎么办？</h2><ol>
+<li>重启一下vscode</li>
+<li>重启一下电脑</li>
+<li>在此文后追加评论</li>
+</ol>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://wdd.js.org/tampermonkey.html">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="王端端">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="http://p3alsaatj.bkt.clouddn.com/20180129093544_I5Jscb_IMG_1402.jpeg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="洞香春">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/tampermonkey.html" itemprop="url">油猴子脚本 - 我的地盘我做主</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-01-29T13:58:37+08:00">
+                2018-01-29
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+            <div class="post-wordcount">
+              
+                
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">字数统计&#58;</span>
+                
+                <span title="字数统计">
+                  636 字
+                </span>
+              
+
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">阅读时长 &asymp;</span>
+                
+                <span title="阅读时长">
+                  2 分钟
+                </span>
+              
+            </div>
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <blockquote>
+<p><code>当你用浏览器访问某个网页时，你可曾想过，你看到的这个网页，实际上是属于你自己的。</code></p>
+</blockquote>
+<p>打个比喻：<code>访问某个网站就好像是网购了一筐鸡蛋，鸡蛋虽然是养鸡场生产的，但是这个蛋我怎么吃，你养鸡场管不着</code>。</p>
+<p>当然了，对于很多人来说，鸡蛋没有别的吃法，鸡蛋只能煮着吃。</p>
+<p>你可以看如下的页面：当你在某搜索引擎上搜索<code>前端开发</code>时</p>
+<p>大多数人看到的页面是这样的, <code>满屏的广告，满屏的推广，满屏的排名，满屏的中间地址跳转，满屏的流量劫持, 还有莆田系</code></p>
+<p><img src="http://p3alsaatj.bkt.clouddn.com/20180129135930_Btkbuq_Screenshot.jpeg" alt=""></p>
+<p>但是有些人的页面却是这样的：<code>清晰，自然，链接直达，清水出芙蓉，天然去雕饰</code><br><img src="http://p3alsaatj.bkt.clouddn.com/20180129135945_rkPKMY_Screenshot.jpeg" alt=""></p>
+<p>这就是<code>油猴子脚本干的事情</code>， 当然，它能干的事情，远不止如此。<code>它是齐天大圣孙悟空，有七十二变。</code></p>
+<h1 id="什么是油猴子脚本？"><a href="#什么是油猴子脚本？" class="headerlink" title="什么是油猴子脚本？"></a>什么是油猴子脚本？</h1><blockquote>
+<p>Greasemonkey，简称GM，中文俗称为“油猴”，是Firefox的一个附加组件。它让用户安装一些脚本使大部分HTML为主的网页于用户端直接改变得更方便易用。随着Greasemonkey脚本常驻于浏览器，每次随着目的网页打开而自动做修改，使得运行脚本的用户印象深刻地享受其固定便利性。</p>
+<p>Greasemonkey可替网页加入些新功能（例如在亚马逊书店嵌入商品比价功能）、修正网页错误、组合来自不同网页的数据、或者数繁不及备载的其他功能。写的好的Greasemonkey脚本甚至可让其输出与被修改的页面集成得天衣无缝，像是原本网页里的一部分。 来自<a href="https://zh.wikipedia.org/wiki/Greasemonkey" target="_blank" rel="noopener">维基百科</a></p>
+</blockquote>
+<h1 id="如何安装油猴子插件？"><a href="#如何安装油猴子插件？" class="headerlink" title="如何安装油猴子插件？"></a>如何安装油猴子插件？</h1><p>在google商店搜索<code>Tampermonkey</code>, 安装量最高的就是它。</p>
+<h1 id="如何写油猴子脚本？"><a href="#如何写油猴子脚本？" class="headerlink" title="如何写油猴子脚本？"></a>如何写油猴子脚本？</h1><p>油猴子脚本有个新建脚本页面，在此页面可以创建脚本。具体教程可以参考。</p>
 <ul>
-<li>当你是一个创业。</li>
-<li>当你有小团队和代码更改是快速。</li>
-<li>当你编写的脚本，可以简单地通过他们的输出手动测试。</li>
+<li><a href="https://jixunmoe.github.io/gmDevBook/#/doc/intro/about" target="_blank" rel="noopener">中文 GreaseMonkey 用户脚本开发手册</a></li>
+<li><a href="http://blog.leanote.com/post/mynote/%E6%B2%B9%E7%8C%B4%E5%AD%90" target="_blank" rel="noopener">GreaseMonkey（油猴子）脚本开发</a></li>
+<li><a href="http://e.sebug.net/paper/books/greasemonkey/" target="_blank" rel="noopener">深入浅出 Greasemonkey</a></li>
+<li><a href="http://commons.oreilly.com/wiki/index.php/Greasemonkey_Hacks/Getting_Started" target="_blank" rel="noopener">Greasemonkey Hacks/Getting Started</a></li>
 </ul>
-<p>记住，<code>带有严格测试的代码可能比没有测试的代码更有害</code>。</p>
-<h1 id="保持简单，极度简单"><a href="#保持简单，极度简单" class="headerlink" title="保持简单，极度简单"></a>保持简单，极度简单</h1><p>不要编写复杂的代码。更多更简单，那么更少的错误它可能有和更少的时间来调试它们。代码应该做的只是它需要没有非常多的抽象和其他OOP shit（尤其是涉及java开发人员）+ 20％的东西可能需要在将来以简单的方式更新它。</p>
-<h1 id="注释"><a href="#注释" class="headerlink" title="注释"></a>注释</h1><p>出现注释说明你的代码不够好。好的代码应该是可以理解的，没有一行注释。但是如何为新开发人员节省时间？ - 编写简单的内联文档描述什么和如何方法工作。这将节省很多时间来理解，甚至更多 - 它将给人们更多的机会来提出更好的实施这种方法。并且它将是全球代码文档的良好开端。</p>
-<h1 id="硬耦合VS较小耦合"><a href="#硬耦合VS较小耦合" class="headerlink" title="硬耦合VS较小耦合"></a>硬耦合VS较小耦合</h1><p>始终尝试使用微服务架构。单片软件可以比微服务软件运行得更快，但只能在一个服务器的上下文中运行。<br>微服务使您可以不仅在许多服务器上，而且有时甚至在一台机器上（我的意思是过程分发）高效地分发您的软件。</p>
-<h1 id="代码审查"><a href="#代码审查" class="headerlink" title="代码审查"></a>代码审查</h1><p>代码审查可以是好的，也以是坏的。<br>您可以组织代码审查，只有当您有开发人员了解95％的代码，谁可以监控所有更新，而不浪费很多时间。在其他情况下，这将是只是耗时，每个人都会讨厌这个。</p>
-<p>在这部分有很多问题，所以更深入地描述这一点。</p>
-<p>许多人认为代码审查是一个很好的方式教新手，或者工作在不同部分的代码的队友。但是代码审查的主要目标是保持代码质量，而不是教学。让我们想象你的团队制作代码用于控制核反应堆或太空火箭发动机的冷却系统。你在非常硬的逻辑中犯了巨大的错误，然后你给这个代码审查新的家伙。你怎么认为会发生意外的风险？ - 我的练习率超过70％。</p>
-<p>良好的团队是每个人都有自己的角色，负责确切的工作。如果有人想要理解另一段代码，那么他去一个负责任去问他。你不可能知道一切，更好的优秀的理解小块代码而不是理解所有。</p>
-<h1 id="重构没啥用"><a href="#重构没啥用" class="headerlink" title="重构没啥用"></a>重构没啥用</h1><p>在我的职业生涯中，我听到很多次“不要担心，我们以后会重构它”。在未来，这会导致大的技术债务或从头开始删除所有的代码和写作。</p>
-<p>所以，不要得到一个债务，除非你有钱从头开发你的软件几次。</p>
-<h1 id="当你累了或在一个坏的心情不要写代码。"><a href="#当你累了或在一个坏的心情不要写代码。" class="headerlink" title="当你累了或在一个坏的心情不要写代码。"></a>当你累了或在一个坏的心情不要写代码。</h1><p>当开发人员厌倦时，他们正在制造2到5倍或者更多的bug。所以工作更多是非常糟糕的做法。这就是为什么越来越多的国家思考6小时工作日，其中一些已经有了。精神工作不同于使用你的二头肌。</p>
-<h1 id="不要一次写全部-使开发迭代"><a href="#不要一次写全部-使开发迭代" class="headerlink" title="不要一次写全部 - 使开发迭代"></a>不要一次写全部 - 使开发迭代</h1><p>在编写代码分析和预测之前，您的客户/客户真正需要什么，然后选择您可以在短期内以高质量开发的MVF（最有价值的功能）。使用这样的迭代来部署质量更新，而不是腰部时间和资源对不合理的愿望和牺牲与质量。</p>
-<h1 id="自动化VS手动"><a href="#自动化VS手动" class="headerlink" title="自动化VS手动"></a>自动化VS手动</h1><p>自动化是长期的100％成功。所以如果你有资源自动化的东西，现在应该做。你可能认为“只需要5分钟，为什么我应该自动化？但让我计算这个。例如，它是5个开发人员的日常任务。 5分钟<em> 5天</em> 21天* 12个月= 6 300分钟= 105小时= 13.125天〜5250 $。<br>如果你有40 000名员工，这将需要多少费用？</p>
-<h1 id="出去浪，学习新爱好"><a href="#出去浪，学习新爱好" class="headerlink" title="出去浪，学习新爱好"></a>出去浪，学习新爱好</h1><p>差异化工作可以增加心智能力，并提供新想法。所以，暂停现在的工作，出去呼吸一下新鲜空气，与朋友交谈，弹吉他等。<br><code>ps: 莫春者，春服既成，冠者五六人，童子六七人，浴乎沂，风乎舞雩，咏而归。------《论语.先进》。</code></p>
-<p><img src="http://p3alsaatj.bkt.clouddn.com/20180207140423_Iku4es_Screenshot.jpeg" alt=""></p>
-<h1 id="在空闲时间学习新事物"><a href="#在空闲时间学习新事物" class="headerlink" title="在空闲时间学习新事物"></a>在空闲时间学习新事物</h1><p><code>当人们停止学习时，他们开始退化。</code></p>
+<p><img src="http://p3alsaatj.bkt.clouddn.com/20180129140004_amXldp_Screenshot.jpeg" alt=""></p>
+<h1 id="如何使用他人的脚本？"><a href="#如何使用他人的脚本？" class="headerlink" title="如何使用他人的脚本？"></a>如何使用他人的脚本？</h1><p><a href="https://greasyfork.org/zh-CN" target="_blank" rel="noopener">greasyfork网站</a>提供很多脚本，它仿佛是代码界的github, 可以在该网站搜到很多有意思的脚本。</p>
+<p><img src="http://p3alsaatj.bkt.clouddn.com/20180129140017_AapqKj_Screenshot.jpeg" alt=""></p>
+<h1 id="有哪些好用的脚本？"><a href="#有哪些好用的脚本？" class="headerlink" title="有哪些好用的脚本？"></a>有哪些好用的脚本？</h1><ul>
+<li><a href="https://www.zhihu.com/question/22210090" target="_blank" rel="noopener">有哪些超神的油猴脚本?</a></li>
+<li>或者你可以在greasyfork网站查看一些下载量排行</li>
+</ul>
 
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://wdd.js.org/sort-for-sf.html">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="王端端">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="http://p3alsaatj.bkt.clouddn.com/20180129093544_I5Jscb_IMG_1402.jpeg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="洞香春">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/sort-for-sf.html" itemprop="url">15行代码为segmentfault增加头条文章排序功能</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-02-07T14:00:46+08:00">
-                2018-02-07
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-            <div class="post-wordcount">
-              
-                
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-file-word-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">字数统计&#58;</span>
-                
-                <span title="字数统计">
-                  102 字
-                </span>
-              
-
-              
-                <span class="post-meta-divider">|</span>
-              
-
-              
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-clock-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">阅读时长 &asymp;</span>
-                
-                <span title="阅读时长">
-                  1 分钟
-                </span>
-              
-            </div>
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <p>有个需求，想看点赞最多的头条，但是页面没有这种按钮。怎么办？自己写吧。</p>
-<p>先看效果<br><img src="http://p3alsaatj.bkt.clouddn.com/20180207140139_xwjt2M_Screenshot.jpeg" alt=""></p>
-<p>再看代码<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> rows = $(<span class="string">'.news__item'</span>).each(<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">    <span class="keyword">var</span> key = +$(<span class="keyword">this</span>).find(<span class="string">'.news__item-zan-number'</span>).text();</span><br><span class="line">    $(<span class="keyword">this</span>).data(<span class="string">'key'</span>, key);</span><br><span class="line">&#125;).get();</span><br><span class="line"></span><br><span class="line">rows.sort(<span class="function"><span class="keyword">function</span>(<span class="params">a,b</span>)</span>&#123;</span><br><span class="line">    <span class="keyword">var</span> keyA = $(a).data(<span class="string">'key'</span>);</span><br><span class="line">    <span class="keyword">var</span> keyB = $(b).data(<span class="string">'key'</span>);</span><br><span class="line">    <span class="keyword">if</span>(keyA&lt;keyB)&#123;<span class="keyword">return</span> <span class="number">-1</span>;&#125;</span><br><span class="line">    <span class="keyword">else</span>&#123;<span class="keyword">return</span> <span class="number">1</span>;&#125;</span><br><span class="line">&#125;);</span><br><span class="line"></span><br><span class="line">$.each(rows, <span class="function"><span class="keyword">function</span>(<span class="params">index, row</span>)</span>&#123;</span><br><span class="line">    $(<span class="string">'.news__list'</span>).prepend(row);</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure></p>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://wdd.js.org/visual-reading-js-code.html">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="王端端">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="http://p3alsaatj.bkt.clouddn.com/20180129093544_I5Jscb_IMG_1402.jpeg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="洞香春">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/visual-reading-js-code.html" itemprop="url">可视化交互阅读JS源代码</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-02-07T13:57:25+08:00">
-                2018-02-07
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-            <div class="post-wordcount">
-              
-                
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-file-word-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">字数统计&#58;</span>
-                
-                <span title="字数统计">
-                  107 字
-                </span>
-              
-
-              
-                <span class="post-meta-divider">|</span>
-              
-
-              
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-clock-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">阅读时长 &asymp;</span>
-                
-                <span title="阅读时长">
-                  1 分钟
-                </span>
-              
-            </div>
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <h1 id="曾经，你可以能习惯这样阅读javascript"><a href="#曾经，你可以能习惯这样阅读javascript" class="headerlink" title="曾经，你可以能习惯这样阅读javascript"></a>曾经，你可以能习惯这样阅读javascript</h1><p><img src="http://p3alsaatj.bkt.clouddn.com/20180207135809_HSz6fD_Screenshot.jpeg" alt=""></p>
-<h1 id="现在，你可以用这个姿势阅读"><a href="#现在，你可以用这个姿势阅读" class="headerlink" title="现在，你可以用这个姿势阅读"></a>现在，你可以用这个姿势阅读</h1><p><img src="http://p3alsaatj.bkt.clouddn.com/20180207135821_3b9l9c_Screenshot.jpeg" alt=""></p>
-<h1 id="怎么做呢"><a href="#怎么做呢" class="headerlink" title="怎么做呢?"></a>怎么做呢?</h1><h2 id="step1"><a href="#step1" class="headerlink" title="step1:"></a>step1:</h2><figure class="highlight maxima"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install -g <span class="built_in">lambda</span>-<span class="built_in">view</span></span><br></pre></td></tr></table></figure>
-<h2 id="step2"><a href="#step2" class="headerlink" title="step2:"></a>step2:</h2><figure class="highlight stylus"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 阅读本地代码</span></span><br><span class="line">lv targer.js</span><br><span class="line"></span><br><span class="line"><span class="comment">// 阅读远程代码</span></span><br><span class="line">lv https:<span class="comment">//code.jquery.com/jquery-3.1.1.js</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// 阅读多个代码</span></span><br><span class="line">lv file1<span class="selector-class">.js</span> file2<span class="selector-class">.js</span> file3.js</span><br><span class="line"></span><br><span class="line"><span class="comment">// 阅读所有</span></span><br><span class="line">lv *.js</span><br></pre></td></tr></table></figure>
-<h1 id="项目地址：https-github-com-Jianru-Lin-lambda-view"><a href="#项目地址：https-github-com-Jianru-Lin-lambda-view" class="headerlink" title="项目地址：https://github.com/Jianru-Lin/lambda-view"></a>项目地址：<a href="https://github.com/Jianru-Lin/lambda-view" target="_blank" rel="noopener">https://github.com/Jianru-Lin/lambda-view</a></h1><h1 id="欢迎试玩！"><a href="#欢迎试玩！" class="headerlink" title="欢迎试玩！"></a>欢迎试玩！</h1>
           
         
       
@@ -1157,7 +1411,7 @@
 
   
   <nav class="pagination">
-    <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><span class="space">&hellip;</span><a class="page-number" href="/page/11/">11</a><a class="extend next" rel="next" href="/page/2/"><i class="fa fa-angle-right"></i></a>
+    <a class="extend prev" rel="prev" href="/page/9/"><i class="fa fa-angle-left"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/9/">9</a><span class="page-number current">10</span><a class="page-number" href="/page/11/">11</a><a class="extend next" rel="next" href="/page/11/"><i class="fa fa-angle-right"></i></a>
   </nav>
 
 
