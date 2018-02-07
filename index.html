@@ -300,6 +300,343 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://wdd.js.org/send-ajax-when-page-unload.html">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="王端端">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="http://p3alsaatj.bkt.clouddn.com/20180129093544_I5Jscb_IMG_1402.jpeg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="洞香春">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/send-ajax-when-page-unload.html" itemprop="url">发起Ajax请求当页面onunload</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-02-07T09:18:54+08:00">
+                2018-02-07
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+            <div class="post-wordcount">
+              
+                
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">字数统计&#58;</span>
+                
+                <span title="字数统计">
+                  208 字
+                </span>
+              
+
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">阅读时长 &asymp;</span>
+                
+                <span title="阅读时长">
+                  1 分钟
+                </span>
+              
+            </div>
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h2 id="1-同步Ajax"><a href="#1-同步Ajax" class="headerlink" title="1 同步Ajax"></a>1 同步Ajax</h2><blockquote>
+<p>这种需求主要用于当浏览器关闭，或者刷新时，向后端发起Ajax请求。</p>
+</blockquote>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">window</span>.onunload = <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">    $.ajax(&#123;<span class="attr">url</span>:<span class="string">"http://localhost:8888/test.php?"</span>, <span class="attr">async</span>:<span class="literal">false</span>&#125;);</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+<p>使用<code>async：false</code>参数使请求同步（默认是异步的）。</p>
+<p>同步请求锁定浏览器，直到完成。 如果请求是异步的，页面只是继续卸载。 它足够快，以至于该请求甚至没有时间触发。服务端很可能收不到请求。</p>
+<h2 id="2-navigator-sendBeacon"><a href="#2-navigator-sendBeacon" class="headerlink" title="2 navigator.sendBeacon"></a>2 navigator.sendBeacon</h2><p><code>优点</code>：简洁、异步、非阻塞<br><code>缺点</code>：这是实验性的技术，并非所有浏览器都支持。其中IE和safari不支持该技术。</p>
+<p>示例：<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">window</span>.addEventListener(<span class="string">'unload'</span>, logData, <span class="literal">false</span>);</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">logData</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">  navigator.sendBeacon(<span class="string">"/log"</span>, analyticsData);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<blockquote>
+<p>参考：<a href="http://stackoverflow.com/questions/1821625/ajax-request-with-jquery-on-page-unload" target="_blank" rel="noopener">http://stackoverflow.com/questions/1821625/ajax-request-with-jquery-on-page-unload</a><br>参考：<a href="https://developer.mozilla.org/en-US/docs/Web/API/Navigator/sendBeacon" target="_blank" rel="noopener">https://developer.mozilla.org/en-US/docs/Web/API/Navigator/sendBeacon</a></p>
+</blockquote>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://wdd.js.org/mongodb-api-overview.html">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="王端端">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="http://p3alsaatj.bkt.clouddn.com/20180129093544_I5Jscb_IMG_1402.jpeg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="洞香春">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/mongodb-api-overview.html" itemprop="url">Mongo DB增删改查命令概要</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-02-07T09:12:15+08:00">
+                2018-02-07
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+            <div class="post-wordcount">
+              
+                
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">字数统计&#58;</span>
+                
+                <span title="字数统计">
+                  843 字
+                </span>
+              
+
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">阅读时长 &asymp;</span>
+                
+                <span title="阅读时长">
+                  4 分钟
+                </span>
+              
+            </div>
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h1 id="1-列出并选用"><a href="#1-列出并选用" class="headerlink" title="1 列出并选用"></a>1 列出并选用</h1><h2 id="1-1-列出所有数据库"><a href="#1-1-列出所有数据库" class="headerlink" title="1.1 列出所有数据库"></a>1.1 列出所有数据库</h2><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&gt; <span class="selector-tag">show</span> <span class="selector-tag">dbs</span> </span><br><span class="line"><span class="selector-tag">local</span>   0<span class="selector-class">.000GB</span></span><br><span class="line"><span class="selector-tag">myblog</span>  0<span class="selector-class">.000GB</span></span><br></pre></td></tr></table></figure>
+<h2 id="1-2-使用某个数据库"><a href="#1-2-使用某个数据库" class="headerlink" title="1.2 使用某个数据库"></a>1.2 使用某个数据库</h2><figure class="highlight fsharp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">&gt; <span class="keyword">use</span> myblog</span><br><span class="line">switched <span class="keyword">to</span> db myblog</span><br></pre></td></tr></table></figure>
+<h2 id="1-3-列出所有集合"><a href="#1-3-列出所有集合" class="headerlink" title="1.3 列出所有集合"></a>1.3 列出所有集合</h2><figure class="highlight routeros"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">&gt; show collections</span><br><span class="line">articles</span><br><span class="line">replicationColletion</span><br><span class="line">sessions</span><br><span class="line">users</span><br><span class="line">wangduanduan</span><br></pre></td></tr></table></figure>
+<h1 id="2-插入数据-insert-value"><a href="#2-插入数据-insert-value" class="headerlink" title="2 插入数据 insert(value)"></a>2 插入数据 insert(value)</h1><figure class="highlight stylus"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 在已经存在的集合中插入数据</span></span><br><span class="line">&gt; db<span class="selector-class">.users</span><span class="selector-class">.insert</span>(&#123;name:<span class="string">'hh'</span>,age:<span class="number">23</span>&#125;)</span><br><span class="line">Inserted <span class="number">1</span> record(s) <span class="keyword">in</span> <span class="number">43ms</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// 在不存在的集合中插入数据,集合不存在则自动创建集合并插入</span></span><br><span class="line">&gt; db<span class="selector-class">.students</span><span class="selector-class">.insert</span>(&#123;name:<span class="string">'hh'</span>,age:<span class="number">23</span>&#125;)</span><br><span class="line">Inserted <span class="number">1</span> record(s) <span class="keyword">in</span> <span class="number">72ms</span></span><br></pre></td></tr></table></figure>
+<h1 id="3-查询-find-option"><a href="#3-查询-find-option" class="headerlink" title="3 查询 find(option)"></a>3 查询 find(option)</h1><h2 id="3-1-查询集合里所有的文档"><a href="#3-1-查询集合里所有的文档" class="headerlink" title="3.1 查询集合里所有的文档"></a>3.1 查询集合里所有的文档</h2><figure class="highlight stylus"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line">&gt; db<span class="selector-class">.users</span><span class="selector-class">.find</span>()</span><br><span class="line"><span class="comment">/* 1 */</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="string">"_id"</span> : ObjectId(<span class="string">"583e908453be942d0c5419dc"</span>),</span><br><span class="line">    <span class="string">"login_name"</span> : <span class="string">"wangduanduan"</span>,</span><br><span class="line">    <span class="string">"password"</span> : <span class="string">"wrong age"</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">/* 2 */</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="string">"_id"</span> : ObjectId(<span class="string">"583ed2a5cc9a937db049616d"</span>),</span><br><span class="line">    <span class="string">"login_name"</span> : <span class="string">"hh"</span>,</span><br><span class="line">    <span class="string">"password"</span> : <span class="string">"sdfsdf"</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">/* 3 */</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="string">"_id"</span> : ObjectId(<span class="string">"583fb2e9b12f8b7a7aa37572"</span>),</span><br><span class="line">    <span class="string">"name"</span> : <span class="string">"wangduanduan"</span>,</span><br><span class="line">    <span class="string">"age"</span> : <span class="number">34.0</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">/* 4 */</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="string">"_id"</span> : ObjectId(<span class="string">"583fb707b12f8b7a7aa37573"</span>),</span><br><span class="line">    <span class="string">"name"</span> : <span class="string">"hh"</span>,</span><br><span class="line">    <span class="string">"age"</span> : <span class="number">23.0</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="3-2-按条件查询文档"><a href="#3-2-按条件查询文档" class="headerlink" title="3.2 按条件查询文档"></a>3.2 按条件查询文档</h2><figure class="highlight stylus"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">&gt; db<span class="selector-class">.users</span><span class="selector-class">.find</span>(&#123;name:<span class="string">'wangduanduan'</span>&#125;)</span><br><span class="line"><span class="comment">/* 1 */</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="string">"_id"</span> : ObjectId(<span class="string">"583fb2e9b12f8b7a7aa37572"</span>),</span><br><span class="line">    <span class="string">"name"</span> : <span class="string">"wangduanduan"</span>,</span><br><span class="line">    <span class="string">"age"</span> : <span class="number">34.0</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p><code>注意</code><br><figure class="highlight stylus"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 这是错的，查不到结果</span></span><br><span class="line">&gt; db<span class="selector-class">.users</span><span class="selector-class">.find</span>(&#123;_id:<span class="string">'583fb2e9b12f8b7a7aa37572'</span>&#125;)</span><br><span class="line">Fetched <span class="number">0</span> record(s) <span class="keyword">in</span> <span class="number">1ms</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment">// 这是正确的</span></span><br><span class="line">&gt; db<span class="selector-class">.users</span><span class="selector-class">.find</span>(&#123;_id:ObjectId(<span class="string">'583fb2e9b12f8b7a7aa37572'</span>)&#125;)</span><br><span class="line"><span class="comment">/* 1 */</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="string">"_id"</span> : ObjectId(<span class="string">"583fb2e9b12f8b7a7aa37572"</span>),</span><br><span class="line">    <span class="string">"name"</span> : <span class="string">"wangduanduan"</span>,</span><br><span class="line">    <span class="string">"age"</span> : <span class="number">34.0</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<h2 id="3-3-查询集合内文档的个数"><a href="#3-3-查询集合内文档的个数" class="headerlink" title="3.3 查询集合内文档的个数"></a>3.3 查询集合内文档的个数</h2><figure class="highlight stylus"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">&gt; db<span class="selector-class">.users</span><span class="selector-class">.count</span>()</span><br><span class="line"><span class="number">4</span></span><br></pre></td></tr></table></figure>
+<h2 id="3-4-比较运算符"><a href="#3-4-比较运算符" class="headerlink" title="3.4 比较运算符"></a>3.4 比较运算符</h2><ul>
+<li>$gt: 大于</li>
+<li>$gte: 大于等于</li>
+<li>$lt: 小于</li>
+<li>$lte: 小于等于</li>
+<li>$ne: 不等于</li>
+</ul>
+<figure class="highlight stylus"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 查询用户里年龄大于30岁的人， 其他条件以此类推</span></span><br><span class="line">&gt; db<span class="selector-class">.user</span><span class="selector-class">.find</span>(&#123;age:&#123;<span class="variable">$gt</span>:<span class="number">30</span>&#125;&#125;)</span><br><span class="line"></span><br><span class="line"><span class="comment">/* 1 */</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="string">"_id"</span> : ObjectId(<span class="string">"583fb2e9b12f8b7a7aa37572"</span>),</span><br><span class="line">    <span class="string">"name"</span> : <span class="string">"wangduanduan"</span>,</span><br><span class="line">    <span class="string">"age"</span> : <span class="number">34.0</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="3-5-逻辑运算符"><a href="#3-5-逻辑运算符" class="headerlink" title="3.5 逻辑运算符"></a>3.5 逻辑运算符</h2><h3 id="3-5-1-与"><a href="#3-5-1-与" class="headerlink" title="3.5.1 与"></a>3.5.1 与</h3><figure class="highlight stylus"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 查询名字是wangduanduan,age=34的用户</span></span><br><span class="line">&gt; db<span class="selector-class">.users</span><span class="selector-class">.find</span>(&#123;name:<span class="string">'wangduanduan'</span>,age:<span class="number">34</span>&#125;)</span><br><span class="line"><span class="comment">/* 1 */</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="string">"_id"</span> : ObjectId(<span class="string">"583fb2e9b12f8b7a7aa37572"</span>),</span><br><span class="line">    <span class="string">"name"</span> : <span class="string">"wangduanduan"</span>,</span><br><span class="line">    <span class="string">"age"</span> : <span class="number">34.0</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="3-5-2-in-或"><a href="#3-5-2-in-或" class="headerlink" title="3.5.2 $in 或"></a>3.5.2 $in 或</h3><figure class="highlight stylus"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 查询名字是wangduanduan,或hh的用户</span></span><br><span class="line">&gt; db<span class="selector-class">.users</span><span class="selector-class">.find</span>(&#123;name:&#123;<span class="variable">$in</span>:[<span class="string">'wangduanduan'</span>,<span class="string">'hh'</span>]&#125;&#125;)</span><br><span class="line"><span class="comment">/* 1 */</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="string">"_id"</span> : ObjectId(<span class="string">"583fb2e9b12f8b7a7aa37572"</span>),</span><br><span class="line">    <span class="string">"name"</span> : <span class="string">"wangduanduan"</span>,</span><br><span class="line">    <span class="string">"age"</span> : <span class="number">34.0</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="3-5-3-nin-非"><a href="#3-5-3-nin-非" class="headerlink" title="3.5.3 $nin 非"></a>3.5.3 $nin 非</h3><figure class="highlight stylus"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 查询名字不是wangduanduan或者hh的用户</span></span><br><span class="line">&gt; db<span class="selector-class">.users</span><span class="selector-class">.find</span>(&#123;name:&#123;<span class="variable">$nin</span>:[<span class="string">'wangduanduan'</span>,<span class="string">'hh'</span>]&#125;&#125;)</span><br><span class="line"><span class="comment">/* 1 */</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="string">"_id"</span> : ObjectId(<span class="string">"583e908453be942d0c5419dc"</span>),</span><br><span class="line">    <span class="string">"login_name"</span> : <span class="string">"wangduanduan"</span>,</span><br><span class="line">    <span class="string">"password"</span> : <span class="string">"wrong age"</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">/* 2 */</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="string">"_id"</span> : ObjectId(<span class="string">"583ed2a5cc9a937db049616d"</span>),</span><br><span class="line">    <span class="string">"login_name"</span> : <span class="string">"hh"</span>,</span><br><span class="line">    <span class="string">"password"</span> : <span class="string">"sdfsdf"</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="3-6-正则匹配"><a href="#3-6-正则匹配" class="headerlink" title="3.6 正则匹配"></a>3.6 正则匹配</h2><figure class="highlight stylus"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 查询名字是中含有duan的用户</span></span><br><span class="line">&gt; db<span class="selector-class">.users</span><span class="selector-class">.find</span>(&#123;name:/duan/&#125;)</span><br><span class="line"><span class="comment">/* 1 */</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="string">"_id"</span> : ObjectId(<span class="string">"583fb2e9b12f8b7a7aa37572"</span>),</span><br><span class="line">    <span class="string">"name"</span> : <span class="string">"wangduanduan"</span>,</span><br><span class="line">    <span class="string">"age"</span> : <span class="number">34.0</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">/* 2 */</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="string">"_id"</span> : ObjectId(<span class="string">"583fc919b12f8b7a7aa37575"</span>),</span><br><span class="line">    <span class="string">"name"</span> : <span class="string">"wangduanduan"</span>,</span><br><span class="line">    <span class="string">"age"</span> : <span class="number">45.0</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="3-7-大招-where"><a href="#3-7-大招-where" class="headerlink" title="3.7 大招$where"></a>3.7 大招$where</h2><figure class="highlight actionscript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 返回含有login_name字段的文档</span></span><br><span class="line">db.getCollection(<span class="string">'users'</span>).find(&#123;$where:<span class="function"><span class="keyword">function</span><span class="params">()</span></span>&#123;</span><br><span class="line">    <span class="keyword">return</span> !!<span class="keyword">this</span>.login_name;</span><br><span class="line">&#125;&#125;)</span><br></pre></td></tr></table></figure>
+<h1 id="4-更新-update"><a href="#4-更新-update" class="headerlink" title="4 更新 update();"></a>4 更新 update();</h1><h2 id="4-1-整体更新"><a href="#4-1-整体更新" class="headerlink" title="4.1 整体更新"></a>4.1 整体更新</h2><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">&gt; <span class="selector-tag">db</span><span class="selector-class">.users</span><span class="selector-class">.update</span>(&#123;<span class="attribute">login_name</span>:<span class="string">'wangduanduan'</span>&#125;,&#123;<span class="attribute">name</span>:<span class="string">'heihei'</span>,age:<span class="number">34</span>&#125;)</span><br><span class="line"><span class="selector-tag">Updated</span> 1 <span class="selector-tag">existing</span> <span class="selector-tag">record</span>(<span class="selector-tag">s</span>) <span class="selector-tag">in</span> 116<span class="selector-tag">ms</span></span><br></pre></td></tr></table></figure>
+<h2 id="4-2-set-局部更新"><a href="#4-2-set-局部更新" class="headerlink" title="4.2 $set 局部更新"></a>4.2 $set 局部更新</h2><figure class="highlight less"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 只是将用户年龄设置成101</span></span><br><span class="line">&gt; <span class="selector-tag">db</span><span class="selector-class">.users</span><span class="selector-class">.update</span>(&#123;<span class="attribute">name</span>:<span class="string">'wangduanduan'</span>&#125;,&#123;$<span class="attribute">set</span>:&#123;<span class="attribute">age</span>:<span class="number">101</span>&#125;&#125;)</span><br></pre></td></tr></table></figure>
+<h2 id="4-3-inc"><a href="#4-3-inc" class="headerlink" title="4.3 $inc"></a>4.3 $inc</h2><figure class="highlight less"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 将用户年龄增加1岁，如果文档没有age这个字段，则会增加这个字段</span></span><br><span class="line">&gt; <span class="selector-tag">db</span><span class="selector-class">.users</span><span class="selector-class">.update</span>(&#123;<span class="attribute">name</span>:<span class="string">'wangduanduan'</span>&#125;,&#123;$<span class="attribute">inc</span>:&#123;<span class="attribute">age</span>:<span class="number">1</span>&#125;&#125;)</span><br></pre></td></tr></table></figure>
+<h2 id="4-3-upsert操作"><a href="#4-3-upsert操作" class="headerlink" title="4.3 upsert操作"></a>4.3 upsert操作</h2><figure class="highlight groovy"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 如果查不到文档，则增加文档</span></span><br><span class="line">&gt; db.users.update(&#123;<span class="string">name:</span><span class="string">'nobody'</span>&#125;,&#123;<span class="string">$inc:</span>&#123;<span class="string">age:</span><span class="number">1</span>&#125;&#125;,<span class="literal">true</span>)</span><br><span class="line">Updated <span class="number">1</span> <span class="keyword">new</span> record(s) <span class="keyword">in</span> <span class="number">3</span>ms</span><br><span class="line"></span><br><span class="line"><span class="comment">/* 6 */</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="string">"_id"</span> : ObjectId(<span class="string">"583fd20f2cfa6a4817c4171c"</span>),</span><br><span class="line">    <span class="string">"name"</span> : <span class="string">"nobody"</span>,</span><br><span class="line">    <span class="string">"age"</span> : <span class="number">1.0</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="4-4-批量更新"><a href="#4-4-批量更新" class="headerlink" title="4.4 批量更新"></a>4.4 批量更新</h2><figure class="highlight xquery"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">// upadate 的第四个参数设置成<span class="literal">true</span>的时候，就会批量更新</span><br><span class="line">&gt; db.users.<span class="keyword">update</span>(&#123;name:<span class="string">'wangduanduan'</span>&#125;,&#123;$set:&#123;age:<span class="number">1891</span>&#125;&#125;,<span class="literal">false</span>,<span class="literal">true</span>)</span><br></pre></td></tr></table></figure>
+<h1 id="5-删除"><a href="#5-删除" class="headerlink" title="5 删除"></a>5 删除</h1><figure class="highlight stylus"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 删除某些文档</span></span><br><span class="line">db<span class="selector-class">.person</span><span class="selector-class">.remove</span>(&#123;<span class="string">"name"</span>:<span class="string">"joe"</span>&#125;)</span><br><span class="line"></span><br><span class="line"><span class="comment">// 删除整个集合</span></span><br><span class="line">db<span class="selector-class">.person</span><span class="selector-class">.remove</span>()</span><br></pre></td></tr></table></figure>
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="https://wdd.js.org/git-manager-docs.html">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -2149,354 +2486,6 @@
 
 
     
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://wdd.js.org/http-status-code-work-method.html">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="王端端">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="http://p3alsaatj.bkt.clouddn.com/20180129093544_I5Jscb_IMG_1402.jpeg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="洞香春">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/http-status-code-work-method.html" itemprop="url">HTTP状态码工作法</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-02-01T14:57:00+08:00">
-                2018-02-01
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-            <div class="post-wordcount">
-              
-                
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-file-word-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">字数统计&#58;</span>
-                
-                <span title="字数统计">
-                  173 字
-                </span>
-              
-
-              
-                <span class="post-meta-divider">|</span>
-              
-
-              
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-clock-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">阅读时长 &asymp;</span>
-                
-                <span title="阅读时长">
-                  1 分钟
-                </span>
-              
-            </div>
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <h1 id="概念类比"><a href="#概念类比" class="headerlink" title="概念类比"></a>概念类比</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">Title:连接建立的过程</span><br><span class="line">客户主机-&gt;服务器主机: 连接请求（SYN=1,seq=client_isn） </span><br><span class="line">服务器主机-&gt;客户主机: 授予连接（SYN=1,seq=client_isn）\n ack=client_isn+1</span><br><span class="line">客户主机-&gt;服务器主机: 确认（SYN=0,seq=client_isn+1）\nack=server_isn+1</span><br></pre></td></tr></table></figure>
-<h1 id="工作状态码分类"><a href="#工作状态码分类" class="headerlink" title="工作状态码分类"></a>工作状态码分类</h1><table>
-<thead>
-<tr>
-<th>分类</th>
-<th>分类描述</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>100</td>
-<td>已经开始开发该项目，但是还未完成，需要继续开发</td>
-</tr>
-<tr>
-<td>200</td>
-<td>完成任务</td>
-</tr>
-<tr>
-<td>301</td>
-<td>任务被转给其他人处理</td>
-</tr>
-<tr>
-<td>400</td>
-<td>任务描述不清晰，导致无法继续工作，需要重新设计需求</td>
-</tr>
-<tr>
-<td>500</td>
-<td>任务需要依赖其他服务，但是其他服务无法提供服务，正在等待</td>
-</tr>
-</tbody>
-</table>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://wdd.js.org/think-about-markdown-and-editor.html">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="王端端">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="http://p3alsaatj.bkt.clouddn.com/20180129093544_I5Jscb_IMG_1402.jpeg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="洞香春">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/think-about-markdown-and-editor.html" itemprop="url">markdwon、笔记、编辑器与缓存</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-01-31T20:16:27+08:00">
-                2018-01-31
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-            <div class="post-wordcount">
-              
-                
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-file-word-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">字数统计&#58;</span>
-                
-                <span title="字数统计">
-                  315 字
-                </span>
-              
-
-              
-                <span class="post-meta-divider">|</span>
-              
-
-              
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-clock-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">阅读时长 &asymp;</span>
-                
-                <span title="阅读时长">
-                  1 分钟
-                </span>
-              
-            </div>
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <h1 id="笔记有哪些种类？"><a href="#笔记有哪些种类？" class="headerlink" title="笔记有哪些种类？"></a>笔记有哪些种类？</h1><ul>
-<li><code>所有人可读</code>：所有人都可以看的，这种类型的笔记适合作为博客</li>
-<li><code>部分可读</code>：这种不适合作为博客，需要一些约束条件，被授权的人才有资格去读</li>
-<li><code>仅自己可读</code>：这种类型的往往都是个人隐私，不需要和别人分享</li>
-</ul>
-<h1 id="为什么要记笔记？"><a href="#为什么要记笔记？" class="headerlink" title="为什么要记笔记？"></a>为什么要记笔记？</h1><p><code>你需要的东西网上都有，搜索引擎都能找到，那么你为什么还要记笔记？</code></p>
-<ul>
-<li><code>节约效率与缓存</code>：搜索引擎并不一定能够找到你需要的数据，一旦找到，最好可以缓存起来，作为笔记，下次查找的效率往往会提高非常多；另外，这次可以找到的内容，下次同样的位置，也可能文档已经被删除。</li>
-<li><code>知识经验积累</code>: 原创的内容在互联网上是搜不到的，所以需要记录，积累知识，内化吸收</li>
-<li><code>生活感情记录</code>: 作为一种情绪的记录</li>
-</ul>
-<h1 id="markdown-笔记，-编辑器之间有什么关系"><a href="#markdown-笔记，-编辑器之间有什么关系" class="headerlink" title="markdown, 笔记， 编辑器之间有什么关系"></a>markdown, 笔记， 编辑器之间有什么关系</h1><p>markdown是笔记的一种形式，编辑器来制作笔记。</p>
-<h1 id="对于编辑器的要求"><a href="#对于编辑器的要求" class="headerlink" title="对于编辑器的要求"></a>对于编辑器的要求</h1><ul>
-<li>可以编辑markdown</li>
-<li>可以导出pdf</li>
-<li>可以云端备份</li>
-</ul>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
   </section>
 
   
@@ -2551,7 +2540,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">35</span>
+                  <span class="site-state-item-count">37</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -2564,7 +2553,7 @@
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">46</span>
+                  <span class="site-state-item-count">49</span>
                   <span class="site-state-item-name">标签</span>
                 </a>
               </div>

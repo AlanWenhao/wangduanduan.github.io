@@ -4,6 +4,42 @@
 
     
   <url>
+    <loc>https://wdd.js.org/send-ajax-when-page-unload.html</loc>
+    <lastmod>2018-02-07T01:19:43.000Z</lastmod>
+    <data>
+        <display>
+        <title>发起Ajax请求当页面onunload</title>
+        <pubTime>2018-02-07T01:18:54.000Z</pubTime>
+        
+        <tag>ajax</tag>
+         
+        <tag>onunload</tag>
+         
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>https://wdd.js.org/mongodb-api-overview.html</loc>
+    <lastmod>2018-02-07T01:13:08.000Z</lastmod>
+    <data>
+        <display>
+        <title>Mongo DB增删改查命令概要</title>
+        <pubTime>2018-02-07T01:12:15.000Z</pubTime>
+        
+        <tag>mongodb</tag>
+         
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>https://wdd.js.org/js-best-practices.html</loc>
     <lastmod>2018-02-07T01:05:05.000Z</lastmod>
     <data>
@@ -30,13 +66,13 @@
         
         <tag>git</tag>
          
+        <tag>未完成</tag>
+         
         <tag>gitlab</tag>
          
         <tag>gow</tag>
          
         <tag>ConEmu</tag>
-         
-        <tag>未完成</tag>
          
          
            
@@ -89,9 +125,9 @@
         <title>不要成为某个技术的死忠粉</title>
         <pubTime>2018-02-05T03:58:25.000Z</pubTime>
         
-        <tag>未完成</tag>
-         
         <tag>idea</tag>
+         
+        <tag>未完成</tag>
          
          
            
@@ -108,9 +144,9 @@
         <title>Think With Stream</title>
         <pubTime>2018-02-05T03:28:59.000Z</pubTime>
         
-        <tag>未完成</tag>
-         
         <tag>idea</tag>
+         
+        <tag>未完成</tag>
          
          
            
@@ -186,9 +222,9 @@
         
         <tag>git</tag>
          
-        <tag>gow</tag>
-         
         <tag>未完成</tag>
+         
+        <tag>gow</tag>
          
         <tag>conemu</tag>
          

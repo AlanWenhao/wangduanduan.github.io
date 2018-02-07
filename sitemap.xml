@@ -2,6 +2,20 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://wdd.js.org/send-ajax-when-page-unload.html</loc>
+    
+    <lastmod>2018-02-07T01:19:43.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://wdd.js.org/mongodb-api-overview.html</loc>
+    
+    <lastmod>2018-02-07T01:13:08.000Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://wdd.js.org/js-best-practices.html</loc>
     
     <lastmod>2018-02-07T01:05:05.000Z</lastmod>
