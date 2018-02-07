@@ -300,6 +300,1001 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://wdd.js.org/mongodb-api-overview.html">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="王端端">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="http://p3alsaatj.bkt.clouddn.com/20180129093544_I5Jscb_IMG_1402.jpeg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="洞香春">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/mongodb-api-overview.html" itemprop="url">Mongo DB增删改查命令概要</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-02-07T09:12:15+08:00">
+                2018-02-07
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+            <div class="post-wordcount">
+              
+                
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">字数统计&#58;</span>
+                
+                <span title="字数统计">
+                  843 字
+                </span>
+              
+
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">阅读时长 &asymp;</span>
+                
+                <span title="阅读时长">
+                  4 分钟
+                </span>
+              
+            </div>
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h1 id="1-列出并选用"><a href="#1-列出并选用" class="headerlink" title="1 列出并选用"></a>1 列出并选用</h1><h2 id="1-1-列出所有数据库"><a href="#1-1-列出所有数据库" class="headerlink" title="1.1 列出所有数据库"></a>1.1 列出所有数据库</h2><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&gt; <span class="selector-tag">show</span> <span class="selector-tag">dbs</span> </span><br><span class="line"><span class="selector-tag">local</span>   0<span class="selector-class">.000GB</span></span><br><span class="line"><span class="selector-tag">myblog</span>  0<span class="selector-class">.000GB</span></span><br></pre></td></tr></table></figure>
+<h2 id="1-2-使用某个数据库"><a href="#1-2-使用某个数据库" class="headerlink" title="1.2 使用某个数据库"></a>1.2 使用某个数据库</h2><figure class="highlight fsharp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">&gt; <span class="keyword">use</span> myblog</span><br><span class="line">switched <span class="keyword">to</span> db myblog</span><br></pre></td></tr></table></figure>
+<h2 id="1-3-列出所有集合"><a href="#1-3-列出所有集合" class="headerlink" title="1.3 列出所有集合"></a>1.3 列出所有集合</h2><figure class="highlight routeros"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">&gt; show collections</span><br><span class="line">articles</span><br><span class="line">replicationColletion</span><br><span class="line">sessions</span><br><span class="line">users</span><br><span class="line">wangduanduan</span><br></pre></td></tr></table></figure>
+<h1 id="2-插入数据-insert-value"><a href="#2-插入数据-insert-value" class="headerlink" title="2 插入数据 insert(value)"></a>2 插入数据 insert(value)</h1><figure class="highlight stylus"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 在已经存在的集合中插入数据</span></span><br><span class="line">&gt; db<span class="selector-class">.users</span><span class="selector-class">.insert</span>(&#123;name:<span class="string">'hh'</span>,age:<span class="number">23</span>&#125;)</span><br><span class="line">Inserted <span class="number">1</span> record(s) <span class="keyword">in</span> <span class="number">43ms</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// 在不存在的集合中插入数据,集合不存在则自动创建集合并插入</span></span><br><span class="line">&gt; db<span class="selector-class">.students</span><span class="selector-class">.insert</span>(&#123;name:<span class="string">'hh'</span>,age:<span class="number">23</span>&#125;)</span><br><span class="line">Inserted <span class="number">1</span> record(s) <span class="keyword">in</span> <span class="number">72ms</span></span><br></pre></td></tr></table></figure>
+<h1 id="3-查询-find-option"><a href="#3-查询-find-option" class="headerlink" title="3 查询 find(option)"></a>3 查询 find(option)</h1><h2 id="3-1-查询集合里所有的文档"><a href="#3-1-查询集合里所有的文档" class="headerlink" title="3.1 查询集合里所有的文档"></a>3.1 查询集合里所有的文档</h2><figure class="highlight stylus"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line">&gt; db<span class="selector-class">.users</span><span class="selector-class">.find</span>()</span><br><span class="line"><span class="comment">/* 1 */</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="string">"_id"</span> : ObjectId(<span class="string">"583e908453be942d0c5419dc"</span>),</span><br><span class="line">    <span class="string">"login_name"</span> : <span class="string">"wangduanduan"</span>,</span><br><span class="line">    <span class="string">"password"</span> : <span class="string">"wrong age"</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">/* 2 */</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="string">"_id"</span> : ObjectId(<span class="string">"583ed2a5cc9a937db049616d"</span>),</span><br><span class="line">    <span class="string">"login_name"</span> : <span class="string">"hh"</span>,</span><br><span class="line">    <span class="string">"password"</span> : <span class="string">"sdfsdf"</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">/* 3 */</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="string">"_id"</span> : ObjectId(<span class="string">"583fb2e9b12f8b7a7aa37572"</span>),</span><br><span class="line">    <span class="string">"name"</span> : <span class="string">"wangduanduan"</span>,</span><br><span class="line">    <span class="string">"age"</span> : <span class="number">34.0</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">/* 4 */</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="string">"_id"</span> : ObjectId(<span class="string">"583fb707b12f8b7a7aa37573"</span>),</span><br><span class="line">    <span class="string">"name"</span> : <span class="string">"hh"</span>,</span><br><span class="line">    <span class="string">"age"</span> : <span class="number">23.0</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="3-2-按条件查询文档"><a href="#3-2-按条件查询文档" class="headerlink" title="3.2 按条件查询文档"></a>3.2 按条件查询文档</h2><figure class="highlight stylus"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">&gt; db<span class="selector-class">.users</span><span class="selector-class">.find</span>(&#123;name:<span class="string">'wangduanduan'</span>&#125;)</span><br><span class="line"><span class="comment">/* 1 */</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="string">"_id"</span> : ObjectId(<span class="string">"583fb2e9b12f8b7a7aa37572"</span>),</span><br><span class="line">    <span class="string">"name"</span> : <span class="string">"wangduanduan"</span>,</span><br><span class="line">    <span class="string">"age"</span> : <span class="number">34.0</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p><code>注意</code><br><figure class="highlight stylus"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 这是错的，查不到结果</span></span><br><span class="line">&gt; db<span class="selector-class">.users</span><span class="selector-class">.find</span>(&#123;_id:<span class="string">'583fb2e9b12f8b7a7aa37572'</span>&#125;)</span><br><span class="line">Fetched <span class="number">0</span> record(s) <span class="keyword">in</span> <span class="number">1ms</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment">// 这是正确的</span></span><br><span class="line">&gt; db<span class="selector-class">.users</span><span class="selector-class">.find</span>(&#123;_id:ObjectId(<span class="string">'583fb2e9b12f8b7a7aa37572'</span>)&#125;)</span><br><span class="line"><span class="comment">/* 1 */</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="string">"_id"</span> : ObjectId(<span class="string">"583fb2e9b12f8b7a7aa37572"</span>),</span><br><span class="line">    <span class="string">"name"</span> : <span class="string">"wangduanduan"</span>,</span><br><span class="line">    <span class="string">"age"</span> : <span class="number">34.0</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<h2 id="3-3-查询集合内文档的个数"><a href="#3-3-查询集合内文档的个数" class="headerlink" title="3.3 查询集合内文档的个数"></a>3.3 查询集合内文档的个数</h2><figure class="highlight stylus"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">&gt; db<span class="selector-class">.users</span><span class="selector-class">.count</span>()</span><br><span class="line"><span class="number">4</span></span><br></pre></td></tr></table></figure>
+<h2 id="3-4-比较运算符"><a href="#3-4-比较运算符" class="headerlink" title="3.4 比较运算符"></a>3.4 比较运算符</h2><ul>
+<li>$gt: 大于</li>
+<li>$gte: 大于等于</li>
+<li>$lt: 小于</li>
+<li>$lte: 小于等于</li>
+<li>$ne: 不等于</li>
+</ul>
+<figure class="highlight stylus"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 查询用户里年龄大于30岁的人， 其他条件以此类推</span></span><br><span class="line">&gt; db<span class="selector-class">.user</span><span class="selector-class">.find</span>(&#123;age:&#123;<span class="variable">$gt</span>:<span class="number">30</span>&#125;&#125;)</span><br><span class="line"></span><br><span class="line"><span class="comment">/* 1 */</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="string">"_id"</span> : ObjectId(<span class="string">"583fb2e9b12f8b7a7aa37572"</span>),</span><br><span class="line">    <span class="string">"name"</span> : <span class="string">"wangduanduan"</span>,</span><br><span class="line">    <span class="string">"age"</span> : <span class="number">34.0</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="3-5-逻辑运算符"><a href="#3-5-逻辑运算符" class="headerlink" title="3.5 逻辑运算符"></a>3.5 逻辑运算符</h2><h3 id="3-5-1-与"><a href="#3-5-1-与" class="headerlink" title="3.5.1 与"></a>3.5.1 与</h3><figure class="highlight stylus"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 查询名字是wangduanduan,age=34的用户</span></span><br><span class="line">&gt; db<span class="selector-class">.users</span><span class="selector-class">.find</span>(&#123;name:<span class="string">'wangduanduan'</span>,age:<span class="number">34</span>&#125;)</span><br><span class="line"><span class="comment">/* 1 */</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="string">"_id"</span> : ObjectId(<span class="string">"583fb2e9b12f8b7a7aa37572"</span>),</span><br><span class="line">    <span class="string">"name"</span> : <span class="string">"wangduanduan"</span>,</span><br><span class="line">    <span class="string">"age"</span> : <span class="number">34.0</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="3-5-2-in-或"><a href="#3-5-2-in-或" class="headerlink" title="3.5.2 $in 或"></a>3.5.2 $in 或</h3><figure class="highlight stylus"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 查询名字是wangduanduan,或hh的用户</span></span><br><span class="line">&gt; db<span class="selector-class">.users</span><span class="selector-class">.find</span>(&#123;name:&#123;<span class="variable">$in</span>:[<span class="string">'wangduanduan'</span>,<span class="string">'hh'</span>]&#125;&#125;)</span><br><span class="line"><span class="comment">/* 1 */</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="string">"_id"</span> : ObjectId(<span class="string">"583fb2e9b12f8b7a7aa37572"</span>),</span><br><span class="line">    <span class="string">"name"</span> : <span class="string">"wangduanduan"</span>,</span><br><span class="line">    <span class="string">"age"</span> : <span class="number">34.0</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="3-5-3-nin-非"><a href="#3-5-3-nin-非" class="headerlink" title="3.5.3 $nin 非"></a>3.5.3 $nin 非</h3><figure class="highlight stylus"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 查询名字不是wangduanduan或者hh的用户</span></span><br><span class="line">&gt; db<span class="selector-class">.users</span><span class="selector-class">.find</span>(&#123;name:&#123;<span class="variable">$nin</span>:[<span class="string">'wangduanduan'</span>,<span class="string">'hh'</span>]&#125;&#125;)</span><br><span class="line"><span class="comment">/* 1 */</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="string">"_id"</span> : ObjectId(<span class="string">"583e908453be942d0c5419dc"</span>),</span><br><span class="line">    <span class="string">"login_name"</span> : <span class="string">"wangduanduan"</span>,</span><br><span class="line">    <span class="string">"password"</span> : <span class="string">"wrong age"</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">/* 2 */</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="string">"_id"</span> : ObjectId(<span class="string">"583ed2a5cc9a937db049616d"</span>),</span><br><span class="line">    <span class="string">"login_name"</span> : <span class="string">"hh"</span>,</span><br><span class="line">    <span class="string">"password"</span> : <span class="string">"sdfsdf"</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="3-6-正则匹配"><a href="#3-6-正则匹配" class="headerlink" title="3.6 正则匹配"></a>3.6 正则匹配</h2><figure class="highlight stylus"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 查询名字是中含有duan的用户</span></span><br><span class="line">&gt; db<span class="selector-class">.users</span><span class="selector-class">.find</span>(&#123;name:/duan/&#125;)</span><br><span class="line"><span class="comment">/* 1 */</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="string">"_id"</span> : ObjectId(<span class="string">"583fb2e9b12f8b7a7aa37572"</span>),</span><br><span class="line">    <span class="string">"name"</span> : <span class="string">"wangduanduan"</span>,</span><br><span class="line">    <span class="string">"age"</span> : <span class="number">34.0</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">/* 2 */</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="string">"_id"</span> : ObjectId(<span class="string">"583fc919b12f8b7a7aa37575"</span>),</span><br><span class="line">    <span class="string">"name"</span> : <span class="string">"wangduanduan"</span>,</span><br><span class="line">    <span class="string">"age"</span> : <span class="number">45.0</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="3-7-大招-where"><a href="#3-7-大招-where" class="headerlink" title="3.7 大招$where"></a>3.7 大招$where</h2><figure class="highlight actionscript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 返回含有login_name字段的文档</span></span><br><span class="line">db.getCollection(<span class="string">'users'</span>).find(&#123;$where:<span class="function"><span class="keyword">function</span><span class="params">()</span></span>&#123;</span><br><span class="line">    <span class="keyword">return</span> !!<span class="keyword">this</span>.login_name;</span><br><span class="line">&#125;&#125;)</span><br></pre></td></tr></table></figure>
+<h1 id="4-更新-update"><a href="#4-更新-update" class="headerlink" title="4 更新 update();"></a>4 更新 update();</h1><h2 id="4-1-整体更新"><a href="#4-1-整体更新" class="headerlink" title="4.1 整体更新"></a>4.1 整体更新</h2><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">&gt; <span class="selector-tag">db</span><span class="selector-class">.users</span><span class="selector-class">.update</span>(&#123;<span class="attribute">login_name</span>:<span class="string">'wangduanduan'</span>&#125;,&#123;<span class="attribute">name</span>:<span class="string">'heihei'</span>,age:<span class="number">34</span>&#125;)</span><br><span class="line"><span class="selector-tag">Updated</span> 1 <span class="selector-tag">existing</span> <span class="selector-tag">record</span>(<span class="selector-tag">s</span>) <span class="selector-tag">in</span> 116<span class="selector-tag">ms</span></span><br></pre></td></tr></table></figure>
+<h2 id="4-2-set-局部更新"><a href="#4-2-set-局部更新" class="headerlink" title="4.2 $set 局部更新"></a>4.2 $set 局部更新</h2><figure class="highlight less"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 只是将用户年龄设置成101</span></span><br><span class="line">&gt; <span class="selector-tag">db</span><span class="selector-class">.users</span><span class="selector-class">.update</span>(&#123;<span class="attribute">name</span>:<span class="string">'wangduanduan'</span>&#125;,&#123;$<span class="attribute">set</span>:&#123;<span class="attribute">age</span>:<span class="number">101</span>&#125;&#125;)</span><br></pre></td></tr></table></figure>
+<h2 id="4-3-inc"><a href="#4-3-inc" class="headerlink" title="4.3 $inc"></a>4.3 $inc</h2><figure class="highlight less"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 将用户年龄增加1岁，如果文档没有age这个字段，则会增加这个字段</span></span><br><span class="line">&gt; <span class="selector-tag">db</span><span class="selector-class">.users</span><span class="selector-class">.update</span>(&#123;<span class="attribute">name</span>:<span class="string">'wangduanduan'</span>&#125;,&#123;$<span class="attribute">inc</span>:&#123;<span class="attribute">age</span>:<span class="number">1</span>&#125;&#125;)</span><br></pre></td></tr></table></figure>
+<h2 id="4-3-upsert操作"><a href="#4-3-upsert操作" class="headerlink" title="4.3 upsert操作"></a>4.3 upsert操作</h2><figure class="highlight groovy"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 如果查不到文档，则增加文档</span></span><br><span class="line">&gt; db.users.update(&#123;<span class="string">name:</span><span class="string">'nobody'</span>&#125;,&#123;<span class="string">$inc:</span>&#123;<span class="string">age:</span><span class="number">1</span>&#125;&#125;,<span class="literal">true</span>)</span><br><span class="line">Updated <span class="number">1</span> <span class="keyword">new</span> record(s) <span class="keyword">in</span> <span class="number">3</span>ms</span><br><span class="line"></span><br><span class="line"><span class="comment">/* 6 */</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="string">"_id"</span> : ObjectId(<span class="string">"583fd20f2cfa6a4817c4171c"</span>),</span><br><span class="line">    <span class="string">"name"</span> : <span class="string">"nobody"</span>,</span><br><span class="line">    <span class="string">"age"</span> : <span class="number">1.0</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="4-4-批量更新"><a href="#4-4-批量更新" class="headerlink" title="4.4 批量更新"></a>4.4 批量更新</h2><figure class="highlight xquery"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">// upadate 的第四个参数设置成<span class="literal">true</span>的时候，就会批量更新</span><br><span class="line">&gt; db.users.<span class="keyword">update</span>(&#123;name:<span class="string">'wangduanduan'</span>&#125;,&#123;$set:&#123;age:<span class="number">1891</span>&#125;&#125;,<span class="literal">false</span>,<span class="literal">true</span>)</span><br></pre></td></tr></table></figure>
+<h1 id="5-删除"><a href="#5-删除" class="headerlink" title="5 删除"></a>5 删除</h1><figure class="highlight stylus"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 删除某些文档</span></span><br><span class="line">db<span class="selector-class">.person</span><span class="selector-class">.remove</span>(&#123;<span class="string">"name"</span>:<span class="string">"joe"</span>&#125;)</span><br><span class="line"></span><br><span class="line"><span class="comment">// 删除整个集合</span></span><br><span class="line">db<span class="selector-class">.person</span><span class="selector-class">.remove</span>()</span><br></pre></td></tr></table></figure>
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://wdd.js.org/git-manager-docs.html">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="王端端">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="http://p3alsaatj.bkt.clouddn.com/20180129093544_I5Jscb_IMG_1402.jpeg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="洞香春">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/git-manager-docs.html" itemprop="url">Git化文档管理</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-02-06T10:52:08+08:00">
+                2018-02-06
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+            <div class="post-wordcount">
+              
+                
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">字数统计&#58;</span>
+                
+                <span title="字数统计">
+                  133 字
+                </span>
+              
+
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">阅读时长 &asymp;</span>
+                
+                <span title="阅读时长">
+                  1 分钟
+                </span>
+              
+            </div>
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h1 id="产品概况"><a href="#产品概况" class="headerlink" title="产品概况"></a>产品概况</h1><h1 id="基本要求"><a href="#基本要求" class="headerlink" title="基本要求"></a>基本要求</h1><ul>
+<li>所有文档的格式采用markdown</li>
+<li>文档使用Git进行</li>
+</ul>
+<h1 id="前提准备"><a href="#前提准备" class="headerlink" title="前提准备"></a>前提准备</h1><h1 id="从MVC角度分析需求"><a href="#从MVC角度分析需求" class="headerlink" title="从MVC角度分析需求"></a>从MVC角度分析需求</h1><p><img src="http://p3alsaatj.bkt.clouddn.com/20180206142506_ZGP1bd_lE6cj.jpeg" alt=""></p>
+<ul>
+<li>模型层：资源最小数据集定义，功能定义</li>
+<li>控制器：负责请求处理。例如增删改查</li>
+<li>视图层：资源展现与交互</li>
+</ul>
+<p>对于前端的需求是：视图层 + 模型层<br>对于后端的需求是：控制器 + 模型层</p>
+<h1 id="前端需求文档"><a href="#前端需求文档" class="headerlink" title="前端需求文档"></a>前端需求文档</h1><h1 id="实施"><a href="#实施" class="headerlink" title="实施"></a>实施</h1><h1 id="资源下载"><a href="#资源下载" class="headerlink" title="资源下载"></a>资源下载</h1><h1 id="参考文献"><a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h1><ul>
+<li><a href="http://www.woshipm.com/pmd/690292.html" target="_blank" rel="noopener">产品经理如何绕开API的坑</a></li>
+</ul>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://wdd.js.org/2018-reading-plan.html">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="王端端">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="http://p3alsaatj.bkt.clouddn.com/20180129093544_I5Jscb_IMG_1402.jpeg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="洞香春">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2018-reading-plan.html" itemprop="url">2018年我的阅读计划</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-02-05T13:42:20+08:00">
+                2018-02-05
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+            <div class="post-wordcount">
+              
+                
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">字数统计&#58;</span>
+                
+                <span title="字数统计">
+                  402 字
+                </span>
+              
+
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">阅读时长 &asymp;</span>
+                
+                <span title="阅读时长">
+                  1 分钟
+                </span>
+              
+            </div>
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p><img src="http://p3alsaatj.bkt.clouddn.com/20180205175335_cuPtzB_Girl-Reading-Book.jpeg" alt=""></p>
+<ul>
+<li>阅读速度： 每天54000字, 无法量化，就无法改进</li>
+<li>页码控制基于多看阅读和kindle paper white</li>
+</ul>
+<h1 id="我的2018年总书单"><a href="#我的2018年总书单" class="headerlink" title="我的2018年总书单"></a>我的2018年总书单</h1><table>
+<thead>
+<tr>
+<th>序号</th>
+<th>书名</th>
+<th>来源</th>
+<th>状态</th>
+<th>开始阅读时间</th>
+<th>读完时间</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>浪潮之巅</td>
+<td>纸质</td>
+<td>在读</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>2</td>
+<td>新生 七年就是一辈子</td>
+<td>多看</td>
+<td>已读完</td>
+<td></td>
+<td>0205</td>
+</tr>
+<tr>
+<td>3</td>
+<td>大数据</td>
+<td>多看</td>
+<td>在读</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>4</td>
+<td>怪诞经济学</td>
+<td>多看</td>
+<td>在读</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>5</td>
+<td>专业主义</td>
+<td>多看</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>6</td>
+<td>失控</td>
+<td>多看</td>
+<td>在读</td>
+<td>0205</td>
+<td></td>
+</tr>
+<tr>
+<td>7</td>
+<td>怪诞心理学</td>
+<td>多看</td>
+<td>在读</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>8</td>
+<td>设计心理学</td>
+<td>多看</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>9</td>
+<td>魔鬼经济学</td>
+<td>多看</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>10</td>
+<td>乌合之众</td>
+<td>多看</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>11</td>
+<td>把时间当做朋友</td>
+<td>多看</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>12</td>
+<td>三体</td>
+<td>多看</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>13</td>
+<td>人性的弱点</td>
+<td>多看</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>14</td>
+<td>物种起源</td>
+<td>kindle</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>15</td>
+<td>沉默的大多数</td>
+<td>kindle</td>
+<td>在读</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>16</td>
+<td>生命不息，折腾不止</td>
+<td>kindle</td>
+<td>在读</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>17</td>
+<td>动物农场</td>
+<td>kindle</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>18</td>
+<td>世说新语</td>
+<td>kindle</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>19</td>
+<td>厚黑学</td>
+<td>kindle</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h1 id="第6周-0205-0211-ing"><a href="#第6周-0205-0211-ing" class="headerlink" title="第6周 0205-0211 ing"></a>第6周 0205-0211 ing</h1><table>
+<thead>
+<tr>
+<th>书名</th>
+<th>周一</th>
+<th>周二</th>
+<th>周三</th>
+<th>周四</th>
+<th>周五</th>
+<th>周六</th>
+<th>周日</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>新生 七年就是一辈子917-19</td>
+<td>900ok</td>
+<td>917ok</td>
+<td>null</td>
+<td>null</td>
+<td>null</td>
+<td>null</td>
+<td>null</td>
+</tr>
+<tr>
+<td>怪诞经济学539-11</td>
+<td>450ok</td>
+<td>500</td>
+<td>539</td>
+<td>null</td>
+<td>null</td>
+<td>null</td>
+<td>null</td>
+</tr>
+<tr>
+<td>大数据851-17</td>
+<td>750ok</td>
+<td>800</td>
+<td>851</td>
+<td>null</td>
+<td>null</td>
+<td>null</td>
+<td>null</td>
+</tr>
+<tr>
+<td>人性的弱点490-10</td>
+<td>null</td>
+<td>50</td>
+<td>100</td>
+<td>150</td>
+<td>200</td>
+<td>250</td>
+<td>300</td>
+</tr>
+<tr>
+<td>怪诞心理学546</td>
+<td>null</td>
+<td>null</td>
+<td>50</td>
+<td>100</td>
+<td>150</td>
+<td>200</td>
+<td>250</td>
+</tr>
+<tr>
+<td>专业主义378</td>
+<td>null</td>
+<td>null</td>
+<td>null</td>
+<td>50</td>
+<td>100</td>
+<td>150</td>
+<td>200</td>
+</tr>
+<tr>
+<td>失控1573</td>
+<td>50</td>
+<td>150</td>
+<td>200</td>
+<td>250</td>
+<td>300</td>
+<td>350</td>
+<td>400</td>
+</tr>
+</tbody>
+</table>
+<h1 id="第5周-0129-0204-ed"><a href="#第5周-0129-0204-ed" class="headerlink" title="第5周 0129-0204 ed"></a>第5周 0129-0204 ed</h1><ul>
+<li>页数基于多看阅读</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>书名</th>
+<th>周一</th>
+<th>周二</th>
+<th>周三</th>
+<th>周四</th>
+<th>周五</th>
+<th>周六</th>
+<th>周日</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>新生 七年就是一辈子917-19</td>
+<td>550 ok</td>
+<td>600 ok</td>
+<td>650 ok</td>
+<td>700ok</td>
+<td>750ok</td>
+<td>800ok</td>
+<td>850ok</td>
+</tr>
+<tr>
+<td>怪诞经济学539-11</td>
+<td>null</td>
+<td>null</td>
+<td>null</td>
+<td>250ok</td>
+<td>300ok</td>
+<td>350ok</td>
+<td>400ok</td>
+</tr>
+<tr>
+<td>大数据851-17</td>
+<td>400 ok</td>
+<td>450 ok</td>
+<td>500 ok</td>
+<td>550ok</td>
+<td>600ok</td>
+<td>650ok</td>
+<td>700ok</td>
+</tr>
+</tbody>
+</table>
+<h1 id="第4周-0122-0128-ed"><a href="#第4周-0122-0128-ed" class="headerlink" title="第4周 0122-0128 ed"></a>第4周 0122-0128 ed</h1><ul>
+<li>备注：明朝那些事儿，看到抗日援朝那部分，实在是看不下去啦，索性不看了</li>
+<li>页数基于多看阅读</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>书名</th>
+<th>周一</th>
+<th>周二</th>
+<th>周三</th>
+<th>周四</th>
+<th>周五</th>
+<th>周六</th>
+<th>周日</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>新生 七年就是一辈子</td>
+<td>200 ok</td>
+<td>250 ok</td>
+<td>300 ok</td>
+<td>350 ok</td>
+<td>400 ok</td>
+<td>450 ok</td>
+<td>500 ok</td>
+</tr>
+<tr>
+<td>明朝哪些事儿</td>
+<td>4050 ok</td>
+<td>4100 ok</td>
+<td>4150 ok</td>
+<td>4200 ok</td>
+<td>4250</td>
+<td>4300</td>
+<td>4350</td>
+</tr>
+<tr>
+<td>大数据</td>
+<td>50 ok</td>
+<td>100 ok</td>
+<td>150 ok</td>
+<td>200 ok</td>
+<td>250 ok</td>
+<td>300 ok</td>
+<td>350 ok</td>
+</tr>
+</tbody>
+</table>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://wdd.js.org/do-not-be-big-fans.html">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="王端端">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="http://p3alsaatj.bkt.clouddn.com/20180129093544_I5Jscb_IMG_1402.jpeg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="洞香春">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/do-not-be-big-fans.html" itemprop="url">不要成为某个技术的死忠粉</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-02-05T11:58:25+08:00">
+                2018-02-05
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+            <div class="post-wordcount">
+              
+                
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">字数统计&#58;</span>
+                
+                <span title="字数统计">
+                  43 字
+                </span>
+              
+
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">阅读时长 &asymp;</span>
+                
+                <span title="阅读时长">
+                  1 分钟
+                </span>
+              
+            </div>
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h1 id="我对Vue与React的态度"><a href="#我对Vue与React的态度" class="headerlink" title="我对Vue与React的态度"></a>我对Vue与React的态度</h1><h1 id="成年人权衡利弊，小孩子才说好坏"><a href="#成年人权衡利弊，小孩子才说好坏" class="headerlink" title="成年人权衡利弊，小孩子才说好坏"></a>成年人权衡利弊，小孩子才说好坏</h1><h1 id="你只不过在找借口罢了"><a href="#你只不过在找借口罢了" class="headerlink" title="你只不过在找借口罢了"></a>你只不过在找借口罢了</h1><h1 id="不要成为某个技术的死忠粉"><a href="#不要成为某个技术的死忠粉" class="headerlink" title="不要成为某个技术的死忠粉"></a>不要成为某个技术的死忠粉</h1>
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="https://wdd.js.org/think-with-stream.html">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -1511,675 +2506,6 @@
 
 
     
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://wdd.js.org/think-about-markdown-and-editor.html">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="王端端">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="http://p3alsaatj.bkt.clouddn.com/20180129093544_I5Jscb_IMG_1402.jpeg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="洞香春">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/think-about-markdown-and-editor.html" itemprop="url">markdwon、笔记、编辑器与缓存</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-01-31T20:16:27+08:00">
-                2018-01-31
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-            <div class="post-wordcount">
-              
-                
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-file-word-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">字数统计&#58;</span>
-                
-                <span title="字数统计">
-                  315 字
-                </span>
-              
-
-              
-                <span class="post-meta-divider">|</span>
-              
-
-              
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-clock-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">阅读时长 &asymp;</span>
-                
-                <span title="阅读时长">
-                  1 分钟
-                </span>
-              
-            </div>
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <h1 id="笔记有哪些种类？"><a href="#笔记有哪些种类？" class="headerlink" title="笔记有哪些种类？"></a>笔记有哪些种类？</h1><ul>
-<li><code>所有人可读</code>：所有人都可以看的，这种类型的笔记适合作为博客</li>
-<li><code>部分可读</code>：这种不适合作为博客，需要一些约束条件，被授权的人才有资格去读</li>
-<li><code>仅自己可读</code>：这种类型的往往都是个人隐私，不需要和别人分享</li>
-</ul>
-<h1 id="为什么要记笔记？"><a href="#为什么要记笔记？" class="headerlink" title="为什么要记笔记？"></a>为什么要记笔记？</h1><p><code>你需要的东西网上都有，搜索引擎都能找到，那么你为什么还要记笔记？</code></p>
-<ul>
-<li><code>节约效率与缓存</code>：搜索引擎并不一定能够找到你需要的数据，一旦找到，最好可以缓存起来，作为笔记，下次查找的效率往往会提高非常多；另外，这次可以找到的内容，下次同样的位置，也可能文档已经被删除。</li>
-<li><code>知识经验积累</code>: 原创的内容在互联网上是搜不到的，所以需要记录，积累知识，内化吸收</li>
-<li><code>生活感情记录</code>: 作为一种情绪的记录</li>
-</ul>
-<h1 id="markdown-笔记，-编辑器之间有什么关系"><a href="#markdown-笔记，-编辑器之间有什么关系" class="headerlink" title="markdown, 笔记， 编辑器之间有什么关系"></a>markdown, 笔记， 编辑器之间有什么关系</h1><p>markdown是笔记的一种形式，编辑器来制作笔记。</p>
-<h1 id="对于编辑器的要求"><a href="#对于编辑器的要求" class="headerlink" title="对于编辑器的要求"></a>对于编辑器的要求</h1><ul>
-<li>可以编辑markdown</li>
-<li>可以导出pdf</li>
-<li>可以云端备份</li>
-</ul>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://wdd.js.org/fork-sync-learn.html">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="王端端">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="http://p3alsaatj.bkt.clouddn.com/20180129093544_I5Jscb_IMG_1402.jpeg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="洞香春">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/fork-sync-learn.html" itemprop="url">git合并上游仓库即同步fork后的仓库</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-01-31T17:16:44+08:00">
-                2018-01-31
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-            <div class="post-wordcount">
-              
-                
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-file-word-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">字数统计&#58;</span>
-                
-                <span title="字数统计">
-                  421 字
-                </span>
-              
-
-              
-                <span class="post-meta-divider">|</span>
-              
-
-              
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-clock-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">阅读时长 &asymp;</span>
-                
-                <span title="阅读时长">
-                  2 分钟
-                </span>
-              
-            </div>
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <h1 id="前提说明"><a href="#前提说明" class="headerlink" title="前提说明"></a>前提说明</h1><ul>
-<li>仓库A: <a href="http://gitlab.tt.cc:30000/fe/omp.git" target="_blank" rel="noopener">http://gitlab.tt.cc:30000/fe/omp.git</a></li>
-<li>仓库B: 仓库Bfork自仓库A, 仓库A的地址是：<a href="http://gitlab.tt.cc:30000/wangdd/omp.git" target="_blank" rel="noopener">http://gitlab.tt.cc:30000/wangdd/omp.git</a></li>
-</ul>
-<p>某一时刻，仓库A更新了。仓库B需要同步上游分支的更新。</p>
-<h1 id="本地操作"><a href="#本地操作" class="headerlink" title="本地操作"></a>本地操作</h1><figure class="highlight groovy"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 1 查看远程分支</span></span><br><span class="line">➜  omp <span class="string">git:</span>(master) git remote -v</span><br><span class="line">origin	<span class="string">http:</span><span class="comment">//gitlab.tt.cc:30000/wangdd/omp.git (fetch)</span></span><br><span class="line">origin	<span class="string">http:</span><span class="comment">//gitlab.tt.cc:30000/wangdd/omp.git (push)</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// 2 添加一个远程同步的上游仓库</span></span><br><span class="line">➜  omp <span class="string">git:</span>(master) git remote add upstream <span class="string">http:</span><span class="comment">//gitlab.tt.cc:30000/fe/omp.git</span></span><br><span class="line">➜  omp <span class="string">git:</span>(master) git remote -v</span><br><span class="line">origin	<span class="string">http:</span><span class="comment">//gitlab.tt.cc:30000/wangdd/omp.git (fetch)</span></span><br><span class="line">origin	<span class="string">http:</span><span class="comment">//gitlab.tt.cc:30000/wangdd/omp.git (push)</span></span><br><span class="line">upstream	<span class="string">http:</span><span class="comment">//gitlab.tt.cc:30000/fe/omp.git (fetch)</span></span><br><span class="line">upstream	<span class="string">http:</span><span class="comment">//gitlab.tt.cc:30000/fe/omp.git (push)</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// 3 拉去上游分支到本地，并且会被存储在一个新分支upstream/master</span></span><br><span class="line">➜  omp <span class="string">git:</span>(master) git fetch upstream</span><br><span class="line"><span class="string">remote:</span> Counting <span class="string">objects:</span> <span class="number">4</span>, done.</span><br><span class="line"><span class="string">remote:</span> Compressing <span class="string">objects:</span> <span class="number">100</span>% (<span class="number">4</span>/<span class="number">4</span>), done.</span><br><span class="line"><span class="string">remote:</span> Total <span class="number">4</span> (delta <span class="number">2</span>), reused <span class="number">0</span> (delta <span class="number">0</span>)</span><br><span class="line">Unpacking <span class="string">objects:</span> <span class="number">100</span>% (<span class="number">4</span>/<span class="number">4</span>), done.</span><br><span class="line">From <span class="string">http:</span><span class="comment">//gitlab.tt.cc:30000/fe/omp</span></span><br><span class="line"> * [<span class="keyword">new</span> branch]      master     -&gt; upstream/master</span><br><span class="line"></span><br><span class="line"><span class="comment">// 4 将upstream/master分支合并到master分支，由于我已经在master分支，此处就不在切换到master分支</span></span><br><span class="line">➜  omp <span class="string">git:</span>(master) git merge upstream/master</span><br><span class="line">Updating <span class="number">29</span>c098c.<span class="number">.6413803</span></span><br><span class="line">Fast-forward</span><br><span class="line"> README.md | <span class="number">1</span> +</span><br><span class="line"> <span class="number">1</span> file changed, <span class="number">1</span> insertion(+)</span><br><span class="line"></span><br><span class="line"><span class="comment">// 5 查看一下，此次合并，本地有哪些更新</span></span><br><span class="line">➜  omp <span class="string">git:</span>(master) git log -p</span><br><span class="line"></span><br><span class="line"><span class="comment">// 6 然后将更新推送到仓库B</span></span><br><span class="line">➜  omp <span class="string">git:</span>(master) git push</span><br></pre></td></tr></table></figure>
-<h1 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h1><p>通过上述操作，仓库B就同步了仓库A的代码。整体的逻辑就是将<code>上游分支拉去到本地，然后合并到本地分支上</code>。就这么简单。</p>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://wdd.js.org/git-commom-cmds.html">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="王端端">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="http://p3alsaatj.bkt.clouddn.com/20180129093544_I5Jscb_IMG_1402.jpeg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="洞香春">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/git-commom-cmds.html" itemprop="url">git常用命令与oh-my-zsh常用缩写</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-01-31T16:19:38+08:00">
-                2018-01-31
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-            <div class="post-wordcount">
-              
-                
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-file-word-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">字数统计&#58;</span>
-                
-                <span title="字数统计">
-                  629 字
-                </span>
-              
-
-              
-                <span class="post-meta-divider">|</span>
-              
-
-              
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-clock-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">阅读时长 &asymp;</span>
-                
-                <span title="阅读时长">
-                  3 分钟
-                </span>
-              
-            </div>
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <h1 id="oh-my-zsh中常用的git缩写"><a href="#oh-my-zsh中常用的git缩写" class="headerlink" title="oh-my-zsh中常用的git缩写"></a>oh-my-zsh中常用的git缩写</h1><figure class="highlight vhdl"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">alias</span> ga=<span class="symbol">'git</span> add'</span><br><span class="line"><span class="keyword">alias</span> gb=<span class="symbol">'git</span> branch'</span><br><span class="line"><span class="keyword">alias</span> gba=<span class="symbol">'git</span> branch -a'</span><br><span class="line"><span class="keyword">alias</span> gbd=<span class="symbol">'git</span> branch -d'</span><br><span class="line"><span class="keyword">alias</span> gcam=<span class="symbol">'git</span> commit -a -m'</span><br><span class="line"><span class="keyword">alias</span> gcb=<span class="symbol">'git</span> checkout -b'</span><br><span class="line"><span class="keyword">alias</span> gco=<span class="symbol">'git</span> checkout'</span><br><span class="line"><span class="keyword">alias</span> gcm=<span class="symbol">'git</span> checkout master'</span><br><span class="line"><span class="keyword">alias</span> gcp=<span class="symbol">'git</span> cherry-pick'</span><br><span class="line"><span class="keyword">alias</span> gd=<span class="symbol">'git</span> diff'</span><br><span class="line"><span class="keyword">alias</span> gfo=<span class="symbol">'git</span> fetch origin'</span><br><span class="line"><span class="keyword">alias</span> ggpush=<span class="symbol">'git</span> push origin $(git_current_branch)'</span><br><span class="line"><span class="keyword">alias</span> ggsup=<span class="symbol">'git</span> branch <span class="comment">--set-upstream-to=origin/$(git_current_branch)'</span></span><br><span class="line"><span class="keyword">alias</span> glgp=<span class="symbol">'git</span> log <span class="comment">--stat -p'</span></span><br><span class="line"><span class="keyword">alias</span> gm=<span class="symbol">'git</span> merge'</span><br><span class="line"><span class="keyword">alias</span> gp=<span class="symbol">'git</span> push'</span><br><span class="line"><span class="keyword">alias</span> gst=<span class="symbol">'git</span> status'</span><br><span class="line"><span class="keyword">alias</span> gsta=<span class="symbol">'git</span> stash save'</span><br><span class="line"><span class="keyword">alias</span> gstp=<span class="symbol">'git</span> stash pop'</span><br><span class="line"><span class="keyword">alias</span> gl=<span class="symbol">'git</span> pull'</span><br><span class="line"><span class="keyword">alias</span> glg=<span class="symbol">'git</span> log <span class="comment">--stat'</span></span><br><span class="line"><span class="keyword">alias</span> glgp=<span class="symbol">'git</span> log <span class="comment">--stat -p'</span></span><br></pre></td></tr></table></figure>
-<p><a href="https://github.com/robbyrussell/oh-my-zsh/blob/master/plugins/git/git.plugin.zsh" target="_blank" rel="noopener">oh-my-zsh git命令缩写完整版</a></p>
-<h1 id="常用的git命令"><a href="#常用的git命令" class="headerlink" title="常用的git命令"></a>常用的git命令</h1><p><code>假设你在master分支上</code></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">Alice-&gt;Bob: Hello Bob, how are you?</span><br><span class="line">Note right of Bob: Bob thinks</span><br><span class="line">Bob--&gt;Alice: I am good thanks!</span><br></pre></td></tr></table></figure>
-<figure class="highlight gradle"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 将本地修改后的文件推送到本地仓库</span></span><br><span class="line">git commit -am <span class="string">'修改了一个问题'</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// 将本地仓库推送到远程仓库</span></span><br><span class="line">git <span class="keyword">push</span></span><br></pre></td></tr></table></figure>
-<h2 id="状态管理"><a href="#状态管理" class="headerlink" title="状态管理"></a>状态管理</h2><h3 id="状态查看"><a href="#状态查看" class="headerlink" title="状态查看"></a>状态查看</h3><p>查看当前仓库状态<br><figure class="highlight ebnf"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="attribute">git status</span></span><br></pre></td></tr></table></figure></p>
-<h2 id="分支管理"><a href="#分支管理" class="headerlink" title="分支管理"></a>分支管理</h2><h3 id="分支新建"><a href="#分支新建" class="headerlink" title="分支新建"></a>分支新建</h3><p>基于当前分支，创建test分支<br><figure class="highlight smali"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">// 创建dev分支</span><br><span class="line">git checkout dev</span><br><span class="line"></span><br><span class="line">// 创建dev分支后，切换到dev分支</span><br><span class="line">git checkout -b dev </span><br><span class="line"></span><br><span class="line">// 以某个commitId为起点创建分支</span><br><span class="line">git checkout -b<span class="built_in"> new-branch-name </span>commit-id</span><br></pre></td></tr></table></figure></p>
-<h3 id="分支查看"><a href="#分支查看" class="headerlink" title="分支查看"></a>分支查看</h3><p>查看远程分支： git branch -r</p>
-<figure class="highlight stata"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 查看本地分支</span></span><br><span class="line">git branch</span><br><span class="line"></span><br><span class="line"><span class="comment">// 查看远程分支</span></span><br><span class="line">git branch -<span class="built_in">r</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// 查看所有分支</span></span><br><span class="line">git branch -a</span><br></pre></td></tr></table></figure>
-<h3 id="分支切换"><a href="#分支切换" class="headerlink" title="分支切换"></a>分支切换</h3><p>切换到某个分支: git checkout 0.10.7<br><figure class="highlight lsl"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&gt; git checkout <span class="number">0.10</span><span class="number">.7</span></span><br><span class="line">Branch <span class="number">0.10</span><span class="number">.7</span> set up to track remote branch <span class="number">0.10</span><span class="number">.7</span> from origin.</span><br><span class="line">Switched to a new branch '<span class="number">0.10</span><span class="number">.7</span>'</span><br></pre></td></tr></table></figure></p>
-<h3 id="分支合并"><a href="#分支合并" class="headerlink" title="分支合并"></a>分支合并</h3><p>将master分支合并到0.10.7分支: git merge<br><figure class="highlight lsl"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">&gt; git merge master</span><br><span class="line">Merge made by the 'recursive' strategy.</span><br><span class="line"> public/javascripts/app-qc.js      |  <span class="number">83</span> +++++++++++++++++++++++++--</span><br><span class="line"> views/menu.html                   |   <span class="number">1</span> +</span><br><span class="line"> views/qc-template-show-modal.html | <span class="number">114</span> ++++++++++++++++++++++++++++++++++++++</span><br><span class="line"> views/qc-template.html            |   <span class="number">7</span> ++-</span><br><span class="line"> <span class="number">4</span> files <span class="section">changed</span>, <span class="number">198</span> insertions(+), <span class="number">7</span> deletions(-)</span><br><span class="line"> create mode <span class="number">100644</span> views/qc-template-show-modal.html</span><br></pre></td></tr></table></figure></p>
-<h3 id="分支删除"><a href="#分支删除" class="headerlink" title="分支删除"></a>分支删除</h3><figure class="highlight q"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 删除远程dev分支</span></span><br><span class="line">git push --<span class="keyword">delete</span> origin <span class="built_in">dev</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// 删除本地dev分支</span></span><br><span class="line">git branch -D <span class="built_in">dev</span></span><br></pre></td></tr></table></figure>
-<h2 id="版本对比"><a href="#版本对比" class="headerlink" title="版本对比"></a>版本对比</h2><figure class="highlight gcode"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 查看尚未暂存的文件更新了哪些部分</span></span><br><span class="line">git diff</span><br><span class="line"></span><br><span class="line"><span class="comment">// 查看某两个版本之间的差异</span></span><br><span class="line">git diff commitID<span class="number">1</span> commitID<span class="number">2</span> </span><br><span class="line"></span><br><span class="line"><span class="comment">// 查看某两个版本的某个文件之间的差异</span></span><br><span class="line">git diff commitID<span class="number">1</span>:file<span class="symbol">name1</span> commitID<span class="number">2</span>:file<span class="symbol">name2</span></span><br></pre></td></tr></table></figure>
-<h2 id="日志查看"><a href="#日志查看" class="headerlink" title="日志查看"></a>日志查看</h2><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">git <span class="built_in">log</span> </span><br><span class="line">git <span class="keyword">short</span>-<span class="built_in">log</span></span><br></pre></td></tr></table></figure>
-<h1 id="参考文献"><a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h1><ul>
-<li><a href="https://git-scm.com/docs" target="_blank" rel="noopener">git 命令参考</a></li>
-<li><a href="https://git-scm.com/book/zh/v2" target="_blank" rel="noopener">《Pro Git 中文版》</a></li>
-<li><a href="https://www.liaoxuefeng.com/wiki/0013739516305929606dd18361248578c67b8067c8c017b000" target="_blank" rel="noopener">廖雪峰 git教程</a></li>
-<li><a href="https://backlog.com/git-tutorial/cn/" target="_blank" rel="noopener">猴子都能懂的GIT入门</a></li>
-</ul>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://wdd.js.org/linux-common-cmds.html">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="王端端">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="http://p3alsaatj.bkt.clouddn.com/20180129093544_I5Jscb_IMG_1402.jpeg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="洞香春">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/linux-common-cmds.html" itemprop="url">linux常用命令使用场景总结</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-01-31T09:58:33+08:00">
-                2018-01-31
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-            <div class="post-wordcount">
-              
-                
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-file-word-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">字数统计&#58;</span>
-                
-                <span title="字数统计">
-                  782 字
-                </span>
-              
-
-              
-                <span class="post-meta-divider">|</span>
-              
-
-              
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-clock-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">阅读时长 &asymp;</span>
-                
-                <span title="阅读时长">
-                  3 分钟
-                </span>
-              
-            </div>
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <h1 id="lsof-根据端口号查监听的进程号"><a href="#lsof-根据端口号查监听的进程号" class="headerlink" title="lsof: 根据端口号查监听的进程号"></a>lsof: 根据端口号查监听的进程号</h1><p><a href="http://linuxtools-rst.readthedocs.io/zh_CN/latest/tool/lsof.html" target="_blank" rel="noopener">参考</a></p>
-<p>使用模型：<code>lsof -i :port</code></p>
-<p>已知某服务占用8088端口，请查出使用该端口的进程号</p>
-<figure class="highlight stylus"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">lsof -<span class="selector-tag">i</span> :<span class="number">8088</span></span><br></pre></td></tr></table></figure>
-<blockquote>
-<p>lsof（list open files）是一个查看当前系统文件的工具。在linux环境下，任何事物都以文件的形式存在，通过文件不仅仅可以访问常规数据，还可以访问网络连接和硬件。如传输控制协议 (TCP) 和用户数据报协议 (UDP) 套接字等，系统在后台都为该应用程序分配了一个文件描述符，该文件描述符提供了大量关于这个应用程序本身的信息。<a href="http://linuxtools-rst.readthedocs.io/zh_CN/latest/tool/lsof.html" target="_blank" rel="noopener">lsof命令详情</a></p>
-</blockquote>
-<h1 id="grep-搜索神器"><a href="#grep-搜索神器" class="headerlink" title="grep: 搜索神器"></a>grep: 搜索神器</h1><p>参考： <a href="https://www.gnu.org/software/grep/manual/grep.html" target="_blank" rel="noopener">GNU Grep 3.0</a><br><figure class="highlight haml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">-<span class="ruby">-<span class="symbol">color:</span>高亮显示匹配到的字符串</span></span><br><span class="line"><span class="ruby">-v：显示不能被pattern匹配到的</span></span><br><span class="line"><span class="ruby">-i：忽略字符大小写</span></span><br><span class="line"><span class="ruby">-o：仅显示匹配到的字符串</span></span><br><span class="line"><span class="ruby">-q：静默模式，不输出任何信息</span></span><br><span class="line"><span class="ruby">-A<span class="comment">#：after，匹配到的后#行</span></span></span><br><span class="line"><span class="ruby">-B<span class="comment">#：before，匹配到的前#行</span></span></span><br><span class="line"><span class="ruby">-C<span class="comment">#：context，匹配到的前后各#行</span></span></span><br><span class="line"><span class="ruby">-E：使用ERE，支持使用扩展的正则表达式</span></span><br><span class="line"><span class="ruby"></span></span><br><span class="line"><span class="ruby">－c：只输出匹配行的计数。</span></span><br><span class="line"><span class="ruby">－I：不区分大 小写(只适用于单字符)。</span></span><br><span class="line"><span class="ruby">－h：查询多文件时不显示文件名。</span></span><br><span class="line"><span class="ruby">－l：查询多文件时只输出包含匹配字符的文件名。</span></span><br><span class="line"><span class="ruby">－n：显示匹配行及 行号。</span></span><br><span class="line"><span class="ruby">- <span class="symbol">m:</span> 匹配多少个关键词之后就停止搜索</span></span><br><span class="line"><span class="ruby">－s：不显示不存在或无匹配文本的错误信息。</span></span><br><span class="line"><span class="ruby">－v：显示不包含匹配文本的所有行。</span></span><br></pre></td></tr></table></figure></p>
-<p>##普通：搜索trace.log 中含有ERROR字段的日志<br><code>grep ERROR trace.log</code></p>
-<p>##输出文件：可以将日志输出文件中<br><code>grep ERROR trace.log &gt; error.log</code></p>
-<p>##反向：搜索不包含ERROR字段的日志<br><code>grep -v ERROR trace.log</code></p>
-<p>##向前：搜索包含ERROR,并且显示ERROR前10行的日志<br><code>grep -B 10 ERROR trace.log</code></p>
-<p>##向后：搜索包含ERROR字段，并且显示ERROR后10行的日志<br><code>grep -A 10 ERROR trace.log</code></p>
-<p>##上下文：搜索包含ERROR字段，并且显示ERROR字段前后10行的日志<br><code>grep -C 10 ERROR trace.log</code></p>
-<p>##多字段：搜索包含ERROR和DEBUG字段的日志<br><code>gerp -E &#39;ERROR|DEBUG&#39; trace.log</code></p>
-<p>##多文件：从多个.log文件中搜索含有ERROR的日志<br><code>grep ERROR *.log</code></p>
-<p>##省略文件名：从多个.log文件中搜索ERROR字段日志，并不显示日志文件名<br>从多个文件中搜索的日志默认每行会带有日志文件名</p>
-<p><code>grep -h ERROR *.log</code></p>
-<p>##时间范围： 按照时间范围搜索日志<br><code>awk &#39;$2&gt;&quot;17:30:00&quot; &amp;&amp; $2&lt;&quot;18:00:00&quot;&#39; trace.log</code><br>日志形式如下, $2代表第二列即11:44:58, awk需要指定列<br><figure class="highlight less"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">11-21</span> <span class="selector-tag">16</span><span class="selector-pseudo">:44</span><span class="selector-pseudo">:58</span> /<span class="selector-tag">user</span>/<span class="selector-tag">info</span>/</span><br></pre></td></tr></table></figure></p>
-<p>##有没有：搜索到第一个匹配行后就停止搜索<br><code>grep -m 1 ERROR trace.log</code></p>
-<h2 id="行数统计-统计ERROR出现了多少行"><a href="#行数统计-统计ERROR出现了多少行" class="headerlink" title="行数统计: 统计ERROR出现了多少行"></a>行数统计: 统计ERROR出现了多少行</h2><p><code>grep -c ERROR trace.log</code></p>
-<h2 id="单词统计：统计ERROR出现了多少次"><a href="#单词统计：统计ERROR出现了多少次" class="headerlink" title="单词统计：统计ERROR出现了多少次"></a>单词统计：统计ERROR出现了多少次</h2><p><code>grep -c ERROR trace.log | wc -w</code></p>
-<h1 id="wc：单词统计"><a href="#wc：单词统计" class="headerlink" title="wc：单词统计"></a>wc：单词统计</h1><h1 id="参考文献"><a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h1><ul>
-<li><a href="http://linuxtools-rst.readthedocs.io/zh_CN/latest/index.html" target="_blank" rel="noopener">Linux工具快速教程</a></li>
-</ul>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
   </section>
 
   
@@ -2234,7 +2560,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">42</span>
+                  <span class="site-state-item-count">46</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -2247,7 +2573,7 @@
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">56</span>
+                  <span class="site-state-item-count">57</span>
                   <span class="site-state-item-name">标签</span>
                 </a>
               </div>
