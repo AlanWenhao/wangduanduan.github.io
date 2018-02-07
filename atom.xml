@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://wdd.js.org/"/>
-  <updated>2018-02-07T02:00:45.000Z</updated>
+  <updated>2018-02-07T02:10:27.000Z</updated>
   <id>https://wdd.js.org/</id>
   
   <author>
@@ -15,6 +15,29 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>突然觉得自己好像没学过JS</title>
+    <link href="https://wdd.js.org/i-realy-dont-know-js.html"/>
+    <id>https://wdd.js.org/i-realy-dont-know-js.html</id>
+    <published>2018-02-07T02:09:42.000Z</published>
+    <updated>2018-02-07T02:10:27.000Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="先看题：mean的值是什么？"><a href="#先看题：mean的值是什么？" class="headerlink" title="先看题：mean的值是什么？"></a>先看题：mean的值是什么？</h2><figure class="highlight stata"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> scores = [10,11,12];</span><br><span class="line"><span class="keyword">var</span> <span class="keyword">total</span> = 0;</span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span>(<span class="keyword">var</span> <span class="keyword">score</span> <span class="keyword">in</span> scores)&#123;</span><br><span class="line">  <span class="keyword">total</span> += <span class="keyword">score</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> <span class="keyword">mean</span> = <span class="keyword">total</span>/scores.length;</span><br><span class="line">console.<span class="built_in">log</span>(<span class="keyword">mean</span>);</span><br></pre></td></tr></table></figure><h2 id="是11？"><a href="#是11？" class="headerlink" title="是11？"></a>是11？</h2><p>恭喜你：答错了！</p><h2 id="是1？"><a href="#是1？" class="headerlink" title="是1？"></a>是1？</h2><p>恭喜你：答错了！</p><h2 id="正确答案：-4"><a href="#正确答案：-4" class="headerlink" title="正确答案： 4"></a>正确答案： 4</h2><p>解释： <code>for in 循环循环的值永远是key, key是一个字符串</code>。所以total的值是：’0012’。它是一个字符串，字符串’0012’/3,0012会被转换成12，然后除以3，结果是4。</p><h2 id="后记"><a href="#后记" class="headerlink" title="后记"></a>后记</h2><p>这个示例是来自《编写高质量JavaScript的68个方法》的第49条：<code>数组迭代要优先使用for循环而不是for in循环</code>。<br>既然已经发布，就可能有好事者拿出去当面试题。这个题目很有可能坑一堆人。其中包括我。</p><p>这里涉及到许多js的基础知识.</p><ol><li><code>for in 循环是循环对象的索引属性，key是一个字符串。</code></li><li><code>数值类型和字符串相加，会自动转换为字符串</code></li><li><code>字符串除以数值类型，会先把字符串转为数值，最终结果为数值</code></li></ol><p>正确方法<br><figure class="highlight stata"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> scores = [10,11,12];</span><br><span class="line"><span class="keyword">var</span> <span class="keyword">total</span> = 0;</span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span>(<span class="keyword">var</span> i=0, <span class="keyword">n</span>=scores.length; i &lt; <span class="keyword">n</span>; i++)&#123;</span><br><span class="line">  <span class="keyword">total</span> += scores[i];</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> <span class="keyword">mean</span> = <span class="keyword">total</span>/scores.length;</span><br><span class="line">console.<span class="built_in">log</span>(<span class="keyword">mean</span>);</span><br></pre></td></tr></table></figure></p><p>这样写有几个好处。</p><ul><li>循环的终止条件简单且明确</li><li>即使在循环体内修改了数组，也能有效的终止循环。否则就可能变成死循环。</li><li>编译器很难保证重启计算scores.length是安全的。</li><li>提前确定了循环终止条件，避免多次计算数组长度。这个可能会被一些浏览器优化。</li></ul>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h2 id=&quot;先看题：mean的值是什么？&quot;&gt;&lt;a href=&quot;#先看题：mean的值是什么？&quot; class=&quot;headerlink&quot; title=&quot;先看题：mean的值是什么？&quot;&gt;&lt;/a&gt;先看题：mean的值是什么？&lt;/h2&gt;&lt;figure class=&quot;highlight 
+      
+    
+    </summary>
+    
+    
+      <category term="js" scheme="https://wdd.js.org/tags/js/"/>
+    
+  </entry>
   
   <entry>
     <title>UI大全：前端UI框架集合（持续更新）</title>
@@ -526,31 +549,6 @@
       <category term="linux" scheme="https://wdd.js.org/tags/linux/"/>
     
       <category term="shell" scheme="https://wdd.js.org/tags/shell/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>猴子都能懂的教程：向kindle推送电子书</title>
-    <link href="https://wdd.js.org/send-book-to-kindle.html"/>
-    <id>https://wdd.js.org/send-book-to-kindle.html</id>
-    <published>2018-01-30T11:55:43.000Z</published>
-    <updated>2018-01-30T12:59:20.000Z</updated>
-    
-    <content type="html"><![CDATA[<p><a href="https://wdd.js.org/2018/01/30/send-book-to-kindle/">原文链接</a></p><p>读书，嗯，读书</p><p><img src="http://p3alsaatj.bkt.clouddn.com/20180130205840_hPSDa6_Jietu20180130-205818.jpeg" alt=""></p><h1 id="教程目的"><a href="#教程目的" class="headerlink" title="教程目的"></a>教程目的</h1><ul><li>通过邮件向kindle推送一本电子书</li></ul><h1 id="前期准备"><a href="#前期准备" class="headerlink" title="前期准备"></a>前期准备</h1><ul><li>一台可以上网的电脑</li><li>一个电子书</li><li>一个kindle</li></ul><h1 id="你的kindle邮箱是什么？"><a href="#你的kindle邮箱是什么？" class="headerlink" title="你的kindle邮箱是什么？"></a>你的kindle邮箱是什么？</h1><ul><li>登录亚马逊，地址：<a href="https://www.amazon.cn/ref=nav_logo" target="_blank" rel="noopener">https://www.amazon.cn/ref=nav_logo</a></li><li>鼠标移动到导航栏上的<code>我的账户</code></li><li>点击下拉框中的：<code>管理我的内容和设备</code></li><li>会出现下面tab页面 =&gt; 设置 =&gt; 个人文档设置 =&gt; 里面会有电子邮件地址</li><li>里面的邮箱即为你邮件发送的收件方地址。例如：<code>abcd@kindle.cc</code></li></ul><p><img src="http://p3alsaatj.bkt.clouddn.com/20180130201119_fDv8Lt_Jietu20180130-200631.jpeg" alt=""></p><h1 id="如何设置邮箱白名单？"><a href="#如何设置邮箱白名单？" class="headerlink" title="如何设置邮箱白名单？"></a>如何设置邮箱白名单？</h1><p>并不是所有邮件都能发送到<code>abcd@kindle.cc</code>, 需要在上一步的同一个页面设置<code>已认可的发件人电子邮箱</code>, 只有来自认可的邮箱的电子书，亚马逊才会接受。你需要<code>添加认可的电子邮箱</code>。例如发件的邮箱写为：<code>abcd@qq.com</code></p><p><img src="http://p3alsaatj.bkt.clouddn.com/20180130202003_gH5BoP_Screenshot.jpeg" alt=""></p><h1 id="邮件该怎么写？"><a href="#邮件该怎么写？" class="headerlink" title="邮件该怎么写？"></a>邮件该怎么写？</h1><p><code>必须使用上一步白名单里面的邮箱来发送</code></p><ul><li>收件人写你的kindle邮箱</li><li>主题写：<code>Convert</code></li><li>在邮件的附件中添加准备好的电子书</li><li>点击发送</li></ul><h1 id="在哪里查找已经发送的电子书？"><a href="#在哪里查找已经发送的电子书？" class="headerlink" title="在哪里查找已经发送的电子书？"></a>在哪里查找已经发送的电子书？</h1><ul><li>还是在管理我的内容和设备页面</li><li>点击我的内容</li><li>在显示中选择：<code>个人文档</code></li><li>例如你可以在截图中看到，我刚刚上传的一本：you dont konw js</li></ul><blockquote><p>如果没有找到你已经发送的书籍，请再次检查一下，你的kindle邮箱和白名单中的邮箱是否正确</p></blockquote><p><img src="http://p3alsaatj.bkt.clouddn.com/20180130202558_bYkctZ_Jietu20180130-202546.jpeg" alt=""></p><h1 id="如何向kindle推送电子书"><a href="#如何向kindle推送电子书" class="headerlink" title="如何向kindle推送电子书"></a>如何向kindle推送电子书</h1><p>紧接着上一步.</p><ol><li>选择要发送的书籍</li><li>点击发送</li><li>在出现的弹出框中，在下拉框中选择你的kindle设备</li><li>点击发送</li><li>kindle链接WiFi，进入我的图书馆，点击设备，同步</li></ol><p><img src="http://p3alsaatj.bkt.clouddn.com/20180130203158_8z8IlQ_Jietu20180130-203143.jpeg" alt=""></p><h1 id="使用体验的思考？"><a href="#使用体验的思考？" class="headerlink" title="使用体验的思考？"></a>使用体验的思考？</h1><p>之前用多看阅读，<code>WIFI传书</code>非常方便。kindle的上传图书其实蛮复杂的，过程中可能直接过滤掉一些用户。</p><p>我在想为什么亚马逊不在：<code>管理我的内容和设备页面</code>添加一个上传图书的按钮呢？</p><h1 id="重点划线"><a href="#重点划线" class="headerlink" title="重点划线"></a>重点划线</h1><ul><li>一封电子邮件<code>最多只能包含25个附件</code>，并且最多只能发送至15个不同的〖发送至Kindle〗电子邮箱。文档的总大小不得超过50MB。</li><li>在电子邮件主题中输入<code>“Convert”</code>以将您的文档转换为Kindle格式，然后再将其发送至您的设备以及【管理我的内容和设备】页面中的【我的内容】</li><li>如果您的设备或阅读软件暂时无法连接无线网络，我们<code>最多可以为您保存个人文档60天</code></li><li>Kindle个人文档服务支持以下文件类型：<ul><li>Kindle格式（.MOBI、.AZW）</li><li>Microsoft Word（.DOC、.DOCX）</li><li>HTML（.HTML、.HTM）</li><li>RTF (.RTF)</li><li>Text (.TXT) (Kindle X 咪咕电子书阅读器不支持)</li><li>JPEG（.JPEG、.JPG）</li><li>GIF (.GIF)</li><li>PNG (.PNG)</li><li>BMP (.BMP)</li><li>PDF (.PDF)</li></ul></li><li><code>建议您在发送文件之前将文件名改成英文</code></li></ul><h1 id="参考文档"><a href="#参考文档" class="headerlink" title="参考文档"></a>参考文档</h1><ul><li><a href="https://www.amazon.cn/gp/help/customer/display.html?nodeId=201974220" target="_blank" rel="noopener">使用您的〖发送至Kindle〗电子邮箱</a></li><li><a href="https://www.amazon.cn/gp/help/customer/display.html?nodeId=201974240" target="_blank" rel="noopener">添加用于接收文档的电子邮箱</a></li><li><a href="https://www.amazon.cn/gp/help/customer/display.html?nodeId=200767340" target="_blank" rel="noopener">Kindle个人文档服务</a></li><li><a href="https://www.amazon.cn/gp/help/customer/display.html?nodeId=201124320" target="_blank" rel="noopener">Kindle个人文档服务使用条件</a></li></ul>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;p&gt;&lt;a href=&quot;https://wdd.js.org/2018/01/30/send-book-to-kindle/&quot;&gt;原文链接&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;读书，嗯，读书&lt;/p&gt;
-&lt;p&gt;&lt;img src=&quot;http://p3alsaatj.bkt.clouddn.com/20
-      
-    
-    </summary>
-    
-    
-      <category term="kindle" scheme="https://wdd.js.org/tags/kindle/"/>
     
   </entry>
   

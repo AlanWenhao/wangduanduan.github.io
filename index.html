@@ -300,6 +300,175 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://wdd.js.org/i-realy-dont-know-js.html">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="王端端">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="http://p3alsaatj.bkt.clouddn.com/20180129093544_I5Jscb_IMG_1402.jpeg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="洞香春">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/i-realy-dont-know-js.html" itemprop="url">突然觉得自己好像没学过JS</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-02-07T10:09:42+08:00">
+                2018-02-07
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+            <div class="post-wordcount">
+              
+                
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">字数统计&#58;</span>
+                
+                <span title="字数统计">
+                  421 字
+                </span>
+              
+
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">阅读时长 &asymp;</span>
+                
+                <span title="阅读时长">
+                  2 分钟
+                </span>
+              
+            </div>
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h2 id="先看题：mean的值是什么？"><a href="#先看题：mean的值是什么？" class="headerlink" title="先看题：mean的值是什么？"></a>先看题：mean的值是什么？</h2><figure class="highlight stata"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> scores = [10,11,12];</span><br><span class="line"><span class="keyword">var</span> <span class="keyword">total</span> = 0;</span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span>(<span class="keyword">var</span> <span class="keyword">score</span> <span class="keyword">in</span> scores)&#123;</span><br><span class="line">  <span class="keyword">total</span> += <span class="keyword">score</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> <span class="keyword">mean</span> = <span class="keyword">total</span>/scores.length;</span><br><span class="line">console.<span class="built_in">log</span>(<span class="keyword">mean</span>);</span><br></pre></td></tr></table></figure>
+<h2 id="是11？"><a href="#是11？" class="headerlink" title="是11？"></a>是11？</h2><p>恭喜你：答错了！</p>
+<h2 id="是1？"><a href="#是1？" class="headerlink" title="是1？"></a>是1？</h2><p>恭喜你：答错了！</p>
+<h2 id="正确答案：-4"><a href="#正确答案：-4" class="headerlink" title="正确答案： 4"></a>正确答案： 4</h2><p>解释： <code>for in 循环循环的值永远是key, key是一个字符串</code>。所以total的值是：’0012’。它是一个字符串，字符串’0012’/3,0012会被转换成12，然后除以3，结果是4。</p>
+<h2 id="后记"><a href="#后记" class="headerlink" title="后记"></a>后记</h2><p>这个示例是来自《编写高质量JavaScript的68个方法》的第49条：<code>数组迭代要优先使用for循环而不是for in循环</code>。<br>既然已经发布，就可能有好事者拿出去当面试题。这个题目很有可能坑一堆人。其中包括我。</p>
+<p>这里涉及到许多js的基础知识.</p>
+<ol>
+<li><code>for in 循环是循环对象的索引属性，key是一个字符串。</code></li>
+<li><code>数值类型和字符串相加，会自动转换为字符串</code></li>
+<li><code>字符串除以数值类型，会先把字符串转为数值，最终结果为数值</code></li>
+</ol>
+<p>正确方法<br><figure class="highlight stata"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> scores = [10,11,12];</span><br><span class="line"><span class="keyword">var</span> <span class="keyword">total</span> = 0;</span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span>(<span class="keyword">var</span> i=0, <span class="keyword">n</span>=scores.length; i &lt; <span class="keyword">n</span>; i++)&#123;</span><br><span class="line">  <span class="keyword">total</span> += scores[i];</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> <span class="keyword">mean</span> = <span class="keyword">total</span>/scores.length;</span><br><span class="line">console.<span class="built_in">log</span>(<span class="keyword">mean</span>);</span><br></pre></td></tr></table></figure></p>
+<p>这样写有几个好处。</p>
+<ul>
+<li>循环的终止条件简单且明确</li>
+<li>即使在循环体内修改了数组，也能有效的终止循环。否则就可能变成死循环。</li>
+<li>编译器很难保证重启计算scores.length是安全的。</li>
+<li>提前确定了循环终止条件，避免多次计算数组长度。这个可能会被一些浏览器优化。</li>
+</ul>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="https://wdd.js.org/all-best-ui-frame.html">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -2251,157 +2420,6 @@
 
 
     
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://wdd.js.org/think-with-stream.html">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="王端端">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="http://p3alsaatj.bkt.clouddn.com/20180129093544_I5Jscb_IMG_1402.jpeg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="洞香春">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/think-with-stream.html" itemprop="url">Think With Stream</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-02-05T11:28:59+08:00">
-                2018-02-05
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-            <div class="post-wordcount">
-              
-                
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-file-word-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">字数统计&#58;</span>
-                
-                <span title="字数统计">
-                  12 字
-                </span>
-              
-
-              
-                <span class="post-meta-divider">|</span>
-              
-
-              
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-clock-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">阅读时长 &asymp;</span>
-                
-                <span title="阅读时长">
-                  1 分钟
-                </span>
-              
-            </div>
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <h1 id="流的存在"><a href="#流的存在" class="headerlink" title="流的存在"></a>流的存在</h1><p><img src="http://p3alsaatj.bkt.clouddn.com/20180205113245_dxUKTb_latest.jpeg" alt=""></p>
-<h1 id="流的规则"><a href="#流的规则" class="headerlink" title="流的规则"></a>流的规则</h1><h1 id="终极的流"><a href="#终极的流" class="headerlink" title="终极的流"></a>终极的流</h1>
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
   </section>
 
   
@@ -2456,7 +2474,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">41</span>
+                  <span class="site-state-item-count">42</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
