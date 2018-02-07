@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://wdd.js.org/about/index.html</loc>
+    
+    <lastmod>2018-02-07T02:27:52.000Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://wdd.js.org/2017-best-js-books.html</loc>
     
     <lastmod>2018-02-07T02:21:34.000Z</lastmod>
@@ -173,13 +180,6 @@
     <loc>https://wdd.js.org/git-commom-cmds.html</loc>
     
     <lastmod>2018-01-31T08:27:53.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://wdd.js.org/about/index.html</loc>
-    
-    <lastmod>2018-01-31T04:12:54.000Z</lastmod>
     
   </url>
   
