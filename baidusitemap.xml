@@ -4,6 +4,21 @@
 
     
   <url>
+    <loc>https://wdd.js.org/top-11-javascript-libraries-are-worth-your-attention.html</loc>
+    <lastmod>2018-02-07T06:12:58.000Z</lastmod>
+    <data>
+        <display>
+        <title>12个值得关注的顶级JS库</title>
+        <pubTime>2018-02-07T06:08:10.000Z</pubTime>
+        
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>https://wdd.js.org/few-simple-rules-for-good-coding-my-15-years-experience.html</loc>
     <lastmod>2018-02-07T06:04:29.000Z</lastmod>
     <data>
@@ -314,9 +329,9 @@
         <title>Git化文档管理</title>
         <pubTime>2018-02-06T02:52:08.000Z</pubTime>
         
-        <tag>未完成</tag>
-         
         <tag>git</tag>
+         
+        <tag>未完成</tag>
          
         <tag>gitlab</tag>
          
@@ -470,9 +485,9 @@
         <title>无坚不摧：打造极大提高工作效率的装备库</title>
         <pubTime>2018-02-02T01:24:43.000Z</pubTime>
         
-        <tag>未完成</tag>
-         
         <tag>git</tag>
+         
+        <tag>未完成</tag>
          
         <tag>gow</tag>
          
@@ -535,9 +550,9 @@
         <title>git合并上游仓库即同步fork后的仓库</title>
         <pubTime>2018-01-31T09:16:44.000Z</pubTime>
         
-        <tag>fork</tag>
-         
         <tag>git</tag>
+         
+        <tag>fork</tag>
          
         <tag>合并上游分支</tag>
          
