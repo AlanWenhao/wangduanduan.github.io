@@ -300,6 +300,214 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://wdd.js.org/nodejs-alpine-docker.html">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="王端端">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="http://p3alsaatj.bkt.clouddn.com/20180129093544_I5Jscb_IMG_1402.jpeg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="洞香春">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/nodejs-alpine-docker.html" itemprop="url">Nodejs alpine 基础docker镜像构建</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-01-29T14:10:15+08:00">
+                2018-01-29
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+            <div class="post-wordcount">
+              
+                
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">字数统计&#58;</span>
+                
+                <span title="字数统计">
+                  266 字
+                </span>
+              
+
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">阅读时长 &asymp;</span>
+                
+                <span title="阅读时长">
+                  1 分钟
+                </span>
+              
+            </div>
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h1 id="系统环境"><a href="#系统环境" class="headerlink" title="系统环境"></a>系统环境</h1><ul>
+<li>centos7 内核：3.10.0-514.26.2.el7.x86_64</li>
+<li>安装docker要求内核版本不低于3.10</li>
+</ul>
+<h1 id="安装docker"><a href="#安装docker" class="headerlink" title="安装docker"></a>安装docker</h1><figure class="highlight stylus"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">yum install docker <span class="comment">// 安装docker</span></span><br><span class="line">systemctl start docker<span class="selector-class">.service</span> <span class="comment">// 启动docker</span></span><br><span class="line">systemctl enable docker<span class="selector-class">.service</span> <span class="comment">// 设置开机启动</span></span><br></pre></td></tr></table></figure>
+<h1 id="Nodejs-镜像选择"><a href="#Nodejs-镜像选择" class="headerlink" title="Nodejs 镜像选择"></a>Nodejs 镜像选择</h1><table>
+<thead>
+<tr>
+<th>REPOSITORY</th>
+<th>TAG</th>
+<th>IMAGE ID</th>
+<th>CREATED</th>
+<th>SIZE</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>docker.io/node</td>
+<td>9.2.1-slim</td>
+<td>69c9f9292fa4</td>
+<td>3 days ago</td>
+<td>230 MB</td>
+</tr>
+<tr>
+<td>docker.io/node</td>
+<td>9.2.1-alpine</td>
+<td>afdc3aaaf748</td>
+<td>3 days ago</td>
+<td>67.46 MB</td>
+</tr>
+<tr>
+<td>docker.io/node</td>
+<td>latest</td>
+<td>727b047a1f4e</td>
+<td>3 days ago</td>
+<td>675.6 MB</td>
+</tr>
+<tr>
+<td>docker.io/iron/node</td>
+<td>latest</td>
+<td>9ca501065d18</td>
+<td>20 months ago</td>
+<td>18.56 MB</td>
+</tr>
+</tbody>
+</table>
+<p><code>选择镜像的标准</code></p>
+<ul>
+<li>官方的</li>
+<li>经常维护的</li>
+<li>体积小的</li>
+<li>要有yarn 和 npm </li>
+<li>node版本要高</li>
+</ul>
+<p>最终选择 <code>node:9.2.1-alpine</code>, 该镜像体积很小，已经内置npm(5.5.1), yarn(1.3.2)</p>
+<h1 id="时区配置"><a href="#时区配置" class="headerlink" title="时区配置"></a>时区配置</h1><p><code>node:9.2.1-alpine</code>的时区默认不是国内的，需要在build时，配置时区。</p>
+<figure class="highlight routeros"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">FROM</span> node:9.2.1-alpine</span><br><span class="line"></span><br><span class="line"><span class="comment"># Install base packages and set timezone ShangHai</span></span><br><span class="line"><span class="builtin-name">RUN</span> apk update &amp;&amp; apk <span class="builtin-name">add</span> bash tzdata \</span><br><span class="line">    &amp;&amp; cp -r -f /usr/share/zoneinfo/Asia/Shanghai /etc/localtime</span><br><span class="line"></span><br><span class="line"><span class="built_in">..</span>.</span><br><span class="line"><span class="built_in">..</span>.</span><br><span class="line"><span class="built_in">..</span>.</span><br><span class="line"></span><br><span class="line">CMD [ <span class="string">"node"</span> ]</span><br></pre></td></tr></table></figure>
+<p>验证：<br><figure class="highlight crmsh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">➜  <span class="keyword">node</span><span class="title">-dockerfile</span> git:(<span class="literal">master</span>) docker run -it  e595 sh </span><br><span class="line">/ <span class="comment"># yarn -v</span></span><br><span class="line"><span class="number">1.3</span>.<span class="number">2</span></span><br><span class="line">/ <span class="comment"># npm  -v</span></span><br><span class="line"><span class="number">5.5</span>.<span class="number">1</span></span><br><span class="line">/ <span class="comment"># node -v</span></span><br><span class="line">v9.<span class="number">2.1</span></span><br><span class="line">/ <span class="comment"># date</span></span><br><span class="line">Tue Dec <span class="number">12</span> <span class="number">17</span>:<span class="number">33</span>:<span class="number">26</span> CST <span class="number">2017</span></span><br></pre></td></tr></table></figure></p>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="https://wdd.js.org/vscode-vue-standardjs.html">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -1834,7 +2042,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">46</span>
+                  <span class="site-state-item-count">47</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -1847,7 +2055,7 @@
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">57</span>
+                  <span class="site-state-item-count">58</span>
                   <span class="site-state-item-name">标签</span>
                 </a>
               </div>
