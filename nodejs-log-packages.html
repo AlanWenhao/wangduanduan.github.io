@@ -82,18 +82,18 @@
 
 
 
-<meta name="description" content="前端，后端，炒菜，摄影，读书，收集工具">
+<meta name="description" content="morgan 【优点】morgan配置非常简单 【优点】支持自定义日志格式 【优点】支持日志分机 【优点】支持日志压缩：使用rotating-file-stream 【缺点】无法同时往console和文件中写日志  log4js-node 【优点】配置简单 【优点】支持同时往控制台和文件中写数据 【优点】支持按照时间或文件大小分割文件 【优点】支持文件压缩123456789101112131415">
 <meta name="keywords" content="王端端, 洞香春, wellClient">
-<meta property="og:type" content="website">
-<meta property="og:title" content="分类">
-<meta property="og:url" content="https://wdd.js.org/categories/index.html">
+<meta property="og:type" content="article">
+<meta property="og:title" content="nodejs 日志插件比较 VS 自定义日志插件">
+<meta property="og:url" content="https://wdd.js.org/nodejs-log-packages.html">
 <meta property="og:site_name" content="洞香春">
-<meta property="og:description" content="前端，后端，炒菜，摄影，读书，收集工具">
+<meta property="og:description" content="morgan 【优点】morgan配置非常简单 【优点】支持自定义日志格式 【优点】支持日志分机 【优点】支持日志压缩：使用rotating-file-stream 【缺点】无法同时往console和文件中写日志  log4js-node 【优点】配置简单 【优点】支持同时往控制台和文件中写数据 【优点】支持按照时间或文件大小分割文件 【优点】支持文件压缩123456789101112131415">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-01-29T02:11:19.000Z">
+<meta property="og:updated_time" content="2018-02-07T05:49:56.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="分类">
-<meta name="twitter:description" content="前端，后端，炒菜，摄影，读书，收集工具">
+<meta name="twitter:title" content="nodejs 日志插件比较 VS 自定义日志插件">
+<meta name="twitter:description" content="morgan 【优点】morgan配置非常简单 【优点】支持自定义日志格式 【优点】支持日志分机 【优点】支持日志压缩：使用rotating-file-stream 【缺点】无法同时往console和文件中写日志  log4js-node 【优点】配置简单 【优点】支持同时往控制台和文件中写数据 【优点】支持按照时间或文件大小分割文件 【优点】支持文件压缩123456789101112131415">
 
 
 
@@ -123,13 +123,13 @@
 
 
 
-  <link rel="canonical" href="https://wdd.js.org/categories/"/>
+  <link rel="canonical" href="https://wdd.js.org/nodejs-log-packages.html"/>
 
 
 
 
 
-  <title>分类 | 洞香春</title>
+  <title>nodejs 日志插件比较 VS 自定义日志插件 | 洞香春</title>
   
 
 
@@ -288,33 +288,233 @@
 
   <div id="posts" class="posts-expand">
     
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://wdd.js.org/nodejs-log-packages.html">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="王端端">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="http://p3alsaatj.bkt.clouddn.com/20180129093544_I5Jscb_IMG_1402.jpeg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="洞香春">
+    </span>
+
     
-    
-    <div class="post-block page">
       <header class="post-header">
 
-	<h1 class="post-title" itemprop="name headline">分类</h1>
-
-
-
-</header>
-
-      
-      
-      
-      <div class="post-body">
         
         
+          <h1 class="post-title" itemprop="name headline">nodejs 日志插件比较 VS 自定义日志插件</h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-02-07T13:46:51+08:00">
+                2018-02-07
+              </time>
+            
+
+            
+
+            
+          </span>
+
           
-        
-      </div>
+
+          
+            
+          
+
+          
+          
+
+          
+            <span class="post-meta-divider">|</span>
+            <span class="page-pv"><i class="fa fa-file-o"></i>
+            <span class="busuanzi-value" id="busuanzi_value_page_pv" ></span>
+            </span>
+          
+
+          
+            <div class="post-wordcount">
+              
+                
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">字数统计&#58;</span>
+                
+                <span title="字数统计">
+                  727 字
+                </span>
+              
+
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">阅读时长 &asymp;</span>
+                
+                <span title="阅读时长">
+                  4 分钟
+                </span>
+              
+            </div>
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
       
       
+
+      
+        <h1 id="morgan"><a href="#morgan" class="headerlink" title="morgan"></a><a href="https://github.com/expressjs/morgan" target="_blank" rel="noopener">morgan</a></h1><ul>
+<li>【优点】morgan配置非常简单</li>
+<li>【优点】支持自定义日志格式</li>
+<li>【优点】支持日志分机</li>
+<li>【优点】支持日志压缩：使用<a href="https://github.com/iccicci/rotating-file-stream" target="_blank" rel="noopener">rotating-file-stream</a></li>
+<li>【缺点】无法同时往console和文件中写日志</li>
+</ul>
+<h1 id="log4js-node"><a href="#log4js-node" class="headerlink" title="log4js-node"></a><a href="https://github.com/nomiddlename/log4js-node" target="_blank" rel="noopener">log4js-node</a></h1><ul>
+<li>【优点】配置简单</li>
+<li>【优点】支持同时往控制台和文件中写数据</li>
+<li>【优点】支持按照时间或文件大小分割文件</li>
+<li>【优点】支持文件压缩<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">"use strict"</span>;</span><br><span class="line"><span class="keyword">var</span> path = <span class="built_in">require</span>(<span class="string">'path'</span>)</span><br><span class="line">, log4js = <span class="built_in">require</span>(<span class="string">'../lib/log4js'</span>);</span><br><span class="line"></span><br><span class="line">log4js.configure(</span><br><span class="line">  &#123;</span><br><span class="line">    appenders: [</span><br><span class="line">      &#123;</span><br><span class="line">        type: <span class="string">"file"</span>,</span><br><span class="line">        filename: <span class="string">"important-things.log"</span>,</span><br><span class="line">        maxLogSize: <span class="number">10</span>*<span class="number">1024</span>*<span class="number">1024</span>, <span class="comment">// = 10Mb</span></span><br><span class="line">        numBackups: <span class="number">5</span>, <span class="comment">// keep five backup files</span></span><br><span class="line">        compress: <span class="literal">true</span>, <span class="comment">// compress the backups</span></span><br><span class="line">        encoding: <span class="string">'utf-8'</span>,</span><br><span class="line">        mode: <span class="built_in">parseInt</span>(<span class="string">'0640'</span>, <span class="number">8</span>),</span><br><span class="line">        flags: <span class="string">'w+'</span></span><br><span class="line">      &#125;,</span><br><span class="line">      &#123;</span><br><span class="line">        type: <span class="string">"dateFile"</span>,</span><br><span class="line">        filename: <span class="string">"more-important-things.log"</span>,</span><br><span class="line">        pattern: <span class="string">"yyyy-MM-dd-hh"</span>,</span><br><span class="line">        compress: <span class="literal">true</span></span><br><span class="line">      &#125;,</span><br><span class="line">      &#123;</span><br><span class="line">        type: <span class="string">"stdout"</span></span><br><span class="line">      &#125;</span><br><span class="line">    ]</span><br><span class="line">  &#125;</span><br><span class="line">);</span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> logger = log4js.getLogger(<span class="string">'things'</span>);</span><br><span class="line">logger.debug(<span class="string">"This little thing went to market"</span>);</span><br><span class="line">logger.info(<span class="string">"This little thing stayed at home"</span>);</span><br><span class="line">logger.error(<span class="string">"This little thing had roast beef"</span>);</span><br><span class="line">logger.fatal(<span class="string">"This little thing had none"</span>);</span><br><span class="line">logger.trace(<span class="string">"and this little thing went wee, wee, wee, all the way home."</span>);</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<h1 id="winston"><a href="#winston" class="headerlink" title="winston"></a><a href="https://github.com/winstonjs/winston" target="_blank" rel="noopener">winston</a></h1><ul>
+<li>没用过，不做评论</li>
+</ul>
+<h1 id="fluent-logger-node"><a href="#fluent-logger-node" class="headerlink" title="fluent-logger-node"></a><a href="https://github.com/fluent/fluent-logger-node" target="_blank" rel="noopener">fluent-logger-node</a></h1><ul>
+<li>往fluntd中写日志，没用过</li>
+</ul>
+<h1 id="express-winston"><a href="#express-winston" class="headerlink" title="express-winston"></a><a href="https://github.com/bithavoc/express-winston" target="_blank" rel="noopener">express-winston</a></h1><ul>
+<li>没用过</li>
+</ul>
+<h1 id="如何自定义一个日志插件"><a href="#如何自定义一个日志插件" class="headerlink" title="如何自定义一个日志插件"></a>如何自定义一个日志插件</h1><ul>
+<li>可以自定义日志结构</li>
+<li>日志文件可以用gzip压缩</li>
+<li>不影响往console写日志</li>
+<li>可以按时间分割日志</li>
+<li>支持日志覆盖，最多保留1个月的备份</li>
+</ul>
+<p>使用<a href="https://github.com/iccicci/rotating-file-stream" target="_blank" rel="noopener">rotating-file-stream</a><br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> path = <span class="built_in">require</span>(<span class="string">'path'</span>);</span><br><span class="line"><span class="keyword">var</span> fs = <span class="built_in">require</span>(<span class="string">'fs'</span>);</span><br><span class="line"><span class="keyword">var</span> rfs = <span class="built_in">require</span>(<span class="string">'rotating-file-stream'</span>);</span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> logDirectory = __dirname;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">Wpad</span>(<span class="params">num</span>) </span>&#123;</span><br><span class="line">    <span class="keyword">return</span> (num &gt; <span class="number">9</span> ? <span class="string">""</span> : <span class="string">"0"</span>) + num;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * [Wgenerator 创建文件名函数]</span></span><br><span class="line"><span class="comment"> * @Author   Wdd</span></span><br><span class="line"><span class="comment"> * @DateTime 2017-02-22T10:13:39+0800</span></span><br><span class="line"><span class="comment"> * 日志会保留一个月的：因为日志文件名是只使用日期，9月8号的日志就会覆盖8月8号的日志</span></span><br><span class="line"><span class="comment"> * 文件的格式是gzip</span></span><br><span class="line"><span class="comment"> * 文件名例如：22-log.gizp</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">Wgenerator</span>(<span class="params">time, index</span>) </span>&#123;</span><br><span class="line">    <span class="keyword">if</span>(! time)&#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="string">"temp-log.txt.gzip"</span>;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> <span class="string">"/storage/"</span>+ Wpad(time.getDate()) +<span class="string">"-log.txt.gzip"</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> accessLogStream = rfs(Wgenerator, &#123;</span><br><span class="line">    interval: <span class="string">'1d'</span>, <span class="comment">// 周期为1天</span></span><br><span class="line">    path: logDirectory,</span><br><span class="line">    compress: <span class="string">'gzip'</span> ,</span><br><span class="line">    rotationTime:<span class="literal">true</span></span><br><span class="line">&#125;);</span><br><span class="line"></span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * [exports description]</span></span><br><span class="line"><span class="comment"> * @Author   Wdd</span></span><br><span class="line"><span class="comment"> * @DateTime 2017-02-22T10:24:06+0800</span></span><br><span class="line"><span class="comment"> * 使用方式：</span></span><br><span class="line"><span class="comment"> * 1. 安装rotating-file-stream</span></span><br><span class="line"><span class="comment"> * 2. 在根目录下创建一个文件夹，例如logs。然后把access-log.js放进去</span></span><br><span class="line"><span class="comment"> * 3. 在app.js中var mylog = require('./logs/access-log');</span></span><br><span class="line"><span class="comment"> * 4. 在app = express(); 后添加一句 app.use(mylog);</span></span><br><span class="line"><span class="comment"> * 5. 日志文件会自动生成在./logs/storage文件夹下面，当天的日志会保存在暂存的./logs/temp-log.gzip里</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="built_in">module</span>.exports = <span class="function"><span class="keyword">function</span>(<span class="params">req, res, next</span>)</span>&#123;</span><br><span class="line"></span><br><span class="line">	req._startTime = <span class="keyword">new</span> <span class="built_in">Date</span>();</span><br><span class="line"></span><br><span class="line">	res.once(<span class="string">'finish'</span>, <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line"></span><br><span class="line">		<span class="keyword">var</span> msg = <span class="string">""</span>;</span><br><span class="line">		<span class="comment">//hostname</span></span><br><span class="line">		msg = process.env.hostname+<span class="string">" "</span>;</span><br><span class="line"></span><br><span class="line">		<span class="comment">// 时间</span></span><br><span class="line">		msg += <span class="keyword">new</span> <span class="built_in">Date</span>()+<span class="string">" "</span>;</span><br><span class="line"></span><br><span class="line">		<span class="comment">// 请求方式</span></span><br><span class="line">		msg += req.method+<span class="string">" "</span>;</span><br><span class="line"></span><br><span class="line">		<span class="comment">// 响应状态码</span></span><br><span class="line">		msg += res.statusCode+<span class="string">" "</span>;</span><br><span class="line"></span><br><span class="line">		<span class="comment">// sessionId</span></span><br><span class="line">		msg += req.headers.sessionid+<span class="string">" "</span>;</span><br><span class="line"></span><br><span class="line">		<span class="comment">// 响应时长</span></span><br><span class="line">		msg += <span class="keyword">new</span> <span class="built_in">Date</span>() - req._startTime ;</span><br><span class="line"></span><br><span class="line">		<span class="comment">// 请求路径</span></span><br><span class="line">		msg += <span class="string">" "</span> + req.originalUrl +<span class="string">'\n\r\n\r'</span>;</span><br><span class="line"></span><br><span class="line">		accessLogStream.write(msg);</span><br><span class="line">	&#125;);</span><br><span class="line"></span><br><span class="line">	next();</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure></p>
+
       
     </div>
     
     
     
+
+    
+
+    
+
+    
+      <div>
+        <ul class="post-copyright">
+  <li class="post-copyright-author">
+    <strong>本文作者：</strong>
+    王端端
+  </li>
+  <li class="post-copyright-link">
+    <strong>本文标题：</strong>
+    <a href="https://wdd.js.org/nodejs-log-packages.html" title="nodejs 日志插件比较 VS 自定义日志插件">nodejs 日志插件比较 VS 自定义日志插件</a>
+  </li>
+  <li class="post-copyright-link">
+    <strong>本文链接：</strong>
+    <a href="https://wdd.js.org/nodejs-log-packages.html" title="nodejs 日志插件比较 VS 自定义日志插件">https://wdd.js.org/nodejs-log-packages.html</a>
+  </li>
+  <li class="post-copyright-date">
+      <strong>发布时间：</strong>2018年2月7日 - 13时02分
+  </li>  
+  <li class="post-copyright-license">
+    <strong>版权声明： </strong>
+    本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/3.0/" rel="external nofollow" target="_blank">CC BY-NC-SA 3.0</a> 许可协议。转载请注明出处！
+  </li>
+</ul>
+
+      </div>
+    
+
+    <footer class="post-footer">
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/elegant-way-write-ajax-request.html" rel="next" title="jQuery进阶：用最优雅的方式写ajax请求">
+                <i class="fa fa-chevron-left"></i> jQuery进阶：用最优雅的方式写ajax请求
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/chrome-snippets-collect.html" rel="prev" title="chrome-snippets-collect">
+                chrome-snippets-collect <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
   </div>
 
 
@@ -352,8 +552,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -437,6 +646,22 @@
         </div>
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#morgan"><span class="nav-number">1.</span> <span class="nav-text">morgan</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#log4js-node"><span class="nav-number">2.</span> <span class="nav-text">log4js-node</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#winston"><span class="nav-number">3.</span> <span class="nav-text">winston</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#fluent-logger-node"><span class="nav-number">4.</span> <span class="nav-text">fluent-logger-node</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#express-winston"><span class="nav-number">5.</span> <span class="nav-text">express-winston</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#如何自定义一个日志插件"><span class="nav-number">6.</span> <span class="nav-text">如何自定义一个日志插件</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       

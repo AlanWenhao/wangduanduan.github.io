@@ -300,6 +300,357 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://wdd.js.org/vue-ws-monitor-agent-status.html">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="王端端">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="http://p3alsaatj.bkt.clouddn.com/20180129093544_I5Jscb_IMG_1402.jpeg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="洞香春">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/vue-ws-monitor-agent-status.html" itemprop="url">Vue+websocket+stompjs 实时监控坐席状态demo</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-02-07T09:36:49+08:00">
+                2018-02-07
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+            <div class="post-wordcount">
+              
+                
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">字数统计&#58;</span>
+                
+                <span title="字数统计">
+                  1,428 字
+                </span>
+              
+
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">阅读时长 &asymp;</span>
+                
+                <span title="阅读时长">
+                  8 分钟
+                </span>
+              
+            </div>
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p>由于是前后端分离的demo, 程序的后端我不管，我只负责把前端做好，这只是个demo， 还有很多不完善的地方。</p>
+<p>2018-01-09新增：<br>后端的MQ事件结构现在也改了，该demo只能看看了。</p>
+<p>html<br><figure class="highlight django"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br></pre></td><td class="code"><pre><span class="line"><span class="xml"><span class="meta">&lt;!DOCTYPE html&gt;</span></span></span><br><span class="line"><span class="xml"><span class="tag">&lt;<span class="name">html</span> <span class="attr">lang</span>=<span class="string">"zh-cn"</span>&gt;</span></span></span><br><span class="line"><span class="xml"><span class="tag">&lt;<span class="name">head</span>&gt;</span></span></span><br><span class="line"><span class="xml">	<span class="tag">&lt;<span class="name">meta</span> <span class="attr">charset</span>=<span class="string">"utf-8"</span>&gt;</span></span></span><br><span class="line"><span class="xml">	<span class="tag">&lt;<span class="name">link</span> <span class="attr">href</span>=<span class="string">"http://cdn.bootcss.com/bootstrap/3.3.0/css/bootstrap.min.css"</span> <span class="attr">rel</span>=<span class="string">"stylesheet"</span>&gt;</span></span></span><br><span class="line"><span class="xml"><span class="tag">&lt;/<span class="name">head</span>&gt;</span></span></span><br><span class="line"><span class="xml"><span class="tag">&lt;<span class="name">body</span>&gt;</span></span></span><br><span class="line"><span class="xml"></span></span><br><span class="line"><span class="xml"><span class="tag">&lt;<span class="name">table</span> <span class="attr">class</span>=<span class="string">"table"</span> <span class="attr">id</span>=<span class="string">"event-queue"</span>&gt;</span></span></span><br><span class="line"><span class="xml">	<span class="tag">&lt;<span class="name">thead</span>&gt;</span></span></span><br><span class="line"><span class="xml">		<span class="tag">&lt;<span class="name">tr</span>&gt;</span></span></span><br><span class="line"><span class="xml">			<span class="tag">&lt;<span class="name">th</span>&gt;</span>当前状态<span class="tag">&lt;/<span class="name">th</span>&gt;</span></span></span><br><span class="line"><span class="xml">			<span class="tag">&lt;<span class="name">th</span>&gt;</span>状态改变时间<span class="tag">&lt;/<span class="name">th</span>&gt;</span></span></span><br><span class="line"><span class="xml">			<span class="tag">&lt;<span class="name">th</span>&gt;</span>姓名<span class="tag">&lt;/<span class="name">th</span>&gt;</span></span></span><br><span class="line"><span class="xml">			<span class="tag">&lt;<span class="name">th</span>&gt;</span>工号<span class="tag">&lt;/<span class="name">th</span>&gt;</span></span></span><br><span class="line"><span class="xml">			<span class="tag">&lt;<span class="name">th</span>&gt;</span>分机号<span class="tag">&lt;/<span class="name">th</span>&gt;</span></span></span><br><span class="line"><span class="xml">			<span class="tag">&lt;<span class="name">th</span>&gt;</span>对方号码<span class="tag">&lt;/<span class="name">th</span>&gt;</span></span></span><br><span class="line"><span class="xml">			<span class="tag">&lt;<span class="name">th</span>&gt;</span>呼入数<span class="tag">&lt;/<span class="name">th</span>&gt;</span></span></span><br><span class="line"><span class="xml">			<span class="tag">&lt;<span class="name">th</span>&gt;</span>呼出数<span class="tag">&lt;/<span class="name">th</span>&gt;</span></span></span><br><span class="line"><span class="xml">		<span class="tag">&lt;/<span class="name">tr</span>&gt;</span></span></span><br><span class="line"><span class="xml">	<span class="tag">&lt;/<span class="name">thead</span>&gt;</span></span></span><br><span class="line"><span class="xml">	<span class="tag">&lt;<span class="name">tbody</span>&gt;</span></span></span><br><span class="line"><span class="xml">		<span class="tag">&lt;<span class="name">tr</span> <span class="attr">v-for</span>=<span class="string">"item in eventQueue"</span>&gt;</span></span></span><br><span class="line"><span class="xml">			<span class="tag">&lt;<span class="name">td</span>&gt;</span></span><span class="template-variable">&#123;&#123;item.agentStatus | transAgentStatus&#125;&#125;</span><span class="xml"><span class="tag">&lt;/<span class="name">td</span>&gt;</span></span></span><br><span class="line"><span class="xml">			<span class="tag">&lt;<span class="name">td</span>&gt;</span></span><span class="template-variable">&#123;&#123;item.agentStatusTime&#125;&#125;</span><span class="xml"><span class="tag">&lt;/<span class="name">td</span>&gt;</span></span></span><br><span class="line"><span class="xml">			<span class="tag">&lt;<span class="name">td</span>&gt;</span></span><span class="template-variable">&#123;&#123;item.userName&#125;&#125;</span><span class="xml"><span class="tag">&lt;/<span class="name">td</span>&gt;</span></span></span><br><span class="line"><span class="xml">			<span class="tag">&lt;<span class="name">td</span>&gt;</span></span><span class="template-variable">&#123;&#123;item.loginName&#125;&#125;</span><span class="xml"><span class="tag">&lt;/<span class="name">td</span>&gt;</span></span></span><br><span class="line"><span class="xml">			<span class="tag">&lt;<span class="name">td</span>&gt;</span></span><span class="template-variable">&#123;&#123;item.deviceId&#125;&#125;</span><span class="xml"><span class="tag">&lt;/<span class="name">td</span>&gt;</span></span></span><br><span class="line"><span class="xml">			<span class="tag">&lt;<span class="name">td</span>&gt;</span><span class="tag">&lt;/<span class="name">td</span>&gt;</span></span></span><br><span class="line"><span class="xml">			<span class="tag">&lt;<span class="name">td</span>&gt;</span><span class="tag">&lt;/<span class="name">td</span>&gt;</span></span></span><br><span class="line"><span class="xml">			<span class="tag">&lt;<span class="name">td</span>&gt;</span><span class="tag">&lt;/<span class="name">td</span>&gt;</span></span></span><br><span class="line"><span class="xml">		<span class="tag">&lt;/<span class="name">tr</span>&gt;</span></span></span><br><span class="line"><span class="xml">	<span class="tag">&lt;/<span class="name">tbody</span>&gt;</span></span></span><br><span class="line"><span class="xml"><span class="tag">&lt;/<span class="name">table</span>&gt;</span></span></span><br><span class="line"><span class="xml"></span></span><br><span class="line"><span class="xml"></span></span><br><span class="line"><span class="xml">	<span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">"http://cdn.bootcss.com/vue/1.0.26/vue.js"</span>&gt;</span><span class="undefined"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span></span><br><span class="line"><span class="xml">	<span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">"js/websocket-suport.min.js"</span>&gt;</span><span class="undefined"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span></span><br><span class="line"><span class="xml">	<span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">"js/main.js"</span>&gt;</span><span class="undefined"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span></span><br><span class="line"><span class="xml"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></span></span><br><span class="line"><span class="xml"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></span></span><br></pre></td></tr></table></figure></p>
+<p>js<br><figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br><span class="line">111</span><br><span class="line">112</span><br><span class="line">113</span><br><span class="line">114</span><br><span class="line">115</span><br><span class="line">116</span><br><span class="line">117</span><br><span class="line">118</span><br><span class="line">119</span><br><span class="line">120</span><br><span class="line">121</span><br><span class="line">122</span><br><span class="line">123</span><br><span class="line">124</span><br><span class="line">125</span><br><span class="line">126</span><br><span class="line">127</span><br><span class="line">128</span><br><span class="line">129</span><br><span class="line">130</span><br><span class="line">131</span><br><span class="line">132</span><br><span class="line">133</span><br><span class="line">134</span><br><span class="line">135</span><br><span class="line">136</span><br><span class="line">137</span><br><span class="line">138</span><br><span class="line">139</span><br><span class="line">140</span><br><span class="line">141</span><br><span class="line">142</span><br><span class="line">143</span><br><span class="line">144</span><br><span class="line">145</span><br><span class="line">146</span><br><span class="line">147</span><br><span class="line">148</span><br><span class="line">149</span><br><span class="line">150</span><br><span class="line">151</span><br><span class="line">152</span><br><span class="line">153</span><br><span class="line">154</span><br><span class="line">155</span><br><span class="line">156</span><br><span class="line">157</span><br><span class="line">158</span><br><span class="line">159</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> tm = (<span class="function"><span class="keyword">function</span><span class="params">()</span></span>&#123;</span><br><span class="line">	<span class="keyword">var</span> App = <span class="function"><span class="keyword">function</span><span class="params">()</span></span>&#123;&#125;;</span><br><span class="line">	<span class="keyword">var</span> app = App.prototype;</span><br><span class="line">	<span class="keyword">var</span> config = &#123;</span><br><span class="line">		dest: <span class="string">'http://xxx.xxx.xxx.xxx:58080/mvc/stomp'</span>,</span><br><span class="line">		topic: <span class="string">'/topic/csta/namespace/testwdd2.com'</span></span><br><span class="line">		<span class="comment">// topic: '/topic/csta/device/8002@testwdd2.com'</span></span><br><span class="line">	&#125;;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">	<span class="keyword">var</span> eventQueue = [];</span><br><span class="line">	<span class="keyword">var</span> vm = <span class="keyword">new</span> Vue(&#123;</span><br><span class="line">		el:<span class="string">'#event-queue'</span>,</span><br><span class="line">		data:&#123;</span><br><span class="line">			eventQueue: eventQueue</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;);</span><br><span class="line"></span><br><span class="line">	Vue.filter(<span class="string">'transAgentStatus'</span>, <span class="function"><span class="keyword">function</span><span class="params">(status)</span></span>&#123;</span><br><span class="line">		<span class="keyword">switch</span>(status)&#123;</span><br><span class="line">			<span class="keyword">case</span> <span class="string">'NotReady'</span>: <span class="keyword">return</span> <span class="string">'未就绪'</span>;</span><br><span class="line">			<span class="keyword">case</span> <span class="string">'WorkNotReady'</span>: <span class="keyword">return</span> <span class="string">'话后处理状态'</span>;</span><br><span class="line">			<span class="keyword">case</span> <span class="string">'Idle'</span>: <span class="keyword">return</span> <span class="string">'就绪'</span>;</span><br><span class="line">			<span class="keyword">case</span> <span class="string">'OnCallIn'</span>: <span class="keyword">return</span> <span class="string">'呼入通话'</span>;</span><br><span class="line">			<span class="keyword">case</span> <span class="string">'OnCallOut'</span>: <span class="keyword">return</span> <span class="string">'呼出通话'</span>;</span><br><span class="line">			<span class="keyword">case</span> <span class="string">'Logout'</span>: <span class="keyword">return</span> <span class="string">'登出'</span>;</span><br><span class="line">			<span class="keyword">case</span> <span class="string">'Ringing'</span>: <span class="keyword">return</span> <span class="string">'振铃'</span>;</span><br><span class="line">			<span class="keyword">case</span> <span class="string">'OffHook'</span>: <span class="keyword">return</span> <span class="string">'摘机'</span>;</span><br><span class="line">			<span class="keyword">case</span> <span class="string">'CallInternal'</span>: <span class="keyword">return</span> <span class="string">'内部通话'</span>;</span><br><span class="line">			<span class="keyword">case</span> <span class="string">'Dailing'</span>: <span class="keyword">return</span> <span class="string">'外线已经振铃'</span>;</span><br><span class="line">			<span class="keyword">case</span> <span class="string">'Ringback'</span>: <span class="keyword">return</span> <span class="string">'回铃'</span>;</span><br><span class="line">			<span class="keyword">case</span> <span class="string">'Conference'</span>: <span class="keyword">return</span> <span class="string">'会议'</span>;</span><br><span class="line">			<span class="keyword">case</span> <span class="string">'OnHold'</span>: <span class="keyword">return</span> <span class="string">'保持'</span>;</span><br><span class="line">			<span class="keyword">case</span> <span class="string">'Other'</span>: <span class="keyword">return</span> <span class="string">'其他'</span>;</span><br><span class="line">		&#125;</span><br><span class="line"></span><br><span class="line">		<span class="keyword">return</span> <span class="string">''</span>;</span><br><span class="line">	&#125;);</span><br><span class="line"></span><br><span class="line">	<span class="comment">/**</span></span><br><span class="line"><span class="comment">	 * [render description]</span></span><br><span class="line"><span class="comment">	 * <span class="doctag">@Author</span>   Wdd</span></span><br><span class="line"><span class="comment">	 * <span class="doctag">@DateTime</span> 2016-12-26T16:06:16+0800</span></span><br><span class="line"><span class="comment">	 * <span class="doctag">@param</span>    &#123;[string]&#125; tpl [模板字符串]</span></span><br><span class="line"><span class="comment">	 * <span class="doctag">@param</span>    &#123;[object]&#125; data [data对象]</span></span><br><span class="line"><span class="comment">	 * <span class="doctag">@return</span>   &#123;[string]&#125; [渲染后的字符串]</span></span><br><span class="line"><span class="comment">	 */</span></span><br><span class="line">	app.render = <span class="function"><span class="keyword">function</span><span class="params">(tpl,data)</span></span>&#123;</span><br><span class="line">        <span class="keyword">var</span> re = /&#123;&#123;([^&#125;]+)?&#125;&#125;/g;</span><br><span class="line"></span><br><span class="line">        <span class="keyword">while</span>(match = re.exec(tpl))&#123;</span><br><span class="line">            tpl = tpl.replace(match[<span class="number">0</span>],data[match[<span class="number">1</span>]] || <span class="string">''</span>);</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="keyword">return</span> tpl;</span><br><span class="line">    &#125;;</span><br><span class="line"></span><br><span class="line">	app.initWebSocket = <span class="function"><span class="keyword">function</span><span class="params">(dest, topic)</span></span>&#123;</span><br><span class="line">		dest = dest || config.dest;</span><br><span class="line">		topic = topic || config.topic;</span><br><span class="line"></span><br><span class="line">		<span class="keyword">var</span> socket = <span class="keyword">new</span> SockJS(dest);</span><br><span class="line">		<span class="keyword">var</span> ws = Stomp.over(socket);</span><br><span class="line"></span><br><span class="line">		ws.connect(&#123;&#125;, <span class="function"><span class="keyword">function</span><span class="params">(frame)</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">		    ws.subscribe(topic, <span class="function"><span class="keyword">function</span><span class="params">(event)</span> </span>&#123;</span><br><span class="line">		        <span class="comment">// var eventInfo = JSON.parse(event.body);</span></span><br><span class="line">		        app.handerEvent(JSON.parse(event.body));</span><br><span class="line">		    &#125;);</span><br><span class="line">		&#125;, <span class="function"><span class="keyword">function</span><span class="params">(frame)</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">		    console.log(frame);</span><br><span class="line">		    console.error(<span class="keyword">new</span> Date() + <span class="string">'websocket失去连接'</span>);</span><br><span class="line">		&#125;);</span><br><span class="line">	&#125;;</span><br><span class="line"></span><br><span class="line">	<span class="comment">/**</span></span><br><span class="line"><span class="comment">	 * [findAgentIndex description]</span></span><br><span class="line"><span class="comment">	 * <span class="doctag">@Author</span>   Wdd</span></span><br><span class="line"><span class="comment">	 * <span class="doctag">@DateTime</span> 2016-12-28T10:34:13+0800</span></span><br><span class="line"><span class="comment">	 * <span class="doctag">@param</span>    &#123;[string]&#125; agentId [description]</span></span><br><span class="line"><span class="comment">	 * <span class="doctag">@return</span>   &#123;[int]&#125; [description]</span></span><br><span class="line"><span class="comment">	 */</span></span><br><span class="line">	app.findAgentIndex = <span class="function"><span class="keyword">function</span><span class="params">(agentId)</span></span>&#123;</span><br><span class="line">		<span class="keyword">for</span>(<span class="keyword">var</span> i = eventQueue.length - <span class="number">1</span>; i &gt;= <span class="number">0</span>; i--)&#123;</span><br><span class="line">			<span class="keyword">if</span>(eventQueue[i].agentId === agentId)&#123;</span><br><span class="line">				<span class="keyword">return</span> i;</span><br><span class="line">			&#125;</span><br><span class="line">		&#125;</span><br><span class="line"></span><br><span class="line">		<span class="keyword">return</span> <span class="number">-1</span>;</span><br><span class="line">	&#125;;</span><br><span class="line"></span><br><span class="line">	<span class="comment">/**</span></span><br><span class="line"><span class="comment">	 * [handerEvent 处理websocket事件]</span></span><br><span class="line"><span class="comment">	 * <span class="doctag">@Author</span>   Wdd</span></span><br><span class="line"><span class="comment">	 * <span class="doctag">@DateTime</span> 2016-12-28T10:33:03+0800</span></span><br><span class="line"><span class="comment">	 * <span class="doctag">@param</span>    &#123;[object]&#125; data [description]</span></span><br><span class="line"><span class="comment">	 * <span class="doctag">@return</span>   &#123;[type]&#125; [description]</span></span><br><span class="line"><span class="comment">	 */</span></span><br><span class="line">	app.handerEvent = <span class="function"><span class="keyword">function</span><span class="params">(data)</span></span>&#123;</span><br><span class="line">		<span class="keyword">if</span>(data.eventType === <span class="string">'CallEvent'</span>)&#123;</span><br><span class="line">			<span class="keyword">return</span>;</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="keyword">if</span>(!data.eventSrc)&#123;</span><br><span class="line">			<span class="keyword">return</span>;</span><br><span class="line">		&#125;</span><br><span class="line"></span><br><span class="line">		<span class="keyword">var</span> eventItem = &#123;</span><br><span class="line">			agentStatus: <span class="string">''</span>,</span><br><span class="line">			eventName: data.eventName,</span><br><span class="line">			agentId: <span class="string">''</span>,</span><br><span class="line">			loginName: <span class="string">''</span>,</span><br><span class="line">			userName: <span class="string">''</span>,</span><br><span class="line">			deviceId: data.deviceId,</span><br><span class="line">			agentStatusTime: <span class="string">''</span></span><br><span class="line">		&#125;;</span><br><span class="line"></span><br><span class="line">		<span class="keyword">var</span> agent = data.eventSrc.agent || <span class="string">''</span>;</span><br><span class="line"></span><br><span class="line">		<span class="keyword">if</span>(agent)&#123;</span><br><span class="line">			eventItem.agentId = agent.agentId;</span><br><span class="line">			eventItem.loginName = agent.loginName;</span><br><span class="line">			eventItem.userName = agent.userName;</span><br><span class="line">			eventItem.agentStatus = agent.agentStatus;</span><br><span class="line">			eventItem.agentStatusTime = agent.agentStatusTime;</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="comment">// 针对登出事件的agentId在外层</span></span><br><span class="line">		<span class="keyword">else</span> <span class="keyword">if</span>(data.agentMode)&#123;</span><br><span class="line">			eventItem.agentStatus = data.agentMode;</span><br><span class="line">			eventItem.agentId = data.agentId;</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="keyword">else</span> <span class="keyword">if</span>(data.agentStatus)&#123;</span><br><span class="line">			eventItem.agentStatus = data.agentStatus;</span><br><span class="line">		&#125;</span><br><span class="line"></span><br><span class="line">		<span class="keyword">if</span>(!eventItem.agentId)&#123;</span><br><span class="line">			<span class="keyword">return</span>;</span><br><span class="line">		&#125;</span><br><span class="line"></span><br><span class="line">		<span class="keyword">var</span> itemIndex = app.findAgentIndex(eventItem.agentId);</span><br><span class="line"></span><br><span class="line">		<span class="comment">// 新的座席加入</span></span><br><span class="line">		<span class="keyword">if</span>(itemIndex === <span class="number">-1</span>)&#123;</span><br><span class="line">			eventQueue.push(eventItem);</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="comment">// 更新已有座席的状态</span></span><br><span class="line">		<span class="keyword">else</span>&#123;</span><br><span class="line">			eventQueue[itemIndex].agentStatus = eventItem.agentStatus;</span><br><span class="line">			eventQueue[itemIndex].agentStatusTime = eventItem.agentStatusTime;</span><br><span class="line">			eventQueue[itemIndex].eventName = eventItem.eventName;</span><br><span class="line">		&#125;</span><br><span class="line"></span><br><span class="line">	&#125;;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">	<span class="keyword">return</span> <span class="keyword">new</span> App();</span><br><span class="line">&#125;)();</span><br></pre></td></tr></table></figure></p>
+<p>打开控制台，输入tm.initWebsocket()后，websocket连接正常。<br><img src="http://p3alsaatj.bkt.clouddn.com/20180207093803_2QPxWp_Screenshot.jpeg" alt=""></p>
+<p>之后坐席状态改变，可以看到有事件推送过来。<br><img src="http://p3alsaatj.bkt.clouddn.com/20180207093819_vbKAv5_Screenshot.jpeg" alt=""></p>
+<p>看下整个页面：<br><img src="http://p3alsaatj.bkt.clouddn.com/20180207093836_bj5ctf_Screenshot.jpeg" alt=""></p>
+<p><code>最后，这个小小的监控如果用jQuery写，也可以，不过就是太坑了，每次都要去找到Dom元素，再更新DOM，用了Vue这类的框架，页面的dom操作完全不用关心了，真是太舒服了。\(^o^)/</code></p>
+<h1 id="关于stomp的重连"><a href="#关于stomp的重连" class="headerlink" title="关于stomp的重连"></a>关于stomp的重连</h1><p><code>程序后服务端使用RabbitMQ</code><br>这里我直接引用我的另一个项目的部分代码，这个没有使用SockJS， 直接使用浏览器原生的WebSocket。<br>重连的原理很简单，就是检测到断开时，去调用我的reconnectWs方法，这里我也做了重连的次数限制。</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br></pre></td><td class="code"><pre><span class="line">initWebSocket: <span class="function"><span class="keyword">function</span>(<span class="params">callback, errorCallback</span>) </span>&#123;</span><br><span class="line">            callback = callback || <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;&#125;;</span><br><span class="line"></span><br><span class="line">            <span class="keyword">if</span>(ws &amp;&amp; ws.connected)&#123;</span><br><span class="line">                <span class="keyword">return</span>;</span><br><span class="line">            &#125;</span><br><span class="line"></span><br><span class="line">            Config.isManCloseWs = <span class="literal">false</span>;</span><br><span class="line"></span><br><span class="line">            <span class="keyword">var</span> url = Config.wsProtocol + Config.SDK + Config.eventPort + Config.eventBasePath + <span class="string">"/websocket"</span>;</span><br><span class="line"></span><br><span class="line">            <span class="keyword">if</span>(<span class="keyword">typeof</span> WebSocket != <span class="string">'function'</span>)&#123;</span><br><span class="line">                alert(<span class="string">'您的浏览器版本太太太老了，请升级你的浏览器到IE11，或使用任何支持原生WebSocket的浏览器'</span>);</span><br><span class="line">                <span class="keyword">return</span>;</span><br><span class="line">            &#125;</span><br><span class="line"></span><br><span class="line">            <span class="keyword">try</span>&#123;</span><br><span class="line">                <span class="keyword">var</span> socket = <span class="keyword">new</span> WebSocket(url);</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="keyword">catch</span>(e)&#123;</span><br><span class="line">                <span class="built_in">console</span>.log(e);</span><br><span class="line">                <span class="keyword">return</span>;</span><br><span class="line">            &#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">            <span class="keyword">var</span> wsHeartbeatId = <span class="string">''</span>;</span><br><span class="line"></span><br><span class="line">            ws = Stomp.over(socket);</span><br><span class="line"></span><br><span class="line">            <span class="keyword">if</span>(!Config.useWsLog)&#123;</span><br><span class="line">                ws.debug = <span class="literal">null</span>;</span><br><span class="line">            &#125;</span><br><span class="line"></span><br><span class="line">            ws.connect(&#123;&#125;, <span class="function"><span class="keyword">function</span>(<span class="params">frame</span>) </span>&#123;</span><br><span class="line"></span><br><span class="line">                Config.currentReconnectTimes = <span class="number">0</span>;</span><br><span class="line"></span><br><span class="line">                <span class="keyword">var</span> dest = Config.newWsTopic + env.loginId.replace(<span class="regexp">/\./g</span>,<span class="string">'_'</span>);</span><br><span class="line"></span><br><span class="line">                <span class="keyword">var</span> lastEventSerial = <span class="string">''</span>;</span><br><span class="line"></span><br><span class="line">                ws.subscribe(dest, <span class="function"><span class="keyword">function</span>(<span class="params">event</span>) </span>&#123;</span><br><span class="line">                    <span class="keyword">var</span> eventInfo = &#123;&#125;;</span><br><span class="line"></span><br><span class="line">                    <span class="keyword">try</span>&#123;</span><br><span class="line">                        eventInfo = <span class="built_in">JSON</span>.parse(event.body);</span><br><span class="line">                        <span class="keyword">delete</span> eventInfo.params;</span><br><span class="line">                        <span class="keyword">delete</span> eventInfo._type;</span><br><span class="line">                        <span class="keyword">delete</span> eventInfo.topics;</span><br><span class="line">                    &#125;</span><br><span class="line">                    <span class="keyword">catch</span>(e)&#123;</span><br><span class="line">                        <span class="built_in">console</span>.log(e);</span><br><span class="line">                        <span class="keyword">return</span>;</span><br><span class="line">                    &#125;</span><br><span class="line"></span><br><span class="line">                    <span class="keyword">if</span>(lastEventSerial === eventInfo.serial)&#123;</span><br><span class="line">                        util.error(<span class="string">'Error: event repeat sent !'</span>);</span><br><span class="line">                        <span class="keyword">return</span>;</span><br><span class="line">                    &#125;</span><br><span class="line">                    <span class="keyword">else</span>&#123;</span><br><span class="line">                        lastEventSerial = eventInfo.serial;</span><br><span class="line">                    &#125;</span><br><span class="line"></span><br><span class="line">                    <span class="keyword">if</span>(Config.useEventLog)&#123;</span><br><span class="line">                        util.debugout.log(<span class="string">' '</span> + <span class="built_in">JSON</span>.stringify(eventInfo));</span><br><span class="line">                    &#125;</span><br><span class="line"></span><br><span class="line">                    eventHandler.deliverEvent(eventInfo);</span><br><span class="line">                &#125;);</span><br><span class="line">                callback();</span><br><span class="line"></span><br><span class="line">            &#125;, <span class="function"><span class="keyword">function</span>(<span class="params">frame</span>) </span>&#123;</span><br><span class="line">                <span class="comment">// websocket upexpected disconnected</span></span><br><span class="line">                <span class="comment">// maybe network disconnection, or browser in offline</span></span><br><span class="line">                <span class="comment">// this condition will emit wsDisconnected event</span></span><br><span class="line">                <span class="keyword">if</span>(Config.isManCloseWs)&#123;<span class="keyword">return</span>;&#125;</span><br><span class="line">                errorCallback();</span><br><span class="line"></span><br><span class="line">                util.log(frame);</span><br><span class="line">                util.error(<span class="keyword">new</span> <span class="built_in">Date</span>() + <span class="string">'websocket disconnect'</span>);</span><br><span class="line">                <span class="comment">// clearInterval(wsHeartbeatId);</span></span><br><span class="line"></span><br><span class="line">                <span class="keyword">if</span>(Config.currentReconnectTimes &lt; Config.maxReconnectTimes)&#123;</span><br><span class="line">                    Config.currentReconnectTimes++;</span><br><span class="line">                    util.reconnectWs();</span><br><span class="line">                &#125;</span><br><span class="line">                <span class="keyword">else</span>&#123;</span><br><span class="line">                    <span class="keyword">var</span> errorMsg = &#123;</span><br><span class="line">                        eventName: <span class="string">'wsDisconnected'</span>,</span><br><span class="line">                        msg: <span class="string">'websocket disconnect'</span></span><br><span class="line">                    &#125;;</span><br><span class="line">                    wellClient.ui.main(&#123;</span><br><span class="line">                        eventName:<span class="string">'wsDisconnected'</span></span><br><span class="line">                    &#125;);</span><br><span class="line">                    util.debugout.log(<span class="string">'&gt;&gt;&gt; websocket disconnect'</span>);</span><br><span class="line"></span><br><span class="line">                    wellClient.triggerInnerOn(errorMsg);</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;);</span><br><span class="line">        &#125;,</span><br><span class="line"></span><br><span class="line">        reconnectWs: <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">            setTimeout(<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">                util.log(<span class="string">'&gt;&gt;&gt; try to reconnect'</span>);</span><br><span class="line">                util.debugout.log(<span class="string">'&gt;&gt;&gt; try to reconnect'</span>);</span><br><span class="line">                util.initWebSocket(<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;&#125;,<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;&#125;);</span><br><span class="line"></span><br><span class="line">            &#125;, Config.timeout * <span class="number">1000</span>);</span><br><span class="line">        &#125;,</span><br></pre></td></tr></table></figure>
+<h1 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h1><ul>
+<li><a href="http://jmesnil.net/stomp-websocket/doc/" target="_blank" rel="noopener">STOMP Over WebSocket</a></li>
+</ul>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://wdd.js.org/windows-powerful-tools.html">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="王端端">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="http://p3alsaatj.bkt.clouddn.com/20180129093544_I5Jscb_IMG_1402.jpeg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="洞香春">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/windows-powerful-tools.html" itemprop="url">自从装了windows神器，再也不用羡慕mac了</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-02-07T09:24:18+08:00">
+                2018-02-07
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+            <div class="post-wordcount">
+              
+                
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">字数统计&#58;</span>
+                
+                <span title="字数统计">
+                  550 字
+                </span>
+              
+
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">阅读时长 &asymp;</span>
+                
+                <span title="阅读时长">
+                  2 分钟
+                </span>
+              
+            </div>
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h1 id="命令行神器"><a href="#命令行神器" class="headerlink" title="命令行神器"></a>命令行神器</h1><h2 id="GOW"><a href="#GOW" class="headerlink" title="GOW"></a><a href="https://github.com/bmatzelle/gow" target="_blank" rel="noopener">GOW</a></h2><blockquote>
+<p>Gow（Gnu On Windows）是Cygwin的轻量级替代品。 它使用一个方便的NSIS安装程序，安装超过100个非常有用的开源UNIX应用程序，编译为本机win32二进制文件。 它被设计为尽可能小，大约18 MB，而不是Cygwin，它可以运行超过100 MB根据选项。</p>
+</blockquote>
+<h2 id="强烈推荐-ConEmu"><a href="#强烈推荐-ConEmu" class="headerlink" title="强烈推荐 ConEmu"></a>强烈推荐 <a href="https://conemu.github.io/" target="_blank" rel="noopener">ConEmu</a></h2><blockquote>
+<p>非常强大，可以在里面愉快的ctrl+v,ctrl+c<br>用过你才知道好用<br><a href="https://conemu.github.io/" target="_blank" rel="noopener">https://conemu.github.io/</a></p>
+</blockquote>
+<p><img src="http://p3alsaatj.bkt.clouddn.com/20180207092640_YZRllN_Screenshot.jpeg" alt=""></p>
+<h1 id="搜索神器"><a href="#搜索神器" class="headerlink" title="搜索神器"></a>搜索神器</h1><h2 id="Wox"><a href="#Wox" class="headerlink" title="Wox"></a><a href="http://www.getwox.com/" target="_blank" rel="noopener">Wox</a></h2><blockquote>
+<p>Windows下一款最接近 Alfred 的软件启动/文件搜索利器</p>
+</blockquote>
+<p><img src="http://p3alsaatj.bkt.clouddn.com/20180207092710_pxaoZs_Screenshot.jpeg" alt=""></p>
+<h2 id="Everything"><a href="#Everything" class="headerlink" title="Everything"></a><a href="http://www.voidtools.com/" target="_blank" rel="noopener">Everything</a></h2><blockquote>
+<p>快速批量查找文件的利器</p>
+</blockquote>
+<p><img src="http://p3alsaatj.bkt.clouddn.com/20180207092724_2J8b1j_Screenshot.jpeg" alt=""></p>
+<h1 id="包管理神器"><a href="#包管理神器" class="headerlink" title="包管理神器"></a>包管理神器</h1><h1 id="Chocolatey"><a href="#Chocolatey" class="headerlink" title="Chocolatey"></a><a href="https://chocolatey.org/" target="_blank" rel="noopener">Chocolatey</a></h1><blockquote>
+<p>安装软件再也不用烦恼<br><a href="https://laravel-china.org/topics/67" target="_blank" rel="noopener">教程</a></p>
+</blockquote>
+<p><img src="http://p3alsaatj.bkt.clouddn.com/20180207092800_QUwCtM_Screenshot.jpeg" alt=""></p>
+<h1 id="健康管理神器"><a href="#健康管理神器" class="headerlink" title="健康管理神器"></a>健康管理神器</h1><h1 id="f-lux"><a href="#f-lux" class="headerlink" title="f.lux"></a><a href="https://justgetflux.com/" target="_blank" rel="noopener">f.lux</a></h1><blockquote>
+<p>有没有注意到人们在夜间发短信的怪异蓝色发光？或者醒来准备写下一个伟大的想法，并被你的电脑屏幕蒙蔽？白天，电脑屏幕看起来很好，他们的设计看起来像太阳。但是，在晚上9点，晚上10点或凌晨3点，你可能不应该看太阳。f.lux修复这个：它使你的电脑显示器的颜色适应一天的时间，在夜间温暖和白天喜欢阳光。甚至有可能你因为你的电脑而停滞太晚。你可以使用f.lux因为它使你睡得更好，或者你可以只使用它，只是因为它使你的电脑看起来更好。</p>
+</blockquote>
+<p><img src="http://p3alsaatj.bkt.clouddn.com/20180207092815_zz11tq_Screenshot.jpeg" alt=""></p>
+<h1 id="谷歌浏览器插件神器"><a href="#谷歌浏览器插件神器" class="headerlink" title="谷歌浏览器插件神器"></a>谷歌浏览器插件神器</h1><h2 id="强烈推荐vimium"><a href="#强烈推荐vimium" class="headerlink" title="强烈推荐vimium"></a>强烈推荐vimium</h2><blockquote>
+<p>速度起飞，只用键盘就可以完全操纵谷歌浏览器</p>
+</blockquote>
+<p><img src="http://p3alsaatj.bkt.clouddn.com/20180207092830_nDZN5E_Screenshot.jpeg" alt=""></p>
+<h2 id="shortKeys"><a href="#shortKeys" class="headerlink" title="shortKeys"></a>shortKeys</h2><blockquote>
+<p>vimium的快捷键其实已经足够多了，但是如果你想有更多自定义的快捷键，例如：<code>关闭右侧的标签页</code>，这个快捷键。你可以试试shortKeys。唯一遗憾的是，这里面也没有<code>关闭其他标签页</code>的快捷键，如果你知道有哪些工具可以做到，麻烦请告诉我。</p>
+</blockquote>
+<p><img src="http://p3alsaatj.bkt.clouddn.com/20180207092845_ihUE4D_Screenshot.jpeg" alt=""></p>
+<h2 id="5-3-infinity新标签页"><a href="#5-3-infinity新标签页" class="headerlink" title="5.3 infinity新标签页"></a>5.3 infinity新标签页</h2><p><img src="http://p3alsaatj.bkt.clouddn.com/20180207092901_tOTDlF_Screenshot.jpeg" alt=""></p>
+<h1 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h1><ul>
+<li><a href="http://www.jeffjade.com/2016/01/13/2016-01-13-windows-software-cmder/" target="_blank" rel="noopener">http://www.jeffjade.com/2016/01/13/2016-01-13-windows-software-cmder/</a></li>
+<li><a href="http://www.jeffjade.com/2015/10/19/2015-10-18-Efficacious-win-software/" target="_blank" rel="noopener">http://www.jeffjade.com/2015/10/19/2015-10-18-Efficacious-win-software/</a></li>
+<li><a href="https://www.zhihu.com/question/22919326" target="_blank" rel="noopener">https://www.zhihu.com/question/22919326</a></li>
+<li><a href="https://blogs.msdn.microsoft.com/scott_hanselman/2013/07/31/windows/" target="_blank" rel="noopener">https://blogs.msdn.microsoft.com/scott_hanselman/2013/07/31/windows/</a></li>
+</ul>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="https://wdd.js.org/send-ajax-when-page-unload.html">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -1996,496 +2347,6 @@
 
 
     
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://wdd.js.org/read-notes-on-top-of-tides.html">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="王端端">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="http://p3alsaatj.bkt.clouddn.com/20180129093544_I5Jscb_IMG_1402.jpeg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="洞香春">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/read-notes-on-top-of-tides.html" itemprop="url">读书笔记：浪潮之巅</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-02-02T13:02:23+08:00">
-                2018-02-02
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-            <div class="post-wordcount">
-              
-                
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-file-word-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">字数统计&#58;</span>
-                
-                <span title="字数统计">
-                  171 字
-                </span>
-              
-
-              
-                <span class="post-meta-divider">|</span>
-              
-
-              
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-clock-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">阅读时长 &asymp;</span>
-                
-                <span title="阅读时长">
-                  1 分钟
-                </span>
-              
-            </div>
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <h1 id="互联网的金门大桥：-思科"><a href="#互联网的金门大桥：-思科" class="headerlink" title="互联网的金门大桥： 思科"></a>互联网的金门大桥： 思科</h1><h2 id="关于情书的八卦"><a href="#关于情书的八卦" class="headerlink" title="关于情书的八卦"></a>关于情书的八卦</h2><p>思科的创始人刚开始是男女朋友关系，他们是斯坦福大学不同计算机中心的主管。两人经常用计算机写情书，但是呢，不同的网络之间的设备协议不同，互不兼容，导致了情书传递非常不方便。于是他们就发明了一种能够支持各种网络设备，各种协议的路由器，即多协议路由器。</p>
-<h2 id="对立与兼容"><a href="#对立与兼容" class="headerlink" title="对立与兼容"></a>对立与兼容</h2><p>大公司都是想打败对手，而不是做出兼容。所以思科的多协议路由器能够有生存的机会。</p>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://wdd.js.org/tool-improve-work-efficiency.html">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="王端端">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="http://p3alsaatj.bkt.clouddn.com/20180129093544_I5Jscb_IMG_1402.jpeg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="洞香春">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/tool-improve-work-efficiency.html" itemprop="url">无坚不摧：打造极大提高工作效率的装备库</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-02-02T09:24:43+08:00">
-                2018-02-02
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-            <div class="post-wordcount">
-              
-                
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-file-word-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">字数统计&#58;</span>
-                
-                <span title="字数统计">
-                  40 字
-                </span>
-              
-
-              
-                <span class="post-meta-divider">|</span>
-              
-
-              
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-clock-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">阅读时长 &asymp;</span>
-                
-                <span title="阅读时长">
-                  1 分钟
-                </span>
-              
-            </div>
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <p><img src="http://p3alsaatj.bkt.clouddn.com/20180202093814_7NNlq9_40-Reasons-to-Ban-Guns.jpeg" alt=""></p>
-<h1 id="Git-Bash"><a href="#Git-Bash" class="headerlink" title="Git Bash"></a>Git Bash</h1><p><img src="http://p3alsaatj.bkt.clouddn.com/20180202104601_8MoLOf_Screenshot.jpeg" alt=""></p>
-<h1 id="Gow"><a href="#Gow" class="headerlink" title="Gow"></a>Gow</h1><table>
-<thead>
-<tr>
-<th>1</th>
-<th>2</th>
-<th>3</th>
-<th>4</th>
-<th>5</th>
-<th>6</th>
-<th>7</th>
-<th>8</th>
-<th>9</th>
-<th>10</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><code>awk</code></td>
-<td>basename</td>
-<td>bash</td>
-<td>bc</td>
-<td>bison</td>
-<td>bunzip2</td>
-<td>bzip2</td>
-<td>bzip2</td>
-<td>bzip2recover</td>
-<td><code>cat</code></td>
-</tr>
-<tr>
-<td>chgrp</td>
-<td>chmod</td>
-<td>chown</td>
-<td>chroot</td>
-<td>cksum</td>
-<td>clear</td>
-<td><code>cp</code></td>
-<td>csplit</td>
-<td><code>curl</code></td>
-<td>cut</td>
-</tr>
-<tr>
-<td>dc</td>
-<td>dd</td>
-<td>df</td>
-<td>diff</td>
-<td>diff3</td>
-<td>dirname</td>
-<td>dos2unix</td>
-<td>du</td>
-<td><code>egrep</code></td>
-<td>env</td>
-</tr>
-<tr>
-<td>expand</td>
-<td>expr</td>
-<td>factor</td>
-<td>fgrep</td>
-<td>flex</td>
-<td>fmt</td>
-<td>fold</td>
-<td>gawk</td>
-<td>gdbm3</td>
-<td>gfind</td>
-</tr>
-<tr>
-<td>gow</td>
-<td><code>grep</code></td>
-<td>gsar</td>
-<td>gsort</td>
-<td><code>gzip</code></td>
-<td>head</td>
-<td>history5</td>
-<td>hostid</td>
-<td>hostname</td>
-<td>id</td>
-</tr>
-<tr>
-<td>indent</td>
-<td>install</td>
-<td>join</td>
-<td>jwhois</td>
-<td>less</td>
-<td>lesskey</td>
-<td>libcurl</td>
-<td>libeay32</td>
-<td>libiconv-2</td>
-<td>libidn-11</td>
-</tr>
-<tr>
-<td>libintl-2</td>
-<td>libintl3</td>
-<td>libssl32</td>
-<td>ln</td>
-<td><code>ls</code></td>
-<td>m4</td>
-<td>make</td>
-<td>md5sum</td>
-<td>mkdir</td>
-<td>mkfifo</td>
-</tr>
-<tr>
-<td>mknod</td>
-<td>msys-1</td>
-<td>msys-regex-1</td>
-<td>msys-termcap-0</td>
-<td><code>mv</code></td>
-<td>nano</td>
-<td>ncftp</td>
-<td>nl</td>
-<td>od</td>
-<td>pageant</td>
-</tr>
-<tr>
-<td>paste</td>
-<td>patch</td>
-<td>pathchk</td>
-<td>pcre3</td>
-<td>plink</td>
-<td>pr</td>
-<td>printenv</td>
-<td>printf</td>
-<td>pscp</td>
-<td>psftp</td>
-</tr>
-<tr>
-<td>putty</td>
-<td>puttygen</td>
-<td>pwd</td>
-<td>readline5</td>
-<td>regex2</td>
-<td><code>rm</code></td>
-<td>rmdir</td>
-<td><code>scp</code></td>
-<td>sdiff</td>
-<td>sed</td>
-</tr>
-<tr>
-<td><code>seq</code></td>
-<td>sftp</td>
-<td>sha1sum</td>
-<td>shar</td>
-<td>sleep</td>
-<td>split</td>
-<td><code>ssh</code></td>
-<td>ssleay32</td>
-<td>su</td>
-<td>sum</td>
-</tr>
-<tr>
-<td>sync</td>
-<td>tac</td>
-<td><code>tail</code></td>
-<td><code>tar</code></td>
-<td>tee</td>
-<td>test</td>
-<td><code>touch</code></td>
-<td>tr</td>
-<td>uname</td>
-<td>unexpand</td>
-</tr>
-<tr>
-<td>uniq</td>
-<td>unix2dos</td>
-<td>unlink</td>
-<td><code>unrar</code></td>
-<td>unrar3</td>
-<td>unshar</td>
-<td>uudecode</td>
-<td>uuencode</td>
-<td><code>vim</code></td>
-<td>wc</td>
-</tr>
-<tr>
-<td><code>wget</code></td>
-<td><code>whereis</code></td>
-<td><code>which</code></td>
-<td>whoami</td>
-<td>xargs</td>
-<td>yes</td>
-<td><code>zip</code></td>
-<td>zip32z64</td>
-<td></td>
-</tr>
-</tbody>
-</table>
-<h1 id="ConEmu"><a href="#ConEmu" class="headerlink" title="ConEmu"></a>ConEmu</h1><h1 id="gerp"><a href="#gerp" class="headerlink" title="gerp"></a>gerp</h1><h1 id="Chrome-Extensions"><a href="#Chrome-Extensions" class="headerlink" title="Chrome Extensions"></a>Chrome Extensions</h1><h2 id="vimium"><a href="#vimium" class="headerlink" title="vimium"></a>vimium</h2><h2 id="Multi-highlight"><a href="#Multi-highlight" class="headerlink" title="Multi-highlight"></a>Multi-highlight</h2><h2 id="Restlet-Client-REST-API-Testing"><a href="#Restlet-Client-REST-API-Testing" class="headerlink" title="Restlet Client - REST API Testing"></a>Restlet Client - REST API Testing</h2><h2 id="Tampermonkey"><a href="#Tampermonkey" class="headerlink" title="Tampermonkey"></a>Tampermonkey</h2><h1 id="Web-Tools"><a href="#Web-Tools" class="headerlink" title="Web Tools"></a>Web Tools</h1><h2 id="jsonviewernew"><a href="#jsonviewernew" class="headerlink" title="jsonviewernew"></a>jsonviewernew</h2><p><a href="https://www.bejson.com/jsonviewernew/" target="_blank" rel="noopener">https://www.bejson.com/jsonviewernew/</a></p>
-<h2 id="regex101"><a href="#regex101" class="headerlink" title="regex101"></a>regex101</h2><h2 id="Linux-工具快速教程"><a href="#Linux-工具快速教程" class="headerlink" title="Linux 工具快速教程"></a>Linux 工具快速教程</h2>
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
   </section>
 
   
@@ -2540,7 +2401,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">47</span>
+                  <span class="site-state-item-count">49</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -2553,7 +2414,7 @@
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">58</span>
+                  <span class="site-state-item-count">59</span>
                   <span class="site-state-item-name">标签</span>
                 </a>
               </div>
