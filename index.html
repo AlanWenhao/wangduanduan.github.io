@@ -363,7 +363,7 @@
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  220 字
+                  217 字
                 </span>
               
 
@@ -406,11 +406,11 @@
 <blockquote>
 <p><a href="https://blog.hospodarets.com/nodejs-debugging-in-chrome-devtools" target="_blank" rel="noopener">https://blog.hospodarets.com/nodejs-debugging-in-chrome-devtools</a></p>
 </blockquote>
-<h1 id="1-要求"><a href="#1-要求" class="headerlink" title="1 要求"></a>1 要求</h1><ul>
+<h1 id="要求"><a href="#要求" class="headerlink" title="要求"></a>要求</h1><ul>
 <li>Node.js 6.3+</li>
 <li>Chrome 55+</li>
 </ul>
-<h1 id="2-操作步骤"><a href="#2-操作步骤" class="headerlink" title="2 操作步骤"></a>2 操作步骤</h1><ul>
+<h1 id="操作步骤"><a href="#操作步骤" class="headerlink" title="操作步骤"></a>操作步骤</h1><ul>
 <li>1 打开连接 <code>chrome://flags/#enable-devtools-experiments</code></li>
 <li>2 开启<code>开发者工具实验性功能</code> </li>
 <li>3 重启浏览器</li>
@@ -419,7 +419,7 @@
 </ul>
 <p><img src="http://p3alsaatj.bkt.clouddn.com/20180207141627_9HT0nS_Screenshot.jpeg" alt=""></p>
 <p><img src="http://p3alsaatj.bkt.clouddn.com/20180207141636_hIfIyG_Screenshot.jpeg" alt=""></p>
-<h1 id="3-运行程序"><a href="#3-运行程序" class="headerlink" title="3 运行程序"></a>3 运行程序</h1><p>必须要有 <code>--inspect</code><br><figure class="highlight vhdl"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">&gt; node <span class="comment">--inspect www</span></span><br><span class="line">Debugger listening <span class="keyword">on</span> <span class="keyword">port</span> <span class="number">9229</span>.</span><br><span class="line"><span class="literal">Warning</span>: This <span class="keyword">is</span> an experimental feature <span class="keyword">and</span> could change at any <span class="built_in">time</span>.</span><br><span class="line"><span class="keyword">To</span> start debugging, <span class="keyword">open</span> the following URL <span class="keyword">in</span> Chrome:</span><br><span class="line">    chrome-devtools://devtools/remote/serve_file/@<span class="number">60</span>cd6e859b9f557d2312f5bf532f6aec5f284980/inspector.html?experiments=<span class="literal">true</span>&amp;v8only=<span class="literal">true</span>&amp;ws=localhost:<span class="number">9229</span>/<span class="number">78</span>a884f4-<span class="number">8</span>c2e-<span class="number">459e-93</span>f7-e1cbe87cf5cf</span><br></pre></td></tr></table></figure></p>
+<h1 id="运行程序"><a href="#运行程序" class="headerlink" title="运行程序"></a>运行程序</h1><p>必须要有 <code>--inspect</code><br><figure class="highlight vhdl"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">&gt; node <span class="comment">--inspect www</span></span><br><span class="line">Debugger listening <span class="keyword">on</span> <span class="keyword">port</span> <span class="number">9229</span>.</span><br><span class="line"><span class="literal">Warning</span>: This <span class="keyword">is</span> an experimental feature <span class="keyword">and</span> could change at any <span class="built_in">time</span>.</span><br><span class="line"><span class="keyword">To</span> start debugging, <span class="keyword">open</span> the following URL <span class="keyword">in</span> Chrome:</span><br><span class="line">    chrome-devtools://devtools/remote/serve_file/@<span class="number">60</span>cd6e859b9f557d2312f5bf532f6aec5f284980/inspector.html?experiments=<span class="literal">true</span>&amp;v8only=<span class="literal">true</span>&amp;ws=localhost:<span class="number">9229</span>/<span class="number">78</span>a884f4-<span class="number">8</span>c2e-<span class="number">459e-93</span>f7-e1cbe87cf5cf</span><br></pre></td></tr></table></figure></p>
 <p>将这个地址粘贴到谷歌浏览器：<code>chrome-devtools://devtools/remote/serve_file/@60cd6e859b9f557d2312f5bf532f6aec5f284980/inspector.html?experiments=true&amp;v8only=true&amp;ws=localhost:9229/78a884f4-8c2e-459e-93f7-e1cbe87cf5cf</code></p>
 <p>程序后端输出的日志也回输出到谷歌浏览器的console里面，同时也可以在Sources里进行断点调试了。<br><img src="http://p3alsaatj.bkt.clouddn.com/20180207141649_ArMyV7_Screenshot.jpeg" alt=""></p>
 

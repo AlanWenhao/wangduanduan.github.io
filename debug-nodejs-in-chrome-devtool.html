@@ -82,21 +82,21 @@
 
 
 
-<meta name="description" content="英文好的，直接看原文  https://blog.hospodarets.com/nodejs-debugging-in-chrome-devtools  1 要求 Node.js 6.3+ Chrome 55+  2 操作步骤 1 打开连接 chrome://flags/#enable-devtools-experiments 2 开启开发者工具实验性功能  3 重启浏览器 4 打开 DevTo">
+<meta name="description" content="英文好的，直接看原文  https://blog.hospodarets.com/nodejs-debugging-in-chrome-devtools  要求 Node.js 6.3+ Chrome 55+  操作步骤 1 打开连接 chrome://flags/#enable-devtools-experiments 2 开启开发者工具实验性功能  3 重启浏览器 4 打开 DevTools">
 <meta name="keywords" content="nodejs">
 <meta property="og:type" content="article">
 <meta property="og:title" content="直接在Chrome DevTools调试Node.js">
 <meta property="og:url" content="https://wdd.js.org/debug-nodejs-in-chrome-devtool.html">
 <meta property="og:site_name" content="洞香春">
-<meta property="og:description" content="英文好的，直接看原文  https://blog.hospodarets.com/nodejs-debugging-in-chrome-devtools  1 要求 Node.js 6.3+ Chrome 55+  2 操作步骤 1 打开连接 chrome://flags/#enable-devtools-experiments 2 开启开发者工具实验性功能  3 重启浏览器 4 打开 DevTo">
+<meta property="og:description" content="英文好的，直接看原文  https://blog.hospodarets.com/nodejs-debugging-in-chrome-devtools  要求 Node.js 6.3+ Chrome 55+  操作步骤 1 打开连接 chrome://flags/#enable-devtools-experiments 2 开启开发者工具实验性功能  3 重启浏览器 4 打开 DevTools">
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:image" content="http://p3alsaatj.bkt.clouddn.com/20180207141627_9HT0nS_Screenshot.jpeg">
 <meta property="og:image" content="http://p3alsaatj.bkt.clouddn.com/20180207141636_hIfIyG_Screenshot.jpeg">
 <meta property="og:image" content="http://p3alsaatj.bkt.clouddn.com/20180207141649_ArMyV7_Screenshot.jpeg">
-<meta property="og:updated_time" content="2018-02-07T06:18:13.000Z">
+<meta property="og:updated_time" content="2018-02-07T06:19:15.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="直接在Chrome DevTools调试Node.js">
-<meta name="twitter:description" content="英文好的，直接看原文  https://blog.hospodarets.com/nodejs-debugging-in-chrome-devtools  1 要求 Node.js 6.3+ Chrome 55+  2 操作步骤 1 打开连接 chrome://flags/#enable-devtools-experiments 2 开启开发者工具实验性功能  3 重启浏览器 4 打开 DevTo">
+<meta name="twitter:description" content="英文好的，直接看原文  https://blog.hospodarets.com/nodejs-debugging-in-chrome-devtools  要求 Node.js 6.3+ Chrome 55+  操作步骤 1 打开连接 chrome://flags/#enable-devtools-experiments 2 开启开发者工具实验性功能  3 重启浏览器 4 打开 DevTools">
 <meta name="twitter:image" content="http://p3alsaatj.bkt.clouddn.com/20180207141627_9HT0nS_Screenshot.jpeg">
 
 
@@ -370,7 +370,7 @@
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  220 字
+                  217 字
                 </span>
               
 
@@ -411,11 +411,11 @@
 <blockquote>
 <p><a href="https://blog.hospodarets.com/nodejs-debugging-in-chrome-devtools" target="_blank" rel="noopener">https://blog.hospodarets.com/nodejs-debugging-in-chrome-devtools</a></p>
 </blockquote>
-<h1 id="1-要求"><a href="#1-要求" class="headerlink" title="1 要求"></a>1 要求</h1><ul>
+<h1 id="要求"><a href="#要求" class="headerlink" title="要求"></a>要求</h1><ul>
 <li>Node.js 6.3+</li>
 <li>Chrome 55+</li>
 </ul>
-<h1 id="2-操作步骤"><a href="#2-操作步骤" class="headerlink" title="2 操作步骤"></a>2 操作步骤</h1><ul>
+<h1 id="操作步骤"><a href="#操作步骤" class="headerlink" title="操作步骤"></a>操作步骤</h1><ul>
 <li>1 打开连接 <code>chrome://flags/#enable-devtools-experiments</code></li>
 <li>2 开启<code>开发者工具实验性功能</code> </li>
 <li>3 重启浏览器</li>
@@ -424,7 +424,7 @@
 </ul>
 <p><img src="http://p3alsaatj.bkt.clouddn.com/20180207141627_9HT0nS_Screenshot.jpeg" alt=""></p>
 <p><img src="http://p3alsaatj.bkt.clouddn.com/20180207141636_hIfIyG_Screenshot.jpeg" alt=""></p>
-<h1 id="3-运行程序"><a href="#3-运行程序" class="headerlink" title="3 运行程序"></a>3 运行程序</h1><p>必须要有 <code>--inspect</code><br><figure class="highlight vhdl"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">&gt; node <span class="comment">--inspect www</span></span><br><span class="line">Debugger listening <span class="keyword">on</span> <span class="keyword">port</span> <span class="number">9229</span>.</span><br><span class="line"><span class="literal">Warning</span>: This <span class="keyword">is</span> an experimental feature <span class="keyword">and</span> could change at any <span class="built_in">time</span>.</span><br><span class="line"><span class="keyword">To</span> start debugging, <span class="keyword">open</span> the following URL <span class="keyword">in</span> Chrome:</span><br><span class="line">    chrome-devtools://devtools/remote/serve_file/@<span class="number">60</span>cd6e859b9f557d2312f5bf532f6aec5f284980/inspector.html?experiments=<span class="literal">true</span>&amp;v8only=<span class="literal">true</span>&amp;ws=localhost:<span class="number">9229</span>/<span class="number">78</span>a884f4-<span class="number">8</span>c2e-<span class="number">459e-93</span>f7-e1cbe87cf5cf</span><br></pre></td></tr></table></figure></p>
+<h1 id="运行程序"><a href="#运行程序" class="headerlink" title="运行程序"></a>运行程序</h1><p>必须要有 <code>--inspect</code><br><figure class="highlight vhdl"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">&gt; node <span class="comment">--inspect www</span></span><br><span class="line">Debugger listening <span class="keyword">on</span> <span class="keyword">port</span> <span class="number">9229</span>.</span><br><span class="line"><span class="literal">Warning</span>: This <span class="keyword">is</span> an experimental feature <span class="keyword">and</span> could change at any <span class="built_in">time</span>.</span><br><span class="line"><span class="keyword">To</span> start debugging, <span class="keyword">open</span> the following URL <span class="keyword">in</span> Chrome:</span><br><span class="line">    chrome-devtools://devtools/remote/serve_file/@<span class="number">60</span>cd6e859b9f557d2312f5bf532f6aec5f284980/inspector.html?experiments=<span class="literal">true</span>&amp;v8only=<span class="literal">true</span>&amp;ws=localhost:<span class="number">9229</span>/<span class="number">78</span>a884f4-<span class="number">8</span>c2e-<span class="number">459e-93</span>f7-e1cbe87cf5cf</span><br></pre></td></tr></table></figure></p>
 <p>将这个地址粘贴到谷歌浏览器：<code>chrome-devtools://devtools/remote/serve_file/@60cd6e859b9f557d2312f5bf532f6aec5f284980/inspector.html?experiments=true&amp;v8only=true&amp;ws=localhost:9229/78a884f4-8c2e-459e-93f7-e1cbe87cf5cf</code></p>
 <p>程序后端输出的日志也回输出到谷歌浏览器的console里面，同时也可以在Sources里进行断点调试了。<br><img src="http://p3alsaatj.bkt.clouddn.com/20180207141649_ArMyV7_Screenshot.jpeg" alt=""></p>
 
@@ -651,7 +651,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#1-要求"><span class="nav-number">1.</span> <span class="nav-text">1 要求</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#2-操作步骤"><span class="nav-number">2.</span> <span class="nav-text">2 操作步骤</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#3-运行程序"><span class="nav-number">3.</span> <span class="nav-text">3 运行程序</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#要求"><span class="nav-number">1.</span> <span class="nav-text">要求</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#操作步骤"><span class="nav-number">2.</span> <span class="nav-text">操作步骤</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#运行程序"><span class="nav-number">3.</span> <span class="nav-text">运行程序</span></a></li></ol></div>
             
 
           </div>
