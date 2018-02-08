@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://wdd.js.org/"/>
-  <updated>2018-02-08T13:26:22.000Z</updated>
+  <updated>2018-02-08T13:38:08.000Z</updated>
   <id>https://wdd.js.org/</id>
   
   <author>
@@ -15,6 +15,26 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>一些关于Hexo的疑问</title>
+    <link href="https://wdd.js.org/something-you-may-dont-konw-about-hexo.html"/>
+    <id>https://wdd.js.org/something-you-may-dont-konw-about-hexo.html</id>
+    <published>2018-02-08T13:29:18.000Z</published>
+    <updated>2018-02-08T13:38:08.000Z</updated>
+    
+    <content type="html"><![CDATA[<p><img src="http://p3alsaatj.bkt.clouddn.com/20180208213207_ah8hTV_Jietu20180208-213152.jpeg" alt=""></p><a id="more"></a><h1 id="文件名重复了怎么办？"><a href="#文件名重复了怎么办？" class="headerlink" title="文件名重复了怎么办？"></a>文件名重复了怎么办？</h1><p>使用<code>hexo new filename</code>命令用来新建一个文章，但是如果你创建文章时，已经存在了同样的一个文件名，那么Hexo会怎样处理？</p><ol><li>报错</li><li>覆盖之前的文章</li><li>在文件名后面加个序号</li></ol><p>实际上Hexo使用第三个方式来处理，例如</p><figure class="highlight haxe"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 执行下面命令两次，会产生两个文件 filename.md, filename-1.md</span></span><br><span class="line">hexo <span class="keyword">new</span> <span class="type">filename</span></span><br><span class="line"><span class="type">hexo</span> <span class="keyword">new</span> <span class="type">filename</span></span><br></pre></td></tr></table></figure><p>所以，在创建文章时，你根本不需要考虑文章重名的事情，Hexo会自动帮你加上序号后处理。</p>]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;&lt;img src=&quot;http://p3alsaatj.bkt.clouddn.com/20180208213207_ah8hTV_Jietu20180208-213152.jpeg&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
+    
+    </summary>
+    
+    
+      <category term="hexo" scheme="https://wdd.js.org/tags/hexo/"/>
+    
+  </entry>
   
   <entry>
     <title>Hexo NexT主题设置封面的方法</title>
@@ -484,31 +504,6 @@
     
     </summary>
     
-    
-  </entry>
-  
-  <entry>
-    <title>可能被遗漏的https与http的知识点</title>
-    <link href="https://wdd.js.org/you-dont-know-https-and-http.html"/>
-    <id>https://wdd.js.org/you-dont-know-https-and-http.html</id>
-    <published>2018-02-08T01:10:59.000Z</published>
-    <updated>2018-02-08T01:14:52.000Z</updated>
-    
-    <content type="html"><![CDATA[<h1 id="HTTPS域向HTTP域发送请求会被浏览器直接拒绝，HTTP向HTTPS则不会"><a href="#HTTPS域向HTTP域发送请求会被浏览器直接拒绝，HTTP向HTTPS则不会" class="headerlink" title="HTTPS域向HTTP域发送请求会被浏览器直接拒绝，HTTP向HTTPS则不会"></a>HTTPS域向HTTP域发送请求会被浏览器直接拒绝，HTTP向HTTPS则不会</h1><p>例如在github pages页面，这是一个https页面，如果在这个页面向http发送请求，那么会直接被浏览器拒绝，并在控制台输出下面的报错信息。</p><figure class="highlight mipsasm"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">jquery-1.11.3.min.js:5 </span>Mixed Content: The page <span class="built_in">at</span> <span class="string">'https://wangduanduan.github.io/ddddddd/'</span> was loaded over HTTPS, <span class="keyword">but </span>requested an <span class="keyword">insecure </span>XMLHttpRequest endpoint <span class="string">'http://cccccc/log/conf?token=welljoint'</span>. This request has <span class="keyword">been </span><span class="keyword">blocked; </span>the content must <span class="keyword">be </span>served over HTTPS.</span><br></pre></td></tr></table></figure><p>如果你在做第三方集成的系统，如果他们是在浏览器中直接调用你提供的接口，<code>那么最好你使用https协议，这样无论对方是https还是http都可以访问</code>。（相信我，这个很重要，我曾经经历过上线后遇到这个问题，然后连夜申请证书，把http升级到https的痛苦经历）</p><h1 id="HTTPS的默认端口是443，而不是443"><a href="#HTTPS的默认端口是443，而不是443" class="headerlink" title="HTTPS的默认端口是443，而不是443"></a>HTTPS的默认端口是443，而不是443</h1><p>如果443端口已经被其他服务占用了，那么使用其他任何没有被占用的端口都可以用作HTTPS服务，只不过在请求的时候需要加上端口号罢了。</p><h1 id="如何快速隐藏一个DOM元素"><a href="#如何快速隐藏一个DOM元素" class="headerlink" title="如何快速隐藏一个DOM元素"></a>如何快速隐藏一个DOM元素</h1><p>选中一个元素，然后按<code>h</code>,这时候就会在选中的DOM元素上加上<code>__web-inspector-hide-shortcut__</code>类，这个类会让元素隐藏。谷歌和火狐上都可以，IE上没有试过行不行。</p><p><img src="http://p3alsaatj.bkt.clouddn.com/20180208091217_HDF1vL_Screenshot.jpeg" alt=""></p>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;h1 id=&quot;HTTPS域向HTTP域发送请求会被浏览器直接拒绝，HTTP向HTTPS则不会&quot;&gt;&lt;a href=&quot;#HTTPS域向HTTP域发送请求会被浏览器直接拒绝，HTTP向HTTPS则不会&quot; class=&quot;headerlink&quot; title=&quot;HTTPS域向HTTP域发送
-      
-    
-    </summary>
-    
-    
-      <category term="http" scheme="https://wdd.js.org/tags/http/"/>
-    
-      <category term="https" scheme="https://wdd.js.org/tags/https/"/>
     
   </entry>
   

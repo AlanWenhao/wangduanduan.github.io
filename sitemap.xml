@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://wdd.js.org/something-you-may-dont-konw-about-hexo.html</loc>
+    
+    <lastmod>2018-02-08T13:38:08.000Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://wdd.js.org/hexo-next-theme-set-cover.html</loc>
     
     <lastmod>2018-02-08T13:26:22.000Z</lastmod>
