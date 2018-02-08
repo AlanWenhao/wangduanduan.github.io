@@ -1,9 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[Hexo NexT主题设置封面的方法]]></title>
+    <url>%2Fhexo-next-theme-set-cover.html</url>
+    <content type="text"><![CDATA[默认情况下NexT主题的首页，每篇文章几乎都会全部渲染出来。这是这样来看，首页就会变得非常长，不利于快速浏览。 而我希望首页可以尽量缩短，每个文章只需要稍微一点介绍，如果有图片，就设置一张封面就好了。 下面是具体的设置步骤 Next主题设置摘要filename: themes/next/_config.yml，将auto_excerpt.enable设置成true，length属性表示摘要的字数限制。123auto_excerpt: enable: true length: 150 文章具体设置在 &lt;!-- more --&gt;上面放一张图片就可以了 1234567891011121314---title: Hexo NexT主题设置封面的方法date: 2018-02-08 21:09:50tags:- hexo---![](http://p3alsaatj.bkt.clouddn.com/20180208212257_BZZjA5_1200px-The_Great_Wave_off_Kanagawa.jpeg)文章摘要&lt;!-- more --&gt;文章正文]]></content>
+      <tags>
+        <tag>hexo</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[寻一片净土 书写我自己的芳华]]></title>
     <url>%2Fwrite-blog-belong-myself.html</url>
-    <content type="text"><![CDATA[我曾经在csdn上写过博客 后来因为csdn的广告太多，我就不再csdn上写了 我也曾在博客园上写过博客 后来因为博客园上对markdown支持不够好，所以我也放弃了 我也曾在segmentfault上写过博客 它上面的markdown编辑器也还好用 但是有时候不知道是什么原因 它的markdown编辑器有时候太卡了，而且经常会出现上传图片失败 最让我不能容忍的是 你在SegmentFault删除自己的博客，那其实是逻辑删除 别人还是可以通过连接去访问的 而且SegmentFault上的广告也开始慢慢变多了 而且SegmentFault上对文章的限制也是比较多的 大树底下好乘凉，但是你的流量也是需要给大树的 互联网时代，看似任何服务都是免费的 其实免费的才是最贵的 你用了别人的服务，无论如何，你总要提供给别人价值 无论怎样，你总要做出你的回报 但是，无论如何，我总是需要一个更加独立的领地 她可以完全属于我 无论是野草还是野花 无论是杨柳依依还是雨雪霏霏 我都可以放肆潇洒 我需要一片净土 来书写我自己的芳华]]></content>
+    <content type="text"><![CDATA[我曾经在csdn上写过博客 后来因为csdn的广告太多，我就不再csdn上写了 我也曾在博客园上写过博客 后来因为博客园上对markdown支持不够好，所以我也放弃了 我也曾在segmentfault上写过博客 它上面的markdown编辑器也还好用 但是有时候不知道是什么原因 它的markdown编辑器有时候太卡了，而且经常会出现上传图片失败 最让我不能容忍的是 你在SegmentFault删除自己的博客，那其实是逻辑删除 别人还是可以通过连接去访问的 而且SegmentFault上的广告也开始慢慢变多了 而且SegmentFault上对文章的限制也是比较多的 大树底下好乘凉，但是你的流量也是需要给大树的 互联网时代，看似任何服务都是免费的 其实免费的才是最贵的 你用了别人的服务，无论如何，你总要提供给别人价值 无论怎样，你总要做出你的回报 但是，无论如何，我总是需要一个更加独立的领地 她可以完全属于我 无论是野草还是野花 无论是杨柳依依还是雨雪霏霏 我都可以放肆潇洒 我需要一片净土 来书写我自己的芳华 所以，最近一直在把SegmentFault上的文章搬迁到github pages上 另外图片全部存在七牛云上 使用hexo next主题，做一个完全自主的静态博客]]></content>
       <tags>
         <tag>思想者</tag>
       </tags>
@@ -497,8 +505,8 @@
     <url>%2Fhow-to-get-jsorg-sub-domain.html</url>
     <content type="text"><![CDATA[之前我是使用wangduanduan.github.io作为我的博客地址，后来觉得麻烦，有把博客关了。最近有想去折腾折腾。先看效果：wdd.js.org 如果你不了解js.org可以看看我的这篇文章:一个值得所有前端开发者关注的网站js.org 前提 已经有了github pages的一个博客，并且博客中有内容，没有内容会审核不通过的。我第一次申请域名，就是因为内容太少而审核不通过。 想好自己要什么域名？比如你想要一个：wdd.js.org的域名，你先在浏览器里访问这个地址，看看有没有人用过，如果已经有人用过，那么你就只能想点其他的域名了。 fork js.org的项目，添加自己的域名1 fork https://github.com/js-org/dns.js.org2 修改你fork后的仓库中的cnames_active.js文件，加上自己的一条域名，最好要按照字母顺序 如下图所示，我在第1100行加入。注意，不要在该行后加任何注释。1"wdd": "wangduanduan.github.io", 3 commit 加入CNAME文件我是用hexo和next主题作为博客的模板。其中我在gh-pages分支写博客，然后部署到master分支。 我在我的gh-pages分支的source目录下加入CNAME文件, 内容只有一行 1wdd.js.org 将博客再次部署好，如果CNAME生效的话，你已经无法从原来的地址访问：wangduanduan.github.io， 这个博客了。 向js.org项目发起pull-request找到你fork后的项目，点击 new pull request, 向原来的项目发起请求。 然后你可以在js-org/dns.js.org项目的pull requests看到你的请求，当这个请求被合并时，你就拥有了js.org的二级域名。]]></content>
       <tags>
-        <tag>jsorg</tag>
         <tag>hexo</tag>
+        <tag>jsorg</tag>
       </tags>
   </entry>
   <entry>
@@ -534,9 +542,9 @@
     <url>%2Fvscode-vue-standardjs.html</url>
     <content type="text"><![CDATA[JavaScript Standard Style简介本工具通过以下三种方式为你（及你的团队）节省大量时间： 无须配置。 史上最便捷的统一代码风格的方式，轻松拥有。 自动代码格式化。 只需运行 standard –fix 从此和脏乱差的代码说再见。 提前发现风格及程序问题。 减少代码审查过程中反反复复的修改过程，节约时间。 无须犹豫。再也不用维护 .eslintrc, .jshintrc, or .jscsrc 。开箱即用。 安装：1npm i standard -g 关于JavaScript 代码规范, 你可以点击链接看一下。 如何在vscode中用JavaScript Standard Style风格去验证 vue文件实际上JavaScript Standard Style有一个FAQ, 说明了如何使用。 但是有一点非常重要的作者没有提到，就是eslint-plugin-html这个插件必须要安装3.x.x版本的, 现在eslint-plugin-html, 已经升级到4.x版本，默认不写版本号安装的就是4.x版本的，所以会出现问题。参考 ESLint v4 is only supported by eslint-plugin-html v3, so you can’t use eslint-plugin-html v1.5.2 with it (I should add a warning about this when trying to use the plugin with an incompatible version on ESLint). If you do not use ESLint v4, please provide more information (package.json, a gist to reproduce, …) 1234567891011121314151617181920212223242526// FAQHow to lint script tag in vue or html files?You can lint them with eslint-plugin-html, just install it first, then enable linting for those file types in settings.json with: "standard.validate": [ "javascript", "javascriptreact", "html" ], "standard.options": &#123; "plugins": ["html"] &#125;, "files.associations": &#123; "*.vue": "html" &#125;,If you want to enable autoFix for the new languages, you should enable it yourself: "standard.validate": [ "javascript", "javascriptreact", &#123; "language": "html", "autoFix": true &#125; ], "standard.options": &#123; "plugins": ["html"] &#125; 综上， 整理一下安装思路需要安装哪些包？ npm i -g standard npm i -g eslint-plugin-html@3.2.2 必须是3x版本 npm i -g eslint以上三个包都是全局安装的，如果你想看看全局安装了哪些包可以用npm list -g --depth=0查看 vscode config 如何写？1234567891011121314"standard.validate": [ "javascript", "javascriptreact", &#123; "language": "html", "autoFix": true &#125;],"standard.options": &#123; "plugin": ["html"]&#125;,"files.associations": &#123; "*.vue": "html"&#125;, 如何在保存文件时，自动使用standard格式化vue文件1"standard.autoFixOnSave": true 如果还不行怎么办？ 重启一下vscode 重启一下电脑 在此文后追加评论]]></content>
       <tags>
-        <tag>vscode</tag>
         <tag>vue</tag>
         <tag>standardjs</tag>
+        <tag>vscode</tag>
       </tags>
   </entry>
   <entry>

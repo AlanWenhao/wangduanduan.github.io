@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://wdd.js.org/"/>
-  <updated>2018-02-08T12:47:55.000Z</updated>
+  <updated>2018-02-08T13:26:22.000Z</updated>
   <id>https://wdd.js.org/</id>
   
   <author>
@@ -17,22 +17,40 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>Hexo NexT主题设置封面的方法</title>
+    <link href="https://wdd.js.org/hexo-next-theme-set-cover.html"/>
+    <id>https://wdd.js.org/hexo-next-theme-set-cover.html</id>
+    <published>2018-02-08T13:09:50.000Z</published>
+    <updated>2018-02-08T13:26:22.000Z</updated>
+    
+    <content type="html"><![CDATA[<p><img src="http://p3alsaatj.bkt.clouddn.com/20180208212257_BZZjA5_1200px-The_Great_Wave_off_Kanagawa.jpeg" alt=""></p><p>默认情况下NexT主题的首页，每篇文章几乎都会全部渲染出来。这是这样来看，首页就会变得非常长，不利于快速浏览。</p><p>而我希望首页可以尽量缩短，每个文章只需要稍微一点介绍，如果有图片，就设置一张封面就好了。</p><p>下面是具体的设置步骤</p><a id="more"></a><h1 id="Next主题设置摘要"><a href="#Next主题设置摘要" class="headerlink" title="Next主题设置摘要"></a>Next主题设置摘要</h1><p>filename: themes/next/_config.yml，将auto_excerpt.enable设置成true，length属性表示摘要的字数限制。<br><figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">auto_excerpt:</span></span><br><span class="line"><span class="attr">  enable:</span> <span class="literal">true</span></span><br><span class="line"><span class="attr">  length:</span> <span class="number">150</span></span><br></pre></td></tr></table></figure></p><h1 id="文章具体设置"><a href="#文章具体设置" class="headerlink" title="文章具体设置"></a>文章具体设置</h1><p>在 <code>&lt;!-- more --&gt;</code>上面放一张图片就可以了</p><figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">---</span></span><br><span class="line"><span class="attr">title:</span> <span class="string">Hexo</span> <span class="string">NexT主题设置封面的方法</span></span><br><span class="line"><span class="attr">date:</span> <span class="number">2018</span><span class="bullet">-02</span><span class="bullet">-08</span> <span class="number">21</span><span class="string">:09:50</span></span><br><span class="line"><span class="attr">tags:</span></span><br><span class="line"><span class="bullet">-</span> <span class="string">hexo</span></span><br><span class="line"><span class="meta">---</span></span><br><span class="line"></span><br><span class="line"><span class="string">![](http://p3alsaatj.bkt.clouddn.com/20180208212257_BZZjA5_1200px-The_Great_Wave_off_Kanagawa.jpeg)</span></span><br><span class="line"></span><br><span class="line"><span class="string">文章摘要</span></span><br><span class="line"></span><br><span class="line"><span class="string">&lt;!--</span> <span class="string">more</span> <span class="bullet">--&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="string">文章正文</span></span><br></pre></td></tr></table></figure>]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;&lt;img src=&quot;http://p3alsaatj.bkt.clouddn.com/20180208212257_BZZjA5_1200px-The_Great_Wave_off_Kanagawa.jpeg&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
+&lt;p&gt;默认情况下NexT主题的首页，每篇文章几乎都会全部渲染出来。这是这样来看，首页就会变得非常长，不利于快速浏览。&lt;/p&gt;
+&lt;p&gt;而我希望首页可以尽量缩短，每个文章只需要稍微一点介绍，如果有图片，就设置一张封面就好了。&lt;/p&gt;
+&lt;p&gt;下面是具体的设置步骤&lt;/p&gt;
+    
+    </summary>
+    
+    
+      <category term="hexo" scheme="https://wdd.js.org/tags/hexo/"/>
+    
+  </entry>
+  
+  <entry>
     <title>寻一片净土 书写我自己的芳华</title>
     <link href="https://wdd.js.org/write-blog-belong-myself.html"/>
     <id>https://wdd.js.org/write-blog-belong-myself.html</id>
     <published>2018-02-08T12:18:42.000Z</published>
-    <updated>2018-02-08T12:47:55.000Z</updated>
+    <updated>2018-02-08T13:07:58.000Z</updated>
     
-    <content type="html"><![CDATA[<p><img src="http://p3alsaatj.bkt.clouddn.com/20180208202159_i9HYlT_1-1G024112343148.jpeg" alt=""></p><p>我曾经在csdn上写过博客</p><p>后来因为csdn的广告太多，我就不再csdn上写了</p><p>我也曾在博客园上写过博客</p><p>后来因为博客园上对markdown支持不够好，所以我也放弃了</p><p>我也曾在segmentfault上写过博客</p><p>它上面的markdown编辑器也还好用</p><p>但是有时候不知道是什么原因</p><p>它的markdown编辑器有时候太卡了，而且经常会出现上传图片失败</p><p>最让我不能容忍的是</p><p>你在SegmentFault删除自己的博客，那其实是逻辑删除</p><p>别人还是可以通过连接去访问的</p><p>而且SegmentFault上的广告也开始慢慢变多了</p><p>而且SegmentFault上对文章的限制也是比较多的</p><p>大树底下好乘凉，但是你的流量也是需要给大树的</p><p>互联网时代，看似任何服务都是免费的</p><p>其实免费的才是最贵的</p><p>你用了别人的服务，无论如何，你总要提供给别人价值</p><p>无论怎样，你总要做出你的回报</p><p>但是，无论如何，我总是需要一个更加独立的领地</p><p>她可以完全属于我</p><p>无论是野草还是野花</p><p>无论是杨柳依依还是雨雪霏霏</p><p>我都可以放肆潇洒</p><p>我需要一片净土</p><p>来书写我自己的芳华</p><p><img src="http://p3alsaatj.bkt.clouddn.com/20180208203548_bMcwuP_平凡之路.jpeg" alt=""></p>]]></content>
+    <content type="html"><![CDATA[<p><img src="http://p3alsaatj.bkt.clouddn.com/20180208202159_i9HYlT_1-1G024112343148.jpeg" alt=""></p><a id="more"></a><p>我曾经在csdn上写过博客</p><p>后来因为csdn的广告太多，我就不再csdn上写了</p><p>我也曾在博客园上写过博客</p><p>后来因为博客园上对markdown支持不够好，所以我也放弃了</p><p>我也曾在segmentfault上写过博客</p><p>它上面的markdown编辑器也还好用</p><p>但是有时候不知道是什么原因</p><p>它的markdown编辑器有时候太卡了，而且经常会出现上传图片失败</p><p>最让我不能容忍的是</p><p>你在SegmentFault删除自己的博客，那其实是逻辑删除</p><p>别人还是可以通过连接去访问的</p><p>而且SegmentFault上的广告也开始慢慢变多了</p><p>而且SegmentFault上对文章的限制也是比较多的</p><p>大树底下好乘凉，但是你的流量也是需要给大树的</p><p>互联网时代，看似任何服务都是免费的</p><p>其实免费的才是最贵的</p><p>你用了别人的服务，无论如何，你总要提供给别人价值</p><p>无论怎样，你总要做出你的回报</p><p>但是，无论如何，我总是需要一个更加独立的领地</p><p>她可以完全属于我</p><p>无论是野草还是野花</p><p>无论是杨柳依依还是雨雪霏霏</p><p>我都可以放肆潇洒</p><p>我需要一片净土</p><p>来书写我自己的芳华</p><p><img src="http://p3alsaatj.bkt.clouddn.com/20180208203548_bMcwuP_平凡之路.jpeg" alt=""></p><blockquote><p>所以，最近一直在把SegmentFault上的文章搬迁到github pages上</p><p>另外图片全部存在七牛云上</p><p>使用hexo next主题，做一个完全自主的静态博客</p></blockquote>]]></content>
     
     <summary type="html">
     
-      
-      
-        &lt;p&gt;&lt;img src=&quot;http://p3alsaatj.bkt.clouddn.com/20180208202159_i9HYlT_1-1G024112343148.jpeg&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
-&lt;p&gt;我曾经在csdn上写过博客&lt;/p&gt;
-&lt;p&gt;后来因为csdn的广告太多
-      
+      &lt;p&gt;&lt;img src=&quot;http://p3alsaatj.bkt.clouddn.com/20180208202159_i9HYlT_1-1G024112343148.jpeg&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
     
     </summary>
     
@@ -491,31 +509,6 @@
       <category term="http" scheme="https://wdd.js.org/tags/http/"/>
     
       <category term="https" scheme="https://wdd.js.org/tags/https/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>直接在Chrome DevTools调试Node.js</title>
-    <link href="https://wdd.js.org/debug-nodejs-in-chrome-devtool.html"/>
-    <id>https://wdd.js.org/debug-nodejs-in-chrome-devtool.html</id>
-    <published>2018-02-07T06:15:43.000Z</published>
-    <updated>2018-02-07T06:19:15.000Z</updated>
-    
-    <content type="html"><![CDATA[<p>英文好的，直接看原文</p><blockquote><p><a href="https://blog.hospodarets.com/nodejs-debugging-in-chrome-devtools" target="_blank" rel="noopener">https://blog.hospodarets.com/nodejs-debugging-in-chrome-devtools</a></p></blockquote><h1 id="要求"><a href="#要求" class="headerlink" title="要求"></a>要求</h1><ul><li>Node.js 6.3+</li><li>Chrome 55+</li></ul><h1 id="操作步骤"><a href="#操作步骤" class="headerlink" title="操作步骤"></a>操作步骤</h1><ul><li>1 打开连接 <code>chrome://flags/#enable-devtools-experiments</code></li><li>2 开启<code>开发者工具实验性功能</code> </li><li>3 重启浏览器</li><li>4 打开 DevTools Setting -&gt; Experiments tab</li><li>5 按6次shift后，隐藏的功能会出现，勾选”Node debugging”</li></ul><p><img src="http://p3alsaatj.bkt.clouddn.com/20180207141627_9HT0nS_Screenshot.jpeg" alt=""></p><p><img src="http://p3alsaatj.bkt.clouddn.com/20180207141636_hIfIyG_Screenshot.jpeg" alt=""></p><h1 id="运行程序"><a href="#运行程序" class="headerlink" title="运行程序"></a>运行程序</h1><p>必须要有 <code>--inspect</code><br><figure class="highlight vhdl"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">&gt; node <span class="comment">--inspect www</span></span><br><span class="line">Debugger listening <span class="keyword">on</span> <span class="keyword">port</span> <span class="number">9229</span>.</span><br><span class="line"><span class="literal">Warning</span>: This <span class="keyword">is</span> an experimental feature <span class="keyword">and</span> could change at any <span class="built_in">time</span>.</span><br><span class="line"><span class="keyword">To</span> start debugging, <span class="keyword">open</span> the following URL <span class="keyword">in</span> Chrome:</span><br><span class="line">    chrome-devtools://devtools/remote/serve_file/@<span class="number">60</span>cd6e859b9f557d2312f5bf532f6aec5f284980/inspector.html?experiments=<span class="literal">true</span>&amp;v8only=<span class="literal">true</span>&amp;ws=localhost:<span class="number">9229</span>/<span class="number">78</span>a884f4-<span class="number">8</span>c2e-<span class="number">459e-93</span>f7-e1cbe87cf5cf</span><br></pre></td></tr></table></figure></p><p>将这个地址粘贴到谷歌浏览器：<code>chrome-devtools://devtools/remote/serve_file/@60cd6e859b9f557d2312f5bf532f6aec5f284980/inspector.html?experiments=true&amp;v8only=true&amp;ws=localhost:9229/78a884f4-8c2e-459e-93f7-e1cbe87cf5cf</code></p><p>程序后端输出的日志也回输出到谷歌浏览器的console里面，同时也可以在Sources里进行断点调试了。<br><img src="http://p3alsaatj.bkt.clouddn.com/20180207141649_ArMyV7_Screenshot.jpeg" alt=""></p>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;p&gt;英文好的，直接看原文&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;&lt;a href=&quot;https://blog.hospodarets.com/nodejs-debugging-in-chrome-devtools&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;
-      
-    
-    </summary>
-    
-    
-      <category term="nodejs" scheme="https://wdd.js.org/tags/nodejs/"/>
     
   </entry>
   
