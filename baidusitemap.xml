@@ -4,6 +4,112 @@
 
     
   <url>
+    <loc>https://wdd.js.org/nodejs-best-dockerfile.html</loc>
+    <lastmod>2018-02-08T01:30:29.000Z</lastmod>
+    <data>
+        <display>
+        <title>Nodejs Express dockerfile最佳实践</title>
+        <pubTime>2018-02-08T01:28:04.000Z</pubTime>
+        
+        <tag>nodejs</tag>
+         
+        <tag>docker</tag>
+         
+        <tag>dockerfile</tag>
+         
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>https://wdd.js.org/jquery-validation-vs-parsley.html</loc>
+    <lastmod>2018-02-08T01:26:55.000Z</lastmod>
+    <data>
+        <display>
+        <title>表单验证工具 jquery-validation Vs Parsley</title>
+        <pubTime>2018-02-08T01:26:00.000Z</pubTime>
+        
+        <tag>jQuery</tag>
+         
+        <tag>Parsley</tag>
+         
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>https://wdd.js.org/how-to-be-a-better-programer.html</loc>
+    <lastmod>2018-02-08T01:22:00.000Z</lastmod>
+    <data>
+        <display>
+        <title>【笔记】 程序员修炼之道 从小工到专家</title>
+        <pubTime>2018-02-08T01:21:11.000Z</pubTime>
+        
+        <tag>读书笔记</tag>
+         
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>https://wdd.js.org/clean-code-method.html</loc>
+    <lastmod>2018-02-08T01:19:56.000Z</lastmod>
+    <data>
+        <display>
+        <title>代码整洁之道 - 有意义的命名</title>
+        <pubTime>2018-02-08T01:17:54.000Z</pubTime>
+        
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>https://wdd.js.org/visual-event-tool.html</loc>
+    <lastmod>2018-02-08T01:17:01.000Z</lastmod>
+    <data>
+        <display>
+        <title>visual-event-tool 定位神器：1秒定位DOM元素绑定的事件代码的位置</title>
+        <pubTime>2018-02-08T01:15:20.000Z</pubTime>
+        
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>https://wdd.js.org/you-dont-know-https-and-http.html</loc>
+    <lastmod>2018-02-08T01:14:52.000Z</lastmod>
+    <data>
+        <display>
+        <title>可能被遗漏的https与http的知识点</title>
+        <pubTime>2018-02-08T01:10:59.000Z</pubTime>
+        
+        <tag>http</tag>
+         
+        <tag>https</tag>
+         
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>https://wdd.js.org/debug-nodejs-in-chrome-devtool.html</loc>
     <lastmod>2018-02-07T06:19:15.000Z</lastmod>
     <data>

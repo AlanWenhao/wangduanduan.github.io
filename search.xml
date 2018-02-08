@@ -1,6 +1,52 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[Nodejs Express dockerfile最佳实践]]></title>
+    <url>%2Fnodejs-best-dockerfile.html</url>
+    <content type="text"><![CDATA[少啰嗦，先看代码package.json123456789101112131415161718192021222324&#123; "name": "xxx", "version": "0.0.0", "private": true, "scripts": &#123; "start": "node ./bin/www", "forever": "node_modules/forever/bin/forever bin/www" &#125;, "dependencies": &#123; "async": "0.9.0", "body-parser": "1.13.2", "compression": "1.6.2", "config": "1.12.0", "connect-multiparty": "2.0.0", "cookie-parser": "1.3.5", "debug": "2.2.0", "ejs": "2.3.3", "express": "4.13.1", "forever": "0.15.3", "http-proxy-middleware": "0.17.3", "log4js": "0.6.24", "serve-favicon": "2.3.0" &#125;&#125; dockerfile12345678910111213141516FROM node:9.2.1-alpineRUN apk update &amp;&amp; apk add bash tzdata \ &amp;&amp; cp -r -f /usr/share/zoneinfo/Asia/Shanghai /etc/localtimeWORKDIR /appCOPY package.json yarn.lock /app/RUN yarn install --production &amp;&amp; yarn cache cleanCOPY . /appEXPOSE 8088CMD yarn run server 分析原理 使用alpine的nodejs镜像，显著缩小nodejs镜像大小 node:9.2.1-alpine自带yarn 和 npm copy package到run npm i到copy . /app, 这样的顺序可以充分使用镜像缓存 修改过后，对比之前通过jenkins打包时间从10分钟缩短到7.4秒 参考资料 How to write excellent Dockerfiles]]></content>
+      <tags>
+        <tag>nodejs</tag>
+        <tag>docker</tag>
+        <tag>dockerfile</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[表单验证工具 jquery-validation Vs Parsley]]></title>
+    <url>%2Fjquery-validation-vs-parsley.html</url>
+    <content type="text"><![CDATA[基本对比 名称 gitbub地址 stars 文档地址 jquery-validation 这里 7859(截止7/21) 这里 Parsley.js 这里 7979(截止7/21) 这里 强烈推荐Parsley这两个表格验证插件我都用过，最早用的是jqueryValidataion, 现在用Parsley。这两个插件都依赖jQuery。但是如果说那个跟好用的话，真心推荐Parsley。Parsley号称不用写一行代码就能验证表单。另外从star的数量上也可以看出来Parsley更流行。而且Parsley支持在html中就将错误信息定义在里面。 Parsley优势 直观的DOM API: 像没有其他表单验证库一样，只需用HTML格式写入您的要求，Parsley将会做剩下的所有事情！不需要编写一行代码来验证表单。 动态表单验证： parsley现在更聪明，它会自动检测您的表单的修改并相应地调整其验证。简单地添加，删除或编辑字段，parsley将会自动验证。 还有好多… 1234567891011&lt;form&gt; &lt;input type="text" required="" data-parsley-checkphonenum data-parsley-checkphonenum-message="手机号码格式有误" name="phoneNum" class="form-control" placeholder="请填写手机号"&gt;&lt;/form&gt;//验证表单// 注意 checkphonenum是我自定义的验证规则，添加到parsley里面的$('from').parsley().validate();]]></content>
+      <tags>
+        <tag>jQuery</tag>
+        <tag>Parsley</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[【笔记】 程序员修炼之道 从小工到专家]]></title>
+    <url>%2Fhow-to-be-a-better-programer.html</url>
+    <content type="text"><![CDATA[1 关心你的技艺 2 思考你的工作 3 在所有的弱点中，最大的弱点就是害怕暴露弱点 4 提供各种选择，不要找各种蹩脚的借口 5 不要容忍破窗户 6 作变化的催化剂 7 记住大方向 8 让质量成为需求问题 9 知识也会贬值，定期为你的知识投资 每年至少学习一种编程语言 每季度至少读一本技术书籍 也要阅读非技术书籍 上课 上网 玩玩UNIX 跟上潮流 10 批判的分析你读到的和听到的 11 我相信，被打量要被忽略要好 12 你说什么和你怎样说同样重要 13 不要重复你自己, 也不要重复别人 14 糟糕的代码才需要许多注释 15 让复用变得容易 16 消除无关事物之间的影响 (解耦性，正交性) 17 编码 让你的代码保持解耦 避免使用全局数据 避免编写相似的函数 18 如果某个想法是你唯一的想法，再没有什么比这更危险的事情了 19 不存在最终决定 20 稍后就是永不 21 用曳光弹找到目标 22 语言的界限就是一个人世界的界限 23 靠近问题编程 24 估算，避免发生意外 25 用纯文本保存知识 26 利用命令shells的力量 27 用好一种编辑器，彻底了解它，确保你的编辑器能在所有平台上使用 (我的最爱是sublime) 可配置 可扩展 可编辑 语法高亮 自动完成 自动缩进 跨平台 启动快 占用内存小 漂亮 28 总是使用源码控制 29 要修正问题，而不是发出职责 (关于调试，bug) 30 不要恐慌 (我曾经差点因为上线的之前的重大问题产生辞职的想法) 31 不要假定，要证明 32 你不可能写出完美的软件 33 如果它不可能发生，用断言确保它不会发生 34 将异常用于异常的问题 35 要有始有终 36 使模块之间的耦合减至最小 37 要配置，不要集成 (可配置) 38 将抽象放进代码，将细节放进元数据 39 分析工作流，以改善并发性 40 用服务进行设计 41 总是为并发进行设计 42 将视图与模型分离 43 小心那些替你编写大量代码的工具，除非你了解它在做什么 44 不要靠巧合编程 45 估算你算法的阶 46 早重构，常重构 47 为测试而设计 48 不要搜集需求，挖掘他们 49 与用户一起工作，以像用户一样思考 50 需求不是架构，需求不是设计，也不是用户界面，而是需求。 51 抽象比细节活的更长久 52 使用项目词汇表 (名不正则言不顺) 53 昂贵的工具不一定能制作出更好的设计 54 早测试，常测试，自动测试 55 要到通过全部测试，编码才算完成 56 把网收紧，一个bug只抓一次 57 温和的超出用户的期望 58 在你的作品上签名 59 建立自己的藏书库]]></content>
+      <tags>
+        <tag>读书笔记</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[代码整洁之道 - 有意义的命名]]></title>
+    <url>%2Fclean-code-method.html</url>
+    <content type="text"><![CDATA[在小朱元璋出生一个月后，父母为他取了一个名字（元时惯例）：朱重八，这个名字也可以叫做朱八八。我们这里再介绍一下，朱重八家族的名字，都很有特点。朱重八高祖名字：朱百六；朱重八曾祖名字：朱四九；朱重八祖父名字：朱初一；他的父亲我们介绍过了，叫朱五四。取这样的名字不是因为朱家是搞数学的，而是因为在元朝，老百姓如果不能上学和当官就没有名字，只能以父母年龄相加或者出生的日期命名。（登记户口的人一定会眼花）–《明朝那些事儿》 那么问题来了，朱四九和朱百六是什么关系？ 你可能马上懵逼了。所以说：命名不仅仅是一种科学，更是一种艺术。 名副其实12345// badvar d; // 分手的时间，以天计算// goodvar daysAfterBrokeUp; // 分手以后，以天计算 避免误导1234567891011// badvar nameList = 'wdd'; // List一般暗指数据是数组，而不应该赋值给字符串// goodvar nameList = ['wdd','ddw','dwd']; // // badvar ill10o = 10; //千万不要把i,1,l,0,o,O放在一起，傻傻分不清楚// goodvar illOne = 10; 做有意义的区分12345// badvar userData, userInfo; // Data和Info, 有什么区别？？？？, 不要再用data和info这样模糊不清的单词了// goodvar userProfile, userAcount 使用读得出来的名称12345// bad var beeceearrthrtee; // 你知道怎么读吗？ 鼻涕阿三？？// goodvar userName; 使用可搜索的名称12345// badvar e = 'not found'; // 想搜e, 就很难搜// goodvar ERROR_NO_FOUND = 'not found'; 方法名一概是动词短语12345// goodfunction createAgent()&#123;&#125;funtion deleteAgent()&#123;&#125;function updateAgent()&#123;&#125;function queryAgent()&#123;&#125; 尽量不要用单字母名称, 除了用于循环123456789101112// badvar i = 1;// goodfor(var i=0; i&lt;10; i++)&#123; ...&#125;// very gooduserList.forEach(function(user)&#123; ...&#125;); 每个概念对应一个词1controller和manager, 没什么区别，要用controller都用controller, 要用manager都用manager, 不要混着用 建立项目词汇表, 不要随意创造名称1user, agent, org, queue, activity, device... 参考资料 《代码整洁之道》 《明朝那些事儿》]]></content>
+  </entry>
+  <entry>
+    <title><![CDATA[visual-event-tool 定位神器：1秒定位DOM元素绑定的事件代码的位置]]></title>
+    <url>%2Fvisual-event-tool.html</url>
+    <content type="text"><![CDATA[1 VisualEventgithub地址： https://github.com/DataTables/VisualEvent 2 使用教程 打开http://sprymedia.co.uk/VisualEvent/这个页面，然后将visual Event连接拖动到浏览器的书签栏上 随便打开一个页面，然后点击VisualEvent书签后，页面就变成这样了。鼠标移动到蓝色或者黄色边框的元素上，相应得逻辑代码就会出现。截图左下角蓝色长条上有一些有用的信息，最左边有个关闭的按钮。 3. 最后VisualEvent并不是万能的，Vue绑定的事件它就无法检测出来。当然Vue的事件是直接写在Dom上的，根本无需定位。工欲善其事必先利其器，多一个工具总是好的，万一真有需要呢。]]></content>
+  </entry>
+  <entry>
+    <title><![CDATA[可能被遗漏的https与http的知识点]]></title>
+    <url>%2Fyou-dont-know-https-and-http.html</url>
+    <content type="text"><![CDATA[HTTPS域向HTTP域发送请求会被浏览器直接拒绝，HTTP向HTTPS则不会例如在github pages页面，这是一个https页面，如果在这个页面向http发送请求，那么会直接被浏览器拒绝，并在控制台输出下面的报错信息。 1jquery-1.11.3.min.js:5 Mixed Content: The page at 'https://wangduanduan.github.io/ddddddd/' was loaded over HTTPS, but requested an insecure XMLHttpRequest endpoint 'http://cccccc/log/conf?token=welljoint'. This request has been blocked; the content must be served over HTTPS. 如果你在做第三方集成的系统，如果他们是在浏览器中直接调用你提供的接口，那么最好你使用https协议，这样无论对方是https还是http都可以访问。（相信我，这个很重要，我曾经经历过上线后遇到这个问题，然后连夜申请证书，把http升级到https的痛苦经历） HTTPS的默认端口是443，而不是443如果443端口已经被其他服务占用了，那么使用其他任何没有被占用的端口都可以用作HTTPS服务，只不过在请求的时候需要加上端口号罢了。 如何快速隐藏一个DOM元素选中一个元素，然后按h,这时候就会在选中的DOM元素上加上__web-inspector-hide-shortcut__类，这个类会让元素隐藏。谷歌和火狐上都可以，IE上没有试过行不行。]]></content>
+      <tags>
+        <tag>http</tag>
+        <tag>https</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[直接在Chrome DevTools调试Node.js]]></title>
     <url>%2Fdebug-nodejs-in-chrome-devtool.html</url>
     <content type="text"><![CDATA[英文好的，直接看原文 https://blog.hospodarets.com/nodejs-debugging-in-chrome-devtools 要求 Node.js 6.3+ Chrome 55+ 操作步骤 1 打开连接 chrome://flags/#enable-devtools-experiments 2 开启开发者工具实验性功能 3 重启浏览器 4 打开 DevTools Setting -&gt; Experiments tab 5 按6次shift后，隐藏的功能会出现，勾选”Node debugging” 运行程序必须要有 --inspect12345&gt; node --inspect wwwDebugger listening on port 9229.Warning: This is an experimental feature and could change at any time.To start debugging, open the following URL in Chrome: chrome-devtools://devtools/remote/serve_file/@60cd6e859b9f557d2312f5bf532f6aec5f284980/inspector.html?experiments=true&amp;v8only=true&amp;ws=localhost:9229/78a884f4-8c2e-459e-93f7-e1cbe87cf5cf 将这个地址粘贴到谷歌浏览器：chrome-devtools://devtools/remote/serve_file/@60cd6e859b9f557d2312f5bf532f6aec5f284980/inspector.html?experiments=true&amp;v8only=true&amp;ws=localhost:9229/78a884f4-8c2e-459e-93f7-e1cbe87cf5cf 程序后端输出的日志也回输出到谷歌浏览器的console里面，同时也可以在Sources里进行断点调试了。]]></content>

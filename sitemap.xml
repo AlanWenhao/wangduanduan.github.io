@@ -2,6 +2,48 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://wdd.js.org/nodejs-best-dockerfile.html</loc>
+    
+    <lastmod>2018-02-08T01:30:29.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://wdd.js.org/jquery-validation-vs-parsley.html</loc>
+    
+    <lastmod>2018-02-08T01:26:55.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://wdd.js.org/how-to-be-a-better-programer.html</loc>
+    
+    <lastmod>2018-02-08T01:22:00.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://wdd.js.org/clean-code-method.html</loc>
+    
+    <lastmod>2018-02-08T01:19:56.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://wdd.js.org/visual-event-tool.html</loc>
+    
+    <lastmod>2018-02-08T01:17:01.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://wdd.js.org/you-dont-know-https-and-http.html</loc>
+    
+    <lastmod>2018-02-08T01:14:52.000Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://wdd.js.org/debug-nodejs-in-chrome-devtool.html</loc>
     
     <lastmod>2018-02-07T06:19:15.000Z</lastmod>
