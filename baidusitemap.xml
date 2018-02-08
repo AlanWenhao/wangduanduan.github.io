@@ -4,6 +4,57 @@
 
     
   <url>
+    <loc>https://wdd.js.org/settimeout-to-splice-big-work.html</loc>
+    <lastmod>2018-02-08T06:11:01.000Z</lastmod>
+    <data>
+        <display>
+        <title>定时器学习：利用定时器分解耗时任务案例</title>
+        <pubTime>2018-02-08T06:09:54.000Z</pubTime>
+        
+        <tag>setTimeout</tag>
+         
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>https://wdd.js.org/js-functional-programming.html</loc>
+    <lastmod>2018-02-08T06:08:05.000Z</lastmod>
+    <data>
+        <display>
+        <title>关于JavaScropt函数式编程，我多么希望能早点看到这本书</title>
+        <pubTime>2018-02-08T06:06:22.000Z</pubTime>
+        
+        <tag>函数式编程</tag>
+         
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>https://wdd.js.org/gist-collect-code-snippets.html</loc>
+    <lastmod>2018-02-08T06:04:55.000Z</lastmod>
+    <data>
+        <display>
+        <title>积水成渊：用github gist收藏你的代码片段</title>
+        <pubTime>2018-02-08T06:02:40.000Z</pubTime>
+        
+        <tag>gist</tag>
+         
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>https://wdd.js.org/save-console-log-as-file.html</loc>
     <lastmod>2018-02-08T05:57:44.000Z</lastmod>
     <data>

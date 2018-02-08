@@ -2,6 +2,27 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://wdd.js.org/settimeout-to-splice-big-work.html</loc>
+    
+    <lastmod>2018-02-08T06:11:01.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://wdd.js.org/js-functional-programming.html</loc>
+    
+    <lastmod>2018-02-08T06:08:05.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://wdd.js.org/gist-collect-code-snippets.html</loc>
+    
+    <lastmod>2018-02-08T06:04:55.000Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://wdd.js.org/save-console-log-as-file.html</loc>
     
     <lastmod>2018-02-08T05:57:44.000Z</lastmod>
