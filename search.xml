@@ -1,6 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[tcp-high-recv-q-or-send-q-reasons]]></title>
+    <url>%2Ftcp-high-recv-q-or-send-q-reasons.html</url>
+    <content type="text"><![CDATA[参考文献 What is the reason for a high Recv-Q of a TCP connection? TCP buffers keep filling up (Recv-Q full): named unresponsive linux探秘:netstat中Recv-Q 深究 深入剖析 Socket——TCP 通信中由于底层队列填满而造成的死锁问题 netstat Recv-Q和Send-Q 深入剖析 Socket——数据传输的底层实现]]></content>
+  </entry>
+  <entry>
     <title><![CDATA[一些关于Hexo的疑问]]></title>
     <url>%2Fsomething-you-may-dont-konw-about-hexo.html</url>
     <content type="text"><![CDATA[文件名重复了怎么办？使用hexo new filename命令用来新建一个文章，但是如果你创建文章时，已经存在了同样的一个文件名，那么Hexo会怎样处理？ 报错 覆盖之前的文章 在文件名后面加个序号 实际上Hexo使用第三个方式来处理，例如 123// 执行下面命令两次，会产生两个文件 filename.md, filename-1.mdhexo new filenamehexo new filename 所以，在创建文章时，你根本不需要考虑文章重名的事情，Hexo会自动帮你加上序号后处理。]]></content>
@@ -550,9 +555,9 @@
     <url>%2Fvscode-vue-standardjs.html</url>
     <content type="text"><![CDATA[JavaScript Standard Style简介本工具通过以下三种方式为你（及你的团队）节省大量时间： 无须配置。 史上最便捷的统一代码风格的方式，轻松拥有。 自动代码格式化。 只需运行 standard –fix 从此和脏乱差的代码说再见。 提前发现风格及程序问题。 减少代码审查过程中反反复复的修改过程，节约时间。 无须犹豫。再也不用维护 .eslintrc, .jshintrc, or .jscsrc 。开箱即用。 安装：1npm i standard -g 关于JavaScript 代码规范, 你可以点击链接看一下。 如何在vscode中用JavaScript Standard Style风格去验证 vue文件实际上JavaScript Standard Style有一个FAQ, 说明了如何使用。 但是有一点非常重要的作者没有提到，就是eslint-plugin-html这个插件必须要安装3.x.x版本的, 现在eslint-plugin-html, 已经升级到4.x版本，默认不写版本号安装的就是4.x版本的，所以会出现问题。参考 ESLint v4 is only supported by eslint-plugin-html v3, so you can’t use eslint-plugin-html v1.5.2 with it (I should add a warning about this when trying to use the plugin with an incompatible version on ESLint). If you do not use ESLint v4, please provide more information (package.json, a gist to reproduce, …) 1234567891011121314151617181920212223242526// FAQHow to lint script tag in vue or html files?You can lint them with eslint-plugin-html, just install it first, then enable linting for those file types in settings.json with: "standard.validate": [ "javascript", "javascriptreact", "html" ], "standard.options": &#123; "plugins": ["html"] &#125;, "files.associations": &#123; "*.vue": "html" &#125;,If you want to enable autoFix for the new languages, you should enable it yourself: "standard.validate": [ "javascript", "javascriptreact", &#123; "language": "html", "autoFix": true &#125; ], "standard.options": &#123; "plugins": ["html"] &#125; 综上， 整理一下安装思路需要安装哪些包？ npm i -g standard npm i -g eslint-plugin-html@3.2.2 必须是3x版本 npm i -g eslint以上三个包都是全局安装的，如果你想看看全局安装了哪些包可以用npm list -g --depth=0查看 vscode config 如何写？1234567891011121314"standard.validate": [ "javascript", "javascriptreact", &#123; "language": "html", "autoFix": true &#125;],"standard.options": &#123; "plugin": ["html"]&#125;,"files.associations": &#123; "*.vue": "html"&#125;, 如何在保存文件时，自动使用standard格式化vue文件1"standard.autoFixOnSave": true 如果还不行怎么办？ 重启一下vscode 重启一下电脑 在此文后追加评论]]></content>
       <tags>
-        <tag>vscode</tag>
         <tag>vue</tag>
         <tag>standardjs</tag>
+        <tag>vscode</tag>
       </tags>
   </entry>
   <entry>

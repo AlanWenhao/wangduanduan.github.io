@@ -4,6 +4,21 @@
 
     
   <url>
+    <loc>https://wdd.js.org/tcp-high-recv-q-or-send-q-reasons.html</loc>
+    <lastmod>2018-02-08T14:07:33.000Z</lastmod>
+    <data>
+        <display>
+        <title>tcp-high-recv-q-or-send-q-reasons</title>
+        <pubTime>2018-02-08T13:58:31.000Z</pubTime>
+        
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>https://wdd.js.org/something-you-may-dont-konw-about-hexo.html</loc>
     <lastmod>2018-02-08T13:38:08.000Z</lastmod>
     <data>
@@ -1249,11 +1264,11 @@
         <title>如何在vscode中用standard style 风格去验证 vue文件</title>
         <pubTime>2018-01-29T06:02:53.000Z</pubTime>
         
-        <tag>vscode</tag>
-         
         <tag>vue</tag>
          
         <tag>standardjs</tag>
+         
+        <tag>vscode</tag>
          
          
            

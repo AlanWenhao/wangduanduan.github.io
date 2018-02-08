@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://wdd.js.org/"/>
-  <updated>2018-02-08T13:38:08.000Z</updated>
+  <updated>2018-02-08T14:07:33.000Z</updated>
   <id>https://wdd.js.org/</id>
   
   <author>
@@ -15,6 +15,28 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>tcp-high-recv-q-or-send-q-reasons</title>
+    <link href="https://wdd.js.org/tcp-high-recv-q-or-send-q-reasons.html"/>
+    <id>https://wdd.js.org/tcp-high-recv-q-or-send-q-reasons.html</id>
+    <published>2018-02-08T13:58:31.000Z</published>
+    <updated>2018-02-08T14:07:33.000Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="参考文献"><a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h1><ul><li><a href="https://stackoverflow.com/questions/34108513/what-is-the-reason-for-a-high-recv-q-of-a-tcp-connection" target="_blank" rel="noopener">What is the reason for a high Recv-Q of a TCP connection?</a></li><li><a href="https://unix.stackexchange.com/questions/100913/tcp-buffers-keep-filling-up-recv-q-full-named-unresponsive" target="_blank" rel="noopener">TCP buffers keep filling up (Recv-Q full): named unresponsive</a></li><li><a href="http://blog.51cto.com/191274/1592101" target="_blank" rel="noopener">linux探秘:netstat中Recv-Q 深究</a></li><li><a href="http://blog.51cto.com/191274/1592101" target="_blank" rel="noopener">深入剖析 Socket——TCP 通信中由于底层队列填满而造成的死锁问题</a></li><li><a href="http://blog.csdn.net/sjin_1314/article/details/9853163" target="_blank" rel="noopener">netstat Recv-Q和Send-Q</a></li><li><a href="http://wiki.jikexueyuan.com/project/java-socket/socket-advanced.html" target="_blank" rel="noopener">深入剖析 Socket——数据传输的底层实现</a></li></ul>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h1 id=&quot;参考文献&quot;&gt;&lt;a href=&quot;#参考文献&quot; class=&quot;headerlink&quot; title=&quot;参考文献&quot;&gt;&lt;/a&gt;参考文献&lt;/h1&gt;&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https://stackoverflow.com/questions/34108513/wh
+      
+    
+    </summary>
+    
+    
+  </entry>
   
   <entry>
     <title>一些关于Hexo的疑问</title>
@@ -478,28 +500,6 @@
       
         &lt;blockquote&gt;
 &lt;p&gt;在小朱元璋出生一个月后，父母为他取了一个名字（元时惯例）：朱重八，这个名字也可以叫做朱八八。我们这里再介绍一下，朱重八家族的名字，都很有特点。&lt;br&gt;朱重八高祖名字：朱百六；&lt;br&gt;朱重八曾祖名字：朱四九；&lt;br&gt;朱重八祖父名字：朱初一；&lt;br&gt;他
-      
-    
-    </summary>
-    
-    
-  </entry>
-  
-  <entry>
-    <title>定位神器：1秒定位DOM元素绑定的事件代码的位置</title>
-    <link href="https://wdd.js.org/visual-event-tool.html"/>
-    <id>https://wdd.js.org/visual-event-tool.html</id>
-    <published>2018-02-08T01:15:20.000Z</published>
-    <updated>2018-02-08T01:33:42.000Z</updated>
-    
-    <content type="html"><![CDATA[<p><img src="http://p3alsaatj.bkt.clouddn.com/20180208091603_Jkrh7t_Screenshot.jpeg" alt=""></p><h1 id="1-VisualEvent"><a href="#1-VisualEvent" class="headerlink" title="1 VisualEvent"></a>1 VisualEvent</h1><p>github地址： <a href="https://github.com/DataTables/VisualEvent" target="_blank" rel="noopener">https://github.com/DataTables/VisualEvent</a></p><h1 id="2-使用教程"><a href="#2-使用教程" class="headerlink" title="2 使用教程"></a>2 使用教程</h1><ol><li><p>打开<a href="http://sprymedia.co.uk/VisualEvent/这个页面，然后将visual" target="_blank" rel="noopener">http://sprymedia.co.uk/VisualEvent/这个页面，然后将visual</a> Event连接拖动到浏览器的书签栏上<br><img src="http://p3alsaatj.bkt.clouddn.com/20180208091616_EoSfZO_Screenshot.jpeg" alt=""></p></li><li><p>随便打开一个页面，然后点击VisualEvent书签后，页面就变成这样了。鼠标移动到蓝色或者黄色边框的元素上，相应得逻辑代码就会出现。截图左下角蓝色长条上有一些有用的信息，最左边有个关闭的按钮。</p></li></ol><p><img src="http://p3alsaatj.bkt.clouddn.com/20180208091627_KXpGYc_Screenshot.jpeg" alt=""></p><h1 id="3-最后"><a href="#3-最后" class="headerlink" title="3. 最后"></a>3. 最后</h1><p>VisualEvent并不是万能的，Vue绑定的事件它就无法检测出来。当然Vue的事件是直接写在Dom上的，根本无需定位。<br><code>工欲善其事必先利其器，多一个工具总是好的，万一真有需要呢。</code></p>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;p&gt;&lt;img src=&quot;http://p3alsaatj.bkt.clouddn.com/20180208091603_Jkrh7t_Screenshot.jpeg&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
-&lt;h1 id=&quot;1-VisualEvent&quot;&gt;&lt;a href=&quot;#1-VisualEv
       
     
     </summary>
