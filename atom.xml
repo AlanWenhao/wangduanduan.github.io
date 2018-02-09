@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://wdd.js.org/"/>
-  <updated>2018-02-09T05:55:43.000Z</updated>
+  <updated>2018-02-09T14:42:55.000Z</updated>
   <id>https://wdd.js.org/</id>
   
   <author>
@@ -15,6 +15,30 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>读书笔记-大前研一 专业主义</title>
+    <link href="https://wdd.js.org/booknote-professionalism.html"/>
+    <id>https://wdd.js.org/booknote-professionalism.html</id>
+    <published>2018-02-09T14:33:54.000Z</published>
+    <updated>2018-02-09T14:42:55.000Z</updated>
+    
+    <content type="html"><![CDATA[<p><img src="http://p3alsaatj.bkt.clouddn.com/20180209223906_Nh00QV_Csad9HyVUAABc1P.jpeg" alt=""></p><a id="more"></a><h1 id="你够专业吗？"><a href="#你够专业吗？" class="headerlink" title="你够专业吗？"></a>你够专业吗？</h1><blockquote><p>p20</p></blockquote><ol><li>控制情绪，理性行动</li><li>专业知识，专业技能</li><li>客户第一</li><li>好奇心</li><li>进取心</li><li>严格遵守记录</li></ol>]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;&lt;img src=&quot;http://p3alsaatj.bkt.clouddn.com/20180209223906_Nh00QV_Csad9HyVUAABc1P.jpeg&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
+    
+    </summary>
+    
+    
+      <category term="读书笔记" scheme="https://wdd.js.org/tags/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/"/>
+    
+      <category term="主页主义" scheme="https://wdd.js.org/tags/%E4%B8%BB%E9%A1%B5%E4%B8%BB%E4%B9%89/"/>
+    
+      <category term="未完成" scheme="https://wdd.js.org/tags/%E6%9C%AA%E5%AE%8C%E6%88%90/"/>
+    
+  </entry>
   
   <entry>
     <title>Vue+ElementUI 手把手教你做一个audio组件</title>
@@ -382,11 +406,11 @@
     </summary>
     
     
-      <category term="ElementUI" scheme="https://wdd.js.org/tags/ElementUI/"/>
-    
       <category term="Vue" scheme="https://wdd.js.org/tags/Vue/"/>
     
       <category term="Vue-router" scheme="https://wdd.js.org/tags/Vue-router/"/>
+    
+      <category term="ElementUI" scheme="https://wdd.js.org/tags/ElementUI/"/>
     
   </entry>
   
@@ -481,28 +505,6 @@
     
     
       <category term="浏览器插件" scheme="https://wdd.js.org/tags/%E6%B5%8F%E8%A7%88%E5%99%A8%E6%8F%92%E4%BB%B6/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>tcp-high-recv-q-or-send-q-reasons</title>
-    <link href="https://wdd.js.org/tcp-high-recv-q-or-send-q-reasons.html"/>
-    <id>https://wdd.js.org/tcp-high-recv-q-or-send-q-reasons.html</id>
-    <published>2018-02-08T13:58:31.000Z</published>
-    <updated>2018-02-09T07:48:17.000Z</updated>
-    
-    <content type="html"><![CDATA[<h1 id="1-参考文献"><a href="#1-参考文献" class="headerlink" title="1. 参考文献"></a>1. 参考文献</h1><ul><li><a href="https://stackoverflow.com/questions/34108513/what-is-the-reason-for-a-high-recv-q-of-a-tcp-connection" target="_blank" rel="noopener">What is the reason for a high Recv-Q of a TCP connection?</a></li><li><a href="https://unix.stackexchange.com/questions/100913/tcp-buffers-keep-filling-up-recv-q-full-named-unresponsive" target="_blank" rel="noopener">TCP buffers keep filling up (Recv-Q full): named unresponsive</a></li><li><a href="http://blog.51cto.com/191274/1592101" target="_blank" rel="noopener">linux探秘:netstat中Recv-Q 深究</a></li><li><a href="http://blog.51cto.com/191274/1592101" target="_blank" rel="noopener">深入剖析 Socket——TCP 通信中由于底层队列填满而造成的死锁问题</a></li><li><a href="http://blog.csdn.net/sjin_1314/article/details/9853163" target="_blank" rel="noopener">netstat Recv-Q和Send-Q</a></li><li><a href="http://wiki.jikexueyuan.com/project/java-socket/socket-advanced.html" target="_blank" rel="noopener">深入剖析 Socket——数据传输的底层实现</a></li><li><a href="https://stackoverflow.com/questions/36466744/use-of-recv-q-and-send-q" target="_blank" rel="noopener">Use of Recv-Q and Send-Q</a></li></ul>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;h1 id=&quot;1-参考文献&quot;&gt;&lt;a href=&quot;#1-参考文献&quot; class=&quot;headerlink&quot; title=&quot;1. 参考文献&quot;&gt;&lt;/a&gt;1. 参考文献&lt;/h1&gt;&lt;ul&gt;
-&lt;li&gt;&lt;a href=&quot;https://stackoverflow.com/questions/3
-      
-    
-    </summary>
-    
     
   </entry>
   

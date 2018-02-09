@@ -4,6 +4,27 @@
 
     
   <url>
+    <loc>https://wdd.js.org/booknote-professionalism.html</loc>
+    <lastmod>2018-02-09T14:42:55.000Z</lastmod>
+    <data>
+        <display>
+        <title>读书笔记-大前研一 专业主义</title>
+        <pubTime>2018-02-09T14:33:54.000Z</pubTime>
+        
+        <tag>读书笔记</tag>
+         
+        <tag>主页主义</tag>
+         
+        <tag>未完成</tag>
+         
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>https://wdd.js.org/ztree-note.html</loc>
     <lastmod>2018-02-09T07:49:34.000Z</lastmod>
     <data>
@@ -136,11 +157,11 @@
         <title>Vue + Vue-router + Element-ui 搭建一个非常简单的dashboard demo</title>
         <pubTime>2018-02-09T04:02:05.000Z</pubTime>
         
-        <tag>ElementUI</tag>
-         
         <tag>Vue</tag>
          
         <tag>Vue-router</tag>
+         
+        <tag>ElementUI</tag>
          
          
            
@@ -240,9 +261,9 @@
         <title>无坚不摧：打造极大提高工作效率的装备库</title>
         <pubTime>2018-02-02T01:24:43.000Z</pubTime>
         
-        <tag>git</tag>
-         
         <tag>未完成</tag>
+         
+        <tag>git</tag>
          
         <tag>gow</tag>
          
@@ -280,9 +301,9 @@
         <title>Think With Stream</title>
         <pubTime>2018-02-05T03:28:59.000Z</pubTime>
         
-        <tag>idea</tag>
-         
         <tag>未完成</tag>
+         
+        <tag>idea</tag>
          
          
            
@@ -494,9 +515,9 @@
         <title>读书笔记：浪潮之巅</title>
         <pubTime>2018-02-02T05:02:23.000Z</pubTime>
         
-        <tag>未完成</tag>
-         
         <tag>读书笔记</tag>
+         
+        <tag>未完成</tag>
          
         <tag>浪潮之巅</tag>
          
@@ -1077,9 +1098,9 @@
         <title>Git化文档管理</title>
         <pubTime>2018-02-06T02:52:08.000Z</pubTime>
         
-        <tag>git</tag>
-         
         <tag>未完成</tag>
+         
+        <tag>git</tag>
          
         <tag>gitlab</tag>
          
@@ -1242,9 +1263,9 @@
         <title>不要成为某个技术的死忠粉</title>
         <pubTime>2018-02-05T03:58:25.000Z</pubTime>
         
-        <tag>idea</tag>
-         
         <tag>未完成</tag>
+         
+        <tag>idea</tag>
          
          
            
