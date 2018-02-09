@@ -2,6 +2,34 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://wdd.js.org/one-command-create-static-file-server.html</loc>
+    
+    <lastmod>2018-02-09T05:02:53.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://wdd.js.org/top-javascript-tools-in-2017.html</loc>
+    
+    <lastmod>2018-02-09T05:00:12.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://wdd.js.org/webrtc-tutorial-simple-video-chat.html</loc>
+    
+    <lastmod>2018-02-09T04:58:11.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://wdd.js.org/how-to-write-a-technical-document.html</loc>
+    
+    <lastmod>2018-02-09T04:54:55.000Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://wdd.js.org/vue-vue-router-elementui-stupid-simple-dashboard.html</loc>
     
     <lastmod>2018-02-09T04:07:38.000Z</lastmod>
