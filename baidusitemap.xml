@@ -4,6 +4,59 @@
 
     
   <url>
+    <loc>https://wdd.js.org/vue-vue-router-elementui-stupid-simple-dashboard.html</loc>
+    <lastmod>2018-02-09T04:07:38.000Z</lastmod>
+    <data>
+        <display>
+        <title>Vue + Vue-router + Element-ui 搭建一个非常简单的dashboard demo</title>
+        <pubTime>2018-02-09T04:02:05.000Z</pubTime>
+        
+        <tag>Vue</tag>
+         
+        <tag>Vue-router</tag>
+         
+        <tag>ElementUI</tag>
+         
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>https://wdd.js.org/axios-best-practices.html</loc>
+    <lastmod>2018-02-09T04:00:30.000Z</lastmod>
+    <data>
+        <display>
+        <title>axios进阶：用最优雅的方式写ajax请求</title>
+        <pubTime>2018-02-09T03:59:25.000Z</pubTime>
+        
+        <tag>axios</tag>
+         
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>https://wdd.js.org/nodejs-project-best-struct.html</loc>
+    <lastmod>2018-02-09T03:59:58.000Z</lastmod>
+    <data>
+        <display>
+        <title>笔记 node最佳实践1 项目工程最佳实践</title>
+        <pubTime>2018-02-09T03:56:11.000Z</pubTime>
+        
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>https://wdd.js.org/grep-awk-search-log.html</loc>
     <lastmod>2018-02-09T02:46:12.000Z</lastmod>
     <data>
@@ -1213,9 +1266,9 @@
         <title>组织在召唤：如何免费获取一个js.org的二级域名</title>
         <pubTime>2018-01-29T10:08:03.000Z</pubTime>
         
-        <tag>hexo</tag>
-         
         <tag>jsorg</tag>
+         
+        <tag>hexo</tag>
          
          
            
