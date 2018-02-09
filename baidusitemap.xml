@@ -4,6 +4,27 @@
 
     
   <url>
+    <loc>https://wdd.js.org/booknote-out-of-control.html</loc>
+    <lastmod>2018-02-09T15:13:38.000Z</lastmod>
+    <data>
+        <display>
+        <title>读书笔记 凯文 凯利 《失控》</title>
+        <pubTime>2018-02-09T14:45:17.000Z</pubTime>
+        
+        <tag>读书笔记</tag>
+         
+        <tag>失控</tag>
+         
+        <tag>未完成</tag>
+         
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>https://wdd.js.org/booknote-professionalism.html</loc>
     <lastmod>2018-02-09T14:44:18.000Z</lastmod>
     <data>
@@ -13,9 +34,9 @@
         
         <tag>读书笔记</tag>
          
-        <tag>主页主义</tag>
-         
         <tag>未完成</tag>
+         
+        <tag>主页主义</tag>
          
          
            
@@ -157,11 +178,11 @@
         <title>Vue + Vue-router + Element-ui 搭建一个非常简单的dashboard demo</title>
         <pubTime>2018-02-09T04:02:05.000Z</pubTime>
         
+        <tag>ElementUI</tag>
+         
         <tag>Vue</tag>
          
         <tag>Vue-router</tag>
-         
-        <tag>ElementUI</tag>
          
          
            
