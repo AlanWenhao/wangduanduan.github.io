@@ -93,7 +93,7 @@
 <meta property="og:image" content="http://p3alsaatj.bkt.clouddn.com/20180208135709_Z3SQQV_Screenshot.jpeg">
 <meta property="og:image" content="http://p3alsaatj.bkt.clouddn.com/20180208135722_EwunDY_Screenshot.jpeg">
 <meta property="og:image" content="http://p3alsaatj.bkt.clouddn.com/20180208135732_Ltowzp_Screenshot.jpeg">
-<meta property="og:updated_time" content="2018-02-08T05:57:44.000Z">
+<meta property="og:updated_time" content="2018-02-09T07:47:38.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="终于找到你！如何将前端console.log的日志保存成文件?">
 <meta name="twitter:description" content="本篇文章来自一个需求，前端websocket会收到各种消息，但是调试的时候，我希望把websoekt推送过来的消息都保存到一个文件里，如果出问题的时候，我可以把这些消息的日志文件提交给后端开发区分析错误。但是在浏览器里，js一般是不能写文件的。鼠标另存为的方法也是不太好，因为会保存所有的console.log的输出。于是，终于找到这个debugout.js。  debugout.js的原理是将所">
@@ -370,7 +370,7 @@
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  821 字
+                  827 字
                 </span>
               
 
@@ -412,7 +412,7 @@
 </blockquote>
 <p><code>debugout.js的原理是将所有日志序列化后，保存到一个变量里。当然这个变量不会无限大，因为默认的最大日志限制是2500行，这个是可配置的。另外，debugout.js也支持在localStorage里存储日志的。</code></p>
 <p><img src="http://p3alsaatj.bkt.clouddn.com/20180208135709_Z3SQQV_Screenshot.jpeg" alt=""></p>
-<h1 id="debugout-js"><a href="#debugout-js" class="headerlink" title="debugout.js"></a><a href="https://github.com/inorganik/debugout.js" target="_blank" rel="noopener">debugout.js</a></h1><blockquote>
+<h1 id="1-debugout-js"><a href="#1-debugout-js" class="headerlink" title="1. debugout.js"></a>1. <a href="https://github.com/inorganik/debugout.js" target="_blank" rel="noopener">debugout.js</a></h1><blockquote>
 <p>一般来说，可以使用打开console面板，然后右键save，是可以将console.log输出的信息另存为log文件的。但是这就把所有的日志都包含进来了，如何只保存我想要的日志呢？</p>
 </blockquote>
 <p>（调试输出）从您的日志中生成可以搜索，时间戳，下载等的文本文件。 参见下面的一些例子。</p>
@@ -430,9 +430,9 @@
 <p><img src="http://p3alsaatj.bkt.clouddn.com/20180208135722_EwunDY_Screenshot.jpeg" alt=""></p>
 <p>官方提供的demo示例，欢迎试玩。<a href="http://inorganik.github.io/debugout.js/" target="_blank" rel="noopener">http://inorganik.github.io/debugout.js/</a></p>
 <p><img src="http://p3alsaatj.bkt.clouddn.com/20180208135732_Ltowzp_Screenshot.jpeg" alt=""></p>
-<h1 id="使用"><a href="#使用" class="headerlink" title="使用"></a>使用</h1><p>在脚本顶部的全局命名空间中创建一个新的调试对象，并使用debugout的日志方法替换所有控制台日志方法：</p>
+<h1 id="2-使用"><a href="#2-使用" class="headerlink" title="2. 使用"></a>2. 使用</h1><p>在脚本顶部的全局命名空间中创建一个新的调试对象，并使用debugout的日志方法替换所有控制台日志方法：</p>
 <figure class="highlight maxima"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">var</span> bugout = <span class="built_in">new</span> debugout();</span><br><span class="line"></span><br><span class="line">// instead of console.<span class="built_in">log</span>('<span class="built_in">some</span> object <span class="keyword">or</span> <span class="built_in">string</span>')</span><br><span class="line">bugout.<span class="built_in">log</span>('<span class="built_in">some</span> object <span class="keyword">or</span> <span class="built_in">string</span>');</span><br></pre></td></tr></table></figure>
-<h1 id="API"><a href="#API" class="headerlink" title="API"></a>API</h1><ul>
+<h1 id="3-API"><a href="#3-API" class="headerlink" title="3. API"></a>3. API</h1><ul>
 <li>log() -像console.log(), 但是会自动存储</li>
 <li>getLog() - 返回所有日志</li>
 <li>tail(numLines) - 返回尾部执行行日志，默认100行</li>
@@ -442,9 +442,9 @@
 <li>clear() - 清空日志</li>
 <li>determineType() - 一个更细粒度的typeof为您提供方便</li>
 </ul>
-<h1 id="可选配置"><a href="#可选配置" class="headerlink" title="可选配置"></a>可选配置</h1><p>···<br>// log in real time (forwards to console.log)<br>self.realTimeLoggingOn = true;<br>// insert a timestamp in front of each log<br>self.useTimestamps = false;<br>// store the output using window.localStorage() and continuously add to the same log each session<br>self.useLocalStorage = false;<br>// set to false after you’re done debugging to avoid the log eating up memory<br>self.recordLogs = true;<br>// to avoid the log eating up potentially endless memory<br>self.autoTrim = true;<br>// if autoTrim is true, this many most recent lines are saved<br>self.maxLines = 2500;<br>// how many lines tail() will retrieve<br>self.tailNumLines = 100;<br>// filename of log downloaded with downloadLog()<br>self.logFilename = ‘log.txt’;<br>// max recursion depth for logged objects<br>self.maxDepth = 25;<br>···</p>
-<h1 id="项目地址"><a href="#项目地址" class="headerlink" title="项目地址"></a>项目地址</h1><p><a href="https://github.com/inorganik/debugout.js" target="_blank" rel="noopener">https://github.com/inorganik/debugout.js</a></p>
-<h1 id="另外"><a href="#另外" class="headerlink" title="另外"></a>另外</h1><p>我自己也模仿debugout.js写了一个日志保存的项目，该项目可以在ie10及以上下载日志。<br>debugout.js在ie浏览器上下载日志的方式是有问题的。<br>项目地址：<a href="https://github.com/wangduanduan/log4b.git" target="_blank" rel="noopener">https://github.com/wangduanduan/log4b.git</a></p>
+<h1 id="4-可选配置"><a href="#4-可选配置" class="headerlink" title="4. 可选配置"></a>4. 可选配置</h1><p>···<br>// log in real time (forwards to console.log)<br>self.realTimeLoggingOn = true;<br>// insert a timestamp in front of each log<br>self.useTimestamps = false;<br>// store the output using window.localStorage() and continuously add to the same log each session<br>self.useLocalStorage = false;<br>// set to false after you’re done debugging to avoid the log eating up memory<br>self.recordLogs = true;<br>// to avoid the log eating up potentially endless memory<br>self.autoTrim = true;<br>// if autoTrim is true, this many most recent lines are saved<br>self.maxLines = 2500;<br>// how many lines tail() will retrieve<br>self.tailNumLines = 100;<br>// filename of log downloaded with downloadLog()<br>self.logFilename = ‘log.txt’;<br>// max recursion depth for logged objects<br>self.maxDepth = 25;<br>···</p>
+<h1 id="5-项目地址"><a href="#5-项目地址" class="headerlink" title="5. 项目地址"></a>5. 项目地址</h1><p><a href="https://github.com/inorganik/debugout.js" target="_blank" rel="noopener">https://github.com/inorganik/debugout.js</a></p>
+<h1 id="6-另外"><a href="#6-另外" class="headerlink" title="6. 另外"></a>6. 另外</h1><p>我自己也模仿debugout.js写了一个日志保存的项目，该项目可以在ie10及以上下载日志。<br>debugout.js在ie浏览器上下载日志的方式是有问题的。<br>项目地址：<a href="https://github.com/wangduanduan/log4b.git" target="_blank" rel="noopener">https://github.com/wangduanduan/log4b.git</a></p>
 
       
     </div>
@@ -673,7 +673,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#debugout-js"><span class="nav-text">debugout.js</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#使用"><span class="nav-text">使用</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#API"><span class="nav-text">API</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#可选配置"><span class="nav-text">可选配置</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#项目地址"><span class="nav-text">项目地址</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#另外"><span class="nav-text">另外</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#1-debugout-js"><span class="nav-text">1. debugout.js</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#2-使用"><span class="nav-text">2. 使用</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#3-API"><span class="nav-text">3. API</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#4-可选配置"><span class="nav-text">4. 可选配置</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#5-项目地址"><span class="nav-text">5. 项目地址</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#6-另外"><span class="nav-text">6. 另外</span></a></li></ol></div>
             
 
           </div>

@@ -82,18 +82,18 @@
 
 
 
-<meta name="description" content="visibilitychange事件触发条件：浏览器标签页被隐藏或显示的时候会触发visibilitychange事件. 使用场景：当标签页显示或者隐藏时，触发一些业务逻辑 123document.addEventListener(&quot;visibilitychange&quot;, function() &amp;#123;  console.log( document.visibilityState );&amp;#125">
+<meta name="description" content="1. visibilitychange事件触发条件：浏览器标签页被隐藏或显示的时候会触发visibilitychange事件. 使用场景：当标签页显示或者隐藏时，触发一些业务逻辑 123document.addEventListener(&quot;visibilitychange&quot;, function() &amp;#123;  console.log( document.visibilityState );&amp;#">
 <meta name="keywords" content="王端端, 洞香春, wellClient">
 <meta property="og:type" content="article">
 <meta property="og:title" content="不常用却很有妙用的事件及方法">
 <meta property="og:url" content="https://wdd.js.org/browser-events.html">
 <meta property="og:site_name" content="洞香春">
-<meta property="og:description" content="visibilitychange事件触发条件：浏览器标签页被隐藏或显示的时候会触发visibilitychange事件. 使用场景：当标签页显示或者隐藏时，触发一些业务逻辑 123document.addEventListener(&quot;visibilitychange&quot;, function() &amp;#123;  console.log( document.visibilityState );&amp;#125">
+<meta property="og:description" content="1. visibilitychange事件触发条件：浏览器标签页被隐藏或显示的时候会触发visibilitychange事件. 使用场景：当标签页显示或者隐藏时，触发一些业务逻辑 123document.addEventListener(&quot;visibilitychange&quot;, function() &amp;#123;  console.log( document.visibilityState );&amp;#">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-01-29T06:15:59.000Z">
+<meta property="og:updated_time" content="2018-02-09T05:58:56.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="不常用却很有妙用的事件及方法">
-<meta name="twitter:description" content="visibilitychange事件触发条件：浏览器标签页被隐藏或显示的时候会触发visibilitychange事件. 使用场景：当标签页显示或者隐藏时，触发一些业务逻辑 123document.addEventListener(&quot;visibilitychange&quot;, function() &amp;#123;  console.log( document.visibilityState );&amp;#125">
+<meta name="twitter:description" content="1. visibilitychange事件触发条件：浏览器标签页被隐藏或显示的时候会触发visibilitychange事件. 使用场景：当标签页显示或者隐藏时，触发一些业务逻辑 123document.addEventListener(&quot;visibilitychange&quot;, function() &amp;#123;  console.log( document.visibilityState );&amp;#">
 
 
 
@@ -366,7 +366,7 @@
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  538 字
+                  542 字
                 </span>
               
 
@@ -403,16 +403,16 @@
       
 
       
-        <h1 id="visibilitychange事件"><a href="#visibilitychange事件" class="headerlink" title="visibilitychange事件"></a><a href="https://developer.mozilla.org/zh-CN/docs/Web/Events/visibilitychange" target="_blank" rel="noopener">visibilitychange事件</a></h1><p>触发条件：<code>浏览器标签页被隐藏或显示的时候会触发visibilitychange事件.</code></p>
+        <h1 id="1-visibilitychange事件"><a href="#1-visibilitychange事件" class="headerlink" title="1. visibilitychange事件"></a>1. <a href="https://developer.mozilla.org/zh-CN/docs/Web/Events/visibilitychange" target="_blank" rel="noopener">visibilitychange事件</a></h1><p>触发条件：<code>浏览器标签页被隐藏或显示的时候会触发visibilitychange事件.</code></p>
 <p>使用场景：<code>当标签页显示或者隐藏时，触发一些业务逻辑</code></p>
 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">document</span>.addEventListener(<span class="string">"visibilitychange"</span>, <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">  <span class="built_in">console</span>.log( <span class="built_in">document</span>.visibilityState );</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
-<h1 id="storage事件"><a href="#storage事件" class="headerlink" title="storage事件"></a><a href="https://developer.mozilla.org/en-US/docs/Web/Events/storage" target="_blank" rel="noopener">storage事件</a></h1><p>触发条件：<code>使用localStorage or sessionStorage存储或者修改某个本地存储时</code></p>
+<h1 id="2-storage事件"><a href="#2-storage事件" class="headerlink" title="2. storage事件"></a>2. <a href="https://developer.mozilla.org/en-US/docs/Web/Events/storage" target="_blank" rel="noopener">storage事件</a></h1><p>触发条件：<code>使用localStorage or sessionStorage存储或者修改某个本地存储时</code></p>
 <p>使用场景：<code>标签页间通信</code></p>
 <figure class="highlight 1c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// AB页面同源</span></span><br><span class="line"><span class="comment">// 在A 页面</span></span><br><span class="line">window.addEventListener('storage', (e) =&gt; &#123;console.<span class="built_in">log</span>(e)&#125;)</span><br><span class="line"></span><br><span class="line"><span class="comment">// 在B 页面，向120打个电话</span></span><br><span class="line">localStorage.setItem('makeCall','120')</span><br><span class="line"></span><br><span class="line"><span class="comment">// 然后可以在A页面间有输出, 可以看出A页面 收到了B页面的通知</span></span><br><span class="line">...key: <span class="string">"makeCall"</span>, oldValue: <span class="string">"119"</span>, newValue: <span class="string">"120"</span>, ...</span><br></pre></td></tr></table></figure>
-<h1 id="beforeunload事件"><a href="#beforeunload事件" class="headerlink" title="beforeunload事件"></a><a href="https://developer.mozilla.org/en-US/docs/Web/Events/beforeunload" target="_blank" rel="noopener">beforeunload事件</a></h1><p>触发条件：<code>当页面的资源将要卸载(及刷新或者关闭标签页前). 当页面依然可见，并且该事件可以被取消只时</code></p>
+<h1 id="3-beforeunload事件"><a href="#3-beforeunload事件" class="headerlink" title="3. beforeunload事件"></a>3. <a href="https://developer.mozilla.org/en-US/docs/Web/Events/beforeunload" target="_blank" rel="noopener">beforeunload事件</a></h1><p>触发条件：<code>当页面的资源将要卸载(及刷新或者关闭标签页前). 当页面依然可见，并且该事件可以被取消只时</code></p>
 <p>使用场景：<code>关闭或者刷新页面时弹窗确认</code>，<code>关闭页面时向后端发送报告等</code></p>
 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">window</span>.addEventListener(<span class="string">"beforeunload"</span>, <span class="function"><span class="keyword">function</span> (<span class="params">e</span>) </span>&#123;</span><br><span class="line">  <span class="keyword">var</span> confirmationMessage = <span class="string">"\o/"</span>;</span><br><span class="line"></span><br><span class="line">  e.returnValue = confirmationMessage;     <span class="comment">// Gecko, Trident, Chrome 34+</span></span><br><span class="line">  <span class="keyword">return</span> confirmationMessage;              <span class="comment">// Gecko, WebKit, Chrome &lt;34</span></span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
-<h1 id="navigator-sendBeacon"><a href="#navigator-sendBeacon" class="headerlink" title="navigator.sendBeacon"></a><a href="https://developer.mozilla.org/zh-CN/docs/Web/API/Navigator/sendBeacon" target="_blank" rel="noopener">navigator.sendBeacon</a></h1><p>这个方法主要用于满足 统计和诊断代码 的需要，这些代码通常尝试在卸载（unload）文档之前向web服务器发送数据。过早的发送数据可能导致错过收集数据的机会。然而， 对于开发者来说保证在文档卸载期间发送数据一直是一个困难。因为用户代理通常会忽略在卸载事件处理器中产生的异步 XMLHttpRequest 。</p>
+<h1 id="4-navigator-sendBeacon"><a href="#4-navigator-sendBeacon" class="headerlink" title="4. navigator.sendBeacon"></a>4. <a href="https://developer.mozilla.org/zh-CN/docs/Web/API/Navigator/sendBeacon" target="_blank" rel="noopener">navigator.sendBeacon</a></h1><p>这个方法主要用于满足 统计和诊断代码 的需要，这些代码通常尝试在卸载（unload）文档之前向web服务器发送数据。过早的发送数据可能导致错过收集数据的机会。然而， 对于开发者来说保证在文档卸载期间发送数据一直是一个困难。因为用户代理通常会忽略在卸载事件处理器中产生的异步 XMLHttpRequest 。</p>
 <p>使用 sendBeacon() 方法，将会使用户代理在有机会时异步地向服务器发送数据，同时不会延迟页面的卸载或影响下一导航的载入性能。这就解决了提交分析数据时的所有的问题：使它可靠，异步并且不会影响下一页面的加载。此外，代码实际上还要比其他技术简单！</p>
 <p><code>注意：该方法在IE和safari没有实现</code></p>
 <p>使用场景：<code>发送崩溃报告</code></p>
@@ -638,7 +638,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#visibilitychange事件"><span class="nav-text">visibilitychange事件</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#storage事件"><span class="nav-text">storage事件</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#beforeunload事件"><span class="nav-text">beforeunload事件</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#navigator-sendBeacon"><span class="nav-text">navigator.sendBeacon</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#1-visibilitychange事件"><span class="nav-text">1. visibilitychange事件</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#2-storage事件"><span class="nav-text">2. storage事件</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#3-beforeunload事件"><span class="nav-text">3. beforeunload事件</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#4-navigator-sendBeacon"><span class="nav-text">4. navigator.sendBeacon</span></a></li></ol></div>
             
 
           </div>

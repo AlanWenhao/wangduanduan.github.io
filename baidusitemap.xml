@@ -4,33 +4,14 @@
 
     
   <url>
-    <loc>https://wdd.js.org/68-skills-to-write-better-js-code.html</loc>
-    <lastmod>2018-02-09T05:53:54.000Z</lastmod>
+    <loc>https://wdd.js.org/ztree-note.html</loc>
+    <lastmod>2018-02-09T07:49:34.000Z</lastmod>
     <data>
         <display>
-        <title>读书笔记：编写高质量javascript的68个方法</title>
-        <pubTime>2018-02-07T02:17:16.000Z</pubTime>
+        <title>ztree-note</title>
+        <pubTime>2018-01-29T13:47:32.000Z</pubTime>
         
-         
-           
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>https://wdd.js.org/vue-elementui-audio-component.html</loc>
-    <lastmod>2018-02-09T05:47:51.000Z</lastmod>
-    <data>
-        <display>
-        <title>Vue+ElementUI 手把手教你做一个audio组件</title>
-        <pubTime>2018-02-09T05:44:13.000Z</pubTime>
-        
-        <tag>audio</tag>
-         
-        <tag>vue</tag>
-         
-        <tag>ElementUI</tag>
+        <tag>ztree</tag>
          
          
            
@@ -40,48 +21,31 @@
 
     
   <url>
-    <loc>https://wdd.js.org/export-https-certificate-in-browser.html</loc>
-    <lastmod>2018-02-09T05:36:10.000Z</lastmod>
+    <loc>https://wdd.js.org/you-dont-need.html</loc>
+    <lastmod>2018-02-09T07:49:30.000Z</lastmod>
     <data>
         <display>
-        <title>如何从浏览器导出HTTPS证书</title>
-        <pubTime>2018-02-09T05:33:38.000Z</pubTime>
+        <title>You-Dont-Need 你不需要系列</title>
+        <pubTime>2018-01-29T06:11:36.000Z</pubTime>
+        
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>https://wdd.js.org/you-dont-know-https-and-http.html</loc>
+    <lastmod>2018-02-09T07:49:26.000Z</lastmod>
+    <data>
+        <display>
+        <title>可能被遗漏的https与http的知识点</title>
+        <pubTime>2018-02-08T01:10:59.000Z</pubTime>
         
         <tag>https</tag>
          
-         
-           
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>https://wdd.js.org/css-form-readonly.html</loc>
-    <lastmod>2018-02-09T05:32:09.000Z</lastmod>
-    <data>
-        <display>
-        <title>奇技淫巧：css实现整个表单只读 form readonly</title>
-        <pubTime>2018-02-09T05:31:38.000Z</pubTime>
-        
-        <tag>表单</tag>
-         
-         
-           
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>https://wdd.js.org/json-stringify-powerful.html</loc>
-    <lastmod>2018-02-09T05:31:24.000Z</lastmod>
-    <data>
-        <display>
-        <title>你不知道的JSON.stringify()妙用</title>
-        <pubTime>2018-02-09T05:27:15.000Z</pubTime>
-        
-        <tag>json</tag>
+        <tag>http</tag>
          
          
            
@@ -92,7 +56,7 @@
     
   <url>
     <loc>https://wdd.js.org/write-configurable-nodejs-http-proxy.html</loc>
-    <lastmod>2018-02-09T05:25:34.000Z</lastmod>
+    <lastmod>2018-02-09T07:49:21.000Z</lastmod>
     <data>
         <display>
         <title>手写可配置的express & nodejs的代理</title>
@@ -108,133 +72,16 @@
 
     
   <url>
-    <loc>https://wdd.js.org/mac-sublime-shortcut-collector.html</loc>
-    <lastmod>2018-02-09T05:22:54.000Z</lastmod>
+    <loc>https://wdd.js.org/windows-powerful-tools.html</loc>
+    <lastmod>2018-02-09T07:49:13.000Z</lastmod>
     <data>
         <display>
-        <title>mac-sublime-shortcut-collector</title>
-        <pubTime>2018-02-09T05:22:22.000Z</pubTime>
+        <title>自从装了windows神器，再也不用羡慕mac了</title>
+        <pubTime>2018-02-07T01:24:18.000Z</pubTime>
         
-        <tag>sublime</tag>
+        <tag>windows</tag>
          
-         
-           
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>https://wdd.js.org/my-chrome-extensions-collection.html</loc>
-    <lastmod>2018-02-09T05:20:25.000Z</lastmod>
-    <data>
-        <display>
-        <title>我的谷歌浏览器插件集（15个）</title>
-        <pubTime>2018-02-09T02:27:34.000Z</pubTime>
-        
-        <tag>浏览器插件</tag>
-         
-         
-           
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>https://wdd.js.org/echarts-highlight-china-map.html</loc>
-    <lastmod>2018-02-09T05:18:17.000Z</lastmod>
-    <data>
-        <display>
-        <title>ECharts 轮流高亮中国地图各个省份</title>
-        <pubTime>2018-02-09T05:16:53.000Z</pubTime>
-        
-        <tag>echarts</tag>
-         
-         
-           
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>https://wdd.js.org/python3-list-methods-collect.html</loc>
-    <lastmod>2018-02-09T05:15:58.000Z</lastmod>
-    <data>
-        <display>
-        <title>Python3笔记 列表方法详解</title>
-        <pubTime>2018-02-09T05:15:13.000Z</pubTime>
-        
-        <tag>python3</tag>
-         
-         
-           
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>https://wdd.js.org/real-reason-of-my-bugs.html</loc>
-    <lastmod>2018-02-09T05:14:05.000Z</lastmod>
-    <data>
-        <display>
-        <title>我苦苦寻找诡异的bug原因，其实是我的无知</title>
-        <pubTime>2018-02-09T05:13:12.000Z</pubTime>
-        
-        <tag>思想者</tag>
-         
-         
-           
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>https://wdd.js.org/centos7-init-install-packages.html</loc>
-    <lastmod>2018-02-09T05:11:31.000Z</lastmod>
-    <data>
-        <display>
-        <title>centos7 初始化软件安装及服务管理</title>
-        <pubTime>2018-02-09T05:10:42.000Z</pubTime>
-        
-        <tag>centos7</tag>
-         
-         
-           
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>https://wdd.js.org/one-command-create-static-file-server.html</loc>
-    <lastmod>2018-02-09T05:02:53.000Z</lastmod>
-    <data>
-        <display>
-        <title>一行命令搭建简易静态文件http服务器</title>
-        <pubTime>2018-02-09T05:01:14.000Z</pubTime>
-        
-        <tag>静态文件服务器</tag>
-         
-         
-           
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>https://wdd.js.org/top-javascript-tools-in-2017.html</loc>
-    <lastmod>2018-02-09T05:00:12.000Z</lastmod>
-    <data>
-        <display>
-        <title>top-javascript-tools-in-2017</title>
-        <pubTime>2018-02-09T04:59:38.000Z</pubTime>
-        
-        <tag>工具</tag>
+        <tag>神器</tag>
          
          
            
@@ -245,7 +92,7 @@
     
   <url>
     <loc>https://wdd.js.org/webrtc-tutorial-simple-video-chat.html</loc>
-    <lastmod>2018-02-09T04:58:11.000Z</lastmod>
+    <lastmod>2018-02-09T07:49:09.000Z</lastmod>
     <data>
         <display>
         <title>webrtc-tutorial-simple-video-chat</title>
@@ -261,14 +108,18 @@
 
     
   <url>
-    <loc>https://wdd.js.org/how-to-write-a-technical-document.html</loc>
-    <lastmod>2018-02-09T04:54:55.000Z</lastmod>
+    <loc>https://wdd.js.org/vue-ws-monitor-agent-status.html</loc>
+    <lastmod>2018-02-09T07:49:04.000Z</lastmod>
     <data>
         <display>
-        <title>如何写好技术文档?</title>
-        <pubTime>2018-02-09T04:52:57.000Z</pubTime>
+        <title>Vue+websocket+stompjs 实时监控坐席状态demo</title>
+        <pubTime>2018-02-07T01:36:49.000Z</pubTime>
         
-        <tag>文档</tag>
+        <tag>Vue</tag>
+         
+        <tag>WebSocket</tag>
+         
+        <tag>stompjs</tag>
          
          
            
@@ -279,7 +130,7 @@
     
   <url>
     <loc>https://wdd.js.org/vue-vue-router-elementui-stupid-simple-dashboard.html</loc>
-    <lastmod>2018-02-09T04:07:38.000Z</lastmod>
+    <lastmod>2018-02-09T07:49:00.000Z</lastmod>
     <data>
         <display>
         <title>Vue + Vue-router + Element-ui 搭建一个非常简单的dashboard demo</title>
@@ -299,14 +150,18 @@
 
     
   <url>
-    <loc>https://wdd.js.org/axios-best-practices.html</loc>
-    <lastmod>2018-02-09T04:00:30.000Z</lastmod>
+    <loc>https://wdd.js.org/vscode-vue-standardjs.html</loc>
+    <lastmod>2018-02-09T07:48:56.000Z</lastmod>
     <data>
         <display>
-        <title>axios进阶：用最优雅的方式写ajax请求</title>
-        <pubTime>2018-02-09T03:59:25.000Z</pubTime>
+        <title>如何在vscode中用standard style 风格去验证 vue文件</title>
+        <pubTime>2018-01-29T06:02:53.000Z</pubTime>
         
-        <tag>axios</tag>
+        <tag>vscode</tag>
+         
+        <tag>vue</tag>
+         
+        <tag>standardjs</tag>
          
          
            
@@ -316,12 +171,12 @@
 
     
   <url>
-    <loc>https://wdd.js.org/nodejs-project-best-struct.html</loc>
-    <lastmod>2018-02-09T03:59:58.000Z</lastmod>
+    <loc>https://wdd.js.org/visual-reading-js-code.html</loc>
+    <lastmod>2018-02-09T07:48:48.000Z</lastmod>
     <data>
         <display>
-        <title>笔记 node最佳实践1 项目工程最佳实践</title>
-        <pubTime>2018-02-09T03:56:11.000Z</pubTime>
+        <title>可视化交互阅读JS源代码</title>
+        <pubTime>2018-02-07T05:57:25.000Z</pubTime>
         
          
            
@@ -331,16 +186,126 @@
 
     
   <url>
-    <loc>https://wdd.js.org/grep-awk-search-log.html</loc>
-    <lastmod>2018-02-09T02:46:12.000Z</lastmod>
+    <loc>https://wdd.js.org/visual-event-tool.html</loc>
+    <lastmod>2018-02-09T07:48:45.000Z</lastmod>
     <data>
         <display>
-        <title>grep awk 搜索日志常用命令</title>
-        <pubTime>2018-02-09T02:45:31.000Z</pubTime>
+        <title>定位神器：1秒定位DOM元素绑定的事件代码的位置</title>
+        <pubTime>2018-02-08T01:15:20.000Z</pubTime>
         
-        <tag>grep</tag>
          
-        <tag>awk</tag>
+           
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>https://wdd.js.org/top-javascript-tools-in-2017.html</loc>
+    <lastmod>2018-02-09T07:48:40.000Z</lastmod>
+    <data>
+        <display>
+        <title>top-javascript-tools-in-2017</title>
+        <pubTime>2018-02-09T04:59:38.000Z</pubTime>
+        
+        <tag>工具</tag>
+         
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>https://wdd.js.org/top-11-javascript-libraries-are-worth-your-attention.html</loc>
+    <lastmod>2018-02-09T07:48:34.000Z</lastmod>
+    <data>
+        <display>
+        <title>12个值得关注的顶级JS库</title>
+        <pubTime>2018-02-07T06:08:10.000Z</pubTime>
+        
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>https://wdd.js.org/tool-improve-work-efficiency.html</loc>
+    <lastmod>2018-02-09T07:48:30.000Z</lastmod>
+    <data>
+        <display>
+        <title>无坚不摧：打造极大提高工作效率的装备库</title>
+        <pubTime>2018-02-02T01:24:43.000Z</pubTime>
+        
+        <tag>git</tag>
+         
+        <tag>未完成</tag>
+         
+        <tag>gow</tag>
+         
+        <tag>conemu</tag>
+         
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>https://wdd.js.org/thinkpad-f1-f12.html</loc>
+    <lastmod>2018-02-09T07:48:26.000Z</lastmod>
+    <data>
+        <display>
+        <title>thinkpad 系列恢复F1-F12原始功能，切换ctrl和fn的位置</title>
+        <pubTime>2018-01-29T13:46:43.000Z</pubTime>
+        
+        <tag>thinkpad</tag>
+         
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>https://wdd.js.org/think-with-stream.html</loc>
+    <lastmod>2018-02-09T07:48:23.000Z</lastmod>
+    <data>
+        <display>
+        <title>Think With Stream</title>
+        <pubTime>2018-02-05T03:28:59.000Z</pubTime>
+        
+        <tag>idea</tag>
+         
+        <tag>未完成</tag>
+         
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>https://wdd.js.org/think-about-markdown-and-editor.html</loc>
+    <lastmod>2018-02-09T07:48:20.000Z</lastmod>
+    <data>
+        <display>
+        <title>markdwon、笔记、编辑器与缓存</title>
+        <pubTime>2018-01-31T12:16:27.000Z</pubTime>
+        
+        <tag>未完成</tag>
+         
+        <tag>markdown</tag>
+         
+        <tag>editor</tag>
+         
+        <tag>note</tag>
          
          
            
@@ -351,7 +316,7 @@
     
   <url>
     <loc>https://wdd.js.org/tcp-high-recv-q-or-send-q-reasons.html</loc>
-    <lastmod>2018-02-09T01:20:00.000Z</lastmod>
+    <lastmod>2018-02-09T07:48:17.000Z</lastmod>
     <data>
         <display>
         <title>tcp-high-recv-q-or-send-q-reasons</title>
@@ -365,8 +330,61 @@
 
     
   <url>
+    <loc>https://wdd.js.org/tampermonkey.html</loc>
+    <lastmod>2018-02-09T07:48:12.000Z</lastmod>
+    <data>
+        <display>
+        <title>油猴子脚本 - 我的地盘我做主</title>
+        <pubTime>2018-01-29T05:58:37.000Z</pubTime>
+        
+        <tag>js</tag>
+         
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>https://wdd.js.org/substr-and-substring-history.html</loc>
+    <lastmod>2018-02-09T07:48:06.000Z</lastmod>
+    <data>
+        <display>
+        <title>追本溯源：substr与substring历史漫话</title>
+        <pubTime>2018-01-29T05:46:31.000Z</pubTime>
+        
+        <tag>substr</tag>
+         
+        <tag>substring</tag>
+         
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>https://wdd.js.org/ssh-login-without-password.html</loc>
+    <lastmod>2018-02-09T07:48:00.000Z</lastmod>
+    <data>
+        <display>
+        <title>ssh 无密码登录远程服务器</title>
+        <pubTime>2018-01-29T13:27:38.000Z</pubTime>
+        
+        <tag>ssh</tag>
+         
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>https://wdd.js.org/something-you-may-dont-konw-about-hexo.html</loc>
-    <lastmod>2018-02-08T13:38:08.000Z</lastmod>
+    <lastmod>2018-02-09T07:47:54.000Z</lastmod>
     <data>
         <display>
         <title>一些关于Hexo的疑问</title>
@@ -382,42 +400,8 @@
 
     
   <url>
-    <loc>https://wdd.js.org/hexo-next-theme-set-cover.html</loc>
-    <lastmod>2018-02-08T13:26:22.000Z</lastmod>
-    <data>
-        <display>
-        <title>Hexo NexT主题设置封面的方法</title>
-        <pubTime>2018-02-08T13:09:50.000Z</pubTime>
-        
-        <tag>hexo</tag>
-         
-         
-           
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>https://wdd.js.org/write-blog-belong-myself.html</loc>
-    <lastmod>2018-02-08T13:07:58.000Z</lastmod>
-    <data>
-        <display>
-        <title>寻一片净土 书写我自己的芳华</title>
-        <pubTime>2018-02-08T12:18:42.000Z</pubTime>
-        
-        <tag>思想者</tag>
-         
-         
-           
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
     <loc>https://wdd.js.org/settimeout-to-splice-big-work.html</loc>
-    <lastmod>2018-02-08T06:11:01.000Z</lastmod>
+    <lastmod>2018-02-09T07:47:48.000Z</lastmod>
     <data>
         <display>
         <title>定时器学习：利用定时器分解耗时任务案例</title>
@@ -433,14 +417,14 @@
 
     
   <url>
-    <loc>https://wdd.js.org/js-functional-programming.html</loc>
-    <lastmod>2018-02-08T06:08:05.000Z</lastmod>
+    <loc>https://wdd.js.org/send-book-to-kindle.html</loc>
+    <lastmod>2018-02-09T07:47:45.000Z</lastmod>
     <data>
         <display>
-        <title>关于JavaScropt函数式编程，我多么希望能早点看到这本书</title>
-        <pubTime>2018-02-08T06:06:22.000Z</pubTime>
+        <title>猴子都能懂的教程：向kindle推送电子书</title>
+        <pubTime>2018-01-30T11:55:43.000Z</pubTime>
         
-        <tag>函数式编程</tag>
+        <tag>kindle</tag>
          
          
            
@@ -450,14 +434,16 @@
 
     
   <url>
-    <loc>https://wdd.js.org/gist-collect-code-snippets.html</loc>
-    <lastmod>2018-02-08T06:04:55.000Z</lastmod>
+    <loc>https://wdd.js.org/send-ajax-when-page-unload.html</loc>
+    <lastmod>2018-02-09T07:47:41.000Z</lastmod>
     <data>
         <display>
-        <title>积水成渊：用github gist收藏你的代码片段</title>
-        <pubTime>2018-02-08T06:02:40.000Z</pubTime>
+        <title>发起Ajax请求当页面onunload</title>
+        <pubTime>2018-02-07T01:18:54.000Z</pubTime>
         
-        <tag>gist</tag>
+        <tag>ajax</tag>
+         
+        <tag>onunload</tag>
          
          
            
@@ -468,7 +454,7 @@
     
   <url>
     <loc>https://wdd.js.org/save-console-log-as-file.html</loc>
-    <lastmod>2018-02-08T05:57:44.000Z</lastmod>
+    <lastmod>2018-02-09T07:47:38.000Z</lastmod>
     <data>
         <display>
         <title>终于找到你！如何将前端console.log的日志保存成文件?</title>
@@ -484,14 +470,14 @@
 
     
   <url>
-    <loc>https://wdd.js.org/debug-code-in-iframe.html</loc>
-    <lastmod>2018-02-08T05:55:36.000Z</lastmod>
+    <loc>https://wdd.js.org/real-reason-of-my-bugs.html</loc>
+    <lastmod>2018-02-09T07:47:34.000Z</lastmod>
     <data>
         <display>
-        <title>如何浏览器里调试iframe里层的代码？</title>
-        <pubTime>2018-02-08T05:53:48.000Z</pubTime>
+        <title>我苦苦寻找诡异的bug原因，其实是我的无知</title>
+        <pubTime>2018-02-09T05:13:12.000Z</pubTime>
         
-        <tag>debug</tag>
+        <tag>思想者</tag>
          
          
            
@@ -501,29 +487,18 @@
 
     
   <url>
-    <loc>https://wdd.js.org/a-very-simple-template-function.html</loc>
-    <lastmod>2018-02-08T05:52:23.000Z</lastmod>
+    <loc>https://wdd.js.org/read-notes-on-top-of-tides.html</loc>
+    <lastmod>2018-02-09T07:47:30.000Z</lastmod>
     <data>
         <display>
-        <title>8行代码的模板字符串替换函数</title>
-        <pubTime>2018-02-08T05:51:13.000Z</pubTime>
+        <title>读书笔记：浪潮之巅</title>
+        <pubTime>2018-02-02T05:02:23.000Z</pubTime>
         
+        <tag>未完成</tag>
          
-           
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>https://wdd.js.org/my-git-common-config.html</loc>
-    <lastmod>2018-02-08T05:51:59.000Z</lastmod>
-    <data>
-        <display>
-        <title>git常用配置与操作整理</title>
-        <pubTime>2018-02-08T05:49:29.000Z</pubTime>
-        
-        <tag>git</tag>
+        <tag>读书笔记</tag>
+         
+        <tag>浪潮之巅</tag>
          
          
            
@@ -533,31 +508,14 @@
 
     
   <url>
-    <loc>https://wdd.js.org/audio-hide-download-icon.html</loc>
-    <lastmod>2018-02-08T05:51:49.000Z</lastmod>
+    <loc>https://wdd.js.org/query-string-mds.html</loc>
+    <lastmod>2018-02-09T07:47:26.000Z</lastmod>
     <data>
         <display>
-        <title>谷歌浏览器 audio如何隐藏下载按钮</title>
-        <pubTime>2018-02-08T05:46:45.000Z</pubTime>
+        <title>查询字符串的最小数据集</title>
+        <pubTime>2018-01-30T02:45:37.000Z</pubTime>
         
-         
-           
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>https://wdd.js.org/2018-reading-plan.html</loc>
-    <lastmod>2018-02-08T01:53:54.000Z</lastmod>
-    <data>
-        <display>
-        <title>2018年我的阅读计划</title>
-        <pubTime>2018-02-05T05:42:20.000Z</pubTime>
-        
-        <tag>reading</tag>
-         
-        <tag>读书</tag>
+        <tag>docs</tag>
          
          
            
@@ -567,68 +525,15 @@
 
     
   <url>
-    <loc>https://wdd.js.org/audio-heart-detail.html</loc>
-    <lastmod>2018-02-08T01:48:05.000Z</lastmod>
+    <loc>https://wdd.js.org/python3-list-methods-collect.html</loc>
+    <lastmod>2018-02-09T07:47:23.000Z</lastmod>
     <data>
         <display>
-        <title>Audio 如果你愿意一层一层剥开我的心</title>
-        <pubTime>2018-02-08T01:44:01.000Z</pubTime>
+        <title>Python3笔记 列表方法详解</title>
+        <pubTime>2018-02-09T05:15:13.000Z</pubTime>
         
-        <tag>audio</tag>
+        <tag>python3</tag>
          
-         
-           
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>https://wdd.js.org/github-powerful-tools-recommend.html</loc>
-    <lastmod>2018-02-08T01:41:41.000Z</lastmod>
-    <data>
-        <display>
-        <title>github上的那些前端神器</title>
-        <pubTime>2018-02-08T01:38:32.000Z</pubTime>
-        
-        <tag>github</tag>
-         
-        <tag>工具</tag>
-         
-         
-           
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>https://wdd.js.org/gitbook-good-book-recommend.html</loc>
-    <lastmod>2018-02-08T01:37:08.000Z</lastmod>
-    <data>
-        <display>
-        <title>gitbook 前端好书推荐</title>
-        <pubTime>2018-02-08T01:35:03.000Z</pubTime>
-        
-        <tag>books</tag>
-         
-        <tag>gitbook</tag>
-         
-         
-           
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>https://wdd.js.org/visual-event-tool.html</loc>
-    <lastmod>2018-02-08T01:33:42.000Z</lastmod>
-    <data>
-        <display>
-        <title>定位神器：1秒定位DOM元素绑定的事件代码的位置</title>
-        <pubTime>2018-02-08T01:15:20.000Z</pubTime>
-        
          
            
         </display>
@@ -638,7 +543,7 @@
     
   <url>
     <loc>https://wdd.js.org/python-paper-word-split.html</loc>
-    <lastmod>2018-02-08T01:32:36.000Z</lastmod>
+    <lastmod>2018-02-09T07:47:19.000Z</lastmod>
     <data>
         <display>
         <title>前端小白的python实战 报纸分词排序</title>
@@ -656,8 +561,74 @@
 
     
   <url>
+    <loc>https://wdd.js.org/one-command-create-static-file-server.html</loc>
+    <lastmod>2018-02-09T07:47:15.000Z</lastmod>
+    <data>
+        <display>
+        <title>一行命令搭建简易静态文件http服务器</title>
+        <pubTime>2018-02-09T05:01:14.000Z</pubTime>
+        
+        <tag>静态文件服务器</tag>
+         
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>https://wdd.js.org/nodejs-server-frameworks.html</loc>
+    <lastmod>2018-02-09T07:47:11.000Z</lastmod>
+    <data>
+        <display>
+        <title>Nodejs 服务端框架合集(78个)</title>
+        <pubTime>2018-01-29T06:13:44.000Z</pubTime>
+        
+        <tag>nodejs</tag>
+         
+        <tag>server</tag>
+         
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>https://wdd.js.org/nodejs-project-best-struct.html</loc>
+    <lastmod>2018-02-09T07:47:06.000Z</lastmod>
+    <data>
+        <display>
+        <title>笔记 node最佳实践1 项目工程最佳实践</title>
+        <pubTime>2018-02-09T03:56:11.000Z</pubTime>
+        
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>https://wdd.js.org/nodejs-log-packages.html</loc>
+    <lastmod>2018-02-09T07:47:02.000Z</lastmod>
+    <data>
+        <display>
+        <title>nodejs 日志插件比较 VS 自定义日志插件</title>
+        <pubTime>2018-02-07T05:46:51.000Z</pubTime>
+        
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>https://wdd.js.org/nodejs-best-dockerfile.html</loc>
-    <lastmod>2018-02-08T01:30:29.000Z</lastmod>
+    <lastmod>2018-02-09T07:46:56.000Z</lastmod>
     <data>
         <display>
         <title>Nodejs Express dockerfile最佳实践</title>
@@ -677,8 +648,197 @@
 
     
   <url>
+    <loc>https://wdd.js.org/nodejs-alpine-docker.html</loc>
+    <lastmod>2018-02-09T07:46:50.000Z</lastmod>
+    <data>
+        <display>
+        <title>Nodejs alpine 基础docker镜像构建</title>
+        <pubTime>2018-01-29T06:10:15.000Z</pubTime>
+        
+        <tag>nodejs</tag>
+         
+        <tag>docker</tag>
+         
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>https://wdd.js.org/my-git-common-config.html</loc>
+    <lastmod>2018-02-09T07:46:45.000Z</lastmod>
+    <data>
+        <display>
+        <title>git常用配置与操作整理</title>
+        <pubTime>2018-02-08T05:49:29.000Z</pubTime>
+        
+        <tag>git</tag>
+         
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>https://wdd.js.org/my-chrome-extensions-collection.html</loc>
+    <lastmod>2018-02-09T07:46:40.000Z</lastmod>
+    <data>
+        <display>
+        <title>我的谷歌浏览器插件集（15个）</title>
+        <pubTime>2018-02-09T02:27:34.000Z</pubTime>
+        
+        <tag>浏览器插件</tag>
+         
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>https://wdd.js.org/mongodb-api-overview.html</loc>
+    <lastmod>2018-02-09T07:46:37.000Z</lastmod>
+    <data>
+        <display>
+        <title>Mongo DB增删改查命令概要</title>
+        <pubTime>2018-02-07T01:12:15.000Z</pubTime>
+        
+        <tag>mongodb</tag>
+         
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>https://wdd.js.org/mac-sublime-shortcut-collector.html</loc>
+    <lastmod>2018-02-09T07:46:33.000Z</lastmod>
+    <data>
+        <display>
+        <title>mac-sublime-shortcut-collector</title>
+        <pubTime>2018-02-09T05:22:22.000Z</pubTime>
+        
+        <tag>sublime</tag>
+         
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>https://wdd.js.org/linux-common-cmds.html</loc>
+    <lastmod>2018-02-09T07:46:29.000Z</lastmod>
+    <data>
+        <display>
+        <title>linux常用命令使用场景总结</title>
+        <pubTime>2018-01-31T01:58:33.000Z</pubTime>
+        
+        <tag>linux</tag>
+         
+        <tag>shell</tag>
+         
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>https://wdd.js.org/json-stringify-powerful.html</loc>
+    <lastmod>2018-02-09T07:46:25.000Z</lastmod>
+    <data>
+        <display>
+        <title>你不知道的JSON.stringify()妙用</title>
+        <pubTime>2018-02-09T05:27:15.000Z</pubTime>
+        
+        <tag>json</tag>
+         
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>https://wdd.js.org/js-org.html</loc>
+    <lastmod>2018-02-09T07:46:20.000Z</lastmod>
+    <data>
+        <display>
+        <title>【译】一个值得所有前端开发者关注的网站 js.org</title>
+        <pubTime>2018-01-29T05:52:42.000Z</pubTime>
+        
+        <tag>js.org</tag>
+         
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>https://wdd.js.org/js-high-skills.html</loc>
+    <lastmod>2018-02-09T07:46:16.000Z</lastmod>
+    <data>
+        <display>
+        <title>JavaScript 高级技巧</title>
+        <pubTime>2018-02-07T02:14:56.000Z</pubTime>
+        
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>https://wdd.js.org/js-functional-programming.html</loc>
+    <lastmod>2018-02-09T06:01:59.000Z</lastmod>
+    <data>
+        <display>
+        <title>关于JavaScropt函数式编程，我多么希望能早点看到这本书</title>
+        <pubTime>2018-02-08T06:06:22.000Z</pubTime>
+        
+        <tag>函数式编程</tag>
+         
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>https://wdd.js.org/js-best-practices.html</loc>
+    <lastmod>2018-02-09T06:01:55.000Z</lastmod>
+    <data>
+        <display>
+        <title>我的JavaScript最佳实践</title>
+        <pubTime>2018-01-29T01:16:38.000Z</pubTime>
+        
+        <tag>js</tag>
+         
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>https://wdd.js.org/jquery-validation-vs-parsley.html</loc>
-    <lastmod>2018-02-08T01:26:55.000Z</lastmod>
+    <lastmod>2018-02-09T06:01:52.000Z</lastmod>
     <data>
         <display>
         <title>表单验证工具 jquery-validation Vs Parsley</title>
@@ -687,6 +847,727 @@
         <tag>jQuery</tag>
          
         <tag>Parsley</tag>
+         
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>https://wdd.js.org/jquery-deferred.html</loc>
+    <lastmod>2018-02-09T06:01:43.000Z</lastmod>
+    <data>
+        <display>
+        <title>熟练使用使用jQuery Promise (Deferred)</title>
+        <pubTime>2018-01-29T05:43:23.000Z</pubTime>
+        
+        <tag>jQuery</tag>
+         
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>https://wdd.js.org/i-realy-dont-know-js.html</loc>
+    <lastmod>2018-02-09T06:01:34.000Z</lastmod>
+    <data>
+        <display>
+        <title>突然觉得自己好像没学过JS</title>
+        <pubTime>2018-02-07T02:09:42.000Z</pubTime>
+        
+        <tag>js</tag>
+         
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>https://wdd.js.org/http-status-code-work-method.html</loc>
+    <lastmod>2018-02-09T06:01:30.000Z</lastmod>
+    <data>
+        <display>
+        <title>HTTP状态码工作法</title>
+        <pubTime>2018-02-01T06:57:00.000Z</pubTime>
+        
+        <tag>http</tag>
+         
+        <tag>工作</tag>
+         
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>https://wdd.js.org/how-to-write-better-api-docs.html</loc>
+    <lastmod>2018-02-09T06:01:26.000Z</lastmod>
+    <data>
+        <display>
+        <title>如何写好接口文档？</title>
+        <pubTime>2018-01-29T14:01:55.000Z</pubTime>
+        
+        <tag>接口文档</tag>
+         
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>https://wdd.js.org/how-to-write-a-technical-document.html</loc>
+    <lastmod>2018-02-09T06:01:22.000Z</lastmod>
+    <data>
+        <display>
+        <title>如何写好技术文档?</title>
+        <pubTime>2018-02-09T04:52:57.000Z</pubTime>
+        
+        <tag>文档</tag>
+         
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>https://wdd.js.org/how-to-use-apply.html</loc>
+    <lastmod>2018-02-09T06:01:18.000Z</lastmod>
+    <data>
+        <display>
+        <title>从一个小场景学会使用 apply方法</title>
+        <pubTime>2018-02-07T02:12:36.000Z</pubTime>
+        
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>https://wdd.js.org/how-to-get-jsorg-sub-domain.html</loc>
+    <lastmod>2018-02-09T06:01:13.000Z</lastmod>
+    <data>
+        <display>
+        <title>组织在召唤：如何免费获取一个js.org的二级域名</title>
+        <pubTime>2018-01-29T10:08:03.000Z</pubTime>
+        
+        <tag>hexo</tag>
+         
+        <tag>jsorg</tag>
+         
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>https://wdd.js.org/hexo-next-theme-set-cover.html</loc>
+    <lastmod>2018-02-09T06:01:00.000Z</lastmod>
+    <data>
+        <display>
+        <title>Hexo NexT主题设置封面的方法</title>
+        <pubTime>2018-02-08T13:09:50.000Z</pubTime>
+        
+        <tag>hexo</tag>
+         
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>https://wdd.js.org/grep-awk-search-log.html</loc>
+    <lastmod>2018-02-09T06:00:52.000Z</lastmod>
+    <data>
+        <display>
+        <title>grep awk 搜索日志常用命令</title>
+        <pubTime>2018-02-09T02:45:31.000Z</pubTime>
+        
+        <tag>grep</tag>
+         
+        <tag>awk</tag>
+         
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>https://wdd.js.org/goverment-info.html</loc>
+    <lastmod>2018-02-09T06:00:48.000Z</lastmod>
+    <data>
+        <display>
+        <title>蚌埠出入境管理局电话以及相关注意事项</title>
+        <pubTime>2018-01-29T13:44:07.000Z</pubTime>
+        
+        <tag>蚌埠</tag>
+         
+        <tag>出入境管理局</tag>
+         
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>https://wdd.js.org/github-powerful-tools-recommend.html</loc>
+    <lastmod>2018-02-09T06:00:43.000Z</lastmod>
+    <data>
+        <display>
+        <title>github上的那些前端神器</title>
+        <pubTime>2018-02-08T01:38:32.000Z</pubTime>
+        
+        <tag>github</tag>
+         
+        <tag>工具</tag>
+         
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>https://wdd.js.org/gitbook-good-book-recommend.html</loc>
+    <lastmod>2018-02-09T06:00:39.000Z</lastmod>
+    <data>
+        <display>
+        <title>gitbook 前端好书推荐</title>
+        <pubTime>2018-02-08T01:35:03.000Z</pubTime>
+        
+        <tag>books</tag>
+         
+        <tag>gitbook</tag>
+         
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>https://wdd.js.org/git-manager-docs.html</loc>
+    <lastmod>2018-02-09T06:00:35.000Z</lastmod>
+    <data>
+        <display>
+        <title>Git化文档管理</title>
+        <pubTime>2018-02-06T02:52:08.000Z</pubTime>
+        
+        <tag>git</tag>
+         
+        <tag>未完成</tag>
+         
+        <tag>gitlab</tag>
+         
+        <tag>gow</tag>
+         
+        <tag>ConEmu</tag>
+         
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>https://wdd.js.org/git-commom-cmds.html</loc>
+    <lastmod>2018-02-09T06:00:30.000Z</lastmod>
+    <data>
+        <display>
+        <title>git常用命令与oh-my-zsh常用缩写</title>
+        <pubTime>2018-01-31T08:19:38.000Z</pubTime>
+        
+        <tag>git</tag>
+         
+        <tag>oh-my-zsh</tag>
+         
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>https://wdd.js.org/gist-collect-code-snippets.html</loc>
+    <lastmod>2018-02-09T06:00:26.000Z</lastmod>
+    <data>
+        <display>
+        <title>积水成渊：用github gist收藏你的代码片段</title>
+        <pubTime>2018-02-08T06:02:40.000Z</pubTime>
+        
+        <tag>gist</tag>
+         
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>https://wdd.js.org/front-end-common-websit.html</loc>
+    <lastmod>2018-02-09T06:00:22.000Z</lastmod>
+    <data>
+        <display>
+        <title>前端开发常用工具网站</title>
+        <pubTime>2018-02-07T01:40:03.000Z</pubTime>
+        
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>https://wdd.js.org/fork-sync-learn.html</loc>
+    <lastmod>2018-02-09T06:00:17.000Z</lastmod>
+    <data>
+        <display>
+        <title>git合并上游仓库即同步fork后的仓库</title>
+        <pubTime>2018-01-31T09:16:44.000Z</pubTime>
+        
+        <tag>git</tag>
+         
+        <tag>fork</tag>
+         
+        <tag>合并上游分支</tag>
+         
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>https://wdd.js.org/few-simple-rules-for-good-coding-my-15-years-experience.html</loc>
+    <lastmod>2018-02-09T06:00:13.000Z</lastmod>
+    <data>
+        <display>
+        <title>【译】13简单的优秀编码规则（从我15年的经验）</title>
+        <pubTime>2018-02-07T06:03:12.000Z</pubTime>
+        
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>https://wdd.js.org/export-https-certificate-in-browser.html</loc>
+    <lastmod>2018-02-09T06:00:09.000Z</lastmod>
+    <data>
+        <display>
+        <title>如何从浏览器导出HTTPS证书</title>
+        <pubTime>2018-02-09T05:33:38.000Z</pubTime>
+        
+        <tag>https</tag>
+         
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>https://wdd.js.org/elegant-way-write-ajax-request.html</loc>
+    <lastmod>2018-02-09T06:00:04.000Z</lastmod>
+    <data>
+        <display>
+        <title>jQuery进阶：用最优雅的方式写ajax请求</title>
+        <pubTime>2018-02-07T05:42:36.000Z</pubTime>
+        
+        <tag>ajxa</tag>
+         
+        <tag>jQuery</tag>
+         
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>https://wdd.js.org/echarts-highlight-china-map.html</loc>
+    <lastmod>2018-02-09T05:59:59.000Z</lastmod>
+    <data>
+        <display>
+        <title>ECharts 轮流高亮中国地图各个省份</title>
+        <pubTime>2018-02-09T05:16:53.000Z</pubTime>
+        
+        <tag>echarts</tag>
+         
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>https://wdd.js.org/do-not-be-big-fans.html</loc>
+    <lastmod>2018-02-09T05:59:52.000Z</lastmod>
+    <data>
+        <display>
+        <title>不要成为某个技术的死忠粉</title>
+        <pubTime>2018-02-05T03:58:25.000Z</pubTime>
+        
+        <tag>idea</tag>
+         
+        <tag>未完成</tag>
+         
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>https://wdd.js.org/debug-nodejs-in-chrome-devtool.html</loc>
+    <lastmod>2018-02-09T05:59:47.000Z</lastmod>
+    <data>
+        <display>
+        <title>直接在Chrome DevTools调试Node.js</title>
+        <pubTime>2018-02-07T06:15:43.000Z</pubTime>
+        
+        <tag>nodejs</tag>
+         
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>https://wdd.js.org/debug-code-in-iframe.html</loc>
+    <lastmod>2018-02-09T05:59:41.000Z</lastmod>
+    <data>
+        <display>
+        <title>如何浏览器里调试iframe里层的代码？</title>
+        <pubTime>2018-02-08T05:53:48.000Z</pubTime>
+        
+        <tag>debug</tag>
+         
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>https://wdd.js.org/csta-call-model-overview.html</loc>
+    <lastmod>2018-02-09T05:59:37.000Z</lastmod>
+    <data>
+        <display>
+        <title>CSTA 呼叫模型简介</title>
+        <pubTime>2018-01-29T13:35:24.000Z</pubTime>
+        
+        <tag>csta</tag>
+         
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>https://wdd.js.org/css-form-readonly.html</loc>
+    <lastmod>2018-02-09T05:59:32.000Z</lastmod>
+    <data>
+        <display>
+        <title>奇技淫巧：css实现整个表单只读 form readonly</title>
+        <pubTime>2018-02-09T05:31:38.000Z</pubTime>
+        
+        <tag>表单</tag>
+         
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>https://wdd.js.org/commit-type-summary.html</loc>
+    <lastmod>2018-02-09T05:59:27.000Z</lastmod>
+    <data>
+        <display>
+        <title>Git Commit Message 格式与类型分类</title>
+        <pubTime>2018-02-02T08:33:17.000Z</pubTime>
+        
+        <tag>git</tag>
+         
+        <tag>git-commit</tag>
+         
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>https://wdd.js.org/clean-code-method.html</loc>
+    <lastmod>2018-02-09T05:59:23.000Z</lastmod>
+    <data>
+        <display>
+        <title>代码整洁之道 - 有意义的命名</title>
+        <pubTime>2018-02-08T01:17:54.000Z</pubTime>
+        
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>https://wdd.js.org/chrome-snippets-collect.html</loc>
+    <lastmod>2018-02-09T05:59:18.000Z</lastmod>
+    <data>
+        <display>
+        <title>谷歌浏览器： Snippets小程序哪家强？</title>
+        <pubTime>2018-02-07T05:48:55.000Z</pubTime>
+        
+        <tag>snippets</tag>
+         
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>https://wdd.js.org/centos7-init-install-packages.html</loc>
+    <lastmod>2018-02-09T05:59:01.000Z</lastmod>
+    <data>
+        <display>
+        <title>centos7 初始化软件安装及服务管理</title>
+        <pubTime>2018-02-09T05:10:42.000Z</pubTime>
+        
+        <tag>centos7</tag>
+         
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>https://wdd.js.org/browser-events.html</loc>
+    <lastmod>2018-02-09T05:58:56.000Z</lastmod>
+    <data>
+        <display>
+        <title>不常用却很有妙用的事件及方法</title>
+        <pubTime>2018-01-29T06:15:25.000Z</pubTime>
+        
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>https://wdd.js.org/axios-best-practices.html</loc>
+    <lastmod>2018-02-09T05:58:49.000Z</lastmod>
+    <data>
+        <display>
+        <title>axios进阶：用最优雅的方式写ajax请求</title>
+        <pubTime>2018-02-09T03:59:25.000Z</pubTime>
+        
+        <tag>axios</tag>
+         
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>https://wdd.js.org/audio-hide-download-icon.html</loc>
+    <lastmod>2018-02-09T05:58:45.000Z</lastmod>
+    <data>
+        <display>
+        <title>谷歌浏览器 audio如何隐藏下载按钮</title>
+        <pubTime>2018-02-08T05:46:45.000Z</pubTime>
+        
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>https://wdd.js.org/audio-heart-detail.html</loc>
+    <lastmod>2018-02-09T05:58:40.000Z</lastmod>
+    <data>
+        <display>
+        <title>Audio 如果你愿意一层一层剥开我的心</title>
+        <pubTime>2018-02-08T01:44:01.000Z</pubTime>
+        
+        <tag>audio</tag>
+         
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>https://wdd.js.org/all-best-ui-frame.html</loc>
+    <lastmod>2018-02-09T05:57:18.000Z</lastmod>
+    <data>
+        <display>
+        <title>UI大全：前端UI框架集合（持续更新）</title>
+        <pubTime>2018-02-07T01:47:34.000Z</pubTime>
+        
+        <tag>ui</tag>
+         
+        <tag>frame</tag>
+         
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>https://wdd.js.org/a-very-simple-template-function.html</loc>
+    <lastmod>2018-02-09T05:57:12.000Z</lastmod>
+    <data>
+        <display>
+        <title>8行代码的模板字符串替换函数</title>
+        <pubTime>2018-02-08T05:51:13.000Z</pubTime>
+        
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>https://wdd.js.org/2018-reading-plan.html</loc>
+    <lastmod>2018-02-09T05:57:02.000Z</lastmod>
+    <data>
+        <display>
+        <title>2018年我的阅读计划</title>
+        <pubTime>2018-02-05T05:42:20.000Z</pubTime>
+        
+        <tag>reading</tag>
+         
+        <tag>读书</tag>
+         
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>https://wdd.js.org/2017-best-js-books.html</loc>
+    <lastmod>2018-02-09T05:56:51.000Z</lastmod>
+    <data>
+        <display>
+        <title>2017年 最好的javascript 书籍</title>
+        <pubTime>2018-02-07T02:19:22.000Z</pubTime>
+        
+        <tag>books</tag>
+         
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>https://wdd.js.org/vue-elementui-audio-component.html</loc>
+    <lastmod>2018-02-09T05:55:43.000Z</lastmod>
+    <data>
+        <display>
+        <title>Vue+ElementUI 手把手教你做一个audio组件</title>
+        <pubTime>2018-02-09T05:44:13.000Z</pubTime>
+        
+        <tag>audio</tag>
+         
+        <tag>vue</tag>
+         
+        <tag>ElementUI</tag>
+         
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>https://wdd.js.org/68-skills-to-write-better-js-code.html</loc>
+    <lastmod>2018-02-09T05:53:54.000Z</lastmod>
+    <data>
+        <display>
+        <title>读书笔记：编写高质量javascript的68个方法</title>
+        <pubTime>2018-02-07T02:17:16.000Z</pubTime>
+        
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>https://wdd.js.org/write-blog-belong-myself.html</loc>
+    <lastmod>2018-02-08T13:07:58.000Z</lastmod>
+    <data>
+        <display>
+        <title>寻一片净土 书写我自己的芳华</title>
+        <pubTime>2018-02-08T12:18:42.000Z</pubTime>
+        
+        <tag>思想者</tag>
          
          
            
@@ -713,87 +1594,6 @@
 
     
   <url>
-    <loc>https://wdd.js.org/clean-code-method.html</loc>
-    <lastmod>2018-02-08T01:19:56.000Z</lastmod>
-    <data>
-        <display>
-        <title>代码整洁之道 - 有意义的命名</title>
-        <pubTime>2018-02-08T01:17:54.000Z</pubTime>
-        
-         
-           
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>https://wdd.js.org/you-dont-know-https-and-http.html</loc>
-    <lastmod>2018-02-08T01:14:52.000Z</lastmod>
-    <data>
-        <display>
-        <title>可能被遗漏的https与http的知识点</title>
-        <pubTime>2018-02-08T01:10:59.000Z</pubTime>
-        
-        <tag>https</tag>
-         
-        <tag>http</tag>
-         
-         
-           
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>https://wdd.js.org/debug-nodejs-in-chrome-devtool.html</loc>
-    <lastmod>2018-02-07T06:19:15.000Z</lastmod>
-    <data>
-        <display>
-        <title>直接在Chrome DevTools调试Node.js</title>
-        <pubTime>2018-02-07T06:15:43.000Z</pubTime>
-        
-        <tag>nodejs</tag>
-         
-         
-           
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>https://wdd.js.org/top-11-javascript-libraries-are-worth-your-attention.html</loc>
-    <lastmod>2018-02-07T06:12:58.000Z</lastmod>
-    <data>
-        <display>
-        <title>12个值得关注的顶级JS库</title>
-        <pubTime>2018-02-07T06:08:10.000Z</pubTime>
-        
-         
-           
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>https://wdd.js.org/few-simple-rules-for-good-coding-my-15-years-experience.html</loc>
-    <lastmod>2018-02-07T06:04:29.000Z</lastmod>
-    <data>
-        <display>
-        <title>【译】13简单的优秀编码规则（从我15年的经验）</title>
-        <pubTime>2018-02-07T06:03:12.000Z</pubTime>
-        
-         
-           
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
     <loc>https://wdd.js.org/sort-for-sf.html</loc>
     <lastmod>2018-02-07T06:01:49.000Z</lastmod>
     <data>
@@ -808,345 +1608,6 @@
     </url>
 
     
-  <url>
-    <loc>https://wdd.js.org/visual-reading-js-code.html</loc>
-    <lastmod>2018-02-07T05:58:28.000Z</lastmod>
-    <data>
-        <display>
-        <title>可视化交互阅读JS源代码</title>
-        <pubTime>2018-02-07T05:57:25.000Z</pubTime>
-        
-         
-           
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>https://wdd.js.org/chrome-snippets-collect.html</loc>
-    <lastmod>2018-02-07T05:55:18.000Z</lastmod>
-    <data>
-        <display>
-        <title>谷歌浏览器： Snippets小程序哪家强？</title>
-        <pubTime>2018-02-07T05:48:55.000Z</pubTime>
-        
-        <tag>snippets</tag>
-         
-         
-           
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>https://wdd.js.org/nodejs-log-packages.html</loc>
-    <lastmod>2018-02-07T05:49:56.000Z</lastmod>
-    <data>
-        <display>
-        <title>nodejs 日志插件比较 VS 自定义日志插件</title>
-        <pubTime>2018-02-07T05:46:51.000Z</pubTime>
-        
-         
-           
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>https://wdd.js.org/elegant-way-write-ajax-request.html</loc>
-    <lastmod>2018-02-07T05:43:21.000Z</lastmod>
-    <data>
-        <display>
-        <title>jQuery进阶：用最优雅的方式写ajax请求</title>
-        <pubTime>2018-02-07T05:42:36.000Z</pubTime>
-        
-        <tag>ajxa</tag>
-         
-        <tag>jQuery</tag>
-         
-         
-           
-        </display>
-    </data>
-    </url>
-
-    
-    
-  <url>
-    <loc>https://wdd.js.org/2017-best-js-books.html</loc>
-    <lastmod>2018-02-07T02:21:34.000Z</lastmod>
-    <data>
-        <display>
-        <title>2017年 最好的javascript 书籍</title>
-        <pubTime>2018-02-07T02:19:22.000Z</pubTime>
-        
-        <tag>books</tag>
-         
-         
-           
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>https://wdd.js.org/js-high-skills.html</loc>
-    <lastmod>2018-02-07T02:16:06.000Z</lastmod>
-    <data>
-        <display>
-        <title>JavaScript 高级技巧</title>
-        <pubTime>2018-02-07T02:14:56.000Z</pubTime>
-        
-         
-           
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>https://wdd.js.org/how-to-use-apply.html</loc>
-    <lastmod>2018-02-07T02:13:06.000Z</lastmod>
-    <data>
-        <display>
-        <title>从一个小场景学会使用 apply方法</title>
-        <pubTime>2018-02-07T02:12:36.000Z</pubTime>
-        
-         
-           
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>https://wdd.js.org/i-realy-dont-know-js.html</loc>
-    <lastmod>2018-02-07T02:10:27.000Z</lastmod>
-    <data>
-        <display>
-        <title>突然觉得自己好像没学过JS</title>
-        <pubTime>2018-02-07T02:09:42.000Z</pubTime>
-        
-        <tag>js</tag>
-         
-         
-           
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>https://wdd.js.org/all-best-ui-frame.html</loc>
-    <lastmod>2018-02-07T02:00:45.000Z</lastmod>
-    <data>
-        <display>
-        <title>UI大全：前端UI框架集合（持续更新）</title>
-        <pubTime>2018-02-07T01:47:34.000Z</pubTime>
-        
-        <tag>ui</tag>
-         
-        <tag>frame</tag>
-         
-         
-           
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>https://wdd.js.org/front-end-common-websit.html</loc>
-    <lastmod>2018-02-07T01:43:54.000Z</lastmod>
-    <data>
-        <display>
-        <title>前端开发常用工具网站</title>
-        <pubTime>2018-02-07T01:40:03.000Z</pubTime>
-        
-         
-           
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>https://wdd.js.org/vue-ws-monitor-agent-status.html</loc>
-    <lastmod>2018-02-07T01:38:49.000Z</lastmod>
-    <data>
-        <display>
-        <title>Vue+websocket+stompjs 实时监控坐席状态demo</title>
-        <pubTime>2018-02-07T01:36:49.000Z</pubTime>
-        
-        <tag>Vue</tag>
-         
-        <tag>WebSocket</tag>
-         
-        <tag>stompjs</tag>
-         
-         
-           
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>https://wdd.js.org/windows-powerful-tools.html</loc>
-    <lastmod>2018-02-07T01:33:55.000Z</lastmod>
-    <data>
-        <display>
-        <title>自从装了windows神器，再也不用羡慕mac了</title>
-        <pubTime>2018-02-07T01:24:18.000Z</pubTime>
-        
-        <tag>windows</tag>
-         
-        <tag>神器</tag>
-         
-         
-           
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>https://wdd.js.org/send-ajax-when-page-unload.html</loc>
-    <lastmod>2018-02-07T01:19:43.000Z</lastmod>
-    <data>
-        <display>
-        <title>发起Ajax请求当页面onunload</title>
-        <pubTime>2018-02-07T01:18:54.000Z</pubTime>
-        
-        <tag>ajax</tag>
-         
-        <tag>onunload</tag>
-         
-         
-           
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>https://wdd.js.org/mongodb-api-overview.html</loc>
-    <lastmod>2018-02-07T01:13:08.000Z</lastmod>
-    <data>
-        <display>
-        <title>Mongo DB增删改查命令概要</title>
-        <pubTime>2018-02-07T01:12:15.000Z</pubTime>
-        
-        <tag>mongodb</tag>
-         
-         
-           
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>https://wdd.js.org/js-best-practices.html</loc>
-    <lastmod>2018-02-07T01:05:05.000Z</lastmod>
-    <data>
-        <display>
-        <title>我的JavaScript最佳实践</title>
-        <pubTime>2018-01-29T01:16:38.000Z</pubTime>
-        
-        <tag>js</tag>
-         
-         
-           
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>https://wdd.js.org/git-manager-docs.html</loc>
-    <lastmod>2018-02-07T01:04:49.000Z</lastmod>
-    <data>
-        <display>
-        <title>Git化文档管理</title>
-        <pubTime>2018-02-06T02:52:08.000Z</pubTime>
-        
-        <tag>git</tag>
-         
-        <tag>未完成</tag>
-         
-        <tag>gitlab</tag>
-         
-        <tag>gow</tag>
-         
-        <tag>ConEmu</tag>
-         
-         
-           
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>https://wdd.js.org/linux-common-cmds.html</loc>
-    <lastmod>2018-02-06T10:07:22.000Z</lastmod>
-    <data>
-        <display>
-        <title>linux常用命令使用场景总结</title>
-        <pubTime>2018-01-31T01:58:33.000Z</pubTime>
-        
-        <tag>linux</tag>
-         
-        <tag>shell</tag>
-         
-         
-           
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>https://wdd.js.org/do-not-be-big-fans.html</loc>
-    <lastmod>2018-02-05T04:05:08.000Z</lastmod>
-    <data>
-        <display>
-        <title>不要成为某个技术的死忠粉</title>
-        <pubTime>2018-02-05T03:58:25.000Z</pubTime>
-        
-        <tag>idea</tag>
-         
-        <tag>未完成</tag>
-         
-         
-           
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>https://wdd.js.org/think-with-stream.html</loc>
-    <lastmod>2018-02-05T03:35:21.000Z</lastmod>
-    <data>
-        <display>
-        <title>Think With Stream</title>
-        <pubTime>2018-02-05T03:28:59.000Z</pubTime>
-        
-        <tag>idea</tag>
-         
-        <tag>未完成</tag>
-         
-         
-           
-        </display>
-    </data>
-    </url>
-
     
   <url>
     <loc>https://wdd.js.org/vscode-commom-shortcuts.html</loc>
@@ -1165,202 +1626,6 @@
     </url>
 
     
-  <url>
-    <loc>https://wdd.js.org/commit-type-summary.html</loc>
-    <lastmod>2018-02-05T03:12:41.000Z</lastmod>
-    <data>
-        <display>
-        <title>Git Commit Message 格式与类型分类</title>
-        <pubTime>2018-02-02T08:33:17.000Z</pubTime>
-        
-        <tag>git</tag>
-         
-        <tag>git-commit</tag>
-         
-         
-           
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>https://wdd.js.org/read-notes-on-top-of-tides.html</loc>
-    <lastmod>2018-02-02T08:29:07.000Z</lastmod>
-    <data>
-        <display>
-        <title>读书笔记：浪潮之巅</title>
-        <pubTime>2018-02-02T05:02:23.000Z</pubTime>
-        
-        <tag>未完成</tag>
-         
-        <tag>读书笔记</tag>
-         
-        <tag>浪潮之巅</tag>
-         
-         
-           
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>https://wdd.js.org/tool-improve-work-efficiency.html</loc>
-    <lastmod>2018-02-02T08:28:52.000Z</lastmod>
-    <data>
-        <display>
-        <title>无坚不摧：打造极大提高工作效率的装备库</title>
-        <pubTime>2018-02-02T01:24:43.000Z</pubTime>
-        
-        <tag>git</tag>
-         
-        <tag>未完成</tag>
-         
-        <tag>gow</tag>
-         
-        <tag>conemu</tag>
-         
-         
-           
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>https://wdd.js.org/http-status-code-work-method.html</loc>
-    <lastmod>2018-02-01T07:49:01.000Z</lastmod>
-    <data>
-        <display>
-        <title>HTTP状态码工作法</title>
-        <pubTime>2018-02-01T06:57:00.000Z</pubTime>
-        
-        <tag>http</tag>
-         
-        <tag>工作</tag>
-         
-         
-           
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>https://wdd.js.org/think-about-markdown-and-editor.html</loc>
-    <lastmod>2018-02-01T01:27:06.000Z</lastmod>
-    <data>
-        <display>
-        <title>markdwon、笔记、编辑器与缓存</title>
-        <pubTime>2018-01-31T12:16:27.000Z</pubTime>
-        
-        <tag>未完成</tag>
-         
-        <tag>markdown</tag>
-         
-        <tag>editor</tag>
-         
-        <tag>note</tag>
-         
-         
-           
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>https://wdd.js.org/fork-sync-learn.html</loc>
-    <lastmod>2018-01-31T09:35:04.000Z</lastmod>
-    <data>
-        <display>
-        <title>git合并上游仓库即同步fork后的仓库</title>
-        <pubTime>2018-01-31T09:16:44.000Z</pubTime>
-        
-        <tag>git</tag>
-         
-        <tag>fork</tag>
-         
-        <tag>合并上游分支</tag>
-         
-         
-           
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>https://wdd.js.org/git-commom-cmds.html</loc>
-    <lastmod>2018-01-31T08:27:53.000Z</lastmod>
-    <data>
-        <display>
-        <title>git常用命令与oh-my-zsh常用缩写</title>
-        <pubTime>2018-01-31T08:19:38.000Z</pubTime>
-        
-        <tag>git</tag>
-         
-        <tag>oh-my-zsh</tag>
-         
-         
-           
-        </display>
-    </data>
-    </url>
-
-    
-    
-  <url>
-    <loc>https://wdd.js.org/query-string-mds.html</loc>
-    <lastmod>2018-01-31T01:56:29.000Z</lastmod>
-    <data>
-        <display>
-        <title>查询字符串的最小数据集</title>
-        <pubTime>2018-01-30T02:45:37.000Z</pubTime>
-        
-        <tag>docs</tag>
-         
-         
-           
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>https://wdd.js.org/send-book-to-kindle.html</loc>
-    <lastmod>2018-01-30T12:59:20.000Z</lastmod>
-    <data>
-        <display>
-        <title>猴子都能懂的教程：向kindle推送电子书</title>
-        <pubTime>2018-01-30T11:55:43.000Z</pubTime>
-        
-        <tag>kindle</tag>
-         
-         
-           
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>https://wdd.js.org/how-to-write-better-api-docs.html</loc>
-    <lastmod>2018-01-29T14:06:20.000Z</lastmod>
-    <data>
-        <display>
-        <title>如何写好接口文档？</title>
-        <pubTime>2018-01-29T14:01:55.000Z</pubTime>
-        
-        <tag>接口文档</tag>
-         
-         
-           
-        </display>
-    </data>
-    </url>
-
     
   <url>
     <loc>https://wdd.js.org/how-free-server-make-money.html</loc>
@@ -1371,59 +1636,6 @@
         <pubTime>2018-01-29T13:58:58.000Z</pubTime>
         
         <tag>经济学</tag>
-         
-         
-           
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>https://wdd.js.org/ztree-note.html</loc>
-    <lastmod>2018-01-29T13:48:17.000Z</lastmod>
-    <data>
-        <display>
-        <title>ztree-note</title>
-        <pubTime>2018-01-29T13:47:32.000Z</pubTime>
-        
-        <tag>ztree</tag>
-         
-         
-           
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>https://wdd.js.org/thinkpad-f1-f12.html</loc>
-    <lastmod>2018-01-29T13:47:17.000Z</lastmod>
-    <data>
-        <display>
-        <title>thinkpad 系列恢复F1-F12原始功能，切换ctrl和fn的位置</title>
-        <pubTime>2018-01-29T13:46:43.000Z</pubTime>
-        
-        <tag>thinkpad</tag>
-         
-         
-           
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>https://wdd.js.org/goverment-info.html</loc>
-    <lastmod>2018-01-29T13:44:40.000Z</lastmod>
-    <data>
-        <display>
-        <title>蚌埠出入境管理局电话以及相关注意事项</title>
-        <pubTime>2018-01-29T13:44:07.000Z</pubTime>
-        
-        <tag>蚌埠</tag>
-         
-        <tag>出入境管理局</tag>
          
          
            
@@ -1458,218 +1670,6 @@
         <pubTime>2018-01-29T13:40:36.000Z</pubTime>
         
         <tag>centos7</tag>
-         
-         
-           
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>https://wdd.js.org/csta-call-model-overview.html</loc>
-    <lastmod>2018-01-29T13:39:39.000Z</lastmod>
-    <data>
-        <display>
-        <title>CSTA 呼叫模型简介</title>
-        <pubTime>2018-01-29T13:35:24.000Z</pubTime>
-        
-        <tag>csta</tag>
-         
-         
-           
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>https://wdd.js.org/ssh-login-without-password.html</loc>
-    <lastmod>2018-01-29T13:28:17.000Z</lastmod>
-    <data>
-        <display>
-        <title>ssh 无密码登录远程服务器</title>
-        <pubTime>2018-01-29T13:27:38.000Z</pubTime>
-        
-        <tag>ssh</tag>
-         
-         
-           
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>https://wdd.js.org/how-to-get-jsorg-sub-domain.html</loc>
-    <lastmod>2018-01-29T11:19:17.000Z</lastmod>
-    <data>
-        <display>
-        <title>组织在召唤：如何免费获取一个js.org的二级域名</title>
-        <pubTime>2018-01-29T10:08:03.000Z</pubTime>
-        
-        <tag>hexo</tag>
-         
-        <tag>jsorg</tag>
-         
-         
-           
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>https://wdd.js.org/browser-events.html</loc>
-    <lastmod>2018-01-29T06:15:59.000Z</lastmod>
-    <data>
-        <display>
-        <title>不常用却很有妙用的事件及方法</title>
-        <pubTime>2018-01-29T06:15:25.000Z</pubTime>
-        
-         
-           
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>https://wdd.js.org/nodejs-server-frameworks.html</loc>
-    <lastmod>2018-01-29T06:14:43.000Z</lastmod>
-    <data>
-        <display>
-        <title>Nodejs 服务端框架合集(78个)</title>
-        <pubTime>2018-01-29T06:13:44.000Z</pubTime>
-        
-        <tag>nodejs</tag>
-         
-        <tag>server</tag>
-         
-         
-           
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>https://wdd.js.org/you-dont-need.html</loc>
-    <lastmod>2018-01-29T06:12:26.000Z</lastmod>
-    <data>
-        <display>
-        <title>You-Dont-Need 你不需要系列</title>
-        <pubTime>2018-01-29T06:11:36.000Z</pubTime>
-        
-         
-           
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>https://wdd.js.org/nodejs-alpine-docker.html</loc>
-    <lastmod>2018-01-29T06:10:55.000Z</lastmod>
-    <data>
-        <display>
-        <title>Nodejs alpine 基础docker镜像构建</title>
-        <pubTime>2018-01-29T06:10:15.000Z</pubTime>
-        
-        <tag>nodejs</tag>
-         
-        <tag>docker</tag>
-         
-         
-           
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>https://wdd.js.org/vscode-vue-standardjs.html</loc>
-    <lastmod>2018-01-29T06:05:49.000Z</lastmod>
-    <data>
-        <display>
-        <title>如何在vscode中用standard style 风格去验证 vue文件</title>
-        <pubTime>2018-01-29T06:02:53.000Z</pubTime>
-        
-        <tag>vscode</tag>
-         
-        <tag>vue</tag>
-         
-        <tag>standardjs</tag>
-         
-         
-           
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>https://wdd.js.org/tampermonkey.html</loc>
-    <lastmod>2018-01-29T06:00:55.000Z</lastmod>
-    <data>
-        <display>
-        <title>油猴子脚本 - 我的地盘我做主</title>
-        <pubTime>2018-01-29T05:58:37.000Z</pubTime>
-        
-        <tag>js</tag>
-         
-         
-           
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>https://wdd.js.org/js-org.html</loc>
-    <lastmod>2018-01-29T05:56:36.000Z</lastmod>
-    <data>
-        <display>
-        <title>【译】一个值得所有前端开发者关注的网站 js.org</title>
-        <pubTime>2018-01-29T05:52:42.000Z</pubTime>
-        
-        <tag>js.org</tag>
-         
-         
-           
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>https://wdd.js.org/substr-and-substring-history.html</loc>
-    <lastmod>2018-01-29T05:51:01.000Z</lastmod>
-    <data>
-        <display>
-        <title>追本溯源：substr与substring历史漫话</title>
-        <pubTime>2018-01-29T05:46:31.000Z</pubTime>
-        
-        <tag>substr</tag>
-         
-        <tag>substring</tag>
-         
-         
-           
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>https://wdd.js.org/jquery-deferred.html</loc>
-    <lastmod>2018-01-29T05:47:34.000Z</lastmod>
-    <data>
-        <display>
-        <title>熟练使用使用jQuery Promise (Deferred)</title>
-        <pubTime>2018-01-29T05:43:23.000Z</pubTime>
-        
-        <tag>jQuery</tag>
          
          
            

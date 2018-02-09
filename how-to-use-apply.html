@@ -82,18 +82,18 @@
 
 
 
-<meta name="description" content="需求 需要自定义一个log方法，这个方法可以像原生的console.log一样 在开发环境我希望调用这个log会输出日志信息，生产环境我希望即使调用了这个方法，也不会输出日志信息。  实现这个log 可能要使用apply或者call方法 log的参数个数和类型都是不固定的 call的参数个数是固定的，要排除它 apply的参数是需要一个数组，这个合适，可以使用arguments来当做数组传递  代">
+<meta name="description" content="1. 需求 需要自定义一个log方法，这个方法可以像原生的console.log一样 在开发环境我希望调用这个log会输出日志信息，生产环境我希望即使调用了这个方法，也不会输出日志信息。  2. 实现这个log 可能要使用apply或者call方法 log的参数个数和类型都是不固定的 call的参数个数是固定的，要排除它 apply的参数是需要一个数组，这个合适，可以使用arguments来当做数">
 <meta name="keywords" content="王端端, 洞香春, wellClient">
 <meta property="og:type" content="article">
 <meta property="og:title" content="从一个小场景学会使用 apply方法">
 <meta property="og:url" content="https://wdd.js.org/how-to-use-apply.html">
 <meta property="og:site_name" content="洞香春">
-<meta property="og:description" content="需求 需要自定义一个log方法，这个方法可以像原生的console.log一样 在开发环境我希望调用这个log会输出日志信息，生产环境我希望即使调用了这个方法，也不会输出日志信息。  实现这个log 可能要使用apply或者call方法 log的参数个数和类型都是不固定的 call的参数个数是固定的，要排除它 apply的参数是需要一个数组，这个合适，可以使用arguments来当做数组传递  代">
+<meta property="og:description" content="1. 需求 需要自定义一个log方法，这个方法可以像原生的console.log一样 在开发环境我希望调用这个log会输出日志信息，生产环境我希望即使调用了这个方法，也不会输出日志信息。  2. 实现这个log 可能要使用apply或者call方法 log的参数个数和类型都是不固定的 call的参数个数是固定的，要排除它 apply的参数是需要一个数组，这个合适，可以使用arguments来当做数">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-02-07T02:13:06.000Z">
+<meta property="og:updated_time" content="2018-02-09T06:01:18.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="从一个小场景学会使用 apply方法">
-<meta name="twitter:description" content="需求 需要自定义一个log方法，这个方法可以像原生的console.log一样 在开发环境我希望调用这个log会输出日志信息，生产环境我希望即使调用了这个方法，也不会输出日志信息。  实现这个log 可能要使用apply或者call方法 log的参数个数和类型都是不固定的 call的参数个数是固定的，要排除它 apply的参数是需要一个数组，这个合适，可以使用arguments来当做数组传递  代">
+<meta name="twitter:description" content="1. 需求 需要自定义一个log方法，这个方法可以像原生的console.log一样 在开发环境我希望调用这个log会输出日志信息，生产环境我希望即使调用了这个方法，也不会输出日志信息。  2. 实现这个log 可能要使用apply或者call方法 log的参数个数和类型都是不固定的 call的参数个数是固定的，要排除它 apply的参数是需要一个数组，这个合适，可以使用arguments来当做数">
 
 
 
@@ -366,7 +366,7 @@
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  243 字
+                  248 字
                 </span>
               
 
@@ -403,19 +403,19 @@
       
 
       
-        <h1 id="需求"><a href="#需求" class="headerlink" title="需求"></a>需求</h1><ul>
+        <h1 id="1-需求"><a href="#1-需求" class="headerlink" title="1. 需求"></a>1. 需求</h1><ul>
 <li>需要自定义一个log方法，这个方法可以像原生的console.log一样</li>
 <li>在开发环境我希望调用这个log会输出日志信息，生产环境我希望即使调用了这个方法，也不会输出日志信息。</li>
 </ul>
-<h1 id="实现这个log"><a href="#实现这个log" class="headerlink" title="实现这个log"></a>实现这个log</h1><ul>
+<h1 id="2-实现这个log"><a href="#2-实现这个log" class="headerlink" title="2. 实现这个log"></a>2. 实现这个log</h1><ul>
 <li>可能要使用apply或者call方法</li>
 <li>log的参数个数和类型都是不固定的</li>
 <li>call的参数个数是固定的，要排除它</li>
 <li>apply的参数是需要一个<code>数组</code>，这个合适，可以使用<code>arguments</code>来当做数组传递</li>
 </ul>
-<h1 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h1><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> MyLog = &#123;</span><br><span class="line">    silent: <span class="literal">false</span>,</span><br><span class="line">    log: <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">        <span class="keyword">if</span>(!<span class="keyword">this</span>.silent)&#123;</span><br><span class="line">            <span class="built_in">console</span>.log.apply(<span class="keyword">this</span>, <span class="built_in">arguments</span>);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
-<h1 id="试用"><a href="#试用" class="headerlink" title="试用"></a>试用</h1><figure class="highlight lsl"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">&gt; MyLog.log(<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>, '<span class="number">4545</span>');</span><br><span class="line"><span class="number">1</span> <span class="number">2</span> <span class="number">3</span> <span class="string">"4545"</span></span><br><span class="line">undefined</span><br><span class="line"></span><br><span class="line">&gt; MyLog.silent = true</span><br><span class="line">true</span><br><span class="line"></span><br><span class="line">&gt; MyLog.log(<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>, '<span class="number">4545</span>');</span><br><span class="line">undefined</span><br></pre></td></tr></table></figure>
-<h1 id="后记"><a href="#后记" class="headerlink" title="后记"></a>后记</h1><ul>
+<h1 id="3-代码"><a href="#3-代码" class="headerlink" title="3. 代码"></a>3. 代码</h1><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> MyLog = &#123;</span><br><span class="line">    silent: <span class="literal">false</span>,</span><br><span class="line">    log: <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">        <span class="keyword">if</span>(!<span class="keyword">this</span>.silent)&#123;</span><br><span class="line">            <span class="built_in">console</span>.log.apply(<span class="keyword">this</span>, <span class="built_in">arguments</span>);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+<h1 id="4-试用"><a href="#4-试用" class="headerlink" title="4. 试用"></a>4. 试用</h1><figure class="highlight lsl"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">&gt; MyLog.log(<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>, '<span class="number">4545</span>');</span><br><span class="line"><span class="number">1</span> <span class="number">2</span> <span class="number">3</span> <span class="string">"4545"</span></span><br><span class="line">undefined</span><br><span class="line"></span><br><span class="line">&gt; MyLog.silent = true</span><br><span class="line">true</span><br><span class="line"></span><br><span class="line">&gt; MyLog.log(<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>, '<span class="number">4545</span>');</span><br><span class="line">undefined</span><br></pre></td></tr></table></figure>
+<h1 id="5-后记"><a href="#5-后记" class="headerlink" title="5. 后记"></a>5. 后记</h1><ul>
 <li>不要随处使用console.log，因为这样当你不需要日志输出的时候，你就要到处填坑了</li>
 <li>不要使用alert，这个很烦人</li>
 </ul>
@@ -641,7 +641,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#需求"><span class="nav-text">需求</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#实现这个log"><span class="nav-text">实现这个log</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#代码"><span class="nav-text">代码</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#试用"><span class="nav-text">试用</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#后记"><span class="nav-text">后记</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#1-需求"><span class="nav-text">1. 需求</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#2-实现这个log"><span class="nav-text">2. 实现这个log</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#3-代码"><span class="nav-text">3. 代码</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#4-试用"><span class="nav-text">4. 试用</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#5-后记"><span class="nav-text">5. 后记</span></a></li></ol></div>
             
 
           </div>

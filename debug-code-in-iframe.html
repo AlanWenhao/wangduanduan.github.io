@@ -82,20 +82,20 @@
 
 
 
-<meta name="description" content="之前一直非常痛苦，在iframe外层根本获取不了里面的信息，后来使用了postMessage用传递消息来实现，但是用起来还是非常不方便。 其实浏览器本身是可以选择不同的iframe的执行环境的。例如有个变量是在iframe里面定义的，你只需要切换到这个iframe的执行环境，你就可以随意操作这个环境的任何变量了。 这个小技巧，对于调试非常有用，但是我直到今天才发现。 Chrome这个小箭头可以让你">
+<meta name="description" content="之前一直非常痛苦，在iframe外层根本获取不了里面的信息，后来使用了postMessage用传递消息来实现，但是用起来还是非常不方便。 其实浏览器本身是可以选择不同的iframe的执行环境的。例如有个变量是在iframe里面定义的，你只需要切换到这个iframe的执行环境，你就可以随意操作这个环境的任何变量了。 这个小技巧，对于调试非常有用，但是我直到今天才发现。 1. Chrome这个小箭头可">
 <meta name="keywords" content="debug">
 <meta property="og:type" content="article">
 <meta property="og:title" content="如何浏览器里调试iframe里层的代码？">
 <meta property="og:url" content="https://wdd.js.org/debug-code-in-iframe.html">
 <meta property="og:site_name" content="洞香春">
-<meta property="og:description" content="之前一直非常痛苦，在iframe外层根本获取不了里面的信息，后来使用了postMessage用传递消息来实现，但是用起来还是非常不方便。 其实浏览器本身是可以选择不同的iframe的执行环境的。例如有个变量是在iframe里面定义的，你只需要切换到这个iframe的执行环境，你就可以随意操作这个环境的任何变量了。 这个小技巧，对于调试非常有用，但是我直到今天才发现。 Chrome这个小箭头可以让你">
+<meta property="og:description" content="之前一直非常痛苦，在iframe外层根本获取不了里面的信息，后来使用了postMessage用传递消息来实现，但是用起来还是非常不方便。 其实浏览器本身是可以选择不同的iframe的执行环境的。例如有个变量是在iframe里面定义的，你只需要切换到这个iframe的执行环境，你就可以随意操作这个环境的任何变量了。 这个小技巧，对于调试非常有用，但是我直到今天才发现。 1. Chrome这个小箭头可">
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:image" content="http://p3alsaatj.bkt.clouddn.com/20180208135509_koFmKH_Screenshot.jpeg">
 <meta property="og:image" content="http://p3alsaatj.bkt.clouddn.com/20180208135527_niIzO1_Screenshot.jpeg">
-<meta property="og:updated_time" content="2018-02-08T05:55:36.000Z">
+<meta property="og:updated_time" content="2018-02-09T05:59:41.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="如何浏览器里调试iframe里层的代码？">
-<meta name="twitter:description" content="之前一直非常痛苦，在iframe外层根本获取不了里面的信息，后来使用了postMessage用传递消息来实现，但是用起来还是非常不方便。 其实浏览器本身是可以选择不同的iframe的执行环境的。例如有个变量是在iframe里面定义的，你只需要切换到这个iframe的执行环境，你就可以随意操作这个环境的任何变量了。 这个小技巧，对于调试非常有用，但是我直到今天才发现。 Chrome这个小箭头可以让你">
+<meta name="twitter:description" content="之前一直非常痛苦，在iframe外层根本获取不了里面的信息，后来使用了postMessage用传递消息来实现，但是用起来还是非常不方便。 其实浏览器本身是可以选择不同的iframe的执行环境的。例如有个变量是在iframe里面定义的，你只需要切换到这个iframe的执行环境，你就可以随意操作这个环境的任何变量了。 这个小技巧，对于调试非常有用，但是我直到今天才发现。 1. Chrome这个小箭头可">
 <meta name="twitter:image" content="http://p3alsaatj.bkt.clouddn.com/20180208135509_koFmKH_Screenshot.jpeg">
 
 
@@ -369,7 +369,7 @@
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  220 字
+                  223 字
                 </span>
               
 
@@ -409,11 +409,11 @@
         <p>之前一直非常痛苦，在iframe外层根本获取不了里面的信息，后来使用了postMessage用传递消息来实现，但是用起来还是非常不方便。</p>
 <p>其实浏览器本身是可以选择不同的iframe的执行环境的。例如有个变量是在iframe里面定义的，你只需要切换到这个iframe的执行环境，你就可以随意操作这个环境的任何变量了。</p>
 <p><code>这个小技巧，对于调试非常有用，但是我直到今天才发现。</code></p>
-<h1 id="Chrome"><a href="#Chrome" class="headerlink" title="Chrome"></a>Chrome</h1><p>这个小箭头可以让你选择不同的iframe的执行环境，可以切换到你的iframe环境里。</p>
+<h1 id="1-Chrome"><a href="#1-Chrome" class="headerlink" title="1. Chrome"></a>1. Chrome</h1><p>这个小箭头可以让你选择不同的iframe的执行环境，可以切换到你的iframe环境里。</p>
 <p><img src="http://p3alsaatj.bkt.clouddn.com/20180208135509_koFmKH_Screenshot.jpeg" alt=""></p>
-<h1 id="IE"><a href="#IE" class="headerlink" title="IE"></a>IE</h1><p>如图所示是ie11的dev tool点击下来箭头，也可以选择不同的iframe执行环境。</p>
+<h1 id="2-IE"><a href="#2-IE" class="headerlink" title="2. IE"></a>2. IE</h1><p>如图所示是ie11的dev tool点击下来箭头，也可以选择不同的iframe执行环境。</p>
 <p><img src="http://p3alsaatj.bkt.clouddn.com/20180208135527_niIzO1_Screenshot.jpeg" alt=""></p>
-<h1 id="其他浏览器"><a href="#其他浏览器" class="headerlink" title="其他浏览器"></a>其他浏览器</h1><p>其他浏览器可以自行摸索一下。。。（G_H）</p>
+<h1 id="3-其他浏览器"><a href="#3-其他浏览器" class="headerlink" title="3. 其他浏览器"></a>3. 其他浏览器</h1><p>其他浏览器可以自行摸索一下。。。（G_H）</p>
 
       
     </div>
@@ -642,7 +642,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Chrome"><span class="nav-text">Chrome</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#IE"><span class="nav-text">IE</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#其他浏览器"><span class="nav-text">其他浏览器</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#1-Chrome"><span class="nav-text">1. Chrome</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#2-IE"><span class="nav-text">2. IE</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#3-其他浏览器"><span class="nav-text">3. 其他浏览器</span></a></li></ol></div>
             
 
           </div>

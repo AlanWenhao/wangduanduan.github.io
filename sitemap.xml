@@ -2,163 +2,618 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>https://wdd.js.org/68-skills-to-write-better-js-code.html</loc>
+    <loc>https://wdd.js.org/ztree-note.html</loc>
     
-    <lastmod>2018-02-09T05:53:54.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://wdd.js.org/vue-elementui-audio-component.html</loc>
-    
-    <lastmod>2018-02-09T05:47:51.000Z</lastmod>
+    <lastmod>2018-02-09T07:49:34.000Z</lastmod>
     
   </url>
   
   <url>
-    <loc>https://wdd.js.org/export-https-certificate-in-browser.html</loc>
+    <loc>https://wdd.js.org/you-dont-need.html</loc>
     
-    <lastmod>2018-02-09T05:36:10.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://wdd.js.org/css-form-readonly.html</loc>
-    
-    <lastmod>2018-02-09T05:32:09.000Z</lastmod>
+    <lastmod>2018-02-09T07:49:30.000Z</lastmod>
     
   </url>
   
   <url>
-    <loc>https://wdd.js.org/json-stringify-powerful.html</loc>
+    <loc>https://wdd.js.org/you-dont-know-https-and-http.html</loc>
     
-    <lastmod>2018-02-09T05:31:24.000Z</lastmod>
+    <lastmod>2018-02-09T07:49:26.000Z</lastmod>
     
   </url>
   
   <url>
     <loc>https://wdd.js.org/write-configurable-nodejs-http-proxy.html</loc>
     
-    <lastmod>2018-02-09T05:25:34.000Z</lastmod>
+    <lastmod>2018-02-09T07:49:21.000Z</lastmod>
     
   </url>
   
   <url>
-    <loc>https://wdd.js.org/mac-sublime-shortcut-collector.html</loc>
+    <loc>https://wdd.js.org/windows-powerful-tools.html</loc>
     
-    <lastmod>2018-02-09T05:22:54.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://wdd.js.org/my-chrome-extensions-collection.html</loc>
-    
-    <lastmod>2018-02-09T05:20:25.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://wdd.js.org/echarts-highlight-china-map.html</loc>
-    
-    <lastmod>2018-02-09T05:18:17.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://wdd.js.org/python3-list-methods-collect.html</loc>
-    
-    <lastmod>2018-02-09T05:15:58.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://wdd.js.org/real-reason-of-my-bugs.html</loc>
-    
-    <lastmod>2018-02-09T05:14:05.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://wdd.js.org/centos7-init-install-packages.html</loc>
-    
-    <lastmod>2018-02-09T05:11:31.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://wdd.js.org/one-command-create-static-file-server.html</loc>
-    
-    <lastmod>2018-02-09T05:02:53.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://wdd.js.org/top-javascript-tools-in-2017.html</loc>
-    
-    <lastmod>2018-02-09T05:00:12.000Z</lastmod>
+    <lastmod>2018-02-09T07:49:13.000Z</lastmod>
     
   </url>
   
   <url>
     <loc>https://wdd.js.org/webrtc-tutorial-simple-video-chat.html</loc>
     
-    <lastmod>2018-02-09T04:58:11.000Z</lastmod>
+    <lastmod>2018-02-09T07:49:09.000Z</lastmod>
     
   </url>
   
   <url>
-    <loc>https://wdd.js.org/how-to-write-a-technical-document.html</loc>
+    <loc>https://wdd.js.org/vue-ws-monitor-agent-status.html</loc>
     
-    <lastmod>2018-02-09T04:54:55.000Z</lastmod>
+    <lastmod>2018-02-09T07:49:04.000Z</lastmod>
     
   </url>
   
   <url>
     <loc>https://wdd.js.org/vue-vue-router-elementui-stupid-simple-dashboard.html</loc>
     
-    <lastmod>2018-02-09T04:07:38.000Z</lastmod>
+    <lastmod>2018-02-09T07:49:00.000Z</lastmod>
     
   </url>
   
   <url>
-    <loc>https://wdd.js.org/axios-best-practices.html</loc>
+    <loc>https://wdd.js.org/vscode-vue-standardjs.html</loc>
     
-    <lastmod>2018-02-09T04:00:30.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://wdd.js.org/nodejs-project-best-struct.html</loc>
-    
-    <lastmod>2018-02-09T03:59:58.000Z</lastmod>
+    <lastmod>2018-02-09T07:48:56.000Z</lastmod>
     
   </url>
   
   <url>
-    <loc>https://wdd.js.org/grep-awk-search-log.html</loc>
+    <loc>https://wdd.js.org/visual-reading-js-code.html</loc>
     
-    <lastmod>2018-02-09T02:46:12.000Z</lastmod>
+    <lastmod>2018-02-09T07:48:48.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://wdd.js.org/visual-event-tool.html</loc>
+    
+    <lastmod>2018-02-09T07:48:45.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://wdd.js.org/top-javascript-tools-in-2017.html</loc>
+    
+    <lastmod>2018-02-09T07:48:40.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://wdd.js.org/top-11-javascript-libraries-are-worth-your-attention.html</loc>
+    
+    <lastmod>2018-02-09T07:48:34.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://wdd.js.org/tool-improve-work-efficiency.html</loc>
+    
+    <lastmod>2018-02-09T07:48:30.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://wdd.js.org/thinkpad-f1-f12.html</loc>
+    
+    <lastmod>2018-02-09T07:48:26.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://wdd.js.org/think-with-stream.html</loc>
+    
+    <lastmod>2018-02-09T07:48:23.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://wdd.js.org/think-about-markdown-and-editor.html</loc>
+    
+    <lastmod>2018-02-09T07:48:20.000Z</lastmod>
     
   </url>
   
   <url>
     <loc>https://wdd.js.org/tcp-high-recv-q-or-send-q-reasons.html</loc>
     
-    <lastmod>2018-02-09T01:20:00.000Z</lastmod>
+    <lastmod>2018-02-09T07:48:17.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://wdd.js.org/tampermonkey.html</loc>
+    
+    <lastmod>2018-02-09T07:48:12.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://wdd.js.org/substr-and-substring-history.html</loc>
+    
+    <lastmod>2018-02-09T07:48:06.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://wdd.js.org/ssh-login-without-password.html</loc>
+    
+    <lastmod>2018-02-09T07:48:00.000Z</lastmod>
     
   </url>
   
   <url>
     <loc>https://wdd.js.org/something-you-may-dont-konw-about-hexo.html</loc>
     
-    <lastmod>2018-02-08T13:38:08.000Z</lastmod>
+    <lastmod>2018-02-09T07:47:54.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://wdd.js.org/settimeout-to-splice-big-work.html</loc>
+    
+    <lastmod>2018-02-09T07:47:48.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://wdd.js.org/send-book-to-kindle.html</loc>
+    
+    <lastmod>2018-02-09T07:47:45.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://wdd.js.org/send-ajax-when-page-unload.html</loc>
+    
+    <lastmod>2018-02-09T07:47:41.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://wdd.js.org/save-console-log-as-file.html</loc>
+    
+    <lastmod>2018-02-09T07:47:38.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://wdd.js.org/real-reason-of-my-bugs.html</loc>
+    
+    <lastmod>2018-02-09T07:47:34.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://wdd.js.org/read-notes-on-top-of-tides.html</loc>
+    
+    <lastmod>2018-02-09T07:47:30.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://wdd.js.org/query-string-mds.html</loc>
+    
+    <lastmod>2018-02-09T07:47:26.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://wdd.js.org/python3-list-methods-collect.html</loc>
+    
+    <lastmod>2018-02-09T07:47:23.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://wdd.js.org/python-paper-word-split.html</loc>
+    
+    <lastmod>2018-02-09T07:47:19.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://wdd.js.org/one-command-create-static-file-server.html</loc>
+    
+    <lastmod>2018-02-09T07:47:15.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://wdd.js.org/nodejs-server-frameworks.html</loc>
+    
+    <lastmod>2018-02-09T07:47:11.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://wdd.js.org/nodejs-project-best-struct.html</loc>
+    
+    <lastmod>2018-02-09T07:47:06.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://wdd.js.org/nodejs-log-packages.html</loc>
+    
+    <lastmod>2018-02-09T07:47:02.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://wdd.js.org/nodejs-best-dockerfile.html</loc>
+    
+    <lastmod>2018-02-09T07:46:56.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://wdd.js.org/nodejs-alpine-docker.html</loc>
+    
+    <lastmod>2018-02-09T07:46:50.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://wdd.js.org/my-git-common-config.html</loc>
+    
+    <lastmod>2018-02-09T07:46:45.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://wdd.js.org/my-chrome-extensions-collection.html</loc>
+    
+    <lastmod>2018-02-09T07:46:40.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://wdd.js.org/mongodb-api-overview.html</loc>
+    
+    <lastmod>2018-02-09T07:46:37.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://wdd.js.org/mac-sublime-shortcut-collector.html</loc>
+    
+    <lastmod>2018-02-09T07:46:33.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://wdd.js.org/linux-common-cmds.html</loc>
+    
+    <lastmod>2018-02-09T07:46:29.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://wdd.js.org/json-stringify-powerful.html</loc>
+    
+    <lastmod>2018-02-09T07:46:25.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://wdd.js.org/js-org.html</loc>
+    
+    <lastmod>2018-02-09T07:46:20.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://wdd.js.org/js-high-skills.html</loc>
+    
+    <lastmod>2018-02-09T07:46:16.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://wdd.js.org/js-functional-programming.html</loc>
+    
+    <lastmod>2018-02-09T06:01:59.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://wdd.js.org/js-best-practices.html</loc>
+    
+    <lastmod>2018-02-09T06:01:55.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://wdd.js.org/jquery-validation-vs-parsley.html</loc>
+    
+    <lastmod>2018-02-09T06:01:52.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://wdd.js.org/jquery-deferred.html</loc>
+    
+    <lastmod>2018-02-09T06:01:43.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://wdd.js.org/i-realy-dont-know-js.html</loc>
+    
+    <lastmod>2018-02-09T06:01:34.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://wdd.js.org/http-status-code-work-method.html</loc>
+    
+    <lastmod>2018-02-09T06:01:30.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://wdd.js.org/how-to-write-better-api-docs.html</loc>
+    
+    <lastmod>2018-02-09T06:01:26.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://wdd.js.org/how-to-write-a-technical-document.html</loc>
+    
+    <lastmod>2018-02-09T06:01:22.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://wdd.js.org/how-to-use-apply.html</loc>
+    
+    <lastmod>2018-02-09T06:01:18.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://wdd.js.org/how-to-get-jsorg-sub-domain.html</loc>
+    
+    <lastmod>2018-02-09T06:01:13.000Z</lastmod>
     
   </url>
   
   <url>
     <loc>https://wdd.js.org/hexo-next-theme-set-cover.html</loc>
     
-    <lastmod>2018-02-08T13:26:22.000Z</lastmod>
+    <lastmod>2018-02-09T06:01:00.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://wdd.js.org/grep-awk-search-log.html</loc>
+    
+    <lastmod>2018-02-09T06:00:52.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://wdd.js.org/goverment-info.html</loc>
+    
+    <lastmod>2018-02-09T06:00:48.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://wdd.js.org/github-powerful-tools-recommend.html</loc>
+    
+    <lastmod>2018-02-09T06:00:43.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://wdd.js.org/gitbook-good-book-recommend.html</loc>
+    
+    <lastmod>2018-02-09T06:00:39.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://wdd.js.org/git-manager-docs.html</loc>
+    
+    <lastmod>2018-02-09T06:00:35.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://wdd.js.org/git-commom-cmds.html</loc>
+    
+    <lastmod>2018-02-09T06:00:30.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://wdd.js.org/gist-collect-code-snippets.html</loc>
+    
+    <lastmod>2018-02-09T06:00:26.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://wdd.js.org/front-end-common-websit.html</loc>
+    
+    <lastmod>2018-02-09T06:00:22.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://wdd.js.org/fork-sync-learn.html</loc>
+    
+    <lastmod>2018-02-09T06:00:17.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://wdd.js.org/few-simple-rules-for-good-coding-my-15-years-experience.html</loc>
+    
+    <lastmod>2018-02-09T06:00:13.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://wdd.js.org/export-https-certificate-in-browser.html</loc>
+    
+    <lastmod>2018-02-09T06:00:09.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://wdd.js.org/elegant-way-write-ajax-request.html</loc>
+    
+    <lastmod>2018-02-09T06:00:04.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://wdd.js.org/echarts-highlight-china-map.html</loc>
+    
+    <lastmod>2018-02-09T05:59:59.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://wdd.js.org/do-not-be-big-fans.html</loc>
+    
+    <lastmod>2018-02-09T05:59:52.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://wdd.js.org/debug-nodejs-in-chrome-devtool.html</loc>
+    
+    <lastmod>2018-02-09T05:59:47.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://wdd.js.org/debug-code-in-iframe.html</loc>
+    
+    <lastmod>2018-02-09T05:59:41.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://wdd.js.org/csta-call-model-overview.html</loc>
+    
+    <lastmod>2018-02-09T05:59:37.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://wdd.js.org/css-form-readonly.html</loc>
+    
+    <lastmod>2018-02-09T05:59:32.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://wdd.js.org/commit-type-summary.html</loc>
+    
+    <lastmod>2018-02-09T05:59:27.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://wdd.js.org/clean-code-method.html</loc>
+    
+    <lastmod>2018-02-09T05:59:23.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://wdd.js.org/chrome-snippets-collect.html</loc>
+    
+    <lastmod>2018-02-09T05:59:18.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://wdd.js.org/centos7-init-install-packages.html</loc>
+    
+    <lastmod>2018-02-09T05:59:01.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://wdd.js.org/browser-events.html</loc>
+    
+    <lastmod>2018-02-09T05:58:56.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://wdd.js.org/axios-best-practices.html</loc>
+    
+    <lastmod>2018-02-09T05:58:49.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://wdd.js.org/audio-hide-download-icon.html</loc>
+    
+    <lastmod>2018-02-09T05:58:45.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://wdd.js.org/audio-heart-detail.html</loc>
+    
+    <lastmod>2018-02-09T05:58:40.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://wdd.js.org/all-best-ui-frame.html</loc>
+    
+    <lastmod>2018-02-09T05:57:18.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://wdd.js.org/a-very-simple-template-function.html</loc>
+    
+    <lastmod>2018-02-09T05:57:12.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://wdd.js.org/2018-reading-plan.html</loc>
+    
+    <lastmod>2018-02-09T05:57:02.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://wdd.js.org/2017-best-js-books.html</loc>
+    
+    <lastmod>2018-02-09T05:56:51.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://wdd.js.org/vue-elementui-audio-component.html</loc>
+    
+    <lastmod>2018-02-09T05:55:43.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://wdd.js.org/68-skills-to-write-better-js-code.html</loc>
+    
+    <lastmod>2018-02-09T05:53:54.000Z</lastmod>
     
   </url>
   
@@ -170,156 +625,9 @@
   </url>
   
   <url>
-    <loc>https://wdd.js.org/settimeout-to-splice-big-work.html</loc>
-    
-    <lastmod>2018-02-08T06:11:01.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://wdd.js.org/js-functional-programming.html</loc>
-    
-    <lastmod>2018-02-08T06:08:05.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://wdd.js.org/gist-collect-code-snippets.html</loc>
-    
-    <lastmod>2018-02-08T06:04:55.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://wdd.js.org/save-console-log-as-file.html</loc>
-    
-    <lastmod>2018-02-08T05:57:44.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://wdd.js.org/debug-code-in-iframe.html</loc>
-    
-    <lastmod>2018-02-08T05:55:36.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://wdd.js.org/a-very-simple-template-function.html</loc>
-    
-    <lastmod>2018-02-08T05:52:23.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://wdd.js.org/my-git-common-config.html</loc>
-    
-    <lastmod>2018-02-08T05:51:59.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://wdd.js.org/audio-hide-download-icon.html</loc>
-    
-    <lastmod>2018-02-08T05:51:49.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://wdd.js.org/2018-reading-plan.html</loc>
-    
-    <lastmod>2018-02-08T01:53:54.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://wdd.js.org/audio-heart-detail.html</loc>
-    
-    <lastmod>2018-02-08T01:48:05.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://wdd.js.org/github-powerful-tools-recommend.html</loc>
-    
-    <lastmod>2018-02-08T01:41:41.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://wdd.js.org/gitbook-good-book-recommend.html</loc>
-    
-    <lastmod>2018-02-08T01:37:08.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://wdd.js.org/visual-event-tool.html</loc>
-    
-    <lastmod>2018-02-08T01:33:42.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://wdd.js.org/python-paper-word-split.html</loc>
-    
-    <lastmod>2018-02-08T01:32:36.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://wdd.js.org/nodejs-best-dockerfile.html</loc>
-    
-    <lastmod>2018-02-08T01:30:29.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://wdd.js.org/jquery-validation-vs-parsley.html</loc>
-    
-    <lastmod>2018-02-08T01:26:55.000Z</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>https://wdd.js.org/how-to-be-a-better-programer.html</loc>
     
     <lastmod>2018-02-08T01:22:00.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://wdd.js.org/clean-code-method.html</loc>
-    
-    <lastmod>2018-02-08T01:19:56.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://wdd.js.org/you-dont-know-https-and-http.html</loc>
-    
-    <lastmod>2018-02-08T01:14:52.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://wdd.js.org/debug-nodejs-in-chrome-devtool.html</loc>
-    
-    <lastmod>2018-02-07T06:19:15.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://wdd.js.org/top-11-javascript-libraries-are-worth-your-attention.html</loc>
-    
-    <lastmod>2018-02-07T06:12:58.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://wdd.js.org/few-simple-rules-for-good-coding-my-15-years-experience.html</loc>
-    
-    <lastmod>2018-02-07T06:04:29.000Z</lastmod>
     
   </url>
   
@@ -331,142 +639,9 @@
   </url>
   
   <url>
-    <loc>https://wdd.js.org/visual-reading-js-code.html</loc>
-    
-    <lastmod>2018-02-07T05:58:28.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://wdd.js.org/chrome-snippets-collect.html</loc>
-    
-    <lastmod>2018-02-07T05:55:18.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://wdd.js.org/nodejs-log-packages.html</loc>
-    
-    <lastmod>2018-02-07T05:49:56.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://wdd.js.org/elegant-way-write-ajax-request.html</loc>
-    
-    <lastmod>2018-02-07T05:43:21.000Z</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>https://wdd.js.org/about/index.html</loc>
     
     <lastmod>2018-02-07T02:27:52.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://wdd.js.org/2017-best-js-books.html</loc>
-    
-    <lastmod>2018-02-07T02:21:34.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://wdd.js.org/js-high-skills.html</loc>
-    
-    <lastmod>2018-02-07T02:16:06.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://wdd.js.org/how-to-use-apply.html</loc>
-    
-    <lastmod>2018-02-07T02:13:06.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://wdd.js.org/i-realy-dont-know-js.html</loc>
-    
-    <lastmod>2018-02-07T02:10:27.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://wdd.js.org/all-best-ui-frame.html</loc>
-    
-    <lastmod>2018-02-07T02:00:45.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://wdd.js.org/front-end-common-websit.html</loc>
-    
-    <lastmod>2018-02-07T01:43:54.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://wdd.js.org/vue-ws-monitor-agent-status.html</loc>
-    
-    <lastmod>2018-02-07T01:38:49.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://wdd.js.org/windows-powerful-tools.html</loc>
-    
-    <lastmod>2018-02-07T01:33:55.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://wdd.js.org/send-ajax-when-page-unload.html</loc>
-    
-    <lastmod>2018-02-07T01:19:43.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://wdd.js.org/mongodb-api-overview.html</loc>
-    
-    <lastmod>2018-02-07T01:13:08.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://wdd.js.org/js-best-practices.html</loc>
-    
-    <lastmod>2018-02-07T01:05:05.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://wdd.js.org/git-manager-docs.html</loc>
-    
-    <lastmod>2018-02-07T01:04:49.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://wdd.js.org/linux-common-cmds.html</loc>
-    
-    <lastmod>2018-02-06T10:07:22.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://wdd.js.org/do-not-be-big-fans.html</loc>
-    
-    <lastmod>2018-02-05T04:05:08.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://wdd.js.org/think-with-stream.html</loc>
-    
-    <lastmod>2018-02-05T03:35:21.000Z</lastmod>
     
   </url>
   
@@ -478,55 +653,6 @@
   </url>
   
   <url>
-    <loc>https://wdd.js.org/commit-type-summary.html</loc>
-    
-    <lastmod>2018-02-05T03:12:41.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://wdd.js.org/read-notes-on-top-of-tides.html</loc>
-    
-    <lastmod>2018-02-02T08:29:07.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://wdd.js.org/tool-improve-work-efficiency.html</loc>
-    
-    <lastmod>2018-02-02T08:28:52.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://wdd.js.org/http-status-code-work-method.html</loc>
-    
-    <lastmod>2018-02-01T07:49:01.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://wdd.js.org/think-about-markdown-and-editor.html</loc>
-    
-    <lastmod>2018-02-01T01:27:06.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://wdd.js.org/fork-sync-learn.html</loc>
-    
-    <lastmod>2018-01-31T09:35:04.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://wdd.js.org/git-commom-cmds.html</loc>
-    
-    <lastmod>2018-01-31T08:27:53.000Z</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>https://wdd.js.org//404.html</loc>
     
     <lastmod>2018-01-31T03:48:44.000Z</lastmod>
@@ -534,51 +660,9 @@
   </url>
   
   <url>
-    <loc>https://wdd.js.org/query-string-mds.html</loc>
-    
-    <lastmod>2018-01-31T01:56:29.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://wdd.js.org/send-book-to-kindle.html</loc>
-    
-    <lastmod>2018-01-30T12:59:20.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://wdd.js.org/how-to-write-better-api-docs.html</loc>
-    
-    <lastmod>2018-01-29T14:06:20.000Z</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>https://wdd.js.org/how-free-server-make-money.html</loc>
     
     <lastmod>2018-01-29T13:59:36.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://wdd.js.org/ztree-note.html</loc>
-    
-    <lastmod>2018-01-29T13:48:17.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://wdd.js.org/thinkpad-f1-f12.html</loc>
-    
-    <lastmod>2018-01-29T13:47:17.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://wdd.js.org/goverment-info.html</loc>
-    
-    <lastmod>2018-01-29T13:44:40.000Z</lastmod>
     
   </url>
   
@@ -593,90 +677,6 @@
     <loc>https://wdd.js.org/centos7-service-manager.html</loc>
     
     <lastmod>2018-01-29T13:41:06.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://wdd.js.org/csta-call-model-overview.html</loc>
-    
-    <lastmod>2018-01-29T13:39:39.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://wdd.js.org/ssh-login-without-password.html</loc>
-    
-    <lastmod>2018-01-29T13:28:17.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://wdd.js.org/how-to-get-jsorg-sub-domain.html</loc>
-    
-    <lastmod>2018-01-29T11:19:17.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://wdd.js.org/browser-events.html</loc>
-    
-    <lastmod>2018-01-29T06:15:59.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://wdd.js.org/nodejs-server-frameworks.html</loc>
-    
-    <lastmod>2018-01-29T06:14:43.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://wdd.js.org/you-dont-need.html</loc>
-    
-    <lastmod>2018-01-29T06:12:26.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://wdd.js.org/nodejs-alpine-docker.html</loc>
-    
-    <lastmod>2018-01-29T06:10:55.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://wdd.js.org/vscode-vue-standardjs.html</loc>
-    
-    <lastmod>2018-01-29T06:05:49.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://wdd.js.org/tampermonkey.html</loc>
-    
-    <lastmod>2018-01-29T06:00:55.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://wdd.js.org/js-org.html</loc>
-    
-    <lastmod>2018-01-29T05:56:36.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://wdd.js.org/substr-and-substring-history.html</loc>
-    
-    <lastmod>2018-01-29T05:51:01.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://wdd.js.org/jquery-deferred.html</loc>
-    
-    <lastmod>2018-01-29T05:47:34.000Z</lastmod>
     
   </url>
   

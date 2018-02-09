@@ -82,19 +82,19 @@
 
 
 
-<meta name="description" content="HTTPS域向HTTP域发送请求会被浏览器直接拒绝，HTTP向HTTPS则不会例如在github pages页面，这是一个https页面，如果在这个页面向http发送请求，那么会直接被浏览器拒绝，并在控制台输出下面的报错信息。 1jquery-1.11.3.min.js:5 Mixed Content: The page at &apos;https://wangduanduan.github.io/ddd">
+<meta name="description" content="1. HTTPS域向HTTP域发送请求会被浏览器直接拒绝，HTTP向HTTPS则不会例如在github pages页面，这是一个https页面，如果在这个页面向http发送请求，那么会直接被浏览器拒绝，并在控制台输出下面的报错信息。 1jquery-1.11.3.min.js:5 Mixed Content: The page at &apos;https://wangduanduan.github.io/">
 <meta name="keywords" content="https,http">
 <meta property="og:type" content="article">
 <meta property="og:title" content="可能被遗漏的https与http的知识点">
 <meta property="og:url" content="https://wdd.js.org/you-dont-know-https-and-http.html">
 <meta property="og:site_name" content="洞香春">
-<meta property="og:description" content="HTTPS域向HTTP域发送请求会被浏览器直接拒绝，HTTP向HTTPS则不会例如在github pages页面，这是一个https页面，如果在这个页面向http发送请求，那么会直接被浏览器拒绝，并在控制台输出下面的报错信息。 1jquery-1.11.3.min.js:5 Mixed Content: The page at &apos;https://wangduanduan.github.io/ddd">
+<meta property="og:description" content="1. HTTPS域向HTTP域发送请求会被浏览器直接拒绝，HTTP向HTTPS则不会例如在github pages页面，这是一个https页面，如果在这个页面向http发送请求，那么会直接被浏览器拒绝，并在控制台输出下面的报错信息。 1jquery-1.11.3.min.js:5 Mixed Content: The page at &apos;https://wangduanduan.github.io/">
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:image" content="http://p3alsaatj.bkt.clouddn.com/20180208091217_HDF1vL_Screenshot.jpeg">
-<meta property="og:updated_time" content="2018-02-08T01:14:52.000Z">
+<meta property="og:updated_time" content="2018-02-09T07:49:26.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="可能被遗漏的https与http的知识点">
-<meta name="twitter:description" content="HTTPS域向HTTP域发送请求会被浏览器直接拒绝，HTTP向HTTPS则不会例如在github pages页面，这是一个https页面，如果在这个页面向http发送请求，那么会直接被浏览器拒绝，并在控制台输出下面的报错信息。 1jquery-1.11.3.min.js:5 Mixed Content: The page at &apos;https://wangduanduan.github.io/ddd">
+<meta name="twitter:description" content="1. HTTPS域向HTTP域发送请求会被浏览器直接拒绝，HTTP向HTTPS则不会例如在github pages页面，这是一个https页面，如果在这个页面向http发送请求，那么会直接被浏览器拒绝，并在控制台输出下面的报错信息。 1jquery-1.11.3.min.js:5 Mixed Content: The page at &apos;https://wangduanduan.github.io/">
 <meta name="twitter:image" content="http://p3alsaatj.bkt.clouddn.com/20180208091217_HDF1vL_Screenshot.jpeg">
 
 
@@ -368,7 +368,7 @@
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  354 字
+                  357 字
                 </span>
               
 
@@ -405,11 +405,11 @@
       
 
       
-        <h1 id="HTTPS域向HTTP域发送请求会被浏览器直接拒绝，HTTP向HTTPS则不会"><a href="#HTTPS域向HTTP域发送请求会被浏览器直接拒绝，HTTP向HTTPS则不会" class="headerlink" title="HTTPS域向HTTP域发送请求会被浏览器直接拒绝，HTTP向HTTPS则不会"></a>HTTPS域向HTTP域发送请求会被浏览器直接拒绝，HTTP向HTTPS则不会</h1><p>例如在github pages页面，这是一个https页面，如果在这个页面向http发送请求，那么会直接被浏览器拒绝，并在控制台输出下面的报错信息。</p>
+        <h1 id="1-HTTPS域向HTTP域发送请求会被浏览器直接拒绝，HTTP向HTTPS则不会"><a href="#1-HTTPS域向HTTP域发送请求会被浏览器直接拒绝，HTTP向HTTPS则不会" class="headerlink" title="1. HTTPS域向HTTP域发送请求会被浏览器直接拒绝，HTTP向HTTPS则不会"></a>1. HTTPS域向HTTP域发送请求会被浏览器直接拒绝，HTTP向HTTPS则不会</h1><p>例如在github pages页面，这是一个https页面，如果在这个页面向http发送请求，那么会直接被浏览器拒绝，并在控制台输出下面的报错信息。</p>
 <figure class="highlight mipsasm"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">jquery-1.11.3.min.js:5 </span>Mixed Content: The page <span class="built_in">at</span> <span class="string">'https://wangduanduan.github.io/ddddddd/'</span> was loaded over HTTPS, <span class="keyword">but </span>requested an <span class="keyword">insecure </span>XMLHttpRequest endpoint <span class="string">'http://cccccc/log/conf?token=welljoint'</span>. This request has <span class="keyword">been </span><span class="keyword">blocked; </span>the content must <span class="keyword">be </span>served over HTTPS.</span><br></pre></td></tr></table></figure>
 <p>如果你在做第三方集成的系统，如果他们是在浏览器中直接调用你提供的接口，<code>那么最好你使用https协议，这样无论对方是https还是http都可以访问</code>。（相信我，这个很重要，我曾经经历过上线后遇到这个问题，然后连夜申请证书，把http升级到https的痛苦经历）</p>
-<h1 id="HTTPS的默认端口是443，而不是443"><a href="#HTTPS的默认端口是443，而不是443" class="headerlink" title="HTTPS的默认端口是443，而不是443"></a>HTTPS的默认端口是443，而不是443</h1><p>如果443端口已经被其他服务占用了，那么使用其他任何没有被占用的端口都可以用作HTTPS服务，只不过在请求的时候需要加上端口号罢了。</p>
-<h1 id="如何快速隐藏一个DOM元素"><a href="#如何快速隐藏一个DOM元素" class="headerlink" title="如何快速隐藏一个DOM元素"></a>如何快速隐藏一个DOM元素</h1><p>选中一个元素，然后按<code>h</code>,这时候就会在选中的DOM元素上加上<code>__web-inspector-hide-shortcut__</code>类，这个类会让元素隐藏。谷歌和火狐上都可以，IE上没有试过行不行。</p>
+<h1 id="2-HTTPS的默认端口是443，而不是443"><a href="#2-HTTPS的默认端口是443，而不是443" class="headerlink" title="2. HTTPS的默认端口是443，而不是443"></a>2. HTTPS的默认端口是443，而不是443</h1><p>如果443端口已经被其他服务占用了，那么使用其他任何没有被占用的端口都可以用作HTTPS服务，只不过在请求的时候需要加上端口号罢了。</p>
+<h1 id="3-如何快速隐藏一个DOM元素"><a href="#3-如何快速隐藏一个DOM元素" class="headerlink" title="3. 如何快速隐藏一个DOM元素"></a>3. 如何快速隐藏一个DOM元素</h1><p>选中一个元素，然后按<code>h</code>,这时候就会在选中的DOM元素上加上<code>__web-inspector-hide-shortcut__</code>类，这个类会让元素隐藏。谷歌和火狐上都可以，IE上没有试过行不行。</p>
 <p><img src="http://p3alsaatj.bkt.clouddn.com/20180208091217_HDF1vL_Screenshot.jpeg" alt=""></p>
 
       
@@ -641,7 +641,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#HTTPS域向HTTP域发送请求会被浏览器直接拒绝，HTTP向HTTPS则不会"><span class="nav-text">HTTPS域向HTTP域发送请求会被浏览器直接拒绝，HTTP向HTTPS则不会</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#HTTPS的默认端口是443，而不是443"><span class="nav-text">HTTPS的默认端口是443，而不是443</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#如何快速隐藏一个DOM元素"><span class="nav-text">如何快速隐藏一个DOM元素</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#1-HTTPS域向HTTP域发送请求会被浏览器直接拒绝，HTTP向HTTPS则不会"><span class="nav-text">1. HTTPS域向HTTP域发送请求会被浏览器直接拒绝，HTTP向HTTPS则不会</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#2-HTTPS的默认端口是443，而不是443"><span class="nav-text">2. HTTPS的默认端口是443，而不是443</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#3-如何快速隐藏一个DOM元素"><span class="nav-text">3. 如何快速隐藏一个DOM元素</span></a></li></ol></div>
             
 
           </div>

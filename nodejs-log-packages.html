@@ -82,18 +82,18 @@
 
 
 
-<meta name="description" content="morgan 【优点】morgan配置非常简单 【优点】支持自定义日志格式 【优点】支持日志分机 【优点】支持日志压缩：使用rotating-file-stream 【缺点】无法同时往console和文件中写日志  log4js-node 【优点】配置简单 【优点】支持同时往控制台和文件中写数据 【优点】支持按照时间或文件大小分割文件 【优点】支持文件压缩123456789101112131415">
+<meta name="description" content="1. morgan 【优点】morgan配置非常简单 【优点】支持自定义日志格式 【优点】支持日志分机 【优点】支持日志压缩：使用rotating-file-stream 【缺点】无法同时往console和文件中写日志  2. log4js-node 【优点】配置简单 【优点】支持同时往控制台和文件中写数据 【优点】支持按照时间或文件大小分割文件 【优点】支持文件压缩123456789101112">
 <meta name="keywords" content="王端端, 洞香春, wellClient">
 <meta property="og:type" content="article">
 <meta property="og:title" content="nodejs 日志插件比较 VS 自定义日志插件">
 <meta property="og:url" content="https://wdd.js.org/nodejs-log-packages.html">
 <meta property="og:site_name" content="洞香春">
-<meta property="og:description" content="morgan 【优点】morgan配置非常简单 【优点】支持自定义日志格式 【优点】支持日志分机 【优点】支持日志压缩：使用rotating-file-stream 【缺点】无法同时往console和文件中写日志  log4js-node 【优点】配置简单 【优点】支持同时往控制台和文件中写数据 【优点】支持按照时间或文件大小分割文件 【优点】支持文件压缩123456789101112131415">
+<meta property="og:description" content="1. morgan 【优点】morgan配置非常简单 【优点】支持自定义日志格式 【优点】支持日志分机 【优点】支持日志压缩：使用rotating-file-stream 【缺点】无法同时往console和文件中写日志  2. log4js-node 【优点】配置简单 【优点】支持同时往控制台和文件中写数据 【优点】支持按照时间或文件大小分割文件 【优点】支持文件压缩123456789101112">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-02-07T05:49:56.000Z">
+<meta property="og:updated_time" content="2018-02-09T07:47:02.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="nodejs 日志插件比较 VS 自定义日志插件">
-<meta name="twitter:description" content="morgan 【优点】morgan配置非常简单 【优点】支持自定义日志格式 【优点】支持日志分机 【优点】支持日志压缩：使用rotating-file-stream 【缺点】无法同时往console和文件中写日志  log4js-node 【优点】配置简单 【优点】支持同时往控制台和文件中写数据 【优点】支持按照时间或文件大小分割文件 【优点】支持文件压缩123456789101112131415">
+<meta name="twitter:description" content="1. morgan 【优点】morgan配置非常简单 【优点】支持自定义日志格式 【优点】支持日志分机 【优点】支持日志压缩：使用rotating-file-stream 【缺点】无法同时往console和文件中写日志  2. log4js-node 【优点】配置简单 【优点】支持同时往控制台和文件中写数据 【优点】支持按照时间或文件大小分割文件 【优点】支持文件压缩123456789101112">
 
 
 
@@ -366,7 +366,7 @@
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  727 字
+                  733 字
                 </span>
               
 
@@ -403,30 +403,30 @@
       
 
       
-        <h1 id="morgan"><a href="#morgan" class="headerlink" title="morgan"></a><a href="https://github.com/expressjs/morgan" target="_blank" rel="noopener">morgan</a></h1><ul>
+        <h1 id="1-morgan"><a href="#1-morgan" class="headerlink" title="1. morgan"></a>1. <a href="https://github.com/expressjs/morgan" target="_blank" rel="noopener">morgan</a></h1><ul>
 <li>【优点】morgan配置非常简单</li>
 <li>【优点】支持自定义日志格式</li>
 <li>【优点】支持日志分机</li>
 <li>【优点】支持日志压缩：使用<a href="https://github.com/iccicci/rotating-file-stream" target="_blank" rel="noopener">rotating-file-stream</a></li>
 <li>【缺点】无法同时往console和文件中写日志</li>
 </ul>
-<h1 id="log4js-node"><a href="#log4js-node" class="headerlink" title="log4js-node"></a><a href="https://github.com/nomiddlename/log4js-node" target="_blank" rel="noopener">log4js-node</a></h1><ul>
+<h1 id="2-log4js-node"><a href="#2-log4js-node" class="headerlink" title="2. log4js-node"></a>2. <a href="https://github.com/nomiddlename/log4js-node" target="_blank" rel="noopener">log4js-node</a></h1><ul>
 <li>【优点】配置简单</li>
 <li>【优点】支持同时往控制台和文件中写数据</li>
 <li>【优点】支持按照时间或文件大小分割文件</li>
 <li>【优点】支持文件压缩<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">"use strict"</span>;</span><br><span class="line"><span class="keyword">var</span> path = <span class="built_in">require</span>(<span class="string">'path'</span>)</span><br><span class="line">, log4js = <span class="built_in">require</span>(<span class="string">'../lib/log4js'</span>);</span><br><span class="line"></span><br><span class="line">log4js.configure(</span><br><span class="line">  &#123;</span><br><span class="line">    appenders: [</span><br><span class="line">      &#123;</span><br><span class="line">        type: <span class="string">"file"</span>,</span><br><span class="line">        filename: <span class="string">"important-things.log"</span>,</span><br><span class="line">        maxLogSize: <span class="number">10</span>*<span class="number">1024</span>*<span class="number">1024</span>, <span class="comment">// = 10Mb</span></span><br><span class="line">        numBackups: <span class="number">5</span>, <span class="comment">// keep five backup files</span></span><br><span class="line">        compress: <span class="literal">true</span>, <span class="comment">// compress the backups</span></span><br><span class="line">        encoding: <span class="string">'utf-8'</span>,</span><br><span class="line">        mode: <span class="built_in">parseInt</span>(<span class="string">'0640'</span>, <span class="number">8</span>),</span><br><span class="line">        flags: <span class="string">'w+'</span></span><br><span class="line">      &#125;,</span><br><span class="line">      &#123;</span><br><span class="line">        type: <span class="string">"dateFile"</span>,</span><br><span class="line">        filename: <span class="string">"more-important-things.log"</span>,</span><br><span class="line">        pattern: <span class="string">"yyyy-MM-dd-hh"</span>,</span><br><span class="line">        compress: <span class="literal">true</span></span><br><span class="line">      &#125;,</span><br><span class="line">      &#123;</span><br><span class="line">        type: <span class="string">"stdout"</span></span><br><span class="line">      &#125;</span><br><span class="line">    ]</span><br><span class="line">  &#125;</span><br><span class="line">);</span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> logger = log4js.getLogger(<span class="string">'things'</span>);</span><br><span class="line">logger.debug(<span class="string">"This little thing went to market"</span>);</span><br><span class="line">logger.info(<span class="string">"This little thing stayed at home"</span>);</span><br><span class="line">logger.error(<span class="string">"This little thing had roast beef"</span>);</span><br><span class="line">logger.fatal(<span class="string">"This little thing had none"</span>);</span><br><span class="line">logger.trace(<span class="string">"and this little thing went wee, wee, wee, all the way home."</span>);</span><br></pre></td></tr></table></figure>
 </li>
 </ul>
-<h1 id="winston"><a href="#winston" class="headerlink" title="winston"></a><a href="https://github.com/winstonjs/winston" target="_blank" rel="noopener">winston</a></h1><ul>
+<h1 id="3-winston"><a href="#3-winston" class="headerlink" title="3. winston"></a>3. <a href="https://github.com/winstonjs/winston" target="_blank" rel="noopener">winston</a></h1><ul>
 <li>没用过，不做评论</li>
 </ul>
-<h1 id="fluent-logger-node"><a href="#fluent-logger-node" class="headerlink" title="fluent-logger-node"></a><a href="https://github.com/fluent/fluent-logger-node" target="_blank" rel="noopener">fluent-logger-node</a></h1><ul>
+<h1 id="4-fluent-logger-node"><a href="#4-fluent-logger-node" class="headerlink" title="4. fluent-logger-node"></a>4. <a href="https://github.com/fluent/fluent-logger-node" target="_blank" rel="noopener">fluent-logger-node</a></h1><ul>
 <li>往fluntd中写日志，没用过</li>
 </ul>
-<h1 id="express-winston"><a href="#express-winston" class="headerlink" title="express-winston"></a><a href="https://github.com/bithavoc/express-winston" target="_blank" rel="noopener">express-winston</a></h1><ul>
+<h1 id="5-express-winston"><a href="#5-express-winston" class="headerlink" title="5. express-winston"></a>5. <a href="https://github.com/bithavoc/express-winston" target="_blank" rel="noopener">express-winston</a></h1><ul>
 <li>没用过</li>
 </ul>
-<h1 id="如何自定义一个日志插件"><a href="#如何自定义一个日志插件" class="headerlink" title="如何自定义一个日志插件"></a>如何自定义一个日志插件</h1><ul>
+<h1 id="6-如何自定义一个日志插件"><a href="#6-如何自定义一个日志插件" class="headerlink" title="6. 如何自定义一个日志插件"></a>6. 如何自定义一个日志插件</h1><ul>
 <li>可以自定义日志结构</li>
 <li>日志文件可以用gzip压缩</li>
 <li>不影响往console写日志</li>
@@ -656,7 +656,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#morgan"><span class="nav-text">morgan</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#log4js-node"><span class="nav-text">log4js-node</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#winston"><span class="nav-text">winston</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#fluent-logger-node"><span class="nav-text">fluent-logger-node</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#express-winston"><span class="nav-text">express-winston</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#如何自定义一个日志插件"><span class="nav-text">如何自定义一个日志插件</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#1-morgan"><span class="nav-text">1. morgan</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#2-log4js-node"><span class="nav-text">2. log4js-node</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#3-winston"><span class="nav-text">3. winston</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#4-fluent-logger-node"><span class="nav-text">4. fluent-logger-node</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#5-express-winston"><span class="nav-text">5. express-winston</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#6-如何自定义一个日志插件"><span class="nav-text">6. 如何自定义一个日志插件</span></a></li></ol></div>
             
 
           </div>

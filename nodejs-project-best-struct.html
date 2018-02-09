@@ -82,13 +82,13 @@
 
 
 
-<meta name="description" content="原文阅读: nodebestpractices 工程结构最佳实践组件化 bad: 按照功能划分   controllers api.js home.js order.js product.js user.js   models order.js product.js user.js   test testOrder.js testProduct.js testUser.js    good：按照">
+<meta name="description" content="原文阅读: nodebestpractices 1. 工程结构最佳实践1.1. 组件化 bad: 按照功能划分   controllers api.js home.js order.js product.js user.js   models order.js product.js user.js   test testOrder.js testProduct.js testUser.js">
 <meta name="keywords" content="王端端, 洞香春, wellClient">
 <meta property="og:type" content="article">
 <meta property="og:title" content="笔记 node最佳实践1 项目工程最佳实践">
 <meta property="og:url" content="https://wdd.js.org/nodejs-project-best-struct.html">
 <meta property="og:site_name" content="洞香春">
-<meta property="og:description" content="原文阅读: nodebestpractices 工程结构最佳实践组件化 bad: 按照功能划分   controllers api.js home.js order.js product.js user.js   models order.js product.js user.js   test testOrder.js testProduct.js testUser.js    good：按照">
+<meta property="og:description" content="原文阅读: nodebestpractices 1. 工程结构最佳实践1.1. 组件化 bad: 按照功能划分   controllers api.js home.js order.js product.js user.js   models order.js product.js user.js   test testOrder.js testProduct.js testUser.js">
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:image" content="http://p3alsaatj.bkt.clouddn.com/20180209115715_YvgYOb_Screenshot.jpeg">
 <meta property="og:image" content="http://p3alsaatj.bkt.clouddn.com/20180209115729_iJfUGU_Screenshot.jpeg">
@@ -96,10 +96,10 @@
 <meta property="og:image" content="http://p3alsaatj.bkt.clouddn.com/20180209115755_WLygCk_Screenshot.jpeg">
 <meta property="og:image" content="http://p3alsaatj.bkt.clouddn.com/20180209115806_dtcV4n_Screenshot.jpeg">
 <meta property="og:image" content="http://p3alsaatj.bkt.clouddn.com/20180209115815_7O9oS6_Screenshot.jpeg">
-<meta property="og:updated_time" content="2018-02-09T03:59:58.000Z">
+<meta property="og:updated_time" content="2018-02-09T07:47:06.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="笔记 node最佳实践1 项目工程最佳实践">
-<meta name="twitter:description" content="原文阅读: nodebestpractices 工程结构最佳实践组件化 bad: 按照功能划分   controllers api.js home.js order.js product.js user.js   models order.js product.js user.js   test testOrder.js testProduct.js testUser.js    good：按照">
+<meta name="twitter:description" content="原文阅读: nodebestpractices 1. 工程结构最佳实践1.1. 组件化 bad: 按照功能划分   controllers api.js home.js order.js product.js user.js   models order.js product.js user.js   test testOrder.js testProduct.js testUser.js">
 <meta name="twitter:image" content="http://p3alsaatj.bkt.clouddn.com/20180209115715_YvgYOb_Screenshot.jpeg">
 
 
@@ -373,7 +373,7 @@
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  142 字
+                  153 字
                 </span>
               
 
@@ -412,7 +412,7 @@
       
         <p><img src="http://p3alsaatj.bkt.clouddn.com/20180209115715_YvgYOb_Screenshot.jpeg" alt=""></p>
 <p>原文阅读: <a href="https://github.com/i0natan/nodebestpractices" target="_blank" rel="noopener">nodebestpractices</a></p>
-<h1 id="工程结构最佳实践"><a href="#工程结构最佳实践" class="headerlink" title="工程结构最佳实践"></a>工程结构最佳实践</h1><h2 id="组件化"><a href="#组件化" class="headerlink" title="组件化"></a>组件化</h2><p><img src="http://p3alsaatj.bkt.clouddn.com/20180209115729_iJfUGU_Screenshot.jpeg" alt=""></p>
+<h1 id="1-工程结构最佳实践"><a href="#1-工程结构最佳实践" class="headerlink" title="1. 工程结构最佳实践"></a>1. 工程结构最佳实践</h1><h2 id="1-1-组件化"><a href="#1-1-组件化" class="headerlink" title="1.1. 组件化"></a>1.1. 组件化</h2><p><img src="http://p3alsaatj.bkt.clouddn.com/20180209115729_iJfUGU_Screenshot.jpeg" alt=""></p>
 <p><code>bad: 按照功能划分</code> </p>
 <ul>
 <li>controllers<ul>
@@ -450,16 +450,16 @@
 </ul>
 </li>
 </ul>
-<h2 id="层次化"><a href="#层次化" class="headerlink" title="层次化"></a>层次化</h2><p><img src="http://p3alsaatj.bkt.clouddn.com/20180209115743_ugkfVb_Screenshot.jpeg" alt=""></p>
+<h2 id="1-2-层次化"><a href="#1-2-层次化" class="headerlink" title="1.2. 层次化"></a>1.2. 层次化</h2><p><img src="http://p3alsaatj.bkt.clouddn.com/20180209115743_ugkfVb_Screenshot.jpeg" alt=""></p>
 <ul>
 <li>不要在express中写太多业务逻辑，express专注web层</li>
 <li>业务层要单独抽出</li>
 <li>数据库层单独抽出</li>
 </ul>
-<h2 id="NPM化"><a href="#NPM化" class="headerlink" title="NPM化"></a>NPM化</h2><p><img src="http://p3alsaatj.bkt.clouddn.com/20180209115755_WLygCk_Screenshot.jpeg" alt=""></p>
+<h2 id="1-3-NPM化"><a href="#1-3-NPM化" class="headerlink" title="1.3. NPM化"></a>1.3. NPM化</h2><p><img src="http://p3alsaatj.bkt.clouddn.com/20180209115755_WLygCk_Screenshot.jpeg" alt=""></p>
 <p><code>把常用组件做成NPM包</code></p>
-<h2 id="分离Express的-app-和-server"><a href="#分离Express的-app-和-server" class="headerlink" title="分离Express的 app 和 server"></a>分离<code>Express</code>的 <code>app</code> 和 <code>server</code></h2><p><img src="http://p3alsaatj.bkt.clouddn.com/20180209115806_dtcV4n_Screenshot.jpeg" alt=""></p>
-<h2 id="配置化"><a href="#配置化" class="headerlink" title="配置化"></a>配置化</h2><p><img src="http://p3alsaatj.bkt.clouddn.com/20180209115815_7O9oS6_Screenshot.jpeg" alt=""></p>
+<h2 id="1-4-分离Express的-app-和-server"><a href="#1-4-分离Express的-app-和-server" class="headerlink" title="1.4. 分离Express的 app 和 server"></a>1.4. 分离<code>Express</code>的 <code>app</code> 和 <code>server</code></h2><p><img src="http://p3alsaatj.bkt.clouddn.com/20180209115806_dtcV4n_Screenshot.jpeg" alt=""></p>
+<h2 id="1-5-配置化"><a href="#1-5-配置化" class="headerlink" title="1.5. 配置化"></a>1.5. 配置化</h2><p><img src="http://p3alsaatj.bkt.clouddn.com/20180209115815_7O9oS6_Screenshot.jpeg" alt=""></p>
 <ul>
 <li><code>环境感知： 根据不同环境使用不同配置</code></li>
 </ul>
@@ -685,7 +685,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#工程结构最佳实践"><span class="nav-text">工程结构最佳实践</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#组件化"><span class="nav-text">组件化</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#层次化"><span class="nav-text">层次化</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#NPM化"><span class="nav-text">NPM化</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#分离Express的-app-和-server"><span class="nav-text">分离Express的 app 和 server</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#配置化"><span class="nav-text">配置化</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#1-工程结构最佳实践"><span class="nav-text">1. 工程结构最佳实践</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#1-1-组件化"><span class="nav-text">1.1. 组件化</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#1-2-层次化"><span class="nav-text">1.2. 层次化</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#1-3-NPM化"><span class="nav-text">1.3. NPM化</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#1-4-分离Express的-app-和-server"><span class="nav-text">1.4. 分离Express的 app 和 server</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#1-5-配置化"><span class="nav-text">1.5. 配置化</span></a></li></ol></li></ol></div>
             
 
           </div>

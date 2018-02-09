@@ -82,18 +82,18 @@
 
 
 
-<meta name="description" content="特点 无依赖 无检查 无错误处理 无逻辑 无配置  代码12345678function render(tpl, data)&amp;#123;    var re = /&amp;#123;&amp;#123;([^&amp;#125;]+)?&amp;#125;&amp;#125;/;    var match = &apos;&apos;;    while(match = re.exec(tpl))&amp;#123;        tpl = tpl.repla">
+<meta name="description" content="1. 特点 无依赖 无检查 无错误处理 无逻辑 无配置  2. 代码12345678function render(tpl, data)&amp;#123;    var re = /&amp;#123;&amp;#123;([^&amp;#125;]+)?&amp;#125;&amp;#125;/;    var match = &apos;&apos;;    while(match = re.exec(tpl))&amp;#123;        tpl = tpl">
 <meta name="keywords" content="王端端, 洞香春, wellClient">
 <meta property="og:type" content="article">
 <meta property="og:title" content="8行代码的模板字符串替换函数">
 <meta property="og:url" content="https://wdd.js.org/a-very-simple-template-function.html">
 <meta property="og:site_name" content="洞香春">
-<meta property="og:description" content="特点 无依赖 无检查 无错误处理 无逻辑 无配置  代码12345678function render(tpl, data)&amp;#123;    var re = /&amp;#123;&amp;#123;([^&amp;#125;]+)?&amp;#125;&amp;#125;/;    var match = &apos;&apos;;    while(match = re.exec(tpl))&amp;#123;        tpl = tpl.repla">
+<meta property="og:description" content="1. 特点 无依赖 无检查 无错误处理 无逻辑 无配置  2. 代码12345678function render(tpl, data)&amp;#123;    var re = /&amp;#123;&amp;#123;([^&amp;#125;]+)?&amp;#125;&amp;#125;/;    var match = &apos;&apos;;    while(match = re.exec(tpl))&amp;#123;        tpl = tpl">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-02-08T05:52:23.000Z">
+<meta property="og:updated_time" content="2018-02-09T05:57:12.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="8行代码的模板字符串替换函数">
-<meta name="twitter:description" content="特点 无依赖 无检查 无错误处理 无逻辑 无配置  代码12345678function render(tpl, data)&amp;#123;    var re = /&amp;#123;&amp;#123;([^&amp;#125;]+)?&amp;#125;&amp;#125;/;    var match = &apos;&apos;;    while(match = re.exec(tpl))&amp;#123;        tpl = tpl.repla">
+<meta name="twitter:description" content="1. 特点 无依赖 无检查 无错误处理 无逻辑 无配置  2. 代码12345678function render(tpl, data)&amp;#123;    var re = /&amp;#123;&amp;#123;([^&amp;#125;]+)?&amp;#125;&amp;#125;/;    var match = &apos;&apos;;    while(match = re.exec(tpl))&amp;#123;        tpl = tpl">
 
 
 
@@ -366,7 +366,7 @@
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  121 字
+                  124 字
                 </span>
               
 
@@ -403,15 +403,15 @@
       
 
       
-        <h1 id="特点"><a href="#特点" class="headerlink" title="特点"></a>特点</h1><ul>
+        <h1 id="1-特点"><a href="#1-特点" class="headerlink" title="1. 特点"></a>1. 特点</h1><ul>
 <li>无依赖</li>
 <li>无检查</li>
 <li>无错误处理</li>
 <li>无逻辑</li>
 <li>无配置</li>
 </ul>
-<h1 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h1><figure class="highlight lua"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">render</span><span class="params">(tpl, data)</span></span>&#123;</span><br><span class="line">    var re = /&#123;&#123;([^&#125;]+)?&#125;&#125;/;</span><br><span class="line">    var <span class="built_in">match</span> = <span class="string">''</span>;</span><br><span class="line">    <span class="keyword">while</span>(<span class="built_in">match</span> = re.exec(tpl))&#123;</span><br><span class="line">        tpl = tpl.replace(<span class="built_in">match</span>[<span class="number">0</span>],data[<span class="built_in">match</span>[<span class="number">1</span>]]);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> tpl;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h1 id="demo"><a href="#demo" class="headerlink" title="demo"></a>demo</h1><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> tpl = <span class="string">'/cube_xinbao_dial_result/&#123;&#123;action&#125;&#125;/&#123;&#123;report_type&#125;&#125;/&#123;&#123;query&#125;&#125;/?userId=&#123;&#123;userId&#125;&#125;'</span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> data = &#123;<span class="attr">report_type</span>:<span class="number">1</span>, <span class="attr">query</span>: <span class="string">'2323'</span>, <span class="attr">action</span>: <span class="string">'todolist'</span>,<span class="attr">userId</span>: <span class="string">'23234234'</span>&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">render</span>(<span class="params">tpl, data</span>)</span>&#123;</span><br><span class="line">    <span class="keyword">var</span> re = <span class="regexp">/&#123;&#123;([^&#125;]+)?&#125;&#125;/</span>;</span><br><span class="line">    <span class="keyword">var</span> match = <span class="string">''</span>;</span><br><span class="line">    <span class="keyword">while</span>(match = re.exec(tpl))&#123;</span><br><span class="line">        tpl = tpl.replace(match[<span class="number">0</span>],data[match[<span class="number">1</span>]]);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> tpl;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="built_in">console</span>.log(render(tpl,data));</span><br><span class="line"></span><br><span class="line">&gt; <span class="regexp">/cube_xinbao_dial_result/</span>todolist/<span class="number">1</span>/<span class="number">2323</span>/?userId=<span class="number">23234234</span></span><br></pre></td></tr></table></figure>
+<h1 id="2-代码"><a href="#2-代码" class="headerlink" title="2. 代码"></a>2. 代码</h1><figure class="highlight lua"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">render</span><span class="params">(tpl, data)</span></span>&#123;</span><br><span class="line">    var re = /&#123;&#123;([^&#125;]+)?&#125;&#125;/;</span><br><span class="line">    var <span class="built_in">match</span> = <span class="string">''</span>;</span><br><span class="line">    <span class="keyword">while</span>(<span class="built_in">match</span> = re.exec(tpl))&#123;</span><br><span class="line">        tpl = tpl.replace(<span class="built_in">match</span>[<span class="number">0</span>],data[<span class="built_in">match</span>[<span class="number">1</span>]]);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> tpl;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h1 id="3-demo"><a href="#3-demo" class="headerlink" title="3. demo"></a>3. demo</h1><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> tpl = <span class="string">'/cube_xinbao_dial_result/&#123;&#123;action&#125;&#125;/&#123;&#123;report_type&#125;&#125;/&#123;&#123;query&#125;&#125;/?userId=&#123;&#123;userId&#125;&#125;'</span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> data = &#123;<span class="attr">report_type</span>:<span class="number">1</span>, <span class="attr">query</span>: <span class="string">'2323'</span>, <span class="attr">action</span>: <span class="string">'todolist'</span>,<span class="attr">userId</span>: <span class="string">'23234234'</span>&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">render</span>(<span class="params">tpl, data</span>)</span>&#123;</span><br><span class="line">    <span class="keyword">var</span> re = <span class="regexp">/&#123;&#123;([^&#125;]+)?&#125;&#125;/</span>;</span><br><span class="line">    <span class="keyword">var</span> match = <span class="string">''</span>;</span><br><span class="line">    <span class="keyword">while</span>(match = re.exec(tpl))&#123;</span><br><span class="line">        tpl = tpl.replace(match[<span class="number">0</span>],data[match[<span class="number">1</span>]]);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> tpl;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="built_in">console</span>.log(render(tpl,data));</span><br><span class="line"></span><br><span class="line">&gt; <span class="regexp">/cube_xinbao_dial_result/</span>todolist/<span class="number">1</span>/<span class="number">2323</span>/?userId=<span class="number">23234234</span></span><br></pre></td></tr></table></figure>
       
     </div>
     
@@ -633,7 +633,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#特点"><span class="nav-text">特点</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#代码"><span class="nav-text">代码</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#demo"><span class="nav-text">demo</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#1-特点"><span class="nav-text">1. 特点</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#2-代码"><span class="nav-text">2. 代码</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#3-demo"><span class="nav-text">3. demo</span></a></li></ol></div>
             
 
           </div>

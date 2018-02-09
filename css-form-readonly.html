@@ -82,18 +82,18 @@
 
 
 
-<meta name="description" content="一般的方法往往给表单的各个input、select等加上readonly，但是这个方法有很多缺点。此处就不一一赘述。  我说的方法只需要给表单加上一个类，就可以让表单只读。1&amp;lt;form class=&quot;form-readonly&quot;&amp;gt;&amp;lt;/form&amp;gt; 方法1: 用:before给form做个看不见的蒙版，遮住下面所有的元素，使之不响应任何事件123456789101112.fo">
+<meta name="description" content="一般的方法往往给表单的各个input、select等加上readonly，但是这个方法有很多缺点。此处就不一一赘述。  我说的方法只需要给表单加上一个类，就可以让表单只读。1&amp;lt;form class=&quot;form-readonly&quot;&amp;gt;&amp;lt;/form&amp;gt; 1. 方法1: 用:before给form做个看不见的蒙版，遮住下面所有的元素，使之不响应任何事件123456789101112">
 <meta name="keywords" content="表单">
 <meta property="og:type" content="article">
 <meta property="og:title" content="奇技淫巧：css实现整个表单只读 form readonly">
 <meta property="og:url" content="https://wdd.js.org/css-form-readonly.html">
 <meta property="og:site_name" content="洞香春">
-<meta property="og:description" content="一般的方法往往给表单的各个input、select等加上readonly，但是这个方法有很多缺点。此处就不一一赘述。  我说的方法只需要给表单加上一个类，就可以让表单只读。1&amp;lt;form class=&quot;form-readonly&quot;&amp;gt;&amp;lt;/form&amp;gt; 方法1: 用:before给form做个看不见的蒙版，遮住下面所有的元素，使之不响应任何事件123456789101112.fo">
+<meta property="og:description" content="一般的方法往往给表单的各个input、select等加上readonly，但是这个方法有很多缺点。此处就不一一赘述。  我说的方法只需要给表单加上一个类，就可以让表单只读。1&amp;lt;form class=&quot;form-readonly&quot;&amp;gt;&amp;lt;/form&amp;gt; 1. 方法1: 用:before给form做个看不见的蒙版，遮住下面所有的元素，使之不响应任何事件123456789101112">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-02-09T05:32:09.000Z">
+<meta property="og:updated_time" content="2018-02-09T05:59:32.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="奇技淫巧：css实现整个表单只读 form readonly">
-<meta name="twitter:description" content="一般的方法往往给表单的各个input、select等加上readonly，但是这个方法有很多缺点。此处就不一一赘述。  我说的方法只需要给表单加上一个类，就可以让表单只读。1&amp;lt;form class=&quot;form-readonly&quot;&amp;gt;&amp;lt;/form&amp;gt; 方法1: 用:before给form做个看不见的蒙版，遮住下面所有的元素，使之不响应任何事件123456789101112.fo">
+<meta name="twitter:description" content="一般的方法往往给表单的各个input、select等加上readonly，但是这个方法有很多缺点。此处就不一一赘述。  我说的方法只需要给表单加上一个类，就可以让表单只读。1&amp;lt;form class=&quot;form-readonly&quot;&amp;gt;&amp;lt;/form&amp;gt; 1. 方法1: 用:before给form做个看不见的蒙版，遮住下面所有的元素，使之不响应任何事件123456789101112">
 
 
 
@@ -366,7 +366,7 @@
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  174 字
+                  176 字
                 </span>
               
 
@@ -407,8 +407,8 @@
 <p>一般的方法往往给表单的各个input、select等加上readonly，但是这个方法有很多缺点。此处就不一一赘述。</p>
 </blockquote>
 <p>我说的方法只需要给表单加上一个类，就可以让表单只读。<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;form <span class="class"><span class="keyword">class</span></span>=<span class="string">"form-readonly"</span>&gt;<span class="xml"><span class="tag">&lt;/<span class="name">form</span>&gt;</span></span></span><br></pre></td></tr></table></figure></p>
-<h1 id="方法1-用-before给form做个看不见的蒙版，遮住下面所有的元素，使之不响应任何事件"><a href="#方法1-用-before给form做个看不见的蒙版，遮住下面所有的元素，使之不响应任何事件" class="headerlink" title="方法1: 用:before给form做个看不见的蒙版，遮住下面所有的元素，使之不响应任何事件"></a>方法1: 用:before给form做个看不见的蒙版，遮住下面所有的元素，使之不响应任何事件</h1><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.form-readonly</span>&#123;</span><br><span class="line">    <span class="attribute">position</span>: relative;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-class">.form-readonly</span><span class="selector-pseudo">:before</span>&#123;</span><br><span class="line">    <span class="attribute">content</span>: <span class="string">""</span>;</span><br><span class="line">    <span class="attribute">z-index</span>: <span class="number">1</span>;</span><br><span class="line">    <span class="attribute">position</span>: absolute;</span><br><span class="line">    <span class="attribute">top</span>: <span class="number">0</span>;</span><br><span class="line">    <span class="attribute">right</span>: <span class="number">0</span>;</span><br><span class="line">    <span class="attribute">bottom</span>: <span class="number">0</span>;</span><br><span class="line">    <span class="attribute">left</span>: <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h1 id="方法2-用pointer-events-none-让所有事件穿透form"><a href="#方法2-用pointer-events-none-让所有事件穿透form" class="headerlink" title="方法2: 用pointer-events:none, 让所有事件穿透form"></a>方法2: 用pointer-events:none, 让所有事件穿透form</h1><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.form-readonly</span>&#123;</span><br><span class="line">    <span class="attribute">pointer-events</span>:none;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h1 id="1-方法1-用-before给form做个看不见的蒙版，遮住下面所有的元素，使之不响应任何事件"><a href="#1-方法1-用-before给form做个看不见的蒙版，遮住下面所有的元素，使之不响应任何事件" class="headerlink" title="1. 方法1: 用:before给form做个看不见的蒙版，遮住下面所有的元素，使之不响应任何事件"></a>1. 方法1: 用:before给form做个看不见的蒙版，遮住下面所有的元素，使之不响应任何事件</h1><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.form-readonly</span>&#123;</span><br><span class="line">    <span class="attribute">position</span>: relative;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-class">.form-readonly</span><span class="selector-pseudo">:before</span>&#123;</span><br><span class="line">    <span class="attribute">content</span>: <span class="string">""</span>;</span><br><span class="line">    <span class="attribute">z-index</span>: <span class="number">1</span>;</span><br><span class="line">    <span class="attribute">position</span>: absolute;</span><br><span class="line">    <span class="attribute">top</span>: <span class="number">0</span>;</span><br><span class="line">    <span class="attribute">right</span>: <span class="number">0</span>;</span><br><span class="line">    <span class="attribute">bottom</span>: <span class="number">0</span>;</span><br><span class="line">    <span class="attribute">left</span>: <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h1 id="2-方法2-用pointer-events-none-让所有事件穿透form"><a href="#2-方法2-用pointer-events-none-让所有事件穿透form" class="headerlink" title="2. 方法2: 用pointer-events:none, 让所有事件穿透form"></a>2. 方法2: 用pointer-events:none, 让所有事件穿透form</h1><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.form-readonly</span>&#123;</span><br><span class="line">    <span class="attribute">pointer-events</span>:none;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <p>关于pointer-events属性，可以看看这个介绍：<a href="https://segmentfault.com/a/1190000011182335" target="_blank" rel="noopener">https://segmentfault.com/a/1190000011182335</a></p>
 
       
@@ -638,7 +638,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#方法1-用-before给form做个看不见的蒙版，遮住下面所有的元素，使之不响应任何事件"><span class="nav-text">方法1: 用:before给form做个看不见的蒙版，遮住下面所有的元素，使之不响应任何事件</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#方法2-用pointer-events-none-让所有事件穿透form"><span class="nav-text">方法2: 用pointer-events:none, 让所有事件穿透form</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#1-方法1-用-before给form做个看不见的蒙版，遮住下面所有的元素，使之不响应任何事件"><span class="nav-text">1. 方法1: 用:before给form做个看不见的蒙版，遮住下面所有的元素，使之不响应任何事件</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#2-方法2-用pointer-events-none-让所有事件穿透form"><span class="nav-text">2. 方法2: 用pointer-events:none, 让所有事件穿透form</span></a></li></ol></div>
             
 
           </div>
