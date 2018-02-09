@@ -1,6 +1,22 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[如何从浏览器导出HTTPS证书]]></title>
+    <url>%2Fexport-https-certificate-in-browser.html</url>
+    <content type="text"><![CDATA[以谷歌浏览器为栗子 #1 打开一个HTTPS网站，例如https://segmentfault.com/ #2 F12 -&gt; Secutity -&gt; 点击View certificate #3 详细信息 -&gt; 复制到文件 #4 证书导出向导 这一步要给证书文件起个名字，后缀名就不用了。 然后在你的桌面上就多了一个证书文件。]]></content>
+      <tags>
+        <tag>https</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[奇技淫巧：css实现整个表单只读 form readonly]]></title>
+    <url>%2Fcss-form-readonly.html</url>
+    <content type="text"><![CDATA[一般的方法往往给表单的各个input、select等加上readonly，但是这个方法有很多缺点。此处就不一一赘述。 我说的方法只需要给表单加上一个类，就可以让表单只读。1&lt;form class="form-readonly"&gt;&lt;/form&gt; 方法1: 用:before给form做个看不见的蒙版，遮住下面所有的元素，使之不响应任何事件123456789101112.form-readonly&#123; position: relative;&#125;.form-readonly:before&#123; content: ""; z-index: 1; position: absolute; top: 0; right: 0; bottom: 0; left: 0;&#125; 方法2: 用pointer-events:none, 让所有事件穿透form123.form-readonly&#123; pointer-events:none;&#125; 关于pointer-events属性，可以看看这个介绍：https://segmentfault.com/a/1190000011182335]]></content>
+      <tags>
+        <tag>表单</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[你不知道的JSON.stringify()妙用]]></title>
     <url>%2Fjson-stringify-powerful.html</url>
     <content type="text"><![CDATA[语法1JSON.stringify(value[, replacer[, space]]) 一般用法：12345var user = &#123;name: 'andy', isDead: false, age: 11, addr: 'shanghai'&#125;;JSON.stringify(user);"&#123;"name":"andy","isDead":false,"age":11,"addr":"shanghai"&#125;" 扩展用法replacerreplacer可以是函数或者是数组。 功能1: 改变属性值将isDead属性的值翻译成0或1，0对应false,1对应true12345678910var user = &#123;name: 'andy', isDead: false, age: 11, addr: 'shanghai'&#125;;JSON.stringify(user, function(key, value)&#123; if(key === 'isDead')&#123; return value === true ? 1 : 0; &#125; return value;&#125;);"&#123;"name":"andy","isDead":0,"age":11,"addr":"shanghai"&#125;" 功能2：删除某个属性将isDead属性删除，如果replacer的返回值是undefined,那么该属性会被删除。12345678910var user = &#123;name: 'andy', isDead: false, age: 11, addr: 'shanghai'&#125;;JSON.stringify(user, function(key, value)&#123; if(key === 'isDead')&#123; return undefined; &#125; return value;&#125;);"&#123;"name":"andy","age":11,"addr":"shanghai"&#125;" 功能3: 通过数组过滤某些属性只需要name属性和addr属性，其他不要。 12345var user = &#123;name: 'andy', isDead: false, age: 11, addr: 'shanghai'&#125;;JSON.stringify(user, ['name', 'addr']);"&#123;"name":"andy","addr":"shanghai"&#125;" spacespace可以是数字或者是字符串, 如果是数字则表示属性名前加上空格符号的数量，如果是字符串，则直接在属性名前加上该字符串。 功能1: 给输出属性前加上n个空格12345678910var user = &#123;name: 'andy', isDead: false, age: 11, addr: 'shanghai'&#125;;JSON.stringify(user, null, 4);"&#123; "name": "andy", "isDead": false, "age": 11, "addr": "shanghai"&#125;" 功能2: tab格式化输出123456789var user = &#123;name: 'andy', isDead: false, age: 11, addr: 'shanghai'&#125;;JSON.stringify(user, null, '\t');"&#123; "name": "andy", "isDead": false, "age": 11, "addr": "shanghai"&#125;" 功能3： 搞笑1234567JSON.stringify(user, null, 'good');"&#123;good"name": "andy",good"isDead": false,good"age": 11,good"addr": "shanghai"&#125;" 深拷贝1234var user = &#123;name: 'andy', isDead: false, age: 11, addr: 'shanghai'&#125;;var temp = JSON.stringify(user);var user2 = JSON.parse(temp); 其他JSON.parse() 其实也是支持第二个参数的。功能类似于JSON.stringify的第二个参数的功能。 参考 MDN JSON.stringify()]]></content>
@@ -292,8 +308,8 @@
     <url>%2Fyou-dont-know-https-and-http.html</url>
     <content type="text"><![CDATA[HTTPS域向HTTP域发送请求会被浏览器直接拒绝，HTTP向HTTPS则不会例如在github pages页面，这是一个https页面，如果在这个页面向http发送请求，那么会直接被浏览器拒绝，并在控制台输出下面的报错信息。 1jquery-1.11.3.min.js:5 Mixed Content: The page at 'https://wangduanduan.github.io/ddddddd/' was loaded over HTTPS, but requested an insecure XMLHttpRequest endpoint 'http://cccccc/log/conf?token=welljoint'. This request has been blocked; the content must be served over HTTPS. 如果你在做第三方集成的系统，如果他们是在浏览器中直接调用你提供的接口，那么最好你使用https协议，这样无论对方是https还是http都可以访问。（相信我，这个很重要，我曾经经历过上线后遇到这个问题，然后连夜申请证书，把http升级到https的痛苦经历） HTTPS的默认端口是443，而不是443如果443端口已经被其他服务占用了，那么使用其他任何没有被占用的端口都可以用作HTTPS服务，只不过在请求的时候需要加上端口号罢了。 如何快速隐藏一个DOM元素选中一个元素，然后按h,这时候就会在选中的DOM元素上加上__web-inspector-hide-shortcut__类，这个类会让元素隐藏。谷歌和火狐上都可以，IE上没有试过行不行。]]></content>
       <tags>
-        <tag>http</tag>
         <tag>https</tag>
+        <tag>http</tag>
       </tags>
   </entry>
   <entry>
@@ -433,10 +449,10 @@
     <content type="text"><![CDATA[产品概况基本要求 所有文档的格式采用markdown 文档使用Git进行 前提准备从MVC角度分析需求 模型层：资源最小数据集定义，功能定义 控制器：负责请求处理。例如增删改查 视图层：资源展现与交互 对于前端的需求是：视图层 + 模型层对于后端的需求是：控制器 + 模型层 前端需求文档实施资源下载参考文献 产品经理如何绕开API的坑]]></content>
       <tags>
         <tag>git</tag>
-        <tag>未完成</tag>
         <tag>gitlab</tag>
         <tag>gow</tag>
         <tag>ConEmu</tag>
+        <tag>未完成</tag>
       </tags>
   </entry>
   <entry>
@@ -453,8 +469,8 @@
     <url>%2Fdo-not-be-big-fans.html</url>
     <content type="text"><![CDATA[我对Vue与React的态度成年人权衡利弊，小孩子才说好坏你只不过在找借口罢了不要成为某个技术的死忠粉]]></content>
       <tags>
-        <tag>idea</tag>
         <tag>未完成</tag>
+        <tag>idea</tag>
       </tags>
   </entry>
   <entry>
@@ -462,8 +478,8 @@
     <url>%2Fthink-with-stream.html</url>
     <content type="text"><![CDATA[流的存在 流的规则终极的流]]></content>
       <tags>
-        <tag>idea</tag>
         <tag>未完成</tag>
+        <tag>idea</tag>
       </tags>
   </entry>
   <entry>
@@ -499,8 +515,8 @@
     <content type="text"><![CDATA[Git Bash Gow 1 2 3 4 5 6 7 8 9 10 awk basename bash bc bison bunzip2 bzip2 bzip2 bzip2recover cat chgrp chmod chown chroot cksum clear cp csplit curl cut dc dd df diff diff3 dirname dos2unix du egrep env expand expr factor fgrep flex fmt fold gawk gdbm3 gfind gow grep gsar gsort gzip head history5 hostid hostname id indent install join jwhois less lesskey libcurl libeay32 libiconv-2 libidn-11 libintl-2 libintl3 libssl32 ln ls m4 make md5sum mkdir mkfifo mknod msys-1 msys-regex-1 msys-termcap-0 mv nano ncftp nl od pageant paste patch pathchk pcre3 plink pr printenv printf pscp psftp putty puttygen pwd readline5 regex2 rm rmdir scp sdiff sed seq sftp sha1sum shar sleep split ssh ssleay32 su sum sync tac tail tar tee test touch tr uname unexpand uniq unix2dos unlink unrar unrar3 unshar uudecode uuencode vim wc wget whereis which whoami xargs yes zip zip32z64 ConEmugerpChrome ExtensionsvimiumMulti-highlightRestlet Client - REST API TestingTampermonkeyWeb Toolsjsonviewernewhttps://www.bejson.com/jsonviewernew/ regex101Linux 工具快速教程]]></content>
       <tags>
         <tag>git</tag>
-        <tag>未完成</tag>
         <tag>gow</tag>
+        <tag>未完成</tag>
         <tag>conemu</tag>
       </tags>
   </entry>
@@ -646,8 +662,8 @@
     <url>%2Fhow-to-get-jsorg-sub-domain.html</url>
     <content type="text"><![CDATA[之前我是使用wangduanduan.github.io作为我的博客地址，后来觉得麻烦，有把博客关了。最近有想去折腾折腾。先看效果：wdd.js.org 如果你不了解js.org可以看看我的这篇文章:一个值得所有前端开发者关注的网站js.org 前提 已经有了github pages的一个博客，并且博客中有内容，没有内容会审核不通过的。我第一次申请域名，就是因为内容太少而审核不通过。 想好自己要什么域名？比如你想要一个：wdd.js.org的域名，你先在浏览器里访问这个地址，看看有没有人用过，如果已经有人用过，那么你就只能想点其他的域名了。 fork js.org的项目，添加自己的域名1 fork https://github.com/js-org/dns.js.org2 修改你fork后的仓库中的cnames_active.js文件，加上自己的一条域名，最好要按照字母顺序 如下图所示，我在第1100行加入。注意，不要在该行后加任何注释。1"wdd": "wangduanduan.github.io", 3 commit 加入CNAME文件我是用hexo和next主题作为博客的模板。其中我在gh-pages分支写博客，然后部署到master分支。 我在我的gh-pages分支的source目录下加入CNAME文件, 内容只有一行 1wdd.js.org 将博客再次部署好，如果CNAME生效的话，你已经无法从原来的地址访问：wangduanduan.github.io， 这个博客了。 向js.org项目发起pull-request找到你fork后的项目，点击 new pull request, 向原来的项目发起请求。 然后你可以在js-org/dns.js.org项目的pull requests看到你的请求，当这个请求被合并时，你就拥有了js.org的二级域名。]]></content>
       <tags>
-        <tag>jsorg</tag>
         <tag>hexo</tag>
+        <tag>jsorg</tag>
       </tags>
   </entry>
   <entry>

@@ -4,8 +4,42 @@
 
     
   <url>
+    <loc>https://wdd.js.org/export-https-certificate-in-browser.html</loc>
+    <lastmod>2018-02-09T05:36:10.000Z</lastmod>
+    <data>
+        <display>
+        <title>如何从浏览器导出HTTPS证书</title>
+        <pubTime>2018-02-09T05:33:38.000Z</pubTime>
+        
+        <tag>https</tag>
+         
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>https://wdd.js.org/css-form-readonly.html</loc>
+    <lastmod>2018-02-09T05:32:09.000Z</lastmod>
+    <data>
+        <display>
+        <title>奇技淫巧：css实现整个表单只读 form readonly</title>
+        <pubTime>2018-02-09T05:31:38.000Z</pubTime>
+        
+        <tag>表单</tag>
+         
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>https://wdd.js.org/json-stringify-powerful.html</loc>
-    <lastmod>2018-02-09T05:27:53.000Z</lastmod>
+    <lastmod>2018-02-09T05:31:24.000Z</lastmod>
     <data>
         <display>
         <title>你不知道的JSON.stringify()妙用</title>
@@ -665,9 +699,9 @@
         <title>可能被遗漏的https与http的知识点</title>
         <pubTime>2018-02-08T01:10:59.000Z</pubTime>
         
-        <tag>http</tag>
-         
         <tag>https</tag>
+         
+        <tag>http</tag>
          
          
            
@@ -1021,13 +1055,13 @@
         
         <tag>git</tag>
          
-        <tag>未完成</tag>
-         
         <tag>gitlab</tag>
          
         <tag>gow</tag>
          
         <tag>ConEmu</tag>
+         
+        <tag>未完成</tag>
          
          
            
@@ -1063,9 +1097,9 @@
         <title>不要成为某个技术的死忠粉</title>
         <pubTime>2018-02-05T03:58:25.000Z</pubTime>
         
-        <tag>idea</tag>
-         
         <tag>未完成</tag>
+         
+        <tag>idea</tag>
          
          
            
@@ -1082,9 +1116,9 @@
         <title>Think With Stream</title>
         <pubTime>2018-02-05T03:28:59.000Z</pubTime>
         
-        <tag>idea</tag>
-         
         <tag>未完成</tag>
+         
+        <tag>idea</tag>
          
          
            
@@ -1160,9 +1194,9 @@
         
         <tag>git</tag>
          
-        <tag>未完成</tag>
-         
         <tag>gow</tag>
+         
+        <tag>未完成</tag>
          
         <tag>conemu</tag>
          
@@ -1453,9 +1487,9 @@
         <title>组织在召唤：如何免费获取一个js.org的二级域名</title>
         <pubTime>2018-01-29T10:08:03.000Z</pubTime>
         
-        <tag>jsorg</tag>
-         
         <tag>hexo</tag>
+         
+        <tag>jsorg</tag>
          
          
            
