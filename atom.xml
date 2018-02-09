@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://wdd.js.org/"/>
-  <updated>2018-02-09T15:15:31.000Z</updated>
+  <updated>2018-02-09T15:21:11.000Z</updated>
   <id>https://wdd.js.org/</id>
   
   <author>
@@ -21,17 +21,13 @@
     <link href="https://wdd.js.org/booknote-out-of-control.html"/>
     <id>https://wdd.js.org/booknote-out-of-control.html</id>
     <published>2018-02-09T14:45:17.000Z</published>
-    <updated>2018-02-09T15:15:31.000Z</updated>
+    <updated>2018-02-09T15:21:11.000Z</updated>
     
-    <content type="html"><![CDATA[<p><img src="http://p3alsaatj.bkt.clouddn.com/20180209225401_xDhao1_IMG_2666.jpeg" alt=""><br><!----></p><p>失控这本书在刚开始看时，立马让我联想到黑客帝国里人被种植在营养液中的情形，我不太清楚，这本书和这个电影之间有什么联系。</p><p>这本书真实能让人脑洞大开。</p><blockquote><p>人造与天生的联姻正是本书的主题</p></blockquote><p>读到这里，我立马有一个预想：多年以后，会有一家公司，把人的思想从肉体从抽取出来。让人的思想，脱离肉体而存在。</p><blockquote><p>蜂群思维 分布式管理</p></blockquote><p>有点像SVN之与GIT</p><blockquote><p>蜂群思维的神奇之处，看似没有一只蜜蜂在控制它。但是有一只看不见的手，在控制着整个群体</p><p>低层级的存在无法推断出高层级的复杂性</p></blockquote><p>就像，tcp无法推断出HTTP协议</p>]]></content>
+    <content type="html"><![CDATA[<p><img src="http://p3alsaatj.bkt.clouddn.com/20180209225401_xDhao1_IMG_2666.jpeg" alt=""><br><a id="more"></a></p><p>失控这本书在刚开始看时，立马让我联想到黑客帝国里人被种植在营养液中的情形，我不太清楚，这本书和这个电影之间有什么联系。</p><p>这本书真实能让人脑洞大开。</p><blockquote><p>人造与天生的联姻正是本书的主题</p></blockquote><p>读到这里，我立马有一个预想：多年以后，会有一家公司，把人的思想从肉体从抽取出来。让人的思想，脱离肉体而存在。</p><blockquote><p>蜂群思维 分布式管理</p></blockquote><p>有点像SVN之与GIT</p><blockquote><p>蜂群思维的神奇之处，看似没有一只蜜蜂在控制它。但是有一只看不见的手，在控制着整个群体</p><p>低层级的存在无法推断出高层级的复杂性</p></blockquote><p>就像，tcp无法推断出HTTP协议</p>]]></content>
     
     <summary type="html">
     
-      
-      
-        &lt;p&gt;&lt;img src=&quot;http://p3alsaatj.bkt.clouddn.com/20180209225401_xDhao1_IMG_2666.jpeg&quot; alt=&quot;&quot;&gt;&lt;br&gt;&lt;!----&gt;&lt;/p&gt;
-&lt;p&gt;失控这本书在刚开始看时，立马让我联想到黑客帝国里人被种植在营养
-      
+      &lt;p&gt;&lt;img src=&quot;http://p3alsaatj.bkt.clouddn.com/20180209225401_xDhao1_IMG_2666.jpeg&quot; alt=&quot;&quot;&gt;&lt;br&gt;
     
     </summary>
     
