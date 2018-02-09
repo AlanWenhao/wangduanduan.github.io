@@ -4,6 +4,74 @@
 
     
   <url>
+    <loc>https://wdd.js.org/json-stringify-powerful.html</loc>
+    <lastmod>2018-02-09T05:27:53.000Z</lastmod>
+    <data>
+        <display>
+        <title>你不知道的JSON.stringify()妙用</title>
+        <pubTime>2018-02-09T05:27:15.000Z</pubTime>
+        
+        <tag>json</tag>
+         
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>https://wdd.js.org/write-configurable-nodejs-http-proxy.html</loc>
+    <lastmod>2018-02-09T05:25:34.000Z</lastmod>
+    <data>
+        <display>
+        <title>手写可配置的express & nodejs的代理</title>
+        <pubTime>2018-02-09T05:24:35.000Z</pubTime>
+        
+        <tag>代理</tag>
+         
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>https://wdd.js.org/mac-sublime-shortcut-collector.html</loc>
+    <lastmod>2018-02-09T05:22:54.000Z</lastmod>
+    <data>
+        <display>
+        <title>mac-sublime-shortcut-collector</title>
+        <pubTime>2018-02-09T05:22:22.000Z</pubTime>
+        
+        <tag>sublime</tag>
+         
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>https://wdd.js.org/my-chrome-extensions-collection.html</loc>
+    <lastmod>2018-02-09T05:20:25.000Z</lastmod>
+    <data>
+        <display>
+        <title>我的谷歌浏览器插件集（15个）</title>
+        <pubTime>2018-02-09T02:27:34.000Z</pubTime>
+        
+        <tag>浏览器插件</tag>
+         
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>https://wdd.js.org/echarts-highlight-china-map.html</loc>
     <lastmod>2018-02-09T05:18:17.000Z</lastmod>
     <data>
@@ -203,23 +271,6 @@
         <tag>grep</tag>
          
         <tag>awk</tag>
-         
-         
-           
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>https://wdd.js.org/my-chrome-extensions-collection.html</loc>
-    <lastmod>2018-02-09T02:31:20.000Z</lastmod>
-    <data>
-        <display>
-        <title>我的谷歌浏览器插件集（15个）</title>
-        <pubTime>2018-02-09T02:27:34.000Z</pubTime>
-        
-        <tag>浏览器插件</tag>
          
          
            
@@ -1402,9 +1453,9 @@
         <title>组织在召唤：如何免费获取一个js.org的二级域名</title>
         <pubTime>2018-01-29T10:08:03.000Z</pubTime>
         
-        <tag>hexo</tag>
-         
         <tag>jsorg</tag>
+         
+        <tag>hexo</tag>
          
          
            
