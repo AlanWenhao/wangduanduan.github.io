@@ -1,6 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[vscode隐藏控制字符引起的问题以及解决思路]]></title>
+    <url>%2Fvscode-control-characters-problem.html</url>
+    <content type="text"><![CDATA[1. 环境 macOS Sierra 10.12.5 vscode 1.20.0 最新版 2. 如何重现这个问题在使用中文输入法输入中文的时候，一直按后退键，例如输入sfsf，当你按了4下后退键时，你会发现，搜狗输入法弹出框虽然消失了，但是页面上还会剩下一个s, 这是你如何再次按一下后退的话，s就会变成bs, 变成隐藏字符。这个一般是右边有markdown渲染插件时才会出现。 从更确切的角度说，是你的编辑器一旦开了webview，就会出现这个问题，即使是vscode的欢迎页，也是webview，也会导致这个问题。所以最好在写代码时尽量关闭webview。 3. 如何让隐藏字符现身Mac版的vscode控制字符一般是不会显示出来的，可以用一下的方法让其显示出来 1"editor.renderControlCharacters": true 在编辑器中显示的像很小的BS, 表示backspace的意思。一般是在输入时，按了后退或者删除会偶尔出现这个字符。 4. 隐藏的控制字符会出现什么问题？4.1. 控制字符在github上会出现问号例如下图的的和同字之间就是出现一个隐藏字符，在github上就会出现一个带有背景的问号。 4.2. 控制字符在Hexo NexT Local Search 会导致search.xml渲染失败，搜索框一直在转圈如果你使用浏览器打开search.xml，会发现解析报错 5. 如何解决5.1. 手动删除隐藏字符可以使用替换，先复制一个隐藏字符，然后把隐藏字符替换成空 5.2. 使用插件 Remove backspace control characterRemove backspace control character 在本家chromium已被合并，因此，在8月上旬发行的vscode 1.15将会重新确定(vscode 1.15, electron 1.7.4)。事实上，到现在这个问题还是没解决的 特点 格式化程序，用于删除打开的文档中包含的控制字符。要被删除的控制字符默认如下。 1/[\u0000]|[\u0001]|[\u0002]|[\u0003]|[\u0004]|[\u0005]|[\u0006]|[\u0007]|[\u0008]|[\u000b]|[\u000c]|[\u000d]|[\u000e]|[\u000f]|[\u0010]|[\u0011]|[\u0012]|[\u0013]|[\u0014]|[\u0015]|[\u0016]|[\u0017]|[\u0018]|[\u0019]|[\u001a]|[\u001b]|[\u001c]|[\u001d]|[\u001e]|[\u001f]|[\u001c]|[\u007f]/gm 用法 “editor.formatOnSave”: true 如果被设定,保存时启动 “editor.formatOnType”: true 在被设定的情况下，进行变换时;输入时启动 5.3. 坐等官方给出更好的解决方案官方这个bug依然还是open状态。Using IME with markdown preview enabled, press ESC/BACKSPACE leads in control characters #37114 5.4. 关闭所有webview这个问题一般出现在标签页含有webview时发生，所以在升级到vscode最新版后，在写代码时要注意，不要开启任何有webview的标签页，其中包括 关闭markdown渲染插件实时渲染的功能 关闭vscode欢迎页标签页 6. 为什么官方不直接解决这个问题？ vscode底层使用了electron，这是electron的Backspace can not erase the last one character during Japanese IME conversion (macOS) #9173bug, electron不解决这个问题，vscode就不会解决。 electron底层使用了chromium， 这是chromium的Two backspaces required to delete last character in webview inputbug, chromium不解决，elctron就无法解决。 综上，截止文章写出之时，这个问题依然没解决。 7. 参考 Mac 上的 VSCode 编写 Markdown 总是出现隐藏字符？ Hexo next 主题的 local search 功能失效，点击搜索链接无法弹出叠加层 Backspace can not erase the last one character during Chinese/Japanese IME conversion (macOS) #24981 Backspace can not erase the last one character during Japanese IME conversion (macOS) #9173 Two backspaces required to delete last character in webview input 控制字符 Using IME with markdown preview enabled, press ESC/BACKSPACE leads in control characters #37114]]></content>
+      <tags>
+        <tag>vscode</tag>
+        <tag>控制字符</tag>
+        <tag>Local Search 解析失败</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[VI必备常用场景快捷操作]]></title>
     <url>%2Fvi-useful-expressions.html</url>
     <content type="text"><![CDATA[1. 【字符串替换】快速修改配置文件版本号语法：%s/str1/str2/g 将文件中所有的str1字符串替换成str2字符串。 示例：某个服务从43版本升级到44版本 12// vi某个配置文件， 进入vi命令模式，输入:%s/43/44/g 这样做的好处是不需要移动光标去查找，然后进入插入模式去修改版本，而是直接替换，这样比较快捷。 注意：务必确认要被替换的字符串只有一个，否则可能造成误替换。 更多用法： 语法 功能 示例 :s/str1/str2/ 替换当前行第一个str1为str2 :s/44/45 :s/str1/str2/g 替换当前行所有的str1为str2 :s/44/45/g :%s/str1/str2/ 替换每一行第一个str1为str2 :%s/44/45 :%s/str1/str2/g 替换每一行所有的str1为str2 :%s/44/45/g 2. 光标移动注意：可配合 :set nu显示行号 语法 功能 示例 G 移动到这个档案的最后一行(常用) nG n 为数字。移动到这个档案的第 n 行。 20G 则会移动到这个档案的第20行 gg 移动到这个档案的第一行 n&lt;Enter&gt; n 为数字 光标向下移动 n 行 3&lt;Enter&gt; 向下移动三行 3. vi快捷手册]]></content>
