@@ -291,9 +291,13 @@
       </tags>
   </entry>
   <entry>
-    <title><![CDATA[tcp-high-recv-q-or-send-q-reasons]]></title>
+    <title><![CDATA[TCP链接高Recv-Q的原因以及解决方法]]></title>
     <url>%2Ftcp-high-recv-q-or-send-q-reasons.html</url>
-    <content type="text"><![CDATA[1. 参考文献 What is the reason for a high Recv-Q of a TCP connection? TCP buffers keep filling up (Recv-Q full): named unresponsive linux探秘:netstat中Recv-Q 深究 深入剖析 Socket——TCP 通信中由于底层队列填满而造成的死锁问题 netstat Recv-Q和Send-Q 深入剖析 Socket——数据传输的底层实现 Use of Recv-Q and Send-Q]]></content>
+    <content type="text"><![CDATA[1tcp 1692012 0 172.17.72.4:48444 10.254.149.149:58080 ESTABLISHED 27/node 1. 参考文献 What is the reason for a high Recv-Q of a TCP connection? TCP buffers keep filling up (Recv-Q full): named unresponsive linux探秘:netstat中Recv-Q 深究 深入剖析 Socket——TCP 通信中由于底层队列填满而造成的死锁问题 netstat Recv-Q和Send-Q 深入剖析 Socket——数据传输的底层实现 Use of Recv-Q and Send-Q]]></content>
+      <tags>
+        <tag>tcp</tag>
+        <tag>Recv-Q</tag>
+      </tags>
   </entry>
   <entry>
     <title><![CDATA[一些关于Hexo的疑问]]></title>
