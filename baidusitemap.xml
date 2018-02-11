@@ -4,6 +4,167 @@
 
     
   <url>
+    <loc>https://wdd.js.org/readme-of-xmysql.html</loc>
+    <lastmod>2018-02-11T06:51:19.000Z</lastmod>
+    <data>
+        <display>
+        <title>xmysql 一行命令从任何mysql数据库生成REST API</title>
+        <pubTime>2018-02-11T06:50:29.000Z</pubTime>
+        
+        <tag>mysql</tag>
+         
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>https://wdd.js.org/vscode-lint-vue-file-by-standard-style.html</loc>
+    <lastmod>2018-02-11T06:49:54.000Z</lastmod>
+    <data>
+        <display>
+        <title>如何在vscode中用standard style 风格去验证 vue文件</title>
+        <pubTime>2018-02-11T06:48:14.000Z</pubTime>
+        
+        <tag>vscode</tag>
+         
+        <tag>vue</tag>
+         
+        <tag>standard style</tag>
+         
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>https://wdd.js.org/webrtc-web-sip-phone.html</loc>
+    <lastmod>2018-02-11T06:46:54.000Z</lastmod>
+    <data>
+        <display>
+        <title>基于 WebRTC 构建 Web SIP Phone</title>
+        <pubTime>2018-02-11T06:44:58.000Z</pubTime>
+        
+        <tag>webrtc</tag>
+         
+        <tag>sip</tag>
+         
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>https://wdd.js.org/substr-substrig-history.html</loc>
+    <lastmod>2018-02-11T06:45:30.000Z</lastmod>
+    <data>
+        <display>
+        <title>追本溯源 substr与substring历史漫话</title>
+        <pubTime>2018-02-11T06:42:16.000Z</pubTime>
+        
+        <tag>substr</tag>
+         
+        <tag>substring</tag>
+         
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>https://wdd.js.org/2017-my-star-collection.html</loc>
+    <lastmod>2018-02-11T06:41:19.000Z</lastmod>
+    <data>
+        <display>
+        <title>回首2017 你其实是一个收集贝壳的孩子</title>
+        <pubTime>2018-02-11T06:37:33.000Z</pubTime>
+        
+        <tag>star</tag>
+         
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>https://wdd.js.org/you-dont-need-serial.html</loc>
+    <lastmod>2018-02-11T06:36:12.000Z</lastmod>
+    <data>
+        <display>
+        <title>you-dont-need-serial</title>
+        <pubTime>2018-02-11T06:35:59.000Z</pubTime>
+        
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>https://wdd.js.org/useful-browser-events.html</loc>
+    <lastmod>2018-02-11T06:35:11.000Z</lastmod>
+    <data>
+        <display>
+        <title>不常用却很有妙用的事件及方法</title>
+        <pubTime>2018-02-11T06:34:17.000Z</pubTime>
+        
+        <tag>visibilitychange</tag>
+         
+        <tag>sendBeacon</tag>
+         
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>https://wdd.js.org/overview-of-xfire.html</loc>
+    <lastmod>2018-02-11T06:33:15.000Z</lastmod>
+    <data>
+        <display>
+        <title>xfire 简单优雅、高度可配置的fetch接口批量生成工具</title>
+        <pubTime>2018-02-11T06:31:36.000Z</pubTime>
+        
+        <tag>xfire</tag>
+         
+        <tag>fetch</tag>
+         
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>https://wdd.js.org/trim-every-thing.html</loc>
+    <lastmod>2018-02-11T06:29:19.000Z</lastmod>
+    <data>
+        <display>
+        <title>trim-everything trim所有数据类型</title>
+        <pubTime>2018-02-11T06:28:22.000Z</pubTime>
+        
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>https://wdd.js.org/mac-vscode-update-permission-denied.html</loc>
     <lastmod>2018-02-11T06:20:42.000Z</lastmod>
     <data>
@@ -89,9 +250,9 @@
         
         <tag>读书笔记</tag>
          
-        <tag>主页主义</tag>
-         
         <tag>未完成</tag>
+         
+        <tag>主页主义</tag>
          
          
            
@@ -110,9 +271,9 @@
         
         <tag>读书笔记</tag>
          
-        <tag>未完成</tag>
-         
         <tag>失控</tag>
+         
+        <tag>未完成</tag>
          
          
            
