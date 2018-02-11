@@ -1,13 +1,49 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[mac vscode 更新失败 Permission denied解决办法]]></title>
+    <url>%2Fmac-vscode-update-permission-denied.html</url>
+    <content type="text"><![CDATA[0. 现象Could not create temporary directory: Permission denied 1. 问题起因在 /Users/username/Library/Caches/目录下，有以下两个文件， 可以看到，他们两个的用户是不一样的，一个是root一个username, 一般来说，我是以username来使用我的mac的。就是因为这两个文件的用户不一样，导致了更新失败。 12drwxr-xr-x 6 username staff 204B Jan 17 20:33 com.microsoft.VSCodedrwxr--r-- 2 root staff 68B Dec 17 13:51 com.microsoft.VSCode.ShipIt 2. 解决方法注意： 先把vscode 完全关闭 12345678// 1. 这一步是需要输入密码的sudo chown $USER ~/Library/Caches/com.microsoft.VSCode.ShipIt/// 2. 这一步是不需要输入密码的, 如果不进行第一步，第二步会报错sudo chown $USER ~/Library/Caches/com.microsoft.VSCode.ShipIt/*// 3. 更新xattrxattr -dr com.apple.quarantine /Applications/Visual\ Studio\ Code.app 3. 打开vscodeCode &gt; Check for Updates, 点击之后，你会发现Check for Updates已经变成灰色了，那么你需要稍等片刻，马上就可以更新，之后会跳出提示，让你重启vscode, 然后重启一下vscode, 就ok了。 4. 参考 joaomoreno commented on Feb 7, 2017 • edited]]></content>
+      <tags>
+        <tag>mac</tag>
+        <tag>vscode</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[搭建一个舒心高效的windows + shell 工作环境]]></title>
+    <url>%2Fconfortable-windows-shell-env.html</url>
+    <content type="text"><![CDATA[1 ConEmu命令行： 漂亮的不像实力派我曾这篇文章中《自从装了windows神器，再也不用羡慕mac了》，介绍过好几个命令行神器。 里面几个命令行我都有用过，但是最让我喜欢的是ConEmu，先说说它的特点。 平滑的窗口大小调整 标签和分裂（窗格） 窗口字体消除锯齿：标准，清除类型，禁用 快速的复制粘贴 可切换使用shell或者dos, 过着git bash等 你可以看看它完美的侧颜。 2 gow shell工具箱: 身材苗条却又肌肉发达我曾经想过，如果能在直接windows上用linux的grep, curl等命令，那该多好啊！我也曾试过Cygwin, 但是那哥斯拉般大小的体积让我只能望洋兴叹。 曾几何时，我遇到了Gow，她10MB版苗条的身材，却又能满足你80%的日常工作的需要。 当别人还有notepad++，慢慢吞吞加载一个30MB的日志的时候，你用grep命令，已经搜索到了想要的结果。所谓：天下武功，无坚不摧，唯快不破， 就是这个感觉。 Gow（Gnu On Windows）是Cygwin的轻量级替代品。 它使用了一个方便的Windows安装程序，安装了大约130个非常有用的开源UNIX应用程序，编译为本机win32二进制文件。 它被设计成尽可能小，大约10 MB，而Cygwin可以运行在100 MB以上，具体取决于选项。 这里有一些来自Gow用户的引用： “Gow是使Windows可以使用/可用的少数几件事之一” “我不断地使用Gow，太棒了。” “我只是想让你知道，GOW Suite非常棒 - 它比Cygwin工具轻得多，而且非常有用。 3 f.lux：我轻轻看一眼，这暖暖的感觉，她都有作为一个程序员，免不了长时间的面对电脑屏幕。结果经常会眼睛难受。然后我尝试了一下f.lux, 装上之后，配置了一下时区， 电脑屏幕马上变成屎黄色。抱着试试看的心态，我用了几天，几天过后，我实在受不了这颜色了。 然后就卸载了，没过多上时间，我觉得有点不对劲，不舒服。总是感觉缺点什么。 就放佛 张韶涵的歌《遗失的美好》：有些人说不清哪里好 但就是谁都替代不了, 然后我就又装上了f.lux。在我的影响下，我附近的几个小伙伴，也都装上了f.lux。 后来我换了mac, 但是我也装了f.lux。 f.lux让你的电脑屏幕看起来就像你所在的房间一样。 当日落时，它使您的电脑看起来像你的室内灯。 在早上，它使事情看起来像阳光。 告诉f.lux你有什么样的照明，以及你住的地方。 然后忘了它。 f.lux会自动完成剩下的工作。 4 visual studio code: 最好用的轻量编辑器 颜值很高 微软开源的产品，质量保证 集成git 插件很多，下载很快 免费 体积很小，占用内存很小，启动很快]]></content>
+      <tags>
+        <tag>windows</tag>
+        <tag>shell</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[IE11 0x2ee4 bug 以及类似问题解决方法]]></title>
+    <url>%2Fie11-0X2ee4-bug.html</url>
+    <content type="text"><![CDATA[一千个IE浏览器访问同一个页面，可能报一千种错误。前端激进派对IE恨得牙痒痒，但是无论你爱，或者不爱，IE就在那里，不来不去。 一些银行，以及政府部门，往往都是指定必须使用IE浏览器。所以，一些仅在IE浏览器上出现的问题。总结起来问题的原因很简单：IE的配置不正确 下面就将一个我曾经遇到的问题: IE11 0x2ee4， 以及其他的问题的解决方案 1. IE11 SCRIPT7002: XMLHttpRequest: 网络错误 0x2ee4 背景介绍：在一个HTTPS域向另外一个HTTPS域发送跨域POTST请求时 这个问题在浏览器的输出内容如下，怪异的是，并不是所有IE11都会报这个错误。 1SCRIPT7002: XMLHttpRequest: 网络错误 0x2ee4, 由于出现错误 00002ee4 而导致此项操作无法完成 stackoverflow上有个答案，它的思路是：在post请求发送之前，先进行一次get操作 这个方式我试过，是可行的。但是深层次的原因我不是很明白。 然而真相总有大白的一天，其实深层次的原因是，IE11的配置。 去掉检查证书吊销的的检查，解决0x2ee4的问题 解决方法 去掉check for server certificate revocation*， 也有可能你那边是中文翻译的：叫检查服务器证书是否已吊销 去掉检查发型商证书是否已吊销 点击确定 重启计算机 2 其他常规设置2.1 去掉兼容模式， 使用Edge文档模式 下图中红色框里的按钮也要取消勾选 2.2 有些使用activeX，还是需要检查是否启用的 2.3 允许跨域如果你的接口跨域了，还要检查浏览器是否允许跨域，否则浏览器可能默认就禁止跨域的 设置方法 internet选项 安全 自定义级别 启用通过跨域访问数据源 确定 然后重启电脑]]></content>
+      <tags>
+        <tag>IE11</tag>
+        <tag>12004</tag>
+        <tag>ajax</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[Mac版：上传图片到远程图床哪家强？]]></title>
+    <url>%2Ftool-upload-img-to-cloud.html</url>
+    <content type="text"><![CDATA[markdown写文档虽然如行云流水，但是一旦需要引入图片了。往往需要四五步操作，如果图片仅仅保存在本地，那么复制markdown时，图片路径往往都不对了，还要重新上传一遍图片，很是麻烦。 因此，最好把图片直接上传到图床上，然后通过公网链接来引入图片。图床选择上，我选择七牛云。 我在网上找到了3个不错的工具，在此记录一下。 1. 三个工具分析一览这些工具在上传图片成功后，会把链接保存在剪贴板中，在markdown文件中只需要粘贴一下就可以了。 名称 收费标准 优点 缺点 推荐指数 说明 下载地址 ipic 50元/年 支持很多的云服务，压缩，拖拽上传 死贵, 免费版只能用新浪图床，图片很可能会丢失 A 功能很多，价钱死贵 可通过mac app store 下载 UCQCloud 免费 免费，支持压缩，拖拽上传，截图上传 仅支持七牛，服务器仅支持华东和华北 AAA 免费，功能够用 UCQCloud1.3.3.dmg cuImage 终身1元 剪贴板上传，压缩上传，拖拽上传，快捷键上传，自动把链接转成markdown的形式 仅支持七牛 AAAA cuImage的压缩率要比UCQCloud高很多 可通过mac app store 下载 总体来说：如果你用七牛图床，cuImage是性价比最高, 用户体验最好的 2. 三个工具操作截图与简介3. cuImage 图片上传完成后自动复制URL。 在“上传历史”中查看已上传图片。 批量上传图片。 通过截图或复制上传图片。 通过拖拽上传图片。 通过”服务“菜单上传图片。 通过全局快捷键上传图片。 上传之前压缩图片。 支持BMP/JPEG/PNG/GIF/TIFF等多种文件格式。 只支持七牛云，已兼容七牛云华东、华北、华南及北美的存储区域。 4. UCQCloud1、文件上传(带上传进度) 支持软件面板拖放、选择文件(任意二进制文件)上传 支持状态栏粘贴板图片上传 支持状态栏拖放文件上传2、图片高质量压缩 本地图片上传使用Tinypng在线高质量无损压缩 粘贴板图片上传使用开源库pngquant压缩 正常情况压缩节省50%以上空间,大幅提高博客图片加载速度，节约网盘存储空间。3、上传历史记录管理 文件预览查看，删除，拷贝上传外链地址等 4、支持文件夹批量处理 直接拖入文件夹，或文件批量处理 作者：huluo666链接：https://www.jianshu.com/p/694dad59f20c來源：简书著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。 5. ipic图床神器 iPic 可自动上传图片、保存 Markdown 链接，给你前所未有的插图体验。 上传前压缩图片 通过拖拽上传图片 通过服务上传图片 [Command + U… 6. 参考文献 iPic - 图床神器 Mac七牛图床与文件批量上传工具: UCQCloud1.3.3 cuImage - 图床利器]]></content>
+      <tags>
+        <tag>工具</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[读书笔记 凯文 凯利 《失控》]]></title>
     <url>%2Fbooknote-out-of-control.html</url>
     <content type="text"><![CDATA[失控这本书在刚开始看时，立马让我联想到黑客帝国里人被种植在营养液中的情形，我不太清楚，这本书和这个电影之间有什么联系。 这本书真实能让人脑洞大开。 人造与天生的联姻正是本书的主题 读到这里，我立马有一个预想：多年以后，会有一家公司，把人的思想从肉体从抽取出来。让人的思想，脱离肉体而存在。 蜂群思维 分布式管理 有点像SVN之与GIT 蜂群思维的神奇之处，看似没有一只蜜蜂在控制它。但是有一只看不见的手，在控制着整个群体 低层级的存在无法推断出高层级的复杂性 就像，tcp无法推断出HTTP协议]]></content>
       <tags>
         <tag>读书笔记</tag>
-        <tag>失控</tag>
         <tag>未完成</tag>
+        <tag>失控</tag>
       </tags>
   </entry>
   <entry>
@@ -16,8 +52,8 @@
     <content type="text"><![CDATA[1. 你够专业吗？ p20 控制情绪，理性行动 专业知识，专业技能 客户第一 好奇心 进取心 严格遵守记录]]></content>
       <tags>
         <tag>读书笔记</tag>
-        <tag>未完成</tag>
         <tag>主页主义</tag>
+        <tag>未完成</tag>
       </tags>
   </entry>
   <entry>
@@ -594,8 +630,8 @@
     <url>%2Flinux-common-cmds.html</url>
     <content type="text"><![CDATA[1. lsof: 根据端口号查监听的进程号参考 使用模型：lsof -i :port 已知某服务占用8088端口，请查出使用该端口的进程号 1lsof -i :8088 lsof（list open files）是一个查看当前系统文件的工具。在linux环境下，任何事物都以文件的形式存在，通过文件不仅仅可以访问常规数据，还可以访问网络连接和硬件。如传输控制协议 (TCP) 和用户数据报协议 (UDP) 套接字等，系统在后台都为该应用程序分配了一个文件描述符，该文件描述符提供了大量关于这个应用程序本身的信息。lsof命令详情 2. grep: 搜索神器参考： GNU Grep 3.0123456789101112131415161718--color:高亮显示匹配到的字符串-v：显示不能被pattern匹配到的-i：忽略字符大小写-o：仅显示匹配到的字符串-q：静默模式，不输出任何信息-A#：after，匹配到的后#行-B#：before，匹配到的前#行-C#：context，匹配到的前后各#行-E：使用ERE，支持使用扩展的正则表达式－c：只输出匹配行的计数。－I：不区分大 小写(只适用于单字符)。－h：查询多文件时不显示文件名。－l：查询多文件时只输出包含匹配字符的文件名。－n：显示匹配行及 行号。- m: 匹配多少个关键词之后就停止搜索－s：不显示不存在或无匹配文本的错误信息。－v：显示不包含匹配文本的所有行。 2.1. 普通：搜索trace.log 中含有ERROR字段的日志grep ERROR trace.log 2.2. 输出文件：可以将日志输出文件中grep ERROR trace.log &gt; error.log 2.3. 反向：搜索不包含ERROR字段的日志grep -v ERROR trace.log 2.4. 向前：搜索包含ERROR,并且显示ERROR前10行的日志grep -B 10 ERROR trace.log 2.5. 向后：搜索包含ERROR字段，并且显示ERROR后10行的日志grep -A 10 ERROR trace.log 2.6. 上下文：搜索包含ERROR字段，并且显示ERROR字段前后10行的日志grep -C 10 ERROR trace.log 2.7. 多字段：搜索包含ERROR和DEBUG字段的日志gerp -E &#39;ERROR|DEBUG&#39; trace.log 2.8. 多文件：从多个.log文件中搜索含有ERROR的日志grep ERROR *.log 2.9. 省略文件名：从多个.log文件中搜索ERROR字段日志，并不显示日志文件名从多个文件中搜索的日志默认每行会带有日志文件名 grep -h ERROR *.log 2.10. 时间范围： 按照时间范围搜索日志awk &#39;$2&gt;&quot;17:30:00&quot; &amp;&amp; $2&lt;&quot;18:00:00&quot;&#39; trace.log日志形式如下, $2代表第二列即11:44:58, awk需要指定列111-21 16:44:58 /user/info/ 2.11. 有没有：搜索到第一个匹配行后就停止搜索grep -m 1 ERROR trace.log 2.12. 行数统计: 统计ERROR出现了多少行grep -c ERROR trace.log 2.13. 单词统计：统计ERROR出现了多少次grep -c ERROR trace.log | wc -w 3. wc：单词统计4. 参考文献 Linux工具快速教程]]></content>
       <tags>
-        <tag>linux</tag>
         <tag>shell</tag>
+        <tag>linux</tag>
       </tags>
   </entry>
   <entry>
