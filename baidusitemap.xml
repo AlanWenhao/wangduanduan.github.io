@@ -4,6 +4,25 @@
 
     
   <url>
+    <loc>https://wdd.js.org/overview-of-xfire.html</loc>
+    <lastmod>2018-02-11T08:58:04.000Z</lastmod>
+    <data>
+        <display>
+        <title>xfire 简单优雅、高度可配置的fetch接口批量生成工具</title>
+        <pubTime>2018-02-11T06:31:36.000Z</pubTime>
+        
+        <tag>xfire</tag>
+         
+        <tag>fetch</tag>
+         
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>https://wdd.js.org/tcp-high-recv-q-or-send-q-reasons.html</loc>
     <lastmod>2018-02-11T08:39:58.000Z</lastmod>
     <data>
@@ -158,25 +177,6 @@
         <tag>visibilitychange</tag>
          
         <tag>sendBeacon</tag>
-         
-         
-           
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>https://wdd.js.org/overview-of-xfire.html</loc>
-    <lastmod>2018-02-11T06:33:15.000Z</lastmod>
-    <data>
-        <display>
-        <title>xfire 简单优雅、高度可配置的fetch接口批量生成工具</title>
-        <pubTime>2018-02-11T06:31:36.000Z</pubTime>
-        
-        <tag>xfire</tag>
-         
-        <tag>fetch</tag>
          
          
            
