@@ -5,7 +5,7 @@
     
   <url>
     <loc>https://wdd.js.org/write-configurable-nodejs-http-proxy.html</loc>
-    <lastmod>2018-02-18T03:03:09.000Z</lastmod>
+    <lastmod>2018-02-18T03:06:02.000Z</lastmod>
     <data>
         <display>
         <title>手写可配置的express & nodejs的代理</title>
@@ -22,7 +22,7 @@
     
   <url>
     <loc>https://wdd.js.org/express-proxy-middleware-demo.html</loc>
-    <lastmod>2018-02-18T03:02:25.000Z</lastmod>
+    <lastmod>2018-02-18T03:04:57.000Z</lastmod>
     <data>
         <display>
         <title>Express 代理中间件的写法</title>

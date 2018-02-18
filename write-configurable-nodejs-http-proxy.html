@@ -82,19 +82,19 @@
 
 
 
-<meta name="description" content="注意：该文章中设置代理的方法存在很大的问题，请不要在使用。这里只作为记录。非常推荐你使用http-proxy-middleware，作为生产环境代理的包。你可以看我的这篇文章，里面有一个非常小巧的写法，可以实现各种代理的方法，Express 代理中间件的写法关于该文章中设置代理会产生的问题，在这篇文章中我会做详细的说明。 nodejs比较好的代理包有：node-http-proxy和http-pr">
+<meta name="description" content="注意：该文章中设置代理的方法存在很大的问题，请不要在使用。这里只作为记录。非常推荐你使用http-proxy-middleware，作为生产环境代理的包。你可以看我的这篇文章，里面有一个非常小巧的写法，可以实现各种代理的方法，Express 代理中间件的写法关于该文章中设置代理会产生的问题，在这篇文章中我会做详细的说明, TCP链接高Recv-Q的原因以及解决方法 nodejs比较好的代理包有：n">
 <meta name="keywords" content="代理">
 <meta property="og:type" content="article">
 <meta property="og:title" content="手写可配置的express &amp; nodejs的代理">
 <meta property="og:url" content="https://wdd.js.org/write-configurable-nodejs-http-proxy.html">
 <meta property="og:site_name" content="洞香春">
-<meta property="og:description" content="注意：该文章中设置代理的方法存在很大的问题，请不要在使用。这里只作为记录。非常推荐你使用http-proxy-middleware，作为生产环境代理的包。你可以看我的这篇文章，里面有一个非常小巧的写法，可以实现各种代理的方法，Express 代理中间件的写法关于该文章中设置代理会产生的问题，在这篇文章中我会做详细的说明。 nodejs比较好的代理包有：node-http-proxy和http-pr">
+<meta property="og:description" content="注意：该文章中设置代理的方法存在很大的问题，请不要在使用。这里只作为记录。非常推荐你使用http-proxy-middleware，作为生产环境代理的包。你可以看我的这篇文章，里面有一个非常小巧的写法，可以实现各种代理的方法，Express 代理中间件的写法关于该文章中设置代理会产生的问题，在这篇文章中我会做详细的说明, TCP链接高Recv-Q的原因以及解决方法 nodejs比较好的代理包有：n">
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:image" content="http://p3alsaatj.bkt.clouddn.com/20180209132526_lgeTcJ_bVVFlt.jpeg">
-<meta property="og:updated_time" content="2018-02-18T03:03:09.000Z">
+<meta property="og:updated_time" content="2018-02-18T03:06:02.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="手写可配置的express &amp; nodejs的代理">
-<meta name="twitter:description" content="注意：该文章中设置代理的方法存在很大的问题，请不要在使用。这里只作为记录。非常推荐你使用http-proxy-middleware，作为生产环境代理的包。你可以看我的这篇文章，里面有一个非常小巧的写法，可以实现各种代理的方法，Express 代理中间件的写法关于该文章中设置代理会产生的问题，在这篇文章中我会做详细的说明。 nodejs比较好的代理包有：node-http-proxy和http-pr">
+<meta name="twitter:description" content="注意：该文章中设置代理的方法存在很大的问题，请不要在使用。这里只作为记录。非常推荐你使用http-proxy-middleware，作为生产环境代理的包。你可以看我的这篇文章，里面有一个非常小巧的写法，可以实现各种代理的方法，Express 代理中间件的写法关于该文章中设置代理会产生的问题，在这篇文章中我会做详细的说明, TCP链接高Recv-Q的原因以及解决方法 nodejs比较好的代理包有：n">
 <meta name="twitter:image" content="http://p3alsaatj.bkt.clouddn.com/20180209132526_lgeTcJ_bVVFlt.jpeg">
 
 
@@ -368,7 +368,7 @@
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  942 字
+                  956 字
                 </span>
               
 
@@ -384,7 +384,7 @@
                   <span class="post-meta-item-text">阅读时长 &asymp;</span>
                 
                 <span title="阅读时长">
-                  4 分钟
+                  5 分钟
                 </span>
               
             </div>
@@ -405,7 +405,7 @@
       
 
       
-        <p>注意：该文章中设置代理的方法存在很大的问题，请不要在使用。这里只作为记录。<br>非常推荐你使用<a href="https://github.com/chimurai/http-proxy-middleware" target="_blank" rel="noopener">http-proxy-middleware</a>，作为生产环境代理的包。你可以看我的这篇文章，里面有一个非常小巧的写法，可以实现各种代理的方法，<a href="https://wdd.js.org/express-proxy-middleware-demo.html">Express 代理中间件的写法</a><br>关于该文章中设置代理会产生的问题，在这篇文章中我会做详细的说明。</p>
+        <p>注意：该文章中设置代理的方法存在很大的问题，请不要在使用。这里只作为记录。<br>非常推荐你使用<a href="https://github.com/chimurai/http-proxy-middleware" target="_blank" rel="noopener">http-proxy-middleware</a>，作为生产环境代理的包。你可以看我的这篇文章，里面有一个非常小巧的写法，可以实现各种代理的方法，<a href="https://wdd.js.org/express-proxy-middleware-demo.html">Express 代理中间件的写法</a><br>关于该文章中设置代理会产生的问题，在这篇文章中我会做详细的说明, <a href="https://wdd.js.org/tcp-high-recv-q-or-send-q-reasons.html">TCP链接高Recv-Q的原因以及解决方法</a></p>
 <p>nodejs比较好的代理包有：<a href="https://github.com/nodejitsu/node-http-proxy" target="_blank" rel="noopener">node-http-proxy</a>和<a href="https://github.com/chimurai/http-proxy-middleware" target="_blank" rel="noopener">http-proxy-middleware</a>。这两个我都用过，它们的优点自不用说，只说说缺点：<code>它们不能从配置文件里读取代理配置。每添加一个拦截路径都需要多加一个接口调用。</code></p>
 <p><img src="http://p3alsaatj.bkt.clouddn.com/20180209132526_lgeTcJ_bVVFlt.jpeg" alt=""></p>
 <p>所以，我需要自己写一个http代理，要包含一下功能：</p>
