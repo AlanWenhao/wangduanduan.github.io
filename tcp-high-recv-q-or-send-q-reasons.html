@@ -69,7 +69,7 @@
 
 
 
-  <meta name="keywords" content="tcp,Recv-Q,哑代理," />
+  <meta name="keywords" content="tcp,Recv-Q,哑代理,内存泄露," />
 
 
 
@@ -83,7 +83,7 @@
 
 
 <meta name="description" content="1. 问题现象使用netstat -ntp命令时发现，Recv-Q 1692012 异常偏高（正常情况下，该值应该是0），导致应用占用过多的内存。 1tcp 1692012 0 172.17.72.4:48444 10.254.149.149:58080 ESTABLISHED 27/node 问题原因：代理的转发时，没有删除逐跳首部 2. 什么是Hop-by-hop 逐跳首部？http首部可以分">
-<meta name="keywords" content="tcp,Recv-Q,哑代理">
+<meta name="keywords" content="tcp,Recv-Q,哑代理,内存泄露">
 <meta property="og:type" content="article">
 <meta property="og:title" content="哑代理 - TCP链接高Recv-Q，内存泄露的罪魁祸首">
 <meta property="og:url" content="https://wdd.js.org/tcp-high-recv-q-or-send-q-reasons.html">
@@ -91,7 +91,7 @@
 <meta property="og:description" content="1. 问题现象使用netstat -ntp命令时发现，Recv-Q 1692012 异常偏高（正常情况下，该值应该是0），导致应用占用过多的内存。 1tcp 1692012 0 172.17.72.4:48444 10.254.149.149:58080 ESTABLISHED 27/node 问题原因：代理的转发时，没有删除逐跳首部 2. 什么是Hop-by-hop 逐跳首部？http首部可以分">
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:image" content="http://p3alsaatj.bkt.clouddn.com/20180222111857_Wi3Sye_Screenshot.jpeg">
-<meta property="og:updated_time" content="2018-02-22T03:40:05.000Z">
+<meta property="og:updated_time" content="2018-02-22T06:33:15.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="哑代理 - TCP链接高Recv-Q，内存泄露的罪魁祸首">
 <meta name="twitter:description" content="1. 问题现象使用netstat -ntp命令时发现，Recv-Q 1692012 异常偏高（正常情况下，该值应该是0），导致应用占用过多的内存。 1tcp 1692012 0 172.17.72.4:48444 10.254.149.149:58080 ESTABLISHED 27/node 问题原因：代理的转发时，没有删除逐跳首部 2. 什么是Hop-by-hop 逐跳首部？http首部可以分">
@@ -519,6 +519,8 @@
           
             <a href="/tags/哑代理/" rel="tag"># 哑代理</a>
           
+            <a href="/tags/内存泄露/" rel="tag"># 内存泄露</a>
+          
         </div>
       
 
@@ -636,7 +638,7 @@
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">112</span>
+                  <span class="site-state-item-count">113</span>
                   <span class="site-state-item-name">标签</span>
                 </a>
               </div>
