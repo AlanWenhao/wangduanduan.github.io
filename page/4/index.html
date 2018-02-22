@@ -1627,7 +1627,7 @@ user.js
         
           <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/tcp-high-recv-q-or-send-q-reasons.html" itemprop="url">TCP链接高Recv-Q的原因以及解决方法</a></h1>
+                <a class="post-title-link" href="/tcp-high-recv-q-or-send-q-reasons.html" itemprop="url">哑代理 - TCP链接高Recv-Q，内存泄露的罪魁祸首</a></h1>
         
 
         <div class="post-meta">
@@ -1671,7 +1671,7 @@ user.js
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  104 字
+                  1,310 字
                 </span>
               
 
@@ -1687,7 +1687,7 @@ user.js
                   <span class="post-meta-item-text">阅读时长 &asymp;</span>
                 
                 <span title="阅读时长">
-                  1 分钟
+                  5 分钟
                 </span>
               
             </div>
@@ -1710,11 +1710,10 @@ user.js
       
         
           
-          1tcp 1692012 0 172.17.72.4:48444 10.254.149.149:58080 ESTABLISHED 27/node
-1. 参考文献
-What is the reason for a high Recv-Q of a TCP connection?
+          1. 问题现象使用netstat -ntp命令时发现，Recv-Q异常偏高，导致应用占用过多的内存，同时导致
+1tcp 1692012 0 172.17.72.4:48444 10.254.149.149:58080 ESTABLISHED 27/node
+问题原因：代理的转发时，没有删除逐跳首部
 
-TCP buffe
           ...
           <!--noindex-->
           <div class="post-button text-center">
@@ -1978,7 +1977,7 @@ TCP buffe
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">111</span>
+                  <span class="site-state-item-count">112</span>
                   <span class="site-state-item-name">标签</span>
                 </a>
               </div>

@@ -69,7 +69,7 @@
 
 
 
-  <meta name="keywords" content="tcp,Recv-Q," />
+  <meta name="keywords" content="tcp,Recv-Q,哑代理," />
 
 
 
@@ -82,18 +82,20 @@
 
 
 
-<meta name="description" content="1tcp 1692012 0 172.17.72.4:48444 10.254.149.149:58080 ESTABLISHED 27/node 1. 参考文献 What is the reason for a high Recv-Q of a TCP connection?  TCP buffers keep filling up (Recv-Q full): named unresponsi">
-<meta name="keywords" content="tcp,Recv-Q">
+<meta name="description" content="1. 问题现象使用netstat -ntp命令时发现，Recv-Q异常偏高，导致应用占用过多的内存，同时导致 1tcp 1692012 0 172.17.72.4:48444 10.254.149.149:58080 ESTABLISHED 27/node 问题原因：代理的转发时，没有删除逐跳首部 2. 什么是Hop-by-hop 逐跳首部？http首部可以分为两种  端到端首部 End-to-e">
+<meta name="keywords" content="tcp,Recv-Q,哑代理">
 <meta property="og:type" content="article">
-<meta property="og:title" content="TCP链接高Recv-Q的原因以及解决方法">
+<meta property="og:title" content="哑代理 - TCP链接高Recv-Q，内存泄露的罪魁祸首">
 <meta property="og:url" content="https://wdd.js.org/tcp-high-recv-q-or-send-q-reasons.html">
 <meta property="og:site_name" content="洞香春">
-<meta property="og:description" content="1tcp 1692012 0 172.17.72.4:48444 10.254.149.149:58080 ESTABLISHED 27/node 1. 参考文献 What is the reason for a high Recv-Q of a TCP connection?  TCP buffers keep filling up (Recv-Q full): named unresponsi">
+<meta property="og:description" content="1. 问题现象使用netstat -ntp命令时发现，Recv-Q异常偏高，导致应用占用过多的内存，同时导致 1tcp 1692012 0 172.17.72.4:48444 10.254.149.149:58080 ESTABLISHED 27/node 问题原因：代理的转发时，没有删除逐跳首部 2. 什么是Hop-by-hop 逐跳首部？http首部可以分为两种  端到端首部 End-to-e">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-02-11T08:39:58.000Z">
+<meta property="og:image" content="http://p3alsaatj.bkt.clouddn.com/20180222111857_Wi3Sye_Screenshot.jpeg">
+<meta property="og:updated_time" content="2018-02-22T03:35:20.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="TCP链接高Recv-Q的原因以及解决方法">
-<meta name="twitter:description" content="1tcp 1692012 0 172.17.72.4:48444 10.254.149.149:58080 ESTABLISHED 27/node 1. 参考文献 What is the reason for a high Recv-Q of a TCP connection?  TCP buffers keep filling up (Recv-Q full): named unresponsi">
+<meta name="twitter:title" content="哑代理 - TCP链接高Recv-Q，内存泄露的罪魁祸首">
+<meta name="twitter:description" content="1. 问题现象使用netstat -ntp命令时发现，Recv-Q异常偏高，导致应用占用过多的内存，同时导致 1tcp 1692012 0 172.17.72.4:48444 10.254.149.149:58080 ESTABLISHED 27/node 问题原因：代理的转发时，没有删除逐跳首部 2. 什么是Hop-by-hop 逐跳首部？http首部可以分为两种  端到端首部 End-to-e">
+<meta name="twitter:image" content="http://p3alsaatj.bkt.clouddn.com/20180222111857_Wi3Sye_Screenshot.jpeg">
 
 
 
@@ -129,7 +131,7 @@
 
 
 
-  <title>TCP链接高Recv-Q的原因以及解决方法 | 洞香春</title>
+  <title>哑代理 - TCP链接高Recv-Q，内存泄露的罪魁祸首 | 洞香春</title>
   
 
 
@@ -317,7 +319,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">TCP链接高Recv-Q的原因以及解决方法</h1>
+          <h1 class="post-title" itemprop="name headline">哑代理 - TCP链接高Recv-Q，内存泄露的罪魁祸首</h1>
         
 
         <div class="post-meta">
@@ -366,7 +368,7 @@
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  104 字
+                  1,310 字
                 </span>
               
 
@@ -382,7 +384,7 @@
                   <span class="post-meta-item-text">阅读时长 &asymp;</span>
                 
                 <span title="阅读时长">
-                  1 分钟
+                  5 分钟
                 </span>
               
             </div>
@@ -403,8 +405,54 @@
       
 
       
-        <figure class="highlight dns"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">tcp <span class="number">1692012 0</span> <span class="number">172.17.72.4</span>:<span class="number">48444 10.254</span>.<span class="number">149.149:58080</span> ESTABLISHED <span class="number">27</span>/node</span><br></pre></td></tr></table></figure>
-<h1 id="1-参考文献"><a href="#1-参考文献" class="headerlink" title="1. 参考文献"></a>1. 参考文献</h1><ul>
+        <h1 id="1-问题现象"><a href="#1-问题现象" class="headerlink" title="1. 问题现象"></a>1. 问题现象</h1><p>使用<code>netstat -ntp</code>命令时发现，Recv-Q异常偏高，导致应用占用过多的内存，同时导致</p>
+<figure class="highlight dns"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">tcp <span class="number">1692012 0</span> <span class="number">172.17.72.4</span>:<span class="number">48444 10.254</span>.<span class="number">149.149:58080</span> ESTABLISHED <span class="number">27</span>/node</span><br></pre></td></tr></table></figure>
+<p>问题原因：<code>代理的转发时，没有删除逐跳首部</code></p>
+<h1 id="2-什么是Hop-by-hop-逐跳首部？"><a href="#2-什么是Hop-by-hop-逐跳首部？" class="headerlink" title="2. 什么是Hop-by-hop 逐跳首部？"></a>2. 什么是Hop-by-hop 逐跳首部？</h1><p>http首部可以分为两种</p>
+<ul>
+<li>端到端首部 End-to-end: 端到端首部代理在转发时必须携带的</li>
+<li>逐跳首部 Hop-by-hop: 逐跳首部只对单次转发有效，代理在转发时，必须删除这些首部</li>
+</ul>
+<p>逐跳首部有以下几个, <code>这些首部在代理进行转发前必须删除</code></p>
+<ul>
+<li>Connetion</li>
+<li>Keep-Alive</li>
+<li>Proxy-Authenticate</li>
+<li>Proxy-Authortization</li>
+<li>Trailer</li>
+<li>TE</li>
+<li>Transfer-Encodeing</li>
+<li>Upgrade</li>
+</ul>
+<h1 id="3-什么是哑代理？"><a href="#3-什么是哑代理？" class="headerlink" title="3. 什么是哑代理？"></a>3. 什么是哑代理？</h1><blockquote>
+<p>很多老的或简单的代理都是盲中继(blind relay),它们只是将字节从一个连接转发到另一个连接中去,不对Connection首部进行特殊的处理。</p>
+<p><img src="http://p3alsaatj.bkt.clouddn.com/20180222111857_Wi3Sye_Screenshot.jpeg" alt=""></p>
+<p>(1)在图4-15a中 Web客户端向代理发送了一条报文,其中包含了Connection:Keep-Alive首部,如果可能的话请求建立一条keep-alive连接。客户端等待响应,以确定对方是否认可它对keep-alive信道的请求。</p>
+<p>(2)  哑代理收到了这条HTTP请求,但它并不理解 Connection首部(只是将其作为一个扩展首部对待)。代理不知道keep-alive是什么意思,因此只是沿着转发链路将报文一字不漏地发送给服务器(图4-15b)。但Connection首部是个逐跳首部,只适用于单条传输链路,不应该沿着传输链路向下传输。接下来,就要发生一些很糟糕的事情了。</p>
+<p>(3)  在图4-15b中,经过中继的HTTP请求抵达了Web服务器。当Web服务器收到经过代理转发的Connection: Keep-Alive首部时,会误以为代理(对服务器来说,这个代理看起来就和所有其他客户端一样)希望进行keep-alive对话!对Web服务器来说这没什么问题——它同意进行keep-alive对话,并在图4-15c中回送了一个Connection: Keep-Alive响应首部。所以,此时W eb服务器认为它在与代理进行keep-alive对话,会遵循keep-alive的规则。但代理却对keep-alive一无所知。不妙。</p>
+<p>(4)  在图4-15d中,哑代理将Web服务器的响应报文回送给客户端,并将来自Web服务器的Connection: Keep-Alive首部一起传送过去。客户端看到这个首部,就会认为代理同意进行keep-alive对话。所以,此时客户端和服务器都认为它们在进行keep-alive对话,但与它们进行对话的代理却对keep-alive一无所知。</p>
+<p>(5)  由于代理对keep-alive一无所知,所以会将收到的所有数据都回送给客户端,然后等待源端服务器关闭连接。但源端服务器会认为代理已经显式地请求它将连接保持在打开状态了,所以不会去关闭连接。这样,代理就会挂在那里等待连接的关闭。</p>
+<p>(6)  客户端在图4-15d中收到了回送的响应报文时,会立即转向下一条请求,在keep-alive连接上向代理发送另一条请求(参见图4-15e)。而代理并不认为同一条连接上会有其他请求到来,请求被忽略,浏览器就在这里转圈,不会有任何进展了。</p>
+<p>(7)  这种错误的通信方式会使浏览器一直处于挂起状态,直到客户端或服务器将连接超时,并将其关闭为止。 –《HTTP权威指南》</p>
+</blockquote>
+<p>这是HTTP权威指南中，关于HTTP哑代理的描述。这里这里说了哑代理会造成的一个问题。</p>
+<ul>
+<li>这种错误的通信方式会使浏览器一直处于挂起状态,直到客户端或服务器将连接超时,并将其关闭为止。</li>
+</ul>
+<p>实际上，我认为哑代理还是造成以下问题的原因</p>
+<ul>
+<li>TCP链接高Recv-Q</li>
+<li>tcp链接不断开，导致服务器内存过高，内存泄露</li>
+<li>节点iowait高</li>
+</ul>
+<p>在我们自己的代理的代码中，我有发现，在代理进行转发时，只删除了headers.host, 并没有删除headers.Connection等逐跳首部的字段</p>
+<figure class="highlight routeros"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">delete req.headers.host</span><br><span class="line"></span><br><span class="line">   var option = &#123;</span><br><span class="line">     url: url,</span><br><span class="line">     headers: req.headers</span><br><span class="line">   &#125;</span><br><span class="line"></span><br><span class="line">   var<span class="built_in"> proxy </span>= request(option)</span><br><span class="line">   req.pipe(proxy)</span><br><span class="line">   proxy.pipe(res)</span><br></pre></td></tr></table></figure>
+<h1 id="4-解决方案"><a href="#4-解决方案" class="headerlink" title="4. 解决方案"></a>4. 解决方案</h1><p>解决方案有两个， 我推荐使用第二个方案，具体方法参考<a href="https://wdd.js.org/express-proxy-middleware-demo.html">Express 代理中间件的写法</a></p>
+<ol>
+<li>更改自己的原有代码</li>
+<li>使用成熟的开源产品</li>
+</ol>
+<h1 id="5-参考文献"><a href="#5-参考文献" class="headerlink" title="5. 参考文献"></a>5. 参考文献</h1><ul>
 <li><a href="https://stackoverflow.com/questions/34108513/what-is-the-reason-for-a-high-recv-q-of-a-tcp-connection" target="_blank" rel="noopener">What is the reason for a high Recv-Q of a TCP connection?
 </a></li>
 <li><a href="https://unix.stackexchange.com/questions/100913/tcp-buffers-keep-filling-up-recv-q-full-named-unresponsive" target="_blank" rel="noopener">TCP buffers keep filling up (Recv-Q full): named unresponsive</a></li>
@@ -413,6 +461,8 @@
 <li><a href="http://blog.csdn.net/sjin_1314/article/details/9853163" target="_blank" rel="noopener">netstat Recv-Q和Send-Q</a></li>
 <li><a href="http://wiki.jikexueyuan.com/project/java-socket/socket-advanced.html" target="_blank" rel="noopener">深入剖析 Socket——数据传输的底层实现</a></li>
 <li><a href="https://stackoverflow.com/questions/36466744/use-of-recv-q-and-send-q" target="_blank" rel="noopener">Use of Recv-Q and Send-Q</a></li>
+<li>【美】David Gourley / Brian Totty  <a href="https://book.douban.com/subject/10746113/" target="_blank" rel="noopener">HTTP权威指南</a> </li>
+<li>【日】上野宣 于均良 <a href="https://book.douban.com/subject/25863515/" target="_blank" rel="noopener">图解HTTP</a></li>
 </ul>
 
       
@@ -434,11 +484,11 @@
   </li>
   <li class="post-copyright-link">
     <strong>本文标题：</strong>
-    <a href="https://wdd.js.org/tcp-high-recv-q-or-send-q-reasons.html" title="TCP链接高Recv-Q的原因以及解决方法">TCP链接高Recv-Q的原因以及解决方法</a>
+    <a href="https://wdd.js.org/tcp-high-recv-q-or-send-q-reasons.html" title="哑代理 - TCP链接高Recv-Q，内存泄露的罪魁祸首">哑代理 - TCP链接高Recv-Q，内存泄露的罪魁祸首</a>
   </li>
   <li class="post-copyright-link">
     <strong>本文链接：</strong>
-    <a href="https://wdd.js.org/tcp-high-recv-q-or-send-q-reasons.html" title="TCP链接高Recv-Q的原因以及解决方法">https://wdd.js.org/tcp-high-recv-q-or-send-q-reasons.html</a>
+    <a href="https://wdd.js.org/tcp-high-recv-q-or-send-q-reasons.html" title="哑代理 - TCP链接高Recv-Q，内存泄露的罪魁祸首">https://wdd.js.org/tcp-high-recv-q-or-send-q-reasons.html</a>
   </li>
   <li class="post-copyright-date">
       <strong>发布时间：</strong>2018年2月8日 - 21时02分
@@ -459,6 +509,8 @@
             <a href="/tags/tcp/" rel="tag"># tcp</a>
           
             <a href="/tags/Recv-Q/" rel="tag"># Recv-Q</a>
+          
+            <a href="/tags/哑代理/" rel="tag"># 哑代理</a>
           
         </div>
       
@@ -582,7 +634,7 @@
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">111</span>
+                  <span class="site-state-item-count">112</span>
                   <span class="site-state-item-name">标签</span>
                 </a>
               </div>
@@ -644,7 +696,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#1-参考文献"><span class="nav-text">1. 参考文献</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#1-问题现象"><span class="nav-text">1. 问题现象</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#2-什么是Hop-by-hop-逐跳首部？"><span class="nav-text">2. 什么是Hop-by-hop 逐跳首部？</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#3-什么是哑代理？"><span class="nav-text">3. 什么是哑代理？</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#4-解决方案"><span class="nav-text">4. 解决方案</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#5-参考文献"><span class="nav-text">5. 参考文献</span></a></li></ol></div>
             
 
           </div>
