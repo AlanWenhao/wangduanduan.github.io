@@ -91,7 +91,7 @@
 <meta property="og:description" content="1. 问题现象使用netstat -ntp命令时发现，Recv-Q 1692012 异常偏高（正常情况下，该值应该是0），导致应用占用过多的内存。 1tcp 1692012 0 172.17.72.4:48444 10.254.149.149:58080 ESTABLISHED 27/node 问题原因：代理的转发时，没有删除逐跳首部 2. 什么是Hop-by-hop 逐跳首部？http首部可以分">
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:image" content="http://p3alsaatj.bkt.clouddn.com/20180222111857_Wi3Sye_Screenshot.jpeg">
-<meta property="og:updated_time" content="2018-02-22T06:33:15.000Z">
+<meta property="og:updated_time" content="2018-02-22T06:37:30.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="哑代理 - TCP链接高Recv-Q，内存泄露的罪魁祸首">
 <meta name="twitter:description" content="1. 问题现象使用netstat -ntp命令时发现，Recv-Q 1692012 异常偏高（正常情况下，该值应该是0），导致应用占用过多的内存。 1tcp 1692012 0 172.17.72.4:48444 10.254.149.149:58080 ESTABLISHED 27/node 问题原因：代理的转发时，没有删除逐跳首部 2. 什么是Hop-by-hop 逐跳首部？http首部可以分">
@@ -453,7 +453,7 @@
 <li>节点iowait高</li>
 </ul>
 <p>在我们自己的代理的代码中，我有发现，在代理进行转发时，只删除了headers.host, 并没有删除headers.Connection等逐跳首部的字段</p>
-<figure class="highlight routeros"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">delete req.headers.host</span><br><span class="line"></span><br><span class="line">   var option = &#123;</span><br><span class="line">     url: url,</span><br><span class="line">     headers: req.headers</span><br><span class="line">   &#125;</span><br><span class="line"></span><br><span class="line">   var<span class="built_in"> proxy </span>= request(option)</span><br><span class="line">   req.pipe(proxy)</span><br><span class="line">   proxy.pipe(res)</span><br></pre></td></tr></table></figure>
+<figure class="highlight routeros"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">delete req.headers.host</span><br><span class="line"></span><br><span class="line">var option = &#123;</span><br><span class="line">  url: url,</span><br><span class="line">  headers: req.headers</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">var<span class="built_in"> proxy </span>= request(option)</span><br><span class="line">req.pipe(proxy)</span><br><span class="line">proxy.pipe(res)</span><br></pre></td></tr></table></figure>
 <h1 id="4-解决方案"><a href="#4-解决方案" class="headerlink" title="4. 解决方案"></a>4. 解决方案</h1><p>解决方案有两个， 我推荐使用第二个方案，具体方法参考<a href="https://wdd.js.org/express-proxy-middleware-demo.html">Express 代理中间件的写法</a></p>
 <ol>
 <li>更改自己的原有代码</li>
