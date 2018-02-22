@@ -1671,7 +1671,7 @@ user.js
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  1,310 字
+                  1,318 字
                 </span>
               
 
@@ -1710,10 +1710,9 @@ user.js
       
         
           
-          1. 问题现象使用netstat -ntp命令时发现，Recv-Q异常偏高，导致应用占用过多的内存，同时导致
+          1. 问题现象使用netstat -ntp命令时发现，Recv-Q 1692012 异常偏高（正常情况下，该值应该是0），导致应用占用过多的内存。
 1tcp 1692012 0 172.17.72.4:48444 10.254.149.149:58080 ESTABLISHED 27/node
-问题原因：代理的转发时，没有删除逐跳首部
-
+问题
           ...
           <!--noindex-->
           <div class="post-button text-center">
