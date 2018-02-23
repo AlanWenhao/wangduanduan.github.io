@@ -4,6 +4,46 @@
 
     
   <url>
+    <loc>https://wdd.js.org/pymongo-tutorial-and-example.html</loc>
+    <lastmod>2018-02-23T09:16:46.000Z</lastmod>
+    <data>
+        <display>
+        <title>PyMongo学习笔记</title>
+        <pubTime>2018-02-22T08:32:39.000Z</pubTime>
+        
+        <tag>mongodb</tag>
+         
+        <tag>python</tag>
+         
+        <tag>pymongo</tag>
+         
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>https://wdd.js.org/front-end-interview-handbook.html</loc>
+    <lastmod>2018-02-23T09:15:36.000Z</lastmod>
+    <data>
+        <display>
+        <title>前端笔试题目</title>
+        <pubTime>2018-02-23T07:18:26.000Z</pubTime>
+        
+        <tag>面试</tag>
+         
+        <tag>笔试</tag>
+         
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>https://wdd.js.org/tcp-high-recv-q-or-send-q-reasons.html</loc>
     <lastmod>2018-02-22T06:37:30.000Z</lastmod>
     <data>
@@ -495,9 +535,9 @@
         <title>可能被遗漏的https与http的知识点</title>
         <pubTime>2018-02-08T01:10:59.000Z</pubTime>
         
-        <tag>https</tag>
-         
         <tag>http</tag>
+         
+        <tag>https</tag>
          
          
            
