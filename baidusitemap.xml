@@ -4,6 +4,25 @@
 
     
   <url>
+    <loc>https://wdd.js.org/front-end-interview-handbook.html</loc>
+    <lastmod>2018-02-24T06:58:25.000Z</lastmod>
+    <data>
+        <display>
+        <title>前端笔试题目</title>
+        <pubTime>2018-02-23T07:18:26.000Z</pubTime>
+        
+        <tag>面试</tag>
+         
+        <tag>笔试</tag>
+         
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>https://wdd.js.org/formatter-yapf-is-not-installed.html</loc>
     <lastmod>2018-02-24T04:02:36.000Z</lastmod>
     <data>
@@ -18,25 +37,6 @@
         <tag>vscode</tag>
          
         <tag>Formatter yapf is not installed</tag>
-         
-         
-           
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>https://wdd.js.org/front-end-interview-handbook.html</loc>
-    <lastmod>2018-02-23T09:19:23.000Z</lastmod>
-    <data>
-        <display>
-        <title>前端笔试题目</title>
-        <pubTime>2018-02-23T07:18:26.000Z</pubTime>
-        
-        <tag>面试</tag>
-         
-        <tag>笔试</tag>
          
          
            
