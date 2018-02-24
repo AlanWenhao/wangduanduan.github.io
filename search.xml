@@ -3,7 +3,7 @@
   <entry>
     <title><![CDATA[正则表达式在线工具集合]]></title>
     <url>%2Fregex-online-tools.html</url>
-    <content type="text"><![CDATA[功能最强：regex101优点： 支持多种语言, prec,php,javascript,python,golang 界面美观大方 支持错误提示，实时匹配 缺点： 有时候加载速度太慢 可视化正则绘图: Regulex*%3F%24)优点： 实时根据正则表达式绘图 页面加载速度快 可视化正则绘图：regexper优点： 根据正则表达式绘图 页面加载速度快 缺点： 无法实时绘图，需要点击才可以 专注于python正则：pyregex 专注python 页面加载速度快]]></content>
+    <content type="text"><![CDATA[1. 功能最强：regex101优点： 支持多种语言, prec,php,javascript,python,golang 界面美观大方 支持错误提示，实时匹配 缺点： 有时候加载速度太慢 2. 可视化正则绘图: Regulex优点： 实时根据正则表达式绘图 页面加载速度快 3. 可视化正则绘图：regexper优点： 根据正则表达式绘图 页面加载速度快 缺点： 无法实时绘图，需要点击才可以 4. 专注于python正则：pyregex 专注python 页面加载速度快]]></content>
       <tags>
         <tag>正则表达式</tag>
       </tags>

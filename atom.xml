@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://wdd.js.org/"/>
-  <updated>2018-02-24T07:40:22.000Z</updated>
+  <updated>2018-02-24T07:43:52.000Z</updated>
   <id>https://wdd.js.org/</id>
   
   <author>
@@ -21,15 +21,15 @@
     <link href="https://wdd.js.org/regex-online-tools.html"/>
     <id>https://wdd.js.org/regex-online-tools.html</id>
     <published>2018-02-24T07:27:24.000Z</published>
-    <updated>2018-02-24T07:40:22.000Z</updated>
+    <updated>2018-02-24T07:43:52.000Z</updated>
     
-    <content type="html"><![CDATA[<h1 id="功能最强：regex101"><a href="#功能最强：regex101" class="headerlink" title="功能最强：regex101"></a>功能最强：<a href="https://regex101.com/" target="_blank" rel="noopener">regex101</a></h1><p>优点：</p><ul><li>支持多种语言, prec,php,javascript,python,golang</li><li>界面美观大方</li><li>支持错误提示，实时匹配</li></ul><p>缺点：</p><ul><li>有时候加载速度太慢</li></ul><p><img src="http://p3alsaatj.bkt.clouddn.com/20180224153235_7QYNUW_Jietu20180224-153227.jpeg" alt=""></p><h1 id="可视化正则绘图-Regulex-3F-24"><a href="#可视化正则绘图-Regulex-3F-24" class="headerlink" title="可视化正则绘图: Regulex*%3F%24)"></a>可视化正则绘图: <a href="https://jex.im/regulex/#!flags=&amp;re=%5E(a%7Cb" target="_blank" rel="noopener">Regulex</a>*%3F%24)</h1><p>优点：</p><ul><li>实时根据正则表达式绘图</li><li>页面加载速度快</li></ul><p><img src="http://p3alsaatj.bkt.clouddn.com/20180224153440_Z2JC4M_Jietu20180224-153432.jpeg" alt=""></p><h1 id="可视化正则绘图：regexper"><a href="#可视化正则绘图：regexper" class="headerlink" title="可视化正则绘图：regexper"></a>可视化正则绘图：<a href="https://regexper.com/#%2F%5Bf%5D%2F" target="_blank" rel="noopener">regexper</a></h1><p>优点：</p><ul><li>根据正则表达式绘图</li><li>页面加载速度快</li></ul><p>缺点：</p><ul><li>无法实时绘图，需要点击才可以</li></ul><p><img src="http://p3alsaatj.bkt.clouddn.com/20180224153957_KAVhWs_Jietu20180224-153944.jpeg" alt=""></p><h1 id="专注于python正则：pyregex"><a href="#专注于python正则：pyregex" class="headerlink" title="专注于python正则：pyregex"></a>专注于python正则：<a href="http://www.pyregex.com/" target="_blank" rel="noopener">pyregex</a></h1><ul><li>专注python</li><li>页面加载速度快</li></ul><p><img src="http://p3alsaatj.bkt.clouddn.com/20180224153711_pNQ236_Jietu20180224-153703.jpeg" alt=""></p>]]></content>
+    <content type="html"><![CDATA[<h1 id="1-功能最强：regex101"><a href="#1-功能最强：regex101" class="headerlink" title="1. 功能最强：regex101"></a>1. 功能最强：<a href="https://regex101.com/" target="_blank" rel="noopener">regex101</a></h1><p>优点：</p><ul><li>支持多种语言, prec,php,javascript,python,golang</li><li>界面美观大方</li><li>支持错误提示，实时匹配</li></ul><p>缺点：</p><ul><li>有时候加载速度太慢</li></ul><p><img src="http://p3alsaatj.bkt.clouddn.com/20180224153235_7QYNUW_Jietu20180224-153227.jpeg" alt=""></p><h1 id="2-可视化正则绘图-Regulex"><a href="#2-可视化正则绘图-Regulex" class="headerlink" title="2. 可视化正则绘图: Regulex"></a>2. 可视化正则绘图: <a href="https://jex.im/regulex/" target="_blank" rel="noopener">Regulex</a></h1><p>优点：</p><ul><li>实时根据正则表达式绘图</li><li>页面加载速度快</li></ul><p><img src="http://p3alsaatj.bkt.clouddn.com/20180224153440_Z2JC4M_Jietu20180224-153432.jpeg" alt=""></p><h1 id="3-可视化正则绘图：regexper"><a href="#3-可视化正则绘图：regexper" class="headerlink" title="3. 可视化正则绘图：regexper"></a>3. 可视化正则绘图：<a href="https://regexper.com/#%2F%5Bf%5D%2F" target="_blank" rel="noopener">regexper</a></h1><p>优点：</p><ul><li>根据正则表达式绘图</li><li>页面加载速度快</li></ul><p>缺点：</p><ul><li>无法实时绘图，需要点击才可以</li></ul><p><img src="http://p3alsaatj.bkt.clouddn.com/20180224153957_KAVhWs_Jietu20180224-153944.jpeg" alt=""></p><h1 id="4-专注于python正则：pyregex"><a href="#4-专注于python正则：pyregex" class="headerlink" title="4. 专注于python正则：pyregex"></a>4. 专注于python正则：<a href="http://www.pyregex.com/" target="_blank" rel="noopener">pyregex</a></h1><ul><li>专注python</li><li>页面加载速度快</li></ul><p><img src="http://p3alsaatj.bkt.clouddn.com/20180224153711_pNQ236_Jietu20180224-153703.jpeg" alt=""></p>]]></content>
     
     <summary type="html">
     
       
       
-        &lt;h1 id=&quot;功能最强：regex101&quot;&gt;&lt;a href=&quot;#功能最强：regex101&quot; class=&quot;headerlink&quot; title=&quot;功能最强：regex101&quot;&gt;&lt;/a&gt;功能最强：&lt;a href=&quot;https://regex101.com/&quot; target=&quot;_b
+        &lt;h1 id=&quot;1-功能最强：regex101&quot;&gt;&lt;a href=&quot;#1-功能最强：regex101&quot; class=&quot;headerlink&quot; title=&quot;1. 功能最强：regex101&quot;&gt;&lt;/a&gt;1. 功能最强：&lt;a href=&quot;https://regex101.com/&quot; 
       
     
     </summary>
