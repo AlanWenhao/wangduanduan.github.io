@@ -1,6 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[VScode Formatter yapf is not installed解决方法]]></title>
+    <url>%2Fformatter-yapf-is-not-installed.html</url>
+    <content type="text"><![CDATA[1. 判断你是否安装了yapf1yapf -v 如果你没有安装过，那么必须要安装。 2. 指定pathon路径有些系统，像macOS，自带python2, 如果你又安装了python3, 并且你使用pip3来安装的yapf， 那么你就需要指定pythonPath 12// user settings"python.pythonPath": "python3",]]></content>
+      <tags>
+        <tag>python</tag>
+        <tag>yapf</tag>
+        <tag>vscode</tag>
+        <tag>Formatter yapf is not installed</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[前端笔试题目]]></title>
     <url>%2Ffront-end-interview-handbook.html</url>
     <content type="text"><![CDATA[1. 问答题1.1. CSS相关1.1.1. 简述CSS盒子模型1.1.2. CSS有哪些选择器？1.1.3. CSS sprite是什么？1.1.4. 写一下你知道的UI框架？1.2. JS相关1.2.1. js有哪些数据类型？1.2.2. js有哪些假值？1.2.3. js数字和字符串之间有什么快速转换的写法？1.2.4. 经常使用哪些ES6的语法？1.2.5. 什么是同源策略？1.2.6. 跨域有哪些解决方法？1.2.7. 请问console.log是同步的，还是异步的？1.2.8. 下面console输出的值是什么？123456789var scores = [10,11,12];var total = 0;for(var score in scores)&#123; total += score;&#125;var average = total/scores.length;console.log(average); 1.2.9. 解释闭包概念及其作用1.2.10. 有用过哪些js编程风格1.3. 网络相关1.3.1. 请求状态码 1xx,2xx,3xx,4xx,5xx分别有什么含义？1.3.2. 发送某些post请求时，有时会多一些options请求，请问这是为什么？1.3.3. http报文有哪些组成部分？1.3.4. http端到端首部和逐跳首部有什么区别？1.3.5. http与https在同时使用时，有什么注意点？1.3.6. http, tcp, udp, websocket，分别位于7层网络的那一层？tcp和udp有什么不同？2. 编码题2.1. 写一个函数，返回一个数组中所有元素被第一个元素除后的结果2.2. 写一个函数，来判断变量是否是数组，至少使用两种写法2.3. 写一个函数，将秒转化成时分秒格式，如80转化成：00:01:20]]></content>
@@ -14,8 +25,8 @@
     <url>%2Fpymongo-tutorial-and-example.html</url>
     <content type="text"><![CDATA[1. 环境 mongodb 3.4 pymongo 3.6.0 macOS 2. 安装pymongo1pip3 install pymongo 3. 建立数据库链接12345from pymongo import MongoClientconn = MongoClient('localhost', 27017)// 或者 conn = MongoClient('mongodb://localhost:27017/') 4. 获取数据库123db = conn.db_name // 如果数据库不存在，则自动创建db = conn['db-name'] // 如果数据库名中有中划线，则需要使用中括号的形式 5. 获取集合123collection = db.test_users // 如果集合不存在，则自动创建// 或者 collection = db['test-users'] 注意：只有当数据库或者集合中有数据被插入时，集合才真正被创建。 An important note about collections (and databases) in MongoDB is that they are created lazily - none of the above commands have actually performed any operations on the MongoDB server. Collections and databases are created when the first document is inserted into them. 6. 插入单个文档 insert_one1234post = &#123;"name":"wangduanduan", "province":"shanghai", "age": 12&#125;db.collection.inser_one(post)5a8e90b83617b1a34a06d890 // 插入成功后会返回ObjectId 7. 查询一个文档 find_one如果你确定你的查询结果里只有一个，那么最好使用find_one来做查询 1db.find_one(&#123;"name":"wangduanduan"&#125;) 8. 按照ObjectId查询 ObjectId()ObjectId不是字符串，你绝对不能把它当做字符串来做查询，虽然它看起来像字符串。 12345// good db.find_one('_id': ObjectId("5a8e82af3617b1a035d10264"))// bad 这是查不到结果的db.find_one('_id': "5a8e82af3617b1a035d10264") 9. 关于Unicode字符串的注意事项MongoDB使用BSON格式来存储数据，而BSON是utf-8编码的，所以pymongo必须要确保字符串是utf-8格式的。 python3 unicode字符串深入阅读 10. 批量插入 insert_many()123db.test_users.insert_many([user1, user2])[ObjectId1, ObjectId] // 插入成功后会以数组形式返回ObjectId 11. 条件查询 find()12db.test_users.find()// 返回符合条件的集合 12. 统计文档数量 count()12db.test_users.find().count()1 // 返回文档的数量 13. 范围查询返回查询如大于小于不能与之类的，MongoDB都是支持的，详情参见 例如：查询日期小于2009年11月12号12点的文章，并按照作者排序12d = datetime.datetime(2009, 11, 12, 12) // posts.find(&#123;"date": &#123;"$lt": d&#125;&#125;).sort("author") 更多类似与$lt之类的用法，可以参考Query and Projection Operators 14. 索引以user_id建立索引后，profiles集合就有两个索引了，因为MongoDB自带_id索引。 下面设置的user_id索引，并将其设置成唯一值。123result = db.profiles.create_index([('user_id', pymongo.ASCENDING)], unique=True)sorted(list(db.profiles.index_information()))[u'_id_', u'user_id_1'] 如果插入重复的user_id，那么会插入不成功，这个功能可以避免数据重复。 123456&gt;&gt;&gt; new_profile = &#123;'user_id': 213, 'name': 'Drew'&#125;&gt;&gt;&gt; duplicate_profile = &#123;'user_id': 212, 'name': 'Tommy'&#125;&gt;&gt;&gt; result = db.profiles.insert_one(new_profile) # This is fine.&gt;&gt;&gt; result = db.profiles.insert_one(duplicate_profile)Traceback (most recent call last):DuplicateKeyError: E11000 duplicate key error index: test_database.profiles.$user_id_1 dup key: &#123; : 212 &#125; 关于索引，可以参考Indexes 15. 参考 PyMongo 3.6.0 Documentation ObjectId collection – Collection level operations]]></content>
       <tags>
-        <tag>mongodb</tag>
         <tag>python</tag>
+        <tag>mongodb</tag>
         <tag>pymongo</tag>
       </tags>
   </entry>
@@ -134,8 +145,8 @@
     <url>%2Fmac-vscode-update-permission-denied.html</url>
     <content type="text"><![CDATA[0. 现象Could not create temporary directory: Permission denied 1. 问题起因在 /Users/username/Library/Caches/目录下，有以下两个文件， 可以看到，他们两个的用户是不一样的，一个是root一个username, 一般来说，我是以username来使用我的mac的。就是因为这两个文件的用户不一样，导致了更新失败。 12drwxr-xr-x 6 username staff 204B Jan 17 20:33 com.microsoft.VSCodedrwxr--r-- 2 root staff 68B Dec 17 13:51 com.microsoft.VSCode.ShipIt 2. 解决方法注意： 先把vscode 完全关闭 12345678// 1. 这一步是需要输入密码的sudo chown $USER ~/Library/Caches/com.microsoft.VSCode.ShipIt/// 2. 这一步是不需要输入密码的, 如果不进行第一步，第二步会报错sudo chown $USER ~/Library/Caches/com.microsoft.VSCode.ShipIt/*// 3. 更新xattrxattr -dr com.apple.quarantine /Applications/Visual\ Studio\ Code.app 3. 打开vscodeCode &gt; Check for Updates, 点击之后，你会发现Check for Updates已经变成灰色了，那么你需要稍等片刻，马上就可以更新，之后会跳出提示，让你重启vscode, 然后重启一下vscode, 就ok了。 4. 参考 joaomoreno commented on Feb 7, 2017 • edited]]></content>
       <tags>
-        <tag>mac</tag>
         <tag>vscode</tag>
+        <tag>mac</tag>
       </tags>
   </entry>
   <entry>
@@ -509,8 +520,8 @@
     <url>%2Fyou-dont-know-https-and-http.html</url>
     <content type="text"><![CDATA[1. HTTPS域向HTTP域发送请求会被浏览器直接拒绝，HTTP向HTTPS则不会例如在github pages页面，这是一个https页面，如果在这个页面向http发送请求，那么会直接被浏览器拒绝，并在控制台输出下面的报错信息。 1jquery-1.11.3.min.js:5 Mixed Content: The page at 'https://wangduanduan.github.io/ddddddd/' was loaded over HTTPS, but requested an insecure XMLHttpRequest endpoint 'http://cccccc/log/conf?token=welljoint'. This request has been blocked; the content must be served over HTTPS. 如果你在做第三方集成的系统，如果他们是在浏览器中直接调用你提供的接口，那么最好你使用https协议，这样无论对方是https还是http都可以访问。（相信我，这个很重要，我曾经经历过上线后遇到这个问题，然后连夜申请证书，把http升级到https的痛苦经历） 2. HTTPS的默认端口是443，而不是443如果443端口已经被其他服务占用了，那么使用其他任何没有被占用的端口都可以用作HTTPS服务，只不过在请求的时候需要加上端口号罢了。 3. 如何快速隐藏一个DOM元素选中一个元素，然后按h,这时候就会在选中的DOM元素上加上__web-inspector-hide-shortcut__类，这个类会让元素隐藏。谷歌和火狐上都可以，IE上没有试过行不行。]]></content>
       <tags>
-        <tag>http</tag>
         <tag>https</tag>
+        <tag>http</tag>
       </tags>
   </entry>
   <entry>

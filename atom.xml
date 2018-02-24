@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://wdd.js.org/"/>
-  <updated>2018-02-23T09:19:23.000Z</updated>
+  <updated>2018-02-24T04:02:36.000Z</updated>
   <id>https://wdd.js.org/</id>
   
   <author>
@@ -15,6 +15,35 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>VScode Formatter yapf is not installed解决方法</title>
+    <link href="https://wdd.js.org/formatter-yapf-is-not-installed.html"/>
+    <id>https://wdd.js.org/formatter-yapf-is-not-installed.html</id>
+    <published>2018-02-24T03:56:48.000Z</published>
+    <updated>2018-02-24T04:02:36.000Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="1-判断你是否安装了yapf"><a href="#1-判断你是否安装了yapf" class="headerlink" title="1. 判断你是否安装了yapf"></a>1. 判断你是否安装了yapf</h1><figure class="highlight ebnf"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="attribute">yapf -v</span></span><br></pre></td></tr></table></figure><p>如果你没有安装过，那么必须要安装。</p><h1 id="2-指定pathon路径"><a href="#2-指定pathon路径" class="headerlink" title="2. 指定pathon路径"></a>2. 指定pathon路径</h1><p>有些系统，像macOS，自带python2, 如果你又安装了python3, 并且你使用<code>pip3</code>来安装的yapf， 那么你就需要指定pythonPath</p><figure class="highlight crmsh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">// <span class="keyword">user</span> <span class="title">settings</span></span><br><span class="line"><span class="string">"python.pythonPath"</span>: <span class="string">"python3"</span>,</span><br></pre></td></tr></table></figure>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h1 id=&quot;1-判断你是否安装了yapf&quot;&gt;&lt;a href=&quot;#1-判断你是否安装了yapf&quot; class=&quot;headerlink&quot; title=&quot;1. 判断你是否安装了yapf&quot;&gt;&lt;/a&gt;1. 判断你是否安装了yapf&lt;/h1&gt;&lt;figure class=&quot;highligh
+      
+    
+    </summary>
+    
+    
+      <category term="python" scheme="https://wdd.js.org/tags/python/"/>
+    
+      <category term="yapf" scheme="https://wdd.js.org/tags/yapf/"/>
+    
+      <category term="vscode" scheme="https://wdd.js.org/tags/vscode/"/>
+    
+      <category term="Formatter yapf is not installed" scheme="https://wdd.js.org/tags/Formatter-yapf-is-not-installed/"/>
+    
+  </entry>
   
   <entry>
     <title>前端笔试题目</title>
@@ -63,9 +92,9 @@
     </summary>
     
     
-      <category term="mongodb" scheme="https://wdd.js.org/tags/mongodb/"/>
-    
       <category term="python" scheme="https://wdd.js.org/tags/python/"/>
+    
+      <category term="mongodb" scheme="https://wdd.js.org/tags/mongodb/"/>
     
       <category term="pymongo" scheme="https://wdd.js.org/tags/pymongo/"/>
     
@@ -419,9 +448,9 @@
     </summary>
     
     
-      <category term="mac" scheme="https://wdd.js.org/tags/mac/"/>
-    
       <category term="vscode" scheme="https://wdd.js.org/tags/vscode/"/>
+    
+      <category term="mac" scheme="https://wdd.js.org/tags/mac/"/>
     
   </entry>
   
@@ -501,30 +530,6 @@
     
     
       <category term="工具" scheme="https://wdd.js.org/tags/%E5%B7%A5%E5%85%B7/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>读书笔记 凯文 凯利 《失控》</title>
-    <link href="https://wdd.js.org/booknote-out-of-control.html"/>
-    <id>https://wdd.js.org/booknote-out-of-control.html</id>
-    <published>2018-02-09T14:45:17.000Z</published>
-    <updated>2018-02-09T15:21:11.000Z</updated>
-    
-    <content type="html"><![CDATA[<p><img src="http://p3alsaatj.bkt.clouddn.com/20180209225401_xDhao1_IMG_2666.jpeg" alt=""><br><a id="more"></a></p><p>失控这本书在刚开始看时，立马让我联想到黑客帝国里人被种植在营养液中的情形，我不太清楚，这本书和这个电影之间有什么联系。</p><p>这本书真实能让人脑洞大开。</p><blockquote><p>人造与天生的联姻正是本书的主题</p></blockquote><p>读到这里，我立马有一个预想：多年以后，会有一家公司，把人的思想从肉体从抽取出来。让人的思想，脱离肉体而存在。</p><blockquote><p>蜂群思维 分布式管理</p></blockquote><p>有点像SVN之与GIT</p><blockquote><p>蜂群思维的神奇之处，看似没有一只蜜蜂在控制它。但是有一只看不见的手，在控制着整个群体</p><p>低层级的存在无法推断出高层级的复杂性</p></blockquote><p>就像，tcp无法推断出HTTP协议</p>]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;&lt;img src=&quot;http://p3alsaatj.bkt.clouddn.com/20180209225401_xDhao1_IMG_2666.jpeg&quot; alt=&quot;&quot;&gt;&lt;br&gt;
-    
-    </summary>
-    
-    
-      <category term="读书笔记" scheme="https://wdd.js.org/tags/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/"/>
-    
-      <category term="失控" scheme="https://wdd.js.org/tags/%E5%A4%B1%E6%8E%A7/"/>
-    
-      <category term="未完成" scheme="https://wdd.js.org/tags/%E6%9C%AA%E5%AE%8C%E6%88%90/"/>
     
   </entry>
   
