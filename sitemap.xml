@@ -2,16 +2,23 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>https://wdd.js.org/regex-online-tools.html</loc>
+    <loc>https://wdd.js.org/front-end-interview-handbook.html</loc>
     
-    <lastmod>2018-02-24T07:43:52.000Z</lastmod>
+    <lastmod>2018-02-24T08:01:56.000Z</lastmod>
     
   </url>
   
   <url>
-    <loc>https://wdd.js.org/front-end-interview-handbook.html</loc>
+    <loc>https://wdd.js.org/tcp-high-recv-q-or-send-q-reasons.html</loc>
     
-    <lastmod>2018-02-24T06:58:25.000Z</lastmod>
+    <lastmod>2018-02-24T07:53:55.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://wdd.js.org/regex-online-tools.html</loc>
+    
+    <lastmod>2018-02-24T07:43:52.000Z</lastmod>
     
   </url>
   
@@ -26,13 +33,6 @@
     <loc>https://wdd.js.org/pymongo-tutorial-and-example.html</loc>
     
     <lastmod>2018-02-23T09:16:46.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://wdd.js.org/tcp-high-recv-q-or-send-q-reasons.html</loc>
-    
-    <lastmod>2018-02-22T06:37:30.000Z</lastmod>
     
   </url>
   
