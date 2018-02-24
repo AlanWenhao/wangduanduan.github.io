@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://wdd.js.org/"/>
-  <updated>2018-02-24T04:02:36.000Z</updated>
+  <updated>2018-02-24T07:40:22.000Z</updated>
   <id>https://wdd.js.org/</id>
   
   <author>
@@ -15,6 +15,29 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>正则表达式在线工具集合</title>
+    <link href="https://wdd.js.org/regex-online-tools.html"/>
+    <id>https://wdd.js.org/regex-online-tools.html</id>
+    <published>2018-02-24T07:27:24.000Z</published>
+    <updated>2018-02-24T07:40:22.000Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="功能最强：regex101"><a href="#功能最强：regex101" class="headerlink" title="功能最强：regex101"></a>功能最强：<a href="https://regex101.com/" target="_blank" rel="noopener">regex101</a></h1><p>优点：</p><ul><li>支持多种语言, prec,php,javascript,python,golang</li><li>界面美观大方</li><li>支持错误提示，实时匹配</li></ul><p>缺点：</p><ul><li>有时候加载速度太慢</li></ul><p><img src="http://p3alsaatj.bkt.clouddn.com/20180224153235_7QYNUW_Jietu20180224-153227.jpeg" alt=""></p><h1 id="可视化正则绘图-Regulex-3F-24"><a href="#可视化正则绘图-Regulex-3F-24" class="headerlink" title="可视化正则绘图: Regulex*%3F%24)"></a>可视化正则绘图: <a href="https://jex.im/regulex/#!flags=&amp;re=%5E(a%7Cb" target="_blank" rel="noopener">Regulex</a>*%3F%24)</h1><p>优点：</p><ul><li>实时根据正则表达式绘图</li><li>页面加载速度快</li></ul><p><img src="http://p3alsaatj.bkt.clouddn.com/20180224153440_Z2JC4M_Jietu20180224-153432.jpeg" alt=""></p><h1 id="可视化正则绘图：regexper"><a href="#可视化正则绘图：regexper" class="headerlink" title="可视化正则绘图：regexper"></a>可视化正则绘图：<a href="https://regexper.com/#%2F%5Bf%5D%2F" target="_blank" rel="noopener">regexper</a></h1><p>优点：</p><ul><li>根据正则表达式绘图</li><li>页面加载速度快</li></ul><p>缺点：</p><ul><li>无法实时绘图，需要点击才可以</li></ul><p><img src="http://p3alsaatj.bkt.clouddn.com/20180224153957_KAVhWs_Jietu20180224-153944.jpeg" alt=""></p><h1 id="专注于python正则：pyregex"><a href="#专注于python正则：pyregex" class="headerlink" title="专注于python正则：pyregex"></a>专注于python正则：<a href="http://www.pyregex.com/" target="_blank" rel="noopener">pyregex</a></h1><ul><li>专注python</li><li>页面加载速度快</li></ul><p><img src="http://p3alsaatj.bkt.clouddn.com/20180224153711_pNQ236_Jietu20180224-153703.jpeg" alt=""></p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h1 id=&quot;功能最强：regex101&quot;&gt;&lt;a href=&quot;#功能最强：regex101&quot; class=&quot;headerlink&quot; title=&quot;功能最强：regex101&quot;&gt;&lt;/a&gt;功能最强：&lt;a href=&quot;https://regex101.com/&quot; target=&quot;_b
+      
+    
+    </summary>
+    
+    
+      <category term="正则表达式" scheme="https://wdd.js.org/tags/%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F/"/>
+    
+  </entry>
   
   <entry>
     <title>VScode Formatter yapf is not installed解决方法</title>
@@ -504,32 +527,6 @@
       <category term="12004" scheme="https://wdd.js.org/tags/12004/"/>
     
       <category term="ajax" scheme="https://wdd.js.org/tags/ajax/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Mac版：上传图片到远程图床哪家强？</title>
-    <link href="https://wdd.js.org/tool-upload-img-to-cloud.html"/>
-    <id>https://wdd.js.org/tool-upload-img-to-cloud.html</id>
-    <published>2018-02-11T06:09:09.000Z</published>
-    <updated>2018-02-11T06:11:17.000Z</updated>
-    
-    <content type="html"><![CDATA[<blockquote><p>markdown写文档虽然如行云流水，但是一旦需要引入图片了。往往需要四五步操作，如果图片仅仅保存在本地，那么复制markdown时，图片路径往往都不对了，还要重新上传一遍图片，很是麻烦。</p></blockquote><p>因此，<code>最好把图片直接上传到图床上</code>，然后通过公网链接来引入图片。图床选择上，我选择七牛云。</p><p>我在网上找到了3个不错的工具，在此记录一下。</p><h1 id="1-三个工具分析一览"><a href="#1-三个工具分析一览" class="headerlink" title="1. 三个工具分析一览"></a>1. 三个工具分析一览</h1><p>这些工具在上传图片成功后，会把链接保存在剪贴板中，在markdown文件中只需要粘贴一下就可以了。</p><table><thead><tr><th>名称</th><th>收费标准</th><th>优点</th><th>缺点</th><th>推荐指数</th><th>说明</th><th>下载地址</th></tr></thead><tbody><tr><td>ipic</td><td>50元/年</td><td>支持很多的云服务，压缩，拖拽上传</td><td>死贵, 免费版只能用新浪图床，图片很可能会丢失</td><td><code>A</code></td><td>功能很多，价钱死贵</td><td>可通过mac app store 下载</td></tr><tr><td>UCQCloud</td><td>免费</td><td>免费，支持压缩，拖拽上传，截图上传</td><td>仅支持七牛，服务器仅支持华东和华北</td><td><code>AAA</code></td><td>免费，功能够用</td><td><a href="https://link.jianshu.com/?t=http://7xr7vj.com1.z0.glb.clouddn.com/UCQCloud1.3.3.dmg" target="_blank" rel="noopener">UCQCloud1.3.3.dmg</a></td></tr><tr><td>cuImage</td><td>终身1元</td><td>剪贴板上传，压缩上传，拖拽上传，快捷键上传，自动把链接转成markdown的形式</td><td>仅支持七牛</td><td><code>AAAA</code></td><td>cuImage的压缩率要比UCQCloud高很多</td><td>可通过mac app store 下载</td></tr></tbody></table><p>总体来说：<code>如果你用七牛图床，cuImage是性价比最高, 用户体验最好的</code></p><h1 id="2-三个工具操作截图与简介"><a href="#2-三个工具操作截图与简介" class="headerlink" title="2. 三个工具操作截图与简介"></a>2. 三个工具操作截图与简介</h1><h1 id="3-cuImage"><a href="#3-cuImage" class="headerlink" title="3. cuImage"></a>3. cuImage</h1><ul><li>图片上传完成后自动复制URL。</li><li>在“上传历史”中查看已上传图片。</li><li>批量上传图片。</li><li>通过截图或复制上传图片。</li><li>通过拖拽上传图片。</li><li>通过”服务“菜单上传图片。</li><li>通过全局快捷键上传图片。</li><li>上传之前压缩图片。</li><li>支持BMP/JPEG/PNG/GIF/TIFF等多种文件格式。</li><li>只支持七牛云，已兼容七牛云华东、华北、华南及北美的存储区域。</li></ul><p><img src="https://camo.githubusercontent.com/16d25db3e16f70c864c6794d565bd46535d91944/687474703a2f2f6f68636f71626638652e626b742e636c6f7564646e2e636f6d2f32303137303231303136303432325f30724f3472385f6375496d61676544656d6f2e676966" alt=""></p><h1 id="4-UCQCloud"><a href="#4-UCQCloud" class="headerlink" title="4. UCQCloud"></a>4. UCQCloud</h1><p>1、文件上传(带上传进度)</p><ul><li>支持软件面板拖放、选择文件(任意二进制文件)上传</li><li>支持状态栏粘贴板图片上传</li><li><p>支持状态栏拖放文件上传<br>2、图片高质量压缩</p></li><li><p>本地图片上传使用Tinypng在线高质量无损压缩</p></li><li>粘贴板图片上传使用开源库pngquant压缩</li><li>正常情况压缩节省50%以上空间,大幅提高博客图片加载速度，节约网盘存储空间。<br>3、上传历史记录管理</li><li>文件预览查看，删除，拷贝上传外链地址等</li></ul><p>4、支持文件夹批量处理</p><ul><li>直接拖入文件夹，或文件批量处理</li></ul><p>作者：huluo666<br>链接：<a href="https://www.jianshu.com/p/694dad59f20c" target="_blank" rel="noopener">https://www.jianshu.com/p/694dad59f20c</a><br>來源：简书<br>著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。</p><p><img src="http://7xr7vj.com1.z0.glb.clouddn.com/%E7%B2%98%E8%B4%B4%E6%9D%BF%E4%B8%8A%E4%BC%A0.gif" alt=""><br><img src="https://upload-images.jianshu.io/upload_images/328273-2ff220978053e895.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/700" alt=""></p><h1 id="5-ipic"><a href="#5-ipic" class="headerlink" title="5. ipic"></a>5. ipic</h1><p>图床神器 iPic 可自动上传图片、保存 Markdown 链接，给你前所未有的插图体验。</p><ul><li>上传前压缩图片</li><li>通过拖拽上传图片</li><li>通过服务上传图片 [Command + U…</li></ul><p><img src="http://p394yuy0c.bkt.clouddn.com/20180128190724_D3rHNM_Screen%20Shot%202018-01-28%20at%207.06.56%20PM.jpeg" alt=""></p><h1 id="6-参考文献"><a href="#6-参考文献" class="headerlink" title="6. 参考文献"></a>6. 参考文献</h1><ul><li><a href="https://toolinbox.net/iPic/" target="_blank" rel="noopener">iPic - 图床神器</a></li><li><a href="https://www.jianshu.com/p/694dad59f20c" target="_blank" rel="noopener">Mac七牛图床与文件批量上传工具: UCQCloud1.3.3</a></li><li><a href="https://github.com/hulizhen/cuImage" target="_blank" rel="noopener">cuImage - 图床利器</a></li></ul>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;blockquote&gt;
-&lt;p&gt;markdown写文档虽然如行云流水，但是一旦需要引入图片了。往往需要四五步操作，如果图片仅仅保存在本地，那么复制markdown时，图片路径往往都不对了，还要重新上传一遍图片，很是麻烦。&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;因此，&lt;code
-      
-    
-    </summary>
-    
-    
-      <category term="工具" scheme="https://wdd.js.org/tags/%E5%B7%A5%E5%85%B7/"/>
     
   </entry>
   
