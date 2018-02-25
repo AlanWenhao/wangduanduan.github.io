@@ -1,6 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[python3入门书籍与在线资料]]></title>
+    <url>%2Fpython-books-comments.html</url>
+    <content type="text"><![CDATA[1. 书籍类1.1. 老太婆一样的罗里吧嗦： Python学习手册（第4版）这本书相当的啰嗦，讲的内容空洞乏力，一些概念蜻蜓点水，买了必定会后悔。 1.2. 很有意思：Python编程：从入门到实践这本书讲的知识点虽然不是很全面，但是要点都讲的很清晰，行文也很有意思，最后一些实践项目也很有趣。 1.3. 干货满满：Python语言及其应用这本书虽然不是非常有趣，但是都是干货满满，知识点讲解也是很到位，非常推荐初学者看看。 2. 免费在线资料2.1. 廖雪峰pthon3教程：中文，免费，零起点，完整示例，基于最新的Python 3版本 2.2. 菜鸟教程 python3 非常适合作为一个快速查找的手册 2.3. 进阶 Python Cookbook 3适合有一定python基础的同学看 2.4. 把这个放在枕头下面 The Python Standard LibraryPython官方标准库参考手册，有什么需要刨根问底的问题需要查的时候，此处务必需要查阅一下。]]></content>
+      <tags>
+        <tag>python</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[正则表达式在线工具集合]]></title>
     <url>%2Fregex-online-tools.html</url>
     <content type="text"><![CDATA[1. 功能最强：regex101优点： 支持多种语言, prec,php,javascript,python,golang 界面美观大方 支持错误提示，实时匹配 缺点： 有时候加载速度太慢 2. 可视化正则绘图: Regulex优点： 实时根据正则表达式绘图 页面加载速度快 3. 可视化正则绘图：regexper优点： 根据正则表达式绘图 页面加载速度快 缺点： 无法实时绘图，需要点击才可以 4. 专注于python正则：pyregex 专注python 页面加载速度快]]></content>
@@ -528,8 +536,8 @@
     <url>%2Fyou-dont-know-https-and-http.html</url>
     <content type="text"><![CDATA[1. HTTPS域向HTTP域发送请求会被浏览器直接拒绝，HTTP向HTTPS则不会例如在github pages页面，这是一个https页面，如果在这个页面向http发送请求，那么会直接被浏览器拒绝，并在控制台输出下面的报错信息。 1jquery-1.11.3.min.js:5 Mixed Content: The page at 'https://wangduanduan.github.io/ddddddd/' was loaded over HTTPS, but requested an insecure XMLHttpRequest endpoint 'http://cccccc/log/conf?token=welljoint'. This request has been blocked; the content must be served over HTTPS. 如果你在做第三方集成的系统，如果他们是在浏览器中直接调用你提供的接口，那么最好你使用https协议，这样无论对方是https还是http都可以访问。（相信我，这个很重要，我曾经经历过上线后遇到这个问题，然后连夜申请证书，把http升级到https的痛苦经历） 2. HTTPS的默认端口是443，而不是443如果443端口已经被其他服务占用了，那么使用其他任何没有被占用的端口都可以用作HTTPS服务，只不过在请求的时候需要加上端口号罢了。 3. 如何快速隐藏一个DOM元素选中一个元素，然后按h,这时候就会在选中的DOM元素上加上__web-inspector-hide-shortcut__类，这个类会让元素隐藏。谷歌和火狐上都可以，IE上没有试过行不行。]]></content>
       <tags>
-        <tag>https</tag>
         <tag>http</tag>
+        <tag>https</tag>
       </tags>
   </entry>
   <entry>

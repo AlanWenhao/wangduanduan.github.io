@@ -4,6 +4,23 @@
 
     
   <url>
+    <loc>https://wdd.js.org/python-books-comments.html</loc>
+    <lastmod>2018-02-25T15:14:02.000Z</lastmod>
+    <data>
+        <display>
+        <title>python3入门书籍与在线资料</title>
+        <pubTime>2018-02-25T14:44:19.000Z</pubTime>
+        
+        <tag>python</tag>
+         
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>https://wdd.js.org/2018-reading-plan.html</loc>
     <lastmod>2018-02-25T14:39:40.000Z</lastmod>
     <data>
@@ -575,9 +592,9 @@
         <title>可能被遗漏的https与http的知识点</title>
         <pubTime>2018-02-08T01:10:59.000Z</pubTime>
         
-        <tag>https</tag>
-         
         <tag>http</tag>
+         
+        <tag>https</tag>
          
          
            
