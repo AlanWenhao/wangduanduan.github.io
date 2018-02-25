@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://wdd.js.org/2018-reading-plan.html</loc>
+    
+    <lastmod>2018-02-25T05:16:30.000Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://wdd.js.org/front-end-interview-handbook.html</loc>
     
     <lastmod>2018-02-24T08:30:34.000Z</lastmod>
@@ -54,13 +61,6 @@
     <loc>https://wdd.js.org/small-is-better-than-big.html</loc>
     
     <lastmod>2018-02-13T08:03:50.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://wdd.js.org/2018-reading-plan.html</loc>
-    
-    <lastmod>2018-02-13T06:29:27.000Z</lastmod>
     
   </url>
   
