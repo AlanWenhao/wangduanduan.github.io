@@ -4,14 +4,16 @@
 
     
   <url>
-    <loc>https://wdd.js.org/jsbestpractices.html</loc>
-    <lastmod>2018-03-01T02:08:43.000Z</lastmod>
+    <loc>https://wdd.js.org/front-end-interview-handbook.html</loc>
+    <lastmod>2018-03-01T07:46:22.000Z</lastmod>
     <data>
         <display>
-        <title>我的JavaScript最佳实践</title>
-        <pubTime>2018-01-29T01:16:38.000Z</pubTime>
+        <title>前端面试和笔试题目</title>
+        <pubTime>2018-02-23T07:18:26.000Z</pubTime>
         
-        <tag>js</tag>
+        <tag>面试</tag>
+         
+        <tag>笔试</tag>
          
          
            
@@ -21,16 +23,14 @@
 
     
   <url>
-    <loc>https://wdd.js.org/front-end-interview-handbook.html</loc>
-    <lastmod>2018-02-27T01:26:28.000Z</lastmod>
+    <loc>https://wdd.js.org/jsbestpractices.html</loc>
+    <lastmod>2018-03-01T02:08:43.000Z</lastmod>
     <data>
         <display>
-        <title>前端面试和笔试题目</title>
-        <pubTime>2018-02-23T07:18:26.000Z</pubTime>
+        <title>我的JavaScript最佳实践</title>
+        <pubTime>2018-01-29T01:16:38.000Z</pubTime>
         
-        <tag>面试</tag>
-         
-        <tag>笔试</tag>
+        <tag>js</tag>
          
          
            
