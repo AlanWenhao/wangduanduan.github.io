@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://wdd.js.org/"/>
-  <updated>2018-02-25T15:14:02.000Z</updated>
+  <updated>2018-03-02T01:04:53.000Z</updated>
   <id>https://wdd.js.org/</id>
   
   <author>
@@ -17,11 +17,37 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>前端团队合作规范</title>
+    <link href="https://wdd.js.org/front-end-team-work-blog.html"/>
+    <id>https://wdd.js.org/front-end-team-work-blog.html</id>
+    <published>2018-03-02T00:59:01.000Z</published>
+    <updated>2018-03-02T01:04:53.000Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="1-编程风格"><a href="#1-编程风格" class="headerlink" title="1. 编程风格"></a>1. 编程风格</h1><ul><li><code>代码风格</code> <a href="https://standardjs.com/readme-zhcn.html" target="_blank" rel="noopener">JavaScript Standard Style</a></li><li><a href="https://wdd.js.org/js-best-parctices/#/">js最佳实践</a></li></ul><h1 id="2-编辑器"><a href="#2-编辑器" class="headerlink" title="2. 编辑器"></a>2. 编辑器</h1><p>vscode</p><h1 id="3-git版本控制"><a href="#3-git版本控制" class="headerlink" title="3. git版本控制"></a>3. git版本控制</h1><p>master随时发布<br>dev用于开发</p><h1 id="4-工程化与模块化"><a href="#4-工程化与模块化" class="headerlink" title="4. 工程化与模块化"></a>4. 工程化与模块化</h1><p>构件工具必须要有<br>模块化</p><h1 id="5-代码整洁"><a href="#5-代码整洁" class="headerlink" title="5. 代码整洁"></a>5. 代码整洁</h1><p>阅读代码整洁之道<br>单个文件代码行越少越好，尽量按模块分散<br>函数体代码行越少越好，职责单一</p><h1 id="6-tcp-ip"><a href="#6-tcp-ip" class="headerlink" title="6. tcp ip"></a>6. tcp ip</h1><p>阅读http权威指南<br>图解tcp ip</p><h1 id="7-es6"><a href="#7-es6" class="headerlink" title="7. es6"></a>7. es6</h1><p>阮一峰 es6教程</p><h1 id="8-vue编程风格"><a href="#8-vue编程风格" class="headerlink" title="8. vue编程风格"></a>8. vue编程风格</h1><p>vue官方推荐风格</p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h1 id=&quot;1-编程风格&quot;&gt;&lt;a href=&quot;#1-编程风格&quot; class=&quot;headerlink&quot; title=&quot;1. 编程风格&quot;&gt;&lt;/a&gt;1. 编程风格&lt;/h1&gt;&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;代码风格&lt;/code&gt; &lt;a href=&quot;https://standardjs.
+      
+    
+    </summary>
+    
+    
+      <category term="规范" scheme="https://wdd.js.org/tags/%E8%A7%84%E8%8C%83/"/>
+    
+      <category term="前端团队" scheme="https://wdd.js.org/tags/%E5%89%8D%E7%AB%AF%E5%9B%A2%E9%98%9F/"/>
+    
+  </entry>
+  
+  <entry>
     <title>python3入门书籍与在线资料</title>
     <link href="https://wdd.js.org/python-books-comments.html"/>
     <id>https://wdd.js.org/python-books-comments.html</id>
     <published>2018-02-25T14:44:19.000Z</published>
-    <updated>2018-02-25T15:14:02.000Z</updated>
+    <updated>2018-02-26T01:24:51.000Z</updated>
     
     <content type="html"><![CDATA[<h1 id="1-书籍类"><a href="#1-书籍类" class="headerlink" title="1. 书籍类"></a>1. 书籍类</h1><h2 id="1-1-老太婆一样的罗里吧嗦：-Python学习手册（第4版）"><a href="#1-1-老太婆一样的罗里吧嗦：-Python学习手册（第4版）" class="headerlink" title="1.1. 老太婆一样的罗里吧嗦： Python学习手册（第4版）"></a>1.1. 老太婆一样的罗里吧嗦： Python学习手册（第4版）</h2><p>这本书相当的啰嗦，讲的内容空洞乏力，一些概念蜻蜓点水，买了必定会后悔。</p><p><img src="http://p3alsaatj.bkt.clouddn.com/20180225225213_u31NAG_Jietu20180225-225148.jpeg" alt=""></p><h2 id="1-2-很有意思：Python编程：从入门到实践"><a href="#1-2-很有意思：Python编程：从入门到实践" class="headerlink" title="1.2. 很有意思：Python编程：从入门到实践"></a>1.2. 很有意思：Python编程：从入门到实践</h2><p>这本书讲的知识点虽然不是很全面，但是要点都讲的很清晰，行文也很有意思，最后一些实践项目也很有趣。</p><p><img src="http://p3alsaatj.bkt.clouddn.com/20180225225523_yfBUXd_Jietu20180225-225513.jpeg" alt=""></p><h2 id="1-3-干货满满：Python语言及其应用"><a href="#1-3-干货满满：Python语言及其应用" class="headerlink" title="1.3. 干货满满：Python语言及其应用"></a>1.3. 干货满满：Python语言及其应用</h2><p>这本书虽然不是非常有趣，但是都是干货满满，知识点讲解也是很到位，非常推荐初学者看看。</p><p><img src="http://p3alsaatj.bkt.clouddn.com/20180225225931_DmTPVu_Jietu20180225-225852.jpeg" alt=""></p><h1 id="2-免费在线资料"><a href="#2-免费在线资料" class="headerlink" title="2. 免费在线资料"></a>2. 免费在线资料</h1><h2 id="2-1-廖雪峰pthon3教程：中文，免费，零起点，完整示例，基于最新的Python-3版本"><a href="#2-1-廖雪峰pthon3教程：中文，免费，零起点，完整示例，基于最新的Python-3版本" class="headerlink" title="2.1. 廖雪峰pthon3教程：中文，免费，零起点，完整示例，基于最新的Python 3版本"></a>2.1. <a href="https://www.liaoxuefeng.com/wiki/0014316089557264a6b348958f449949df42a6d3a2e542c000" target="_blank" rel="noopener">廖雪峰pthon3教程：中文，免费，零起点，完整示例，基于最新的Python 3版本</a></h2><p><img src="http://p3alsaatj.bkt.clouddn.com/20180225230211_jxRF1S_Jietu20180225-230203.jpeg" alt=""></p><h2 id="2-2-菜鸟教程-python3"><a href="#2-2-菜鸟教程-python3" class="headerlink" title="2.2. 菜鸟教程 python3 "></a>2.2. <a href="http://www.runoob.com/python3/python3-tutorial.html" target="_blank" rel="noopener">菜鸟教程 python3 </a></h2><p><code>非常适合作为一个快速查找的手册</code></p><p><img src="http://p3alsaatj.bkt.clouddn.com/20180225230510_1cHt69_Jietu20180225-230456.jpeg" alt=""></p><h2 id="2-3-进阶-Python-Cookbook-3"><a href="#2-3-进阶-Python-Cookbook-3" class="headerlink" title="2.3. 进阶 Python Cookbook 3"></a>2.3. 进阶 <a href="http://python3-cookbook.readthedocs.io/zh_CN/latest/index.html" target="_blank" rel="noopener">Python Cookbook 3</a></h2><p><code>适合有一定python基础的同学看</code></p><p><img src="http://p3alsaatj.bkt.clouddn.com/20180225230726_Yo3D9i_Jietu20180225-230715.jpeg" alt=""></p><h2 id="2-4-把这个放在枕头下面-The-Python-Standard-Library"><a href="#2-4-把这个放在枕头下面-The-Python-Standard-Library" class="headerlink" title="2.4. 把这个放在枕头下面 The Python Standard Library"></a>2.4. 把这个放在枕头下面 <a href="https://docs.python.org/3/library/index.html" target="_blank" rel="noopener">The Python Standard Library</a></h2><p>Python官方标准库参考手册，有什么需要刨根问底的问题需要查的时候，此处务必需要查阅一下。</p><p><img src="http://p3alsaatj.bkt.clouddn.com/20180225231148_DiPST4_Jietu20180225-231133.jpeg" alt=""></p>]]></content>
     
@@ -497,31 +523,6 @@
       <category term="vscode" scheme="https://wdd.js.org/tags/vscode/"/>
     
       <category term="mac" scheme="https://wdd.js.org/tags/mac/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>搭建一个舒心高效的windows + shell 工作环境</title>
-    <link href="https://wdd.js.org/confortable-windows-shell-env.html"/>
-    <id>https://wdd.js.org/confortable-windows-shell-env.html</id>
-    <published>2018-02-11T06:16:54.000Z</published>
-    <updated>2018-02-11T06:18:59.000Z</updated>
-    
-    <content type="html"><![CDATA[<h2 id="1-ConEmu命令行：-漂亮的不像实力派"><a href="#1-ConEmu命令行：-漂亮的不像实力派" class="headerlink" title="1 ConEmu命令行： 漂亮的不像实力派"></a>1 ConEmu命令行： 漂亮的不像实力派</h2><p>我曾这篇文章中<a href="https://wdd.js.org/windows-powerful-tools.html">《自从装了windows神器，再也不用羡慕mac了》</a>，介绍过好几个命令行神器。</p><p>里面几个命令行我都有用过，但是最让我喜欢的是<a href="https://github.com/Maximus5/ConEmu" target="_blank" rel="noopener">ConEmu</a>，先说说它的特点。</p><ul><li>平滑的窗口大小调整</li><li>标签和分裂（窗格）</li><li>窗口字体消除锯齿：标准，清除类型，禁用</li><li>快速的复制粘贴</li><li>可切换使用shell或者dos, 过着git bash等</li></ul><p><code>你可以看看它完美的侧颜。</code></p><p><img src="https://github.com/Maximus5/ConEmu/wiki/ConEmuSplits.png" alt=""></p><h2 id="2-gow-shell工具箱-身材苗条却又肌肉发达"><a href="#2-gow-shell工具箱-身材苗条却又肌肉发达" class="headerlink" title="2 gow shell工具箱: 身材苗条却又肌肉发达"></a>2 gow shell工具箱: 身材苗条却又肌肉发达</h2><p>我曾经想过，如果能在直接windows上用linux的<code>grep</code>,  <code>curl</code>等命令，那该多好啊！<br>我也曾试过<a href="https://zh.wikipedia.org/zh-cn/Cygwin" target="_blank" rel="noopener">Cygwin</a>, 但是那<code>哥斯拉</code>般大小的体积让我只能望洋兴叹。</p><p>曾几何时，我遇到了Gow，她10MB版苗条的身材，却又能满足你80%的日常工作的需要。</p><p>当别人还有notepad++，慢慢吞吞加载一个30MB的日志的时候，你用<code>grep</code>命令，已经搜索到了想要的结果。所谓：<code>天下武功，无坚不摧，唯快不破</code>， 就是这个感觉。</p><p><a href="https://github.com/bmatzelle/gow" target="_blank" rel="noopener">Gow（Gnu On Windows）</a>是Cygwin的轻量级替代品。 它使用了一个方便的Windows安装程序，安装了大约130个非常有用的开源UNIX应用程序，编译为本机win32二进制文件。 它被设计成尽可能小，大约10 MB，而Cygwin可以运行在100 MB以上，具体取决于选项。</p><p>这里有一些来自Gow用户的引用：</p><blockquote><p>“Gow是使Windows可以使用/可用的少数几件事之一”</p><p>“我不断地使用Gow，太棒了。”</p><p>“我只是想让你知道，GOW Suite非常棒 - 它比Cygwin工具轻得多，而且非常有用。</p></blockquote><h2 id="3-f-lux：我轻轻看一眼，这暖暖的感觉，她都有"><a href="#3-f-lux：我轻轻看一眼，这暖暖的感觉，她都有" class="headerlink" title="3 f.lux：我轻轻看一眼，这暖暖的感觉，她都有"></a>3 f.lux：我轻轻看一眼，这暖暖的感觉，她都有</h2><p>作为一个程序员，免不了长时间的面对电脑屏幕。结果经常会眼睛难受。然后我尝试了一下<a href="https://justgetflux.com/" target="_blank" rel="noopener">f.lux</a>,  装上之后，配置了一下时区， 电脑屏幕马上变成屎黄色。抱着试试看的心态，我用了几天，几天过后，我实在受不了这颜色了。 然后就卸载了，没过多上时间，我觉得有点不对劲，不舒服。总是感觉缺点什么。 </p><p>就放佛 张韶涵的歌《遗失的美好》：<code>有些人说不清哪里好 但就是谁都替代不了</code>,  然后我就又装上了f.lux。在我的影响下，我附近的几个小伙伴，也都装上了<code>f.lux</code>。 后来我换了mac, 但是我也装了f.lux。</p><p><img src="https://justgetflux.com/images/flux-windows.jpg" alt=""></p><blockquote><p>f.lux让你的电脑屏幕看起来就像你所在的房间一样。 当日落时，它使您的电脑看起来像你的室内灯。 在早上，它使事情看起来像阳光。</p><p>告诉f.lux你有什么样的照明，以及你住的地方。 然后忘了它。 f.lux会自动完成剩下的工作。</p></blockquote><h2 id="4-visual-studio-code-最好用的轻量编辑器"><a href="#4-visual-studio-code-最好用的轻量编辑器" class="headerlink" title="4 visual studio code: 最好用的轻量编辑器"></a>4 visual studio code: 最好用的轻量编辑器</h2><ul><li>颜值很高</li><li>微软开源的产品，质量保证</li><li>集成git</li><li>插件很多，下载很快</li><li>免费</li><li>体积很小，占用内存很小，启动很快</li></ul><p><img src="http://p3alsaatj.bkt.clouddn.com/20180201172157_gz0qsT_Jietu20180201-172150.jpeg" alt=""></p>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;h2 id=&quot;1-ConEmu命令行：-漂亮的不像实力派&quot;&gt;&lt;a href=&quot;#1-ConEmu命令行：-漂亮的不像实力派&quot; class=&quot;headerlink&quot; title=&quot;1 ConEmu命令行： 漂亮的不像实力派&quot;&gt;&lt;/a&gt;1 ConEmu命令行： 漂亮的不像实力派&lt;/
-      
-    
-    </summary>
-    
-    
-      <category term="windows" scheme="https://wdd.js.org/tags/windows/"/>
-    
-      <category term="shell" scheme="https://wdd.js.org/tags/shell/"/>
     
   </entry>
   
