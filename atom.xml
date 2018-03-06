@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://wdd.js.org/"/>
-  <updated>2018-03-02T01:04:53.000Z</updated>
+  <updated>2018-03-06T03:33:31.000Z</updated>
   <id>https://wdd.js.org/</id>
   
   <author>
@@ -15,6 +15,31 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>曲线救国 使用googler命令行搜索</title>
+    <link href="https://wdd.js.org/use-googler-for-serarch.html"/>
+    <id>https://wdd.js.org/use-googler-for-serarch.html</id>
+    <published>2018-03-06T03:15:38.000Z</published>
+    <updated>2018-03-06T03:33:31.000Z</updated>
+    
+    <content type="html"><![CDATA[<p>之前因为有优惠政策，于是我在xx云上买了一台位于香港的最低配置的服务器，期限三年，主要用来搭建ss, 用来跨栏。</p><p>用了一段时间，感觉挺稳定的。后来一纸通知，收到了整改信息。于是我就把ss服务停了。</p><p>三年的主机不能浪费，于是我就思考一下曲线救国的思路。</p><p>即使用<code>ssh链接上远程服务器后，使用googler命令进行搜索，然后点击链接，使用本地浏览器打开搜索结果</code></p><p>关于googler可以查看，<a href="https://github.com/jarun/googler#installation" target="_blank" rel="noopener">https://github.com/jarun/googler#installation</a></p><p><img src="http://p3alsaatj.bkt.clouddn.com/20180306113311_LrY1wY_68747470733a2f2f73312e706f7374696d672e6f72672f3168673278316471726a2f676f6f676c65722e706e67.jpeg" alt=""></p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;之前因为有优惠政策，于是我在xx云上买了一台位于香港的最低配置的服务器，期限三年，主要用来搭建ss, 用来跨栏。&lt;/p&gt;
+&lt;p&gt;用了一段时间，感觉挺稳定的。后来一纸通知，收到了整改信息。于是我就把ss服务停了。&lt;/p&gt;
+&lt;p&gt;三年的主机不能浪费，于是我就思考一下曲线救国的思
+      
+    
+    </summary>
+    
+    
+      <category term="谷歌" scheme="https://wdd.js.org/tags/%E8%B0%B7%E6%AD%8C/"/>
+    
+  </entry>
   
   <entry>
     <title>前端团队合作规范</title>
@@ -498,31 +523,6 @@
     
     </summary>
     
-    
-  </entry>
-  
-  <entry>
-    <title>mac vscode 更新失败 Permission denied解决办法</title>
-    <link href="https://wdd.js.org/mac-vscode-update-permission-denied.html"/>
-    <id>https://wdd.js.org/mac-vscode-update-permission-denied.html</id>
-    <published>2018-02-11T06:20:01.000Z</published>
-    <updated>2018-02-11T06:20:42.000Z</updated>
-    
-    <content type="html"><![CDATA[<h1 id="0-现象"><a href="#0-现象" class="headerlink" title="0. 现象"></a>0. 现象</h1><p><code>Could not create temporary directory: Permission denied</code></p><h1 id="1-问题起因"><a href="#1-问题起因" class="headerlink" title="1. 问题起因"></a>1. 问题起因</h1><p>在 <code>/Users/username/Library/Caches/</code>目录下，有以下两个文件， 可以看到，他们两个的用户是不一样的，一个是<code>root</code>一个<code>username</code>, 一般来说，我是以<code>username</code>来使用我的mac的。就是因为这两个文件的用户不一样，导致了更新失败。</p><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">drwxr-xr-x</span>   6 <span class="selector-tag">username</span>  <span class="selector-tag">staff</span>   204<span class="selector-tag">B</span> <span class="selector-tag">Jan</span> 17 20<span class="selector-pseudo">:33</span> <span class="selector-tag">com</span><span class="selector-class">.microsoft</span><span class="selector-class">.VSCode</span></span><br><span class="line"><span class="selector-tag">drwxr--r--</span>   2 <span class="selector-tag">root</span>    <span class="selector-tag">staff</span>    68<span class="selector-tag">B</span> <span class="selector-tag">Dec</span> 17 13<span class="selector-pseudo">:51</span> <span class="selector-tag">com</span><span class="selector-class">.microsoft</span><span class="selector-class">.VSCode</span><span class="selector-class">.ShipIt</span></span><br></pre></td></tr></table></figure><h1 id="2-解决方法"><a href="#2-解决方法" class="headerlink" title="2. 解决方法"></a>2. 解决方法</h1><p><code>注意</code>： 先把vscode 完全关闭</p><figure class="highlight stylus"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 1. 这一步是需要输入密码的</span></span><br><span class="line">sudo chown <span class="variable">$USER</span> ~/Library/Caches/com<span class="selector-class">.microsoft</span><span class="selector-class">.VSCode</span><span class="selector-class">.ShipIt</span>/</span><br><span class="line"></span><br><span class="line"><span class="comment">// 2. 这一步是不需要输入密码的, 如果不进行第一步，第二步会报错</span></span><br><span class="line">sudo chown <span class="variable">$USER</span> ~/Library/Caches/com<span class="selector-class">.microsoft</span><span class="selector-class">.VSCode</span><span class="selector-class">.ShipIt</span><span class="comment">/*</span></span><br><span class="line"><span class="comment"></span></span><br><span class="line"><span class="comment">// 3. 更新xattr</span></span><br><span class="line"><span class="comment">xattr -dr com.apple.quarantine /Applications/Visual\ Studio\ Code.app</span></span><br></pre></td></tr></table></figure><h1 id="3-打开vscode"><a href="#3-打开vscode" class="headerlink" title="3. 打开vscode"></a>3. 打开vscode</h1><p>Code &gt; Check for Updates, 点击之后，你会发现<code>Check for Updates</code>已经变成灰色了，那么你需要稍等片刻，马上就可以更新，之后会跳出提示，让你重启vscode, 然后重启一下vscode, 就ok了。</p><h1 id="4-参考"><a href="#4-参考" class="headerlink" title="4. 参考"></a>4. 参考</h1><ul><li><a href="https://github.com/Microsoft/vscode/issues/7426" target="_blank" rel="noopener">joaomoreno commented on Feb 7, 2017 •  edited</a></li></ul>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;h1 id=&quot;0-现象&quot;&gt;&lt;a href=&quot;#0-现象&quot; class=&quot;headerlink&quot; title=&quot;0. 现象&quot;&gt;&lt;/a&gt;0. 现象&lt;/h1&gt;&lt;p&gt;&lt;code&gt;Could not create temporary directory: Permission denie
-      
-    
-    </summary>
-    
-    
-      <category term="vscode" scheme="https://wdd.js.org/tags/vscode/"/>
-    
-      <category term="mac" scheme="https://wdd.js.org/tags/mac/"/>
     
   </entry>
   
