@@ -4,8 +4,27 @@
 
     
   <url>
+    <loc>https://wdd.js.org/front-end-interview-handbook.html</loc>
+    <lastmod>2018-03-09T09:45:22.000Z</lastmod>
+    <data>
+        <display>
+        <title>前端面试和笔试题目</title>
+        <pubTime>2018-02-23T07:18:26.000Z</pubTime>
+        
+        <tag>面试</tag>
+         
+        <tag>笔试</tag>
+         
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>https://wdd.js.org/2018-reading-plan.html</loc>
-    <lastmod>2018-03-06T10:22:04.000Z</lastmod>
+    <lastmod>2018-03-07T07:17:04.000Z</lastmod>
     <data>
         <display>
         <title>2018年我的阅读计划</title>
@@ -67,25 +86,6 @@
         <tag>规范</tag>
          
         <tag>前端团队</tag>
-         
-         
-           
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>https://wdd.js.org/front-end-interview-handbook.html</loc>
-    <lastmod>2018-03-01T07:46:22.000Z</lastmod>
-    <data>
-        <display>
-        <title>前端面试和笔试题目</title>
-        <pubTime>2018-02-23T07:18:26.000Z</pubTime>
-        
-        <tag>面试</tag>
-         
-        <tag>笔试</tag>
          
          
            

@@ -2,9 +2,16 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://wdd.js.org/front-end-interview-handbook.html</loc>
+    
+    <lastmod>2018-03-09T09:45:22.000Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://wdd.js.org/2018-reading-plan.html</loc>
     
-    <lastmod>2018-03-06T10:22:04.000Z</lastmod>
+    <lastmod>2018-03-07T07:17:04.000Z</lastmod>
     
   </url>
   
@@ -26,13 +33,6 @@
     <loc>https://wdd.js.org/front-end-team-work-blog.html</loc>
     
     <lastmod>2018-03-02T01:04:53.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://wdd.js.org/front-end-interview-handbook.html</loc>
-    
-    <lastmod>2018-03-01T07:46:22.000Z</lastmod>
     
   </url>
   
