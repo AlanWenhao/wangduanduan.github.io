@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://wdd.js.org/"/>
-  <updated>2018-03-09T10:16:22.000Z</updated>
+  <updated>2018-03-09T10:24:22.000Z</updated>
   <id>https://wdd.js.org/</id>
   
   <author>
@@ -21,7 +21,7 @@
     <link href="https://wdd.js.org/origin-null-is-not-allowed.html"/>
     <id>https://wdd.js.org/origin-null-is-not-allowed.html</id>
     <published>2018-03-09T09:58:05.000Z</published>
-    <updated>2018-03-09T10:16:22.000Z</updated>
+    <updated>2018-03-09T10:24:22.000Z</updated>
     
     <content type="html"><![CDATA[<h1 id="1-问题表现"><a href="#1-问题表现" class="headerlink" title="1. 问题表现"></a>1. 问题表现</h1><p>以<code>file:///xxx.html</code>打开某个html文件，发送ajax请求时报错：</p><figure class="highlight vhdl"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Response <span class="keyword">to</span> preflight request doesn<span class="symbol">'t</span> pass <span class="keyword">access</span> control check: The <span class="symbol">'Access</span>-Control-Allow-Origin' header has a value <span class="symbol">'null</span>' that <span class="keyword">is</span> <span class="keyword">not</span> equal <span class="keyword">to</span> the supplied origin. Origin <span class="symbol">'null</span>' <span class="keyword">is</span> therefore <span class="keyword">not</span> allowed <span class="keyword">access</span>.</span><br></pre></td></tr></table></figure><h1 id="2-问题原因"><a href="#2-问题原因" class="headerlink" title="2. 问题原因"></a>2. 问题原因</h1><p>Origin null是本地文件系统，因此这表明您正在加载通过file：// URL进行加载调用的HTML页面（例如，只需在本地文件浏览器或类似文件中双击它）。不同的浏览器采用不同的方法将相同来源策略应用到本地文件。<code>Chrome要求比较严格，不允许这种形势的跨域请求。</code>而最好使用http:// 访问html.</p><h1 id="3-解决方案"><a href="#3-解决方案" class="headerlink" title="3. 解决方案"></a>3. 解决方案</h1><p>以下给出三个解决方案，第一个最快，第三个作为彻底。</p><h2 id="3-1-方案1-给Chrome快捷方式中增加-–allow-file-access-from-files"><a href="#3-1-方案1-给Chrome快捷方式中增加-–allow-file-access-from-files" class="headerlink" title="3.1. 方案1 给Chrome快捷方式中增加 –allow-file-access-from-files"></a>3.1. 方案1 给Chrome快捷方式中增加 –allow-file-access-from-files</h2><p>打开Chrome快捷方式的属性中设置：右击Chrome浏览器快捷方式，选择“属性”，在“目标”中加”–allow-file-access-from-files”，注意前面有个空格，重启Chrome浏览器便可。</p><p><img src="http://p3alsaatj.bkt.clouddn.com/20180309181105_SUxYRg_Screenshot.jpeg" alt=""></p><h2 id="3-2-方案2-启动一个简单的静态文件服务器-以http协议访问html"><a href="#3-2-方案2-启动一个简单的静态文件服务器-以http协议访问html" class="headerlink" title="3.2. 方案2 启动一个简单的静态文件服务器, 以http协议访问html"></a>3.2. 方案2 启动一个简单的静态文件服务器, 以http协议访问html</h2><p>参见我的这篇文章: <a href="https://wdd.js.org/one-command-create-static-file-server.html">一行命令搭建简易静态文件http服务器</a></p><h2 id="3-3-方案3-服务端响应修改Access-Control-Allow-Origin"><a href="#3-3-方案3-服务端响应修改Access-Control-Allow-Origin" class="headerlink" title="3.3. 方案3 服务端响应修改Access-Control-Allow-Origin : *"></a>3.3. 方案3 服务端响应修改Access-Control-Allow-Origin : *</h2><figure class="highlight less"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">response</span><span class="selector-class">.addHeader</span>(<span class="string">"Access-Control-Allow-Origin"</span>,<span class="string">"*"</span>)</span><br></pre></td></tr></table></figure><h1 id="4-参考文章"><a href="#4-参考文章" class="headerlink" title="4. 参考文章"></a>4. 参考文章</h1><ul><li><a href="http://blog.csdn.net/dandanzmc/article/details/31344267" target="_blank" rel="noopener">如何解决XMLHttpRequest cannot load file<del>~</del>~~Origin ‘null’ is therefore not allowed access</a></li><li><a href="http://blog.csdn.net/kissliux/article/details/16889111" target="_blank" rel="noopener">让chrome支持本地Ajax请求,Ajax请求status cancel Origin null is not allowed by Access-Control-Allow-Origin</a></li><li><a href="https://stackoverflow.com/questions/8456538/origin-null-is-not-allowed-by-access-control-allow-origin" target="_blank" rel="noopener">Origin null is not allowed by Access-Control-Allow-Origin</a></li></ul>]]></content>
     
@@ -38,6 +38,8 @@
       <category term="chrome" scheme="https://wdd.js.org/tags/chrome/"/>
     
       <category term="跨域" scheme="https://wdd.js.org/tags/%E8%B7%A8%E5%9F%9F/"/>
+    
+      <category term="origin-null-is-not-allowed" scheme="https://wdd.js.org/tags/origin-null-is-not-allowed/"/>
     
   </entry>
   

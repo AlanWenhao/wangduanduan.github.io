@@ -5,7 +5,7 @@
     
   <url>
     <loc>https://wdd.js.org/origin-null-is-not-allowed.html</loc>
-    <lastmod>2018-03-09T10:16:22.000Z</lastmod>
+    <lastmod>2018-03-09T10:24:22.000Z</lastmod>
     <data>
         <display>
         <title>Chrome本地跨域origin-null-is-not-allowed问题分析与解决方案</title>
@@ -14,6 +14,8 @@
         <tag>chrome</tag>
          
         <tag>跨域</tag>
+         
+        <tag>origin-null-is-not-allowed</tag>
          
          
            
