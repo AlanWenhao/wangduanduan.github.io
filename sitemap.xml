@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://wdd.js.org/2018-reading-plan.html</loc>
+    
+    <lastmod>2018-03-11T15:08:00.000Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://wdd.js.org/feature-of-dangerous-professional-skill.html</loc>
     
     <lastmod>2018-03-10T14:14:48.000Z</lastmod>
@@ -19,13 +26,6 @@
     <loc>https://wdd.js.org/front-end-interview-handbook.html</loc>
     
     <lastmod>2018-03-09T09:45:22.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://wdd.js.org/2018-reading-plan.html</loc>
-    
-    <lastmod>2018-03-07T07:17:04.000Z</lastmod>
     
   </url>
   
