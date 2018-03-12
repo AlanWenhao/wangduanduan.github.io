@@ -4,6 +4,23 @@
 
     
   <url>
+    <loc>https://wdd.js.org/how-to-learn-form-trianing-class.html</loc>
+    <lastmod>2018-03-12T13:30:26.000Z</lastmod>
+    <data>
+        <display>
+        <title>如何成为从培训班里出来的牛人？</title>
+        <pubTime>2018-03-12T11:44:10.000Z</pubTime>
+        
+        <tag>学习方法</tag>
+         
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>https://wdd.js.org/2018-reading-plan.html</loc>
     <lastmod>2018-03-11T15:08:00.000Z</lastmod>
     <data>
@@ -683,9 +700,9 @@
         <title>可能被遗漏的https与http的知识点</title>
         <pubTime>2018-02-08T01:10:59.000Z</pubTime>
         
-        <tag>https</tag>
-         
         <tag>http</tag>
+         
+        <tag>https</tag>
          
          
            
@@ -759,11 +776,11 @@
         <title>Vue + Vue-router + Element-ui 搭建一个非常简单的dashboard demo</title>
         <pubTime>2018-02-09T04:02:05.000Z</pubTime>
         
-        <tag>ElementUI</tag>
-         
         <tag>Vue</tag>
          
         <tag>Vue-router</tag>
+         
+        <tag>ElementUI</tag>
          
          
            
@@ -1556,9 +1573,9 @@
         <title>组织在召唤：如何免费获取一个js.org的二级域名</title>
         <pubTime>2018-01-29T10:08:03.000Z</pubTime>
         
-        <tag>hexo</tag>
-         
         <tag>jsorg</tag>
+         
+        <tag>hexo</tag>
          
          
            
