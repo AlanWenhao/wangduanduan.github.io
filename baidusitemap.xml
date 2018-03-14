@@ -4,6 +4,25 @@
 
     
   <url>
+    <loc>https://wdd.js.org/clipboard-copy-tutorial.html</loc>
+    <lastmod>2018-03-14T06:34:51.000Z</lastmod>
+    <data>
+        <display>
+        <title>前端剪贴板复制功能实现原理</title>
+        <pubTime>2018-03-14T06:19:12.000Z</pubTime>
+        
+        <tag>copy</tag>
+         
+        <tag>clipboard</tag>
+         
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>https://wdd.js.org/how-to-learn-form-trianing-class.html</loc>
     <lastmod>2018-03-13T03:38:18.000Z</lastmod>
     <data>
@@ -776,11 +795,11 @@
         <title>Vue + Vue-router + Element-ui 搭建一个非常简单的dashboard demo</title>
         <pubTime>2018-02-09T04:02:05.000Z</pubTime>
         
+        <tag>ElementUI</tag>
+         
         <tag>Vue</tag>
          
         <tag>Vue-router</tag>
-         
-        <tag>ElementUI</tag>
          
          
            

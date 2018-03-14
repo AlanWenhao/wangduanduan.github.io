@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://wdd.js.org/"/>
-  <updated>2018-03-13T03:38:18.000Z</updated>
+  <updated>2018-03-14T06:34:51.000Z</updated>
   <id>https://wdd.js.org/</id>
   
   <author>
@@ -15,6 +15,31 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>前端剪贴板复制功能实现原理</title>
+    <link href="https://wdd.js.org/clipboard-copy-tutorial.html"/>
+    <id>https://wdd.js.org/clipboard-copy-tutorial.html</id>
+    <published>2018-03-14T06:19:12.000Z</published>
+    <updated>2018-03-14T06:34:51.000Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="1-兼容情况"><a href="#1-兼容情况" class="headerlink" title="1. 兼容情况"></a>1. 兼容情况</h1><p>如果想浏览器支持粘贴功能，那么浏览器必须支持，<a href="https://developer.mozilla.org/en-US/docs/Web/API/Document/execCommand" target="_blank" rel="noopener">document.execCommand(‘copy’)</a>方法，也可以根据<a href="https://developer.mozilla.org/en-US/docs/Web/API/Document/queryCommandSupported" target="_blank" rel="noopener">document.queryCommandEnabled(‘copy’)</a>，返回的true或者false判断浏览器是否支持copy命令。</p><p>从下表可以看出，主流的浏览器都支持execCommand命令</p><p><img src="http://p3alsaatj.bkt.clouddn.com/20180314142213_IhrFsz_Jietu20180314-141253.jpeg" alt=""></p><h1 id="2-复制的原理"><a href="#2-复制的原理" class="headerlink" title="2. 复制的原理"></a>2. 复制的原理</h1><ol><li>查询元素</li><li>选中元素</li><li>执行复制命令</li></ol><h1 id="3-代码展示"><a href="#3-代码展示" class="headerlink" title="3. 代码展示"></a>3. 代码展示</h1><figure class="highlight stylus"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// html</span></span><br><span class="line">&lt;<span class="selector-tag">input</span> id=<span class="string">"username"</span> value=<span class="string">"123456"</span>&gt;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 查询元素</span></span><br><span class="line"><span class="selector-tag">var</span> username = document.getElementById(‘username’)</span><br><span class="line"></span><br><span class="line"><span class="comment">// 选中元素</span></span><br><span class="line">username.select()</span><br><span class="line"></span><br><span class="line"><span class="comment">// 执行复制</span></span><br><span class="line">document.execCommand(<span class="string">'copy'</span>)</span><br></pre></td></tr></table></figure><blockquote><p>注意: 以上代码只是简单示意，在实践过程中还有几个要判断的情况</p></blockquote><ol><li>首要要去检测浏览器execCommand能力检测</li><li>选取元素时，有可能选取元素为空，要考虑这种情况的处理</li></ol><h1 id="4-第三方方案"><a href="#4-第三方方案" class="headerlink" title="4. 第三方方案"></a>4. 第三方方案</h1><p><a href="https://clipboardjs.com/" target="_blank" rel="noopener">clipboard.js</a>是一个比较方便的剪贴板库，功能蛮多的。</p><figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">&lt;!-- Target --&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">textarea</span> <span class="attr">id</span>=<span class="string">"bar"</span>&gt;</span>Mussum ipsum cacilds...<span class="tag">&lt;/<span class="name">textarea</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="comment">&lt;!-- Trigger --&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">button</span> <span class="attr">class</span>=<span class="string">"btn"</span> <span class="attr">data-clipboard-action</span>=<span class="string">"cut"</span> <span class="attr">data-clipboard-target</span>=<span class="string">"#bar"</span>&gt;</span></span><br><span class="line">    Cut to clipboard</span><br><span class="line"><span class="tag">&lt;/<span class="name">button</span>&gt;</span></span><br></pre></td></tr></table></figure><p>官方给的代码里有上面的一个示例，如果你用了这个示例，但是不起作用，那你估计是没有初始化ClipboardJS示例的。</p><p>注意：下面的函数必须要主动调用，这样才能给响应的DOM元素注册事件。 ClipboardJS源代码压缩后大约有3kb，虽然很小了，但是如果你不需要它的这么多功能的话，其实你自己写几行代码就可以搞定复制功能。</p><figure class="highlight haxe"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">new</span> <span class="type">ClipboardJS</span>(<span class="string">'.btn'</span>);</span><br></pre></td></tr></table></figure>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h1 id=&quot;1-兼容情况&quot;&gt;&lt;a href=&quot;#1-兼容情况&quot; class=&quot;headerlink&quot; title=&quot;1. 兼容情况&quot;&gt;&lt;/a&gt;1. 兼容情况&lt;/h1&gt;&lt;p&gt;如果想浏览器支持粘贴功能，那么浏览器必须支持，&lt;a href=&quot;https://developer.mo
+      
+    
+    </summary>
+    
+    
+      <category term="copy" scheme="https://wdd.js.org/tags/copy/"/>
+    
+      <category term="clipboard" scheme="https://wdd.js.org/tags/clipboard/"/>
+    
+  </entry>
   
   <entry>
     <title>如何成为从培训班里出来的牛人？</title>
@@ -499,27 +524,6 @@
     
     
       <category term="star" scheme="https://wdd.js.org/tags/star/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>you-dont-need-serial</title>
-    <link href="https://wdd.js.org/you-dont-need-serial.html"/>
-    <id>https://wdd.js.org/you-dont-need-serial.html</id>
-    <published>2018-02-11T06:35:59.000Z</published>
-    <updated>2018-02-11T06:36:12.000Z</updated>
-    
-    <content type="html"><![CDATA[<h1 id="1-You-Dont-Need-JavaScript"><a href="#1-You-Dont-Need-JavaScript" class="headerlink" title="1 You-Dont-Need-JavaScript"></a><a href="https://github.com/you-dont-need/You-Dont-Need-JavaScript" target="_blank" rel="noopener">1 You-Dont-Need-JavaScript</a></h1><blockquote><p><code>CSS是强大的，你可以做很多事情没有JS。</code> 本文教你使用原生CSS做下面的事情。</p></blockquote><p><code>内容目录</code></p><ul><li>手风琴/切换</li><li>圆盘传送带</li><li>检查复选框的计数器</li><li>翻转点击</li><li>Textfield上的浮动标签</li><li>字体（拉丁）</li><li>游戏</li><li>悬停/弹出信息</li><li>图片廊</li><li>菜单</li><li>移动菜单关闭画布</li><li>汉堡菜单</li><li>花式菜单</li><li>莫代尔/弹出</li><li>鼠标跟踪</li><li>视差滚动</li><li>标签</li><li>待办事项列表</li><li>提示</li><li>树视图</li><li>Twitter心动画</li><li>动态图像着色</li><li>连锁反应</li><li>响应式计数器显示不适合屏幕的项目数量</li></ul><p>可以看一下纯CSS的例子</p><p><img src="https://github.com/you-dont-need/You-Dont-Need-JavaScript/raw/master/images/accordion.gif" alt=""></p><h1 id="2-You-Dont-Need-Lodash-Underscore"><a href="#2-You-Dont-Need-Lodash-Underscore" class="headerlink" title="2 You-Dont-Need-Lodash-Underscore"></a><a href="https://github.com/you-dont-need/You-Dont-Need-Lodash-Underscore" target="_blank" rel="noopener">2 You-Dont-Need-Lodash-Underscore</a></h1><blockquote><p>Lodash和Underscore是伟大的现代JavaScript实用程序库，它们被前端开发人员广泛使用。但是，如果您将目标锁定为现代浏览器，则可能会发现，许多方法已经得到ES5和ES6的原生支持。如果你想要你的项目需要更少的依赖，并且你清楚的知道你的目标浏览器，那么你可能不需要Lodash / Underscore。</p></blockquote><p><code>来自开发者的声音</code></p><ul><li><p>在代码变臃肿之前，请使用原生JS对象和数组工具函数. —Cody Lindley, Author of jQuery Cookbook and JavaScript Enlightenment</p></li><li><p>你可能不需要lodash. 有许多好用的原生方法了. —Daniel Lamb, Computer Scientist, Technical Reviewer of Secrets of the JavaScript Ninja and Functional Programming in JavaScript</p></li><li><p>我想不是，但我想要它. —Tero Parviainen, Author of build-your-own-angular</p></li><li><p>我承认，我曾经过度使用lodash.  —@therebelrobot, Maker of web things, Facilitator for Node.js/io.js</p></li></ul><p><code>内容目录</code></p><ul><li>Array<ul><li>_.compact</li><li>_.concat</li><li>_.fill</li><li>_.find</li><li>_.findIndex</li><li>_.first</li><li>_.flatten</li><li>_.flattenDeep</li><li><em>.head and </em>.tail</li><li>_.indexOf</li><li>_.join</li><li>_.last</li><li>_.lastIndexOf</li><li>_.reverse</li><li>_.without</li><li>_.slice</li><li>_.isArray</li></ul></li><li>Collection<ul><li>_.each</li><li>_.every</li><li>_.filter</li><li>_.groupBy</li><li>_.includes</li><li>_.map</li><li><em>.minBy and </em>.maxBy</li><li>_.pluck</li><li>_.range</li><li>_.reduce</li><li>_.reduceRight</li><li>_.size</li><li>_.some</li></ul></li><li>Function<ul><li>_.after</li></ul></li><li>Lang<ul><li>_.isNaN</li></ul></li><li>Object<ul><li>_.assign</li><li>_.keys</li><li>_.toPairs</li><li>_.values</li></ul></li><li>String<ul><li>_.repeat</li><li>_.template</li><li>_.toLower</li><li>_.toUpper</li><li>_.trim</li><li>_.replace</li></ul></li></ul><h1 id="3-You-Dont-Need-jQuery"><a href="#3-You-Dont-Need-jQuery" class="headerlink" title="3 You-Dont-Need-jQuery"></a><a href="https://github.com/nefe/You-Dont-Need-jQuery" target="_blank" rel="noopener">3 You-Dont-Need-jQuery</a></h1><p><code>纯JavaScript的例子, 实现做jQuery与查询，样式，dom，ajax，事件等</code></p><p>前端发展很快，现代浏览器原生 API 已经足够好用。我们并不需要为了操作 DOM、Event 等再学习一下 jQuery 的 API。同时由于 React、Angular、Vue 等框架的流行，直接操作 DOM 不再是好的模式，jQuery 使用场景大大减少。本项目总结了大部分 jQuery API 替代的方法，暂时只支持 IE10 以上浏览器。 </p><p><code>内容目录</code></p><ul><li>Translations</li><li>Query Selector</li><li>CSS &amp; Style</li><li>DOM Manipulation</li><li>Ajax</li><li>Events</li><li>Utilities</li><li>Promises</li><li>Animation</li><li>Alternatives</li><li>Browser Support</li></ul><h1 id="You-Dont-Need-GUI"><a href="#You-Dont-Need-GUI" class="headerlink" title="You-Dont-Need-GUI"></a><a href="https://github.com/you-dont-need/You-Dont-Need-GUI" target="_blank" rel="noopener">You-Dont-Need-GUI</a></h1><p>图形用户界面对计算机用户非常友好。它们被引入以响应命令行界面（CLI）感知的陡峭学习曲线。</p><p><img src="https://github.com/you-dont-need/You-Dont-Need-GUI/raw/master/Xerox_Star_8010_workstations.jpg" alt=""></p><p>但是，他们往往需要更多的资源，功能不强，难以通过脚本自动化。</p><p><code>作为计算机专家，我们希望更高效，更好地完成工作。</code>我们知道命令字可能不容易被发现或助记符，所以我们尝试列出一些您可能试图在GUI中执行的常见任务。</p><p><code>内容目录</code></p><ul><li>复制一个文件</li><li>复制一个文件</li><li>复制一个文件夹</li><li>复制一个文件夹</li><li>移动一个文件</li><li>重命名一个文件</li><li>移动一个文件夹</li><li>重命名文件夹</li><li>合并文件夹</li><li>创建一个新的文件</li><li>新建一个文件夹</li><li>显示文件/文件夹大小</li><li>用默认程序打开一个文件</li><li>压缩一个文件夹</li><li>解压缩文件夹</li><li>删除一个文件</li><li>删除一个文件夹</li><li>列出文件夹内容</li><li>树查看文件夹及其子文件夹</li><li>找到一个陈旧的文件</li><li>显示一个日历</li><li>找到未来的日期</li><li>使用计算器</li><li>强制退出程序</li></ul><p><img src="https://leanote.com/api/file/getImage?fileId=5a45b26aab64411cab000cf5" alt=""></p>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;h1 id=&quot;1-You-Dont-Need-JavaScript&quot;&gt;&lt;a href=&quot;#1-You-Dont-Need-JavaScript&quot; class=&quot;headerlink&quot; title=&quot;1 You-Dont-Need-JavaScript&quot;&gt;&lt;/a&gt;&lt;a href=
-      
-    
-    </summary>
-    
     
   </entry>
   
