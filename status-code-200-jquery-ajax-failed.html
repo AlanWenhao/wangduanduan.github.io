@@ -69,7 +69,7 @@
 
 
 
-  <meta name="keywords" content="Hexo, NexT" />
+  <meta name="keywords" content="ajax," />
 
 
 
@@ -82,18 +82,18 @@
 
 
 
-<meta name="description" content="12345678blog: 洞香春description: 前端，后端，炒菜，摄影，读书，收集工具author: 王端端skills: js, nodejs, vue, webpack, linux, pythonemail: 1779706607@qq.comqq: 1779706607github: https://github.com/wangduanduansegmentfault: ht">
-<meta name="keywords" content="王端端, 洞香春, wellClient">
-<meta property="og:type" content="website">
-<meta property="og:title" content="关于我">
-<meta property="og:url" content="https://wdd.js.org/about/index.html">
+<meta name="description" content="1. 问题现象HTTP 状态码为 200 OK 时， jquery ajax报错 2. 问题原因jquery ajax的dataType字段包含：json, 但是服务端返回的数据不是规范的json格式，导致jquery解析json字符串报错，最终导致ajax报错。 jQuery ajax 官方文档上说明：  “json”: Evaluates the response as JSON and re">
+<meta name="keywords" content="ajax">
+<meta property="og:type" content="article">
+<meta property="og:title" content="状态码为200时 jQuery ajax报错">
+<meta property="og:url" content="https://wdd.js.org/status-code-200-jquery-ajax-failed.html">
 <meta property="og:site_name" content="洞香春">
-<meta property="og:description" content="12345678blog: 洞香春description: 前端，后端，炒菜，摄影，读书，收集工具author: 王端端skills: js, nodejs, vue, webpack, linux, pythonemail: 1779706607@qq.comqq: 1779706607github: https://github.com/wangduanduansegmentfault: ht">
+<meta property="og:description" content="1. 问题现象HTTP 状态码为 200 OK 时， jquery ajax报错 2. 问题原因jquery ajax的dataType字段包含：json, 但是服务端返回的数据不是规范的json格式，导致jquery解析json字符串报错，最终导致ajax报错。 jQuery ajax 官方文档上说明：  “json”: Evaluates the response as JSON and re">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-02-07T02:27:52.000Z">
+<meta property="og:updated_time" content="2018-03-15T06:33:16.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="关于我">
-<meta name="twitter:description" content="12345678blog: 洞香春description: 前端，后端，炒菜，摄影，读书，收集工具author: 王端端skills: js, nodejs, vue, webpack, linux, pythonemail: 1779706607@qq.comqq: 1779706607github: https://github.com/wangduanduansegmentfault: ht">
+<meta name="twitter:title" content="状态码为200时 jQuery ajax报错">
+<meta name="twitter:description" content="1. 问题现象HTTP 状态码为 200 OK 时， jquery ajax报错 2. 问题原因jquery ajax的dataType字段包含：json, 但是服务端返回的数据不是规范的json格式，导致jquery解析json字符串报错，最终导致ajax报错。 jQuery ajax 官方文档上说明：  “json”: Evaluates the response as JSON and re">
 
 
 
@@ -123,13 +123,13 @@
 
 
 
-  <link rel="canonical" href="https://wdd.js.org/about/"/>
+  <link rel="canonical" href="https://wdd.js.org/status-code-200-jquery-ajax-failed.html"/>
 
 
 
 
 
-  <title>关于我 | 洞香春</title>
+  <title>状态码为200时 jQuery ajax报错 | 洞香春</title>
   
 
 
@@ -288,34 +288,216 @@
 
   <div id="posts" class="posts-expand">
     
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://wdd.js.org/status-code-200-jquery-ajax-failed.html">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="王端端">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="http://p3alsaatj.bkt.clouddn.com/20180129093544_I5Jscb_IMG_1402.jpeg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="洞香春">
+    </span>
+
     
-    
-    <div class="post-block page">
       <header class="post-header">
 
-	<h1 class="post-title" itemprop="name headline">关于我</h1>
-
-
-
-</header>
-
-      
-      
-      
-      <div class="post-body">
         
         
-          <figure class="highlight less"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="attribute">blog</span>: 洞香春</span><br><span class="line"><span class="attribute">description</span>: 前端，后端，炒菜，摄影，读书，收集工具</span><br><span class="line"><span class="attribute">author</span>: 王端端</span><br><span class="line"><span class="attribute">skills</span>: js, nodejs, vue, webpack, linux, python</span><br><span class="line"><span class="attribute">email</span>: <span class="number">1779706607</span><span class="variable">@qq</span>.com</span><br><span class="line"><span class="attribute">qq</span>: <span class="number">1779706607</span></span><br><span class="line"><span class="attribute">github</span>: <span class="attribute">https</span>:<span class="comment">//github.com/wangduanduan</span></span><br><span class="line"><span class="attribute">segmentfault</span>: <span class="attribute">https</span>:<span class="comment">//segmentfault.com/u/177970</span></span><br></pre></td></tr></table></figure>
-
+          <h1 class="post-title" itemprop="name headline">状态码为200时 jQuery ajax报错</h1>
         
-      </div>
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-03-15T14:17:59+08:00">
+                2018-03-15
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+            <span class="post-meta-divider">|</span>
+            <span class="page-pv"><i class="fa fa-file-o"></i>
+            <span class="busuanzi-value" id="busuanzi_value_page_pv" ></span>
+            </span>
+          
+
+          
+            <div class="post-wordcount">
+              
+                
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">字数统计&#58;</span>
+                
+                <span title="字数统计">
+                  364 字
+                </span>
+              
+
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">阅读时长 &asymp;</span>
+                
+                <span title="阅读时长">
+                  2 分钟
+                </span>
+              
+            </div>
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
       
       
+
+      
+        <h1 id="1-问题现象"><a href="#1-问题现象" class="headerlink" title="1. 问题现象"></a>1. 问题现象</h1><p>HTTP 状态码为 200 OK 时， jquery ajax报错</p>
+<h1 id="2-问题原因"><a href="#2-问题原因" class="headerlink" title="2. 问题原因"></a>2. 问题原因</h1><p>jquery ajax的dataType字段包含：json, 但是服务端返回的数据不是规范的json格式，导致jquery解析json字符串报错，最终导致ajax报错。</p>
+<p>jQuery ajax 官方文档上说明：</p>
+<blockquote>
+<p>“json”: Evaluates the response as JSON and returns a JavaScript object. Cross-domain “json” requests are converted to “jsonp” unless the request includes jsonp: false in its request options. The JSON data is parsed in a strict manner; any malformed JSON is rejected and a parse error is thrown. As of jQuery 1.9, an empty response is also rejected; the server should return a response of null or {} instead. (See json.org for more information on proper JSON formatting.)</p>
+</blockquote>
+<p>设置dataType为json时，jquery就会去解析响应体为JavaScript对象。跨域的json请求会被转化成jsonp, 除非设置了<code>jsonp: false</code>。JSON数据会以严格模式去解析，任何不规范的JSON字符串都会解析异常并抛出错误。从jQuery 1.9起，一个空的响应也会被抛出异常。服务端应该返回一个<code>null</code>或者<code>{}</code>去代替空响应。参考<a href="http://json.org/" target="_blank" rel="noopener">json.org</a>, 查看更多内容</p>
+<h1 id="3-解决方案"><a href="#3-解决方案" class="headerlink" title="3. 解决方案"></a>3. 解决方案</h1><p>这个问题的原因是后端返回的数据格式不规范，所以后端在返回结果是，不要使用空的响应，也不应该去手动拼接JSON字符串，而应该交给响应的库来实现JSON序列化字符串工作。</p>
+<h1 id="4-参考"><a href="#4-参考" class="headerlink" title="4. 参考"></a>4. 参考</h1><ul>
+<li><a href="https://stackoverflow.com/questions/6186770/ajax-request-returns-200-ok-but-an-error-event-is-fired-instead-of-success" target="_blank" rel="noopener">Ajax request returns 200 OK, but an error event is fired instead of success</a></li>
+<li><a href="http://api.jquery.com/jQuery.ajax/" target="_blank" rel="noopener">jQuery.ajax</a></li>
+</ul>
+
       
     </div>
     
     
     
+
+    
+
+    
+
+    
+      <div>
+        <ul class="post-copyright">
+  <li class="post-copyright-author">
+    <strong>本文作者：</strong>
+    王端端
+  </li>
+  <li class="post-copyright-link">
+    <strong>本文标题：</strong>
+    <a href="https://wdd.js.org/status-code-200-jquery-ajax-failed.html" title="状态码为200时 jQuery ajax报错">状态码为200时 jQuery ajax报错</a>
+  </li>
+  <li class="post-copyright-link">
+    <strong>本文链接：</strong>
+    <a href="https://wdd.js.org/status-code-200-jquery-ajax-failed.html" title="状态码为200时 jQuery ajax报错">https://wdd.js.org/status-code-200-jquery-ajax-failed.html</a>
+  </li>
+  <li class="post-copyright-date">
+      <strong>发布时间：</strong>2018年3月15日 - 14时03分
+  </li>  
+  <li class="post-copyright-license">
+    <strong>版权声明： </strong>
+    本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/3.0/" rel="external nofollow" target="_blank">CC BY-NC-SA 3.0</a> 许可协议。转载请注明出处！
+  </li>
+</ul>
+
+      </div>
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/ajax/" rel="tag"># ajax</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/clipboard-copy-tutorial.html" rel="next" title="前端剪贴板复制功能实现原理">
+                <i class="fa fa-chevron-left"></i> 前端剪贴板复制功能实现原理
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
   </div>
 
 
@@ -348,8 +530,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -433,6 +624,22 @@
         </div>
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#1-问题现象"><span class="nav-text">1. 问题现象</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#2-问题原因"><span class="nav-text">2. 问题原因</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#3-解决方案"><span class="nav-text">3. 解决方案</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#4-参考"><span class="nav-text">4. 参考</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
