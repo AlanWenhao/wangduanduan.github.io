@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://wdd.js.org/"/>
-  <updated>2018-03-15T09:20:02.000Z</updated>
+  <updated>2018-03-15T09:25:28.000Z</updated>
   <id>https://wdd.js.org/</id>
   
   <author>
@@ -21,18 +21,18 @@
     <link href="https://wdd.js.org/how-to-report-bug-effective.html"/>
     <id>https://wdd.js.org/how-to-report-bug-effective.html</id>
     <published>2018-03-15T08:39:06.000Z</published>
-    <updated>2018-03-15T09:20:02.000Z</updated>
+    <updated>2018-03-15T09:25:28.000Z</updated>
     
-    <content type="html"><![CDATA[<h1 id="自问自答"><a href="#自问自答" class="headerlink" title="自问自答"></a>自问自答</h1><ul><li>该问题是否是必现的？</li><li>该问题出现多久了？</li><li>问题出现前后有没有什么异常？ 例如几分钟之前启动了其他的服务，有其他服务在更新</li></ul><h1 id="要事实，不要推测"><a href="#要事实，不要推测" class="headerlink" title="要事实，不要推测"></a>要事实，不要推测</h1><p>在bug报告里，要设法搞清什么是事实（例如：压测环境座席监控没有数据）。什么是推测（例如：我想问题可能出在XXX）。如果愿意的话，<code>您可以省去推测，但是千万别省略事实。</code></p><h1 id="要精确，不要模糊"><a href="#要精确，不要模糊" class="headerlink" title="要精确，不要模糊"></a>要精确，不要模糊</h1><h2 id="不要使用代词"><a href="#不要使用代词" class="headerlink" title="不要使用代词"></a>不要使用代词</h2><h2 id="不要使用”没有”"><a href="#不要使用”没有”" class="headerlink" title="不要使用”没有”"></a>不要使用”没有”</h2><h1 id="要详细，不要粗略"><a href="#要详细，不要粗略" class="headerlink" title="要详细，不要粗略"></a>要详细，不要粗略</h1><h1 id="建议要提供的数据"><a href="#建议要提供的数据" class="headerlink" title="建议要提供的数据"></a>建议要提供的数据</h1><ul><li><code>建议</code> 错误日志, 程序员最喜欢bug里的错误日志，<code>错误日志能说明一切</code>，非常建议你能提供错误日志</li><li><code>必须</code> 操作步骤, 有利于程序员去重现bug</li><li><code>可选</code> 错误截图, 在描述不清楚的时候，错误截图时更好的方法</li></ul><h1 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h1><ul><li><a href="https://www.chiark.greenend.org.uk/~sgtatham/bugs-cn.html" target="_blank" rel="noopener">如何有效地报告 Bug</a></li></ul>]]></content>
+    <content type="html"><![CDATA[<h1 id="1-自问自答"><a href="#1-自问自答" class="headerlink" title="1. 自问自答"></a>1. 自问自答</h1><ul><li>该问题是否是必现的？</li><li>该问题出现多久了？</li><li>问题出现前后有没有什么异常？ 例如几分钟之前启动了其他的服务，有其他服务在更新</li></ul><h1 id="2-要事实，不要推测"><a href="#2-要事实，不要推测" class="headerlink" title="2. 要事实，不要推测"></a>2. 要事实，不要推测</h1><p>在bug报告里，要设法搞清什么是事实（例如：压测环境座席监控没有数据）。什么是推测（例如：我想问题可能出在XXX）。如果愿意的话，<code>您可以省去推测，但是千万别省略事实。</code></p><h1 id="3-要精确，不要模糊"><a href="#3-要精确，不要模糊" class="headerlink" title="3. 要精确，不要模糊"></a>3. 要精确，不要模糊</h1><h2 id="3-1-不要使用代词"><a href="#3-1-不要使用代词" class="headerlink" title="3.1. 不要使用代词"></a>3.1. 不要使用代词</h2><h2 id="3-2-不要使用”没有”"><a href="#3-2-不要使用”没有”" class="headerlink" title="3.2. 不要使用”没有”"></a>3.2. 不要使用”没有”</h2><h1 id="4-要详细，不要粗略"><a href="#4-要详细，不要粗略" class="headerlink" title="4. 要详细，不要粗略"></a>4. 要详细，不要粗略</h1><h1 id="5-建议要提供的数据"><a href="#5-建议要提供的数据" class="headerlink" title="5. 建议要提供的数据"></a>5. 建议要提供的数据</h1><ul><li><code>建议</code> 错误日志, 程序员最喜欢bug里的错误日志，<code>错误日志能说明一切</code>，非常建议你能提供错误日志</li><li><code>必须</code> 操作步骤, 有利于程序员去重现bug</li><li><code>可选</code> 错误截图, 在描述不清楚的时候，错误截图时更好的方法</li></ul><h1 id="6-参考"><a href="#6-参考" class="headerlink" title="6. 参考"></a>6. 参考</h1><ul><li><a href="https://www.chiark.greenend.org.uk/~sgtatham/bugs-cn.html" target="_blank" rel="noopener">如何有效地报告 Bug</a></li></ul>]]></content>
     
     <summary type="html">
     
       
       
-        &lt;h1 id=&quot;自问自答&quot;&gt;&lt;a href=&quot;#自问自答&quot; class=&quot;headerlink&quot; title=&quot;自问自答&quot;&gt;&lt;/a&gt;自问自答&lt;/h1&gt;&lt;ul&gt;
+        &lt;h1 id=&quot;1-自问自答&quot;&gt;&lt;a href=&quot;#1-自问自答&quot; class=&quot;headerlink&quot; title=&quot;1. 自问自答&quot;&gt;&lt;/a&gt;1. 自问自答&lt;/h1&gt;&lt;ul&gt;
 &lt;li&gt;该问题是否是必现的？&lt;/li&gt;
 &lt;li&gt;该问题出现多久了？&lt;/li&gt;
-&lt;li&gt;问题出现前后有没有什么异常？ 例如
+&lt;li&gt;问题出现前后有
       
     
     </summary>
