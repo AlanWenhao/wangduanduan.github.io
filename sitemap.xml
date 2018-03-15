@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://wdd.js.org/how-to-report-bug-effective.html</loc>
+    
+    <lastmod>2018-03-15T09:17:59.000Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://wdd.js.org/status-code-200-jquery-ajax-failed.html</loc>
     
     <lastmod>2018-03-15T06:33:16.000Z</lastmod>
