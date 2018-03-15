@@ -4,6 +4,21 @@
 
     
   <url>
+    <loc>https://wdd.js.org/art-of-readable-code.html</loc>
+    <lastmod>2018-03-15T10:27:53.000Z</lastmod>
+    <data>
+        <display>
+        <title>笔记 编写可读性代码的艺术</title>
+        <pubTime>2018-03-15T10:21:50.000Z</pubTime>
+        
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>https://wdd.js.org/how-to-report-bug-effective.html</loc>
     <lastmod>2018-03-15T09:25:28.000Z</lastmod>
     <data>
@@ -681,9 +696,9 @@
         
         <tag>读书笔记</tag>
          
-        <tag>主页主义</tag>
-         
         <tag>未完成</tag>
+         
+        <tag>主页主义</tag>
          
          
            
@@ -702,9 +717,9 @@
         
         <tag>读书笔记</tag>
          
-        <tag>未完成</tag>
-         
         <tag>失控</tag>
+         
+        <tag>未完成</tag>
          
          
            
@@ -753,9 +768,9 @@
         <title>可能被遗漏的https与http的知识点</title>
         <pubTime>2018-02-08T01:10:59.000Z</pubTime>
         
-        <tag>http</tag>
-         
         <tag>https</tag>
+         
+        <tag>http</tag>
          
          
            
@@ -829,11 +844,11 @@
         <title>Vue + Vue-router + Element-ui 搭建一个非常简单的dashboard demo</title>
         <pubTime>2018-02-09T04:02:05.000Z</pubTime>
         
+        <tag>ElementUI</tag>
+         
         <tag>Vue</tag>
          
         <tag>Vue-router</tag>
-         
-        <tag>ElementUI</tag>
          
          
            

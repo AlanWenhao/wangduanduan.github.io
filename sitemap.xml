@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://wdd.js.org/art-of-readable-code.html</loc>
+    
+    <lastmod>2018-03-15T10:27:53.000Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://wdd.js.org/how-to-report-bug-effective.html</loc>
     
     <lastmod>2018-03-15T09:25:28.000Z</lastmod>
