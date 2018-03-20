@@ -4,6 +4,25 @@
 
     
   <url>
+    <loc>https://wdd.js.org/stomp-over-websocket.html</loc>
+    <lastmod>2018-03-20T15:09:17.000Z</lastmod>
+    <data>
+        <display>
+        <title>在实践中我遇到stompjs, websocket和nginx的问题与总结</title>
+        <pubTime>2018-03-20T14:09:34.000Z</pubTime>
+        
+        <tag>stompjs</tag>
+         
+        <tag>websocket</tag>
+         
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>https://wdd.js.org/2018-reading-plan.html</loc>
     <lastmod>2018-03-19T01:05:04.000Z</lastmod>
     <data>
@@ -823,11 +842,11 @@
         <title>Vue+websocket+stompjs 实时监控坐席状态demo</title>
         <pubTime>2018-02-07T01:36:49.000Z</pubTime>
         
+        <tag>stompjs</tag>
+         
         <tag>Vue</tag>
          
         <tag>WebSocket</tag>
-         
-        <tag>stompjs</tag>
          
          
            
