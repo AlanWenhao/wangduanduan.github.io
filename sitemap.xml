@@ -2,6 +2,20 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://wdd.js.org/ie11-0X2ee4-bug.html</loc>
+    
+    <lastmod>2018-03-22T07:10:44.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://wdd.js.org/demand-docs-guideline-draft.html</loc>
+    
+    <lastmod>2018-03-22T06:39:42.000Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://wdd.js.org/stomp-over-websocket.html</loc>
     
     <lastmod>2018-03-22T01:39:21.000Z</lastmod>
@@ -250,13 +264,6 @@
     <loc>https://wdd.js.org/confortable-windows-shell-env.html</loc>
     
     <lastmod>2018-02-11T06:18:59.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://wdd.js.org/ie11-0X2ee4-bug.html</loc>
-    
-    <lastmod>2018-02-11T06:15:29.000Z</lastmod>
     
   </url>
   
