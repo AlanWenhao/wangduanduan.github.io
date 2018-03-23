@@ -4,6 +4,40 @@
 
     
   <url>
+    <loc>https://wdd.js.org/git-commom-cmds.html</loc>
+    <lastmod>2018-03-23T10:46:13.000Z</lastmod>
+    <data>
+        <display>
+        <title>git常用命令与oh-my-zsh常用缩写</title>
+        <pubTime>2018-01-31T08:19:38.000Z</pubTime>
+        
+        <tag>git</tag>
+         
+        <tag>oh-my-zsh</tag>
+         
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>https://wdd.js.org/demand-docs-guideline-draft.html</loc>
+    <lastmod>2018-03-23T01:44:56.000Z</lastmod>
+    <data>
+        <display>
+        <title>需求文档写作规范</title>
+        <pubTime>2018-03-22T06:31:49.000Z</pubTime>
+        
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>https://wdd.js.org/ie11-0X2ee4-bug.html</loc>
     <lastmod>2018-03-22T07:10:44.000Z</lastmod>
     <data>
@@ -17,21 +51,6 @@
          
         <tag>ajax</tag>
          
-         
-           
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>https://wdd.js.org/demand-docs-guideline-draft.html</loc>
-    <lastmod>2018-03-22T06:39:42.000Z</lastmod>
-    <data>
-        <display>
-        <title>需求文档写作规范</title>
-        <pubTime>2018-03-22T06:31:49.000Z</pubTime>
-        
          
            
         </display>
@@ -1796,25 +1815,6 @@
         <tag>gow</tag>
          
         <tag>ConEmu</tag>
-         
-         
-           
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>https://wdd.js.org/git-commom-cmds.html</loc>
-    <lastmod>2018-02-09T06:00:30.000Z</lastmod>
-    <data>
-        <display>
-        <title>git常用命令与oh-my-zsh常用缩写</title>
-        <pubTime>2018-01-31T08:19:38.000Z</pubTime>
-        
-        <tag>git</tag>
-         
-        <tag>oh-my-zsh</tag>
          
          
            

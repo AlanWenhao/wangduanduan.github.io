@@ -82,18 +82,23 @@
 
 
 
-<meta name="description" content="1. 项目创建一般情况，一个服务要有一个需求文档的git项目。基于git文档的需求管理有以下好处。 2. 分支管理默认情况下，创建一个git项目都会有一个master分支。我们并不在master分支上写任何需求。 我们根据项目的版本来创建分支。例如我们先创建一个v1.0.0的分支，我们在该分支上写需求文档。当v1.0.0版本发布后，我们基于v1.0.1分支 3. 需求状态4. 格式要求">
+<meta name="description" content="1. 项目创建一般情况，一个服务要有一个需求文档的git项目。即需要在gitlab docs 组织下建立与之对应的项目仓库  例如创建一个需求文档的项目。  文件结构2. 版本管理需求文档基于git分支进行版本管理。 默认情况下，创建一个git项目都会有一个master分支。我们并不在master分支上写任何需求。 我们根据项目的版本来创建分支。例如我们先创建一个v1.0.0的分支，我们在该分支上">
 <meta name="keywords" content="王端端, 洞香春, wellClient">
 <meta property="og:type" content="article">
 <meta property="og:title" content="需求文档写作规范">
 <meta property="og:url" content="https://wdd.js.org/demand-docs-guideline-draft.html">
 <meta property="og:site_name" content="洞香春">
-<meta property="og:description" content="1. 项目创建一般情况，一个服务要有一个需求文档的git项目。基于git文档的需求管理有以下好处。 2. 分支管理默认情况下，创建一个git项目都会有一个master分支。我们并不在master分支上写任何需求。 我们根据项目的版本来创建分支。例如我们先创建一个v1.0.0的分支，我们在该分支上写需求文档。当v1.0.0版本发布后，我们基于v1.0.1分支 3. 需求状态4. 格式要求">
+<meta property="og:description" content="1. 项目创建一般情况，一个服务要有一个需求文档的git项目。即需要在gitlab docs 组织下建立与之对应的项目仓库  例如创建一个需求文档的项目。  文件结构2. 版本管理需求文档基于git分支进行版本管理。 默认情况下，创建一个git项目都会有一个master分支。我们并不在master分支上写任何需求。 我们根据项目的版本来创建分支。例如我们先创建一个v1.0.0的分支，我们在该分支上">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-03-22T06:39:42.000Z">
+<meta property="og:image" content="http://p3alsaatj.bkt.clouddn.com/20180323090328_PZuu7W_Jietu20180323-090307.jpeg">
+<meta property="og:image" content="http://p3alsaatj.bkt.clouddn.com/20180323092522_uW8yBy_Jietu20180323-092513.jpeg">
+<meta property="og:image" content="http://p3alsaatj.bkt.clouddn.com/20180323092753_al0zTZ_Jietu20180323-092744.jpeg">
+<meta property="og:image" content="http://p3alsaatj.bkt.clouddn.com/20180323094409_akabhc_Jietu20180323-094357.jpeg">
+<meta property="og:updated_time" content="2018-03-23T01:44:56.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="需求文档写作规范">
-<meta name="twitter:description" content="1. 项目创建一般情况，一个服务要有一个需求文档的git项目。基于git文档的需求管理有以下好处。 2. 分支管理默认情况下，创建一个git项目都会有一个master分支。我们并不在master分支上写任何需求。 我们根据项目的版本来创建分支。例如我们先创建一个v1.0.0的分支，我们在该分支上写需求文档。当v1.0.0版本发布后，我们基于v1.0.1分支 3. 需求状态4. 格式要求">
+<meta name="twitter:description" content="1. 项目创建一般情况，一个服务要有一个需求文档的git项目。即需要在gitlab docs 组织下建立与之对应的项目仓库  例如创建一个需求文档的项目。  文件结构2. 版本管理需求文档基于git分支进行版本管理。 默认情况下，创建一个git项目都会有一个master分支。我们并不在master分支上写任何需求。 我们根据项目的版本来创建分支。例如我们先创建一个v1.0.0的分支，我们在该分支上">
+<meta name="twitter:image" content="http://p3alsaatj.bkt.clouddn.com/20180323090328_PZuu7W_Jietu20180323-090307.jpeg">
 
 
 
@@ -366,7 +371,7 @@
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  147 字
+                  276 字
                 </span>
               
 
@@ -403,10 +408,25 @@
       
 
       
-        <h1 id="1-项目创建"><a href="#1-项目创建" class="headerlink" title="1. 项目创建"></a>1. 项目创建</h1><p>一般情况，一个服务要有一个需求文档的git项目。基于git文档的需求管理有以下好处。</p>
-<h1 id="2-分支管理"><a href="#2-分支管理" class="headerlink" title="2. 分支管理"></a>2. 分支管理</h1><p>默认情况下，创建一个git项目都会有一个master分支。我们并不在master分支上写任何需求。</p>
-<p>我们根据项目的版本来创建分支。例如我们先创建一个v1.0.0的分支，我们在该分支上写需求文档。当v1.0.0版本发布后，我们基于v1.0.1分支</p>
-<h1 id="3-需求状态"><a href="#3-需求状态" class="headerlink" title="3. 需求状态"></a>3. 需求状态</h1><h1 id="4-格式要求"><a href="#4-格式要求" class="headerlink" title="4. 格式要求"></a>4. 格式要求</h1>
+        <h1 id="1-项目创建"><a href="#1-项目创建" class="headerlink" title="1. 项目创建"></a>1. 项目创建</h1><p>一般情况，一个服务要有一个需求文档的git项目。即需要在<a href="http://192.168.60.11:30000/groups/docs" target="_blank" rel="noopener">gitlab docs 组织下建立与之对应的项目仓库</a></p>
+<p><img src="http://p3alsaatj.bkt.clouddn.com/20180323090328_PZuu7W_Jietu20180323-090307.jpeg" alt=""></p>
+<p>例如创建一个需求文档的项目。</p>
+<p><img src="http://p3alsaatj.bkt.clouddn.com/20180323092522_uW8yBy_Jietu20180323-092513.jpeg" alt=""></p>
+<h1 id="文件结构"><a href="#文件结构" class="headerlink" title="文件结构"></a>文件结构</h1><h1 id="2-版本管理"><a href="#2-版本管理" class="headerlink" title="2. 版本管理"></a>2. 版本管理</h1><p><code>需求文档基于git分支进行版本管理。</code></p>
+<p>默认情况下，创建一个git项目都会有一个master分支。我们并不在master分支上写任何需求。</p>
+<p>我们根据项目的版本来创建分支。例如我们先创建一个v1.0.0的分支，我们在该分支上写需求文档。当v1.0.0版本发布后，我们基于v1.0.1分支。 而且我们能够自由的切换分支。</p>
+<p><img src="http://p3alsaatj.bkt.clouddn.com/20180323092753_al0zTZ_Jietu20180323-092744.jpeg" alt=""></p>
+<h1 id="3-需求状态"><a href="#3-需求状态" class="headerlink" title="3. 需求状态"></a>3. 需求状态</h1><p>需求有以下几种状态，</p>
+<ul>
+<li>开始(draft), 草稿阶段</li>
+<li>需求稳定(stable), 需求标记为stable, 开发才着手开始开发</li>
+<li>需求修改(modified), 需求处于修改状态，则开发暂停</li>
+<li>开发(dev), 开始开发</li>
+<li>测试(test), 开始测试</li>
+<li>发布(released), 测试通过，开始发布</li>
+</ul>
+<p><img src="http://p3alsaatj.bkt.clouddn.com/20180323094409_akabhc_Jietu20180323-094357.jpeg" alt=""></p>
+<h1 id="4-格式要求"><a href="#4-格式要求" class="headerlink" title="4. 格式要求"></a>4. 格式要求</h1>
       
     </div>
     
@@ -619,7 +639,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#1-项目创建"><span class="nav-text">1. 项目创建</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#2-分支管理"><span class="nav-text">2. 分支管理</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#3-需求状态"><span class="nav-text">3. 需求状态</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#4-格式要求"><span class="nav-text">4. 格式要求</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#1-项目创建"><span class="nav-text">1. 项目创建</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#文件结构"><span class="nav-text">文件结构</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#2-版本管理"><span class="nav-text">2. 版本管理</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#3-需求状态"><span class="nav-text">3. 需求状态</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#4-格式要求"><span class="nav-text">4. 格式要求</span></a></li></ol></div>
             
 
           </div>
