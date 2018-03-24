@@ -1,6 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[一切皆有可能 IE5 支持WebSocket stompjs]]></title>
+    <url>%2Feverything-is-possible-ie5-support-websocket.html</url>
+    <content type="text"><![CDATA[web-socket-js让IE5支持WebSocketweb-socket-js基于flash技术, 让浏览器可以拥有类似原生的WebSocket的体验。只需要在服务端做少许的改动]]></content>
+      <tags>
+        <tag>未完成</tag>
+        <tag>ie5</tag>
+        <tag>websocket</tag>
+        <tag>stompjs</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[需求文档写作规范]]></title>
     <url>%2Fdemand-docs-guideline-draft.html</url>
     <content type="text"><![CDATA[1. 项目创建一般情况，一个服务要有一个需求文档的git项目。即需要在gitlab docs 组织下建立与之对应的项目仓库 例如创建一个需求文档的项目。 文件结构2. 版本管理需求文档基于git分支进行版本管理。 默认情况下，创建一个git项目都会有一个master分支。我们并不在master分支上写任何需求。 我们根据项目的版本来创建分支。例如我们先创建一个v1.0.0的分支，我们在该分支上写需求文档。当v1.0.0版本发布后，我们基于v1.0.1分支。 而且我们能够自由的切换分支。 3. 需求状态需求有以下几种状态， 开始(draft), 草稿阶段 需求稳定(stable), 需求标记为stable, 开发才着手开始开发 需求修改(modified), 需求处于修改状态，则开发暂停 开发(dev), 开始开发 测试(test), 开始测试 发布(released), 测试通过，开始发布 4. 格式要求]]></content>
@@ -10,8 +21,8 @@
     <url>%2Fstomp-over-websocket.html</url>
     <content type="text"><![CDATA[1. AWS EC2 不支持WebSocket直达解决方案 英文版 简单说一下思路：WebSocket底层基于TCP协议的，如果你的服务器基于HTTP协议暴露80端口，那WebSocket肯定无法连接。你只要将HTTP协议修改成TCP协议就可以了。 然后是安全组的配置： 同样如果使用了NGINX作为反向代理，那么NGINX也需要做配置的。 123456789101112131415161718192021222324252627282930313233// https://gist.githubusercontent.com/unshift/324be6a8dc9e880d4d670de0dc97a8ce/raw/29507ed6b3c9394ecd7842f9d3228827cffd1c58/elasticbeanstalk_websocketsfiles: "/etc/nginx/conf.d/01_websockets.conf" : mode: "000644" owner: root group: root content : | upstream nodejs &#123; server 127.0.0.1:8081; keepalive 256; &#125; server &#123; listen 8080; location / &#123; proxy_pass http://nodejs; proxy_set_header Upgrade $http_upgrade; proxy_set_header Connection "upgrade"; proxy_http_version 1.1; proxy_set_header Host $host; proxy_set_header X-Real-IP $remote_addr; proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for; &#125; &#125; "/opt/elasticbeanstalk/hooks/appdeploy/enact/41_remove_eb_nginx_confg.sh": mode: "000755" owner: root group: root content : | mv /etc/nginx/conf.d/00_elastic_beanstalk_proxy.conf /etc/nginx/conf.d/00_elastic_beanstalk_proxy.conf.old 2. NGINX做反向代理是需要注意的问题如果排除所有问题后，那剩下的问题可以考虑出在反向代理上，一下有几点是可以考虑的。 HTTP的版本问题: http有三个版本，http 1.0, 1.1, 2.0, 现在主流的浏览器都是使用http 1.1版本，为了保证更好的兼容性，最好转发时不要修改协议的版本号 NGINX具有路径重写功能，如果你使用了该功能，就要考虑问题可能出在这里，因为NGINX在路径重写时，需要对路径进行编解码，有可能在解码之后，没有编码就发送给后端的服务器，导致后端服务器无法对URL进行解码。 3. IE8 IE9 有没有简单方便支持WebSocket的方案目前测试下来，最简单方案是基于flash的。参考：https://github.com/gimite/web-socket-js, 注意该方案需要在WebSocket服务上的843端口, 提供socket_policy_files, 也可以参考：A PolyFill for WebSockets 网上也有教程是使用socket.io基于ajax长轮训的方案，如果服务端已经确定的情况下，一般是不会轻易改动服务端代码的。而且ajax长轮训也是有延迟，和disconnect时，无法回调的问题。 4. stompjs connected后，没有调用connect_callBack该问题主要是使用web-socket-js，在ie8,ie9上出现的 该问题还没有分析出原因，但是看了stompjs的源码不是太多，明天用源码调试看看原因。 问题已经找到，请参考：https://github.com/wangduanduan/stomp-websocket#about-ie8-ie9-use-websocket 5. 参考文献 STOMP Over WebSocket STOMP Protocol Specification, Version 1.1 Stomp Over Websocket文档,]]></content>
       <tags>
-        <tag>stompjs</tag>
         <tag>websocket</tag>
+        <tag>stompjs</tag>
       </tags>
   </entry>
   <entry>
@@ -81,7 +92,7 @@
   <entry>
     <title><![CDATA[前端团队合作规范]]></title>
     <url>%2Ffront-end-team-work-blog.html</url>
-    <content type="text"><![CDATA[1. 编程风格 代码风格 JavaScript Standard Style js最佳实践 2. 编辑器vscode 3. git版本控制master随时发布dev用于开发 4. 工程化与模块化构件工具必须要有模块化 5. 代码整洁阅读代码整洁之道单个文件代码行越少越好，尽量按模块分散函数体代码行越少越好，职责单一 6. tcp ip阅读http权威指南图解tcp ip 7. es6阮一峰 es6教程 8. vue编程风格vue官方推荐风格]]></content>
+    <content type="text"><![CDATA[1. 编程风格 代码风格 JavaScript Standard Style js最佳实践 JavaScript Standard Style 细则建议看看 2. 编辑器 vscode 3. git版本控制 master随时发布 dev用于开发 4. 工程化与模块化 构件工具必须要有 模块化 5. 代码整洁 阅读代码整洁之道 参考笔记 编写可读性代码的艺术 单个文件代码行越少越好，尽量按模块分散 函数体代码行越少越好，职责单一 6. tcp ip 阅读http权威指南 图解tcp ip 7. es6 阮一峰 es6教程 8. 函数式编程 推荐阅读 mostly-adequate-guide-chinese中文版 9. vue编程风格 vue官方推荐风格 10. 硬性要求 2018年后的，单个文件代码行绝对不要超过500行，可以分割文件，可以使用构建工具 每个js文件在顶部务必写一些说明性的文字，描述该文件的功能 比较容易歧义，或者关键点，需要写注释给与说明]]></content>
       <tags>
         <tag>规范</tag>
         <tag>前端团队</tag>

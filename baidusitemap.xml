@@ -4,6 +4,48 @@
 
     
   <url>
+    <loc>https://wdd.js.org/front-end-team-work-blog.html</loc>
+    <lastmod>2018-03-24T09:40:46.000Z</lastmod>
+    <data>
+        <display>
+        <title>前端团队合作规范</title>
+        <pubTime>2018-03-02T00:59:01.000Z</pubTime>
+        
+        <tag>规范</tag>
+         
+        <tag>前端团队</tag>
+         
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>https://wdd.js.org/everything-is-possible-ie5-support-websocket.html</loc>
+    <lastmod>2018-03-24T09:29:36.000Z</lastmod>
+    <data>
+        <display>
+        <title>一切皆有可能 IE5 支持WebSocket stompjs</title>
+        <pubTime>2018-03-23T10:54:53.000Z</pubTime>
+        
+        <tag>未完成</tag>
+         
+        <tag>ie5</tag>
+         
+        <tag>websocket</tag>
+         
+        <tag>stompjs</tag>
+         
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>https://wdd.js.org/git-commom-cmds.html</loc>
     <lastmod>2018-03-23T10:46:13.000Z</lastmod>
     <data>
@@ -66,9 +108,9 @@
         <title>在实践中我遇到stompjs, websocket和nginx的问题与总结</title>
         <pubTime>2018-03-20T14:09:34.000Z</pubTime>
         
-        <tag>stompjs</tag>
-         
         <tag>websocket</tag>
+         
+        <tag>stompjs</tag>
          
          
            
@@ -264,25 +306,6 @@
         <pubTime>2018-01-29T01:16:38.000Z</pubTime>
         
         <tag>js</tag>
-         
-         
-           
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>https://wdd.js.org/front-end-team-work-blog.html</loc>
-    <lastmod>2018-03-02T01:04:53.000Z</lastmod>
-    <data>
-        <display>
-        <title>前端团队合作规范</title>
-        <pubTime>2018-03-02T00:59:01.000Z</pubTime>
-        
-        <tag>规范</tag>
-         
-        <tag>前端团队</tag>
          
          
            

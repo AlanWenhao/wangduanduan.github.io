@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://wdd.js.org/"/>
-  <updated>2018-03-23T01:44:56.000Z</updated>
+  <updated>2018-03-24T09:29:36.000Z</updated>
   <id>https://wdd.js.org/</id>
   
   <author>
@@ -15,6 +15,35 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>一切皆有可能 IE5 支持WebSocket stompjs</title>
+    <link href="https://wdd.js.org/everything-is-possible-ie5-support-websocket.html"/>
+    <id>https://wdd.js.org/everything-is-possible-ie5-support-websocket.html</id>
+    <published>2018-03-23T10:54:53.000Z</published>
+    <updated>2018-03-24T09:29:36.000Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="web-socket-js让IE5支持WebSocket"><a href="#web-socket-js让IE5支持WebSocket" class="headerlink" title="web-socket-js让IE5支持WebSocket"></a>web-socket-js让IE5支持WebSocket</h1><p><a href="https://github.com/gimite/web-socket-js" target="_blank" rel="noopener">web-socket-js</a>基于flash技术, 让浏览器可以拥有类似原生的WebSocket的体验。只需要在服务端做少许的改动</p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h1 id=&quot;web-socket-js让IE5支持WebSocket&quot;&gt;&lt;a href=&quot;#web-socket-js让IE5支持WebSocket&quot; class=&quot;headerlink&quot; title=&quot;web-socket-js让IE5支持WebSocket&quot;&gt;&lt;/a&gt;we
+      
+    
+    </summary>
+    
+    
+      <category term="未完成" scheme="https://wdd.js.org/tags/%E6%9C%AA%E5%AE%8C%E6%88%90/"/>
+    
+      <category term="ie5" scheme="https://wdd.js.org/tags/ie5/"/>
+    
+      <category term="websocket" scheme="https://wdd.js.org/tags/websocket/"/>
+    
+      <category term="stompjs" scheme="https://wdd.js.org/tags/stompjs/"/>
+    
+  </entry>
   
   <entry>
     <title>需求文档写作规范</title>
@@ -56,9 +85,9 @@
     </summary>
     
     
-      <category term="stompjs" scheme="https://wdd.js.org/tags/stompjs/"/>
-    
       <category term="websocket" scheme="https://wdd.js.org/tags/websocket/"/>
+    
+      <category term="stompjs" scheme="https://wdd.js.org/tags/stompjs/"/>
     
   </entry>
   
@@ -257,9 +286,9 @@
     <link href="https://wdd.js.org/front-end-team-work-blog.html"/>
     <id>https://wdd.js.org/front-end-team-work-blog.html</id>
     <published>2018-03-02T00:59:01.000Z</published>
-    <updated>2018-03-02T01:04:53.000Z</updated>
+    <updated>2018-03-24T09:40:46.000Z</updated>
     
-    <content type="html"><![CDATA[<h1 id="1-编程风格"><a href="#1-编程风格" class="headerlink" title="1. 编程风格"></a>1. 编程风格</h1><ul><li><code>代码风格</code> <a href="https://standardjs.com/readme-zhcn.html" target="_blank" rel="noopener">JavaScript Standard Style</a></li><li><a href="https://wdd.js.org/js-best-parctices/#/">js最佳实践</a></li></ul><h1 id="2-编辑器"><a href="#2-编辑器" class="headerlink" title="2. 编辑器"></a>2. 编辑器</h1><p>vscode</p><h1 id="3-git版本控制"><a href="#3-git版本控制" class="headerlink" title="3. git版本控制"></a>3. git版本控制</h1><p>master随时发布<br>dev用于开发</p><h1 id="4-工程化与模块化"><a href="#4-工程化与模块化" class="headerlink" title="4. 工程化与模块化"></a>4. 工程化与模块化</h1><p>构件工具必须要有<br>模块化</p><h1 id="5-代码整洁"><a href="#5-代码整洁" class="headerlink" title="5. 代码整洁"></a>5. 代码整洁</h1><p>阅读代码整洁之道<br>单个文件代码行越少越好，尽量按模块分散<br>函数体代码行越少越好，职责单一</p><h1 id="6-tcp-ip"><a href="#6-tcp-ip" class="headerlink" title="6. tcp ip"></a>6. tcp ip</h1><p>阅读http权威指南<br>图解tcp ip</p><h1 id="7-es6"><a href="#7-es6" class="headerlink" title="7. es6"></a>7. es6</h1><p>阮一峰 es6教程</p><h1 id="8-vue编程风格"><a href="#8-vue编程风格" class="headerlink" title="8. vue编程风格"></a>8. vue编程风格</h1><p>vue官方推荐风格</p>]]></content>
+    <content type="html"><![CDATA[<h1 id="1-编程风格"><a href="#1-编程风格" class="headerlink" title="1. 编程风格"></a>1. 编程风格</h1><ul><li><code>代码风格</code> <a href="https://standardjs.com/readme-zhcn.html" target="_blank" rel="noopener">JavaScript Standard Style</a></li><li><a href="https://wdd.js.org/js-best-parctices/#/">js最佳实践</a></li><li><a href="https://standardjs.com/rules.html" target="_blank" rel="noopener">JavaScript Standard Style 细则建议看看</a></li></ul><h1 id="2-编辑器"><a href="#2-编辑器" class="headerlink" title="2. 编辑器"></a>2. 编辑器</h1><ul><li>vscode</li></ul><h1 id="3-git版本控制"><a href="#3-git版本控制" class="headerlink" title="3. git版本控制"></a>3. git版本控制</h1><ul><li>master随时发布</li><li>dev用于开发</li></ul><h1 id="4-工程化与模块化"><a href="#4-工程化与模块化" class="headerlink" title="4. 工程化与模块化"></a>4. 工程化与模块化</h1><ul><li>构件工具必须要有</li><li>模块化</li></ul><h1 id="5-代码整洁"><a href="#5-代码整洁" class="headerlink" title="5. 代码整洁"></a>5. 代码整洁</h1><ul><li>阅读代码整洁之道 参考<a href="https://wdd.js.org/art-of-readable-code.html">笔记 编写可读性代码的艺术</a></li><li>单个文件代码行越少越好，尽量按模块分散</li><li>函数体代码行越少越好，职责单一</li></ul><h1 id="6-tcp-ip"><a href="#6-tcp-ip" class="headerlink" title="6. tcp ip"></a>6. tcp ip</h1><ul><li>阅读http权威指南</li><li>图解tcp ip</li></ul><h1 id="7-es6"><a href="#7-es6" class="headerlink" title="7. es6"></a>7. es6</h1><ul><li>阮一峰 es6教程</li></ul><h1 id="8-函数式编程"><a href="#8-函数式编程" class="headerlink" title="8. 函数式编程"></a>8. 函数式编程</h1><ul><li><a href="https://llh911001.gitbooks.io/mostly-adequate-guide-chinese/content/" target="_blank" rel="noopener">推荐阅读 mostly-adequate-guide-chinese中文版</a></li></ul><h1 id="9-vue编程风格"><a href="#9-vue编程风格" class="headerlink" title="9. vue编程风格"></a>9. vue编程风格</h1><ul><li>vue官方推荐风格</li></ul><h1 id="10-硬性要求"><a href="#10-硬性要求" class="headerlink" title="10. 硬性要求"></a>10. 硬性要求</h1><ul><li>2018年后的，单个文件代码行绝对不要超过500行，可以分割文件，可以使用构建工具</li><li>每个js文件在顶部务必写一些说明性的文字，描述该文件的功能</li><li>比较容易歧义，或者关键点，需要写注释给与说明</li></ul>]]></content>
     
     <summary type="html">
     
@@ -489,29 +518,6 @@
       <category term="控制字符" scheme="https://wdd.js.org/tags/%E6%8E%A7%E5%88%B6%E5%AD%97%E7%AC%A6/"/>
     
       <category term="Local Search 解析失败" scheme="https://wdd.js.org/tags/Local-Search-%E8%A7%A3%E6%9E%90%E5%A4%B1%E8%B4%A5/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>VI必备常用场景快捷操作</title>
-    <link href="https://wdd.js.org/vi-useful-expressions.html"/>
-    <id>https://wdd.js.org/vi-useful-expressions.html</id>
-    <published>2018-02-11T07:37:33.000Z</published>
-    <updated>2018-02-11T09:11:17.000Z</updated>
-    
-    <content type="html"><![CDATA[<h1 id="1-【字符串替换】快速修改配置文件版本号"><a href="#1-【字符串替换】快速修改配置文件版本号" class="headerlink" title="1. 【字符串替换】快速修改配置文件版本号"></a>1. 【字符串替换】快速修改配置文件版本号</h1><p>语法：<code>%s/str1/str2/g</code> 将文件中所有的str1字符串替换成str2字符串。</p><p>示例：某个服务从43版本升级到44版本</p><figure class="highlight awk"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="regexp">//</span> vi某个配置文件， 进入vi命令模式，输入</span><br><span class="line">:%s<span class="regexp">/43/</span><span class="number">44</span><span class="regexp">/g</span></span><br></pre></td></tr></table></figure><p>这样做的好处是不需要移动光标去查找，然后进入插入模式去修改版本，而是直接替换，这样比较快捷。</p><p>注意：<code>务必确认要被替换的字符串只有一个，否则可能造成误替换。</code></p><p>更多用法：</p><table><thead><tr><th>语法</th><th>功能</th><th>示例</th></tr></thead><tbody><tr><td><code>:s/str1/str2/</code></td><td>替换当前行<code>第一个</code>str1为str2</td><td><code>:s/44/45</code></td></tr><tr><td><code>:s/str1/str2/g</code></td><td>替换当前行<code>所有的</code>str1为str2</td><td><code>:s/44/45/g</code></td></tr><tr><td><code>:%s/str1/str2/</code></td><td>替换每一行<code>第一个</code>str1为str2</td><td><code>:%s/44/45</code></td></tr><tr><td><code>:%s/str1/str2/g</code></td><td>替换每一行<code>所有的</code>str1为str2</td><td><code>:%s/44/45/g</code></td></tr></tbody></table><h1 id="2-光标移动"><a href="#2-光标移动" class="headerlink" title="2. 光标移动"></a>2. 光标移动</h1><p>注意：可配合 <code>:set nu</code>显示行号</p><table><thead><tr><th>语法</th><th>功能</th><th>示例</th></tr></thead><tbody><tr><td>G</td><td>移动到这个档案的最后一行(常用)</td><td></td></tr><tr><td>nG</td><td>n 为数字。移动到这个档案的第 n 行。</td><td>20G 则会移动到这个档案的第20行</td></tr><tr><td>gg</td><td>移动到这个档案的第一行</td><td></td></tr><tr><td><code>n&lt;Enter&gt;</code></td><td>n 为数字 光标向下移动 n 行</td><td><code>3&lt;Enter&gt;</code> 向下移动三行</td></tr></tbody></table><h1 id="3-vi快捷手册"><a href="#3-vi快捷手册" class="headerlink" title="3. vi快捷手册"></a>3. vi快捷手册</h1><p><img src="http://p3alsaatj.bkt.clouddn.com/20180211161542_xzqVSU_vi-vim-cheat-sheet.gif" alt=""></p>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;h1 id=&quot;1-【字符串替换】快速修改配置文件版本号&quot;&gt;&lt;a href=&quot;#1-【字符串替换】快速修改配置文件版本号&quot; class=&quot;headerlink&quot; title=&quot;1. 【字符串替换】快速修改配置文件版本号&quot;&gt;&lt;/a&gt;1. 【字符串替换】快速修改配置文件版本号&lt;/h1
-      
-    
-    </summary>
-    
-    
-      <category term="vi" scheme="https://wdd.js.org/tags/vi/"/>
     
   </entry>
   
