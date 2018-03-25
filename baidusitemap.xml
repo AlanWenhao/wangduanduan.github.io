@@ -4,6 +4,25 @@
 
     
   <url>
+    <loc>https://wdd.js.org/2018-reading-plan.html</loc>
+    <lastmod>2018-03-25T12:43:08.000Z</lastmod>
+    <data>
+        <display>
+        <title>2018年我的阅读计划</title>
+        <pubTime>2018-02-05T05:42:20.000Z</pubTime>
+        
+        <tag>reading</tag>
+         
+        <tag>读书</tag>
+         
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>https://wdd.js.org/front-end-team-work-blog.html</loc>
     <lastmod>2018-03-24T09:47:36.000Z</lastmod>
     <data>
@@ -111,25 +130,6 @@
         <tag>websocket</tag>
          
         <tag>stompjs</tag>
-         
-         
-           
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>https://wdd.js.org/2018-reading-plan.html</loc>
-    <lastmod>2018-03-19T01:05:04.000Z</lastmod>
-    <data>
-        <display>
-        <title>2018年我的阅读计划</title>
-        <pubTime>2018-02-05T05:42:20.000Z</pubTime>
-        
-        <tag>reading</tag>
-         
-        <tag>读书</tag>
          
          
            

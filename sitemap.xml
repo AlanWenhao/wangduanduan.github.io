@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://wdd.js.org/2018-reading-plan.html</loc>
+    
+    <lastmod>2018-03-25T12:43:08.000Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://wdd.js.org/front-end-team-work-blog.html</loc>
     
     <lastmod>2018-03-24T09:47:36.000Z</lastmod>
@@ -40,13 +47,6 @@
     <loc>https://wdd.js.org/stomp-over-websocket.html</loc>
     
     <lastmod>2018-03-22T01:39:21.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://wdd.js.org/2018-reading-plan.html</loc>
-    
-    <lastmod>2018-03-19T01:05:04.000Z</lastmod>
     
   </url>
   
