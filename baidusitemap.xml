@@ -4,6 +4,25 @@
 
     
   <url>
+    <loc>https://wdd.js.org/front-end-team-work-blog.html</loc>
+    <lastmod>2018-03-26T02:43:25.000Z</lastmod>
+    <data>
+        <display>
+        <title>前端团队合作规范</title>
+        <pubTime>2018-03-02T00:59:01.000Z</pubTime>
+        
+        <tag>规范</tag>
+         
+        <tag>前端团队</tag>
+         
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>https://wdd.js.org/2018-reading-plan.html</loc>
     <lastmod>2018-03-25T12:43:08.000Z</lastmod>
     <data>
@@ -14,25 +33,6 @@
         <tag>reading</tag>
          
         <tag>读书</tag>
-         
-         
-           
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>https://wdd.js.org/front-end-team-work-blog.html</loc>
-    <lastmod>2018-03-24T09:47:36.000Z</lastmod>
-    <data>
-        <display>
-        <title>前端团队合作规范</title>
-        <pubTime>2018-03-02T00:59:01.000Z</pubTime>
-        
-        <tag>规范</tag>
-         
-        <tag>前端团队</tag>
          
          
            
