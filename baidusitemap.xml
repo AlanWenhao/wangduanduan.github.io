@@ -4,6 +4,21 @@
 
     
   <url>
+    <loc>https://wdd.js.org/js-true-and-false-value.html</loc>
+    <lastmod>2018-03-27T06:45:18.000Z</lastmod>
+    <data>
+        <display>
+        <title>js中的真值和假值</title>
+        <pubTime>2018-03-27T06:31:01.000Z</pubTime>
+        
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>https://wdd.js.org/front-end-interview-handbook.html</loc>
     <lastmod>2018-03-27T06:01:35.000Z</lastmod>
     <data>
@@ -936,9 +951,9 @@
         <title>Vue + Vue-router + Element-ui 搭建一个非常简单的dashboard demo</title>
         <pubTime>2018-02-09T04:02:05.000Z</pubTime>
         
-        <tag>ElementUI</tag>
-         
         <tag>Vue</tag>
+         
+        <tag>ElementUI</tag>
          
         <tag>Vue-router</tag>
          

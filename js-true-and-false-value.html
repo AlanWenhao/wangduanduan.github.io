@@ -69,7 +69,7 @@
 
 
 
-  <meta name="keywords" content="console," />
+  <meta name="keywords" content="Hexo, NexT" />
 
 
 
@@ -82,22 +82,18 @@
 
 
 
-<meta name="description" content="本篇文章来自一个需求，前端websocket会收到各种消息，但是调试的时候，我希望把websoekt推送过来的消息都保存到一个文件里，如果出问题的时候，我可以把这些消息的日志文件提交给后端开发区分析错误。但是在浏览器里，js一般是不能写文件的。鼠标另存为的方法也是不太好，因为会保存所有的console.log的输出。于是，终于找到这个debugout.js。  debugout.js的原理是将所">
-<meta name="keywords" content="console">
+<meta name="description" content="无论什么语言，都需要逻辑，而逻辑中，能否判断出真假，是最基本也是最重要技能之一。 JS中的假值有6个 false ‘’ undefinded null 0, +0, -0 NaN  有点类似假值的真值有两个 {} []  空对象和空数组，很多初学者都很用把这两个当做假值。但是实际上他们是真值，你只需要记住，除了null之外的所有对象类型的数据，都是真值。 1typeof null // &apos;obje">
+<meta name="keywords" content="王端端, 洞香春, wellClient">
 <meta property="og:type" content="article">
-<meta property="og:title" content="终于找到你！如何将前端console.log的日志保存成文件?">
-<meta property="og:url" content="https://wdd.js.org/save-console-log-as-file.html">
+<meta property="og:title" content="js中的真值和假值">
+<meta property="og:url" content="https://wdd.js.org/js-true-and-false-value.html">
 <meta property="og:site_name" content="洞香春">
-<meta property="og:description" content="本篇文章来自一个需求，前端websocket会收到各种消息，但是调试的时候，我希望把websoekt推送过来的消息都保存到一个文件里，如果出问题的时候，我可以把这些消息的日志文件提交给后端开发区分析错误。但是在浏览器里，js一般是不能写文件的。鼠标另存为的方法也是不太好，因为会保存所有的console.log的输出。于是，终于找到这个debugout.js。  debugout.js的原理是将所">
+<meta property="og:description" content="无论什么语言，都需要逻辑，而逻辑中，能否判断出真假，是最基本也是最重要技能之一。 JS中的假值有6个 false ‘’ undefinded null 0, +0, -0 NaN  有点类似假值的真值有两个 {} []  空对象和空数组，很多初学者都很用把这两个当做假值。但是实际上他们是真值，你只需要记住，除了null之外的所有对象类型的数据，都是真值。 1typeof null // &apos;obje">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:image" content="http://p3alsaatj.bkt.clouddn.com/20180208135709_Z3SQQV_Screenshot.jpeg">
-<meta property="og:image" content="http://p3alsaatj.bkt.clouddn.com/20180208135722_EwunDY_Screenshot.jpeg">
-<meta property="og:image" content="http://p3alsaatj.bkt.clouddn.com/20180208135732_Ltowzp_Screenshot.jpeg">
-<meta property="og:updated_time" content="2018-02-09T07:47:38.000Z">
+<meta property="og:updated_time" content="2018-03-27T06:45:18.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="终于找到你！如何将前端console.log的日志保存成文件?">
-<meta name="twitter:description" content="本篇文章来自一个需求，前端websocket会收到各种消息，但是调试的时候，我希望把websoekt推送过来的消息都保存到一个文件里，如果出问题的时候，我可以把这些消息的日志文件提交给后端开发区分析错误。但是在浏览器里，js一般是不能写文件的。鼠标另存为的方法也是不太好，因为会保存所有的console.log的输出。于是，终于找到这个debugout.js。  debugout.js的原理是将所">
-<meta name="twitter:image" content="http://p3alsaatj.bkt.clouddn.com/20180208135709_Z3SQQV_Screenshot.jpeg">
+<meta name="twitter:title" content="js中的真值和假值">
+<meta name="twitter:description" content="无论什么语言，都需要逻辑，而逻辑中，能否判断出真假，是最基本也是最重要技能之一。 JS中的假值有6个 false ‘’ undefinded null 0, +0, -0 NaN  有点类似假值的真值有两个 {} []  空对象和空数组，很多初学者都很用把这两个当做假值。但是实际上他们是真值，你只需要记住，除了null之外的所有对象类型的数据，都是真值。 1typeof null // &apos;obje">
 
 
 
@@ -127,13 +123,13 @@
 
 
 
-  <link rel="canonical" href="https://wdd.js.org/save-console-log-as-file.html"/>
+  <link rel="canonical" href="https://wdd.js.org/js-true-and-false-value.html"/>
 
 
 
 
 
-  <title>终于找到你！如何将前端console.log的日志保存成文件? | 洞香春</title>
+  <title>js中的真值和假值 | 洞香春</title>
   
 
 
@@ -304,7 +300,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://wdd.js.org/save-console-log-as-file.html">
+    <link itemprop="mainEntityOfPage" href="https://wdd.js.org/js-true-and-false-value.html">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="王端端">
@@ -321,7 +317,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">终于找到你！如何将前端console.log的日志保存成文件?</h1>
+          <h1 class="post-title" itemprop="name headline">js中的真值和假值</h1>
         
 
         <div class="post-meta">
@@ -333,8 +329,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-02-08T13:56:40+08:00">
-                2018-02-08
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-03-27T14:31:01+08:00">
+                2018-03-27
               </time>
             
 
@@ -370,7 +366,7 @@
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  827 字
+                  275 字
                 </span>
               
 
@@ -386,7 +382,7 @@
                   <span class="post-meta-item-text">阅读时长 &asymp;</span>
                 
                 <span title="阅读时长">
-                  3 分钟
+                  1 分钟
                 </span>
               
             </div>
@@ -407,44 +403,24 @@
       
 
       
-        <blockquote>
-<p>本篇文章来自一个需求，前端websocket会收到各种消息，但是调试的时候，我希望把websoekt推送过来的消息都保存到一个文件里，如果出问题的时候，我可以把这些消息的日志文件提交给后端开发区分析错误。但是在浏览器里，js一般是不能写文件的。鼠标另存为的方法也是不太好，因为会保存所有的console.log的输出。于是，终于找到这个debugout.js。</p>
-</blockquote>
-<p><code>debugout.js的原理是将所有日志序列化后，保存到一个变量里。当然这个变量不会无限大，因为默认的最大日志限制是2500行，这个是可配置的。另外，debugout.js也支持在localStorage里存储日志的。</code></p>
-<p><img src="http://p3alsaatj.bkt.clouddn.com/20180208135709_Z3SQQV_Screenshot.jpeg" alt=""></p>
-<h1 id="1-debugout-js"><a href="#1-debugout-js" class="headerlink" title="1. debugout.js"></a>1. <a href="https://github.com/inorganik/debugout.js" target="_blank" rel="noopener">debugout.js</a></h1><blockquote>
-<p>一般来说，可以使用打开console面板，然后右键save，是可以将console.log输出的信息另存为log文件的。但是这就把所有的日志都包含进来了，如何只保存我想要的日志呢？</p>
-</blockquote>
-<p>（调试输出）从您的日志中生成可以搜索，时间戳，下载等的文本文件。 参见下面的一些例子。</p>
-<p>Debugout的log（）接受任何类型的对象，包括函数。 Debugout不是一个猴子补丁，而是一个单独的记录类，你使用而不是控制台。</p>
-<p>调试的一些亮点：</p>
-<ul>
-<li>在运行时或任何时间获取整个日志或尾部</li>
-<li>搜索并切片日志</li>
-<li>更好地了解可选时间戳的使用模式</li>
-<li>在一个地方切换实时日志记录（console.log）</li>
-<li>可选地将输出存储在window.localStorage中，并在每个会话中持续添加到同一个日志</li>
-<li>可选地，将日志上限为X个最新行以限制内存消耗</li>
-</ul>
-<p>下图是使用downloadLog方法下载的日志文件。</p>
-<p><img src="http://p3alsaatj.bkt.clouddn.com/20180208135722_EwunDY_Screenshot.jpeg" alt=""></p>
-<p>官方提供的demo示例，欢迎试玩。<a href="http://inorganik.github.io/debugout.js/" target="_blank" rel="noopener">http://inorganik.github.io/debugout.js/</a></p>
-<p><img src="http://p3alsaatj.bkt.clouddn.com/20180208135732_Ltowzp_Screenshot.jpeg" alt=""></p>
-<h1 id="2-使用"><a href="#2-使用" class="headerlink" title="2. 使用"></a>2. 使用</h1><p>在脚本顶部的全局命名空间中创建一个新的调试对象，并使用debugout的日志方法替换所有控制台日志方法：</p>
-<figure class="highlight maxima"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">var</span> bugout = <span class="built_in">new</span> debugout();</span><br><span class="line"></span><br><span class="line">// instead of console.<span class="built_in">log</span>('<span class="built_in">some</span> object <span class="keyword">or</span> <span class="built_in">string</span>')</span><br><span class="line">bugout.<span class="built_in">log</span>('<span class="built_in">some</span> object <span class="keyword">or</span> <span class="built_in">string</span>');</span><br></pre></td></tr></table></figure>
-<h1 id="3-API"><a href="#3-API" class="headerlink" title="3. API"></a>3. API</h1><ul>
-<li>log() -像console.log(), 但是会自动存储</li>
-<li>getLog() - 返回所有日志</li>
-<li>tail(numLines) - 返回尾部执行行日志，默认100行</li>
-<li>search(string) - 搜索日志</li>
-<li>getSlice(start, numLines) - 日志切割</li>
-<li>downloadLog() - 下载日志</li>
-<li>clear() - 清空日志</li>
-<li>determineType() - 一个更细粒度的typeof为您提供方便</li>
-</ul>
-<h1 id="4-可选配置"><a href="#4-可选配置" class="headerlink" title="4. 可选配置"></a>4. 可选配置</h1><p>···<br>// log in real time (forwards to console.log)<br>self.realTimeLoggingOn = true;<br>// insert a timestamp in front of each log<br>self.useTimestamps = false;<br>// store the output using window.localStorage() and continuously add to the same log each session<br>self.useLocalStorage = false;<br>// set to false after you’re done debugging to avoid the log eating up memory<br>self.recordLogs = true;<br>// to avoid the log eating up potentially endless memory<br>self.autoTrim = true;<br>// if autoTrim is true, this many most recent lines are saved<br>self.maxLines = 2500;<br>// how many lines tail() will retrieve<br>self.tailNumLines = 100;<br>// filename of log downloaded with downloadLog()<br>self.logFilename = ‘log.txt’;<br>// max recursion depth for logged objects<br>self.maxDepth = 25;<br>···</p>
-<h1 id="5-项目地址"><a href="#5-项目地址" class="headerlink" title="5. 项目地址"></a>5. 项目地址</h1><p><a href="https://github.com/inorganik/debugout.js" target="_blank" rel="noopener">https://github.com/inorganik/debugout.js</a></p>
-<h1 id="6-另外"><a href="#6-另外" class="headerlink" title="6. 另外"></a>6. 另外</h1><p>我自己也模仿debugout.js写了一个日志保存的项目，该项目可以在ie10及以上下载日志。<br>debugout.js在ie浏览器上下载日志的方式是有问题的。<br>项目地址：<a href="https://github.com/wangduanduan/log4b.git" target="_blank" rel="noopener">https://github.com/wangduanduan/log4b.git</a></p>
+        <p><code>无论什么语言，都需要逻辑，而逻辑中，能否判断出真假，是最基本也是最重要技能之一</code>。</p>
+<h1 id="JS中的假值有6个"><a href="#JS中的假值有6个" class="headerlink" title="JS中的假值有6个"></a>JS中的假值有6个</h1><ol>
+<li>false</li>
+<li>‘’</li>
+<li>undefinded</li>
+<li>null</li>
+<li>0, +0, -0</li>
+<li>NaN</li>
+</ol>
+<h1 id="有点类似假值的真值有两个"><a href="#有点类似假值的真值有两个" class="headerlink" title="有点类似假值的真值有两个"></a>有点类似假值的真值有两个</h1><ol>
+<li>{}</li>
+<li>[]</li>
+</ol>
+<p>空对象和空数组，很多初学者都很用把这两个当做假值。但是实际上他们是真值，你只需要记住，除了null之外的所有对象类型的数据，都是真值。</p>
+<figure class="highlight actionscript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">typeof</span> <span class="literal">null</span> <span class="comment">// 'object'</span></span><br></pre></td></tr></table></figure>
+<p>据说：<code>typeof null返回对象这是一个js语言中的bug。</code>实际上typeof null应该返回null才比较准确，但是这个bug已经存来好久了。几乎所有的代码里都这样去判断。如果把typeof null给改成返回null, 那么这必定会导致JS世界末日。</p>
+<p>我们承认<code>JS并不完美</code>，她有很多小缺点，但是这并不妨碍她吸引万千开发者拜倒在她的石榴裙下。</p>
+<p>就像一首歌唱的：<code>有些人说不清哪里好 但就是谁都替代不了</code></p>
 
       
     </div>
@@ -465,14 +441,14 @@
   </li>
   <li class="post-copyright-link">
     <strong>本文标题：</strong>
-    <a href="https://wdd.js.org/save-console-log-as-file.html" title="终于找到你！如何将前端console.log的日志保存成文件?">终于找到你！如何将前端console.log的日志保存成文件?</a>
+    <a href="https://wdd.js.org/js-true-and-false-value.html" title="js中的真值和假值">js中的真值和假值</a>
   </li>
   <li class="post-copyright-link">
     <strong>本文链接：</strong>
-    <a href="https://wdd.js.org/save-console-log-as-file.html" title="终于找到你！如何将前端console.log的日志保存成文件?">https://wdd.js.org/save-console-log-as-file.html</a>
+    <a href="https://wdd.js.org/js-true-and-false-value.html" title="js中的真值和假值">https://wdd.js.org/js-true-and-false-value.html</a>
   </li>
   <li class="post-copyright-date">
-      <strong>发布时间：</strong>2018年2月8日 - 13时02分
+      <strong>发布时间：</strong>2018年3月27日 - 14时03分
   </li>  
   <li class="post-copyright-license">
     <strong>版权声明： </strong>
@@ -485,12 +461,6 @@
 
     <footer class="post-footer">
       
-        <div class="post-tags">
-          
-            <a href="/tags/console/" rel="tag"># console</a>
-          
-        </div>
-      
 
       
       
@@ -500,8 +470,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/debug-code-in-iframe.html" rel="next" title="如何浏览器里调试iframe里层的代码？">
-                <i class="fa fa-chevron-left"></i> 如何浏览器里调试iframe里层的代码？
+              <a href="/frontend-tree-root-trunk-leaf.html" rel="next" title="前端之路 树根 树干 树叶">
+                <i class="fa fa-chevron-left"></i> 前端之路 树根 树干 树叶
               </a>
             
           </div>
@@ -509,10 +479,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/gist-collect-code-snippets.html" rel="prev" title="积水成渊：用github gist收藏你的代码片段">
-                积水成渊：用github gist收藏你的代码片段 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -668,7 +634,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#1-debugout-js"><span class="nav-text">1. debugout.js</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#2-使用"><span class="nav-text">2. 使用</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#3-API"><span class="nav-text">3. API</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#4-可选配置"><span class="nav-text">4. 可选配置</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#5-项目地址"><span class="nav-text">5. 项目地址</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#6-另外"><span class="nav-text">6. 另外</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#JS中的假值有6个"><span class="nav-text">JS中的假值有6个</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#有点类似假值的真值有两个"><span class="nav-text">有点类似假值的真值有两个</span></a></li></ol></div>
             
 
           </div>
