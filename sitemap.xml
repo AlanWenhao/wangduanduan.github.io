@@ -2,6 +2,27 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://wdd.js.org/front-end-interview-handbook.html</loc>
+    
+    <lastmod>2018-03-27T06:01:35.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://wdd.js.org/about/index.html</loc>
+    
+    <lastmod>2018-03-27T04:00:24.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://wdd.js.org/frontend-tree-root-trunk-leaf.html</loc>
+    
+    <lastmod>2018-03-26T10:11:51.000Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://wdd.js.org/front-end-team-work-blog.html</loc>
     
     <lastmod>2018-03-26T02:43:25.000Z</lastmod>
@@ -96,13 +117,6 @@
     <loc>https://wdd.js.org/origin-null-is-not-allowed.html</loc>
     
     <lastmod>2018-03-09T10:24:22.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://wdd.js.org/front-end-interview-handbook.html</loc>
-    
-    <lastmod>2018-03-09T09:45:22.000Z</lastmod>
     
   </url>
   
@@ -894,13 +908,6 @@
     <loc>https://wdd.js.org/sort-for-sf.html</loc>
     
     <lastmod>2018-02-07T06:01:49.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://wdd.js.org/about/index.html</loc>
-    
-    <lastmod>2018-02-07T02:27:52.000Z</lastmod>
     
   </url>
   

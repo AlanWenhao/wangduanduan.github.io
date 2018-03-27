@@ -4,6 +4,41 @@
 
     
   <url>
+    <loc>https://wdd.js.org/front-end-interview-handbook.html</loc>
+    <lastmod>2018-03-27T06:01:35.000Z</lastmod>
+    <data>
+        <display>
+        <title>前端面试和笔试题目</title>
+        <pubTime>2018-02-23T07:18:26.000Z</pubTime>
+        
+        <tag>面试</tag>
+         
+        <tag>笔试</tag>
+         
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+    
+  <url>
+    <loc>https://wdd.js.org/frontend-tree-root-trunk-leaf.html</loc>
+    <lastmod>2018-03-26T10:11:51.000Z</lastmod>
+    <data>
+        <display>
+        <title>前端之路 树根 树干 树叶</title>
+        <pubTime>2018-03-26T10:09:44.000Z</pubTime>
+        
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>https://wdd.js.org/front-end-team-work-blog.html</loc>
     <lastmod>2018-03-26T02:43:25.000Z</lastmod>
     <data>
@@ -253,25 +288,6 @@
         <tag>跨域</tag>
          
         <tag>origin-null-is-not-allowed</tag>
-         
-         
-           
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>https://wdd.js.org/front-end-interview-handbook.html</loc>
-    <lastmod>2018-03-09T09:45:22.000Z</lastmod>
-    <data>
-        <display>
-        <title>前端面试和笔试题目</title>
-        <pubTime>2018-02-23T07:18:26.000Z</pubTime>
-        
-        <tag>面试</tag>
-         
-        <tag>笔试</tag>
          
          
            
@@ -844,9 +860,9 @@
         <title>可能被遗漏的https与http的知识点</title>
         <pubTime>2018-02-08T01:10:59.000Z</pubTime>
         
-        <tag>https</tag>
-         
         <tag>http</tag>
+         
+        <tag>https</tag>
          
          
            
@@ -2304,7 +2320,6 @@
     </data>
     </url>
 
-    
     
     
   <url>
