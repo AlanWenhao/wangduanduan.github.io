@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://wdd.js.org/git-commom-cmds.html</loc>
+    
+    <lastmod>2018-03-28T06:05:37.000Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://wdd.js.org/front-end-interview-handbook.html</loc>
     
     <lastmod>2018-03-28T04:32:07.000Z</lastmod>
@@ -61,13 +68,6 @@
     <loc>https://wdd.js.org/everything-is-possible-ie5-support-websocket.html</loc>
     
     <lastmod>2018-03-24T09:29:36.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://wdd.js.org/git-commom-cmds.html</loc>
-    
-    <lastmod>2018-03-23T10:46:13.000Z</lastmod>
     
   </url>
   
