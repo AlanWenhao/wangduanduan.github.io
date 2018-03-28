@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://wdd.js.org/"/>
-  <updated>2018-03-27T06:45:18.000Z</updated>
+  <updated>2018-03-28T01:08:46.000Z</updated>
   <id>https://wdd.js.org/</id>
   
   <author>
@@ -15,6 +15,32 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>拜领域内最顶尖人物为师</title>
+    <link href="https://wdd.js.org/learn-from-the-top-master.html"/>
+    <id>https://wdd.js.org/learn-from-the-top-master.html</id>
+    <published>2018-03-28T00:44:06.000Z</published>
+    <updated>2018-03-28T01:08:46.000Z</updated>
+    
+    <content type="html"><![CDATA[<p><img src="http://p3alsaatj.bkt.clouddn.com/20180328085107_sqWkoq_110S46131-0.jpeg" alt=""></p><p>我很讨厌teacher, 我几乎所有做的噩梦都和上课，考试，老师有关。但是我渴望master, 特别是行业顶尖的master。我渴望从master哪里获取知识，但是master们往往都是很忙的，哪有时间教你。但是作为master, 几乎每个人都有基本领域公认的巨著。</p><p>例如学经济学，亚当斯密的国富论是必读的书；学心理学，弗洛伊德的《梦的解析》，古斯塔夫•勒庞的《乌合之众》也是必读的书。学前端，泽卡斯的《JavaScript高级程序设计》，弗兰纳根的《JavaScript权威指南》，这两本书如果你没读过，那么你几乎是一个不合格的前端。</p><p>但是，作为一个普通人，你无法接触到真的的大师，那么就把他们的巨著当做大师，从读书中汲取大师的知识，这未尝不是一件有意义的事情。</p><h1 id="读书真的那么难吗？-如何坚持下去？"><a href="#读书真的那么难吗？-如何坚持下去？" class="headerlink" title="读书真的那么难吗？ 如何坚持下去？"></a>读书真的那么难吗？ 如何坚持下去？</h1><h1 id="读哪些书？如何挑选"><a href="#读哪些书？如何挑选" class="headerlink" title="读哪些书？如何挑选"></a>读哪些书？如何挑选</h1><p><code>挑书实际上是挑人，你</code></p><h1 id="理论知识的重要性"><a href="#理论知识的重要性" class="headerlink" title="理论知识的重要性"></a>理论知识的重要性</h1><h1 id="书评与积累"><a href="#书评与积累" class="headerlink" title="书评与积累"></a>书评与积累</h1><h1 id="只取一瓢"><a href="#只取一瓢" class="headerlink" title="只取一瓢"></a>只取一瓢</h1><h1 id="不求甚解"><a href="#不求甚解" class="headerlink" title="不求甚解"></a>不求甚解</h1><h1 id="速读"><a href="#速读" class="headerlink" title="速读"></a>速读</h1>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;&lt;img src=&quot;http://p3alsaatj.bkt.clouddn.com/20180328085107_sqWkoq_110S46131-0.jpeg&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
+&lt;p&gt;我很讨厌teacher, 我几乎所有做的噩梦都和上课，考试，老师有关。但是我渴
+      
+    
+    </summary>
+    
+    
+      <category term="读书" scheme="https://wdd.js.org/tags/%E8%AF%BB%E4%B9%A6/"/>
+    
+      <category term="未完成" scheme="https://wdd.js.org/tags/%E6%9C%AA%E5%AE%8C%E6%88%90/"/>
+    
+  </entry>
   
   <entry>
     <title>js中的真值和假值</title>
@@ -477,33 +503,6 @@
       <category term="mongodb" scheme="https://wdd.js.org/tags/mongodb/"/>
     
       <category term="pymongo" scheme="https://wdd.js.org/tags/pymongo/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Express 代理中间件的写法</title>
-    <link href="https://wdd.js.org/express-proxy-middleware-demo.html"/>
-    <id>https://wdd.js.org/express-proxy-middleware-demo.html</id>
-    <published>2018-02-18T02:43:05.000Z</published>
-    <updated>2018-02-18T03:04:57.000Z</updated>
-    
-    <content type="html"><![CDATA[<h1 id="1-配置文件写法"><a href="#1-配置文件写法" class="headerlink" title="1. 配置文件写法"></a>1. 配置文件写法</h1><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// filename: config/default.js</span></span><br><span class="line"><span class="comment">// 开发环境配置文件</span></span><br><span class="line"><span class="built_in">module</span>.exports = &#123;</span><br><span class="line">  <span class="string">'ENV'</span>: <span class="string">'dev'</span>,</span><br><span class="line">  <span class="string">'PORT'</span>: <span class="string">'8088'</span>,</span><br><span class="line"></span><br><span class="line">  <span class="string">'maxAge'</span>: <span class="number">10</span>,</span><br><span class="line">  proxyTable: &#123;</span><br><span class="line">    <span class="comment">// 这里是http代理</span></span><br><span class="line">    <span class="comment">// 含有路径重写功能</span></span><br><span class="line">    <span class="string">'/p/olap'</span>: &#123;</span><br><span class="line">      target: <span class="string">'http://192.168.40.231:30092'</span>,</span><br><span class="line">      pathRewrite: &#123;</span><br><span class="line">        <span class="string">'^/p/olap'</span>: <span class="string">'/olap'</span></span><br><span class="line">      &#125;</span><br><span class="line">    &#125;,</span><br><span class="line">    <span class="comment">// 这里是http代理</span></span><br><span class="line">    <span class="comment">// 含有路径重写功能</span></span><br><span class="line">    <span class="string">'/p/qc'</span>: &#123;</span><br><span class="line">      target: <span class="string">'http://192.168.40.231:30088'</span>,</span><br><span class="line">      pathRewrite: &#123;</span><br><span class="line">        <span class="string">'^/p/qc'</span>: <span class="string">'/qc'</span></span><br><span class="line">      &#125;</span><br><span class="line">    &#125;,</span><br><span class="line">    <span class="comment">// 这是WebSocket代理</span></span><br><span class="line">    <span class="string">'/mvc/stomp'</span>: &#123;</span><br><span class="line">      target: <span class="string">'http://192.168.40.231:30412'</span>,</span><br><span class="line">      changeOrigin: <span class="literal">true</span>,</span><br><span class="line">      ws: <span class="literal">true</span>,</span><br><span class="line">      logLevel: <span class="string">'debug'</span>,</span><br><span class="line">      onError: <span class="function"><span class="keyword">function</span> (<span class="params">err, req, res</span>) </span>&#123;</span><br><span class="line">        <span class="built_in">console</span>.log(<span class="string">'Something went wrong. And we are reporting a custom error message.'</span>)</span><br><span class="line">        <span class="built_in">console</span>.log(err)</span><br><span class="line"></span><br><span class="line">        res.writeHead(<span class="number">500</span>, &#123;</span><br><span class="line">          <span class="string">'Content-Type'</span>: <span class="string">'text/plain'</span></span><br><span class="line">        &#125;)</span><br><span class="line">        res.end(<span class="string">'Something went wrong. And we are reporting a custom error message.'</span>)</span><br><span class="line">      &#125;</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><h1 id="2-app-js写法"><a href="#2-app-js写法" class="headerlink" title="2. app.js写法"></a>2. app.js写法</h1><figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> express = <span class="keyword">require</span>(<span class="string">'express'</span>)</span><br><span class="line"><span class="keyword">var</span> compression = <span class="keyword">require</span>(<span class="string">'compression'</span>)</span><br><span class="line"><span class="keyword">var</span> path = <span class="keyword">require</span>(<span class="string">'path'</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment">// config会根据NODE_ENV环境变量自动去读取config目录下的文件，默认读取的default.js文件</span></span><br><span class="line"><span class="comment">// 你可以在config目录下设置production.js, test.js等配置文件</span></span><br><span class="line"><span class="keyword">var</span> config = <span class="keyword">require</span>(<span class="string">'config'</span>)</span><br><span class="line"><span class="keyword">var</span> proxyMiddleware = <span class="keyword">require</span>(<span class="string">'http-proxy-middleware'</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment">// 这里可以获取到配置文件的proxyTable</span></span><br><span class="line"><span class="keyword">var</span> proxyTable = config.get(<span class="string">'proxyTable'</span>)</span><br><span class="line"></span><br><span class="line">...</span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> app = express()</span><br><span class="line">...</span><br><span class="line"></span><br><span class="line"><span class="comment">// 这里是要点</span></span><br><span class="line"><span class="comment">// 遍历proxyTable，将配置文件中的路径挂载到app上</span></span><br><span class="line">Object.keys(proxyTable).<span class="keyword">forEach</span>(<span class="function"><span class="keyword">function</span> <span class="params">(context)</span> </span>&#123;</span><br><span class="line">  app.<span class="keyword">use</span>(proxyMiddleware(context, proxyTable[context]))</span><br><span class="line">&#125;)</span><br><span class="line"></span><br><span class="line">...</span><br><span class="line"></span><br><span class="line">module.exports = app</span><br></pre></td></tr></table></figure>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;h1 id=&quot;1-配置文件写法&quot;&gt;&lt;a href=&quot;#1-配置文件写法&quot; class=&quot;headerlink&quot; title=&quot;1. 配置文件写法&quot;&gt;&lt;/a&gt;1. 配置文件写法&lt;/h1&gt;&lt;figure class=&quot;highlight javascript&quot;&gt;&lt;table&gt;&lt;tr
-      
-    
-    </summary>
-    
-    
-      <category term="proxy" scheme="https://wdd.js.org/tags/proxy/"/>
-    
-      <category term="http" scheme="https://wdd.js.org/tags/http/"/>
-    
-      <category term="Express" scheme="https://wdd.js.org/tags/Express/"/>
     
   </entry>
   

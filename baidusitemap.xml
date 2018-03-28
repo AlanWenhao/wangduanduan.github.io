@@ -4,6 +4,42 @@
 
     
   <url>
+    <loc>https://wdd.js.org/how-to-be-a-better-programer.html</loc>
+    <lastmod>2018-03-28T02:48:06.000Z</lastmod>
+    <data>
+        <display>
+        <title>【笔记】 程序员修炼之道 从小工到专家</title>
+        <pubTime>2018-02-08T01:21:11.000Z</pubTime>
+        
+        <tag>读书笔记</tag>
+         
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>https://wdd.js.org/learn-from-the-top-master.html</loc>
+    <lastmod>2018-03-28T01:08:46.000Z</lastmod>
+    <data>
+        <display>
+        <title>拜领域内最顶尖人物为师</title>
+        <pubTime>2018-03-28T00:44:06.000Z</pubTime>
+        
+        <tag>读书</tag>
+         
+        <tag>未完成</tag>
+         
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>https://wdd.js.org/js-true-and-false-value.html</loc>
     <lastmod>2018-03-27T06:45:18.000Z</lastmod>
     <data>
@@ -951,9 +987,9 @@
         <title>Vue + Vue-router + Element-ui 搭建一个非常简单的dashboard demo</title>
         <pubTime>2018-02-09T04:02:05.000Z</pubTime>
         
-        <tag>Vue</tag>
-         
         <tag>ElementUI</tag>
+         
+        <tag>Vue</tag>
          
         <tag>Vue-router</tag>
          
@@ -2296,23 +2332,6 @@
         <pubTime>2018-02-08T12:18:42.000Z</pubTime>
         
         <tag>思想者</tag>
-         
-         
-           
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>https://wdd.js.org/how-to-be-a-better-programer.html</loc>
-    <lastmod>2018-02-08T01:22:00.000Z</lastmod>
-    <data>
-        <display>
-        <title>【笔记】 程序员修炼之道 从小工到专家</title>
-        <pubTime>2018-02-08T01:21:11.000Z</pubTime>
-        
-        <tag>读书笔记</tag>
          
          
            
