@@ -1,6 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[Small is Powerful Vue mixins]]></title>
+    <url>%2Fsmall-is-powerful-vue-mixins.html</url>
+    <content type="text"><![CDATA[small is beautiful1234567891011new Vue(&#123; el: '#app', methods: &#123; hello: function()&#123; console.log('hello') &#125; &#125;, created: function()&#123; this.hello() &#125;&#125;) big is ugly123456789101112131415161718192021222324new Vue(&#123; el: '#app', methods: &#123; hello: function()&#123; console.log('hello') &#125;, hello1: function()&#123; console.log('hello1') &#125;, hello2: function()&#123; console.log('hello2') &#125;, hello3: function()&#123; console.log('hello3') &#125;, // a lot of function be added, this is ugly helloN: function()&#123; console.log('helloN') &#125;, &#125;, created: function()&#123; this.hello() &#125;&#125;) mixins is powerful1234567891011121314151617181920212223242526272829303132var mix = &#123; created: function () &#123; console.log('i am mixins') &#125;, methods: &#123; helloX: function()&#123; console.log('helloX') &#125; &#125;&#125;new Vue(&#123; el: '#app', mixins: [mix], methods: &#123; hello: function()&#123; console.log('hello') &#125;, hello1: function()&#123; console.log('hello1') &#125;, hello2: function()&#123; console.log('hello2') &#125;, hello3: function()&#123; console.log('hello3') &#125; &#125;, created: function()&#123; this.hello() &#125;&#125;) reading more guide-mixins]]></content>
+      <tags>
+        <tag>Vue</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[WebSocket断开原因分析]]></title>
     <url>%2Fwebsocket-close-reasons.html</url>
     <content type="text"><![CDATA[1. 把错误打印出来WebSocket断开的原因有很多，最好在WebSocket断开时，将错误打印出来。 在线demo地址：https://wdd.js.org/websocket-demos/ 1234ws.onerror = function (e) &#123; console.log('WebSocket发生错误: ' + e.code) console.log(e)&#125; 如果你想自己玩玩WebSocket, 但是你又不想自己部署一个WebSocket服务器，你可以使用ws = new WebSocket(&#39;wss://echo.websocket.org/&#39;), 你向echo.websocket.org发送消息，它会回复你同样的消息。 2. 重要信息错误状态码WebSocket断开时，会触发CloseEvent, CloseEvent会在连接关闭时发送给使用 WebSockets 的客户端. 它在 WebSocket 对象的 onclose 事件监听器中使用。CloseEvent的code字段表示了WebSocket断开的原因。可以从该字段中分析断开的原因。 3. 关闭状态码表一般来说1006的错误码出现的情况比较常见，该错误码一般出现在断网时。 状态码 名称 描述 0–999 保留段, 未使用. 1000 CLOSE_NORMAL 正常关闭; 无论为何目的而创建, 该链接都已成功完成任务. 1001 CLOSE_GOING_AWAY 终端离开, 可能因为服务端错误, 也可能因为浏览器正从打开连接的页面跳转离开. 1002 CLOSE_PROTOCOL_ERROR 由于协议错误而中断连接. 1003 CLOSE_UNSUPPORTED 由于接收到不允许的数据类型而断开连接 (如仅接收文本数据的终端接收到了二进制数据). 1004 保留. 其意义可能会在未来定义. 1005 CLOSE_NO_STATUS 保留. 表示没有收到预期的状态码. 1006 CLOSE_ABNORMAL 保留. 用于期望收到状态码时连接非正常关闭 (也就是说, 没有发送关闭帧). 1007 Unsupported Data 由于收到了格式不符的数据而断开连接 (如文本消息中包含了非 UTF-8 数据). 1008 Policy Violation 由于收到不符合约定的数据而断开连接. 这是一个通用状态码, 用于不适合使用 1003 和 1009 状态码的场景. 1009 CLOSE_TOO_LARGE 由于收到过大的数据帧而断开连接. 1010 Missing Extension 客户端期望服务器商定一个或多个拓展, 但服务器没有处理, 因此客户端断开连接. 1011 Internal Error 客户端由于遇到没有预料的情况阻止其完成请求, 因此服务端断开连接. 1012 Service Restart 服务器由于重启而断开连接. 1013 Try Again Later 服务器由于临时原因断开连接, 如服务器过载因此断开一部分客户端连接. 1014 由 WebSocket标准保留以便未来使用. 1015 TLS Handshake 保留. 表示连接由于无法完成 TLS 握手而关闭 (例如无法验证服务器证书). 1016–1999 由 WebSocket标准保留以便未来使用. 2000–2999 由 WebSocket拓展保留使用. 3000–3999 可以由库或框架使用.? 不应由应用使用. 可以在 IANA 注册, 先到先得. 4000–4999 可以由应用使用. 4. 其他注意事项如果你的服务所在的域是HTTPS的，那么使用的WebSocket协议也必须是wss, 而不能是ws 5. 如何在老IE上使用原生WebSocket？web-socket-js是基于flash的技术，只需要引入两个js文件和一个swf文件，就可以让浏览器用于几乎原生的WebSocket接口。另外，web-socket-js还是需要在ws服务端843端口做一个flash安全策略文件的服务。 我自己曾经基于stompjs和web-socket-js，做WebSocket兼容到IE5, 当然了stompjs在低版本的IE上有兼容性问题, 而且stompjs已经不再维护了，你可以使用我fork的一个版本，地址是：https://github.com/wangduanduan/stomp-websocket/blob/master/lib/stomp.js 主要是老版本IE在正则表达式行为方面有点异常。 1234567// fix ie8, ie9, RegExp not normal problem// in chrome the frames length will be 2, but in ie8, ie9, it well be 1// by wdd 20180321if (frames.length === 1) &#123; frames.push('')&#125; 6. 参考 CloseEvent getting the reason why websockets closed with close code 1006 Defined Status Codes]]></content>
@@ -323,8 +331,8 @@
     <content type="text"><![CDATA[失控这本书在刚开始看时，立马让我联想到黑客帝国里人被种植在营养液中的情形，我不太清楚，这本书和这个电影之间有什么联系。 这本书真实能让人脑洞大开。 人造与天生的联姻正是本书的主题 读到这里，我立马有一个预想：多年以后，会有一家公司，把人的思想从肉体从抽取出来。让人的思想，脱离肉体而存在。 蜂群思维 分布式管理 有点像SVN之与GIT 蜂群思维的神奇之处，看似没有一只蜜蜂在控制它。但是有一只看不见的手，在控制着整个群体 低层级的存在无法推断出高层级的复杂性 就像，tcp无法推断出HTTP协议]]></content>
       <tags>
         <tag>读书笔记</tag>
-        <tag>未完成</tag>
         <tag>失控</tag>
+        <tag>未完成</tag>
       </tags>
   </entry>
   <entry>
@@ -333,8 +341,8 @@
     <content type="text"><![CDATA[1. 你够专业吗？ p20 控制情绪，理性行动 专业知识，专业技能 客户第一 好奇心 进取心 严格遵守记录]]></content>
       <tags>
         <tag>读书笔记</tag>
-        <tag>主页主义</tag>
         <tag>未完成</tag>
+        <tag>主页主义</tag>
       </tags>
   </entry>
   <entry>

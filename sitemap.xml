@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://wdd.js.org/small-is-powerful-vue-mixins.html</loc>
+    
+    <lastmod>2018-03-30T07:43:23.000Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://wdd.js.org/front-end-interview-handbook.html</loc>
     
     <lastmod>2018-03-30T03:25:28.000Z</lastmod>
