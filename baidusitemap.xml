@@ -4,6 +4,21 @@
 
     
   <url>
+    <loc>https://wdd.js.org/do-not-tolerate-spelling-mistake.html</loc>
+    <lastmod>2018-04-03T13:01:20.000Z</lastmod>
+    <data>
+        <display>
+        <title>绝对不要容忍拼写错误</title>
+        <pubTime>2018-04-03T08:37:40.000Z</pubTime>
+        
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>https://wdd.js.org/2018-reading-plan.html</loc>
     <lastmod>2018-04-01T15:03:52.000Z</lastmod>
     <data>
@@ -1023,9 +1038,9 @@
         
         <tag>Vue</tag>
          
-        <tag>ElementUI</tag>
-         
         <tag>Vue-router</tag>
+         
+        <tag>ElementUI</tag>
          
          
            

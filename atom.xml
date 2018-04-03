@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://wdd.js.org/"/>
-  <updated>2018-03-30T07:43:23.000Z</updated>
+  <updated>2018-04-03T13:01:20.000Z</updated>
   <id>https://wdd.js.org/</id>
   
   <author>
@@ -15,6 +15,29 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>绝对不要容忍拼写错误</title>
+    <link href="https://wdd.js.org/do-not-tolerate-spelling-mistake.html"/>
+    <id>https://wdd.js.org/do-not-tolerate-spelling-mistake.html</id>
+    <published>2018-04-03T08:37:40.000Z</published>
+    <updated>2018-04-03T13:01:20.000Z</updated>
+    
+    <content type="html"><![CDATA[<p><code>最难找又最好找的bug是拼写错误。</code>如果你意识到问题的原因可能是拼写错误，那么检查起来是很容易的。否则，则可能花费几天事件去找问题的原因。</p><p>你要相信计算机，计算机告诉你的问题，99%一定是开发者自身的问题，而不是计算机的问题。</p><p><img src="http://p3alsaatj.bkt.clouddn.com/20180403205759_9VJNcG_.jpeg" alt=""></p><p>找bug其实是一个很有意思的事情，有点像躲猫猫，计算机告诉你一些表象原因。有些时候，你可以从这些表象原因中立马发现问题所在，有时候又会让你抓耳挠腮，废寝忘食，辗转反侧，求之不得。</p><p>越难解决的问题，解决过后，幸福感和快乐感也随之增加。</p><blockquote><p>初极狭，才通人。复行数十步，豁然开朗。土地平旷，屋舍俨然，有良田美池桑竹之属。阡陌交通，鸡犬相闻。其中往来种作，男女衣着，悉如外人。黄发垂髫，并怡然自乐。– 《桃花源记》</p></blockquote><p><img src="http://p3alsaatj.bkt.clouddn.com/20180403205900_TGZuPo_.jpeg" alt=""></p><h1 id="1-为什么会产生拼写错误？"><a href="#1-为什么会产生拼写错误？" class="headerlink" title="1. 为什么会产生拼写错误？"></a>1. 为什么会产生拼写错误？</h1><ul><li>马虎</li><li>懒</li></ul><h1 id="2-拼写错误可能引起哪些问题？"><a href="#2-拼写错误可能引起哪些问题？" class="headerlink" title="2. 拼写错误可能引起哪些问题？"></a>2. 拼写错误可能引起哪些问题？</h1><ul><li>无法引用到变量，报一些引用的错误</li><li>HTTP 404, 如果路径拼写错误，那么是会导致请求404的</li></ul><h1 id="3-拼写错误的长远影响？"><a href="#3-拼写错误的长远影响？" class="headerlink" title="3. 拼写错误的长远影响？"></a>3. 拼写错误的长远影响？</h1><ul><li>有个成语叫<code>遗臭万年</code></li></ul><h1 id="4-如何减少拼写错误？"><a href="#4-如何减少拼写错误？" class="headerlink" title="4. 如何减少拼写错误？"></a>4. 如何减少拼写错误？</h1><ul><li>查字典 有道字典</li><li>代码拼写检查工具： 如vscode上的拼写检查插件<a href="https://github.com/Jason-Rev/vscode-spell-checker" target="_blank" rel="noopener">vscode-spell-checker</a></li></ul>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;&lt;code&gt;最难找又最好找的bug是拼写错误。&lt;/code&gt;如果你意识到问题的原因可能是拼写错误，那么检查起来是很容易的。否则，则可能花费几天事件去找问题的原因。&lt;/p&gt;
+&lt;p&gt;你要相信计算机，计算机告诉你的问题，99%一定是开发者自身的问题，而不是计算机的问题。&lt;/p&gt;
+
+      
+    
+    </summary>
+    
+    
+  </entry>
   
   <entry>
     <title>Small is Powerful Vue mixins</title>
@@ -465,35 +488,6 @@
     
     
       <category term="正则表达式" scheme="https://wdd.js.org/tags/%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>VScode Formatter yapf is not installed解决方法</title>
-    <link href="https://wdd.js.org/formatter-yapf-is-not-installed.html"/>
-    <id>https://wdd.js.org/formatter-yapf-is-not-installed.html</id>
-    <published>2018-02-24T03:56:48.000Z</published>
-    <updated>2018-02-24T04:02:36.000Z</updated>
-    
-    <content type="html"><![CDATA[<h1 id="1-判断你是否安装了yapf"><a href="#1-判断你是否安装了yapf" class="headerlink" title="1. 判断你是否安装了yapf"></a>1. 判断你是否安装了yapf</h1><figure class="highlight ebnf"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="attribute">yapf -v</span></span><br></pre></td></tr></table></figure><p>如果你没有安装过，那么必须要安装。</p><h1 id="2-指定pathon路径"><a href="#2-指定pathon路径" class="headerlink" title="2. 指定pathon路径"></a>2. 指定pathon路径</h1><p>有些系统，像macOS，自带python2, 如果你又安装了python3, 并且你使用<code>pip3</code>来安装的yapf， 那么你就需要指定pythonPath</p><figure class="highlight crmsh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">// <span class="keyword">user</span> <span class="title">settings</span></span><br><span class="line"><span class="string">"python.pythonPath"</span>: <span class="string">"python3"</span>,</span><br></pre></td></tr></table></figure>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;h1 id=&quot;1-判断你是否安装了yapf&quot;&gt;&lt;a href=&quot;#1-判断你是否安装了yapf&quot; class=&quot;headerlink&quot; title=&quot;1. 判断你是否安装了yapf&quot;&gt;&lt;/a&gt;1. 判断你是否安装了yapf&lt;/h1&gt;&lt;figure class=&quot;highligh
-      
-    
-    </summary>
-    
-    
-      <category term="python" scheme="https://wdd.js.org/tags/python/"/>
-    
-      <category term="yapf" scheme="https://wdd.js.org/tags/yapf/"/>
-    
-      <category term="vscode" scheme="https://wdd.js.org/tags/vscode/"/>
-    
-      <category term="Formatter yapf is not installed" scheme="https://wdd.js.org/tags/Formatter-yapf-is-not-installed/"/>
     
   </entry>
   
