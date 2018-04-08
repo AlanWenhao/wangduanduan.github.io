@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://wdd.js.org/express-static-file-cache-setting-and-cleaning.html</loc>
+    
+    <lastmod>2018-04-08T01:25:41.000Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://wdd.js.org/git-commom-cmds.html</loc>
     
     <lastmod>2018-04-04T01:33:05.000Z</lastmod>

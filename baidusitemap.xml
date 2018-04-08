@@ -4,6 +4,27 @@
 
     
   <url>
+    <loc>https://wdd.js.org/express-static-file-cache-setting-and-cleaning.html</loc>
+    <lastmod>2018-04-08T01:25:41.000Z</lastmod>
+    <data>
+        <display>
+        <title>Express静态文件浏览器缓存设置与缓存清除</title>
+        <pubTime>2018-04-08T01:00:48.000Z</pubTime>
+        
+        <tag>Express</tag>
+         
+        <tag>静态文件</tag>
+         
+        <tag>浏览器缓存</tag>
+         
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>https://wdd.js.org/git-commom-cmds.html</loc>
     <lastmod>2018-04-04T01:33:05.000Z</lastmod>
     <data>
@@ -556,11 +577,11 @@
         <title>Express 代理中间件的写法</title>
         <pubTime>2018-02-18T02:43:05.000Z</pubTime>
         
+        <tag>Express</tag>
+         
         <tag>proxy</tag>
          
         <tag>http</tag>
-         
-        <tag>Express</tag>
          
          
            
@@ -1038,9 +1059,9 @@
         
         <tag>Vue</tag>
          
-        <tag>Vue-router</tag>
-         
         <tag>ElementUI</tag>
+         
+        <tag>Vue-router</tag>
          
          
            
