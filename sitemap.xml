@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://wdd.js.org/2018-reading-plan.html</loc>
+    
+    <lastmod>2018-04-09T05:02:40.000Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://wdd.js.org/express-static-file-cache-setting-and-cleaning.html</loc>
     
     <lastmod>2018-04-08T01:28:18.000Z</lastmod>
@@ -19,13 +26,6 @@
     <loc>https://wdd.js.org/do-not-tolerate-spelling-mistake.html</loc>
     
     <lastmod>2018-04-03T13:01:20.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://wdd.js.org/2018-reading-plan.html</loc>
-    
-    <lastmod>2018-04-01T15:03:52.000Z</lastmod>
     
   </url>
   
