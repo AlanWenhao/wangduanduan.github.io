@@ -4,14 +4,16 @@
 
     
   <url>
-    <loc>https://wdd.js.org/webrtc-tutorial-simple-video-chat.html</loc>
-    <lastmod>2018-04-09T11:46:59.000Z</lastmod>
+    <loc>https://wdd.js.org/2018-reading-plan.html</loc>
+    <lastmod>2018-04-15T14:14:37.000Z</lastmod>
     <data>
         <display>
-        <title>120行代码实现 浏览器WebRTC视频聊天</title>
-        <pubTime>2018-02-09T04:56:12.000Z</pubTime>
+        <title>2018年我的阅读计划</title>
+        <pubTime>2018-02-05T05:42:20.000Z</pubTime>
         
-        <tag>webrtc</tag>
+        <tag>reading</tag>
+         
+        <tag>读书</tag>
          
          
            
@@ -21,16 +23,14 @@
 
     
   <url>
-    <loc>https://wdd.js.org/2018-reading-plan.html</loc>
-    <lastmod>2018-04-09T05:02:40.000Z</lastmod>
+    <loc>https://wdd.js.org/webrtc-tutorial-simple-video-chat.html</loc>
+    <lastmod>2018-04-09T11:46:59.000Z</lastmod>
     <data>
         <display>
-        <title>2018年我的阅读计划</title>
-        <pubTime>2018-02-05T05:42:20.000Z</pubTime>
+        <title>120行代码实现 浏览器WebRTC视频聊天</title>
+        <pubTime>2018-02-09T04:56:12.000Z</pubTime>
         
-        <tag>reading</tag>
-         
-        <tag>读书</tag>
+        <tag>webrtc</tag>
          
          
            
@@ -594,11 +594,11 @@
         <title>Express 代理中间件的写法</title>
         <pubTime>2018-02-18T02:43:05.000Z</pubTime>
         
-        <tag>Express</tag>
-         
         <tag>proxy</tag>
          
         <tag>http</tag>
+         
+        <tag>Express</tag>
          
          
            
@@ -926,9 +926,9 @@
         
         <tag>读书笔记</tag>
          
-        <tag>未完成</tag>
-         
         <tag>主页主义</tag>
+         
+        <tag>未完成</tag>
          
          
            
@@ -947,9 +947,9 @@
         
         <tag>读书笔记</tag>
          
-        <tag>失控</tag>
-         
         <tag>未完成</tag>
+         
+        <tag>失控</tag>
          
          
            
@@ -998,9 +998,9 @@
         <title>可能被遗漏的https与http的知识点</title>
         <pubTime>2018-02-08T01:10:59.000Z</pubTime>
         
-        <tag>http</tag>
-         
         <tag>https</tag>
+         
+        <tag>http</tag>
          
          
            
