@@ -4,6 +4,21 @@
 
     
   <url>
+    <loc>https://wdd.js.org/gitup-the-git-gui-you-will-like.html</loc>
+    <lastmod>2018-04-24T12:55:17.000Z</lastmod>
+    <data>
+        <display>
+        <title>GitUp, 你不可错过的秀外慧中的git工具</title>
+        <pubTime>2018-04-24T10:03:44.000Z</pubTime>
+        
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>https://wdd.js.org/what-is-work-experience.html</loc>
     <lastmod>2018-04-22T12:19:25.000Z</lastmod>
     <data>
@@ -1074,9 +1089,9 @@
         
         <tag>Vue</tag>
          
-        <tag>ElementUI</tag>
-         
         <tag>Vue-router</tag>
+         
+        <tag>ElementUI</tag>
          
          
            
