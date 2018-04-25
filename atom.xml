@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://wdd.js.org/"/>
-  <updated>2018-04-25T05:04:44.000Z</updated>
+  <updated>2018-04-25T06:09:03.000Z</updated>
   <id>https://wdd.js.org/</id>
   
   <author>
@@ -17,11 +17,41 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>金钱游戏 - 银行造钱的秘密</title>
+    <link href="https://wdd.js.org/the-secret-of-bank-create-money.html"/>
+    <id>https://wdd.js.org/the-secret-of-bank-create-money.html</id>
+    <published>2018-04-25T05:33:52.000Z</published>
+    <updated>2018-04-25T06:09:03.000Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="1-角色划分"><a href="#1-角色划分" class="headerlink" title="1. 角色划分"></a>1. 角色划分</h1><table><thead><tr><th>名称</th><th>角色</th><th>账户</th></tr></thead><tbody><tr><td>A</td><td>银行家</td><td>0 </td></tr><tr><td>B</td><td>建筑商</td><td>100万 </td></tr><tr><td>C</td><td>商人</td><td>0</td></tr></tbody></table><h1 id="2-建筑商向银行存储100万"><a href="#2-建筑商向银行存储100万" class="headerlink" title="2. 建筑商向银行存储100万"></a>2. 建筑商向银行存储100万</h1><table><thead><tr><th>名称</th><th>角色</th><th>账户 </th></tr></thead><tbody><tr><td>A</td><td>银行家</td><td>100万 现金</td></tr><tr><td>B</td><td>建筑商</td><td>100万 支票</td></tr><tr><td>C</td><td>商人</td><td>0  </td></tr></tbody></table><h1 id="2-商人向银行贷款100万"><a href="#2-商人向银行贷款100万" class="headerlink" title="2. 商人向银行贷款100万"></a>2. 商人向银行贷款100万</h1><p>此时银行的账户存款已经是0了，但是B还在银行存了100万。那银行究竟是还有100万呢, 还是一毛都没有了呢。</p><p>此时建筑商如果要取现金，那么银行马上就要破产。</p><table><thead><tr><th>名称</th><th>角色</th><th>账户</th></tr></thead><tbody><tr><td>A</td><td>银行家</td><td>100现金</td></tr><tr><td>B</td><td>建筑商</td><td>100万 支票</td></tr><tr><td>C</td><td>商人</td><td>100万 支票</td></tr></tbody></table><h1 id="3-商人需要建筑商来建造房子"><a href="#3-商人需要建筑商来建造房子" class="headerlink" title="3. 商人需要建筑商来建造房子"></a>3. 商人需要建筑商来建造房子</h1><p>商人需要建筑商来建筑房子，费用是100万，付给建筑商，建筑商又把100支票存到银行</p><table><thead><tr><th>名称</th><th>角色</th><th>账户</th></tr></thead><tbody><tr><td>A</td><td>银行家</td><td>100万现金</td></tr><tr><td>B</td><td>建筑商</td><td>200万 支票</td></tr><tr><td>C</td><td>商人</td><td>0</td></tr></tbody></table><p>商人又从银行借钱100万，来付给建筑商建房子，建筑商把钱存到银行</p><table><thead><tr><th>名称</th><th>角色</th><th>账户</th></tr></thead><tbody><tr><td>A</td><td>银行家</td><td>100万现金</td></tr><tr><td>B</td><td>建筑商</td><td>300万 支票</td></tr><tr><td>C</td><td>商人</td><td>0</td></tr></tbody></table><p>只要这个循环还在继续，你会发现，建筑商的账面上的支票越来越多，但是银行始终都是100万现金存在那里，从来都没动过。</p><p><code>💰就这样魔术般的产生</code>， 如果银行那一天缺钱了，银行就拿一张纸出来，上面写着<code>1000万</code>。看！银行造钱就是那么容易。</p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h1 id=&quot;1-角色划分&quot;&gt;&lt;a href=&quot;#1-角色划分&quot; class=&quot;headerlink&quot; title=&quot;1. 角色划分&quot;&gt;&lt;/a&gt;1. 角色划分&lt;/h1&gt;&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;名称&lt;/th&gt;
+&lt;th&gt;角色&lt;/th&gt;
+&lt;th&gt;账户&lt;/th
+      
+    
+    </summary>
+    
+    
+      <category term="财商" scheme="https://wdd.js.org/tags/%E8%B4%A2%E5%95%86/"/>
+    
+      <category term="财富" scheme="https://wdd.js.org/tags/%E8%B4%A2%E5%AF%8C/"/>
+    
+  </entry>
+  
+  <entry>
     <title>从美剧犯罪心理学习解决Bug的思路</title>
     <link href="https://wdd.js.org/criminal-mind-and-bug-fix.html"/>
     <id>https://wdd.js.org/criminal-mind-and-bug-fix.html</id>
     <published>2018-04-24T13:05:16.000Z</published>
-    <updated>2018-04-25T05:04:44.000Z</updated>
+    <updated>2018-04-25T05:32:01.000Z</updated>
     
     <content type="html"><![CDATA[<p><img src="http://p3alsaatj.bkt.clouddn.com/20180424210625_plfStH_1925476-30f31d37becb81f7.jpeg" alt=""></p><h1 id="死亡时间-vs-问题时间"><a href="#死亡时间-vs-问题时间" class="headerlink" title="死亡时间 vs 问题时间"></a>死亡时间 vs 问题时间</h1><h1 id="现场恢复-vs-上下文"><a href="#现场恢复-vs-上下文" class="headerlink" title="现场恢复 vs 上下文"></a>现场恢复 vs 上下文</h1><h1 id="Trigger-vs-如何触发"><a href="#Trigger-vs-如何触发" class="headerlink" title="Trigger vs 如何触发"></a>Trigger vs 如何触发</h1><h1 id="概率-vs"><a href="#概率-vs" class="headerlink" title="概率 vs"></a>概率 vs</h1><p>最后，Aaron大写的帅啊！</p><p><img src="http://p3alsaatj.bkt.clouddn.com/20180424211055_ikM8Ez_a4b3dea5a85c012ca065abb86ec668d3_hd.jpeg" alt=""></p>]]></content>
     
@@ -37,6 +67,8 @@
     
     
       <category term="未完成" scheme="https://wdd.js.org/tags/%E6%9C%AA%E5%AE%8C%E6%88%90/"/>
+    
+      <category term="犯罪心理" scheme="https://wdd.js.org/tags/%E7%8A%AF%E7%BD%AA%E5%BF%83%E7%90%86/"/>
     
   </entry>
   
@@ -460,33 +492,6 @@
     
     
       <category term="职业规划" scheme="https://wdd.js.org/tags/%E8%81%8C%E4%B8%9A%E8%A7%84%E5%88%92/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Chrome本地跨域origin-null-is-not-allowed问题分析与解决方案</title>
-    <link href="https://wdd.js.org/origin-null-is-not-allowed.html"/>
-    <id>https://wdd.js.org/origin-null-is-not-allowed.html</id>
-    <published>2018-03-09T09:58:05.000Z</published>
-    <updated>2018-03-09T10:24:22.000Z</updated>
-    
-    <content type="html"><![CDATA[<h1 id="1-问题表现"><a href="#1-问题表现" class="headerlink" title="1. 问题表现"></a>1. 问题表现</h1><p>以<code>file:///xxx.html</code>打开某个html文件，发送ajax请求时报错：</p><figure class="highlight vhdl"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Response <span class="keyword">to</span> preflight request doesn<span class="symbol">'t</span> pass <span class="keyword">access</span> control check: The <span class="symbol">'Access</span>-Control-Allow-Origin' header has a value <span class="symbol">'null</span>' that <span class="keyword">is</span> <span class="keyword">not</span> equal <span class="keyword">to</span> the supplied origin. Origin <span class="symbol">'null</span>' <span class="keyword">is</span> therefore <span class="keyword">not</span> allowed <span class="keyword">access</span>.</span><br></pre></td></tr></table></figure><h1 id="2-问题原因"><a href="#2-问题原因" class="headerlink" title="2. 问题原因"></a>2. 问题原因</h1><p>Origin null是本地文件系统，因此这表明您正在加载通过file：// URL进行加载调用的HTML页面（例如，只需在本地文件浏览器或类似文件中双击它）。不同的浏览器采用不同的方法将相同来源策略应用到本地文件。<code>Chrome要求比较严格，不允许这种形势的跨域请求。</code>而最好使用http:// 访问html.</p><h1 id="3-解决方案"><a href="#3-解决方案" class="headerlink" title="3. 解决方案"></a>3. 解决方案</h1><p>以下给出三个解决方案，第一个最快，第三个作为彻底。</p><h2 id="3-1-方案1-给Chrome快捷方式中增加-–allow-file-access-from-files"><a href="#3-1-方案1-给Chrome快捷方式中增加-–allow-file-access-from-files" class="headerlink" title="3.1. 方案1 给Chrome快捷方式中增加 –allow-file-access-from-files"></a>3.1. 方案1 给Chrome快捷方式中增加 –allow-file-access-from-files</h2><p>打开Chrome快捷方式的属性中设置：右击Chrome浏览器快捷方式，选择“属性”，在“目标”中加”–allow-file-access-from-files”，注意前面有个空格，重启Chrome浏览器便可。</p><p><img src="http://p3alsaatj.bkt.clouddn.com/20180309181105_SUxYRg_Screenshot.jpeg" alt=""></p><h2 id="3-2-方案2-启动一个简单的静态文件服务器-以http协议访问html"><a href="#3-2-方案2-启动一个简单的静态文件服务器-以http协议访问html" class="headerlink" title="3.2. 方案2 启动一个简单的静态文件服务器, 以http协议访问html"></a>3.2. 方案2 启动一个简单的静态文件服务器, 以http协议访问html</h2><p>参见我的这篇文章: <a href="https://wdd.js.org/one-command-create-static-file-server.html">一行命令搭建简易静态文件http服务器</a></p><h2 id="3-3-方案3-服务端响应修改Access-Control-Allow-Origin"><a href="#3-3-方案3-服务端响应修改Access-Control-Allow-Origin" class="headerlink" title="3.3. 方案3 服务端响应修改Access-Control-Allow-Origin : *"></a>3.3. 方案3 服务端响应修改Access-Control-Allow-Origin : *</h2><figure class="highlight less"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">response</span><span class="selector-class">.addHeader</span>(<span class="string">"Access-Control-Allow-Origin"</span>,<span class="string">"*"</span>)</span><br></pre></td></tr></table></figure><h1 id="4-参考文章"><a href="#4-参考文章" class="headerlink" title="4. 参考文章"></a>4. 参考文章</h1><ul><li><a href="http://blog.csdn.net/dandanzmc/article/details/31344267" target="_blank" rel="noopener">如何解决XMLHttpRequest cannot load file<del>~</del>~~Origin ‘null’ is therefore not allowed access</a></li><li><a href="http://blog.csdn.net/kissliux/article/details/16889111" target="_blank" rel="noopener">让chrome支持本地Ajax请求,Ajax请求status cancel Origin null is not allowed by Access-Control-Allow-Origin</a></li><li><a href="https://stackoverflow.com/questions/8456538/origin-null-is-not-allowed-by-access-control-allow-origin" target="_blank" rel="noopener">Origin null is not allowed by Access-Control-Allow-Origin</a></li></ul>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;h1 id=&quot;1-问题表现&quot;&gt;&lt;a href=&quot;#1-问题表现&quot; class=&quot;headerlink&quot; title=&quot;1. 问题表现&quot;&gt;&lt;/a&gt;1. 问题表现&lt;/h1&gt;&lt;p&gt;以&lt;code&gt;file:///xxx.html&lt;/code&gt;打开某个html文件，发送ajax请求时报错
-      
-    
-    </summary>
-    
-    
-      <category term="chrome" scheme="https://wdd.js.org/tags/chrome/"/>
-    
-      <category term="跨域" scheme="https://wdd.js.org/tags/%E8%B7%A8%E5%9F%9F/"/>
-    
-      <category term="origin-null-is-not-allowed" scheme="https://wdd.js.org/tags/origin-null-is-not-allowed/"/>
     
   </entry>
   

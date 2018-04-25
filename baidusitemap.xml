@@ -4,14 +4,35 @@
 
     
   <url>
+    <loc>https://wdd.js.org/the-secret-of-bank-create-money.html</loc>
+    <lastmod>2018-04-25T06:09:03.000Z</lastmod>
+    <data>
+        <display>
+        <title>金钱游戏 - 银行造钱的秘密</title>
+        <pubTime>2018-04-25T05:33:52.000Z</pubTime>
+        
+        <tag>财商</tag>
+         
+        <tag>财富</tag>
+         
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>https://wdd.js.org/criminal-mind-and-bug-fix.html</loc>
-    <lastmod>2018-04-25T05:04:44.000Z</lastmod>
+    <lastmod>2018-04-25T05:32:01.000Z</lastmod>
     <data>
         <display>
         <title>从美剧犯罪心理学习解决Bug的思路</title>
         <pubTime>2018-04-24T13:05:16.000Z</pubTime>
         
         <tag>未完成</tag>
+         
+        <tag>犯罪心理</tag>
          
          
            
@@ -1045,9 +1066,9 @@
         <title>可能被遗漏的https与http的知识点</title>
         <pubTime>2018-02-08T01:10:59.000Z</pubTime>
         
-        <tag>https</tag>
-         
         <tag>http</tag>
+         
+        <tag>https</tag>
          
          
            
