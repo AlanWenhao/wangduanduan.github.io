@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://wdd.js.org/"/>
-  <updated>2018-04-24T12:59:37.000Z</updated>
+  <updated>2018-04-25T05:04:44.000Z</updated>
   <id>https://wdd.js.org/</id>
   
   <author>
@@ -15,6 +15,30 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>从美剧犯罪心理学习解决Bug的思路</title>
+    <link href="https://wdd.js.org/criminal-mind-and-bug-fix.html"/>
+    <id>https://wdd.js.org/criminal-mind-and-bug-fix.html</id>
+    <published>2018-04-24T13:05:16.000Z</published>
+    <updated>2018-04-25T05:04:44.000Z</updated>
+    
+    <content type="html"><![CDATA[<p><img src="http://p3alsaatj.bkt.clouddn.com/20180424210625_plfStH_1925476-30f31d37becb81f7.jpeg" alt=""></p><h1 id="死亡时间-vs-问题时间"><a href="#死亡时间-vs-问题时间" class="headerlink" title="死亡时间 vs 问题时间"></a>死亡时间 vs 问题时间</h1><h1 id="现场恢复-vs-上下文"><a href="#现场恢复-vs-上下文" class="headerlink" title="现场恢复 vs 上下文"></a>现场恢复 vs 上下文</h1><h1 id="Trigger-vs-如何触发"><a href="#Trigger-vs-如何触发" class="headerlink" title="Trigger vs 如何触发"></a>Trigger vs 如何触发</h1><h1 id="概率-vs"><a href="#概率-vs" class="headerlink" title="概率 vs"></a>概率 vs</h1><p>最后，Aaron大写的帅啊！</p><p><img src="http://p3alsaatj.bkt.clouddn.com/20180424211055_ikM8Ez_a4b3dea5a85c012ca065abb86ec668d3_hd.jpeg" alt=""></p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;&lt;img src=&quot;http://p3alsaatj.bkt.clouddn.com/20180424210625_plfStH_1925476-30f31d37becb81f7.jpeg&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
+&lt;h1 id=&quot;死亡时间-vs-问题时间&quot;&gt;&lt;a href
+      
+    
+    </summary>
+    
+    
+      <category term="未完成" scheme="https://wdd.js.org/tags/%E6%9C%AA%E5%AE%8C%E6%88%90/"/>
+    
+  </entry>
   
   <entry>
     <title>GitUp, 你不可错过的秀外慧中的git工具</title>
@@ -139,9 +163,9 @@
     <link href="https://wdd.js.org/websocket-close-reasons.html"/>
     <id>https://wdd.js.org/websocket-close-reasons.html</id>
     <published>2018-03-29T12:35:38.000Z</published>
-    <updated>2018-03-29T13:18:41.000Z</updated>
+    <updated>2018-04-25T03:22:39.000Z</updated>
     
-    <content type="html"><![CDATA[<h1 id="1-把错误打印出来"><a href="#1-把错误打印出来" class="headerlink" title="1. 把错误打印出来"></a>1. 把错误打印出来</h1><p>WebSocket断开的原因有很多，最好在WebSocket断开时，将错误打印出来。</p><p>在线demo地址：<a href="https://wdd.js.org/websocket-demos/">https://wdd.js.org/websocket-demos/</a></p><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">ws.onerror = <span class="function"><span class="keyword">function</span> (<span class="params">e</span>) </span>&#123;</span><br><span class="line">  <span class="built_in">console</span>.log(<span class="string">'WebSocket发生错误: '</span> + e.code)</span><br><span class="line">  <span class="built_in">console</span>.log(e)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><blockquote><p>如果你想自己玩玩WebSocket, 但是你又不想自己部署一个WebSocket服务器，你可以使用<code>ws = new WebSocket(&#39;wss://echo.websocket.org/&#39;)</code>, 你向echo.websocket.org发送消息，它会回复你同样的消息。</p></blockquote><h1 id="2-重要信息错误状态码"><a href="#2-重要信息错误状态码" class="headerlink" title="2. 重要信息错误状态码"></a>2. 重要信息错误状态码</h1><p>WebSocket断开时，会触发<code>CloseEvent</code>, CloseEvent会在连接关闭时发送给使用 WebSockets 的客户端. 它在 WebSocket 对象的 onclose 事件监听器中使用。CloseEvent的code字段表示了WebSocket断开的原因。可以从该字段中分析断开的原因。</p><p><img src="http://p3alsaatj.bkt.clouddn.com/20180329204553_TjCFdu_Jietu20180329-204536.jpeg" alt=""></p><h1 id="3-关闭状态码表"><a href="#3-关闭状态码表" class="headerlink" title="3. 关闭状态码表"></a>3. 关闭状态码表</h1><p>一般来说<code>1006</code>的错误码出现的情况比较常见，该错误码一般出现在断网时。</p><table><thead><tr><th>状态码</th><th>名称</th><th>描述</th></tr></thead><tbody><tr><td>0–999</td><td></td><td>保留段, 未使用.</td></tr><tr><td>1000</td><td>CLOSE_NORMAL</td><td>正常关闭; 无论为何目的而创建, 该链接都已成功完成任务.</td></tr><tr><td>1001</td><td>CLOSE_GOING_AWAY</td><td>终端离开, 可能因为服务端错误, 也可能因为浏览器正从打开连接的页面跳转离开.</td></tr><tr><td>1002</td><td>CLOSE_PROTOCOL_ERROR</td><td>由于协议错误而中断连接.</td></tr><tr><td>1003</td><td>CLOSE_UNSUPPORTED</td><td>由于接收到不允许的数据类型而断开连接 (如仅接收文本数据的终端接收到了二进制数据).</td></tr><tr><td>1004</td><td></td><td><code>保留</code>. 其意义可能会在未来定义.</td></tr><tr><td>1005</td><td>CLOSE_NO_STATUS</td><td><code>保留</code>.  表示没有收到预期的状态码.</td></tr><tr><td><code>1006</code></td><td>CLOSE_ABNORMAL</td><td><code>保留</code>. 用于期望收到状态码时连接非正常关闭 (也就是说, 没有发送关闭帧).</td></tr><tr><td>1007</td><td>Unsupported Data</td><td>由于收到了格式不符的数据而断开连接 (如文本消息中包含了非 UTF-8 数据).</td></tr><tr><td>1008</td><td>Policy Violation</td><td>由于收到不符合约定的数据而断开连接. 这是一个通用状态码, 用于不适合使用 1003 和 1009 状态码的场景.</td></tr><tr><td>1009</td><td>CLOSE_TOO_LARGE</td><td>由于收到过大的数据帧而断开连接.</td></tr><tr><td>1010</td><td>Missing Extension</td><td>客户端期望服务器商定一个或多个拓展, 但服务器没有处理, 因此客户端断开连接.</td></tr><tr><td>1011</td><td>Internal Error</td><td>客户端由于遇到没有预料的情况阻止其完成请求, 因此服务端断开连接.</td></tr><tr><td>1012</td><td>Service Restart</td><td>服务器由于重启而断开连接. </td></tr><tr><td>1013</td><td>Try Again Later</td><td>服务器由于临时原因断开连接, 如服务器过载因此断开一部分客户端连接. </td></tr><tr><td>1014</td><td></td><td>由 WebSocket标准保留以便未来使用.</td></tr><tr><td>1015</td><td>TLS Handshake</td><td>保留. 表示连接由于无法完成 TLS 握手而关闭 (例如无法验证服务器证书).</td></tr><tr><td>1016–1999</td><td></td><td>由 WebSocket标准保留以便未来使用.</td></tr><tr><td>2000–2999</td><td></td><td>由 WebSocket拓展保留使用.</td></tr><tr><td>3000–3999</td><td></td><td>可以由库或框架使用.? 不应由应用使用. 可以在 IANA 注册, 先到先得.</td></tr><tr><td>4000–4999</td><td></td><td>可以由应用使用.</td></tr></tbody></table><h1 id="4-其他注意事项"><a href="#4-其他注意事项" class="headerlink" title="4. 其他注意事项"></a>4. 其他注意事项</h1><p>如果你的服务所在的域是HTTPS的，那么使用的WebSocket协议也必须是<code>wss</code>, 而不能是<code>ws</code></p><h1 id="5-如何在老IE上使用原生WebSocket？"><a href="#5-如何在老IE上使用原生WebSocket？" class="headerlink" title="5. 如何在老IE上使用原生WebSocket？"></a>5. 如何在老IE上使用原生WebSocket？</h1><p><a href="https://github.com/gimite/web-socket-js" target="_blank" rel="noopener">web-socket-js</a>是基于flash的技术，只需要引入两个js文件和一个swf文件，就可以让浏览器用于几乎原生的WebSocket接口。另外，web-socket-js还是需要在ws服务端843端口做一个flash安全策略文件的服务。</p><p>我自己曾经基于stompjs和web-socket-js，做WebSocket兼容到IE5, 当然了stompjs在低版本的IE上有兼容性问题, 而且stompjs已经不再维护了，你可以使用我fork的一个版本，地址是：<a href="https://github.com/wangduanduan/stomp-websocket/blob/master/lib/stomp.js" target="_blank" rel="noopener">https://github.com/wangduanduan/stomp-websocket/blob/master/lib/stomp.js</a></p><p>主要是老版本IE在正则表达式行为方面有点异常。</p><figure class="highlight gcode"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="comment">// fix ie8, ie9, RegExp not normal problem</span></span><br><span class="line"><span class="comment">// in chrome the frames length will be 2, but in ie8, ie9, it well be 1</span></span><br><span class="line"><span class="comment">// by wdd 20180321</span></span><br><span class="line"><span class="keyword">if</span> <span class="comment">(frames.length === 1)</span> &#123;</span><br><span class="line">  frames.push<span class="comment">('')</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><h1 id="6-参考"><a href="#6-参考" class="headerlink" title="6. 参考"></a>6. 参考</h1><ul><li><a href="https://developer.mozilla.org/zh-CN/docs/Web/API/CloseEvent" target="_blank" rel="noopener">CloseEvent</a></li><li><a href="https://stackoverflow.com/questions/19304157/getting-the-reason-why-websockets-closed-with-close-code-1006" target="_blank" rel="noopener">getting the reason why websockets closed with close code 1006</a></li><li><a href="https://tools.ietf.org/html/rfc6455#section-7.4.1" target="_blank" rel="noopener">Defined Status Codes</a></li></ul>]]></content>
+    <content type="html"><![CDATA[<h1 id="1-把错误打印出来"><a href="#1-把错误打印出来" class="headerlink" title="1. 把错误打印出来"></a>1. 把错误打印出来</h1><p>WebSocket断开的原因有很多，最好在WebSocket断开时，将错误打印出来。</p><p>在线demo地址：<a href="https://wdd.js.org/websocket-demos/">https://wdd.js.org/websocket-demos/</a></p><p><img src="http://p3alsaatj.bkt.clouddn.com/20180425112232_cxPVAD_Jietu20180425-112142.jpeg" alt=""></p><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">ws.onerror = <span class="function"><span class="keyword">function</span> (<span class="params">e</span>) </span>&#123;</span><br><span class="line">  <span class="built_in">console</span>.log(<span class="string">'WebSocket发生错误: '</span> + e.code)</span><br><span class="line">  <span class="built_in">console</span>.log(e)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><blockquote><p>如果你想自己玩玩WebSocket, 但是你又不想自己部署一个WebSocket服务器，你可以使用<code>ws = new WebSocket(&#39;wss://echo.websocket.org/&#39;)</code>, 你向echo.websocket.org发送消息，它会回复你同样的消息。</p></blockquote><h1 id="2-重要信息错误状态码"><a href="#2-重要信息错误状态码" class="headerlink" title="2. 重要信息错误状态码"></a>2. 重要信息错误状态码</h1><p>WebSocket断开时，会触发<code>CloseEvent</code>, CloseEvent会在连接关闭时发送给使用 WebSockets 的客户端. 它在 WebSocket 对象的 onclose 事件监听器中使用。CloseEvent的code字段表示了WebSocket断开的原因。可以从该字段中分析断开的原因。</p><p><img src="http://p3alsaatj.bkt.clouddn.com/20180329204553_TjCFdu_Jietu20180329-204536.jpeg" alt=""></p><h1 id="3-关闭状态码表"><a href="#3-关闭状态码表" class="headerlink" title="3. 关闭状态码表"></a>3. 关闭状态码表</h1><p>一般来说<code>1006</code>的错误码出现的情况比较常见，该错误码一般出现在断网时。</p><table><thead><tr><th>状态码</th><th>名称</th><th>描述</th></tr></thead><tbody><tr><td>0–999</td><td></td><td>保留段, 未使用.</td></tr><tr><td>1000</td><td>CLOSE_NORMAL</td><td>正常关闭; 无论为何目的而创建, 该链接都已成功完成任务.</td></tr><tr><td>1001</td><td>CLOSE_GOING_AWAY</td><td>终端离开, 可能因为服务端错误, 也可能因为浏览器正从打开连接的页面跳转离开.</td></tr><tr><td>1002</td><td>CLOSE_PROTOCOL_ERROR</td><td>由于协议错误而中断连接.</td></tr><tr><td>1003</td><td>CLOSE_UNSUPPORTED</td><td>由于接收到不允许的数据类型而断开连接 (如仅接收文本数据的终端接收到了二进制数据).</td></tr><tr><td>1004</td><td></td><td><code>保留</code>. 其意义可能会在未来定义.</td></tr><tr><td>1005</td><td>CLOSE_NO_STATUS</td><td><code>保留</code>.  表示没有收到预期的状态码.</td></tr><tr><td><code>1006</code></td><td>CLOSE_ABNORMAL</td><td><code>保留</code>. 用于期望收到状态码时连接非正常关闭 (也就是说, 没有发送关闭帧).</td></tr><tr><td>1007</td><td>Unsupported Data</td><td>由于收到了格式不符的数据而断开连接 (如文本消息中包含了非 UTF-8 数据).</td></tr><tr><td>1008</td><td>Policy Violation</td><td>由于收到不符合约定的数据而断开连接. 这是一个通用状态码, 用于不适合使用 1003 和 1009 状态码的场景.</td></tr><tr><td>1009</td><td>CLOSE_TOO_LARGE</td><td>由于收到过大的数据帧而断开连接.</td></tr><tr><td>1010</td><td>Missing Extension</td><td>客户端期望服务器商定一个或多个拓展, 但服务器没有处理, 因此客户端断开连接.</td></tr><tr><td>1011</td><td>Internal Error</td><td>客户端由于遇到没有预料的情况阻止其完成请求, 因此服务端断开连接.</td></tr><tr><td>1012</td><td>Service Restart</td><td>服务器由于重启而断开连接. </td></tr><tr><td>1013</td><td>Try Again Later</td><td>服务器由于临时原因断开连接, 如服务器过载因此断开一部分客户端连接. </td></tr><tr><td>1014</td><td></td><td>由 WebSocket标准保留以便未来使用.</td></tr><tr><td>1015</td><td>TLS Handshake</td><td>保留. 表示连接由于无法完成 TLS 握手而关闭 (例如无法验证服务器证书).</td></tr><tr><td>1016–1999</td><td></td><td>由 WebSocket标准保留以便未来使用.</td></tr><tr><td>2000–2999</td><td></td><td>由 WebSocket拓展保留使用.</td></tr><tr><td>3000–3999</td><td></td><td>可以由库或框架使用.? 不应由应用使用. 可以在 IANA 注册, 先到先得.</td></tr><tr><td>4000–4999</td><td></td><td>可以由应用使用.</td></tr></tbody></table><h1 id="4-其他注意事项"><a href="#4-其他注意事项" class="headerlink" title="4. 其他注意事项"></a>4. 其他注意事项</h1><p>如果你的服务所在的域是HTTPS的，那么使用的WebSocket协议也必须是<code>wss</code>, 而不能是<code>ws</code></p><h1 id="5-如何在老IE上使用原生WebSocket？"><a href="#5-如何在老IE上使用原生WebSocket？" class="headerlink" title="5. 如何在老IE上使用原生WebSocket？"></a>5. 如何在老IE上使用原生WebSocket？</h1><p><a href="https://github.com/gimite/web-socket-js" target="_blank" rel="noopener">web-socket-js</a>是基于flash的技术，只需要引入两个js文件和一个swf文件，就可以让浏览器用于几乎原生的WebSocket接口。另外，web-socket-js还是需要在ws服务端843端口做一个flash安全策略文件的服务。</p><p>我自己曾经基于stompjs和web-socket-js，做WebSocket兼容到IE5, 当然了stompjs在低版本的IE上有兼容性问题, 而且stompjs已经不再维护了，你可以使用我fork的一个版本，地址是：<a href="https://github.com/wangduanduan/stomp-websocket/blob/master/lib/stomp.js" target="_blank" rel="noopener">https://github.com/wangduanduan/stomp-websocket/blob/master/lib/stomp.js</a></p><p>主要是老版本IE在正则表达式行为方面有点异常。</p><figure class="highlight gcode"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="comment">// fix ie8, ie9, RegExp not normal problem</span></span><br><span class="line"><span class="comment">// in chrome the frames length will be 2, but in ie8, ie9, it well be 1</span></span><br><span class="line"><span class="comment">// by wdd 20180321</span></span><br><span class="line"><span class="keyword">if</span> <span class="comment">(frames.length === 1)</span> &#123;</span><br><span class="line">  frames.push<span class="comment">('')</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><h1 id="6-参考"><a href="#6-参考" class="headerlink" title="6. 参考"></a>6. 参考</h1><ul><li><a href="https://developer.mozilla.org/zh-CN/docs/Web/API/CloseEvent" target="_blank" rel="noopener">CloseEvent</a></li><li><a href="https://stackoverflow.com/questions/19304157/getting-the-reason-why-websockets-closed-with-close-code-1006" target="_blank" rel="noopener">getting the reason why websockets closed with close code 1006</a></li><li><a href="https://tools.ietf.org/html/rfc6455#section-7.4.1" target="_blank" rel="noopener">Defined Status Codes</a></li></ul>]]></content>
     
     <summary type="html">
     
@@ -463,31 +487,6 @@
       <category term="跨域" scheme="https://wdd.js.org/tags/%E8%B7%A8%E5%9F%9F/"/>
     
       <category term="origin-null-is-not-allowed" scheme="https://wdd.js.org/tags/origin-null-is-not-allowed/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>曲线救国 使用googler命令行搜索</title>
-    <link href="https://wdd.js.org/use-googler-for-serarch.html"/>
-    <id>https://wdd.js.org/use-googler-for-serarch.html</id>
-    <published>2018-03-06T03:15:38.000Z</published>
-    <updated>2018-03-06T03:33:31.000Z</updated>
-    
-    <content type="html"><![CDATA[<p>之前因为有优惠政策，于是我在xx云上买了一台位于香港的最低配置的服务器，期限三年，主要用来搭建ss, 用来跨栏。</p><p>用了一段时间，感觉挺稳定的。后来一纸通知，收到了整改信息。于是我就把ss服务停了。</p><p>三年的主机不能浪费，于是我就思考一下曲线救国的思路。</p><p>即使用<code>ssh链接上远程服务器后，使用googler命令进行搜索，然后点击链接，使用本地浏览器打开搜索结果</code></p><p>关于googler可以查看，<a href="https://github.com/jarun/googler#installation" target="_blank" rel="noopener">https://github.com/jarun/googler#installation</a></p><p><img src="http://p3alsaatj.bkt.clouddn.com/20180306113311_LrY1wY_68747470733a2f2f73312e706f7374696d672e6f72672f3168673278316471726a2f676f6f676c65722e706e67.jpeg" alt=""></p>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;p&gt;之前因为有优惠政策，于是我在xx云上买了一台位于香港的最低配置的服务器，期限三年，主要用来搭建ss, 用来跨栏。&lt;/p&gt;
-&lt;p&gt;用了一段时间，感觉挺稳定的。后来一纸通知，收到了整改信息。于是我就把ss服务停了。&lt;/p&gt;
-&lt;p&gt;三年的主机不能浪费，于是我就思考一下曲线救国的思
-      
-    
-    </summary>
-    
-    
-      <category term="谷歌" scheme="https://wdd.js.org/tags/%E8%B0%B7%E6%AD%8C/"/>
     
   </entry>
   

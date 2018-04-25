@@ -4,6 +4,40 @@
 
     
   <url>
+    <loc>https://wdd.js.org/criminal-mind-and-bug-fix.html</loc>
+    <lastmod>2018-04-25T05:04:44.000Z</lastmod>
+    <data>
+        <display>
+        <title>从美剧犯罪心理学习解决Bug的思路</title>
+        <pubTime>2018-04-24T13:05:16.000Z</pubTime>
+        
+        <tag>未完成</tag>
+         
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>https://wdd.js.org/websocket-close-reasons.html</loc>
+    <lastmod>2018-04-25T03:22:39.000Z</lastmod>
+    <data>
+        <display>
+        <title>WebSocket断开原因分析</title>
+        <pubTime>2018-03-29T12:35:38.000Z</pubTime>
+        
+        <tag>WebSocket</tag>
+         
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>https://wdd.js.org/gitup-the-git-gui-you-will-like.html</loc>
     <lastmod>2018-04-24T12:59:37.000Z</lastmod>
     <data>
@@ -152,23 +186,6 @@
         <tag>面试</tag>
          
         <tag>笔试</tag>
-         
-         
-           
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>https://wdd.js.org/websocket-close-reasons.html</loc>
-    <lastmod>2018-03-29T13:18:41.000Z</lastmod>
-    <data>
-        <display>
-        <title>WebSocket断开原因分析</title>
-        <pubTime>2018-03-29T12:35:38.000Z</pubTime>
-        
-        <tag>WebSocket</tag>
          
          
            
@@ -1089,9 +1106,9 @@
         
         <tag>Vue</tag>
          
-        <tag>Vue-router</tag>
-         
         <tag>ElementUI</tag>
+         
+        <tag>Vue-router</tag>
          
          
            
