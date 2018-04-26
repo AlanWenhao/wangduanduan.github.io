@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://wdd.js.org/"/>
-  <updated>2018-04-25T06:09:03.000Z</updated>
+  <updated>2018-04-26T10:17:19.000Z</updated>
   <id>https://wdd.js.org/</id>
   
   <author>
@@ -15,6 +15,31 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>master-google-search-command</title>
+    <link href="https://wdd.js.org/master-google-search-command.html"/>
+    <id>https://wdd.js.org/master-google-search-command.html</id>
+    <published>2018-04-26T08:56:01.000Z</published>
+    <updated>2018-04-26T10:17:19.000Z</updated>
+    
+    <content type="html"><![CDATA[<!-- TOC --><ul><li><a href="#1-谷歌搜索指令">1. 谷歌搜索指令</a></li><li><a href="#2-基本命令">2. 基本命令</a></li><li><a href="#3-关键词使用">3. 关键词使用</a></li><li><a href="#4-特殊工具">4. 特殊工具</a><ul><li><a href="#41-define-快速返回关键词定义">4.1. define 快速返回关键词定义</a></li><li><a href="#42-计算器">4.2. 计算器</a></li><li><a href="#43-单位转换">4.3. 单位转换</a></li><li><a href="#44-时区查询">4.4. 时区查询</a></li><li><a href="#45-地区查询">4.5. 地区查询</a></li><li><a href="#46-天气查询">4.6. 天气查询</a></li></ul></li><li><a href="#5-自定义搜索">5. 自定义搜索</a></li><li><a href="#6-参考">6. 参考</a></li></ul><!-- /TOC --><h1 id="1-谷歌搜索指令"><a href="#1-谷歌搜索指令" class="headerlink" title="1. 谷歌搜索指令"></a>1. 谷歌搜索指令</h1><h1 id="2-基本命令"><a href="#2-基本命令" class="headerlink" title="2. 基本命令"></a>2. 基本命令</h1><table><thead><tr><th>符号</th><th>简介</th><th>语法</th><th>注意点</th><th>示例</th></tr></thead><tbody><tr><td>+</td><td>包含A且必须包含B</td><td>A +B</td><td>A和+之间有空格</td><td>Maxwell +wills</td></tr><tr><td>-</td><td>包含A且不包含B</td><td>A -B</td><td>A和+之间有空格</td><td>Maxwell -Absolom</td></tr><tr><td>“ “</td><td>完整匹配AB</td><td>“AB”</td><td></td><td>“Thomas Jefferson”</td></tr><tr><td>OR</td><td>包含A或者B</td><td><code>A OR B</code> 或者 `A</td><td>B`</td><td></td><td>nodejs OR webpack</td></tr><tr><td>+-“OR</td><td>指令可以组合，完成更复杂的查询</td><td></td><td></td><td>beach -sandy +albert +nathaniel</td></tr><tr><td>~</td><td>包含A, 并且包含B的近义词</td><td>A ~B</td><td></td><td>github ~js</td></tr><tr><td>..</td><td>区间查询 AB之间</td><td>A..B</td><td></td><td>china 1888..2000</td></tr><tr><td>*</td><td>匹配任意字符</td><td></td><td></td><td>node* java</td></tr></tbody></table><h1 id="3-关键词使用"><a href="#3-关键词使用" class="headerlink" title="3. 关键词使用"></a>3. 关键词使用</h1><table><thead><tr><th>方法</th><th>说明</th><th>示例</th></tr></thead><tbody><tr><td>列举关键词</td><td>列举所有和搜索相关的关键词，并且尽量把重要的关键词排在前面。<code>不同的关键词顺序会导致不同的返回不同的结果</code></td><td>书法 毛笔 绘画</td></tr><tr><td>不要使用某些词</td><td>如代词介词语气词，如i, the, of, it, 我，吗</td><td>搜索引擎一般会直接忽略这些信息含量少的词</td></tr><tr><td>大小写不敏感</td><td>大写字符和小写字符在搜索引擎看没有区别，尽量使用小写的就可以</td><td></td></tr></tbody></table><h1 id="4-特殊工具"><a href="#4-特殊工具" class="headerlink" title="4. 特殊工具"></a>4. 特殊工具</h1><h2 id="4-1-define-快速返回关键词定义"><a href="#4-1-define-快速返回关键词定义" class="headerlink" title="4.1. define 快速返回关键词定义"></a>4.1. define 快速返回关键词定义</h2><p><img src="http://p3alsaatj.bkt.clouddn.com/20180426175550_4QI50S_Jietu20180426-175542.jpeg" alt=""></p><h2 id="4-2-计算器"><a href="#4-2-计算器" class="headerlink" title="4.2. 计算器"></a>4.2. 计算器</h2><p><img src="http://p3alsaatj.bkt.clouddn.com/20180426175645_exHEvl_Jietu20180426-175638.jpeg" alt=""></p><h2 id="4-3-单位转换"><a href="#4-3-单位转换" class="headerlink" title="4.3. 单位转换"></a>4.3. 单位转换</h2><p><img src="http://p3alsaatj.bkt.clouddn.com/20180426175515_2t1Vps_Jietu20180426-175503.jpeg" alt=""></p><h2 id="4-4-时区查询"><a href="#4-4-时区查询" class="headerlink" title="4.4. 时区查询"></a>4.4. 时区查询</h2><p><img src="http://p3alsaatj.bkt.clouddn.com/20180426175804_vszyoQ_Jietu20180426-175746.jpeg" alt=""></p><h2 id="4-5-地区查询"><a href="#4-5-地区查询" class="headerlink" title="4.5. 地区查询"></a>4.5. 地区查询</h2><p><img src="http://p3alsaatj.bkt.clouddn.com/20180426175935_39RATW_Jietu20180426-175916.jpeg" alt=""></p><h2 id="4-6-天气查询"><a href="#4-6-天气查询" class="headerlink" title="4.6. 天气查询"></a>4.6. 天气查询</h2><p><img src="http://p3alsaatj.bkt.clouddn.com/20180426180104_3qesjV_Jietu20180426-180042.jpeg" alt=""></p><h1 id="5-自定义搜索"><a href="#5-自定义搜索" class="headerlink" title="5. 自定义搜索"></a>5. 自定义搜索</h1><table><thead><tr><th>指令</th><th>备注</th><th>示例</th></tr></thead><tbody><tr><td>site:</td><td>站内搜索</td><td>DLL site:webpack.js.org </td></tr><tr><td>filetype:</td><td>文件类型搜索</td><td>nodejs filetype:pdf</td></tr></tbody></table><h1 id="6-参考"><a href="#6-参考" class="headerlink" title="6. 参考"></a>6. 参考</h1><ul><li><a href="https://www.lifewire.com/advanced-google-search-3482174" target="_blank" rel="noopener">Advanced Google Search Commands</a></li><li><a href="https://uvtagg.org/classes/smaxwell/Google_rules_for_searching.pdf" target="_blank" rel="noopener">Google_rules_for_searching.pdf</a></li><li><a href="http://www.searchcommands.com/" target="_blank" rel="noopener">An introduction to search commands</a></li></ul>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;!-- TOC --&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;#1-谷歌搜索指令&quot;&gt;1. 谷歌搜索指令&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;#2-基本命令&quot;&gt;2. 基本命令&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;#3-关键词使用&quot;&gt;3. 关键词使用&lt;/a&gt;&lt;/li&gt;
+      
+    
+    </summary>
+    
+    
+  </entry>
   
   <entry>
     <title>金钱游戏 - 银行造钱的秘密</title>
@@ -469,29 +494,6 @@
     
     
       <category term="学习方法" scheme="https://wdd.js.org/tags/%E5%AD%A6%E4%B9%A0%E6%96%B9%E6%B3%95/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>你不知道的专业化道路</title>
-    <link href="https://wdd.js.org/feature-of-dangerous-professional-skill.html"/>
-    <id>https://wdd.js.org/feature-of-dangerous-professional-skill.html</id>
-    <published>2018-03-10T13:16:32.000Z</published>
-    <updated>2018-03-10T14:14:48.000Z</updated>
-    
-    <content type="html"><![CDATA[<h1 id="从分工到专业化"><a href="#从分工到专业化" class="headerlink" title="从分工到专业化"></a>从分工到专业化</h1><p>分工提高生产效率，专业化提高个人价值。很多人都认为，一旦我们进入了某一行，我们就应该在这个行业深挖到底。例如我是做前端的，我就会去学习各种前端的知识点，各种层出不穷的框架。我总是在如饥似渴的希望自己能够保持在深入学习的状态，我不想哪一天自己突然out了。</p><h1 id="专业化的危机在哪？"><a href="#专业化的危机在哪？" class="headerlink" title="专业化的危机在哪？"></a>专业化的危机在哪？</h1><p>以前我在上初中的时候，就稍稍的学习了一点点ActionScript的知识。可能有些人不知道ActionScript是干嘛的，它是在flash的环境中工作的，可以在flash里做一些动画和特效之类的。那时候flash是很火的技术，几乎所有的网站都是有flash的，所以会ActionScript语言的程序员，工资都不低。</p><p>但是，你现在还听过什么ActionScript吗？ 它的宿主环境flash都已经被淘汰了，皮之不存毛将焉附。可想而知，flash的淘汰，同时也让时长淘汰了一批在ActionScript的专家。</p><p>所以，专业化并不是一个安全的道路。准确来说，世界上本来就没有安全的路。大多说认为这条路安全，是因为他们总是以静态的眼光看这条路。说点题外话，如果你书读多了，你会发现，其实一直在你思想里的那些观念，那些故事，往往都是忽悠人的。你可以看看我的一个书单：<a href="https://wdd.js.org/2018-reading-plan.html">2018年我的阅读计划</a>。</p><p>从企业的角度考虑，每个老板都想招在某一方面专家。但是从个人的角度考虑，如果你在专业化的道路钻研的非常深，或许有时候你应该放慢脚步，找个长椅，坐着想一想，如果你前面马上就是死路了，你应该怎么办？</p><h1 id="我们应该怎么办？"><a href="#我们应该怎么办？" class="headerlink" title="我们应该怎么办？"></a>我们应该怎么办？</h1><p>世界上没有安全的路，世界上也没有一直安全的职业。一个职业的火爆，往往因为这个行业的火爆。而永远也没有永远火爆的行业，当退潮时，将会有大批的弄潮儿会搁浅，干死，窒息……</p><p>除去环境造成的扰动，人的身体也会随着年龄会慢慢老化。</p><p>你可以想象一下，当你四十多岁时。那些新来的实习生，比你要的工资低，比你更容易接受这个行业的前沿知识，比你更加能加班，比你能力更强时，比你更听话时。你的优势在哪里？我相信到那时候，你的领导会毫不犹豫开了你。</p><p>在此，你要改变。我给出以下几个角度，你可以自行延伸。</p><ul><li>开始锻炼身体 这是一切的基石</li><li>搞一搞副业，学习一下你喜欢的东西，你可以去深入学学如何做菜，如何摄影等等</li><li>学习理财知识，这是学校从没教你的，但是却是非常重要的东西</li><li>读书，越多越好</li></ul><h1 id="参考文献"><a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h1><ul><li><a href="https://book.douban.com/subject/1790456/" target="_blank" rel="noopener">专业主义 日 大前研一 </a></li><li><a href="https://book.douban.com/subject/25816940/" target="_blank" rel="noopener">富爸爸穷爸爸 罗伯特·清崎 / 莎伦·莱希特</a></li><li><a href="https://book.douban.com/subject/1261560/" target="_blank" rel="noopener">国富论 英 亚当·斯密</a></li><li><a href="https://book.douban.com/subject/5375620/" target="_blank" rel="noopener">失控</a></li><li><a href="https://book.douban.com/subject/1012611/" target="_blank" rel="noopener">乌合之众 法 古斯塔夫·勒庞</a></li><li><a href="http://survivor.ruanyifeng.com/index.html" target="_blank" rel="noopener">未来世界的幸存者 阮一峰</a></li><li><a href="https://www.gitbook.com/book/xiaolai/reborn/details" target="_blank" rel="noopener">新生 七年就是一辈子 李笑来</a></li></ul>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;h1 id=&quot;从分工到专业化&quot;&gt;&lt;a href=&quot;#从分工到专业化&quot; class=&quot;headerlink&quot; title=&quot;从分工到专业化&quot;&gt;&lt;/a&gt;从分工到专业化&lt;/h1&gt;&lt;p&gt;分工提高生产效率，专业化提高个人价值。很多人都认为，一旦我们进入了某一行，我们就应该在这个行业深挖到
-      
-    
-    </summary>
-    
-    
-      <category term="职业规划" scheme="https://wdd.js.org/tags/%E8%81%8C%E4%B8%9A%E8%A7%84%E5%88%92/"/>
     
   </entry>
   
