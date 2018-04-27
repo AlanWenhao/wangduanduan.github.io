@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://wdd.js.org/"/>
-  <updated>2018-04-27T05:57:05.000Z</updated>
+  <updated>2018-04-27T13:25:51.000Z</updated>
   <id>https://wdd.js.org/</id>
   
   <author>
@@ -15,6 +15,28 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>BAM(Bug Analysis Method) Bug分析方法 之 GTPA</title>
+    <link href="https://wdd.js.org/BAU.html"/>
+    <id>https://wdd.js.org/BAU.html</id>
+    <published>2018-04-27T12:11:44.000Z</published>
+    <updated>2018-04-27T13:25:51.000Z</updated>
+    
+    <content type="html"><![CDATA[<blockquote><p>行为分析小组 (Behavioral Analysis Unit，BAU)是美国联邦调查局国家暴力犯罪分析中心(NCAVC)下设的一个部门。该部门旨在运用行为科学分析来协助犯罪调查。国家暴力犯罪分析中心和行为分析小组的主要任务是提供行为基础调查和/或通过将案例经验、调查和训练应用到时效性的罪案中以提供作战保障，特别是涉及到有暴力倾向的案件。</p></blockquote><p>之所以提到BAU, 我认为Bug分析和行为分析有类似的方法。</p><p><code>TPQF</code>是指我总结的Bug分析的方法，分别是：<code>Time</code>(时间), <code>Probability</code>(概率), <code>Area</code>(面积), <code>Feature</code>(特征)</p><h1 id="1-BAM-目标"><a href="#1-BAM-目标" class="headerlink" title="1. BAM 目标"></a>1. BAM 目标</h1><p>Bug分析的最终目标并不仅仅是解决Bug，而是在解决Bug的基础上记录问题日志，找到问题的触发器，建立对应的问题处理模型。</p><ul><li><code>记录</code>: 记录一切可以记录的内容，包括且不限于截图，日志，视频，连天记录。记录这些内容的，可以让你不再每次都需要去重现问题，记录日志。</li><li><code>触发器</code>: 找到Bug的触发器往往最重要的一个环</li><li><code>模型</code>: 建立Bug模型，为以后的问题提供更快的解决思路</li></ul><h1 id="2-Time-时间"><a href="#2-Time-时间" class="headerlink" title="2. Time(时间)"></a>2. Time(时间)</h1><p>问题的时间点有三个，是务必确定要记录的。</p><ol><li><code>Bug发生的时间点</code>: 很多日志依赖于这个时间点去查询</li><li><code>往前正常的时间点</code>: 例如今天出现bug, 那昨天正常吗？ 今天12点出现的Bug, 那今天10点正常吗？ 确定这两个点，那么这两点之间发生的事情，很可能就是引发Bug的原因。例如昨天正常的服务，今天出现了Bug，如果昨天和今天之间，某些服务更新了，那么很可能是因为某个服务更新而引起的Bug。</li></ol><p>时间除了要确定问题出现的区间之外，最重要的时间的<code>紧迫性</code>。线上生产环境突发的严重问题，是在解决不了的话，要尽快重启服务，以<code>降低客户的损失为首要目的</code>，而不是把时间花在分析Bug上。</p><h1 id="3-Probability-概率"><a href="#3-Probability-概率" class="headerlink" title="3. Probability(概率)"></a>3. Probability(概率)</h1><p>问题的概率是针对于单个客户端而言的。概率是指单个客户端出现问题的概率。有以下两个主要可能性。</p><ol><li><code>偶然事件</code> 偶然事件是一种小概率事件，很难找到Bug的触发器，也无法重现，只能通过查询相关日志获取才有可能发现一点蛛丝马迹</li><li><code>必现事件</code> 必然事件是100%出现的事件，找到概率的可能性比较大</li></ol><h1 id="4-Area-面积"><a href="#4-Area-面积" class="headerlink" title="4. Area(面积)"></a>4. Area(面积)</h1><p>Bug影响的面积有三种模型</p><ul><li><code>单点</code>: 现在服务的架构一般都是CS结构，单个客户端出现问题，往往是客户端的问题</li><li><code>部分</code>: 部分客户端的问题，如果该部分是同一区域的，那么很可能是该区域网络的问题。如果该区域使用同一个服务端，那么可能是单个服务节点出现问题</li><li><code>全部</code>: 全部都出现问题，基本上都是服务端出现了问题</li></ul><h1 id="5-Feature-特征"><a href="#5-Feature-特征" class="headerlink" title="5. Feature(特征)"></a>5. Feature(特征)</h1><ul><li>线性特征: 随时间缓慢增长。可能是内存泄露</li><li>指数特征: 还没想到</li><li>对数特征: 快速打到一定程度后，不再增长。可能是连接池溢出</li><li>时间特征: 某个时间端内快速增长，过了该时刻快速下降。例如每天8到9点是用户激增的时间范围</li></ul><h1 id="6-更远的未来"><a href="#6-更远的未来" class="headerlink" title="6. 更远的未来"></a>6. 更远的未来</h1><p>目前我们的编程都是这样的：定义规律，给出输入，拿到输出</p><figure class="highlight stata"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 定义规律</span></span><br><span class="line"><span class="built_in">f</span></span><br><span class="line"><span class="comment">// 喂入输入</span></span><br><span class="line">x</span><br><span class="line"><span class="comment">// 计算出输出</span></span><br><span class="line"><span class="built_in">y</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// 给出输入</span></span><br><span class="line">y = <span class="built_in">f</span>(x)</span><br></pre></td></tr></table></figure><p>大数据与人工智能时代：给出输入和输出，训练出规律</p><figure class="highlight stata"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 喂入 输入x 或 输出 y</span></span><br><span class="line">x or <span class="built_in">y</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// 训练出</span></span><br><span class="line"><span class="built_in">f</span></span><br></pre></td></tr></table></figure><p>或许有一天，直接给出Bug相关信息，计算机会告诉我们，Bug在哪里，如何修复。</p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;blockquote&gt;
+&lt;p&gt;行为分析小组 (Behavioral Analysis Unit，BAU)是美国联邦调查局国家暴力犯罪分析中心(NCAVC)下设的一个部门。该部门旨在运用行为科学分析来协助犯罪调查。国家暴力犯罪分析中心和行为分析小组的主要任务是提供行为基础调查和/
+      
+    
+    </summary>
+    
+    
+  </entry>
   
   <entry>
     <title>抛弃时间的人，时间也抛弃他，时间记录工具分享</title>
@@ -470,31 +492,6 @@
     
     
       <category term="ajax" scheme="https://wdd.js.org/tags/ajax/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>前端剪贴板复制功能实现原理</title>
-    <link href="https://wdd.js.org/clipboard-copy-tutorial.html"/>
-    <id>https://wdd.js.org/clipboard-copy-tutorial.html</id>
-    <published>2018-03-14T06:19:12.000Z</published>
-    <updated>2018-03-14T10:36:45.000Z</updated>
-    
-    <content type="html"><![CDATA[<h1 id="1-兼容情况"><a href="#1-兼容情况" class="headerlink" title="1. 兼容情况"></a>1. 兼容情况</h1><p>如果想浏览器支持粘贴功能，那么浏览器必须支持，<a href="https://developer.mozilla.org/en-US/docs/Web/API/Document/execCommand" target="_blank" rel="noopener">document.execCommand(‘copy’)</a>方法，也可以根据<a href="https://developer.mozilla.org/en-US/docs/Web/API/Document/queryCommandSupported" target="_blank" rel="noopener">document.queryCommandEnabled(‘copy’)</a>，返回的true或者false判断浏览器是否支持copy命令。</p><p>从下表可以看出，主流的浏览器都支持execCommand命令</p><p><img src="http://p3alsaatj.bkt.clouddn.com/20180314142213_IhrFsz_Jietu20180314-141253.jpeg" alt=""></p><h1 id="2-复制的原理"><a href="#2-复制的原理" class="headerlink" title="2. 复制的原理"></a>2. 复制的原理</h1><ol><li>查询元素</li><li>选中元素</li><li>执行复制命令</li></ol><h1 id="3-代码展示"><a href="#3-代码展示" class="headerlink" title="3. 代码展示"></a>3. 代码展示</h1><figure class="highlight stylus"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// html</span></span><br><span class="line">&lt;<span class="selector-tag">input</span> id=<span class="string">"username"</span> value=<span class="string">"123456"</span>&gt;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 查询元素</span></span><br><span class="line"><span class="selector-tag">var</span> username = document.getElementById(‘username’)</span><br><span class="line"></span><br><span class="line"><span class="comment">// 选中元素</span></span><br><span class="line">username.select()</span><br><span class="line"></span><br><span class="line"><span class="comment">// 执行复制</span></span><br><span class="line">document.execCommand(<span class="string">'copy'</span>)</span><br></pre></td></tr></table></figure><blockquote><p>注意: 以上代码只是简单示意，在实践过程中还有几个要判断的情况</p></blockquote><ol><li>首要要去检测浏览器execCommand能力检测</li><li>选取元素时，有可能选取元素为空，要考虑这种情况的处理</li></ol><h1 id="4-第三方方案"><a href="#4-第三方方案" class="headerlink" title="4. 第三方方案"></a>4. 第三方方案</h1><p><a href="https://clipboardjs.com/" target="_blank" rel="noopener">clipboard.js</a>是一个比较方便的剪贴板库，功能蛮多的。</p><figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">&lt;!-- Target --&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">textarea</span> <span class="attr">id</span>=<span class="string">"bar"</span>&gt;</span>Mussum ipsum cacilds...<span class="tag">&lt;/<span class="name">textarea</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="comment">&lt;!-- Trigger --&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">button</span> <span class="attr">class</span>=<span class="string">"btn"</span> <span class="attr">data-clipboard-action</span>=<span class="string">"cut"</span> <span class="attr">data-clipboard-target</span>=<span class="string">"#bar"</span>&gt;</span></span><br><span class="line">    Cut to clipboard</span><br><span class="line"><span class="tag">&lt;/<span class="name">button</span>&gt;</span></span><br></pre></td></tr></table></figure><p>官方给的代码里有上面的一个示例，如果你用了这个示例，但是不起作用，那你估计是没有初始化ClipboardJS示例的。</p><p>注意：下面的函数必须要主动调用，这样才能给响应的DOM元素注册事件。 ClipboardJS源代码压缩后大约有3kb，虽然很小了，但是如果你不需要它的这么多功能的话，其实你自己写几行代码就可以搞定复制功能。</p><figure class="highlight haxe"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">new</span> <span class="type">ClipboardJS</span>(<span class="string">'.btn'</span>);</span><br></pre></td></tr></table></figure>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;h1 id=&quot;1-兼容情况&quot;&gt;&lt;a href=&quot;#1-兼容情况&quot; class=&quot;headerlink&quot; title=&quot;1. 兼容情况&quot;&gt;&lt;/a&gt;1. 兼容情况&lt;/h1&gt;&lt;p&gt;如果想浏览器支持粘贴功能，那么浏览器必须支持，&lt;a href=&quot;https://developer.mo
-      
-    
-    </summary>
-    
-    
-      <category term="copy" scheme="https://wdd.js.org/tags/copy/"/>
-    
-      <category term="clipboard" scheme="https://wdd.js.org/tags/clipboard/"/>
     
   </entry>
   
