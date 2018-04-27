@@ -90,7 +90,7 @@
 <meta property="og:site_name" content="洞香春">
 <meta property="og:description" content="行为分析小组 (Behavioral Analysis Unit，BAU)是美国联邦调查局国家暴力犯罪分析中心(NCAVC)下设的一个部门。该部门旨在运用行为科学分析来协助犯罪调查。国家暴力犯罪分析中心和行为分析小组的主要任务是提供行为基础调查和/或通过将案例经验、调查和训练应用到时效性的罪案中以提供作战保障，特别是涉及到有暴力倾向的案件。  之所以提到BAU, 我认为Bug分析和行为分析有类似">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-04-27T13:27:32.000Z">
+<meta property="og:updated_time" content="2018-04-27T13:28:51.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="BAM(Bug Analysis Method) Bug分析方法 之 TPAF">
 <meta name="twitter:description" content="行为分析小组 (Behavioral Analysis Unit，BAU)是美国联邦调查局国家暴力犯罪分析中心(NCAVC)下设的一个部门。该部门旨在运用行为科学分析来协助犯罪调查。国家暴力犯罪分析中心和行为分析小组的主要任务是提供行为基础调查和/或通过将案例经验、调查和训练应用到时效性的罪案中以提供作战保障，特别是涉及到有暴力倾向的案件。  之所以提到BAU, 我认为Bug分析和行为分析有类似">
@@ -432,10 +432,10 @@
 <li><code>全部</code>: 全部都出现问题，基本上都是服务端出现了问题</li>
 </ul>
 <h1 id="5-Feature-特征"><a href="#5-Feature-特征" class="headerlink" title="5. Feature(特征)"></a>5. Feature(特征)</h1><ul>
-<li>线性特征: 随时间缓慢增长。可能是内存泄露</li>
-<li>指数特征: 还没想到</li>
-<li>对数特征: 快速打到一定程度后，不再增长。可能是连接池溢出</li>
-<li>时间特征: 某个时间端内快速增长，过了该时刻快速下降。例如每天8到9点是用户激增的时间范围</li>
+<li><code>线性特征</code>: 随时间缓慢增长。可能是内存泄露</li>
+<li><code>指数特征</code>: 还没想到</li>
+<li><code>对数特征</code>: 快速打到一定程度后，不再增长。可能是连接池溢出</li>
+<li><code>时间特征</code>: 某个时间端内快速增长，过了该时刻快速下降。例如每天8到9点是用户激增的时间范围</li>
 </ul>
 <h1 id="6-更远的未来"><a href="#6-更远的未来" class="headerlink" title="6. 更远的未来"></a>6. 更远的未来</h1><p>目前我们的编程都是这样的：定义规律，给出输入，拿到输出</p>
 <figure class="highlight stata"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 定义规律</span></span><br><span class="line"><span class="built_in">f</span></span><br><span class="line"><span class="comment">// 喂入输入</span></span><br><span class="line">x</span><br><span class="line"><span class="comment">// 计算出输出</span></span><br><span class="line"><span class="built_in">y</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// 给出输入</span></span><br><span class="line">y = <span class="built_in">f</span>(x)</span><br></pre></td></tr></table></figure>
