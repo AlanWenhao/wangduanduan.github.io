@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://wdd.js.org/echarts-highlight-china-map.html</loc>
+    
+    <lastmod>2018-05-09T03:35:24.000Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://wdd.js.org/BAU.html</loc>
     
     <lastmod>2018-04-27T13:28:51.000Z</lastmod>
@@ -859,13 +866,6 @@
     <loc>https://wdd.js.org/elegant-way-write-ajax-request.html</loc>
     
     <lastmod>2018-02-09T06:00:04.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://wdd.js.org/echarts-highlight-china-map.html</loc>
-    
-    <lastmod>2018-02-09T05:59:59.000Z</lastmod>
     
   </url>
   
