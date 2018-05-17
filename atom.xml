@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://wdd.js.org/"/>
-  <updated>2018-04-27T13:28:51.000Z</updated>
+  <updated>2018-05-17T08:39:28.000Z</updated>
   <id>https://wdd.js.org/</id>
   
   <author>
@@ -15,6 +15,31 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>不容错误的端到端测试工具：Cypress</title>
+    <link href="https://wdd.js.org/e2e-testing-hacker-news-with-cypress.html"/>
+    <id>https://wdd.js.org/e2e-testing-hacker-news-with-cypress.html</id>
+    <published>2018-05-14T02:43:02.000Z</published>
+    <updated>2018-05-17T08:39:28.000Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="1-目前E2E测试工具有哪些？"><a href="#1-目前E2E测试工具有哪些？" class="headerlink" title="1. 目前E2E测试工具有哪些？"></a>1. 目前E2E测试工具有哪些？</h1><table><thead><tr><th>项目</th><th>Web</th><th>Star</th></tr></thead><tbody><tr><td><a href="https://github.com/GoogleChrome/puppeteer" target="_blank" rel="noopener">puppeteer</a></td><td>Chromium (~170Mb Mac, ~282Mb Linux, ~280Mb Win)</td><td>31906</td></tr><tr><td><a href="https://github.com/segmentio/nightmare" target="_blank" rel="noopener">nightmare</a></td><td>Electron</td><td>15502</td></tr><tr><td><a href="https://github.com/nightwatchjs/nightwatch" target="_blank" rel="noopener">nightwatch</a></td><td>WebDriver</td><td>8135</td></tr><tr><td><a href="https://github.com/angular/protractor" target="_blank" rel="noopener">protractor</a></td><td>selenium</td><td>7532</td></tr><tr><td><a href="https://github.com/casperjs/casperjs" target="_blank" rel="noopener">casperjs</a></td><td>PhantomJS</td><td>7180</td></tr><tr><td><a href="https://github.com/cypress-io/cypress" target="_blank" rel="noopener">cypress</a></td><td>Electron</td><td>5303</td></tr><tr><td><a href="https://github.com/assaf/zombie" target="_blank" rel="noopener">Zombie</a></td><td>不需要</td><td>4880</td></tr><tr><td><a href="https://github.com/DevExpress/testcafe" target="_blank" rel="noopener">testcafe</a></td><td>不需要</td><td>4645</td></tr><tr><td><a href="https://github.com/Codeception/CodeceptJS" target="_blank" rel="noopener">CodeceptJS</a></td><td>webdriverio</td><td>1665</td></tr></tbody></table><p>端到端测试一般都需要一个Web容器，来运行前端应用。例如Chromium, Electron, PhantomJS, WebDriver等等。</p><p>从体积角度考虑，这些Web容器<code>体积一般都很大</code>。</p><p>从速度的角度考虑：<code>PhantomJS, WebDriver &lt; Electon, Chromium</code>。</p><p>而且每个工具的侧重点也不同，建议按照需要去选择。</p><h1 id="2-优秀的端到端测试工具应该有哪些特点？"><a href="#2-优秀的端到端测试工具应该有哪些特点？" class="headerlink" title="2. 优秀的端到端测试工具应该有哪些特点？"></a>2. 优秀的端到端测试工具应该有哪些特点？</h1><ul><li>安装简易：我希望它非常容易安装，最好可以一行命令就可以安装完毕</li><li>依赖较少：我只想做个E2E测试，不想安装jdk, python之类的东西</li><li>速度很快：运行测试用例的速度要快</li><li>报错详细：详细的报错</li><li>API完备：鼠标键盘操作接口，DOM查询接口等</li><li>Debug方便：出错了可以很方便的调试，而不是去猜</li></ul><h1 id="3-为什么要用Cypress？"><a href="#3-为什么要用Cypress？" class="headerlink" title="3. 为什么要用Cypress？"></a>3. 为什么要用Cypress？</h1><p>Cypress基本上拥有了上面的特点之外，还有以下特点。</p><ul><li><code>时光穿梭</code> 测试运行时，Cypress会自动截图，你可以轻易的查看每个时间的截图</li><li><code>Debug友好</code> 不需要再去猜测为什么测试有失败了，Cypress提供Chrome DevTools, 所以Debug是非常方便的。</li><li><code>实时刷新</code> Cypress检测测试用例改变后，会自动刷新</li><li><code>自动等待</code> 不需要在使用wait类似的方法等待某个DOM出现，Cypress会自动帮你做这些</li><li><code>Spies, stubs, and clocks</code> Verify and control the behavior of functions, server responses, or timers. The same functionality you love from unit testing is right at your fingertips.</li><li><code>网络流量控制</code> 在不涉及服务器的情况下轻松控制，存根和测试边缘案例。无论你喜欢，你都可以存储网络流量。</li><li><code>一致的结果</code> 我们的架构不使用Selenium或WebDriver。向快速，一致和可靠的无剥落测试问好。</li><li><code>截图和视频</code> 查看失败时自动截取的截图，或无条件运行时整个测试套件的视频。</li></ul><h1 id="4-安装cypress"><a href="#4-安装cypress" class="headerlink" title="4. 安装cypress"></a>4. 安装cypress</h1><h2 id="4-1-使用npm方法安装"><a href="#4-1-使用npm方法安装" class="headerlink" title="4.1. 使用npm方法安装"></a>4.1. 使用npm方法安装</h2><p>注意这个方法需要下载压缩过Electron, 所以可能会花费几分钟时间，请耐心等待。</p><figure class="highlight stylus"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm <span class="selector-tag">i</span> cypress -D</span><br></pre></td></tr></table></figure><h2 id="4-2-直接下载Cypress客户端"><a href="#4-2-直接下载Cypress客户端" class="headerlink" title="4.2. 直接下载Cypress客户端"></a>4.2. 直接下载Cypress客户端</h2><p>你可以把Cypress想想成一个浏览器，可以单独把它下载下来，安装到电脑上，当做一个客户端软件来用。</p><p>打开之后就是这个样子，可以手动去打开项目，运行测试用例。</p><p><img src="http://p3alsaatj.bkt.clouddn.com/20180516092612_wiNNiZ_Jietu20180516-092604.jpeg" alt=""></p><h1 id="5-初始化Cypress"><a href="#5-初始化Cypress" class="headerlink" title="5. 初始化Cypress"></a>5. 初始化Cypress</h1><p>Cypress初始化，会在项目根目录自动生成cypress文件夹，并且里面有些测试用例模板，可以很方便的学习。</p><p><img src="http://p3alsaatj.bkt.clouddn.com/20180516092918_zwtp3h_Jietu20180516-092911.jpeg" alt=""></p><p>初始化的方法有两种。</p><ol><li><p>如果你下载的客户端，那么你用客户端打开项目时，它会检测项目目录下有没有Cypress目录，如果没有，就自动帮你生成模板。</p></li><li><p>如果你使用npm安装的Cypress，可以使用命令<code>node_modules/.bin/cypress open</code>去初始化</p></li></ol><h1 id="6-编写测试用例"><a href="#6-编写测试用例" class="headerlink" title="6. 编写测试用例"></a>6. 编写测试用例</h1><figure class="highlight less"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// hacker-news.js</span></span><br><span class="line"><span class="selector-tag">describe</span>(<span class="string">'Hacker News登录测试'</span>, () =&gt; &#123;</span><br><span class="line">  <span class="selector-tag">it</span>(<span class="string">'登录页面'</span>, () =&gt; &#123;</span><br><span class="line">    <span class="selector-tag">cy</span><span class="selector-class">.visit</span>(<span class="string">'https://news.ycombinator.com/login?goto=news'</span>)</span><br><span class="line">    <span class="selector-tag">cy</span><span class="selector-class">.get</span>(<span class="string">'input[name="acct"]'</span>)<span class="selector-class">.eq</span>(<span class="number">0</span>)<span class="selector-class">.type</span>(<span class="string">'test'</span>)</span><br><span class="line">    <span class="selector-tag">cy</span><span class="selector-class">.get</span>(<span class="string">'input[name="pw"]'</span>)<span class="selector-class">.eq</span>(<span class="number">0</span>)<span class="selector-class">.type</span>(<span class="string">'123456'</span>)</span><br><span class="line">    <span class="selector-tag">cy</span><span class="selector-class">.get</span>(<span class="string">'input[value="login"]'</span>)<span class="selector-class">.click</span>()</span><br><span class="line"></span><br><span class="line">    <span class="selector-tag">cy</span><span class="selector-class">.contains</span>(<span class="string">'Bad login'</span>)</span><br><span class="line">  &#125;)</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure><h1 id="7-查看结果"><a href="#7-查看结果" class="headerlink" title="7. 查看结果"></a>7. 查看结果</h1><p>打开Cypress客户端，选择要测试项目的根目录，点击hacker-news.js后，测试用例就会自动运行</p><p><img src="http://p3alsaatj.bkt.clouddn.com/20180517162959_83xejF_Jietu20180517-162945.jpeg" alt=""></p><p>运行结束后，左侧栏目鼠标移动上去，右侧栏都会显示出该步骤的截图，所以叫做时光穿梭功能。</p><p>从截图也可以看出来，Cypress的步骤描述很详细。</p><p><img src="http://p3alsaatj.bkt.clouddn.com/20180517162842_TVatQu_Jietu20180517-162820.jpeg" alt=""></p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h1 id=&quot;1-目前E2E测试工具有哪些？&quot;&gt;&lt;a href=&quot;#1-目前E2E测试工具有哪些？&quot; class=&quot;headerlink&quot; title=&quot;1. 目前E2E测试工具有哪些？&quot;&gt;&lt;/a&gt;1. 目前E2E测试工具有哪些？&lt;/h1&gt;&lt;table&gt;
+&lt;thead&gt;
+&lt;tr
+      
+    
+    </summary>
+    
+    
+      <category term="端到端测试" scheme="https://wdd.js.org/tags/%E7%AB%AF%E5%88%B0%E7%AB%AF%E6%B5%8B%E8%AF%95/"/>
+    
+  </entry>
   
   <entry>
     <title>BAM(Bug Analysis Method) Bug分析方法 之 TPAF</title>
@@ -468,30 +493,6 @@
     
     
       <category term="bug" scheme="https://wdd.js.org/tags/bug/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>状态码为200时 jQuery ajax报错</title>
-    <link href="https://wdd.js.org/status-code-200-jquery-ajax-failed.html"/>
-    <id>https://wdd.js.org/status-code-200-jquery-ajax-failed.html</id>
-    <published>2018-03-15T06:17:59.000Z</published>
-    <updated>2018-03-15T06:33:16.000Z</updated>
-    
-    <content type="html"><![CDATA[<h1 id="1-问题现象"><a href="#1-问题现象" class="headerlink" title="1. 问题现象"></a>1. 问题现象</h1><p>HTTP 状态码为 200 OK 时， jquery ajax报错</p><h1 id="2-问题原因"><a href="#2-问题原因" class="headerlink" title="2. 问题原因"></a>2. 问题原因</h1><p>jquery ajax的dataType字段包含：json, 但是服务端返回的数据不是规范的json格式，导致jquery解析json字符串报错，最终导致ajax报错。</p><p>jQuery ajax 官方文档上说明：</p><blockquote><p>“json”: Evaluates the response as JSON and returns a JavaScript object. Cross-domain “json” requests are converted to “jsonp” unless the request includes jsonp: false in its request options. The JSON data is parsed in a strict manner; any malformed JSON is rejected and a parse error is thrown. As of jQuery 1.9, an empty response is also rejected; the server should return a response of null or {} instead. (See json.org for more information on proper JSON formatting.)</p></blockquote><p>设置dataType为json时，jquery就会去解析响应体为JavaScript对象。跨域的json请求会被转化成jsonp, 除非设置了<code>jsonp: false</code>。JSON数据会以严格模式去解析，任何不规范的JSON字符串都会解析异常并抛出错误。从jQuery 1.9起，一个空的响应也会被抛出异常。服务端应该返回一个<code>null</code>或者<code>{}</code>去代替空响应。参考<a href="http://json.org/" target="_blank" rel="noopener">json.org</a>, 查看更多内容</p><h1 id="3-解决方案"><a href="#3-解决方案" class="headerlink" title="3. 解决方案"></a>3. 解决方案</h1><p>这个问题的原因是后端返回的数据格式不规范，所以后端在返回结果是，不要使用空的响应，也不应该去手动拼接JSON字符串，而应该交给响应的库来实现JSON序列化字符串工作。</p><h1 id="4-参考"><a href="#4-参考" class="headerlink" title="4. 参考"></a>4. 参考</h1><ul><li><a href="https://stackoverflow.com/questions/6186770/ajax-request-returns-200-ok-but-an-error-event-is-fired-instead-of-success" target="_blank" rel="noopener">Ajax request returns 200 OK, but an error event is fired instead of success</a></li><li><a href="http://api.jquery.com/jQuery.ajax/" target="_blank" rel="noopener">jQuery.ajax</a></li></ul>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;h1 id=&quot;1-问题现象&quot;&gt;&lt;a href=&quot;#1-问题现象&quot; class=&quot;headerlink&quot; title=&quot;1. 问题现象&quot;&gt;&lt;/a&gt;1. 问题现象&lt;/h1&gt;&lt;p&gt;HTTP 状态码为 200 OK 时， jquery ajax报错&lt;/p&gt;
-&lt;h1 id=&quot;2-问题原因
-      
-    
-    </summary>
-    
-    
-      <category term="ajax" scheme="https://wdd.js.org/tags/ajax/"/>
     
   </entry>
   
