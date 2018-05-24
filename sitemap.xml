@@ -2,6 +2,20 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://wdd.js.org/ie-not-support-location-origin.html</loc>
+    
+    <lastmod>2018-05-24T06:54:05.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://wdd.js.org/front-end-interview-handbook.html</loc>
+    
+    <lastmod>2018-05-22T01:59:20.000Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://wdd.js.org/e2e-testing-hacker-news-with-cypress.html</loc>
     
     <lastmod>2018-05-17T09:34:38.000Z</lastmod>
@@ -117,13 +131,6 @@
     <loc>https://wdd.js.org/small-is-powerful-vue-mixins.html</loc>
     
     <lastmod>2018-03-30T07:43:23.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://wdd.js.org/front-end-interview-handbook.html</loc>
-    
-    <lastmod>2018-03-30T03:25:28.000Z</lastmod>
     
   </url>
   

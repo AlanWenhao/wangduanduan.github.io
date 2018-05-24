@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://wdd.js.org/"/>
-  <updated>2018-05-17T09:34:38.000Z</updated>
+  <updated>2018-05-24T06:54:05.000Z</updated>
   <id>https://wdd.js.org/</id>
   
   <author>
@@ -15,6 +15,30 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>IE浏览器不支持location.origin</title>
+    <link href="https://wdd.js.org/ie-not-support-location-origin.html"/>
+    <id>https://wdd.js.org/ie-not-support-location-origin.html</id>
+    <published>2018-05-24T06:50:49.000Z</published>
+    <updated>2018-05-24T06:54:05.000Z</updated>
+    
+    <content type="html"><![CDATA[<p>某些IE浏览器location.origin属性是undefined，所以如果你要使用该属性，那么要注意做个能力检测。</p><figure class="highlight coffeescript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">if</span> (!<span class="built_in">window</span>.location.origin) &#123;</span><br><span class="line">  <span class="built_in">window</span>.location.origin = <span class="built_in">window</span>.location.protocol + <span class="string">"//"</span> + <span class="built_in">window</span>.location.hostname + (<span class="built_in">window</span>.location.port ? <span class="string">':'</span> + <span class="built_in">window</span>.location.port: <span class="string">''</span>);</span><br><span class="line">&#125;i</span><br></pre></td></tr></table></figure>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;某些IE浏览器location.origin属性是undefined，所以如果你要使用该属性，那么要注意做个能力检测。&lt;/p&gt;
+&lt;figure class=&quot;highlight coffeescript&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre
+      
+    
+    </summary>
+    
+    
+      <category term="ie" scheme="https://wdd.js.org/tags/ie/"/>
+    
+  </entry>
   
   <entry>
     <title>端到端测试哪家强？不容错过的Cypress</title>
@@ -469,30 +493,6 @@
     
     </summary>
     
-    
-  </entry>
-  
-  <entry>
-    <title>如何高效地报告 Bug</title>
-    <link href="https://wdd.js.org/how-to-report-bug-effective.html"/>
-    <id>https://wdd.js.org/how-to-report-bug-effective.html</id>
-    <published>2018-03-15T08:39:06.000Z</published>
-    <updated>2018-03-15T13:32:33.000Z</updated>
-    
-    <content type="html"><![CDATA[<p><img src="http://p3alsaatj.bkt.clouddn.com/20180315213220_Rq8h6q_lady-bug-on-leaf.jpg.653x0_q80_crop-smart.jpeg" alt=""></p><h1 id="1-自问自答"><a href="#1-自问自答" class="headerlink" title="1. 自问自答"></a>1. 自问自答</h1><ul><li>该问题是否是必现的？</li><li>该问题出现多久了？</li><li>问题出现前后有没有什么异常？ 例如几分钟之前启动了其他的服务，有其他服务在更新</li></ul><h1 id="2-要事实，不要推测"><a href="#2-要事实，不要推测" class="headerlink" title="2. 要事实，不要推测"></a>2. 要事实，不要推测</h1><p>在bug报告里，要设法搞清什么是事实（例如：压测环境座席监控没有数据）。什么是推测（例如：我想问题可能出在XXX）。如果愿意的话，<code>您可以省去推测，但是千万别省略事实。</code></p><h1 id="3-要精确，不要模糊"><a href="#3-要精确，不要模糊" class="headerlink" title="3. 要精确，不要模糊"></a>3. 要精确，不要模糊</h1><h2 id="3-1-不要使用代词"><a href="#3-1-不要使用代词" class="headerlink" title="3.1. 不要使用代词"></a>3.1. 不要使用代词</h2><h2 id="3-2-不要使用”没有”"><a href="#3-2-不要使用”没有”" class="headerlink" title="3.2. 不要使用”没有”"></a>3.2. 不要使用”没有”</h2><h1 id="4-要详细，不要粗略"><a href="#4-要详细，不要粗略" class="headerlink" title="4. 要详细，不要粗略"></a>4. 要详细，不要粗略</h1><h1 id="5-建议要提供的数据"><a href="#5-建议要提供的数据" class="headerlink" title="5. 建议要提供的数据"></a>5. 建议要提供的数据</h1><ul><li><code>建议</code> 错误日志, 程序员最喜欢bug里的错误日志，<code>错误日志能说明一切</code>，非常建议你能提供错误日志</li><li><code>必须</code> 操作步骤, 有利于程序员去重现bug</li><li><code>可选</code> 错误截图, 在描述不清楚的时候，错误截图时更好的方法</li></ul><h1 id="6-参考"><a href="#6-参考" class="headerlink" title="6. 参考"></a>6. 参考</h1><ul><li><a href="https://www.chiark.greenend.org.uk/~sgtatham/bugs-cn.html" target="_blank" rel="noopener">如何有效地报告 Bug</a></li></ul>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;p&gt;&lt;img src=&quot;http://p3alsaatj.bkt.clouddn.com/20180315213220_Rq8h6q_lady-bug-on-leaf.jpg.653x0_q80_crop-smart.jpeg&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
-&lt;h1 id=&quot;1-自问
-      
-    
-    </summary>
-    
-    
-      <category term="bug" scheme="https://wdd.js.org/tags/bug/"/>
     
   </entry>
   
