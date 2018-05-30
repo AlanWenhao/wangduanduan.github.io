@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://wdd.js.org/you-should-use-vuex-early.html</loc>
+    
+    <lastmod>2018-05-30T13:39:23.000Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://wdd.js.org/ie-not-support-location-origin.html</loc>
     
     <lastmod>2018-05-24T06:54:05.000Z</lastmod>
