@@ -4,6 +4,23 @@
 
     
   <url>
+    <loc>https://wdd.js.org/client-side-storage-about-indexdb.html</loc>
+    <lastmod>2018-06-02T05:31:00.000Z</lastmod>
+    <data>
+        <display>
+        <title>浏览器端数据库存储方案的整理 -- indexDB 和 localStorage</title>
+        <pubTime>2018-06-02T04:17:17.000Z</pubTime>
+        
+        <tag>indexDB</tag>
+         
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>https://wdd.js.org/2018-reading-plan.html</loc>
     <lastmod>2018-06-01T05:39:55.000Z</lastmod>
     <data>
@@ -1107,9 +1124,9 @@
         
         <tag>读书笔记</tag>
          
-        <tag>未完成</tag>
-         
         <tag>主页主义</tag>
+         
+        <tag>未完成</tag>
          
          
            
@@ -1128,9 +1145,9 @@
         
         <tag>读书笔记</tag>
          
-        <tag>失控</tag>
-         
         <tag>未完成</tag>
+         
+        <tag>失控</tag>
          
          
            
@@ -1179,9 +1196,9 @@
         <title>可能被遗漏的https与http的知识点</title>
         <pubTime>2018-02-08T01:10:59.000Z</pubTime>
         
-        <tag>https</tag>
-         
         <tag>http</tag>
+         
+        <tag>https</tag>
          
          
            
@@ -1240,9 +1257,9 @@
         
         <tag>Vue</tag>
          
-        <tag>ElementUI</tag>
-         
         <tag>Vue-router</tag>
+         
+        <tag>ElementUI</tag>
          
          
            
