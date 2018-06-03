@@ -4,6 +4,23 @@
 
     
   <url>
+    <loc>https://wdd.js.org/think-about-leukemia.html</loc>
+    <lastmod>2018-06-03T15:13:23.000Z</lastmod>
+    <data>
+        <display>
+        <title>关于白血病的思考</title>
+        <pubTime>2018-06-03T14:44:54.000Z</pubTime>
+        
+        <tag>白血病</tag>
+         
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>https://wdd.js.org/client-side-storage-about-indexdb.html</loc>
     <lastmod>2018-06-02T05:31:00.000Z</lastmod>
     <data>
@@ -1124,9 +1141,9 @@
         
         <tag>读书笔记</tag>
          
-        <tag>主页主义</tag>
-         
         <tag>未完成</tag>
+         
+        <tag>主页主义</tag>
          
          
            
@@ -1145,9 +1162,9 @@
         
         <tag>读书笔记</tag>
          
-        <tag>未完成</tag>
-         
         <tag>失控</tag>
+         
+        <tag>未完成</tag>
          
          
            
@@ -1196,9 +1213,9 @@
         <title>可能被遗漏的https与http的知识点</title>
         <pubTime>2018-02-08T01:10:59.000Z</pubTime>
         
-        <tag>http</tag>
-         
         <tag>https</tag>
+         
+        <tag>http</tag>
          
          
            
@@ -1257,9 +1274,9 @@
         
         <tag>Vue</tag>
          
-        <tag>Vue-router</tag>
-         
         <tag>ElementUI</tag>
+         
+        <tag>Vue-router</tag>
          
          
            
