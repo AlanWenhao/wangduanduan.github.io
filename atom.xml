@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://wdd.js.org/"/>
-  <updated>2018-06-04T10:20:23.000Z</updated>
+  <updated>2018-06-04T10:31:19.000Z</updated>
   <id>https://wdd.js.org/</id>
   
   <author>
@@ -21,9 +21,9 @@
     <link href="https://wdd.js.org/how-to-fix-google-chrome-very-high-cpu-cost.html"/>
     <id>https://wdd.js.org/how-to-fix-google-chrome-very-high-cpu-cost.html</id>
     <published>2018-06-04T09:58:24.000Z</published>
-    <updated>2018-06-04T10:20:23.000Z</updated>
+    <updated>2018-06-04T10:31:19.000Z</updated>
     
-    <content type="html"><![CDATA[<p>有时候发现mac风扇响的厉害，于是我检查了mac系统的活动监视器，发现Google Chrome Helper占用99%的CPU。</p><p>通常来说Chrome如果占用过高的内存，这并不是什么问题，毕竟Chrome的性能以及易用性是建立在占用很多内存的基础上的。<code>但是无论什么程序，持续的占用超过80%的cpu，都是极不正常的</code>。大多数程序都是占用维持在低于10%的CPU。</p><p>活动监视器指出问题出现在Chrome浏览器。那么问题可以再次细分为三块。</p><ol><li>Chrome系统自身问题</li><li>一些插件，例如flash插件，扩展插件</li><li>网页程序js出现的问题</li></ol><p>其实Chrome浏览器自身也是有任务管理器的，一般来说windows版chrome按住<code>shift+esc</code>就会调出任务管理器窗口。mac版调出任务管理器没有快捷，只能通过<code>Window &gt; Task Manager</code>调出。</p><p><img src="http://p3alsaatj.bkt.clouddn.com/20180604181340_ymCT2T_Jietu20180604-174820.jpeg" alt=""></p><p>调出任务管理器后，发现一个标签页，CPU占用率达到99%， 那就说明，应该是这个标签页中存在持续占用大量CPU计算的程序。</p><p>最后找到这个页面，发现该页面背景图是一种动态粒子图。就是基于<a href="https://github.com/VincentGarreau/particles.js/" target="_blank" rel="noopener">particles.js</a>做的。我想，终于找到你了。</p><p><img src="http://p3alsaatj.bkt.clouddn.com/20180604181757_rRfc8L_687474703a2f2f76696e63656e74676172726561752e636f6d2f7061727469636c65732e6a732f6173736574732f696d672f6769746875622d73637265656e2e6a7067.jpeg" alt=""></p><p>于是我把这个动态图的相关js代码给注释掉，电脑的风扇也终于变得安静了。</p><p>问题解决的总结：<code>解决问题的方法时很简单的，基于一个现象，找到一个原因，基于这个原因再找到一个现象，然后一步一步缩小问题范围，逼近最终原因。</code></p>]]></content>
+    <content type="html"><![CDATA[<p>有时候发现mac风扇响的厉害，于是我检查了mac系统的活动监视器，发现Google Chrome Helper占用99%的CPU。</p><p>通常来说Chrome如果占用过高的内存，这并不是什么问题，毕竟Chrome的性能以及易用性是建立在占用很多内存的基础上的。<code>但是无论什么程序，持续的占用超过80%的cpu，都是极不正常的</code>。大多数程序都是占用维持在低于10%的CPU。</p><p>活动监视器指出问题出现在Chrome浏览器。那么问题可以再次细分为三块。</p><ol><li>Chrome系统自身问题</li><li>一些插件，例如flash插件，扩展插件</li><li>网页程序js出现的问题</li></ol><p>其实Chrome浏览器自身也是有任务管理器的，一般来说windows版chrome按住<code>shift+esc</code>就会调出任务管理器窗口。mac版调出任务管理器没有快捷，只能通过<code>Window &gt; Task Manager</code>调出。</p><p><img src="http://p3alsaatj.bkt.clouddn.com/20180604181340_ymCT2T_Jietu20180604-174820.jpeg" alt=""></p><p>调出任务管理器后，发现一个标签页，CPU占用率达到99%， 那就说明，应该是这个标签页中存在持续占用大量CPU计算的程序。</p><p>最后找到这个页面，发现该页面背景图是一种动态粒子图。就是基于<a href="https://github.com/VincentGarreau/particles.js/" target="_blank" rel="noopener">particles.js</a>做的。我想，终于找到你了。</p><p><img src="http://p3alsaatj.bkt.clouddn.com/20180604181757_rRfc8L_687474703a2f2f76696e63656e74676172726561752e636f6d2f7061727469636c65732e6a732f6173736574732f696d672f6769746875622d73637265656e2e6a7067.jpeg" alt=""></p><p>于是我把这个动态图的相关js代码给注释掉，电脑的风扇也终于变得安静了。</p><p>问题解决的总结：<code>解决问题的方法时很简单的，基于一个现象，找到一个原因，基于这个原因再找到一个现象，然后一步一步缩小问题范围，逼近最终原因。</code></p><p>机器CPU过高，一般都是可以从任务管理器着手解决。系统的任务管理器可以监控各个程序占用的CPU是否正常，通常程序自身也是有任务管理的。像谷歌浏览器这种软件，几乎本身就是一个操作系统，所以说它的任务管理器也是必不可少的。</p>]]></content>
     
     <summary type="html">
     
