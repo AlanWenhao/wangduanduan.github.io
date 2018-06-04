@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://wdd.js.org/"/>
-  <updated>2018-06-03T15:13:23.000Z</updated>
+  <updated>2018-06-04T10:20:23.000Z</updated>
   <id>https://wdd.js.org/</id>
   
   <author>
@@ -15,6 +15,28 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>记一次如何解决谷歌浏览器占用过高cpu问题过程</title>
+    <link href="https://wdd.js.org/how-to-fix-google-chrome-very-high-cpu-cost.html"/>
+    <id>https://wdd.js.org/how-to-fix-google-chrome-very-high-cpu-cost.html</id>
+    <published>2018-06-04T09:58:24.000Z</published>
+    <updated>2018-06-04T10:20:23.000Z</updated>
+    
+    <content type="html"><![CDATA[<p>有时候发现mac风扇响的厉害，于是我检查了mac系统的活动监视器，发现Google Chrome Helper占用99%的CPU。</p><p>通常来说Chrome如果占用过高的内存，这并不是什么问题，毕竟Chrome的性能以及易用性是建立在占用很多内存的基础上的。<code>但是无论什么程序，持续的占用超过80%的cpu，都是极不正常的</code>。大多数程序都是占用维持在低于10%的CPU。</p><p>活动监视器指出问题出现在Chrome浏览器。那么问题可以再次细分为三块。</p><ol><li>Chrome系统自身问题</li><li>一些插件，例如flash插件，扩展插件</li><li>网页程序js出现的问题</li></ol><p>其实Chrome浏览器自身也是有任务管理器的，一般来说windows版chrome按住<code>shift+esc</code>就会调出任务管理器窗口。mac版调出任务管理器没有快捷，只能通过<code>Window &gt; Task Manager</code>调出。</p><p><img src="http://p3alsaatj.bkt.clouddn.com/20180604181340_ymCT2T_Jietu20180604-174820.jpeg" alt=""></p><p>调出任务管理器后，发现一个标签页，CPU占用率达到99%， 那就说明，应该是这个标签页中存在持续占用大量CPU计算的程序。</p><p>最后找到这个页面，发现该页面背景图是一种动态粒子图。就是基于<a href="https://github.com/VincentGarreau/particles.js/" target="_blank" rel="noopener">particles.js</a>做的。我想，终于找到你了。</p><p><img src="http://p3alsaatj.bkt.clouddn.com/20180604181757_rRfc8L_687474703a2f2f76696e63656e74676172726561752e636f6d2f7061727469636c65732e6a732f6173736574732f696d672f6769746875622d73637265656e2e6a7067.jpeg" alt=""></p><p>于是我把这个动态图的相关js代码给注释掉，电脑的风扇也终于变得安静了。</p><p>问题解决的总结：<code>解决问题的方法时很简单的，基于一个现象，找到一个原因，基于这个原因再找到一个现象，然后一步一步缩小问题范围，逼近最终原因。</code></p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;有时候发现mac风扇响的厉害，于是我检查了mac系统的活动监视器，发现Google Chrome Helper占用99%的CPU。&lt;/p&gt;
+&lt;p&gt;通常来说Chrome如果占用过高的内存，这并不是什么问题，毕竟Chrome的性能以及易用性是建立在占用很多内存的基础上的。&lt;co
+      
+    
+    </summary>
+    
+    
+  </entry>
   
   <entry>
     <title>关于白血病的思考</title>
@@ -472,35 +494,6 @@
     
     </summary>
     
-    
-  </entry>
-  
-  <entry>
-    <title>一切皆有可能 IE5 支持WebSocket stompjs</title>
-    <link href="https://wdd.js.org/everything-is-possible-ie5-support-websocket.html"/>
-    <id>https://wdd.js.org/everything-is-possible-ie5-support-websocket.html</id>
-    <published>2018-03-23T10:54:53.000Z</published>
-    <updated>2018-03-24T09:29:36.000Z</updated>
-    
-    <content type="html"><![CDATA[<h1 id="web-socket-js让IE5支持WebSocket"><a href="#web-socket-js让IE5支持WebSocket" class="headerlink" title="web-socket-js让IE5支持WebSocket"></a>web-socket-js让IE5支持WebSocket</h1><p><a href="https://github.com/gimite/web-socket-js" target="_blank" rel="noopener">web-socket-js</a>基于flash技术, 让浏览器可以拥有类似原生的WebSocket的体验。只需要在服务端做少许的改动</p>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;h1 id=&quot;web-socket-js让IE5支持WebSocket&quot;&gt;&lt;a href=&quot;#web-socket-js让IE5支持WebSocket&quot; class=&quot;headerlink&quot; title=&quot;web-socket-js让IE5支持WebSocket&quot;&gt;&lt;/a&gt;we
-      
-    
-    </summary>
-    
-    
-      <category term="未完成" scheme="https://wdd.js.org/tags/%E6%9C%AA%E5%AE%8C%E6%88%90/"/>
-    
-      <category term="ie5" scheme="https://wdd.js.org/tags/ie5/"/>
-    
-      <category term="websocket" scheme="https://wdd.js.org/tags/websocket/"/>
-    
-      <category term="stompjs" scheme="https://wdd.js.org/tags/stompjs/"/>
     
   </entry>
   
