@@ -2,6 +2,27 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://wdd.js.org/vue-vue-router-elementui-stupid-simple-dashboard.html</loc>
+    
+    <lastmod>2018-06-06T09:19:01.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://wdd.js.org/git-commom-cmds.html</loc>
+    
+    <lastmod>2018-06-06T08:03:43.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://wdd.js.org/2018-reading-plan.html</loc>
+    
+    <lastmod>2018-06-06T00:59:52.000Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://wdd.js.org/how-to-fix-google-chrome-very-high-cpu-cost.html</loc>
     
     <lastmod>2018-06-05T05:43:24.000Z</lastmod>
@@ -19,13 +40,6 @@
     <loc>https://wdd.js.org/client-side-storage-about-indexdb.html</loc>
     
     <lastmod>2018-06-02T05:31:00.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://wdd.js.org/2018-reading-plan.html</loc>
-    
-    <lastmod>2018-06-01T05:39:55.000Z</lastmod>
     
   </url>
   
@@ -138,13 +152,6 @@
     <loc>https://wdd.js.org/express-static-file-cache-setting-and-cleaning.html</loc>
     
     <lastmod>2018-04-08T01:28:18.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://wdd.js.org/git-commom-cmds.html</loc>
-    
-    <lastmod>2018-04-04T01:33:05.000Z</lastmod>
     
   </url>
   
@@ -502,13 +509,6 @@
     <loc>https://wdd.js.org/vue-ws-monitor-agent-status.html</loc>
     
     <lastmod>2018-02-09T07:49:04.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://wdd.js.org/vue-vue-router-elementui-stupid-simple-dashboard.html</loc>
-    
-    <lastmod>2018-02-09T07:49:00.000Z</lastmod>
     
   </url>
   
