@@ -2,6 +2,20 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://wdd.js.org/think-about-restful-api.html</loc>
+    
+    <lastmod>2018-06-12T06:13:23.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://wdd.js.org/wars-between-tencent-and-toutiao.html</loc>
+    
+    <lastmod>2018-06-12T06:06:57.000Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://wdd.js.org/vue-vue-router-elementui-stupid-simple-dashboard.html</loc>
     
     <lastmod>2018-06-06T09:19:01.000Z</lastmod>
