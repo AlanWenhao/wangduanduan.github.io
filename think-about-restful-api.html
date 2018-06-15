@@ -82,13 +82,13 @@
 
 
 
-<meta name="description" content="1. 什么是REST? 2. REST API最为重要的约束 3. REST API HTTP方法 4. 状态码 5. RESTful架构设计 6. 文档 7. 版本 8. 深入理解状态与无状态 9. 参考   1. 什么是REST? 表现层状态转换（REST，英文：Representational State Transfer）是Roy Thomas Fielding博士于2000年在他的博">
+<meta name="description" content="1. 什么是REST? 2. REST API最为重要的约束 3. REST API HTTP方法 与 CURD 4. 状态码 5. RESTful架构设计 6. 文档 7. 版本 8. 深入理解状态与无状态 9. 参考   1. 什么是REST? 表现层状态转换（REST，英文：Representational State Transfer）是Roy Thomas Fielding博士于20">
 <meta name="keywords" content="未完成,rest">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Restful API 架构思考">
 <meta property="og:url" content="https://wdd.js.org/think-about-restful-api.html">
 <meta property="og:site_name" content="洞香春">
-<meta property="og:description" content="1. 什么是REST? 2. REST API最为重要的约束 3. REST API HTTP方法 4. 状态码 5. RESTful架构设计 6. 文档 7. 版本 8. 深入理解状态与无状态 9. 参考   1. 什么是REST? 表现层状态转换（REST，英文：Representational State Transfer）是Roy Thomas Fielding博士于2000年在他的博">
+<meta property="og:description" content="1. 什么是REST? 2. REST API最为重要的约束 3. REST API HTTP方法 与 CURD 4. 状态码 5. RESTful架构设计 6. 文档 7. 版本 8. 深入理解状态与无状态 9. 参考   1. 什么是REST? 表现层状态转换（REST，英文：Representational State Transfer）是Roy Thomas Fielding博士于20">
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:image" content="http://p3alsaatj.bkt.clouddn.com/20180607224524_M1yRtD_content_api_for_restful_web_services.jpeg">
 <meta property="og:image" content="http://p3alsaatj.bkt.clouddn.com/20180607225013_Kuay0l_content_rest_api_design.jpeg">
@@ -97,10 +97,10 @@
 <meta property="og:image" content="http://p3alsaatj.bkt.clouddn.com/20180612085434_VuMRnP_content_description_of_each_request_model_in_swagger.jpeg">
 <meta property="og:image" content="http://p3alsaatj.bkt.clouddn.com/20180612141107_qhgDxn_Jietu20180612-141048.jpeg">
 <meta property="og:image" content="http://p3alsaatj.bkt.clouddn.com/20180612141200_2UmvfX_Jietu20180612-141058.jpeg">
-<meta property="og:updated_time" content="2018-06-15T05:33:40.000Z">
+<meta property="og:updated_time" content="2018-06-15T05:54:06.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Restful API 架构思考">
-<meta name="twitter:description" content="1. 什么是REST? 2. REST API最为重要的约束 3. REST API HTTP方法 4. 状态码 5. RESTful架构设计 6. 文档 7. 版本 8. 深入理解状态与无状态 9. 参考   1. 什么是REST? 表现层状态转换（REST，英文：Representational State Transfer）是Roy Thomas Fielding博士于2000年在他的博">
+<meta name="twitter:description" content="1. 什么是REST? 2. REST API最为重要的约束 3. REST API HTTP方法 与 CURD 4. 状态码 5. RESTful架构设计 6. 文档 7. 版本 8. 深入理解状态与无状态 9. 参考   1. 什么是REST? 表现层状态转换（REST，英文：Representational State Transfer）是Roy Thomas Fielding博士于20">
 <meta name="twitter:image" content="http://p3alsaatj.bkt.clouddn.com/20180607224524_M1yRtD_content_api_for_restful_web_services.jpeg">
 
 
@@ -374,7 +374,7 @@
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  822 字
+                  986 字
                 </span>
               
 
@@ -390,7 +390,7 @@
                   <span class="post-meta-item-text">阅读时长 &asymp;</span>
                 
                 <span title="阅读时长">
-                  3 分钟
+                  4 分钟
                 </span>
               
             </div>
@@ -415,7 +415,7 @@
 <ul>
 <li><a href="#1-什么是rest">1. 什么是REST?</a></li>
 <li><a href="#2-rest-api最为重要的约束">2. REST API最为重要的约束</a></li>
-<li><a href="#3-rest-api-http方法">3. REST API HTTP方法</a></li>
+<li><a href="#3-rest-api-http方法-与-curd">3. REST API HTTP方法 与 CURD</a></li>
 <li><a href="#4-状态码">4. 状态码</a></li>
 <li><a href="#5-restful架构设计">5. RESTful架构设计</a></li>
 <li><a href="#6-文档">6. 文档</a></li>
@@ -439,7 +439,8 @@
 <li><code>Layered System</code> 通过限制组件的行为（即每个组件只能“看到”与其交互的紧邻层），将架构分解为若干等级的层。</li>
 <li><code>Code-On-Demand</code> 支持通过下载并执行一些代码（例如Java Applet、Flash或JavaScript），对客户端的功能进行扩展。</li>
 </ul>
-<h1 id="3-REST-API-HTTP方法"><a href="#3-REST-API-HTTP方法" class="headerlink" title="3. REST API HTTP方法"></a>3. REST API HTTP方法</h1><p><img src="http://p3alsaatj.bkt.clouddn.com/20180612085022_UHL82x_content_request_methods.jpeg" alt=""></p>
+<h1 id="3-REST-API-HTTP方法-与-CURD"><a href="#3-REST-API-HTTP方法-与-CURD" class="headerlink" title="3. REST API HTTP方法 与 CURD"></a>3. REST API HTTP方法 与 CURD</h1><p>REST API 使用POST，GET, PUT, DELETE的HTTP方法来描述对资源的增、查、改、删。<br>这四个HTTP方法在数据层对应着SQL的插入、查询、更新、删除操作。</p>
+<p><img src="http://p3alsaatj.bkt.clouddn.com/20180612085022_UHL82x_content_request_methods.jpeg" alt=""></p>
 <h1 id="4-状态码"><a href="#4-状态码" class="headerlink" title="4. 状态码"></a>4. 状态码</h1><ul>
 <li><code>1xx</code> - informational;</li>
 <li><code>2xx</code> - success;</li>
@@ -459,7 +460,7 @@
 <p><img src="http://p3alsaatj.bkt.clouddn.com/20180612085434_VuMRnP_content_description_of_each_request_model_in_swagger.jpeg" alt=""></p>
 <h1 id="7-版本"><a href="#7-版本" class="headerlink" title="7. 版本"></a>7. 版本</h1><p>版本管理一般有两种</p>
 <ul>
-<li>位于url中的版本标识： <a href="http://example.com/api/`v1`" target="_blank" rel="noopener">http://example.com/api/`v1`</a></li>
+<li>位于url中的版本标识： <a href="http://example.com/api/v1" target="_blank" rel="noopener">http://example.com/api/v1</a></li>
 <li>位于请求头中的版本标识：Accept: application/vnd.redkavasyl+json; <code>version=2.0</code></li>
 </ul>
 <h1 id="8-深入理解状态与无状态"><a href="#8-深入理解状态与无状态" class="headerlink" title="8. 深入理解状态与无状态"></a>8. 深入理解状态与无状态</h1><p>我认为REST架构最难理解的就是状态与无状态。下面我画出两个示意图。</p>
@@ -467,6 +468,10 @@
 <p><img src="http://p3alsaatj.bkt.clouddn.com/20180612141107_qhgDxn_Jietu20180612-141048.jpeg" alt=""><br>【图1 有状态的架构】</p>
 <p><img src="http://p3alsaatj.bkt.clouddn.com/20180612141200_2UmvfX_Jietu20180612-141058.jpeg" alt=""></p>
 <p>【图2 无状态的架构】</p>
+<blockquote>
+<p> each request from client to server must contain all of the information necessary to understand the request, and cannot take advantage of any stored context on the server. Session state is therefore kept entirely on the client. <a href="https://www.ics.uci.edu/~fielding/pubs/dissertation/rest_arch_style.htm#sec_5_1_3" target="_blank" rel="noopener">rest_arch_style stateless</a></p>
+</blockquote>
+<p>每一个请求自身必须携带所有的信息，让客户端理解这个请求。举个栗子，常见的翻页操作，应该客户端告诉服务端想要看第几页的数据，而不应该让服务端记住客户端看到了第几页。</p>
 <h1 id="9-参考"><a href="#9-参考" class="headerlink" title="9. 参考"></a>9. 参考</h1><ul>
 <li><a href="https://mlsdev.com/blog/81-a-beginner-s-tutorial-for-understanding-restful-api" target="_blank" rel="noopener">A Beginner’s Tutorial for Understanding RESTful API</a></li>
 <li><a href="http://www.informit.com/articles/article.aspx?p=1566460" target="_blank" rel="noopener">Versioning REST Services</a></li>
@@ -696,7 +701,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#1-什么是REST"><span class="nav-text">1. 什么是REST?</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#2-REST-API最为重要的约束"><span class="nav-text">2. REST API最为重要的约束</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#3-REST-API-HTTP方法"><span class="nav-text">3. REST API HTTP方法</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#4-状态码"><span class="nav-text">4. 状态码</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#5-RESTful架构设计"><span class="nav-text">5. RESTful架构设计</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#6-文档"><span class="nav-text">6. 文档</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#7-版本"><span class="nav-text">7. 版本</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#8-深入理解状态与无状态"><span class="nav-text">8. 深入理解状态与无状态</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#9-参考"><span class="nav-text">9. 参考</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#1-什么是REST"><span class="nav-text">1. 什么是REST?</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#2-REST-API最为重要的约束"><span class="nav-text">2. REST API最为重要的约束</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#3-REST-API-HTTP方法-与-CURD"><span class="nav-text">3. REST API HTTP方法 与 CURD</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#4-状态码"><span class="nav-text">4. 状态码</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#5-RESTful架构设计"><span class="nav-text">5. RESTful架构设计</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#6-文档"><span class="nav-text">6. 文档</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#7-版本"><span class="nav-text">7. 版本</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#8-深入理解状态与无状态"><span class="nav-text">8. 深入理解状态与无状态</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#9-参考"><span class="nav-text">9. 参考</span></a></li></ol></div>
             
 
           </div>
