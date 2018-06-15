@@ -5,16 +5,31 @@
     
   <url>
     <loc>https://wdd.js.org/think-about-restful-api.html</loc>
-    <lastmod>2018-06-12T06:13:23.000Z</lastmod>
+    <lastmod>2018-06-15T05:33:40.000Z</lastmod>
     <data>
         <display>
-        <title>Restful API</title>
+        <title>Restful API 架构思考</title>
         <pubTime>2018-06-07T14:35:08.000Z</pubTime>
         
         <tag>未完成</tag>
          
         <tag>rest</tag>
          
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>https://wdd.js.org/add-npm-package-to-your-project-realy-necessary.html</loc>
+    <lastmod>2018-06-14T14:41:59.000Z</lastmod>
+    <data>
+        <display>
+        <title>如无必要，请不要多安装任意一个npm包</title>
+        <pubTime>2018-06-14T13:41:52.000Z</pubTime>
+        
          
            
         </display>
@@ -879,11 +894,11 @@
         <title>Express 代理中间件的写法</title>
         <pubTime>2018-02-18T02:43:05.000Z</pubTime>
         
+        <tag>Express</tag>
+         
         <tag>proxy</tag>
          
         <tag>http</tag>
-         
-        <tag>Express</tag>
          
          
            

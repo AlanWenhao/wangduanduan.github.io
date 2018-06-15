@@ -85,7 +85,7 @@
 <meta name="description" content="1. 什么是REST? 2. REST API最为重要的约束 3. REST API HTTP方法 4. 状态码 5. RESTful架构设计 6. 文档 7. 版本 8. 深入理解状态与无状态 9. 参考   1. 什么是REST? 表现层状态转换（REST，英文：Representational State Transfer）是Roy Thomas Fielding博士于2000年在他的博">
 <meta name="keywords" content="未完成,rest">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Restful API">
+<meta property="og:title" content="Restful API 架构思考">
 <meta property="og:url" content="https://wdd.js.org/think-about-restful-api.html">
 <meta property="og:site_name" content="洞香春">
 <meta property="og:description" content="1. 什么是REST? 2. REST API最为重要的约束 3. REST API HTTP方法 4. 状态码 5. RESTful架构设计 6. 文档 7. 版本 8. 深入理解状态与无状态 9. 参考   1. 什么是REST? 表现层状态转换（REST，英文：Representational State Transfer）是Roy Thomas Fielding博士于2000年在他的博">
@@ -97,9 +97,9 @@
 <meta property="og:image" content="http://p3alsaatj.bkt.clouddn.com/20180612085434_VuMRnP_content_description_of_each_request_model_in_swagger.jpeg">
 <meta property="og:image" content="http://p3alsaatj.bkt.clouddn.com/20180612141107_qhgDxn_Jietu20180612-141048.jpeg">
 <meta property="og:image" content="http://p3alsaatj.bkt.clouddn.com/20180612141200_2UmvfX_Jietu20180612-141058.jpeg">
-<meta property="og:updated_time" content="2018-06-12T06:13:23.000Z">
+<meta property="og:updated_time" content="2018-06-15T05:33:40.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Restful API">
+<meta name="twitter:title" content="Restful API 架构思考">
 <meta name="twitter:description" content="1. 什么是REST? 2. REST API最为重要的约束 3. REST API HTTP方法 4. 状态码 5. RESTful架构设计 6. 文档 7. 版本 8. 深入理解状态与无状态 9. 参考   1. 什么是REST? 表现层状态转换（REST，英文：Representational State Transfer）是Roy Thomas Fielding博士于2000年在他的博">
 <meta name="twitter:image" content="http://p3alsaatj.bkt.clouddn.com/20180607224524_M1yRtD_content_api_for_restful_web_services.jpeg">
 
@@ -137,7 +137,7 @@
 
 
 
-  <title>Restful API | 洞香春</title>
+  <title>Restful API 架构思考 | 洞香春</title>
   
 
 
@@ -325,7 +325,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">Restful API</h1>
+          <h1 class="post-title" itemprop="name headline">Restful API 架构思考</h1>
         
 
         <div class="post-meta">
@@ -374,7 +374,7 @@
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  714 字
+                  822 字
                 </span>
               
 
@@ -457,11 +457,13 @@
 </ul>
 <h1 id="6-文档"><a href="#6-文档" class="headerlink" title="6. 文档"></a>6. 文档</h1><p><img src="http://p3alsaatj.bkt.clouddn.com/20180612085417_wIj3AP_content_requests_for_the_user_in_swagger.jpeg" alt=""></p>
 <p><img src="http://p3alsaatj.bkt.clouddn.com/20180612085434_VuMRnP_content_description_of_each_request_model_in_swagger.jpeg" alt=""></p>
-<h1 id="7-版本"><a href="#7-版本" class="headerlink" title="7. 版本"></a>7. 版本</h1><ul>
+<h1 id="7-版本"><a href="#7-版本" class="headerlink" title="7. 版本"></a>7. 版本</h1><p>版本管理一般有两种</p>
+<ul>
 <li>位于url中的版本标识： <a href="http://example.com/api/`v1`" target="_blank" rel="noopener">http://example.com/api/`v1`</a></li>
 <li>位于请求头中的版本标识：Accept: application/vnd.redkavasyl+json; <code>version=2.0</code></li>
 </ul>
 <h1 id="8-深入理解状态与无状态"><a href="#8-深入理解状态与无状态" class="headerlink" title="8. 深入理解状态与无状态"></a>8. 深入理解状态与无状态</h1><p>我认为REST架构最难理解的就是状态与无状态。下面我画出两个示意图。</p>
+<p>图1是有状态的服务，状态存储于单个服务之中，一旦一个服务挂了，状态就没了，有状态服务很难扩展。无状态的服务，状态存储于客户端，一个请求可以被投递到任何服务端，即使一个服务挂了，也不回影响到同一个客户端发来的下一个请求。</p>
 <p><img src="http://p3alsaatj.bkt.clouddn.com/20180612141107_qhgDxn_Jietu20180612-141048.jpeg" alt=""><br>【图1 有状态的架构】</p>
 <p><img src="http://p3alsaatj.bkt.clouddn.com/20180612141200_2UmvfX_Jietu20180612-141058.jpeg" alt=""></p>
 <p>【图2 无状态的架构】</p>
@@ -489,11 +491,11 @@
   </li>
   <li class="post-copyright-link">
     <strong>本文标题：</strong>
-    <a href="https://wdd.js.org/think-about-restful-api.html" title="Restful API">Restful API</a>
+    <a href="https://wdd.js.org/think-about-restful-api.html" title="Restful API 架构思考">Restful API 架构思考</a>
   </li>
   <li class="post-copyright-link">
     <strong>本文链接：</strong>
-    <a href="https://wdd.js.org/think-about-restful-api.html" title="Restful API">https://wdd.js.org/think-about-restful-api.html</a>
+    <a href="https://wdd.js.org/think-about-restful-api.html" title="Restful API 架构思考">https://wdd.js.org/think-about-restful-api.html</a>
   </li>
   <li class="post-copyright-date">
       <strong>发布时间：</strong>2018年6月7日 - 22时06分
@@ -619,7 +621,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">153</span>
+                  <span class="site-state-item-count">154</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
