@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://wdd.js.org/"/>
-  <updated>2018-06-14T14:41:59.000Z</updated>
+  <updated>2018-07-03T10:14:22.000Z</updated>
   <id>https://wdd.js.org/</id>
   
   <author>
@@ -15,6 +15,98 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>gitlab jenkins 集成教程</title>
+    <link href="https://wdd.js.org/gitlab-jenkins-ci-tutorial.html"/>
+    <id>https://wdd.js.org/gitlab-jenkins-ci-tutorial.html</id>
+    <published>2018-07-03T09:56:05.000Z</published>
+    <updated>2018-07-03T10:14:22.000Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="1-jenkins项目配置"><a href="#1-jenkins项目配置" class="headerlink" title="1. jenkins项目配置"></a>1. jenkins项目配置</h1><h2 id="1-1-构建触发器设置"><a href="#1-1-构建触发器设置" class="headerlink" title="1.1. 构建触发器设置"></a>1.1. 构建触发器设置</h2><ul><li>方框位置打钩</li><li>注意：椭圆圈住的位置的URL在下文中会用到</li></ul><p>如果你的项目中看不到这一项，那么你需要安装<a href="https://wiki.jenkins.io/display/JENKINS/GitLab+Plugin" target="_blank" rel="noopener">Gitlab Plugin</a></p><p><img src="http://p3alsaatj.bkt.clouddn.com/20180703175934_fhIT2T_Jietu20180703-175910.jpeg" alt=""></p><h2 id="1-2-构建"><a href="#1-2-构建" class="headerlink" title="1.2. 构建"></a>1.2. 构建</h2><p>注意：<code>$BUILD_NUMBER</code>是一个全局的宏，加上这个之后，每次构建产生的tag都不一样。</p><p><img src="http://p3alsaatj.bkt.clouddn.com/20180703180154_3EBgJo_Jietu20180703-180138.jpeg" alt=""></p><p>构建生成的项目名称如下图所示。</p><p><img src="http://p3alsaatj.bkt.clouddn.com/20180703180601_uyMlkh_Jietu20180703-180546.jpeg" alt=""></p><h1 id="2-gitlab配置"><a href="#2-gitlab配置" class="headerlink" title="2. gitlab配置"></a>2. gitlab配置</h1><h2 id="2-1-配置WebHooks"><a href="#2-1-配置WebHooks" class="headerlink" title="2.1. 配置WebHooks"></a>2.1. 配置WebHooks</h2><p>找到项目的 <code>projectX &gt; Settings &gt; Integrations</code>页面。</p><ul><li>在椭圆中填入1.1章节中的URL</li><li>选中Push events</li><li>点击Add webhook</li></ul><p><img src="http://p3alsaatj.bkt.clouddn.com/20180703180947_EvLieQ_Jietu20180703-180934.jpeg" alt=""></p><p>添加成功后，会在Add webhook按钮下出现 Webhooks列表，你可以点击某一个webhook后的Test按钮进行测试。</p><p>如果测试成功，jenkins那边会新建构建任务。</p><p>如果测试失败，gitlab这边会给出具体的错误信息。</p><p><img src="http://p3alsaatj.bkt.clouddn.com/20180703181150_q5E49m_Jietu20180703-181139.jpeg" alt=""></p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h1 id=&quot;1-jenkins项目配置&quot;&gt;&lt;a href=&quot;#1-jenkins项目配置&quot; class=&quot;headerlink&quot; title=&quot;1. jenkins项目配置&quot;&gt;&lt;/a&gt;1. jenkins项目配置&lt;/h1&gt;&lt;h2 id=&quot;1-1-构建触发器设置&quot;&gt;&lt;a hre
+      
+    
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>JavaScript动态下载文件</title>
+    <link href="https://wdd.js.org/js-download-file.html"/>
+    <id>https://wdd.js.org/js-download-file.html</id>
+    <published>2018-06-27T01:09:01.000Z</published>
+    <updated>2018-06-27T01:14:14.000Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="需求描述"><a href="#需求描述" class="headerlink" title="需求描述"></a>需求描述</h1><ul><li>可以把字符串下载成txt文件</li><li>可以把对象序列化后下载json文件</li><li>下载由ajax请求返回的Excel, Word, pdf 等等其他文件</li></ul><h1 id="基本思想"><a href="#基本思想" class="headerlink" title="基本思想"></a>基本思想</h1><figure class="highlight stylus"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">downloadJsonIVR () &#123;</span><br><span class="line">  <span class="selector-tag">var</span> data = &#123;name: <span class="string">'age'</span>&#125;</span><br><span class="line">  data = JSON.stringify(data)</span><br><span class="line">  data = new Blob([data])</span><br><span class="line">  <span class="selector-tag">var</span> <span class="selector-tag">a</span> = document.createElement(<span class="string">'a'</span>)</span><br><span class="line">  <span class="selector-tag">var</span> url = window<span class="selector-class">.URL</span><span class="selector-class">.createObjectURL</span>(data)</span><br><span class="line">  <span class="selector-tag">a</span><span class="selector-class">.href</span> = url</span><br><span class="line">  <span class="selector-tag">a</span><span class="selector-class">.download</span> = <span class="string">'what-you-want.json'</span></span><br><span class="line">  <span class="selector-tag">a</span>.click()</span><br><span class="line">&#125;,</span><br></pre></td></tr></table></figure><h1 id="从字符串下载文件"><a href="#从字符串下载文件" class="headerlink" title="从字符串下载文件"></a>从字符串下载文件</h1><h1 id="从ajax请求中下载文件"><a href="#从ajax请求中下载文件" class="headerlink" title="从ajax请求中下载文件"></a>从ajax请求中下载文件</h1>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h1 id=&quot;需求描述&quot;&gt;&lt;a href=&quot;#需求描述&quot; class=&quot;headerlink&quot; title=&quot;需求描述&quot;&gt;&lt;/a&gt;需求描述&lt;/h1&gt;&lt;ul&gt;
+&lt;li&gt;可以把字符串下载成txt文件&lt;/li&gt;
+&lt;li&gt;可以把对象序列化后下载json文件&lt;/li&gt;
+&lt;li&gt;下载由aj
+      
+    
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>what-is-this</title>
+    <link href="https://wdd.js.org/what-is-this.html"/>
+    <id>https://wdd.js.org/what-is-this.html</id>
+    <published>2018-06-25T13:35:40.000Z</published>
+    <updated>2018-06-25T13:52:07.000Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="this不是词法位置，而是执行位置"><a href="#this不是词法位置，而是执行位置" class="headerlink" title="this不是词法位置，而是执行位置"></a>this不是词法位置，而是执行位置</h1><p>this并不是一个静态的概念，</p><p>而是动态的概念。</p><p>this并不是一个词法位置，例如在第5行，第6列出现了this, </p><p>而是一个情景位置，如：我喜欢你。</p><p>this不是一个路标，</p><p>而是你眼前的风景，</p><p>随着你的位置改变，你眼前的风景也随之改变。</p><h1 id="常见的this"><a href="#常见的this" class="headerlink" title="常见的this"></a>常见的this</h1><p>this在不同的环境中指向不同，在严格模式和非严格模式中也是表现不同。</p><h2 id="全局作用域中的this"><a href="#全局作用域中的this" class="headerlink" title="全局作用域中的this"></a>全局作用域中的this</h2><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 浏览器</span></span><br><span class="line">console.<span class="built_in">log</span>(<span class="keyword">this</span>)</span><br></pre></td></tr></table></figure>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h1 id=&quot;this不是词法位置，而是执行位置&quot;&gt;&lt;a href=&quot;#this不是词法位置，而是执行位置&quot; class=&quot;headerlink&quot; title=&quot;this不是词法位置，而是执行位置&quot;&gt;&lt;/a&gt;this不是词法位置，而是执行位置&lt;/h1&gt;&lt;p&gt;this并不是一个静
+      
+    
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>如何去记住JavaScript中call和apply的用法</title>
+    <link href="https://wdd.js.org/how-to-remember-call-and-apply.html"/>
+    <id>https://wdd.js.org/how-to-remember-call-and-apply.html</id>
+    <published>2018-06-19T02:04:40.000Z</published>
+    <updated>2018-06-25T13:36:56.000Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="记住与忘记的故事"><a href="#记住与忘记的故事" class="headerlink" title="记住与忘记的故事"></a>记住与忘记的故事</h1><p>在讲call和apply之前，</p><h1 id="不要妄想去记住，应该去体验"><a href="#不要妄想去记住，应该去体验" class="headerlink" title="不要妄想去记住，应该去体验"></a>不要妄想去记住，应该去体验</h1><h2 id="多实例之间共享方法"><a href="#多实例之间共享方法" class="headerlink" title="多实例之间共享方法"></a>多实例之间共享方法</h2><h1 id="记住最终是为了忘记"><a href="#记住最终是为了忘记" class="headerlink" title="记住最终是为了忘记"></a>记住最终是为了忘记</h1>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h1 id=&quot;记住与忘记的故事&quot;&gt;&lt;a href=&quot;#记住与忘记的故事&quot; class=&quot;headerlink&quot; title=&quot;记住与忘记的故事&quot;&gt;&lt;/a&gt;记住与忘记的故事&lt;/h1&gt;&lt;p&gt;在讲call和apply之前，&lt;/p&gt;
+&lt;h1 id=&quot;不要妄想去记住，应该去体验&quot;&gt;&lt;a 
+      
+    
+    </summary>
+    
+    
+      <category term="call" scheme="https://wdd.js.org/tags/call/"/>
+    
+      <category term="apply" scheme="https://wdd.js.org/tags/apply/"/>
+    
+  </entry>
   
   <entry>
     <title>如无必要，请不要多安装任意一个npm包</title>
@@ -402,102 +494,6 @@
     
     </summary>
     
-    
-  </entry>
-  
-  <entry>
-    <title>Express静态文件浏览器缓存设置与缓存清除</title>
-    <link href="https://wdd.js.org/express-static-file-cache-setting-and-cleaning.html"/>
-    <id>https://wdd.js.org/express-static-file-cache-setting-and-cleaning.html</id>
-    <published>2018-04-08T01:00:48.000Z</published>
-    <updated>2018-04-08T01:28:18.000Z</updated>
-    
-    <content type="html"><![CDATA[<h1 id="1-Express设置缓存"><a href="#1-Express设置缓存" class="headerlink" title="1. Express设置缓存"></a>1. Express设置缓存</h1><p>Express设置静态文件的方法很简单，一行代码搞定。<code>app.use(express.static(path.join(__dirname, &#39;public&#39;), {maxAge: MAX_AGE}))</code>,<br>注意MAX_AGE的单位是毫秒。这句代码的含义是让pulic目录下的所有文件都可以在浏览器中缓存，过期时长为MAX_AGE毫秒。</p><figure class="highlight arduino"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">app.use(express.<span class="keyword">static</span>(path.join(__dirname, <span class="string">'public'</span>), &#123;maxAge: <span class="built_in">config</span>.<span class="built_in">get</span>(<span class="string">'maxAge'</span>)&#125;))</span><br></pre></td></tr></table></figure><h1 id="2-Express让浏览器清除缓存"><a href="#2-Express让浏览器清除缓存" class="headerlink" title="2. Express让浏览器清除缓存"></a>2. Express让浏览器清除缓存</h1><p>缓存的好处是可以更快的访问服务，但是缓存也有坏处。例如设置缓存为10天，第二天的时候服务更新了。如果客户端不强制刷新页面的话，浏览器会一致使用更新前的静态文件，这样会导致一些BUG。你总当每次出问题时，客户打电话给你后，你让他强制刷新浏览器吧？</p><p>所以，最好在服务重启后，重新让浏览器获取最新的静态文件。</p><p>设置的方式是给每一个静态文件设置一个时间戳。</p><p>例如：<code>vendor/loadjs/load.js?_=123898923423&quot;&gt;&lt;/script&gt;</code></p><h2 id="2-1-Express-路由"><a href="#2-1-Express-路由" class="headerlink" title="2.1. Express 路由"></a>2.1. Express 路由</h2><figure class="highlight vim"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">// /routes/<span class="built_in">index</span>.js</span><br><span class="line">router.<span class="built_in">get</span>(<span class="string">'/home'</span>, <span class="function"><span class="keyword">function</span> <span class="params">(req, res, next)</span> &#123;</span></span><br><span class="line">  <span class="keyword">res</span>.render(<span class="string">'home'</span>, &#123;confi<span class="variable">g:</span> config, serverStartTimestamp: <span class="keyword">new</span> Date().getTime()&#125;)</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure><h2 id="2-2-视图文件"><a href="#2-2-视图文件" class="headerlink" title="2.2. 视图文件"></a>2.2. 视图文件</h2><figure class="highlight erb"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="xml">// views/home.html</span></span><br><span class="line"><span class="xml"><span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">"vendor/loadjs/load.js?_=&lt;%=</span></span></span><span class="ruby"> serverStartTimestamp </span><span class="xml"><span class="tag"><span class="string">%&gt;"</span>&gt;</span><span class="undefined"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span></span><br></pre></td></tr></table></figure><p>设置之后，每次服务更新或者重启，浏览器都会使用最新的时间戳serverStartTimestamp，去获取静态文件。</p><h2 id="2-3-动态加载JS文件"><a href="#2-3-动态加载JS文件" class="headerlink" title="2.3. 动态加载JS文件"></a>2.3. 动态加载JS文件</h2><p>有时候js文件并不是直接在HTML中引入，可能是使用了一些js文件加载库，例如requirejs, LABjs等。这些情况下，可以在全局设置环境变量SERVER_START_TIMESTAMP，用来表示服务启动的时间戳，在获取js的时候，将该时间戳拼接在路径上。</p><p>注意：<code>环境变量SERVER_START_TIMESTAMP，一定要在其他脚本使用前定义。</code></p><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// views/home.html</span></span><br><span class="line">&lt;script&gt;</span><br><span class="line">  <span class="keyword">var</span> SERVER_START_TIMESTAMP = <span class="xml"><span class="tag">&lt;<span class="name">%=</span> <span class="attr">serverStartTimestamp</span> %&gt;</span></span></span><br><span class="line"><span class="xml"><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="comment">// load.js</span></span><br><span class="line"><span class="string">'vendor/contact-center/skill.js?_='</span> + SERVER_START_TIMESTAMP</span><br></pre></td></tr></table></figure>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;h1 id=&quot;1-Express设置缓存&quot;&gt;&lt;a href=&quot;#1-Express设置缓存&quot; class=&quot;headerlink&quot; title=&quot;1. Express设置缓存&quot;&gt;&lt;/a&gt;1. Express设置缓存&lt;/h1&gt;&lt;p&gt;Express设置静态文件的方法很简单，一行代码
-      
-    
-    </summary>
-    
-    
-      <category term="Express" scheme="https://wdd.js.org/tags/Express/"/>
-    
-      <category term="静态文件" scheme="https://wdd.js.org/tags/%E9%9D%99%E6%80%81%E6%96%87%E4%BB%B6/"/>
-    
-      <category term="浏览器缓存" scheme="https://wdd.js.org/tags/%E6%B5%8F%E8%A7%88%E5%99%A8%E7%BC%93%E5%AD%98/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>绝对不要容忍拼写错误</title>
-    <link href="https://wdd.js.org/do-not-tolerate-spelling-mistake.html"/>
-    <id>https://wdd.js.org/do-not-tolerate-spelling-mistake.html</id>
-    <published>2018-04-03T08:37:40.000Z</published>
-    <updated>2018-04-03T13:01:20.000Z</updated>
-    
-    <content type="html"><![CDATA[<p><code>最难找又最好找的bug是拼写错误。</code>如果你意识到问题的原因可能是拼写错误，那么检查起来是很容易的。否则，则可能花费几天事件去找问题的原因。</p><p>你要相信计算机，计算机告诉你的问题，99%一定是开发者自身的问题，而不是计算机的问题。</p><p><img src="http://p3alsaatj.bkt.clouddn.com/20180403205759_9VJNcG_.jpeg" alt=""></p><p>找bug其实是一个很有意思的事情，有点像躲猫猫，计算机告诉你一些表象原因。有些时候，你可以从这些表象原因中立马发现问题所在，有时候又会让你抓耳挠腮，废寝忘食，辗转反侧，求之不得。</p><p>越难解决的问题，解决过后，幸福感和快乐感也随之增加。</p><blockquote><p>初极狭，才通人。复行数十步，豁然开朗。土地平旷，屋舍俨然，有良田美池桑竹之属。阡陌交通，鸡犬相闻。其中往来种作，男女衣着，悉如外人。黄发垂髫，并怡然自乐。– 《桃花源记》</p></blockquote><p><img src="http://p3alsaatj.bkt.clouddn.com/20180403205900_TGZuPo_.jpeg" alt=""></p><h1 id="1-为什么会产生拼写错误？"><a href="#1-为什么会产生拼写错误？" class="headerlink" title="1. 为什么会产生拼写错误？"></a>1. 为什么会产生拼写错误？</h1><ul><li>马虎</li><li>懒</li></ul><h1 id="2-拼写错误可能引起哪些问题？"><a href="#2-拼写错误可能引起哪些问题？" class="headerlink" title="2. 拼写错误可能引起哪些问题？"></a>2. 拼写错误可能引起哪些问题？</h1><ul><li>无法引用到变量，报一些引用的错误</li><li>HTTP 404, 如果路径拼写错误，那么是会导致请求404的</li></ul><h1 id="3-拼写错误的长远影响？"><a href="#3-拼写错误的长远影响？" class="headerlink" title="3. 拼写错误的长远影响？"></a>3. 拼写错误的长远影响？</h1><ul><li>有个成语叫<code>遗臭万年</code></li></ul><h1 id="4-如何减少拼写错误？"><a href="#4-如何减少拼写错误？" class="headerlink" title="4. 如何减少拼写错误？"></a>4. 如何减少拼写错误？</h1><ul><li>查字典 有道字典</li><li>代码拼写检查工具： 如vscode上的拼写检查插件<a href="https://github.com/Jason-Rev/vscode-spell-checker" target="_blank" rel="noopener">vscode-spell-checker</a></li></ul>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;p&gt;&lt;code&gt;最难找又最好找的bug是拼写错误。&lt;/code&gt;如果你意识到问题的原因可能是拼写错误，那么检查起来是很容易的。否则，则可能花费几天事件去找问题的原因。&lt;/p&gt;
-&lt;p&gt;你要相信计算机，计算机告诉你的问题，99%一定是开发者自身的问题，而不是计算机的问题。&lt;/p&gt;
-
-      
-    
-    </summary>
-    
-    
-  </entry>
-  
-  <entry>
-    <title>Small is Powerful Vue mixins</title>
-    <link href="https://wdd.js.org/small-is-powerful-vue-mixins.html"/>
-    <id>https://wdd.js.org/small-is-powerful-vue-mixins.html</id>
-    <published>2018-03-30T07:33:58.000Z</published>
-    <updated>2018-03-30T07:43:23.000Z</updated>
-    
-    <content type="html"><![CDATA[<h1 id="small-is-beautiful"><a href="#small-is-beautiful" class="headerlink" title="small is beautiful"></a>small is beautiful</h1><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">new</span> Vue(&#123;</span><br><span class="line">  el: <span class="string">'#app'</span>,</span><br><span class="line">  methods: &#123;</span><br><span class="line">    hello: <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">      <span class="built_in">console</span>.log(<span class="string">'hello'</span>)</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;,</span><br><span class="line">  created: <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">    <span class="keyword">this</span>.hello()</span><br><span class="line">  &#125;</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure><h1 id="big-is-ugly"><a href="#big-is-ugly" class="headerlink" title="big is ugly"></a>big is ugly</h1><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">new</span> Vue(&#123;</span><br><span class="line">  el: <span class="string">'#app'</span>,</span><br><span class="line">  methods: &#123;</span><br><span class="line">    hello: <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">      <span class="built_in">console</span>.log(<span class="string">'hello'</span>)</span><br><span class="line">    &#125;,</span><br><span class="line">    hello1: <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">      <span class="built_in">console</span>.log(<span class="string">'hello1'</span>)</span><br><span class="line">    &#125;,</span><br><span class="line">    hello2: <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">      <span class="built_in">console</span>.log(<span class="string">'hello2'</span>)</span><br><span class="line">    &#125;,</span><br><span class="line">    hello3: <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">      <span class="built_in">console</span>.log(<span class="string">'hello3'</span>)</span><br><span class="line">    &#125;,</span><br><span class="line">    <span class="comment">// a lot of function be added, this is ugly</span></span><br><span class="line">    helloN: <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">      <span class="built_in">console</span>.log(<span class="string">'helloN'</span>)</span><br><span class="line">    &#125;,</span><br><span class="line">  &#125;,</span><br><span class="line">  created: <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">    <span class="keyword">this</span>.hello()</span><br><span class="line">  &#125;</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure><h1 id="mixins-is-powerful"><a href="#mixins-is-powerful" class="headerlink" title="mixins is powerful"></a>mixins is powerful</h1><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> mix  = &#123;</span><br><span class="line">  created: <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">    <span class="built_in">console</span>.log(<span class="string">'i am mixins'</span>)</span><br><span class="line">  &#125;,</span><br><span class="line">  methods: &#123;</span><br><span class="line">    helloX: <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">      <span class="built_in">console</span>.log(<span class="string">'helloX'</span>)</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">new</span> Vue(&#123;</span><br><span class="line">  el: <span class="string">'#app'</span>,</span><br><span class="line">  mixins: [mix],</span><br><span class="line">  methods: &#123;</span><br><span class="line">    hello: <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">      <span class="built_in">console</span>.log(<span class="string">'hello'</span>)</span><br><span class="line">    &#125;,</span><br><span class="line">    hello1: <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">      <span class="built_in">console</span>.log(<span class="string">'hello1'</span>)</span><br><span class="line">    &#125;,</span><br><span class="line">    hello2: <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">      <span class="built_in">console</span>.log(<span class="string">'hello2'</span>)</span><br><span class="line">    &#125;,</span><br><span class="line">    hello3: <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">      <span class="built_in">console</span>.log(<span class="string">'hello3'</span>)</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;,</span><br><span class="line">  created: <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">    <span class="keyword">this</span>.hello()</span><br><span class="line">  &#125;</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure><h1 id="reading-more"><a href="#reading-more" class="headerlink" title="reading more"></a>reading more</h1><ul><li><a href="https://cn.vuejs.org/v2/guide/mixins.html" target="_blank" rel="noopener">guide-mixins</a></li></ul>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;h1 id=&quot;small-is-beautiful&quot;&gt;&lt;a href=&quot;#small-is-beautiful&quot; class=&quot;headerlink&quot; title=&quot;small is beautiful&quot;&gt;&lt;/a&gt;small is beautiful&lt;/h1&gt;&lt;figure c
-      
-    
-    </summary>
-    
-    
-      <category term="Vue" scheme="https://wdd.js.org/tags/Vue/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>WebSocket断开原因分析</title>
-    <link href="https://wdd.js.org/websocket-close-reasons.html"/>
-    <id>https://wdd.js.org/websocket-close-reasons.html</id>
-    <published>2018-03-29T12:35:38.000Z</published>
-    <updated>2018-04-25T03:22:39.000Z</updated>
-    
-    <content type="html"><![CDATA[<h1 id="1-把错误打印出来"><a href="#1-把错误打印出来" class="headerlink" title="1. 把错误打印出来"></a>1. 把错误打印出来</h1><p>WebSocket断开的原因有很多，最好在WebSocket断开时，将错误打印出来。</p><p>在线demo地址：<a href="https://wdd.js.org/websocket-demos/">https://wdd.js.org/websocket-demos/</a></p><p><img src="http://p3alsaatj.bkt.clouddn.com/20180425112232_cxPVAD_Jietu20180425-112142.jpeg" alt=""></p><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">ws.onerror = <span class="function"><span class="keyword">function</span> (<span class="params">e</span>) </span>&#123;</span><br><span class="line">  <span class="built_in">console</span>.log(<span class="string">'WebSocket发生错误: '</span> + e.code)</span><br><span class="line">  <span class="built_in">console</span>.log(e)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><blockquote><p>如果你想自己玩玩WebSocket, 但是你又不想自己部署一个WebSocket服务器，你可以使用<code>ws = new WebSocket(&#39;wss://echo.websocket.org/&#39;)</code>, 你向echo.websocket.org发送消息，它会回复你同样的消息。</p></blockquote><h1 id="2-重要信息错误状态码"><a href="#2-重要信息错误状态码" class="headerlink" title="2. 重要信息错误状态码"></a>2. 重要信息错误状态码</h1><p>WebSocket断开时，会触发<code>CloseEvent</code>, CloseEvent会在连接关闭时发送给使用 WebSockets 的客户端. 它在 WebSocket 对象的 onclose 事件监听器中使用。CloseEvent的code字段表示了WebSocket断开的原因。可以从该字段中分析断开的原因。</p><p><img src="http://p3alsaatj.bkt.clouddn.com/20180329204553_TjCFdu_Jietu20180329-204536.jpeg" alt=""></p><h1 id="3-关闭状态码表"><a href="#3-关闭状态码表" class="headerlink" title="3. 关闭状态码表"></a>3. 关闭状态码表</h1><p>一般来说<code>1006</code>的错误码出现的情况比较常见，该错误码一般出现在断网时。</p><table><thead><tr><th>状态码</th><th>名称</th><th>描述</th></tr></thead><tbody><tr><td>0–999</td><td></td><td>保留段, 未使用.</td></tr><tr><td>1000</td><td>CLOSE_NORMAL</td><td>正常关闭; 无论为何目的而创建, 该链接都已成功完成任务.</td></tr><tr><td>1001</td><td>CLOSE_GOING_AWAY</td><td>终端离开, 可能因为服务端错误, 也可能因为浏览器正从打开连接的页面跳转离开.</td></tr><tr><td>1002</td><td>CLOSE_PROTOCOL_ERROR</td><td>由于协议错误而中断连接.</td></tr><tr><td>1003</td><td>CLOSE_UNSUPPORTED</td><td>由于接收到不允许的数据类型而断开连接 (如仅接收文本数据的终端接收到了二进制数据).</td></tr><tr><td>1004</td><td></td><td><code>保留</code>. 其意义可能会在未来定义.</td></tr><tr><td>1005</td><td>CLOSE_NO_STATUS</td><td><code>保留</code>.  表示没有收到预期的状态码.</td></tr><tr><td><code>1006</code></td><td>CLOSE_ABNORMAL</td><td><code>保留</code>. 用于期望收到状态码时连接非正常关闭 (也就是说, 没有发送关闭帧).</td></tr><tr><td>1007</td><td>Unsupported Data</td><td>由于收到了格式不符的数据而断开连接 (如文本消息中包含了非 UTF-8 数据).</td></tr><tr><td>1008</td><td>Policy Violation</td><td>由于收到不符合约定的数据而断开连接. 这是一个通用状态码, 用于不适合使用 1003 和 1009 状态码的场景.</td></tr><tr><td>1009</td><td>CLOSE_TOO_LARGE</td><td>由于收到过大的数据帧而断开连接.</td></tr><tr><td>1010</td><td>Missing Extension</td><td>客户端期望服务器商定一个或多个拓展, 但服务器没有处理, 因此客户端断开连接.</td></tr><tr><td>1011</td><td>Internal Error</td><td>客户端由于遇到没有预料的情况阻止其完成请求, 因此服务端断开连接.</td></tr><tr><td>1012</td><td>Service Restart</td><td>服务器由于重启而断开连接. </td></tr><tr><td>1013</td><td>Try Again Later</td><td>服务器由于临时原因断开连接, 如服务器过载因此断开一部分客户端连接. </td></tr><tr><td>1014</td><td></td><td>由 WebSocket标准保留以便未来使用.</td></tr><tr><td>1015</td><td>TLS Handshake</td><td>保留. 表示连接由于无法完成 TLS 握手而关闭 (例如无法验证服务器证书).</td></tr><tr><td>1016–1999</td><td></td><td>由 WebSocket标准保留以便未来使用.</td></tr><tr><td>2000–2999</td><td></td><td>由 WebSocket拓展保留使用.</td></tr><tr><td>3000–3999</td><td></td><td>可以由库或框架使用.? 不应由应用使用. 可以在 IANA 注册, 先到先得.</td></tr><tr><td>4000–4999</td><td></td><td>可以由应用使用.</td></tr></tbody></table><h1 id="4-其他注意事项"><a href="#4-其他注意事项" class="headerlink" title="4. 其他注意事项"></a>4. 其他注意事项</h1><p>如果你的服务所在的域是HTTPS的，那么使用的WebSocket协议也必须是<code>wss</code>, 而不能是<code>ws</code></p><h1 id="5-如何在老IE上使用原生WebSocket？"><a href="#5-如何在老IE上使用原生WebSocket？" class="headerlink" title="5. 如何在老IE上使用原生WebSocket？"></a>5. 如何在老IE上使用原生WebSocket？</h1><p><a href="https://github.com/gimite/web-socket-js" target="_blank" rel="noopener">web-socket-js</a>是基于flash的技术，只需要引入两个js文件和一个swf文件，就可以让浏览器用于几乎原生的WebSocket接口。另外，web-socket-js还是需要在ws服务端843端口做一个flash安全策略文件的服务。</p><p>我自己曾经基于stompjs和web-socket-js，做WebSocket兼容到IE5, 当然了stompjs在低版本的IE上有兼容性问题, 而且stompjs已经不再维护了，你可以使用我fork的一个版本，地址是：<a href="https://github.com/wangduanduan/stomp-websocket/blob/master/lib/stomp.js" target="_blank" rel="noopener">https://github.com/wangduanduan/stomp-websocket/blob/master/lib/stomp.js</a></p><p>主要是老版本IE在正则表达式行为方面有点异常。</p><figure class="highlight gcode"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="comment">// fix ie8, ie9, RegExp not normal problem</span></span><br><span class="line"><span class="comment">// in chrome the frames length will be 2, but in ie8, ie9, it well be 1</span></span><br><span class="line"><span class="comment">// by wdd 20180321</span></span><br><span class="line"><span class="keyword">if</span> <span class="comment">(frames.length === 1)</span> &#123;</span><br><span class="line">  frames.push<span class="comment">('')</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><h1 id="6-参考"><a href="#6-参考" class="headerlink" title="6. 参考"></a>6. 参考</h1><ul><li><a href="https://developer.mozilla.org/zh-CN/docs/Web/API/CloseEvent" target="_blank" rel="noopener">CloseEvent</a></li><li><a href="https://stackoverflow.com/questions/19304157/getting-the-reason-why-websockets-closed-with-close-code-1006" target="_blank" rel="noopener">getting the reason why websockets closed with close code 1006</a></li><li><a href="https://tools.ietf.org/html/rfc6455#section-7.4.1" target="_blank" rel="noopener">Defined Status Codes</a></li></ul>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;h1 id=&quot;1-把错误打印出来&quot;&gt;&lt;a href=&quot;#1-把错误打印出来&quot; class=&quot;headerlink&quot; title=&quot;1. 把错误打印出来&quot;&gt;&lt;/a&gt;1. 把错误打印出来&lt;/h1&gt;&lt;p&gt;WebSocket断开的原因有很多，最好在WebSocket断开时，将错误打印出
-      
-    
-    </summary>
-    
-    
-      <category term="WebSocket" scheme="https://wdd.js.org/tags/WebSocket/"/>
     
   </entry>
   
