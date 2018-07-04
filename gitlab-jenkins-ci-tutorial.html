@@ -95,7 +95,7 @@
 <meta property="og:image" content="http://p3alsaatj.bkt.clouddn.com/20180703180601_uyMlkh_Jietu20180703-180546.jpeg">
 <meta property="og:image" content="http://p3alsaatj.bkt.clouddn.com/20180703180947_EvLieQ_Jietu20180703-180934.jpeg">
 <meta property="og:image" content="http://p3alsaatj.bkt.clouddn.com/20180703181150_q5E49m_Jietu20180703-181139.jpeg">
-<meta property="og:updated_time" content="2018-07-03T10:18:26.000Z">
+<meta property="og:updated_time" content="2018-07-04T01:18:40.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="GitLab JenKins 集成教程">
 <meta name="twitter:description" content="1. jenkins项目配置1.1. 构建触发器设置 方框位置打钩 注意：椭圆圈住的位置的URL在下文中会用到  如果你的项目中看不到这一项，那么你需要安装Gitlab Plugin  1.2. 构建注意：$BUILD_NUMBER是一个全局的宏，加上这个之后，每次构建产生的tag都不一样。  构建生成的项目名称如下图所示。  2. gitlab配置2.1. 配置WebHooks找到项目的 pro">
@@ -372,7 +372,7 @@
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  215 字
+                  605 字
                 </span>
               
 
@@ -388,7 +388,7 @@
                   <span class="post-meta-item-text">阅读时长 &asymp;</span>
                 
                 <span title="阅读时长">
-                  1 分钟
+                  3 分钟
                 </span>
               
             </div>
@@ -430,6 +430,77 @@
 <p>如果测试成功，jenkins那边会新建构建任务。</p>
 <p>如果测试失败，gitlab这边会给出具体的错误信息。</p>
 <p><img src="http://p3alsaatj.bkt.clouddn.com/20180703181150_q5E49m_Jietu20180703-181139.jpeg" alt=""></p>
+<h1 id="3-延伸阅读"><a href="#3-延伸阅读" class="headerlink" title="3. 延伸阅读"></a>3. 延伸阅读</h1><h2 id="3-1-JenKins环境变量"><a href="#3-1-JenKins环境变量" class="headerlink" title="3.1. JenKins环境变量"></a>3.1. JenKins环境变量</h2><p>jenkins还有更多的环境变量，可以在构建时读取出来。参考： <a href="https://wiki.jenkins.io/display/JENKINS/Building+a+software+project" target="_blank" rel="noopener">https://wiki.jenkins.io/display/JENKINS/Building+a+software+project</a></p>
+<table>
+<thead>
+<tr>
+<th>环境变量</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>BUILD_URL</td>
+<td>The URL where the results of this build can be found (e.g. <a href="http://buildserver/jenkins/job/MyJobName/666/" target="_blank" rel="noopener">http://buildserver/jenkins/job/MyJobName/666/</a>)</td>
+</tr>
+<tr>
+<td>EXECUTOR_NUMBER</td>
+<td>The unique number that identifies the current executor (among executors of the same machine) that’s carrying out this build. This is the number you see in the “build executor status”, except that the number starts from 0, not 1.</td>
+</tr>
+<tr>
+<td>NODE_NAME</td>
+<td>The name of the node the current build is running on. Equals ‘master’ for master node.</td>
+</tr>
+<tr>
+<td>BUILD_NUMBER</td>
+<td>The current build number, such as “153”</td>
+</tr>
+<tr>
+<td>BUILD_ID</td>
+<td>The current build id, such as “2005-08-22_23-59-59” (YYYY-MM-DD_hh-mm-ss, defunct since version 1.597)</td>
+</tr>
+<tr>
+<td>WORKSPACE</td>
+<td>The absolute path of the workspace.</td>
+</tr>
+<tr>
+<td>BUILD_TAG</td>
+<td>String of jenkins-${JOB_NAME}-${BUILD_NUMBER}. Convenient to put into a resource file, a jar file, etc for easier identification.</td>
+</tr>
+<tr>
+<td>JENKINS_URL</td>
+<td>Set to the URL of the Jenkins master that’s running the build. This value is used by Jenkins CLI for example</td>
+</tr>
+<tr>
+<td>JOB_NAME</td>
+<td>Name of the project of this build. This is the name you gave your job when you first set it up. It’s the third column of the Jenkins Dashboard main page.</td>
+</tr>
+<tr>
+<td>JAVA_HOME</td>
+<td>If your job is configured to use a specific JDK, this variable is set to the JAVA_HOME of the specified JDK. When this variable is set, PATH is also updated to have $JAVA_HOME/bin.</td>
+</tr>
+<tr>
+<td>SVN_REVISION</td>
+<td>For Subversion-based projects, this variable contains the revision number of the module. If you have more than one module specified, this won’t be set.</td>
+</tr>
+<tr>
+<td>GIT_URL</td>
+<td>For Git-based projects, this variable contains the Git url (like git@github.com:user/repo.git or [<a href="https://github.com/user/repo.git" target="_blank" rel="noopener">https://github.com/user/repo.git</a>])</td>
+</tr>
+<tr>
+<td>GIT_COMMIT</td>
+<td>For Git-based projects, this variable contains the Git hash of the commit checked out for the build (like ce9a3c1404e8c91be604088670e93434c4253f03) (all the GIT_* variables require git plugin)    </td>
+</tr>
+<tr>
+<td>GIT_BRANCH</td>
+<td>For Git-based projects, this variable contains the Git branch that was checked out for the build (normally origin/master)</td>
+</tr>
+<tr>
+<td>CVS_BRANCH</td>
+<td>For CVS-based projects, this variable contains the branch of the module. If CVS is configured to check out the trunk, this environment variable will not be set.</td>
+</tr>
+</tbody>
+</table>
 
       
     </div>
@@ -643,7 +714,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#1-jenkins项目配置"><span class="nav-text">1. jenkins项目配置</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#1-1-构建触发器设置"><span class="nav-text">1.1. 构建触发器设置</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#1-2-构建"><span class="nav-text">1.2. 构建</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#2-gitlab配置"><span class="nav-text">2. gitlab配置</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#2-1-配置WebHooks"><span class="nav-text">2.1. 配置WebHooks</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#1-jenkins项目配置"><span class="nav-text">1. jenkins项目配置</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#1-1-构建触发器设置"><span class="nav-text">1.1. 构建触发器设置</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#1-2-构建"><span class="nav-text">1.2. 构建</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#2-gitlab配置"><span class="nav-text">2. gitlab配置</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#2-1-配置WebHooks"><span class="nav-text">2.1. 配置WebHooks</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#3-延伸阅读"><span class="nav-text">3. 延伸阅读</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#3-1-JenKins环境变量"><span class="nav-text">3.1. JenKins环境变量</span></a></li></ol></li></ol></div>
             
 
           </div>
