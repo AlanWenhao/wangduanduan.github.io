@@ -82,13 +82,13 @@
 
 
 
-<meta name="description" content="1. jenkins项目配置1.1. 构建触发器设置 方框位置打钩 注意：椭圆圈住的位置的URL在下文中会用到  如果你的项目中看不到这一项，那么你需要安装Gitlab Plugin  1.2. 构建注意：$BUILD_NUMBER是一个环境变量，表示当前构建的次数。加上这个之后，每次构建产生的tag都不一样。  构建生成的项目名称如下图所示。  2. gitlab配置2.1. 配置WebHook">
+<meta name="description" content="1. jenkins项目配置1.1. 构建触发器设置 方框位置打钩 注意：椭圆圈住的位置的URL在下文中会用到, 该URL是JenKins自动生成的  如果你的项目中看不到这一项，那么你需要安装Gitlab Plugin  1.2. 构建注意：$BUILD_NUMBER是JenKins自带的一个环境变量，表示当前构建的次数。加上这个之后，每次构建产生的tag都不一样。  构建生成的项目名称如下图所">
 <meta name="keywords" content="王端端, 洞香春, wellClient">
 <meta property="og:type" content="article">
 <meta property="og:title" content="GitLab JenKins 集成教程">
 <meta property="og:url" content="https://wdd.js.org/gitlab-jenkins-ci-tutorial.html">
 <meta property="og:site_name" content="洞香春">
-<meta property="og:description" content="1. jenkins项目配置1.1. 构建触发器设置 方框位置打钩 注意：椭圆圈住的位置的URL在下文中会用到  如果你的项目中看不到这一项，那么你需要安装Gitlab Plugin  1.2. 构建注意：$BUILD_NUMBER是一个环境变量，表示当前构建的次数。加上这个之后，每次构建产生的tag都不一样。  构建生成的项目名称如下图所示。  2. gitlab配置2.1. 配置WebHook">
+<meta property="og:description" content="1. jenkins项目配置1.1. 构建触发器设置 方框位置打钩 注意：椭圆圈住的位置的URL在下文中会用到, 该URL是JenKins自动生成的  如果你的项目中看不到这一项，那么你需要安装Gitlab Plugin  1.2. 构建注意：$BUILD_NUMBER是JenKins自带的一个环境变量，表示当前构建的次数。加上这个之后，每次构建产生的tag都不一样。  构建生成的项目名称如下图所">
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:image" content="http://p3alsaatj.bkt.clouddn.com/20180703175934_fhIT2T_Jietu20180703-175910.jpeg">
 <meta property="og:image" content="http://p3alsaatj.bkt.clouddn.com/20180703180154_3EBgJo_Jietu20180703-180138.jpeg">
@@ -96,10 +96,10 @@
 <meta property="og:image" content="http://p3alsaatj.bkt.clouddn.com/20180703180947_EvLieQ_Jietu20180703-180934.jpeg">
 <meta property="og:image" content="http://p3alsaatj.bkt.clouddn.com/20180703181150_q5E49m_Jietu20180703-181139.jpeg">
 <meta property="og:image" content="http://p3alsaatj.bkt.clouddn.com/20180704094538_Uf1RrX_Jietu20180704-094526.jpeg">
-<meta property="og:updated_time" content="2018-07-04T01:47:27.000Z">
+<meta property="og:updated_time" content="2018-07-04T02:05:27.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="GitLab JenKins 集成教程">
-<meta name="twitter:description" content="1. jenkins项目配置1.1. 构建触发器设置 方框位置打钩 注意：椭圆圈住的位置的URL在下文中会用到  如果你的项目中看不到这一项，那么你需要安装Gitlab Plugin  1.2. 构建注意：$BUILD_NUMBER是一个环境变量，表示当前构建的次数。加上这个之后，每次构建产生的tag都不一样。  构建生成的项目名称如下图所示。  2. gitlab配置2.1. 配置WebHook">
+<meta name="twitter:description" content="1. jenkins项目配置1.1. 构建触发器设置 方框位置打钩 注意：椭圆圈住的位置的URL在下文中会用到, 该URL是JenKins自动生成的  如果你的项目中看不到这一项，那么你需要安装Gitlab Plugin  1.2. 构建注意：$BUILD_NUMBER是JenKins自带的一个环境变量，表示当前构建的次数。加上这个之后，每次构建产生的tag都不一样。  构建生成的项目名称如下图所">
 <meta name="twitter:image" content="http://p3alsaatj.bkt.clouddn.com/20180703175934_fhIT2T_Jietu20180703-175910.jpeg">
 
 
@@ -373,7 +373,7 @@
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  753 字
+                  764 字
                 </span>
               
 
@@ -412,11 +412,11 @@
       
         <h1 id="1-jenkins项目配置"><a href="#1-jenkins项目配置" class="headerlink" title="1. jenkins项目配置"></a>1. jenkins项目配置</h1><h2 id="1-1-构建触发器设置"><a href="#1-1-构建触发器设置" class="headerlink" title="1.1. 构建触发器设置"></a>1.1. 构建触发器设置</h2><ul>
 <li>方框位置打钩</li>
-<li>注意：椭圆圈住的位置的URL在下文中会用到</li>
+<li>注意：椭圆圈住的位置的URL在下文中会用到, 该URL是JenKins自动生成的</li>
 </ul>
 <p>如果你的项目中看不到这一项，那么你需要安装<a href="https://wiki.jenkins.io/display/JENKINS/GitLab+Plugin" target="_blank" rel="noopener">Gitlab Plugin</a></p>
 <p><img src="http://p3alsaatj.bkt.clouddn.com/20180703175934_fhIT2T_Jietu20180703-175910.jpeg" alt=""></p>
-<h2 id="1-2-构建"><a href="#1-2-构建" class="headerlink" title="1.2. 构建"></a>1.2. 构建</h2><p>注意：<code>$BUILD_NUMBER</code>是一个环境变量，表示当前构建的次数。加上这个之后，每次构建产生的tag都不一样。</p>
+<h2 id="1-2-构建"><a href="#1-2-构建" class="headerlink" title="1.2. 构建"></a>1.2. 构建</h2><p>注意：<code>$BUILD_NUMBER</code>是JenKins自带的一个环境变量，表示当前构建的次数。加上这个之后，每次构建产生的tag都不一样。</p>
 <p><img src="http://p3alsaatj.bkt.clouddn.com/20180703180154_3EBgJo_Jietu20180703-180138.jpeg" alt=""></p>
 <p>构建生成的项目名称如下图所示。</p>
 <p><img src="http://p3alsaatj.bkt.clouddn.com/20180703180601_uyMlkh_Jietu20180703-180546.jpeg" alt=""></p>
