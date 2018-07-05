@@ -5,11 +5,26 @@
     
   <url>
     <loc>https://wdd.js.org/gitlab-jenkins-ci-tutorial.html</loc>
-    <lastmod>2018-07-04T02:33:23.000Z</lastmod>
+    <lastmod>2018-07-05T08:25:55.000Z</lastmod>
     <data>
         <display>
         <title>GitLab JenKins 自动化构建</title>
         <pubTime>2018-07-03T09:56:05.000Z</pubTime>
+        
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>https://wdd.js.org/think-in-interface.html</loc>
+    <lastmod>2018-07-04T12:24:09.000Z</lastmod>
+    <data>
+        <display>
+        <title>Think in Interface 消费者 vs 生产者</title>
+        <pubTime>2018-07-04T12:07:35.000Z</pubTime>
         
          
            
@@ -958,11 +973,11 @@
         <title>Express 代理中间件的写法</title>
         <pubTime>2018-02-18T02:43:05.000Z</pubTime>
         
-        <tag>Express</tag>
-         
         <tag>proxy</tag>
          
         <tag>http</tag>
+         
+        <tag>Express</tag>
          
          
            
@@ -1290,9 +1305,9 @@
         
         <tag>读书笔记</tag>
          
-        <tag>主页主义</tag>
-         
         <tag>未完成</tag>
+         
+        <tag>主页主义</tag>
          
          
            
@@ -1311,9 +1326,9 @@
         
         <tag>读书笔记</tag>
          
-        <tag>未完成</tag>
-         
         <tag>失控</tag>
+         
+        <tag>未完成</tag>
          
          
            
